@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io//github/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io//github/"/>
-  <updated>2014-03-03T16:11:03+05:30</updated>
+  <updated>2014-03-03T16:19:26+05:30</updated>
   <id>http://hemanth.github.io//github/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
