@@ -4,12 +4,71 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-03-03T18:23:42+05:30</updated>
+  <updated>2014-03-04T06:33:18+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RSVP]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/blog/2014/03/04/rsvp/"/>
+    <updated>2014-03-04T06:23:51+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/blog/2014/03/04/rsvp</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.org/package/rsvp">RSVP</a> : A lightweight library that provides tools for organizing asynchronous code.</p>
+
+<p>This module gives a tiny implementation of <a href="http://promises-aplus.github.com/promises-spec/">Promises/A+</a>.</p>
+
+<p>As usual do a <code>npm install rsvp</code> to get the module.</p>
+
+<p><strong>Basic Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">RSVP</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rsvp&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RSVP</span><span class="p">.</span><span class="nx">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// succeed</span>
+</span><span class='line'>  <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// or reject</span>
+</span><span class='line'>  <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// success</span>
+</span><span class='line'><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// failure</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once a promise has been resolved or rejected, it cannot be resolved or rejected again.</p>
+
+<p>It give some more goddies like:</p>
+
+<ul>
+<li><p>Chaining</p></li>
+<li><p>Easy Error Handling.</p></li>
+<li><p>Compatible with <a href="http://taskjs.org/">TaskJS</a>.</p></li>
+</ul>
+
+
+<p>So, what are you waiting for? Go got it and have fun!</p>
+]]></content>
+  </entry>
   
 </feed>

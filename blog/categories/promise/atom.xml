@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: promise | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/blog/categories/promise/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-03-04T06:33:18+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RSVP]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/blog/2014/03/04/rsvp/"/>
+    <updated>2014-03-04T06:23:51+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/blog/2014/03/04/rsvp</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.org/package/rsvp">RSVP</a> : A lightweight library that provides tools for organizing asynchronous code.</p>
+
+<p>This module gives a tiny implementation of <a href="http://promises-aplus.github.com/promises-spec/">Promises/A+</a>.</p>
+
+<p>As usual do a <code>npm install rsvp</code> to get the module.</p>
+
+<p><strong>Basic Usage:</strong></p>
+
+<p>```javascript
+var RSVP = require('rsvp');</p>
+
+<p>var promise = new RSVP.Promise(function(resolve, reject) {
+  // succeed
+  resolve(value);
+  // or reject
+  reject(error);
+});</p>
+
+<p>promise.then(function(value) {
+  // success
+}, function(value) {
+  // failure
+});
+```</p>
+
+<p>Once a promise has been resolved or rejected, it cannot be resolved or rejected again.</p>
+
+<p>It give some more goddies like:</p>
+
+<ul>
+<li><p>Chaining</p></li>
+<li><p>Easy Error Handling.</p></li>
+<li><p>Compatible with <a href="http://taskjs.org/">TaskJS</a>.</p></li>
+</ul>
+
+
+<p>So, what are you waiting for? Go got it and have fun!</p>
+]]></content>
+  </entry>
+  
+</feed>
