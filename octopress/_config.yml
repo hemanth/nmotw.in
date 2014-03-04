@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://hemanth.github.io//github
+url: http://hemanth.github.io/nmotw.in
 title: NMOTW
-subtitle: NMOTW
+subtitle: Node Module Of The Week!
 author: Hemanth.HM
 simple_search: http://google.com/search
-description:
+description: Node Module Of The Week!
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /github/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -26,19 +26,14 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /github
-permalink: /blog/:year/:month/:day/:title/
+root: /
+permalink: /:title/
 source: source
 destination: public/github
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/categories
+category_dir: /categories
 markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
@@ -90,11 +85,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name:  nmotw
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-7949129-5
 
 # Facebook Like
 facebook_like: false
