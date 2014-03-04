@@ -4,7 +4,7 @@
   <title><![CDATA[Category: promise | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in//categories/promise/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-03-04T18:51:29+05:30</updated>
+  <updated>2014-03-04T18:52:55+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[RSVP]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/title/"/>
+    <link href="http://hemanth.github.io/nmotw.in/rsvp/"/>
     <updated>2014-03-04T06:23:51+05:30</updated>
     <id>http://hemanth.github.io/nmotw.in/rsvp</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.org/package/rsvp">RSVP</a> : A lightweight library that provides tools for organizing asynchronous code.</p>
