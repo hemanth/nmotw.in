@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://hemanth.github.io/nmotw.in/sitemap.xml 
+Sitemap: http://nmotw.in/sitemap.xml 
