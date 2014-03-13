@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CLI | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-03-13T18:46:43+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chalk]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/chalk/"/>
+    <updated>2014-03-13T18:33:53+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/chalk</id>
+    <content type="html"><![CDATA[<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
+
+<blockquote><p>"Write programs that do one thing and do it well."</p></blockquote>
+
+<p>Out of many such one such elegant module is <a href="https://www.npmjs.org/package/chalk">chalk</a> thanks to <a href="http://sindresorhus.com/hi/">Sindre Sorhus</a> for that.</p>
+
+<p>Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is <a href="https://github.com/Marak/colors.js">colors.js</a> but one of the major drawbacks with that being it extending <code>String.portotye</code> or be <a href="https://github.com/yeoman/yo/issues/68">these</a> problems.</p>
+
+<p>Installing chalk is like any other module: <code>npm install --save chalk</code></p>
+
+<p>Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.</p>
+
+<p><strong>For example:</strong></p>
+
+<p>```javascript
+var chalk = require('chalk');</p>
+
+<p>console.log(  chalk.blue.bgRed.bold('Hello world!')  );</p>
+
+<p>console.log(  chalk.red('Hello', chalk.underline('world') + '!')  );</p>
+
+<p>```</p>
+
+<p>Here is a simple snippet for printing all of the styles it provides:</p>
+
+<p>```javascript
+var chalk = require('chalk');</p>
+
+<p>Object.keys(chalk.styles).forEach(function(style) {</p>
+
+<pre><code>if( style !== "reset") {
+  process.stdout.write(chalk[style](style) + ' ');
+}
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>gif FTW!?</strong></p>
+
+<p><img src="http://nmotw.in/images/chalk/chalk.gif" alt="chalk" /></p>
+
+<p>Until next week, happy coloring!</p>
+
+<p><img src="(http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
+]]></content>
+  </entry>
+  
+</feed>

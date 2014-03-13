@@ -3,7 +3,7 @@
 <html lang="en-GB">
 <head>
 	<meta charset="utf-8">
-	<title>Node Module Of The Week!  | NMOTW</title>
+	<title>Chalk  | NMOTW</title>
 
 	<meta name="author" content="Hemanth.HM">
 
@@ -49,17 +49,9 @@
 
 </header>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
+	<div id="content" class="inner"><article class="post">
 	<header>
-		<h2 class="title">
-			
-			<a href="/chalk/">
-			
-				Chalk</a>
-		</h2>
+		<h2 class="title">Chalk</h2>
 		<div class="meta date">
 
 
@@ -74,8 +66,7 @@
 
 <time datetime="2014-03-13T18:33:53+05:30" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time></div>
 	</header>
-	<div class="entry-content">
-		<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
+	<div class="entry-content"><p>There are many wonderful node modules that adhere to Unix philosophy:</p>
 
 <blockquote><p>&#8220;Write programs that do one thing and do it well.&#8221;</p></blockquote>
 
@@ -128,99 +119,43 @@
 <p>Until next week, happy coloring!</p>
 
 <p><img src="(http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
-
-		
-		
-	</div>
+</div>
 
 </article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
 
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=Chalk by @nodemotw&url=http://hemanth.github.io/nmotw.in/chalk/" title="Share Chalk on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
 
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/rsvp/">
-			
-				RSVP</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-04T06:23:51+05:30" pubdate data-updated="true">Mar 4<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.org/package/rsvp">RSVP</a> : A lightweight library that provides tools for organizing asynchronous code.</p>
-
-<p>This module gives a tiny implementation of <a href="http://promises-aplus.github.com/promises-spec/">Promises/A+</a>.</p>
-
-<p>As usual do a <code>npm install rsvp</code> to get the module.</p>
-
-<p><strong>Basic Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">RSVP</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rsvp&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RSVP</span><span class="p">.</span><span class="nx">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// succeed</span>
-</span><span class='line'>  <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// or reject</span>
-</span><span class='line'>  <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// success</span>
-</span><span class='line'><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// failure</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Once a promise has been resolved or rejected, it cannot be resolved or rejected again.</p>
-
-<p>It give some more goddies like:</p>
-
-<ul>
-<li><p>Chaining</p></li>
-<li><p>Easy Error Handling.</p></li>
-<li><p>Compatible with <a href="http://taskjs.org/">TaskJS</a>.</p></li>
-</ul>
-
-
-<p>So, what are you waiting for? Go got it and have fun!</p>
-
-		
-		
+	  <!--   <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://hemanth.github.io/nmotw.in/chalk/" title="Share Chalk on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+ -->
+	  <!--   <li>
+  <a href="https://plus.google.com/share?url=http://hemanth.github.io/nmotw.in/chalk/" title="Share Chalk on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+ -->
+	  <!-- </ul> -->
 	</div>
 
-</article>
 
-<nav id="pagenavi">
-    
-    
-</nav>
+
+
+<section id="comment">¬
+      <h1 class="title">Comments</h1>¬
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>¬
+</section>¬
 </div>
 	<footer id="footer" class="inner"><br>
 <br>
@@ -243,7 +178,10 @@
       var disqus_shortname = 'nmotw';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hemanth.github.io/nmotw.in/chalk/';
+        var disqus_url = 'http://hemanth.github.io/nmotw.in/chalk/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
