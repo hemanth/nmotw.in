@@ -29,10 +29,10 @@ email:
 root: /
 permalink: /:title/
 source: source
-destination: public/github
+destination: public/
 plugins: plugins
 code_dir: downloads/code
-category_dir: public/github/categories
+category_dir: public/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 

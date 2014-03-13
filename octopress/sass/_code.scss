@@ -1,0 +1,12 @@
+$noise-bg: image-url('noise.png') top left;
+
+@import 'compass';
+@import 'code/solarized';
+@import 'code/utilities';
+@import 'code/syntax';
+
+figure[role=code] {
+  font-size: 13px;
+  line-height: 16px;
+}
+
