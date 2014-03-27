@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: validation | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/validation/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-03-27T12:31:55+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[have]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/have/"/>
+    <updated>2014-03-27T18:33:53+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/have</id>
+    <content type="html"><![CDATA[<p>Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a>that will help you to have your arguments, and validate it too!</p>
+
+<p>Here is a simple example of two functions straight from the source, that does the same argument validations, the first one is without using <code>have</code> and the second one is with <code>have</code>:</p>
+
+<p>```javascript
+function withoutHave(id, arr, opts, callback) {
+  assert(typeof id === 'string' || typeof id === 'number',</p>
+
+<pre><code>'id argument not string or number');
+</code></pre>
+
+<p>  if (!(arr instanceof Array)) { arr = [arr]; }
+  for (var i = 0; i &lt; arr.length; i++) {</p>
+
+<pre><code>assert(typeof arr[i] === 'string', 'arr member not a string');
+</code></pre>
+
+<p>  }</p>
+
+<p>  if (typeof opts === 'function') {</p>
+
+<pre><code>callback = opts;
+opts = { x: 'some default value' };
+</code></pre>
+
+<p>  }</p>
+
+<p>  assert(!opts || typeof opts === 'object', 'options object not a hash');
+  assert(typeof callback === 'function', 'callback missing or not a function');</p>
+
+<p>  // logic...
+}
+```</p>
+
+<p>```javascript
+function withHave(id, arr, opts, callback) {
+have(arguments,</p>
+
+<pre><code>{ id: 'str or num'
+, arr: 'str or str array'
+, opts: 'optional obj'
+, callback: 'func' });
+</code></pre>
+
+<p>  if (!(arr instanceof Array)) { arr = [arr]; }</p>
+
+<p>  if (typeof opts === 'function') {</p>
+
+<pre><code>callback = opts;
+opts = { x: 'some default value' };
+</code></pre>
+
+<p>  }</p>
+
+<p>  // logic...
+}
+```</p>
+
+<p><strong>How's have better than any other argument validator?</strong></p>
+
+<p>Have provides:</p>
+
+<ul>
+<li><p>mini-DSL</p></li>
+<li><p>Soft assertion.</p></li>
+<li><p>Shorter notations.</p></li>
+</ul>
+
+
+<p>You can do a simple assertion with have like:</p>
+
+<p>```javascript
+have.assert(function(cond, message) {
+  if (!cond) {</p>
+
+<pre><code>console.log('WARN: assertion failed: ' + message);
+</code></pre>
+
+<p>  }
+});
+```</p>
+
+<p>You can also wrap the exported have function, in case you want to log the function name as well:</p>
+
+<p>```javascript
+var assert = require('assert')
+  , have = require('have')
+  , funcName = "";</p>
+
+<p>have.assert(function(cond, msg) {
+  assert(cond, 'inside function: ' + funcName + ', ' + msg);
+});</p>
+
+<p>have = (function(have_) {
+  return function(args, schema) {</p>
+
+<pre><code>funcName = args.callee.name;
+have_(args, schema);
+funcName = "";
+</code></pre>
+
+<p>  };
+})(have);</p>
+
+<p>function test() {
+  have(arguments, { one: 'string' });
+}</p>
+
+<p>test(123);
+```</p>
+
+<p>That would result in a output like:</p>
+
+<p>```sh
+assert.js:92
+  throw new assert.AssertionError({</p>
+
+<pre><code>    ^
+</code></pre>
+
+<p>AssertionError: inside function: test, one argument is not string</p>
+
+<pre><code>at funcName (/private/tmp/k.js:6:3)
+at ensure (/private/tmp/node_modules/have/have.js:109:5)
+at have (/private/tmp/node_modules/have/have.js:124:11)
+at have.one (/private/tmp/k.js:12:5)
+at test (/private/tmp/k.js:19:3)
+at Object.&lt;anonymous&gt; (/private/tmp/k.js:22:1)
+at Module._compile (module.js:456:26)
+at Object.Module._extensions..js (module.js:474:10)
+at Module.load (module.js:356:32)
+at Function.Module._load (module.js:312:12)
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/have/have.gif" alt="" /></p>
+
+<p>Thanks to  <a href="http://stdarg.com/">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of 'have' module</p>
+
+<p>Hope you liked <code>have</code> have fun! :)</p>
+]]></content>
+  </entry>
+  
+</feed>
