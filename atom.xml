@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-03-27T18:26:30+05:30</updated>
+  <updated>2014-03-27T18:34:02+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -211,7 +211,7 @@
 
 <p><img src="http://hemanth.github.io/nmotw.in/images/have/have.gif" alt="" /></p>
 
-<p>Thanks to  <a href="http://stdarg.com/">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of &#8216;have&#8217; module</p>
+<p>Thanks to  <a href="https://github.com/stdarg">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of &#8216;have&#8217; module</p>
 
 <p>Hope you liked <code>have</code> have fun! :)</p>
 ]]></content>
