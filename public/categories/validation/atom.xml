@@ -4,7 +4,7 @@
   <title><![CDATA[Category: validation | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/validation/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-03-27T12:31:55+05:30</updated>
+  <updated>2014-03-27T18:26:30+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -18,7 +18,7 @@
     <link href="http://hemanth.github.io/nmotw.in/have/"/>
     <updated>2014-03-27T18:33:53+05:30</updated>
     <id>http://hemanth.github.io/nmotw.in/have</id>
-    <content type="html"><![CDATA[<p>Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a>that will help you to have your arguments, and validate it too!</p>
+    <content type="html"><![CDATA[<p>Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a> that will help you to have your arguments, and validate it too!</p>
 
 <p>Here is a simple example of two functions straight from the source, that does the same argument validations, the first one is without using <code>have</code> and the second one is with <code>have</code>:</p>
 
