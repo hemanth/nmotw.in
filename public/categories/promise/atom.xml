@@ -4,7 +4,7 @@
   <title><![CDATA[Category: promise | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/promise/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-04-10T18:12:09+05:30</updated>
+  <updated>2014-04-10T18:16:57+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -22,7 +22,7 @@
 
 <p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
 
-<p>As it does to convert a async function to a promise based one is to return a promise:</p>
+<p>As it does to convert an async function to a promise based one is to return a promise:</p>
 
 <p>```javascript
 var promise = require('lie');
