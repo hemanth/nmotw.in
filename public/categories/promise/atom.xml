@@ -4,7 +4,7 @@
   <title><![CDATA[Category: promise | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/promise/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-04-03T18:26:38+05:30</updated>
+  <updated>2014-04-10T18:12:09+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[lie-denodify]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/lie-denodify/"/>
+    <updated>2014-04-10T17:38:55+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/lie-denodify</id>
+    <content type="html"><![CDATA[<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify's</a> main focus is to turn a node style callback into a promise based one.</p>
+
+<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
+
+<p>As it does to convert a async function to a promise based one is to return a promise:</p>
+
+<p>```javascript
+var promise = require('lie');
+function denodify(func) {</p>
+
+<pre><code>return function() {
+    var args = Array.prototype.concat.apply([], arguments);
+    return promise(function(resolve, reject) {
+        args.push(function(err, success) {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve(success);
+            }
+        });
+        func.apply(undefined, args);
+    });
+};
+</code></pre>
+
+<p>}
+module.exports = denodify;
+```</p>
+
+<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<p>Let's try and covert <code>fs.stat</code> function to a promise!</p>
+
+<p>First of all let's have a look at how <code>fs.stat</code> works before conversion.</p>
+
+<p>```js
+var fstat = require('fs').stat;</p>
+
+<p>fstat('/tmp',function(err,res){</p>
+
+<pre><code>if(!err){
+  console.log(res);
+} else {
+    throw new Error(err);
+}
+</code></pre>
+
+<p>});</p>
+
+<p>/*
+Would log something like:
+{ dev: 16777217,
+  mode: 17407,
+  nlink: 14,
+  uid: 0,
+  gid: 0,
+  rdev: 0,
+  blksize: 4096,
+  ino: 144575596,
+  size: 476,
+  blocks: 0,
+  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),
+  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),
+  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</p>
+
+<p> And in case of an Error it would throw an error</p>
+
+<p>*/
+```</p>
+
+<p>Now, let's convert it into a promise:</p>
+
+<p>```js</p>
+
+<p>var lieDndfy = require('lie-denodify');</p>
+
+<p>var statp = lieDndfy ( require('fs').stat );</p>
+
+<p>statp('/tmp').then(console.log,console.error);</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
+
+<p>Learn to lie this week ;)!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[RSVP]]></title>
