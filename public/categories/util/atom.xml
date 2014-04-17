@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: util | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-04-17T18:01:39+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[json-mask]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/json-mask/"/>
+    <updated>2014-04-17T17:50:46+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/json-mask</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
+
+<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
+
+<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
+
+<p>It's <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
+
+<p><code>
+ Props ::= Prop | Prop "," Props
+   Prop ::= Object | Array
+ Object ::= NAME | NAME "/" Object
+  Array ::= NAME "(" Props ")"
+   NAME ::= ? all visible characters ?
+</code></p>
+
+<p>Translating it few examples, that are loosely based on XPath syntax:</p>
+
+<ul>
+<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
+<li><code>a/b/c</code> path will select a field from its parent</li>
+<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
+<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
+</ul>
+
+
+<p><strong>Example:</strong></p>
+
+<p>```javascript</p>
+
+<blockquote><p>var jmask = require('json-mask');</p>
+
+<p>var data = {name: {first: 'hemanth', last:'hm'}, age:7}</p>
+
+<p>jmask(data,'name')
+{ name: { first: 'hemanth', last: 'hm' } }</p>
+
+<p>jmask(data,'name/first')
+{ name: { first: 'hemanth' } }</p>
+
+<p>jmask(data,'name/last')
+{ name: { last: 'hm' } }</p>
+
+<p>jmask(data,'name/first,age')
+{ name: { first: 'hemanth' }, age: 7 }
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-mask/json-mask.gif" alt="json-mask" /></p>
+
+<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
+]]></content>
+  </entry>
+  
+</feed>
