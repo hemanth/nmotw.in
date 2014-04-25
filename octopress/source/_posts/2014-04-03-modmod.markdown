@@ -1,0 +1,66 @@
+---
+layout: post
+title: "modmod"
+date: 2014-04-03 17:32:31 +0530
+comments: true
+categories: design 
+---
+
+> "Simplicity is the ultimate sophistication." ― Leonardo da Vinci 
+
+Just dig into some node-modules you use or the one you released, how many require statements do you have? 
+
+[Stephen Sawchuk](http://stephenplusplus.github.io/me-but-you/) has made require-ing modules less require-y, with his [modmod](https://github.com/stephenplusplus/modmod) module!
+
+Installing it is like another other module: `npm install modmod` 
+
+__How does it help?__
+
+It helps you to reduce: 
+
+```javascript
+var fs = require('fs');
+var path = require('path');
+var util = require('util');
+var chalk = require('chalk');
+var wiredep = require('wiredep');
+```
+To:
+
+```javascript
+var $ = require('modmod')('fs', 'path', 'util', 'chalk', 'wiredep');
+```
+
+It's just eight lines of code that does the magic:
+
+```javascript
+
+module.exports = function () {
+  var builtinLibs = require('repl')._builtinLibs;
+  return [].slice.call(arguments).reduce(function (acc, key) {
+    var path = builtinLibs.indexOf(key) > -1 ? key : process.cwd() + '/node_modules/' + key;
+    acc[key] = require(path);
+    return acc;
+  }, {});
+};
+
+```
+
+`require('repl')._builtinLibs` will give a list of all node buitins, if not in the list, it will look for the `node_modules` dir in the current working dir and then `require` the required there by making it less require-y!
+
+__Why?__
+
+As said by the author:
+
+It's up to you. There's nothing wrong with the current system of multiple var declarations, and having too many isn't a node problem. Regardless, you may still consider it useful to namespace your dependencies under a name of your choosing, such as M or $, freeing up those "global" variables for use without conflicts.
+
+
+__GIF FTW!__
+
+![modmod](/images/modmod/modmod.gif)
+
+
+Enjoy your less require-y week ;)
+
+P.S: This module is just six days old! Will need to evolve on things like [this.](https://github.com/stephenplusplus/modmod/issues/4) do contribute your ideas to make it more awesome! 
+
