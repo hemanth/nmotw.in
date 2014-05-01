@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-05-01T13:51:35+05:30</updated>
+  <updated>2014-05-01T17:49:03+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -18,9 +18,9 @@
     <link href="http://hemanth.github.io/nmotw.in/rhyme/"/>
     <updated>2014-05-01T13:34:59+05:30</updated>
     <id>http://hemanth.github.io/nmotw.in/rhyme</id>
-    <content type="html"><![CDATA[<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored the module <a href="">rhyme</a> a rhyming dictionary made it to list ;)</p>
+    <content type="html"><![CDATA[<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored a module named <a href="https://github.com/substack/node-rhyme">rhyme</a> a rhyming dictionary! This made it to the nmotw list ;)</p>
 
-<p>The module makes use of CMU dictionary's <a href="">data</a> pick up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
+<p>The module makes use of CMU dictionary's <a href="https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/cmudict.0.7a">data</a> and picks up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
 
 <p><strong>Example Usage:</strong></p>
 
