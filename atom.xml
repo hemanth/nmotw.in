@@ -4,13 +4,56 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-04-24T19:29:15+05:30</updated>
+  <updated>2014-05-01T13:51:35+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[rhyme]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/rhyme/"/>
+    <updated>2014-05-01T13:34:59+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/rhyme</id>
+    <content type="html"><![CDATA[<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored the module <a href="">rhyme</a> a rhyming dictionary made it to list ;)</p>
+
+<p>The module makes use of CMU dictionary&#8217;s <a href="">data</a> pick up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">rhyme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rhyme</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">rhyme</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>node why.js
+</span><span class='line'>BEIM CHIME CLIMB CRIME DIME GRIME HAIM HEIM HIME I<span class="err">&#39;</span>M KIME LIME LYME MIME PRIME SEIM SIME SLIME SYME THYME TIME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/rhyme/rhyme.gif" alt="rhyme" /></p>
+
+<p><strong>Real coders use <code>cat</code> ;)?</strong></p>
+
+<p>Keep rhyming till next week!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[block.js]]></title>

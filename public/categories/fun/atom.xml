@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fun | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/fun/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-05-01T13:51:35+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rhyme]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/rhyme/"/>
+    <updated>2014-05-01T13:34:59+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/rhyme</id>
+    <content type="html"><![CDATA[<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored the module <a href="">rhyme</a> a rhyming dictionary made it to list ;)</p>
+
+<p>The module makes use of CMU dictionary's <a href="">data</a> pick up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>```javascript
+var rhyme = require('rhyme');</p>
+
+<p>rhyme(function(r) {
+  console.log(r.rhyme('rhyme').join(' '));
+});
+```</p>
+
+<p><code>sh
+$ node why.js
+BEIM CHIME CLIMB CRIME DIME GRIME HAIM HEIM HIME I'M KIME LIME LYME MIME PRIME SEIM SIME SLIME SYME THYME TIME
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/rhyme/rhyme.gif" alt="rhyme" /></p>
+
+<p><strong>Real coders use <code>cat</code> ;)?</strong></p>
+
+<p>Keep rhyming till next week!</p>
+]]></content>
+  </entry>
+  
+</feed>
