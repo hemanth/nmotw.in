@@ -1,0 +1,34 @@
+---
+layout: post
+title: "rhyme"
+date: 2014-05-01 13:34:59 +0530
+comments: true
+categories: fun
+---
+
+Out of all the awesome module that [James Halliday](https://www.npmjs.org/~substack) A.K.A [substack](http://substack.net/) has authored a module named [rhyme](https://github.com/substack/node-rhyme) a rhyming dictionary! This made it to the nmotw list ;)
+
+The module makes use of CMU dictionary's [data](https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/cmudict.0.7a) and picks up pronounce, syllables and plays around lazily to generate rhyming words for a given word.
+
+__Example Usage:__
+
+```javascript
+var rhyme = require('rhyme');
+
+rhyme(function(r) {
+  console.log(r.rhyme('rhyme').join(' '));
+});
+```
+
+```sh
+$ node why.js 
+BEIM CHIME CLIMB CRIME DIME GRIME HAIM HEIM HIME I'M KIME LIME LYME MIME PRIME SEIM SIME SLIME SYME THYME TIME
+```
+
+__GIF FTW!__
+
+![rhyme](/images/rhyme/rhyme.gif)
+
+__Real coders use `cat` ;)?__
+
+Keep rhyming till next week!
