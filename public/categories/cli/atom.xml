@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-05-08T19:33:36+05:30</updated>
+  <updated>2014-05-15T10:25:43+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,111 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[yosay]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/yosay/"/>
+    <updated>2014-05-15T09:45:56+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/yosay</id>
+    <content type="html"><![CDATA[<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
+
+<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
+
+<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>```</p>
+
+<p>$ echo "Yo! Mama. You can pipe." | yosay</p>
+
+<pre><code> _-----_
+|       |    .--------------------------.
+|--(o)--|    |  Yo! Mama. You can pipe. |
+</code></pre>
+
+<p>   `---------´   '--------------------------'</p>
+
+<pre><code>( _´U`_ )    
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p>```sh</p>
+
+<p>$ yosay "Node module of the week"</p>
+
+<pre><code> _-----_
+|       |    .--------------------------.
+|--(o)--|    |  Node module of the week |
+</code></pre>
+
+<p>   `---------´   '--------------------------'</p>
+
+<pre><code>( _´U`_ )    
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p>```sh
+$ yosay "Yo! How's it going" --maxLength 4</p>
+
+<pre><code> _-----_
+|       |    .------.
+|--(o)--|    |  Yo! |
+</code></pre>
+
+<p>   `---------´   | How's |</p>
+
+<pre><code>( _´U`_ )    |  it  |
+/___A___\    | going |
+ |  ~  |     '------'
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p> If you want to use it in you node script, you could do:</p>
+
+<p>```</p>
+
+<p> var yosay = require('yosay');</p>
+
+<p> yosay("Hope you enjoyed the session :)");</p>
+
+<pre><code>  _-----_
+|       |    .--------------------------.
+|--(o)--|    |   Hope you enjoyed the   |
+</code></pre>
+
+<p>   `---------´   |        session :)        |</p>
+
+<pre><code>( _´U`_ )    '--------------------------'
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code></p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
+
+<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Omelette]]></title>
