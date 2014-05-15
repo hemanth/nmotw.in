@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-05-15T10:25:43+05:30</updated>
+  <updated>2014-05-15T22:21:18+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -122,7 +122,7 @@
 <span class='line-number'>13</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'> var <span class="nv">yosay</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;yosay&#39;</span><span class="o">)</span>;
 </span><span class='line'>
-</span><span class='line'> yosay<span class="o">(</span><span class="s2">&quot;Hope you enjoyed the session :)&quot;</span><span class="o">)</span>;
+</span><span class='line'> console.log<span class="o">(</span> yosay<span class="o">(</span><span class="s2">&quot;Hope you enjoyed the session :)&quot;</span><span class="o">)</span> <span class="o">)</span>;
 </span><span class='line'>
 </span><span class='line'>      _-----_
 </span><span class='line'>    |       |    .--------------------------.
