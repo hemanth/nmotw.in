@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: performance | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/performance/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-05-22T22:42:18+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[time-require]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/time-require/"/>
+    <updated>2014-05-22T22:26:56+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/time-require</id>
+    <content type="html"><![CDATA[<p>Have you ever want the stats of how long the require statements are taking in your scripts?</p>
+
+<p>It's time to use (time-require)[https://www.npmjs.org/package/time-require] a node module that displays the execution time for Node.js modules loading by hooking and tracing all require() calls.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>```sh
+$ cat > time-require
+require("time-require");
+^C</p>
+
+<p>$ node time-require</p>
+
+<p>Start time: (2014-05-22 16:56:02 UTC) [treshold=1%]</p>
+
+<h1>module                          time  %</h1>
+
+<p>1  text-table (.....ble/index.js)  40ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 51%
+2  date-time (../...ime/index.js)   5ms  ▇▇ 6%
+3  parse-ms (../n...-ms/index.js)  10ms  ▇▇▇▇ 13%
+4  pretty-ms (../...-ms/index.js)  12ms  ▇▇▇▇▇ 15%
+5  ansi-styles (....si-styles.js)  10ms  ▇▇▇▇ 13%
+6  strip-ansi (.....nsi/index.js)   5ms  ▇▇ 6%
+7  has-color (../...lor/index.js)   1ms  ▇ 1%
+8  chalk (../node...alk/index.js)  20ms  ▇▇▇▇▇▇▇▇ 26%
+Total require(): 8
+Total time: 78ms
+```</p>
+
+<p>This module makes use of a require (hook)[https://github.com/jaguard/time-require/blob/master/src/requireHook.js#L71] which is loaded as the first module so all the other requires gets counted, unhooks and then prints out a neat table with the <code>totalTime = Date.now() - startTime.getTime();</code> and the number of modules that were required.</p>
+
+<p>Thanks to the module author <a href="http://jaguard.com">Ciprian Popa</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
+]]></content>
+  </entry>
+  
+</feed>

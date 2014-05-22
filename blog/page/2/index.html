@@ -56,6 +56,90 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/chalk/">
+			
+				Chalk</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-13T18:33:53+05:30" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
+
+<blockquote><p>&#8220;Write programs that do one thing and do it well.&#8221;</p></blockquote>
+
+<p>Out of many such one such elegant module is <a href="https://www.npmjs.org/package/chalk">chalk</a> thanks to <a href="http://sindresorhus.com/hi/">Sindre Sorhus</a> for that.</p>
+
+<p>Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is <a href="https://github.com/Marak/colors.js">colors.js</a> but one of the major drawbacks with that being it extending <code>String.portotye</code> or be <a href="https://github.com/yeoman/yo/issues/68">these</a> problems.</p>
+
+<p>Installing chalk is like any other module: <code>npm install --save chalk</code></p>
+
+<p>Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.</p>
+
+<p><strong>For example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">blue</span><span class="p">.</span><span class="nx">bgRed</span><span class="p">.</span><span class="nx">bold</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>  <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">red</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="nx">chalk</span><span class="p">.</span><span class="nx">underline</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>  <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a simple snippet for printing all of the styles it provides:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">styles</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">style</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">style</span> <span class="o">!==</span> <span class="s2">&quot;reset&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chalk</span><span class="p">[</span><span class="nx">style</span><span class="p">](</span><span class="nx">style</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>gif FTW!?</strong></p>
+
+<p><img src="http://nmotw.in/images/chalk/chalk.gif" alt="chalk" /></p>
+
+<p>Until next week, happy coloring!</p>
+
+<p><img src="http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/rsvp/">
 			
 				RSVP</a>
