@@ -56,6 +56,107 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/degenerator/">
+			
+				Degenerator</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-29T20:22:17+05:30" pubdate data-updated="true">May 29<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Turns sync functions into ES6&#8217;s async generator functions with <a href="http://n8.io/">Nathan Rajlich&#8217;s</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
+
+<p>Get it: <code>$ npm install degenerator</code></p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>Say we have few sync function like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">foo</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">baz</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">bar</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">baz</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">bar</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Some degenerator magic!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">degenerator</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;degenerator&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">js</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">sourceName</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">compiled</span> <span class="o">=</span> <span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="s1">&#39;baz&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The complied source would be:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">baz</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">baz</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">bar</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/time-require/">
 			
 				Time-require</a>
@@ -1198,164 +1299,6 @@
 <p>Thanks to  <a href="https://github.com/stdarg">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of &#8216;have&#8217; module</p>
 
 <p>Hope you liked <code>have</code> have fun! :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/configstore/">
-			
-				Configstore</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-20T17:53:08+05:30" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>CLI apps normally use configurations for different situations like:</p>
-
-<ul>
-<li><p>Saving the state of an app and restoring it.</p></li>
-<li><p>Having global and user level configurations for their own benefits.</p></li>
-<li><p>Maintaining interval threshold value for cron like activities.</p></li>
-<li><p>Storing strings for Internationalization and localization.</p></li>
-</ul>
-
-
-<p>And many more similar use cases.</p>
-
-<p><a href="https://github.com/yeoman/configstore">ConfigStore</a> is one such node module that helps you to easily load and persist config without having to think about where and how!</p>
-
-<p>This is wonderful module is a gift from <a href="http://yeoman.io">Yeoman</a> which has about 18432 downloads yesterday alone!</p>
-
-<p>Installing is it just like any other module: <code>$ npm install configstore</code></p>
-
-<p><strong>API:</strong></p>
-
-<p>The API set is very simple had has:</p>
-
-<ul>
-<li><p><code>set(key, val)</code> -> Set an item.</p></li>
-<li><p><code>get(key)</code> -> Get an item.</p></li>
-<li><p><code>del(key)</code> -> To delete an item.</p></li>
-<li><p><code>all</code> -> Get all the items in the current config store and replace them all with a new object.</p></li>
-<li><p><code>size</code> -> Count of the items.</p></li>
-<li><p><code>path</code> -> File path to the config store.</p></li>
-</ul>
-
-
-<p><strong>Example usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">Configstore</span> <span class="o">=</span>  <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;configstore&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Configstore</span><span class="p">(</span><span class="s1">&#39;appConf&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">  var conf = new ( require(&#39;configstore&#39;) )(&#39;appConf&#39;);</span>
-</span><span class='line'><span class="cm">  </span>
-</span><span class='line'><span class="cm">  var conf = new ( require(&#39;configstore&#39;) )\</span>
-</span><span class='line'><span class="cm">             (&#39;appConf&#39;, {&#39;ans&#39;: 42});</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">  i.e  Configstore(id, defaults);</span>
-</span><span class='line'><span class="cm">  id -&gt; mandator</span>
-</span><span class='line'><span class="cm">  defaults -&gt; optional</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Set some values.</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;life&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">);</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;scrt&#39;</span><span class="o">:</span> <span class="s1">&#39;42&#39;</span><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get some values.</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;life&#39;</span><span class="p">);</span> <span class="c1">// 42</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">);</span> <span class="c1">// {&#39;scrt&#39;: 42}</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Delete a value.</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">del</span><span class="p">(</span><span class="s1">&#39;life&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;life&#39;</span><span class="p">);</span> <span class="c1">// undefined.</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get the count.</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span> <span class="c1">// 1</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Reset the entier conf with new conf.</span>
-</span><span class='line'><span class="nx">conf</span><span class="p">.</span><span class="nx">all</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ans&#39;</span> <span class="o">:</span> <span class="mi">42</span><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Under the covers:</strong></p>
-
-<p>Config is stored as a <a href="http://www.yaml.org/">YAML</a> file in <code>$XDG_CONFIG_HOME</code> or <code>~/.config/configstore/your-config.yaml</code> there is an <a href="https://github.com/yeoman/configstore/issues/10">issue</a> for JSON support as well.</p>
-
-<p>For the above example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat ~/.config/configstore/appConf.yaml
-</span><span class='line'>
-</span><span class='line'><span class="c"># Would be something like</span>
-</span><span class='line'>key:
-</span><span class='line'>  scrt: 42
-</span><span class='line'>life: 42
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/configstore/configstore.gif" alt="configstore" /></p>
 
 		
 		

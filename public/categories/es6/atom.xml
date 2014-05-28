@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: es6 | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/es6/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-05-28T21:16:22+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[degenerator]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/degenerator/"/>
+    <updated>2014-05-29T20:22:17+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/degenerator</id>
+    <content type="html"><![CDATA[<p>Turns sync functions into ES6's async generator functions with <a href="http://n8.io/">Nathan Rajlich's</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
+
+<p>Get it: <code>$ npm install degenerator</code></p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>Say we have few sync function like:</p>
+
+<p>```javascript
+function foo () {
+  return baz();
+}</p>
+
+<p>function bar () {
+  return foo(baz);
+}</p>
+
+<p>function baz () {
+  return bar();
+}
+```</p>
+
+<p>Some degenerator magic!</p>
+
+<p><code>javascript
+var degenerator = require('degenerator')
+var js = fs.readFileSync(sourceName, 'utf8');
+var compiled = (js, ['foo','bar','baz']);
+</code></p>
+
+<p>The complied source would be:</p>
+
+<p>```javascript
+function* foo() {</p>
+
+<pre><code>return yield baz();
+</code></pre>
+
+<p>}
+function* bar() {</p>
+
+<pre><code>return yield foo(baz);
+</code></pre>
+
+<p>}
+function* baz() {</p>
+
+<pre><code>return yield bar();
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
+]]></content>
+  </entry>
+  
+</feed>
