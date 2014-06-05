@@ -56,6 +56,121 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/music-meta-data/">
+			
+				Music Meta Data</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-05T18:08:35+05:30" pubdate data-updated="true">Jun 5<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://github.com/leetreveil/musicmetadata">musicmetadata</a> is a streaming music metadata parser for node and the browser, but out focus is more on node side here.</p>
+
+<p>It&#8217;s worth noting that this module is influnced by <a href="https://github.com/aadsm/node-id3">node-id3</a></p>
+
+<p>This module makes it easier to extra meta data from a given audio file, it supports:</p>
+
+<ul>
+<li>mp{1.1, 2.2, 2.3, 2.4, 3}</li>
+<li>m4a, mp4.</li>
+<li>vorbis (ogg, flac)</li>
+<li>asf (wma, wmv)</li>
+</ul>
+
+
+<p>It parses the files for meaning fully meta data, for example it maintaines a common list of <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L212">GENRES</a> and <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L188">pic types</a> that will be matched and extracted from the Meta Data Atom.</p>
+
+<p>But the clean part of this module is it makes use of Streams :-)</p>
+
+<p>Kudos to <a href="http://twitter.com/leetreveil">Lee Treveil</a> on this.</p>
+
+<p><strong>Let&#8217;s see an example:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var fs = require('fs');
+</span><span class='line'>var mmd = require('musicmetadata');
+</span><span class='line'>
+</span><span class='line'>var parser = mmd( fs.createReadStream('FreeSWSong.ogg') );
+</span><span class='line'>
+</span><span class='line'>parser.on('metadata',function(res) {
+</span><span class='line'>    console.log(res);
+</span><span class='line'>});
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This would log something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">{</span> title: <span class="s1">&#39;Free Software Song&#39;</span>,
+</span><span class='line'>  artist: <span class="o">[</span> <span class="s1">&#39;Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil&#39;</span> <span class="o">]</span>,
+</span><span class='line'>  albumartist: <span class="o">[]</span>,
+</span><span class='line'>  album: <span class="s1">&#39;&#39;</span>,
+</span><span class='line'>  year: <span class="s1">&#39;2009&#39;</span>,
+</span><span class='line'>  track: <span class="o">{</span> no: 0, of: 0 <span class="o">}</span>,
+</span><span class='line'>  genre: <span class="o">[</span> <span class="s1">&#39;Ethnic&#39;</span> <span class="o">]</span>,
+</span><span class='line'>  disk: <span class="o">{</span> no: 0, of: 0 <span class="o">}</span>,
+</span><span class='line'>  picture: <span class="o">[]</span>,
+</span><span class='line'>  duration: 0 <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Now, we could also listen for an event for a particular entinty of the meta data or custom metadata types that are not part of the standard metadata.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Would log something like : <code>[ 'Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil' ]</code></p>
+
+<p>A <code>done</code> event is triggered once the parsing is done, we could as well listen for it, to detect any errors.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/music-meta-data/mmd.gif" alt="music-meta-data" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/degenerator/">
 			
 				Degenerator</a>
@@ -1071,234 +1186,6 @@
 <p>Enjoy your less require-y week ;)</p>
 
 <p>P.S: This module is just six days old! Will need to evolve on things like <a href="https://github.com/stephenplusplus/modmod/issues/4">this.</a> do contribute your ideas to make it more awesome!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/have/">
-			
-				Have</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-27T18:33:53+05:30" pubdate data-updated="true">Mar 27<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Coding a &#8220;defensive&#8221; or a &#8220;contractual&#8221; API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a> that will help you to have your arguments, and validate it too!</p>
-
-<p>Here is a simple example of two functions straight from the source, that does the same argument validations, the first one is without using <code>have</code> and the second one is with <code>have</code>:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withoutHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="s1">&#39;id argument not string or number&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;arr member not a string&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
-</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="o">!</span><span class="nx">opts</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;options object not a hash&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">callback</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">,</span> <span class="s1">&#39;callback missing or not a function&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// logic...</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'><span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span>
-</span><span class='line'>    <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;str or num&#39;</span>
-</span><span class='line'>    <span class="p">,</span> <span class="nx">arr</span><span class="o">:</span> <span class="s1">&#39;str or str array&#39;</span>
-</span><span class='line'>    <span class="p">,</span> <span class="nx">opts</span><span class="o">:</span> <span class="s1">&#39;optional obj&#39;</span>
-</span><span class='line'>    <span class="p">,</span> <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;func&#39;</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
-</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// logic...</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>How&#8217;s have better than any other argument validator?</strong></p>
-
-<p>Have provides:</p>
-
-<ul>
-<li><p>mini-DSL</p></li>
-<li><p>Soft assertion.</p></li>
-<li><p>Shorter notations.</p></li>
-</ul>
-
-
-<p>You can do a simple assertion with have like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;WARN: assertion failed: &#39;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can also wrap the exported have function, in case you want to log the function name as well:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">,</span> <span class="nx">have</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;have&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">,</span> <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="s1">&#39;inside function: &#39;</span> <span class="o">+</span> <span class="nx">funcName</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">msg</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">have</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">have_</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">callee</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-</span><span class='line'>    <span class="nx">have_</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">);</span>
-</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">};</span>
-</span><span class='line'><span class="p">})(</span><span class="nx">have</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="p">{</span> <span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">});</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">test</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That would result in a output like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>assert.js:92
-</span><span class='line'>  throw new assert.AssertionError<span class="o">({</span>
-</span><span class='line'>        ^
-</span><span class='line'>AssertionError: inside <span class="k">function</span>: <span class="nb">test</span>, one argument is not string
-</span><span class='line'>    at funcName <span class="o">(</span>/private/tmp/k.js:6:3<span class="o">)</span>
-</span><span class='line'>    at ensure <span class="o">(</span>/private/tmp/node_modules/have/have.js:109:5<span class="o">)</span>
-</span><span class='line'>    at have <span class="o">(</span>/private/tmp/node_modules/have/have.js:124:11<span class="o">)</span>
-</span><span class='line'>    at have.one <span class="o">(</span>/private/tmp/k.js:12:5<span class="o">)</span>
-</span><span class='line'>    at <span class="nb">test</span> <span class="o">(</span>/private/tmp/k.js:19:3<span class="o">)</span>
-</span><span class='line'>    at Object.&lt;anonymous&gt; <span class="o">(</span>/private/tmp/k.js:22:1<span class="o">)</span>
-</span><span class='line'>    at Module._compile <span class="o">(</span>module.js:456:26<span class="o">)</span>
-</span><span class='line'>    at Object.Module._extensions..js <span class="o">(</span>module.js:474:10<span class="o">)</span>
-</span><span class='line'>    at Module.load <span class="o">(</span>module.js:356:32<span class="o">)</span>
-</span><span class='line'>    at Function.Module._load <span class="o">(</span>module.js:312:12<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/have/have.gif" alt="" /></p>
-
-<p>Thanks to  <a href="https://github.com/stdarg">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of &#8216;have&#8217; module</p>
-
-<p>Hope you liked <code>have</code> have fun! :)</p>
 
 		
 		

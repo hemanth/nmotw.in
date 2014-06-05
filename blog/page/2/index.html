@@ -56,6 +56,234 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/have/">
+			
+				Have</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-27T18:33:53+05:30" pubdate data-updated="true">Mar 27<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Coding a &#8220;defensive&#8221; or a &#8220;contractual&#8221; API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a> that will help you to have your arguments, and validate it too!</p>
+
+<p>Here is a simple example of two functions straight from the source, that does the same argument validations, the first one is without using <code>have</code> and the second one is with <code>have</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withoutHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;id argument not string or number&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;arr member not a string&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="o">!</span><span class="nx">opts</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;options object not a hash&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">callback</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">,</span> <span class="s1">&#39;callback missing or not a function&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// logic...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;str or num&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">arr</span><span class="o">:</span> <span class="s1">&#39;str or str array&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">opts</span><span class="o">:</span> <span class="s1">&#39;optional obj&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;func&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// logic...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>How&#8217;s have better than any other argument validator?</strong></p>
+
+<p>Have provides:</p>
+
+<ul>
+<li><p>mini-DSL</p></li>
+<li><p>Soft assertion.</p></li>
+<li><p>Shorter notations.</p></li>
+</ul>
+
+
+<p>You can do a simple assertion with have like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;WARN: assertion failed: &#39;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also wrap the exported have function, in case you want to log the function name as well:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">,</span> <span class="nx">have</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;have&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">,</span> <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="s1">&#39;inside function: &#39;</span> <span class="o">+</span> <span class="nx">funcName</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">msg</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">have</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">have_</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">callee</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">have_</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">})(</span><span class="nx">have</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="p">{</span> <span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">test</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That would result in a output like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>assert.js:92
+</span><span class='line'>  throw new assert.AssertionError<span class="o">({</span>
+</span><span class='line'>        ^
+</span><span class='line'>AssertionError: inside <span class="k">function</span>: <span class="nb">test</span>, one argument is not string
+</span><span class='line'>    at funcName <span class="o">(</span>/private/tmp/k.js:6:3<span class="o">)</span>
+</span><span class='line'>    at ensure <span class="o">(</span>/private/tmp/node_modules/have/have.js:109:5<span class="o">)</span>
+</span><span class='line'>    at have <span class="o">(</span>/private/tmp/node_modules/have/have.js:124:11<span class="o">)</span>
+</span><span class='line'>    at have.one <span class="o">(</span>/private/tmp/k.js:12:5<span class="o">)</span>
+</span><span class='line'>    at <span class="nb">test</span> <span class="o">(</span>/private/tmp/k.js:19:3<span class="o">)</span>
+</span><span class='line'>    at Object.&lt;anonymous&gt; <span class="o">(</span>/private/tmp/k.js:22:1<span class="o">)</span>
+</span><span class='line'>    at Module._compile <span class="o">(</span>module.js:456:26<span class="o">)</span>
+</span><span class='line'>    at Object.Module._extensions..js <span class="o">(</span>module.js:474:10<span class="o">)</span>
+</span><span class='line'>    at Module.load <span class="o">(</span>module.js:356:32<span class="o">)</span>
+</span><span class='line'>    at Function.Module._load <span class="o">(</span>module.js:312:12<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/have/have.gif" alt="" /></p>
+
+<p>Thanks to  <a href="https://github.com/stdarg">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of &#8216;have&#8217; module</p>
+
+<p>Hope you liked <code>have</code> have fun! :)</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/configstore/">
 			
 				Configstore</a>
