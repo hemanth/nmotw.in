@@ -4,13 +4,109 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-12T10:12:49+05:30</updated>
+  <updated>2014-06-12T10:15:24+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[proxyquire]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/proxyquire/"/>
+    <updated>2014-06-12T09:21:00+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/proxyquire</id>
+    <content type="html"><![CDATA[<p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
+
+<p><a href="npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
+
+<p>Installing proxyquire: <code>npm install --save proxyquire</code></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Say we a file <code>baz.js</code> under test and it looks like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">os</span><span class="p">.</span><span class="nx">freemem</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It&#8217;s evident that the return value of this function will never be a constant value.</p>
+
+<p>How do we test it then?</p>
+
+<p>Have a look at the test case:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Get some assertion helper.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// First up we require proxyquire</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">proxyquire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;proxyquire&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// We make a mock of what we need.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">osStub</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">freemem</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">617619456</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now some magic ;)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">freemem</span> <span class="o">=</span> <span class="nx">proxyquire</span><span class="p">(</span><span class="s2">&quot;./baz&quot;</span><span class="p">,{</span><span class="s1">&#39;os&#39;</span><span class="o">:</span><span class="nx">osStub</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should return the amount of free memory&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">freemem</span><span class="p">(),</span><span class="mi">6176197456</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it! The test case will be green now :)</p>
+
+<p>Proxyquire basically, <a href="https://github.com/thlorenz/proxyquire/blob/master/lib/proxyquire.js#L135">replaces</a> a module&#8217;s require function.</p>
+
+<p>There are many other features like:</p>
+
+<ul>
+<li>&#8216;noCallThru&#8217;,</li>
+<li>&#8216;callThru&#8217;,</li>
+<li>&#8216;noPreserveCache&#8217;,</li>
+<li>&#8216;preserveCache&#8217;,</li>
+<li>&#8216;load&#8217;</li>
+</ul>
+
+
+<p>Please feel free to go through their extensive API <a href="https://github.com/thlorenz/proxyquire#api">DOC</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
+
+<p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[music meta data]]></title>
