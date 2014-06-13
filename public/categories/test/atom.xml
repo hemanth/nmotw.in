@@ -4,7 +4,7 @@
   <title><![CDATA[Category: test, | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/test/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-12T10:15:24+05:30</updated>
+  <updated>2014-06-13T18:29:44+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -20,9 +20,9 @@
     <id>http://hemanth.github.io/nmotw.in/proxyquire</id>
     <content type="html"><![CDATA[<p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
 
-<p><a href="npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
+<p><a href="http://npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
 
-<p>Installing proxyquire: <code>npm install --save proxyquire</code></p>
+<p>Installing proxyquire: <code>npm install -D proxyquire</code></p>
 
 <p><strong>Example:</strong></p>
 
