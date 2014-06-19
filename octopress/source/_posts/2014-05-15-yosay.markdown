@@ -1,0 +1,89 @@
+---
+layout: post
+title: "yosay"
+date: 2014-05-15 09:45:56 +0530
+comments: true
+categories: CLI
+---
+
+Many of us wanted to greet like [Yeoman](http://yeoman.io) in the CLI, now it's very easy to do that!
+
+Here is [yosay](https://github.com/yeoman/yosay) just like [cowsay](http://en.wikipedia.org/wiki/Cowsay), but less cow. Tell yeoman what to say or talk like yeoman!
+
+
+Get `yosay` like an other node module: `npm install -g yosay` 
+
+__Example usage:__
+
+```
+
+$ echo "Yo! Mama. You can pipe." | yosay
+
+     _-----_
+    |       |    .--------------------------.
+    |--(o)--|    |  Yo! Mama. You can pipe. |
+   `---------´   '--------------------------'
+    ( _´U`_ )    
+    /___A___\    
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+```
+
+```sh
+
+$ yosay "Node module of the week"
+
+     _-----_
+    |       |    .--------------------------.
+    |--(o)--|    |  Node module of the week |
+   `---------´   '--------------------------'
+    ( _´U`_ )    
+    /___A___\    
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+```
+
+```sh
+$ yosay "Yo! How's it going" --maxLength 4
+
+     _-----_
+    |       |    .------.
+    |--(o)--|    |  Yo! |
+   `---------´   | How's |
+    ( _´U`_ )    |  it  |
+    /___A___\    | going |
+     |  ~  |     '------'
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+```
+
+
+ If you want to use it in you node script, you could do:
+
+```
+
+ var yosay = require('yosay');
+
+ console.log( yosay("Hope you enjoyed the session :)") );
+
+      _-----_
+    |       |    .--------------------------.
+    |--(o)--|    |   Hope you enjoyed the   |
+   `---------´   |        session :)        |
+    ( _´U`_ )    '--------------------------'
+    /___A___\    
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+
+```
+
+__GIF FTW!:__
+
+![yosay](/images/yosay/yosay.gif)
+
+
+__Enjoy talking like the Yeoman! :)__
+

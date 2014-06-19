@@ -1,0 +1,66 @@
+$header-height: 30px;
+
+#header{
+	height: $header-height;
+	padding: 30px 0;
+    margin-top: 80px;
+	margin-bottom: 120px;
+	text-align: center;
+    font-size: 20px;
+	line-height: $header-height;
+    
+	@media screen and (max-width: 1040px){
+        margin-top: 20px;
+		margin-bottom: 30px;
+		height: auto;
+		position: relative;
+		padding-bottom: 10px;
+	}
+	@media screen and (max-width: 620px){
+        margin-top: 10px;
+	    margin-bottom: 15px;
+	}
+    
+	a{
+		color: $color-blog-title;
+		@include transition(color 0.3s);
+		&:hover{
+			color: $color-blog-title-h;
+			border-bottom:none;
+		}
+	}
+    
+	h1 {
+        margin: 0 auto 25px;
+        text-align: center;
+        font-family: $font-blog-title;
+		font-weight: 100;
+		font-size: 70px;
+        letter-spacing: 0.3em;
+        padding-left: 0.3em;
+		@media screen and (max-width: 1040px){
+			float: none;
+		}
+        @media screen and (max-width: 480px){
+            margin: 0 auto 5px;
+            font-size: 50px;
+            letter-spacing: 0.1em;
+            padding-left: 0.1em;		
+        }
+	}
+    
+	.tagline{
+		margin-top:15px;
+        font-family: $font-blog-subtitle;
+		font-weight: 100;
+		font-size: 32px;
+        color: $color-blog-subtitle;
+		@media screen and(max-width: 1040px){
+			float: none;
+		}
+        @media screen and (max-width: 480px){
+            font-size: 20px;            
+        }
+	}
+}
+
