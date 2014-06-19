@@ -56,6 +56,173 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/lie-denodify/">
+			
+				Lie-denodify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-10T17:38:55+05:30" pubdate data-updated="true">Apr 10<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify&#8217;s</a> main focus is to turn a node style callback into a promise based one.</p>
+
+<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
+
+<p>All it does to convert an async function to a promise based one is to return a promise with the help of lie:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">denodify</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">concat</span><span class="p">.</span><span class="nx">apply</span><span class="p">([],</span> <span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">args</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>                <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">resolve</span><span class="p">(</span><span class="nx">success</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>            <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">denodify</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<p>Let&#8217;s try and covert <code>fs.stat</code> function to a promise!</p>
+
+<p>First of all let&#8217;s have a look at how <code>fs.stat</code> works before conversion.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fstat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fstat</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Would log something like:</span>
+</span><span class='line'><span class="cm">{ dev: 16777217,</span>
+</span><span class='line'><span class="cm">  mode: 17407,</span>
+</span><span class='line'><span class="cm">  nlink: 14,</span>
+</span><span class='line'><span class="cm">  uid: 0,</span>
+</span><span class='line'><span class="cm">  gid: 0,</span>
+</span><span class='line'><span class="cm">  rdev: 0,</span>
+</span><span class='line'><span class="cm">  blksize: 4096,</span>
+</span><span class='line'><span class="cm">  ino: 144575596,</span>
+</span><span class='line'><span class="cm">  size: 476,</span>
+</span><span class='line'><span class="cm">  blocks: 0,</span>
+</span><span class='line'><span class="cm">  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</span>
+</span><span class='line'><span class="cm"> </span>
+</span><span class='line'><span class="cm"> And in case of an Error it would throw an error</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, let&#8217;s convert it into a promise:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lieDndfy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie-denodify&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">statp</span> <span class="o">=</span> <span class="nx">lieDndfy</span> <span class="p">(</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">statp</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
+
+<p>Learn to lie this week ;)!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/modmod/">
 			
 				Modmod</a>

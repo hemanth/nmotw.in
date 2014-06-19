@@ -4,13 +4,155 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-13T18:29:44+05:30</updated>
+  <updated>2014-06-19T19:55:57+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PSI]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/psi/"/>
+    <updated>2014-06-19T19:22:39+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/psi</id>
+    <content type="html"><![CDATA[<p>If you are into web development at one point or the other you would have used Google&#8217;s pagespeed <a href="http://developers.google.com/speed/pagespeed/insights/">insights</a> to improve the performance of your site.</p>
+
+<p>Now it&#8217;s even easier to get those insights on your CLI with <a href="https://www.npmjs.org/package/psi">psi</a> thanks to the <a href="http://addyosmani.com/blog/">Addy Osmani</a> for such a wonderful module.</p>
+
+<p>Formal defination of the module:</p>
+
+<blockquote><p>PageSpeed Insights With Reporting</p></blockquote>
+
+<p>Run mobile and desktop performance tests for your deployed site using <a href="https://developers.google.com/speed/docs/insights/v1/getting_started">Google PageSpeed Insights</a> with tidy reporting for your build process. A sample <a href="https://github.com/addyosmani/psi-gulp-sample">Gulpfile</a> demonstrating use is also available.</p>
+
+<p>Uses <a href="https://github.com/zrrrzzt/gpagespeed/">gpagespeed</a> and the reporter in <a href="https://github.com/jrcryer/grunt-pagespeed">grunt-pagespeed</a>.</p>
+
+<p>Install it -> <code>$ npm install psi</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>P.S: Registering for an API key from the <a href="https://developers.google.com/speed/docs/insights/v1/getting_started#auth">Google Developer Console</a> is recommended.</p>
+
+<p><strong>In code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">psi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;psi&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">psi</span><span class="p">({</span>
+</span><span class='line'>  <span class="c1">// key: &#39;...&#39;, optional</span>
+</span><span class='line'>  <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://nmotw.in&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">paths</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>           <span class="c1">// optional</span>
+</span><span class='line'>  <span class="nx">locale</span><span class="o">:</span> <span class="s1">&#39;en_US&#39;</span><span class="p">,</span>     <span class="c1">// optional</span>
+</span><span class='line'>  <span class="nx">strategy</span><span class="o">:</span> <span class="s1">&#39;mobile&#39;</span><span class="p">,</span>  <span class="c1">// optional</span>
+</span><span class='line'>  <span class="nx">threshold</span><span class="o">:</span> <span class="mi">80</span>        <span class="c1">// optional</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>On CLI:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>psi http://nmotw.in --strategy desktop
+</span><span class='line'>Running Pagespeed Insights
+</span><span class='line'>Pagespeed Insights: Processing results
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>URL:      http://nmotw.in/
+</span><span class='line'>Strategy: desktop
+</span><span class='line'>Score:    90
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>Number Resources                                 | 16
+</span><span class='line'>Number Hosts                                     | 7
+</span><span class='line'>Total Request Bytes                              | 1538
+</span><span class='line'>Number Static Resources                          | 8
+</span><span class='line'>Html Response Bytes                              | 7019
+</span><span class='line'>Css Response Bytes                               | 17484
+</span><span class='line'>Image Response Bytes                             | 384
+</span><span class='line'>Javascript Response Bytes                        | 228348
+</span><span class='line'>Other Response Bytes                             | 221982
+</span><span class='line'>Number Js Resources                              | 5
+</span><span class='line'>Number Css Resources                             | 3
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>Avoid Landing Page Redirects                     | 0
+</span><span class='line'>Enable Gzip Compression                          | 0
+</span><span class='line'>Leverage Browser Caching                         | 1.5
+</span><span class='line'>Main Resource Server Response Time               | 0
+</span><span class='line'>Minify Css                                       | 0
+</span><span class='line'>Minify HTML                                      | 0
+</span><span class='line'>Minify Java Script                               | 0.16
+</span><span class='line'>Minimize Render Blocking Resources               | 8
+</span><span class='line'>Optimize Images                                  | 0
+</span><span class='line'>Prioritize Visible Content                       | 0
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you have bunch of sites to analyse you could something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>cat links | xargs -L1 psi &gt; analysis.report
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/psi/psi.gif" alt="psi" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[proxyquire]]></title>

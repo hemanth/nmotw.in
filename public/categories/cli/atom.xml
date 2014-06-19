@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: CLI | NMOTW]]></title>
+  <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-13T18:29:44+05:30</updated>
+  <updated>2014-06-19T19:55:57+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,370 +14,98 @@
 
   
   <entry>
-    <title type="html"><![CDATA[yosay]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/yosay/"/>
-    <updated>2014-05-15T09:45:56+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/yosay</id>
-    <content type="html"><![CDATA[<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
+    <title type="html"><![CDATA[PSI]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/psi/"/>
+    <updated>2014-06-19T19:22:39+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/psi</id>
+    <content type="html"><![CDATA[<p>If you are into web development at one point or the other you would have used Google's pagespeed <a href="http://developers.google.com/speed/pagespeed/insights/">insights</a> to improve the performance of your site.</p>
 
-<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
+<p>Now it's even easier to get those insights on your CLI with <a href="https://www.npmjs.org/package/psi">psi</a> thanks to the <a href="http://addyosmani.com/blog/">Addy Osmani</a> for such a wonderful module.</p>
 
-<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
+<p>Formal defination of the module:</p>
+
+<blockquote><p>PageSpeed Insights With Reporting</p></blockquote>
+
+<p>Run mobile and desktop performance tests for your deployed site using <a href="https://developers.google.com/speed/docs/insights/v1/getting_started">Google PageSpeed Insights</a> with tidy reporting for your build process. A sample <a href="https://github.com/addyosmani/psi-gulp-sample">Gulpfile</a> demonstrating use is also available.</p>
+
+<p>Uses <a href="https://github.com/zrrrzzt/gpagespeed/">gpagespeed</a> and the reporter in <a href="https://github.com/jrcryer/grunt-pagespeed">grunt-pagespeed</a>.</p>
+
+<p>Install it -> <code>$ npm install psi</code></p>
 
 <p><strong>Example usage:</strong></p>
 
-<p>```</p>
+<p>P.S: Registering for an API key from the <a href="https://developers.google.com/speed/docs/insights/v1/getting_started#auth">Google Developer Console</a> is recommended.</p>
 
-<p>$ echo "Yo! Mama. You can pipe." | yosay</p>
+<p><strong>In code:</strong></p>
 
-<pre><code> _-----_
-|       |    .--------------------------.
-|--(o)--|    |  Yo! Mama. You can pipe. |
-</code></pre>
+<p>```js
+var psi = require('psi');</p>
 
-<p>   `---------´   '--------------------------'</p>
+<p>psi({</p>
 
-<pre><code>( _´U`_ )    
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p>```sh</p>
-
-<p>$ yosay "Node module of the week"</p>
-
-<pre><code> _-----_
-|       |    .--------------------------.
-|--(o)--|    |  Node module of the week |
-</code></pre>
-
-<p>   `---------´   '--------------------------'</p>
-
-<pre><code>( _´U`_ )    
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p>```sh
-$ yosay "Yo! How's it going" --maxLength 4</p>
-
-<pre><code> _-----_
-|       |    .------.
-|--(o)--|    |  Yo! |
-</code></pre>
-
-<p>   `---------´   | How's |</p>
-
-<pre><code>( _´U`_ )    |  it  |
-/___A___\    | going |
- |  ~  |     '------'
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p> If you want to use it in you node script, you could do:</p>
-
-<p>```</p>
-
-<p> var yosay = require('yosay');</p>
-
-<p> console.log( yosay("Hope you enjoyed the session :)") );</p>
-
-<pre><code>  _-----_
-|       |    .--------------------------.
-|--(o)--|    |   Hope you enjoyed the   |
-</code></pre>
-
-<p>   `---------´   |        session :)        |</p>
-
-<pre><code>( _´U`_ )    '--------------------------'
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code></p>
-
-<p>```</p>
-
-<p><strong>GIF FTW!:</strong></p>
-
-<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
-
-<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Omelette]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/omelette/"/>
-    <updated>2014-05-08T18:08:15+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/omelette</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.org/package/omelette">Omelette.js</a> a simple autocompletion helper for node, published by <a href="http://fatihak.in/">Fatih</a>.</p>
-
-<p>It's a beautifuly crafted coffee code, that takes care of tab completions for your CLI tools.</p>
-
-<p>It's takes care of <code>--compgen</code>, <code>--completion</code> and <code>--compzsh</code> for variations of SHELLs.</p>
-
-<p>Say you need a simple CLI tool to greet user:</p>
-
-<p>```javascript</p>
-
-<h1>!/usr/bin/env node</h1>
-
-<p>var comp, omelette;</p>
-
-<p>omelette = require("omelette");</p>
-
-<p>comp = omelette("greeter <user>");</p>
-
-<p>comp.on("user", function() {
-  return this.reply(["hello", "cruel", "world"]);
-});</p>
-
-<p>comp.init();
-```</p>
-
-<p>Which on <code>user</code> completes "hello", "cruel", "world".</p>
-
-<p>Say you saved the file as <code>greeter</code> all you have do to generator the completion is :</p>
-
-<p><code>sh
-$ ./greeter --completion
-</code></p>
-
-<p>That would result in the bleow for <code>bash</code> shell:</p>
-
-<p>```sh</p>
-
-<h3>greet completion - begin. generated by omelette</h3>
-
-<p>if type compdef &amp;>/dev/null; then
-  _greet_complette() {</p>
-
-<pre><code>compadd -- `greet --compzsh --compgen "${CURRENT}" "${words[CURRENT-1]}" "${BUFFER}"`
-</code></pre>
-
-<p>  }
-  compdef <em>greet_complette greet
-elif type complete &amp;>/dev/null; then
-  </em>greet_complette() {</p>
-
-<pre><code>COMPREPLY=( $(compgen -W '$(greet --compbash --compgen "${COMP_CWORD}" "${COMP_WORDS[COMP_CWORD-1]}" "${COMP_LINE}")' -- "${COMP_WORDS[COMP_CWORD]}") )
-</code></pre>
-
-<p>  }
-  complete -F _greet_complette greet
-fi</p>
-
-<h3>greet completion - end</h3>
-
-<p>```</p>
-
-<p>In zsh, you can write these:</p>
-
-<p><code>echo '. &lt;(./greeter --completion)' &gt;&gt; .zshrc</code></p>
-
-<p>In bash, you should write:</p>
-
-<p>```</p>
-
-<p>./greeter --completion >> ~/greeter.completion.sh
-echo 'source ~/greeter.completion.sh' >> .bash_profile</p>
-
-<p>```</p>
-
-<p>Now you must see tab completion for greeter!</p>
-
-<p>You can also use:</p>
-
-<p>```javascript</p>
-
-<p>// Listen all fragments by "complete" event</p>
-
-<p>complete.on("complete", function(fragment, word, line) {
-  return this.reply(["hello", "world"]);
-});</p>
-
-<p>// Listen events by its order.</p>
-
-<p>complete.on("$1", function(word, line) {
-  return this.reply(["hello", "world"]);
-});</p>
-
-<p>```</p>
-
-<p><strong>A wonderful GIF by the author:</strong></p>
-
-<p><img src="/images/omelette/omelette.gif" alt="omelette.gif" /></p>
-
-<p>Enjoy your tab completions!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[configstore]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/configstore/"/>
-    <updated>2014-03-20T17:53:08+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/configstore</id>
-    <content type="html"><![CDATA[<p>CLI apps normally use configurations for different situations like:</p>
-
-<ul>
-<li><p>Saving the state of an app and restoring it.</p></li>
-<li><p>Having global and user level configurations for their own benefits.</p></li>
-<li><p>Maintaining interval threshold value for cron like activities.</p></li>
-<li><p>Storing strings for Internationalization and localization.</p></li>
-</ul>
-
-
-<p>And many more similar use cases.</p>
-
-<p><a href="https://github.com/yeoman/configstore">ConfigStore</a> is one such node module that helps you to easily load and persist config without having to think about where and how!</p>
-
-<p>This is wonderful module is a gift from <a href="http://yeoman.io">Yeoman</a> which has about 18432 downloads yesterday alone!</p>
-
-<p>Installing is it just like any other module: <code>$ npm install configstore</code></p>
-
-<p><strong>API:</strong></p>
-
-<p>The API set is very simple had has:</p>
-
-<ul>
-<li><p><code>set(key, val)</code> -> Set an item.</p></li>
-<li><p><code>get(key)</code> -> Get an item.</p></li>
-<li><p><code>del(key)</code> -> To delete an item.</p></li>
-<li><p><code>all</code> -> Get all the items in the current config store and replace them all with a new object.</p></li>
-<li><p><code>size</code> -> Count of the items.</p></li>
-<li><p><code>path</code> -> File path to the config store.</p></li>
-</ul>
-
-
-<p><strong>Example usage:</strong></p>
-
-<p>```javascript</p>
-
-<p>var Configstore =  require('configstore');</p>
-
-<p>var conf = new Configstore('appConf');</p>
-
-<p>/*
-  var conf = new ( require('configstore') )('appConf');</p>
-
-<p>  var conf = new ( require('configstore') )\</p>
-
-<pre><code>         ('appConf', {'ans': 42});
-</code></pre>
-
-<p>  i.e  Configstore(id, defaults);
-  id -> mandator
-  defaults -> optional</p>
-
-<p>*/</p>
-
-<p>// Set some values.
-conf.set('life', 42);
-conf.set('key', {'scrt': '42'});</p>
-
-<p>// Get some values.
-conf.get('life'); // 42
-conf.get('key'); // {'scrt': 42}</p>
-
-<p>// Delete a value.
-conf.del('life');
-conf.get('life'); // undefined.</p>
-
-<p>// Get the count.
-conf.size() // 1</p>
-
-<p>// Reset the entier conf with new conf.
-conf.all = {'ans' : 42};</p>
-
-<p>```</p>
-
-<p><strong>Under the covers:</strong></p>
-
-<p>Config is stored as a <a href="http://www.yaml.org/">YAML</a> file in <code>$XDG_CONFIG_HOME</code> or <code>~/.config/configstore/your-config.yaml</code> there is an <a href="https://github.com/yeoman/configstore/issues/10">issue</a> for JSON support as well.</p>
-
-<p>For the above example:</p>
-
-<p>```sh</p>
-
-<p>$ cat ~/.config/configstore/appConf.yaml</p>
-
-<h1>Would be something like</h1>
-
-<p>key:
-  scrt: 42
-life: 42</p>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/configstore/configstore.gif" alt="configstore" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Chalk]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/chalk/"/>
-    <updated>2014-03-13T18:33:53+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/chalk</id>
-    <content type="html"><![CDATA[<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
-
-<blockquote><p>"Write programs that do one thing and do it well."</p></blockquote>
-
-<p>Out of many such one such elegant module is <a href="https://www.npmjs.org/package/chalk">chalk</a> thanks to <a href="http://sindresorhus.com/hi/">Sindre Sorhus</a> for that.</p>
-
-<p>Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is <a href="https://github.com/Marak/colors.js">colors.js</a> but one of the major drawbacks with that being it extending <code>String.portotye</code> or be <a href="https://github.com/yeoman/yo/issues/68">these</a> problems.</p>
-
-<p>Installing chalk is like any other module: <code>npm install --save chalk</code></p>
-
-<p>Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.</p>
-
-<p><strong>For example:</strong></p>
-
-<p>```javascript
-var chalk = require('chalk');</p>
-
-<p>console.log(  chalk.blue.bgRed.bold('Hello world!')  );</p>
-
-<p>console.log(  chalk.red('Hello', chalk.underline('world') + '!')  );</p>
-
-<p>```</p>
-
-<p>Here is a simple snippet for printing all of the styles it provides:</p>
-
-<p>```javascript
-var chalk = require('chalk');</p>
-
-<p>Object.keys(chalk.styles).forEach(function(style) {</p>
-
-<pre><code>if( style !== "reset") {
-  process.stdout.write(chalk[style](style) + ' ');
-}
+<pre><code>// key: '...', optional
+url: 'http://nmotw.in',
+paths: '',           // optional
+locale: 'en_US',     // optional
+strategy: 'mobile',  // optional
+threshold: 80        // optional
 </code></pre>
 
 <p>});
 ```</p>
 
-<p><strong>gif FTW!?</strong></p>
+<p><strong>On CLI:</strong></p>
 
-<p><img src="http://nmotw.in/images/chalk/chalk.gif" alt="chalk" /></p>
+<p>```sh
+$ psi http://nmotw.in --strategy desktop
+Running Pagespeed Insights
+Pagespeed Insights: Processing results</p>
 
-<p>Until next week, happy coloring!</p>
+<hr />
 
-<p><img src="http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
+<p>URL:      http://nmotw.in/
+Strategy: desktop
+Score:    90</p>
+
+<hr />
+
+<p>Number Resources                                 | 16
+Number Hosts                                     | 7
+Total Request Bytes                              | 1538
+Number Static Resources                          | 8
+Html Response Bytes                              | 7019
+Css Response Bytes                               | 17484
+Image Response Bytes                             | 384
+Javascript Response Bytes                        | 228348
+Other Response Bytes                             | 221982
+Number Js Resources                              | 5
+Number Css Resources                             | 3</p>
+
+<hr />
+
+<p>Avoid Landing Page Redirects                     | 0
+Enable Gzip Compression                          | 0
+Leverage Browser Caching                         | 1.5
+Main Resource Server Response Time               | 0
+Minify Css                                       | 0
+Minify HTML                                      | 0
+Minify Java Script                               | 0.16
+Minimize Render Blocking Resources               | 8
+Optimize Images                                  | 0
+Prioritize Visible Content                       | 0</p>
+
+<hr />
+
+<p>```</p>
+
+<p>If you have bunch of sites to analyse you could something like:
+<code>sh
+cat links | xargs -L1 psi &gt; analysis.report
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/psi/psi.gif" alt="psi" /></p>
 ]]></content>
   </entry>
   

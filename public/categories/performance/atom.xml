@@ -4,7 +4,7 @@
   <title><![CDATA[Category: performance | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/performance/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-13T18:29:44+05:30</updated>
+  <updated>2014-06-19T19:55:57+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,102 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[PSI]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/psi/"/>
+    <updated>2014-06-19T19:22:39+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/psi</id>
+    <content type="html"><![CDATA[<p>If you are into web development at one point or the other you would have used Google's pagespeed <a href="http://developers.google.com/speed/pagespeed/insights/">insights</a> to improve the performance of your site.</p>
+
+<p>Now it's even easier to get those insights on your CLI with <a href="https://www.npmjs.org/package/psi">psi</a> thanks to the <a href="http://addyosmani.com/blog/">Addy Osmani</a> for such a wonderful module.</p>
+
+<p>Formal defination of the module:</p>
+
+<blockquote><p>PageSpeed Insights With Reporting</p></blockquote>
+
+<p>Run mobile and desktop performance tests for your deployed site using <a href="https://developers.google.com/speed/docs/insights/v1/getting_started">Google PageSpeed Insights</a> with tidy reporting for your build process. A sample <a href="https://github.com/addyosmani/psi-gulp-sample">Gulpfile</a> demonstrating use is also available.</p>
+
+<p>Uses <a href="https://github.com/zrrrzzt/gpagespeed/">gpagespeed</a> and the reporter in <a href="https://github.com/jrcryer/grunt-pagespeed">grunt-pagespeed</a>.</p>
+
+<p>Install it -> <code>$ npm install psi</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>P.S: Registering for an API key from the <a href="https://developers.google.com/speed/docs/insights/v1/getting_started#auth">Google Developer Console</a> is recommended.</p>
+
+<p><strong>In code:</strong></p>
+
+<p>```js
+var psi = require('psi');</p>
+
+<p>psi({</p>
+
+<pre><code>// key: '...', optional
+url: 'http://nmotw.in',
+paths: '',           // optional
+locale: 'en_US',     // optional
+strategy: 'mobile',  // optional
+threshold: 80        // optional
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>On CLI:</strong></p>
+
+<p>```sh
+$ psi http://nmotw.in --strategy desktop
+Running Pagespeed Insights
+Pagespeed Insights: Processing results</p>
+
+<hr />
+
+<p>URL:      http://nmotw.in/
+Strategy: desktop
+Score:    90</p>
+
+<hr />
+
+<p>Number Resources                                 | 16
+Number Hosts                                     | 7
+Total Request Bytes                              | 1538
+Number Static Resources                          | 8
+Html Response Bytes                              | 7019
+Css Response Bytes                               | 17484
+Image Response Bytes                             | 384
+Javascript Response Bytes                        | 228348
+Other Response Bytes                             | 221982
+Number Js Resources                              | 5
+Number Css Resources                             | 3</p>
+
+<hr />
+
+<p>Avoid Landing Page Redirects                     | 0
+Enable Gzip Compression                          | 0
+Leverage Browser Caching                         | 1.5
+Main Resource Server Response Time               | 0
+Minify Css                                       | 0
+Minify HTML                                      | 0
+Minify Java Script                               | 0.16
+Minimize Render Blocking Resources               | 8
+Optimize Images                                  | 0
+Prioritize Visible Content                       | 0</p>
+
+<hr />
+
+<p>```</p>
+
+<p>If you have bunch of sites to analyse you could something like:
+<code>sh
+cat links | xargs -L1 psi &gt; analysis.report
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/psi/psi.gif" alt="psi" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[time-require]]></title>
