@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTTP | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/http/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-26T19:49:35+05:30</updated>
+  <updated>2014-06-26T19:53:48+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -22,7 +22,7 @@
 
 <p>Well here is <a href="https://www.npmjs.org/package/boom">BOOM</a> HTTP-friendly error objects, as the name suggest it's make the error reporting more friendly.</p>
 
-<p><img src="" alt="/images/boom/boom.png" /></p>
+<p><img src="/images/boom/boom.png" alt="" /></p>
 
 <p>Installing it is like any other node module: <code>npm install boom</code></p>
 
