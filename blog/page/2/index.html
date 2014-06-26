@@ -56,6 +56,107 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/json-mask/">
+			
+				Json-mask</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-17T17:50:46+05:30" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
+
+<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
+
+<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
+
+<p>It&#8217;s <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> Props ::= Prop | Prop "," Props
+</span><span class='line'>   Prop ::= Object | Array
+</span><span class='line'> Object ::= NAME | NAME "/" Object
+</span><span class='line'>  Array ::= NAME "(" Props ")"
+</span><span class='line'>   NAME ::= ? all visible characters ?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Translating it few examples, that are loosely based on XPath syntax:</p>
+
+<ul>
+<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
+<li><code>a/b/c</code> path will select a field from its parent</li>
+<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
+<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
+</ul>
+
+
+<p><strong>Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">jmask</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-mask&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span><span class="s1">&#39;hm&#39;</span><span class="p">},</span> <span class="nx">age</span><span class="o">:</span><span class="mi">7</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/last&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first,age&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">},</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-mask/json-mask.gif" alt="json-mask" /></p>
+
+<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/lie-denodify/">
 			
 				Lie-denodify</a>

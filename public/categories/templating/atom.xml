@@ -4,7 +4,7 @@
   <title><![CDATA[Category: templating | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/templating/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-26T19:45:12+05:30</updated>
+  <updated>2014-06-26T19:49:35+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -62,7 +62,7 @@ var block = require('block')
 <p><strong>GIF GTW!:</strong>
 <img src="/images/block.js/block.js.gif" alt="block" /></p>
 
-<p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('{{block}}', string)</code></p>
+<p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
 
 <p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
 ]]></content>

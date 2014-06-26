@@ -1,0 +1,283 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<title>boom  | NMOTW</title>
+
+	<meta name="author" content="Hemanth.HM">
+
+<meta name="description" content="Node Module Of The Week!"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Boom</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-26T19:26:34+05:30" pubdate data-updated="true">Jun 26<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p>How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of them, but would it not be cool to have more humanized mechanism to handle this?</p>
+
+<p>Well here is <a href="https://www.npmjs.org/package/boom">BOOM</a> HTTP-friendly error objects, as the name suggest it&#8217;s make the error reporting more friendly.</p>
+
+<p><img src="" alt="/images/boom/boom.png" /></p>
+
+<p>Installing it is like any other node module: <code>npm install boom</code></p>
+
+<p>It provides the below error messages:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span>
+</span><span class='line'>  <span class="s1">&#39;badRequest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unauthorized&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forbidden&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notFound&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;methodNotAllowed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notAcceptable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;proxyAuthRequired&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;clientTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;conflict&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;resourceGone&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;lengthRequired&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;preconditionFailed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;entityTooLarge&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uriTooLong&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unsupportedMediaType&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rangeNotSatisfiable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;expectationFailed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;internal&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notImplemented&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;badGateway&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;serverTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;gatewayTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;badImplementation&#39;</span>
+</span><span class='line'> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Sample usage:</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">boom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;boom&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">notFound</span> <span class="o">=</span> <span class="nx">boom</span><span class="p">.</span><span class="nx">notFound</span><span class="p">(</span><span class="s2">&quot;Sorry, it&#39;s not here :(&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">{</span> <span class="p">[</span><span class="nb">Error</span><span class="o">:</span> <span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="s1">&#39;s not here :(]</span>
+</span><span class='line'><span class="s1">  data: null,</span>
+</span><span class='line'><span class="s1">  isBoom: true,</span>
+</span><span class='line'><span class="s1">  output: </span>
+</span><span class='line'><span class="s1">   { statusCode: 404,</span>
+</span><span class='line'><span class="s1">     payload: </span>
+</span><span class='line'><span class="s1">      { statusCode: 404,</span>
+</span><span class='line'><span class="s1">        error: &#39;</span><span class="nx">Not</span> <span class="nx">Found</span><span class="s1">&#39;,</span>
+</span><span class='line'><span class="s1">        message: &#39;</span><span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="err">\</span><span class="s1">&#39;s not here :(&#39;</span> <span class="p">},</span>
+</span><span class='line'>     <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">reformat</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">payload</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">{</span> <span class="nx">statusCode</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;Not Found&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Sorry, it\&#39;s not here :(&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>GIF FTW</h1>
+
+<p><img src="/images/boom/boom.gif" alt="" /></p>
+
+<p>Thanks to @WalmartLabs team for this module, specially for the maintainers <a href="http://hueniverse.com">Eran Hammer</a> and <a href="http://jsgeek.com">Wyatt Preul</a></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=boom by @nodemotw&url=http://hemanth.github.io/nmotw.in/boom/" title="Share boom on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <!--   <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://hemanth.github.io/nmotw.in/boom/" title="Share boom on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+ -->
+	  <!--   <li>
+  <a href="https://plus.google.com/share?url=http://hemanth.github.io/nmotw.in/boom/" title="Share boom on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+ -->
+	  <!-- </ul> -->
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2014
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hemanth.github.io/nmotw.in/boom/';
+        var disqus_url = 'http://hemanth.github.io/nmotw.in/boom/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>
