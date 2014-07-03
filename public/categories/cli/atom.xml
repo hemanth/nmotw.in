@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-06-26T19:53:48+05:30</updated>
+  <updated>2014-07-03T18:57:40+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mute-stream]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/mute-stream/"/>
+    <updated>2014-07-03T18:32:49+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/mute-stream</id>
+    <content type="html"><![CDATA[<blockquote><p>Bytes go in, but they don't come out (when muted).</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/mute-stream">mute-stream</a> as the name says it mutes the stream, as in it's a pass-through stream, but when muted, the bytes are silently dropped, rather than being passed through.</p>
+
+<p><strong>Installing it:</strong> <code>npm install mute-stream</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>```javascript
+var ms = new (require('mute-stream'))({});</p>
+
+<p>ms.pipe(process.stdout);</p>
+
+<p>ms.write('Shout\n');
+ms.mute();
+ms.write('Shout louder!\n');
+ms.unmute();
+ms.write('Phew!\n');</p>
+
+<p>```</p>
+
+<p><code>({})</code> is the options part, that can be either of:</p>
+
+<ul>
+<li><p>replace => Replaces the muted string with the specified string. (Check the gif)</p></li>
+<li><p>prompt =>  prompt with a readline stream, to avoid backspace overwrites.</p></li>
+</ul>
+
+
+<p>It also provides <code>ms.muted()</code> method to check if the stream is already muted.</p>
+
+<blockquote><p>The MuteStream object acts as a facade to its pipe source and destination.</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mute-stream/mute-stream.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://blog.izs.me/">Isaac Z. Schlueter</a> for helping us to mute the noise! ;)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PSI]]></title>
