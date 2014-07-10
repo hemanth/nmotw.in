@@ -56,6 +56,94 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/mongoskin/">
+			
+				Mongoskin</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-10T20:09:46+05:30" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1>mongoskin</h1>
+
+<blockquote><p>The future layer above node-mongodb-native.</p></blockquote>
+
+<p>mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to work easily with mongodb, but how?</p>
+
+<p>Check this out!</p>
+
+<p>Install it like any other module: <code>$ npm install mongoskin</code></p>
+
+<p>With mongoskin you can dburl like <code>mongodb://localhost:27017/test</code> or use Replset :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">replSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ReplSetServers</span><span class="p">([</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30000</span><span class="p">),</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30001</span><span class="p">),</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30002</span><span class="p">),</span>
+</span><span class='line'><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Where <code>Server</code> is <code>require('mongoskin').Server</code></p>
+
+<p><strong>Example usage of data insertion:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">mongo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoskin&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">db</span> <span class="o">=</span> <span class="nx">mongo</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s1">&#39;mongodb://localhost/test&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">).</span><span class="nx">insert</span><span class="p">({</span><span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">).</span><span class="nx">drop</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">db</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It has an extensive <a href="https://github.com/kissjs/node-mongoskin#mongoskin-api-part">API</a> with sleeker syntax compared with native.</p>
+
+<p>Thanks to <a href="http://kissjs.org/">kissjs</a> team, specially to <a href="https://github.com/guileen">Gui Lin</a></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/mute-stream/">
 			
 				Mute-stream</a>
@@ -1168,72 +1256,6 @@
 <p><img src="/images/omelette/omelette.gif" alt="omelette.gif" /></p>
 
 <p>Enjoy your tab completions!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/rhyme/">
-			
-				Rhyme</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-01T13:34:59+05:30" pubdate data-updated="true">May 1<span>st</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored a module named <a href="https://github.com/substack/node-rhyme">rhyme</a> a rhyming dictionary! This made it to the nmotw list ;)</p>
-
-<p>The module makes use of CMU dictionary&#8217;s <a href="https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/cmudict.0.7a">data</a> and picks up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
-
-<p><strong>Example Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">rhyme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">rhyme</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">rhyme</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">));</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>node why.js
-</span><span class='line'>BEIM CHIME CLIMB CRIME DIME GRIME HAIM HEIM HIME I<span class="err">&#39;</span>M KIME LIME LYME MIME PRIME SEIM SIME SLIME SYME THYME TIME
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/rhyme/rhyme.gif" alt="rhyme" /></p>
-
-<p><strong>Real coders use <code>cat</code> ;)?</strong></p>
-
-<p>Keep rhyming till next week!</p>
 
 		
 		

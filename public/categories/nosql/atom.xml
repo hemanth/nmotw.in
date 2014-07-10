@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nosql | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/nosql/atom.xml" rel="self"/>
+  <link href="http://hemanth.github.io/nmotw.in/"/>
+  <updated>2014-07-10T20:31:51+05:30</updated>
+  <id>http://hemanth.github.io/nmotw.in/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mongoskin]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/mongoskin/"/>
+    <updated>2014-07-10T20:09:46+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/mongoskin</id>
+    <content type="html"><![CDATA[<h1>mongoskin</h1>
+
+<blockquote><p>The future layer above node-mongodb-native.</p></blockquote>
+
+<p>mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to work easily with mongodb, but how?</p>
+
+<p>Check this out!</p>
+
+<p>Install it like any other module: <code>$ npm install mongoskin</code></p>
+
+<p>With mongoskin you can dburl like <code>mongodb://localhost:27017/test</code> or use Replset :</p>
+
+<p>```javascript
+var replSet = new ReplSetServers([</p>
+
+<pre><code>    new Server('localhost', 30000),
+    new Server('localhost', 30001),
+    new Server('localhost', 30002),
+</code></pre>
+
+<p>]);
+```</p>
+
+<p>Where <code>Server</code> is <code>require('mongoskin').Server</code></p>
+
+<p><strong>Example usage of data insertion:</strong></p>
+
+<p>```javascript
+var mongo = require('mongoskin');</p>
+
+<p>db = mongo.db('mongodb://localhost/test');</p>
+
+<p>db.collection('test').insert({foo: 'bar'}, function(err, result) {</p>
+
+<pre><code>console.log(result);
+db.collection('test').drop();
+db.close();
+</code></pre>
+
+<p>});</p>
+
+<p>```</p>
+
+<p>It has an extensive <a href="https://github.com/kissjs/node-mongoskin#mongoskin-api-part">API</a> with sleeker syntax compared with native.</p>
+
+<p>Thanks to <a href="http://kissjs.org/">kissjs</a> team, specially to <a href="https://github.com/guileen">Gui Lin</a></p>
+]]></content>
+  </entry>
+  
+</feed>

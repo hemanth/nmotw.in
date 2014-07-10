@@ -4,13 +4,78 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-07-03T18:57:40+05:30</updated>
+  <updated>2014-07-10T20:31:51+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mongoskin]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/mongoskin/"/>
+    <updated>2014-07-10T20:09:46+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/mongoskin</id>
+    <content type="html"><![CDATA[<h1>mongoskin</h1>
+
+<blockquote><p>The future layer above node-mongodb-native.</p></blockquote>
+
+<p>mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to work easily with mongodb, but how?</p>
+
+<p>Check this out!</p>
+
+<p>Install it like any other module: <code>$ npm install mongoskin</code></p>
+
+<p>With mongoskin you can dburl like <code>mongodb://localhost:27017/test</code> or use Replset :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">replSet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ReplSetServers</span><span class="p">([</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30000</span><span class="p">),</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30001</span><span class="p">),</span>
+</span><span class='line'>        <span class="k">new</span> <span class="nx">Server</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="mi">30002</span><span class="p">),</span>
+</span><span class='line'><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>Where <code>Server</code> is <code>require('mongoskin').Server</code></p>
+
+<p><strong>Example usage of data insertion:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">mongo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoskin&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">db</span> <span class="o">=</span> <span class="nx">mongo</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s1">&#39;mongodb://localhost/test&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">).</span><span class="nx">insert</span><span class="p">({</span><span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">).</span><span class="nx">drop</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">db</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It has an extensive <a href="https://github.com/kissjs/node-mongoskin#mongoskin-api-part">API</a> with sleeker syntax compared with native.</p>
+
+<p>Thanks to <a href="http://kissjs.org/">kissjs</a> team, specially to <a href="https://github.com/guileen">Gui Lin</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[mute-stream]]></title>
