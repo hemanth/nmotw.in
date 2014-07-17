@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-07-10T20:31:51+05:30</updated>
+  <updated>2014-07-17T18:06:20+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,204 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[n_]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/n/"/>
+    <updated>2014-07-17T17:51:19+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/n</id>
+    <content type="html"><![CDATA[<p>For all those <a href="">lodash</a> &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.</p>
+
+<p><a href="">n_</a> is that cli app which dose this job for you, it makes use a the <code>repl</code> module and injects lodash into the context.</p>
+
+<p>If you notice in the node REPL, <code>_</code> contains the result of the last expression.</p>
+
+<p>```javascript</p>
+
+<blockquote><p>3 + 4</p>
+
+<p>_ + 1</p>
+
+<p>8</p></blockquote>
+
+<p>```</p>
+
+<p>As this modules loads Lo-Dash to <code>_</code> it redirects REPL changes of <code>_</code> the new special variable <code>$</code></p>
+
+<p>Install this module globally: <code>npm install -g n_</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>sh
+$ n_ # This would start the node REPL with Lo-Dash loaded.
+</code></p>
+
+<p>```javascript</p>
+
+<p>n<em> > </em>.VERSION
+'2.4.1'</p>
+
+<p>n<em>> </em>.shuffle([1,2,3,4])
+[ 2, 1, 4, 3 ]</p>
+
+<p>```</p>
+
+<p><code>javascript
+n_ &gt; _.keys(_)
+[ 'support',
+  'templateSettings',
+  'after',
+  'assign',
+  'at',
+  'bind',
+  'bindAll',
+  'bindKey',
+  'chain',
+  'compact',
+  'compose',
+  'constant',
+  'countBy',
+  'create',
+  'createCallback',
+  'curry',
+  'debounce',
+  'defaults',
+  'defer',
+  'delay',
+  'difference',
+  'filter',
+  'flatten',
+  'forEach',
+  'forEachRight',
+  'forIn',
+  'forInRight',
+  'forOwn',
+  'forOwnRight',
+  'functions',
+  'groupBy',
+  'indexBy',
+  'initial',
+  'intersection',
+  'invert',
+  'invoke',
+  'keys',
+  'map',
+  'mapValues',
+  'max',
+  'memoize',
+  'merge',
+  'min',
+  'omit',
+  'once',
+  'pairs',
+  'partial',
+  'partialRight',
+  'pick',
+  'pluck',
+  'property',
+  'pull',
+  'range',
+  'reject',
+  'remove',
+  'rest',
+  'shuffle',
+  'sortBy',
+  'tap',
+  'throttle',
+  'times',
+  'toArray',
+  'transform',
+  'union',
+  'uniq',
+  'values',
+  'where',
+  'without',
+  'wrap',
+  'xor',
+  'zip',
+  'zipObject',
+  'collect',
+  'drop',
+  'each',
+  'eachRight',
+  'extend',
+  'methods',
+  'object',
+  'select',
+  'tail',
+  'unique',
+  'unzip',
+  'clone',
+  'cloneDeep',
+  'contains',
+  'escape',
+  'every',
+  'find',
+  'findIndex',
+  'findKey',
+  'findLast',
+  'findLastIndex',
+  'findLastKey',
+  'has',
+  'identity',
+  'indexOf',
+  'isArguments',
+  'isArray',
+  'isBoolean',
+  'isDate',
+  'isElement',
+  'isEmpty',
+  'isEqual',
+  'isFinite',
+  'isFunction',
+  'isNaN',
+  'isNull',
+  'isNumber',
+  'isObject',
+  'isPlainObject',
+  'isRegExp',
+  'isString',
+  'isUndefined',
+  'lastIndexOf',
+  'mixin',
+  'noConflict',
+  'noop',
+  'now',
+  'parseInt',
+  'random',
+  'reduce',
+  'reduceRight',
+  'result',
+  'runInContext',
+  'size',
+  'some',
+  'sortedIndex',
+  'template',
+  'unescape',
+  'uniqueId',
+  'all',
+  'any',
+  'detect',
+  'findWhere',
+  'foldl',
+  'foldr',
+  'include',
+  'inject',
+  'first',
+  'last',
+  'sample',
+  'take',
+  'head',
+  'VERSION' ]
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/n_/n_.gif" alt="n_" /></p>
+
+<p>Thanks to <a href="http://borisdiakur.com/">Boris Diakur</a> for publishing this module!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[mute-stream]]></title>
