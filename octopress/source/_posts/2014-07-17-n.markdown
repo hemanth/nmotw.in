@@ -1,0 +1,201 @@
+---
+layout: post
+title: "n_"
+date: 2014-07-17 17:51:19 +0530
+comments: true
+categories: cli
+---
+
+For all those [lodash](https://www.npmjs.org/package/lodash) <3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.
+
+[n_](https://www.npmjs.org/package/n_) is that cli app which dose this job for you, it makes use a the `repl` module and injects lodash into the context.
+
+If you notice in the node REPL, `_` contains the result of the last expression. 
+
+```javascript
+
+> 3 + 4
+
+> _ + 1
+
+> 8
+
+```
+
+As this modules loads Lo-Dash to `_` it redirects REPL changes of `_` the new special variable `$` 
+
+
+Install this module globally: `npm install -g n_`
+
+
+__Sample usage:__
+
+```sh
+$ n_ # This would start the node REPL with Lo-Dash loaded.
+```
+
+```javascript
+
+n_ > _.VERSION
+'2.4.1'
+
+n_> _.shuffle([1,2,3,4])
+[ 2, 1, 4, 3 ]
+
+```
+
+```javascript
+n_ > _.keys(_)
+[ 'support',
+  'templateSettings',
+  'after',
+  'assign',
+  'at',
+  'bind',
+  'bindAll',
+  'bindKey',
+  'chain',
+  'compact',
+  'compose',
+  'constant',
+  'countBy',
+  'create',
+  'createCallback',
+  'curry',
+  'debounce',
+  'defaults',
+  'defer',
+  'delay',
+  'difference',
+  'filter',
+  'flatten',
+  'forEach',
+  'forEachRight',
+  'forIn',
+  'forInRight',
+  'forOwn',
+  'forOwnRight',
+  'functions',
+  'groupBy',
+  'indexBy',
+  'initial',
+  'intersection',
+  'invert',
+  'invoke',
+  'keys',
+  'map',
+  'mapValues',
+  'max',
+  'memoize',
+  'merge',
+  'min',
+  'omit',
+  'once',
+  'pairs',
+  'partial',
+  'partialRight',
+  'pick',
+  'pluck',
+  'property',
+  'pull',
+  'range',
+  'reject',
+  'remove',
+  'rest',
+  'shuffle',
+  'sortBy',
+  'tap',
+  'throttle',
+  'times',
+  'toArray',
+  'transform',
+  'union',
+  'uniq',
+  'values',
+  'where',
+  'without',
+  'wrap',
+  'xor',
+  'zip',
+  'zipObject',
+  'collect',
+  'drop',
+  'each',
+  'eachRight',
+  'extend',
+  'methods',
+  'object',
+  'select',
+  'tail',
+  'unique',
+  'unzip',
+  'clone',
+  'cloneDeep',
+  'contains',
+  'escape',
+  'every',
+  'find',
+  'findIndex',
+  'findKey',
+  'findLast',
+  'findLastIndex',
+  'findLastKey',
+  'has',
+  'identity',
+  'indexOf',
+  'isArguments',
+  'isArray',
+  'isBoolean',
+  'isDate',
+  'isElement',
+  'isEmpty',
+  'isEqual',
+  'isFinite',
+  'isFunction',
+  'isNaN',
+  'isNull',
+  'isNumber',
+  'isObject',
+  'isPlainObject',
+  'isRegExp',
+  'isString',
+  'isUndefined',
+  'lastIndexOf',
+  'mixin',
+  'noConflict',
+  'noop',
+  'now',
+  'parseInt',
+  'random',
+  'reduce',
+  'reduceRight',
+  'result',
+  'runInContext',
+  'size',
+  'some',
+  'sortedIndex',
+  'template',
+  'unescape',
+  'uniqueId',
+  'all',
+  'any',
+  'detect',
+  'findWhere',
+  'foldl',
+  'foldr',
+  'include',
+  'inject',
+  'first',
+  'last',
+  'sample',
+  'take',
+  'head',
+  'VERSION' ]
+```
+
+
+__GIF FTW!__
+
+![n_](/images/n_/n_.gif)
+
+Thanks to [Boris Diakur](http://borisdiakur.com/) for publishing this module! 
