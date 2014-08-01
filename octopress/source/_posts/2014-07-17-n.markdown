@@ -8,7 +8,7 @@ categories: cli
 
 For all those [lodash](https://www.npmjs.org/package/lodash) <3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.
 
-[n_](https://www.npmjs.org/package/n_) is that cli app which dose this job for you, it makes use a the `repl` module and injects lodash into the context.
+[n_](https://www.npmjs.org/package/n_) is that cli app which does this job for you, it makes use a the `repl` module and injects lodash into the context.
 
 If you notice in the node REPL, `_` contains the result of the last expression. 
 

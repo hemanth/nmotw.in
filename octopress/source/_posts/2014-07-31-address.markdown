@@ -1,0 +1,68 @@
+---
+layout: post
+title: "address"
+date: 2014-07-31 16:58:37 +0530
+comments: true
+categories: admin, cli
+---
+
+How many times have you checked for the IP, MAC and DNS servers on the CLI? 
+
+Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named `address` that will help you it's sweeter APIs.
+
+![](/images/address/address.png)
+
+Installing it: `npm install address`
+
+
+__Peep in:__
+
+```javascript
+> var address = require('address')
+
+> address.MAC_RE
+/(?:ether|HWaddr)\s+((?:[a-z0-9]{2}\:){5}[a-z0-9]{2})/i
+
+> address.MAC_IP_RE
+/inet\s(?:addr\:)?(\d+\.\d+\.\d+\.\d+)/
+
+```
+
+__Example usage:__
+
+```javascript
+
+var address = require('address');
+
+// default interface 'eth' on linux, 'en' on osx.
+address.ip();   // '192.168.0.2'
+address.ipv6(); // 'fe80::7aca:39ff:feb0:e67d'
+address.mac(function (err, addr) {
+  console.log(addr); // '78:ca:39:b0:e6:7d'
+});
+
+// local loopback
+address.ip('lo'); // '127.0.0.1'
+
+address.dns(function (err, addrs) {
+  console.log(addrs);
+  // ['10.13.2.1', '10.13.2.6']
+});
+
+```
+
+## Get them all!
+
+```javascript
+address(function (err, addrs) {
+  console.log(addrs.ip, addrs.ipv6, addrs.mac);
+  // '192.168.0.2', 'fe80::7aca:39ff:feb0:e67d', '78:ca:39:b0:e6:7d'
+});
+```
+
+__GIF FTW?!__
+
+![address](/images/address/address.gif)
+
+
+Thanks to [fengmk2](http://fengmk2.cnpmjs.org/) for helping us to find addresses in ease.
