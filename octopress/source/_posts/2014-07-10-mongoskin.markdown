@@ -3,7 +3,7 @@ layout: post
 title: "mongoskin"
 date: 2014-07-10 20:09:46 +0530
 comments: true
-categories: db, nosql
+categories: db nosql
 ---
 
 
@@ -24,7 +24,7 @@ var replSet = new ReplSetServers([
         new Server('localhost', 30001),
         new Server('localhost', 30002),
 ]);
-``` 
+```
 
 Where `Server` is `require('mongoskin').Server`
 
@@ -48,4 +48,3 @@ db.collection('test').insert({foo: 'bar'}, function(err, result) {
 It has an extensive [API](https://github.com/kissjs/node-mongoskin#mongoskin-api-part) with sleeker syntax compared with native.
 
 Thanks to [kissjs](http://kissjs.org/) team, specially to [Gui Lin](https://github.com/guileen)
-
