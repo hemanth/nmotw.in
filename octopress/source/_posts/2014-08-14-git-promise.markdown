@@ -3,7 +3,7 @@ layout: post
 title: "git-promise"
 date: 2014-08-14 17:51:17 +0530
 comments: true
-categories: cli, git, promise
+categories: cli git promise
 ---
 
 ##git-promise
