@@ -3,10 +3,10 @@ layout: post
 title: "address"
 date: 2014-07-31 16:58:37 +0530
 comments: true
-categories: admin, cli
+categories: admin cli
 ---
 
-How many times have you checked for the IP, MAC and DNS servers on the CLI? 
+How many times have you checked for the IP, MAC and DNS servers on the CLI?
 
 Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named `address` that will help you it's sweeter APIs.
 
