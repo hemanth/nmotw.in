@@ -3,7 +3,7 @@ layout: post
 title: "proxyquire"
 date: 2014-06-12 09:21
 comments: true
-categories: test, stub
+categories: test stub
 ---
 
 Test cases always involves mocks and stub, sometimes there will be a need to mock `require` itself, that where proxyquire comes for our rescue.
@@ -72,4 +72,3 @@ __GIF FTW!__
 
 
 Kudos to [Thorsten Lorenz](http://thlorenz.com/about/me) for the wonderful module.
-

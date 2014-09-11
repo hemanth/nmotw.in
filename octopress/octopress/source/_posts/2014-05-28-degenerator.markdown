@@ -3,13 +3,13 @@ layout: post
 title: "degenerator"
 date: 2014-05-29 20:22:17 +0530
 comments: true
-categories: generators, es6
+categories: generators es6
 ---
 
 Turns sync functions into ES6's async generator functions with [Nathan Rajlich's](http://n8.io/) (A.K.A TooTallNate) [degenerator](https://www.npmjs.org/package/degenerator)
 
 
-Get it: `$ npm install degenerator` 
+Get it: `$ npm install degenerator`
 
 __Example Usage:__
 
