@@ -1,0 +1,98 @@
+---
+layout: post
+title: "PSI"
+date: 2014-06-19 19:22:39 +0530
+comments: true
+categories: cli performance
+---
+
+If you are into web development at one point or the other you would have used Google's pagespeed [insights](http://developers.google.com/speed/pagespeed/insights/) to improve the performance of your site.
+
+Now it's even easier to get those insights on your CLI with [psi](https://www.npmjs.org/package/psi) thanks to the [Addy Osmani](http://addyosmani.com/blog/) for such a wonderful module.
+
+Formal defination of the module:
+
+> PageSpeed Insights With Reporting
+
+Run mobile and desktop performance tests for your deployed site using [Google PageSpeed Insights](https://developers.google.com/speed/docs/insights/v1/getting_started) with tidy reporting for your build process. A sample [Gulpfile](https://github.com/addyosmani/psi-gulp-sample) demonstrating use is also available.
+
+Uses [gpagespeed](https://github.com/zrrrzzt/gpagespeed/) and the reporter in [grunt-pagespeed](https://github.com/jrcryer/grunt-pagespeed).
+
+
+Install it -> `$ npm install psi`
+
+
+__Example usage:__
+
+P.S: Registering for an API key from the [Google Developer Console](https://developers.google.com/speed/docs/insights/v1/getting_started#auth) is recommended.
+
+
+__In code:__
+
+```js
+var psi = require('psi');
+
+psi({
+	// key: '...', optional
+	url: 'http://nmotw.in',
+	paths: '',           // optional
+	locale: 'en_US',     // optional
+	strategy: 'mobile',  // optional
+	threshold: 80        // optional
+});
+```
+
+__On CLI:__
+
+```sh
+$ psi http://nmotw.in --strategy desktop
+Running Pagespeed Insights
+Pagespeed Insights: Processing results
+
+----------------------------------------------------------------
+
+URL:      http://nmotw.in/
+Strategy: desktop 
+Score:    90
+
+----------------------------------------------------------------
+
+Number Resources                                 | 16
+Number Hosts                                     | 7
+Total Request Bytes                              | 1538
+Number Static Resources                          | 8
+Html Response Bytes                              | 7019
+Css Response Bytes                               | 17484
+Image Response Bytes                             | 384
+Javascript Response Bytes                        | 228348
+Other Response Bytes                             | 221982
+Number Js Resources                              | 5
+Number Css Resources                             | 3
+
+----------------------------------------------------------------
+
+Avoid Landing Page Redirects                     | 0
+Enable Gzip Compression                          | 0
+Leverage Browser Caching                         | 1.5
+Main Resource Server Response Time               | 0
+Minify Css                                       | 0
+Minify HTML                                      | 0
+Minify Java Script                               | 0.16
+Minimize Render Blocking Resources               | 8
+Optimize Images                                  | 0
+Prioritize Visible Content                       | 0
+
+----------------------------------------------------------------
+```
+
+If you have bunch of sites to analyse you could something like: 
+```sh
+cat links | xargs -L1 psi > analysis.report
+```
+
+
+__GIF FTW!__
+
+![psi](/images/psi/psi.gif)
+
+
