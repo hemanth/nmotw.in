@@ -1,0 +1,82 @@
+---
+layout: post
+title: "is"
+date: 2014-10-09 19:38:21 +0530
+comments: true
+categories: util test
+---
+
+# [is](https://www.npmjs.org/package/is)
+>This is a definitive JavaScript type testing library.
+
+
+__Get it:__ ```npm install is```
+
+
+__Sample usage:__
+
+```javascript
+var is = require('is');
+is.type(true, 'boolean');
+is.type(1, 'boolean');
+is.type(1, 'number');
+is.type([], 'object');
+is.array([]);
+is.odd(9);
+is.even(2);
+// So on...
+```
+
+It has all uber cool `is` checks as below:
+
+```
+[ 'type',
+  'a',
+  'defined',
+  'empty',
+  'equal',
+  'hosted',
+  'instanceof',
+  'instance',
+  'null',
+  'nil',
+  'undefined',
+  'undef',
+  'arguments',
+  'args',
+  'array',
+  'arraylike',
+  'boolean',
+  'false',
+  'true',
+  'date',
+  'element',
+  'error',
+  'function',
+  'fn',
+  'number',
+  'infinite',
+  'decimal',
+  'divisibleBy',
+  'int',
+  'maximum',
+  'minimum',
+  'nan',
+  'even',
+  'odd',
+  'ge',
+  'gt',
+  'le',
+  'lt',
+  'within',
+  'object',
+  'hash',
+  'regexp',
+  'string' ]
+ ```
+
+__GIT FTW:__
+
+![is](/images/is/is.gif)
+
+Thanks to [Enrico Marino](https://twitter.com/onirame) for `is` :)
