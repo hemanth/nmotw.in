@@ -4,6 +4,7 @@ title: "Chalk"
 date: 2014-03-13 18:33:53 +0530
 comments: true
 categories: CLI 
+ogimg: http://nmotw.in/images/chalk/chalk.gif
 ---
 
 There are many wonderful node modules that adhere to Unix philosophy:

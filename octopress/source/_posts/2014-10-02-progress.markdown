@@ -4,6 +4,7 @@ title: "progress"
 date: 2014-10-02 19:59:44 +0530
 comments: true
 categories: util cli
+ogimg: http://nmotw.in/images/progress/progress.gif
 ---
 
 # progress

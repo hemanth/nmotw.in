@@ -4,6 +4,7 @@ title: "json-mask"
 date: 2014-04-17 17:50:46 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/json-mask/json-mask.gif
 ---
 
 [json-mask](https://github.com/nemtsov/json-mask) Tiny language and engine for selecting specific parts of a JS object, hiding the rest.

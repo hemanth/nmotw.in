@@ -4,6 +4,7 @@ title: "propagate"
 date: 2014-10-23 18:08:23 +0530
 comments: true
 categories: test, util
+ogimg: http://nmotw.in/images/propagate/propagate.gif
 ---
 
 # [propagate](https://www.npmjs.org/package/propagate)

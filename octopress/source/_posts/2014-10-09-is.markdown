@@ -4,6 +4,7 @@ title: "is"
 date: 2014-10-09 19:38:21 +0530
 comments: true
 categories: util test
+ogimg: http://nmotw.in/images/is/is.gif
 ---
 
 # [is](https://www.npmjs.org/package/is)

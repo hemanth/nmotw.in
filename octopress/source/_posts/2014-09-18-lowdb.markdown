@@ -4,6 +4,7 @@ title: "lowdb"
 date: 2014-09-18 18:21:06 +0530
 comments: true
 categories: db
+ogimg: http://nmotw.in/images/lowdb/lowdb.gif
 ---
 
 > Flat JSON file database for Node

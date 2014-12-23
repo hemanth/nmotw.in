@@ -4,6 +4,7 @@ title: "slug"
 date: 2014-09-25 17:57:05 +0530
 comments: true
 categories: util 
+ogimg: http://nmotw.in/images/slug/slug.gif
 ---
 
 slugifies every string, even when it contains unicode!

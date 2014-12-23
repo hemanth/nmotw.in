@@ -4,6 +4,7 @@ title: "lie-denodify"
 date: 2014-04-10 17:38:55 +0530
 comments: true
 categories: promise 
+ogimg: http://nmotw.in/images/lie-denodify/lie-denodify.gif
 ---
 
 Even though [RSVP](http://nmotw.in/rsvp/) provides a `denodeify` API, [lie-denodify's](https://www.npmjs.org/package/lie-denodify) main focus is to turn a node style callback into a promise based one.

@@ -4,6 +4,7 @@ title: "http-teapot"
 date: 2014-10-16 18:53:28 +0530
 comments: true
 categories: fun
+ogimg: http://nmotw.in/images/http-teapot/http-teapot.gif
 ---
 
 # [http-teapot](https://www.npmjs.org/package/http-teapot)

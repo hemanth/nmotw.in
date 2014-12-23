@@ -4,6 +4,7 @@ title: "have"
 date: 2014-03-27 18:33:53 +0530
 comments: true
 categories: validation
+ogimg: http://nmotw.in/images/have/have.gif
 ---
 
 Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called [have](https://www.npmjs.org/package/have) that will help you to have your arguments, and validate it too!

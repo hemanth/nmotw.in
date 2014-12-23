@@ -4,6 +4,7 @@ title: "configstore"
 date: 2014-03-20 17:53:08 +0530
 comments: true
 categories: CLI
+ogimg: http://nmotw.in/images/configstore/configstore.gif
 ---
 
 CLI apps normally use configurations for different situations like:

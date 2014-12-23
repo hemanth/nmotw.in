@@ -4,6 +4,7 @@ title: "address"
 date: 2014-07-31 16:58:37 +0530
 comments: true
 categories: admin cli
+ogimg: http://nmotw.in/images/address/address.gif
 ---
 
 How many times have you checked for the IP, MAC and DNS servers on the CLI?

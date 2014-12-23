@@ -4,6 +4,7 @@ title: "rhyme"
 date: 2014-05-01 13:34:59 +0530
 comments: true
 categories: fun
+ogimg: http://nmotw.in/images/rhyme/rhyme.gif
 ---
 
 Out of all the awesome module that [James Halliday](https://www.npmjs.org/~substack) A.K.A [substack](http://substack.net/) has authored a module named [rhyme](https://github.com/substack/node-rhyme) a rhyming dictionary! This made it to the nmotw list ;)

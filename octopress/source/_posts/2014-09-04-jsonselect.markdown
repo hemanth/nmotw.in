@@ -4,6 +4,7 @@ title: "jsonselect"
 date: 2014-09-04 18:20:10 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/jsonselect/jsonselect.gif
 ---
 
 JSONSelect defines a language very similar in syntax and structure to

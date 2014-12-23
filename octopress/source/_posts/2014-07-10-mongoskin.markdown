@@ -4,6 +4,7 @@ title: "mongoskin"
 date: 2014-07-10 20:09:46 +0530
 comments: true
 categories: db nosql
+ogimg: http://nmotw.in/images/mongoskin/mongoskin.gif
 ---
 
 
