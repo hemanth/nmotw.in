@@ -4,6 +4,7 @@ title: "n_"
 date: 2014-07-17 17:51:19 +0530
 comments: true
 categories: cli
+ogimg: http://nmotw.in/images/n/n.gif
 ---
 
 For all those [lodash](https://www.npmjs.org/package/lodash) <3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.

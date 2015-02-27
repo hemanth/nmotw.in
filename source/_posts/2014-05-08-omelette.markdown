@@ -4,6 +4,7 @@ title: "Omelette"
 date: 2014-05-08 18:08:15 +0530
 comments: true
 categories: CLI
+ogimg: http://nmotw.in/images/omelette/omelette.gif
 ---
 
 [Omelette.js](https://www.npmjs.org/package/omelette) a simple autocompletion helper for node, published by [Fatih](http://fatihak.in/).

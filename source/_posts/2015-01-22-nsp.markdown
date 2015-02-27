@@ -1,0 +1,60 @@
+---
+layout: post
+title: "nsp"
+date: 2015-01-22 19:03:18 +0530
+comments: true
+categories: cli lint npm 
+---
+
+# [nsp](http://npm.im/nsp/) aka: [Node Security Project](http://nodesecurity.io)
+> Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB.
+
+__Install it:__ ``` npm install -g nsp ```
+
+__Usage:__
+
+```sh
+nmotw.in> nsp
+
+Usage: [command] --arg=value --arg2
+
+Help:
+  help              Show help menu
+  [cmd] help        Show command help menu
+
+Options:
+  version           shows the current version of nsp
+  shrinkwrap        alias to audit-shrinkwrap
+  audit-shrinkwrap  audits your `npm shrinkwrap` against NSP db
+  package           alias to audit-package
+  audit-package     audits your package.json against NSP db
+```
+
+```sh
+nmotw.in> cat package.json
+{
+  "name": "test",
+  "version": "0.0.1",
+  "author": "Node Security Project",
+  "dependencies": {
+    "node-print": "0.0.4",
+    "request": "^2.40.0",
+    "qs": "^0.5"
+  }
+}
+
+nmotw.in> nsp package
+Name  Installed  Patched  Vulnerable Dependency
+qs      0.5.6     >= 1.x  test@0.0.1 > qs@0.5.6
+```
+
+The same can be used for auditing [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap).
+
+__GIF FTW!__
+
+![nsp](/images/nsp/nsp.gif)
+
+
+
+Thanks to the [nodesecurity](https://twitter.com/nodesecurity) for making security easy!
+

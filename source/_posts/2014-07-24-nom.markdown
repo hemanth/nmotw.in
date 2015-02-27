@@ -4,6 +4,7 @@ title: "nom"
 date: 2014-07-24 19:37:33 +0530
 comments: true
 categories: scrapper
+ogimg: http://nmotw.in/images/nom/nom.gif
 ---
 
 > Om nom nom. Super simple screen scrapper!

@@ -4,6 +4,7 @@ title: "dateformat"
 date: 2014-09-11 18:25:04 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/dateformat/dateformat.gif
 ---
 
 # dateformat

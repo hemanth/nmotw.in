@@ -4,6 +4,7 @@ title: "mute-stream"
 date: 2014-07-03 18:32:49 +0530
 comments: true
 categories: cli 
+ogimg: http://nmotw.in/images/mute-stream/mute-stream.gif
 ---
 
 > Bytes go in, but they don't come out (when muted).

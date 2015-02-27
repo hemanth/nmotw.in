@@ -1,0 +1,54 @@
+---
+layout: post
+title: "dom-event"
+date: 2015-02-26 18:18:25 +0530
+comments: true
+categories: dom
+---
+
+#[dom-event](https://www.npmjs.com/package/dom-event)
+> Add/remove DOM events
+
+Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser compliance all in just 15 lines of code ;)
+
+
+__Add event:__
+
+```js
+function on (element, event, callback, capture) {
+  !element.addEventListener && (event = 'on' + event);
+  (element.addEventListener || element.attachEvent)(event, callback, capture);
+  return callback;
+}
+```
+__Remove event:__
+
+```js
+function off (element, event, callback, capture) {
+  !element.removeEventListener && (event = 'on' + event);
+  (element.removeEventListener || element.detachEvent)(event, callback, capture);
+  return callback;
+}
+```
+
+__Install it:__ ```npm install dom-event```
+
+__Sample usage:__
+
+```js
+var on = require('dom-event');
+var off = on.off; // :)
+
+on(document.body, "click", hello);
+
+function hello() {alert("hello");}
+
+off(document.body, "click", hello); // No alerts :)
+```
+
+__GIF FTW!__
+
+![dom-event](/images/dom-event/dom-event.gif)
+
+
+P.S: All Web realted modules would need help from [browserify](http://browserify.org/) or related tools to run on the web.

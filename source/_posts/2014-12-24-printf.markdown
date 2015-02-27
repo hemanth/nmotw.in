@@ -1,0 +1,63 @@
+---
+layout: post
+title: "printf"
+date: 2014-12-24 18:11:33 +0530
+comments: true
+categories: util 
+ogimg: http://nmotw.in/images/printf/printf.gif
+---
+
+# [printf]()
+
+Full implementation of the `printf`/`sprintf` family in pure JS.
+                _       _    __ 
+               (_)     | |  / _|
+     _ __  _ __ _ _ __ | |_| |_ 
+    | '_ \| '__| | '_ \| __|  _|
+    | |_) | |  | | | | | |_| |
+    | .__/|_|  |_|_| |_|\__|_|
+    | |
+    |_|
+
+
+__Get it:__ `npm install printf`
+
+__Sample usage:__
+
+```js
+var printf = require('printf');
+var result = printf(format, args...);
+printf(write_stream, format, args...);
+```
+
+__Flags:__
+
+* ` ` (space)
+
+* `+` 
+
+* `-`
+
+* `0`
+
+__Features:__
+
+* `Width / precision` => `%2f`
+
+* `Numerical bases` => `%c` 
+
+* `Miscellaneous` => `%d%%`, `+%s%+`
+
+* `Extra` => The `%O` converter will call `util.inspect(...)` at the argument, `%-*.*f`.
+
+
+__GIF FTW!__
+
+![](/images/printf/printf.gif)
+
+
+Thanks to [Worms David](http://www.adaltas.com) for `printf`!
+
+`printf('******************%s**************',"Merry Xmas!")`
+
+

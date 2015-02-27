@@ -4,6 +4,7 @@ title: "ms"
 date: 2014-08-07 18:08:24 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/ms/ms.gif
 ---
 
 [ms]() a Tiny milisecond conversion utility, that does the below:

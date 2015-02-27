@@ -1,0 +1,98 @@
+---
+layout: post
+title: "npm-me"
+date: 2014-11-13 18:24:00 +0530
+comments: true
+categories: util npm
+ogimg: http://nmotw.in/images/npm-me/npm-me.gif
+---
+
+# [npm-me](https://www.npmjs.org/package/npm-me)
+
+> Get a list of download counts over the last month for a particular user's packages.
+
+
+__Installing it:__ `npm install npm-me` or `npm install -g npm-me`
+
+__CLI usage:__
+
+```sh
+nmotw> npm-me hemanth
+
+NAME                 COUNT
+has-properties          10
+color-type              11
+yoda-said               12
+systemize               12
+inpm                    13
+cani                    13
+randhex                 14
+gulp-prune-html         14
+gignore                 15
+all-builtins            15
+gandhi-said             15
+an-async                16
+npm-repo                16
+ip2dword                16
+generator-webrtc        17
+gulp-html2txt           17
+ndocs                   17
+get-pdf-urls            18
+gulp-html2md            19
+is-deprecated           19
+humem                   19
+climagic                20
+gntr                    21
+broccoli-md             22
+broccoli-xml2json       22
+lie-fs                  26
+gulp-js2coffee          26
+octodex                 29
+generator-atom          30
+broccoli-es6-arrow      31
+bjs                     33
+xkcd-imgs               35
+prepend-file            37
+gulp-html2jade          39
+grunt-html2jade         42
+gulp-hogan              43
+is-keyword              50
+inline-elements         54
+edich                   61
+gulp-jstransform       104
+is-builtin             114
+is-m4a                 145
+is-mp3                 146
+is-ogg                 148
+is-wav                 148
+is-flac                150
+audio-type             157
+gulp-removelogs        223
+gulp-cleanhtml         448
+rsj                    574
+generator-node         606
+enable               1,193
+void-elements      142,794
+
+Total  147,889
+```
+
+__API:__
+
+```javascript
+
+var npmme = require('npm-me');
+
+npmme('hemanth', function(err, packages){
+  // packages => [{name: '', count:0},...]
+});
+```
+
+__GIF FTW!__
+
+![](/images/npm-me/npm-me.gif)
+
+
+Thanks to [Hugh Kennedy](http://twitter.com/hughskennedy) for this cheeky util!
+
+
