@@ -1,0 +1,54 @@
+---
+layout: post
+title: "malarkey"
+date: 2014-12-18 18:07:40 +0530
+comments: true
+categories: web DOM 
+---
+
+#[malarkey](https://www.npmjs.com/package/malarkey)
+
+> Simulate a typewriter/ticker effect on a DOM element.
+
+Even though `malarkey` means 'meaningless talk; nonsense', this is a sweet module that helps us to simulate typewriter effect on DOM elements.
+
+__Install it:__ `npm install --save malarkey`
+
+__Sample usage:__
+
+```javascript
+var elem = document.querySelectorAll('.malarkey')[0];
+var opts = {
+  typeSpeed: 50,
+  deleteSpeed: 50,
+  pauseDelay: 2000,
+  loop: true,
+  postfix: ''
+};
+
+malarkey(elem, opts)
+.type('Say hello').pause().delete()
+.type('Wave goodbye').pause().delete();
+```
+
+__API from 1000 feet:__
+
+* malarkey.type
+
+* malarkey.clear
+
+* malarkey.pause
+
+* malarkey.delete
+
+Read more about them in the [docs](https://github.com/yuanqing/malarkey#api)
+
+__DEMO:__
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/gnumanth/efu58rbk/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+__GIF FTW:__
+
+![malarkey](/images/malarkey/malarkey.gif)
+
+P.S: All Web realted modules would need help from [browserify](http://browserify.org/) or related tools to run on the web.

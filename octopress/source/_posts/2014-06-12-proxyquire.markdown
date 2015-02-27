@@ -4,6 +4,7 @@ title: "proxyquire"
 date: 2014-06-12 09:21
 comments: true
 categories: test stub
+ogimg: http://nmotw.in/images/proxyquire/proxyquire.gif
 ---
 
 Test cases always involves mocks and stub, sometimes there will be a need to mock `require` itself, that where proxyquire comes for our rescue.

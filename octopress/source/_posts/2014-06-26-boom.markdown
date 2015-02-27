@@ -4,6 +4,7 @@ title: "boom"
 date: 2014-06-26 19:26:34 +0530
 comments: true
 categories: HTTP
+ogimg: http://nmotw.in/images/boom/boom.gif
 ---
 
 How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of them, but would it not be cool to have more humanized mechanism to handle this?

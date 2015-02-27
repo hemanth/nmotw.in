@@ -4,6 +4,7 @@ title: "only"
 date: 2014-08-21 06:24:47 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/only/only.gif
 ---
 
 

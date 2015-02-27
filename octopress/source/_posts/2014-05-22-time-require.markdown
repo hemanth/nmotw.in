@@ -4,6 +4,7 @@ title: "time-require"
 date: 2014-05-22 22:26:56 +0530
 comments: true
 categories: performance
+ogimg: http://nmotw.in/images/time-require/time-require.gif
 ---
 
 Were you looking for the stats of how long the require statements took in your scripts?

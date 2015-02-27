@@ -1,0 +1,222 @@
+---
+layout: post
+title: "lowdb"
+date: 2014-09-18 18:21:06 +0530
+comments: true
+categories: db
+ogimg: http://nmotw.in/images/lowdb/lowdb.gif
+---
+
+> Flat JSON file database for Node
+
+* Serverless.
+
+* Multiple databases.
+
+* In-memory or disk-based.
+
+* 80+ methods from Lo-Dash API.
+
+* Asynchronous and fault-tolerant writing.
+
+* Extendable
+
+
+[LowDB]() uses Lo-Dash functional progamming API, it's a light weight DB implementation, which could be disk-based or in-memory database.
+
+__Installing it:__ `$ npm install lowdb`
+
+__Sample usage:__
+
+
+```javascript
+var low = require('lowdb');
+```
+
+```javascript
+var db = low();           // in-memory
+var db = low('db.json'); // disk-based
+```
+
+```javascript
+var db = low('db.json')
+db('modules').push({ title: 'lowdb', type:'db-util'});
+db('modules').push({ title: 'lodash', type:'util'});
+```
+
+```javascript
+// Get all the titles.
+db('modules')
+  .pluck('title')
+  .value()
+```
+
+On the `db` object we have the below actions:
+
+```javascript
+[ 'after',
+  'assign',
+  'at',
+  'bind',
+  'bindAll',
+  'bindKey',
+  'chain',
+  'collect',
+  'compact',
+  'compose',
+  'constant',
+  'countBy',
+  'create',
+  'createCallback',
+  'curry',
+  'debounce',
+  'defaults',
+  'defer',
+  'delay',
+  'difference',
+  'drop',
+  'each',
+  'eachRight',
+  'extend',
+  'filter',
+  'flatten',
+  'forEach',
+  'forEachRight',
+  'forIn',
+  'forInRight',
+  'forOwn',
+  'forOwnRight',
+  'functions',
+  'groupBy',
+  'indexBy',
+  'initial',
+  'intersection',
+  'invert',
+  'invoke',
+  'keys',
+  'map',
+  'mapValues',
+  'max',
+  'memoize',
+  'merge',
+  'methods',
+  'min',
+  'object',
+  'omit',
+  'once',
+  'pairs',
+  'partial',
+  'partialRight',
+  'pick',
+  'pluck',
+  'property',
+  'pull',
+  'range',
+  'reject',
+  'remove',
+  'rest',
+  'select',
+  'shuffle',
+  'sortBy',
+  'tail',
+  'tap',
+  'throttle',
+  'times',
+  'toArray',
+  'transform',
+  'union',
+  'uniq',
+  'unique',
+  'unzip',
+  'values',
+  'where',
+  'without',
+  'wrap',
+  'xor',
+  'zip',
+  'zipObject',
+  'all',
+  'any',
+  'clone',
+  'cloneDeep',
+  'contains',
+  'detect',
+  'escape',
+  'every',
+  'find',
+  'findIndex',
+  'findKey',
+  'findLast',
+  'findLastIndex',
+  'findLastKey',
+  'findWhere',
+  'foldl',
+  'foldr',
+  'has',
+  'identity',
+  'include',
+  'indexOf',
+  'inject',
+  'isArguments',
+  'isArray',
+  'isBoolean',
+  'isDate',
+  'isElement',
+  'isEmpty',
+  'isEqual',
+  'isFinite',
+  'isFunction',
+  'isNaN',
+  'isNull',
+  'isNumber',
+  'isObject',
+  'isPlainObject',
+  'isRegExp',
+  'isString',
+  'isUndefined',
+  'lastIndexOf',
+  'mixin',
+  'noConflict',
+  'noop',
+  'now',
+  'parseInt',
+  'random',
+  'reduce',
+  'reduceRight',
+  'result',
+  'runInContext',
+  'size',
+  'some',
+  'sortedIndex',
+  'template',
+  'unescape',
+  'uniqueId',
+  'support',
+  'templateSettings',
+  'first',
+  'last',
+  'sample',
+  'take',
+  'head',
+  'toString',
+  'value',
+  'valueOf',
+  'join',
+  'pop',
+  'shift',
+  'push',
+  'reverse',
+  'sort',
+  'unshift',
+  'concat',
+  'slice',
+  'splice' ]
+```
+
+All in all this a module that helps you for a quick prototype, not meant for high performance and is not scalable.
+
+Thanks to [typicode](https://twitter.com/typicode) for this sweet module.
+
+__GIF FTW!:__
+
+![](/images/lowdb/lowdb.gif)

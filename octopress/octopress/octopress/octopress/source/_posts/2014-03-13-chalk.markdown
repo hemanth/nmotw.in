@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Chalk"
+date: 2014-03-13 18:33:53 +0530
+comments: true
+categories: CLI 
+---
+
+There are many wonderful node modules that adhere to Unix philosophy:
+
+> "Write programs that do one thing and do it well."
+
+Out of many such one such elegant module is [chalk](https://www.npmjs.org/package/chalk) thanks to [Sindre Sorhus](http://sindresorhus.com/hi/) for that.
+
+Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is [colors.js](https://github.com/Marak/colors.js) but one of the major drawbacks with that being it extending `String.portotye` or be [these](https://github.com/yeoman/yo/issues/68) problems.
+
+Installing chalk is like any other module: `npm install --save chalk`
+
+Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.
+
+__For example:__
+
+```javascript
+var chalk = require('chalk');
+
+console.log(  chalk.blue.bgRed.bold('Hello world!')  );
+
+console.log(  chalk.red('Hello', chalk.underline('world') + '!')  );
+
+```
+
+Here is a simple snippet for printing all of the styles it provides:
+
+```javascript
+var chalk = require('chalk');
+
+Object.keys(chalk.styles).forEach(function(style) {
+    if( style !== "reset") {
+      process.stdout.write(chalk[style](style) + ' ');
+    }
+});
+```
+
+__gif FTW!?__
+
+![chalk](http://nmotw.in/images/chalk/chalk.gif)
+
+
+Until next week, happy coloring!
+
+![chalk-colors](http://nmotw.in/images/chalk/chalk.png)
+

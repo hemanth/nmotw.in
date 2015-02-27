@@ -4,6 +4,7 @@ title: "PSI"
 date: 2014-06-19 19:22:39 +0530
 comments: true
 categories: cli performance
+ogimg: http://nmotw.in/images/psi/psi.gif
 ---
 
 If you are into web development at one point or the other you would have used Google's pagespeed [insights](http://developers.google.com/speed/pagespeed/insights/) to improve the performance of your site.

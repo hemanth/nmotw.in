@@ -4,6 +4,7 @@ title: "verbal-expressions"
 date: 2014-08-28 22:14:18 +0530
 comments: true
 categories: util
+ogimg: http://nmotw.in/images/verbal-expressions/verba-expressions.gif
 ---
 
 > JavaScript Regular Expressions made easy

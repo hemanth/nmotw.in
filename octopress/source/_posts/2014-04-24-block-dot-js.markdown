@@ -4,6 +4,7 @@ title: "block.js"
 date: 2014-04-24 19:12:16 +0530
 comments: true
 categories: templating 
+ogimg: http://nmotw.in/images/block.js/block.js.gif
 ---
 
 [Block.js](https://www.npmjs.org/package/block): Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local.

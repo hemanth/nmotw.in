@@ -4,6 +4,7 @@ title: "music meta data"
 date: 2014-06-05 18:08:35 +0530
 comments: true
 categories: meta
+ogimg: http://nmotw.in/images/music-meta-data/mmd.gif
 ---
 
 [musicmetadata](https://github.com/leetreveil/musicmetadata) is a streaming music metadata parser for node and the browser, but out focus is more on node side here.

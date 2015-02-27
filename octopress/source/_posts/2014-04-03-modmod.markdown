@@ -4,6 +4,7 @@ title: "modmod"
 date: 2014-04-03 17:32:31 +0530
 comments: true
 categories: design 
+ogimg: http://nmotw.in/images/modmod/modmod.gif
 ---
 
 > "Simplicity is the ultimate sophistication." ― Leonardo da Vinci 

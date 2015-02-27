@@ -4,6 +4,7 @@ title: "yosay"
 date: 2014-05-15 09:45:56 +0530
 comments: true
 categories: CLI
+ogimg: http://nmotw.in/images/yosay/yosay.gif
 ---
 
 Many of us wanted to greet like [Yeoman](http://yeoman.io) in the CLI, now it's very easy to do that!
