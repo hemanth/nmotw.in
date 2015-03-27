@@ -1,0 +1,62 @@
+---
+layout: post
+title: "cssom"
+date: 2015-03-26 13:35:30 +0000
+comments: true
+categories: css parser
+---
+
+#[cssom](https://www.npmjs.com/package/cssom)
+> CSS Object Model implementation and CSS parser.
+
+`cssom` is parser written in pure javascript, it also has partially implemented of [CSS Object Model](http://dev.w3.org/csswg/cssom/), works across node/io.js and modren browsers.
+
+__Install it:__ `npm install cssom --save`
+
+__Sample usage:__
+
+```js
+> cssom = require('cssom')
+{ CSSStyleDeclaration: [Function: CSSStyleDeclaration],
+  CSSRule: 
+   { [Function: CSSRule]
+     STYLE_RULE: 1,
+     IMPORT_RULE: 3,
+     MEDIA_RULE: 4,
+     FONT_FACE_RULE: 5,
+     PAGE_RULE: 6,
+     WEBKIT_KEYFRAMES_RULE: 8,
+     WEBKIT_KEYFRAME_RULE: 9 },
+  CSSStyleRule: { [Function: CSSStyleRule] parse: [Function] },
+  MediaList: [Function: MediaList],
+  CSSMediaRule: [Function: CSSMediaRule],
+  CSSImportRule: [Function: CSSImportRule],
+  CSSFontFaceRule: [Function: CSSFontFaceRule],
+  StyleSheet: [Function: StyleSheet],
+  CSSStyleSheet: [Function: CSSStyleSheet],
+  CSSKeyframesRule: [Function: CSSKeyframesRule],
+  CSSKeyframeRule: [Function: CSSKeyframeRule],
+  MatcherList: [Function: MatcherList],
+  CSSDocumentRule: [Function: CSSDocumentRule],
+  CSSValue: [Function: CSSValue],
+  CSSValueExpression: [Function: CSSValueExpression],
+  parse: [Function: parse],
+  clone: [Function: clone] }
+  
+> cssom.parse('.main{display:flex}')
+{ parentStyleSheet: null,
+  cssRules: 
+   [ { parentRule: null,
+       parentStyleSheet: [Circular],
+       selectorText: '.main',
+       style: [Object],
+       __starts: 0,
+       __ends: 19 } ] }
+
+```
+
+Thanks to [Nikita Vasilyev](http://n12v.com/) for this early implementation of `cssom` (:
+
+__GIF FTW!__
+
+![cssom](/images/cssom/cssom.gif)
