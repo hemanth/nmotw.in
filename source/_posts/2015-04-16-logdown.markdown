@@ -1,0 +1,37 @@
+---
+layout: post
+title: "logdown"
+date: 2015-04-16 12:37:03 +0000
+comments: true
+categories: util isomorphic
+---
+
+[logdown](http://npm.im/logdown)
+> Debug utility with markdown support that runs on browser and server.
+
+This module lets you to have markdown syntax in your debug logs! It had `['log', 'info', 'warn', 'error']` as it's logging levels.
+
+One can also prefix the log message, it has support for various terminals `/^screen|^xterm|^vt100|color|ansi|cygwin|linux/` and also runs
+in the browser env.
+
+
+__Install it:__ `npm install --save logdown`
+
+
+__Sample usage:__
+
+```js
+var Logdown = require('logdown');
+var debug = new Logdown({ prefix: 'meow' });
+
+debug.log('lorem *ipsum*');
+debug.info('I can haz _info_');
+debug.warn('shall I `highlight` your code?');
+```
+
+__GIF FTW:__
+
+![logdown](/images/logdown/logdown.gif)
+
+
+Thanks to [Caio Gondim](http://caiogondim.com) for logdown! (:
