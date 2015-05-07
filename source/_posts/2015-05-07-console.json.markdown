@@ -1,0 +1,50 @@
+---
+layout: post
+title: "console.json"
+date: 2015-05-07 18:14:21 +0000
+comments: true
+categories: util
+alias: [/console.json/index.html]
+---
+
+#[console.json](http://nmp.im/console.json)
+> Adds `console.json` method that stringifies passed in objects and logs them.
+
+This is a sweet little util function by [Gleb Bahmutov](http://glebbahmutov.com/) that makes a life bit easier while debugging huge `json` data in the console.
+P.S: There is `console.dir` but `console.json` is kina appleaing expect for the color highlighting part of it.
+
+__Install it:__ ```npm install --save console.json```
+
+__Sample usage:__
+
+```js
+// Just require it once and you shall have `console.json` method for convenience.
+
+require('console.log');
+
+
+var data = {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product",
+    "description": "A product from Acme's catalog",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a product",
+            "type": "integer"
+        },
+        "name": {
+            "description": "Name of the product",
+            "type": "string"
+        }
+    },
+    "required": ["id", "name"]
+};
+
+console.json(data);
+```
+
+__GIF FTW!:__
+
+![console.json](/images/console.json/console.json.gif)
+
