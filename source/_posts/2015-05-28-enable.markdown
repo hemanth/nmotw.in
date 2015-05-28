@@ -29,4 +29,6 @@ if (enable.generator) {
 */
 ```
 
-_
+__GIF FTW!__
+
+![enable](/images/enable/enable.gif)
