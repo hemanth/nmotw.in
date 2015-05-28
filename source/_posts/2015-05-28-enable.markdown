@@ -6,7 +6,7 @@ comments: true
 categories: detect es6 es7
 ---
 
-#[https://www.npmjs.com/package/enable](enable)
+#[enable](https://www.npmjs.com/package/enable)
 > ES6 and ES7 feature detection.
 
 A simple util that would help you to check if the a required ES6 or ES7 is enabled, both in the browser and in CLI.
@@ -29,6 +29,4 @@ if (enable.generator) {
 */
 ```
 
-__GIF FTW!__
-
-![enable](/images/enable/enable.gif)
+_
