@@ -1,0 +1,78 @@
+---
+layout: post
+title: "jscpd"
+date: 2015-06-11 15:39:12 +0000
+comments: true
+categories: util 
+---
+
+#[jscpd](http://npm.im/jscpd)
+> jscpd is a tool for detect copy/paste "design pattern" in programming source code.
+
+[Andrey Kucherenko's](http://kucherenko.org/) `jscpd` is a smart tool that helps use to detect copy paste code!
+
+It supports the below langauges:
+
+* JavaScript 
+* Java         
+* CoffeeScript 
+* TypeScript
+* C++          
+* PHP
+* C#           
+* Go    
+* Python       
+* Ruby                  
+* C            
+* Less                 
+* CSS          
+* SCSS               
+* Mixed HTML   
+            
+__Install it:__ `npm install -g jscpd`
+
+
+__Usage:__
+
+```js
+
+jscpd --path my_project/ --languages javascript,coffee
+
+jscpd -f **/*.js -e **/node_modules/**
+
+jscpd --files **/*.js --exclude **/*.min.js --output report.xml
+
+jscpd --files **/*.js --exclude **/*.min.js --reporter json --output report.json
+```
+
+If you have a `.cpd.yml` config file in the `pwd` jscpd command, you will check code for duplicates according the config.
+
+
+```yml
+#.cpd.yaml
+path:
+  - fixtures/
+languages:
+  - javascript
+  - coffeescript
+  - typescript
+  - php
+  - python
+  - css
+  - ruby
+  - go
+  - java
+  - "c++src"    # c++ source
+  - csrc        # c source
+  - csharp      # c# source
+  - htmlmixed   # html mixed source like knockout.js templates
+exclude:
+  - "**/*.min.js"
+  - "**/*.mm.js"
+reporter: json
+```
+
+
+__GIF FTW!__
+
+![jscpd-demo](/images/jscpd/jscpd.gif)
