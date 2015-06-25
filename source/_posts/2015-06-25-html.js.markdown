@@ -1,0 +1,42 @@
+---
+layout: post
+title: "html.js"
+date: 2015-06-25 12:12:57 +0000
+comments: true
+categories: html util dom
+alias: [/html.js/index.html]
+---
+
+#[html.js](https://www.npmjs.com/package/html.js)
+> An intuitive, extensible way to work directly with the DOM.
+
+`html.js` is a fork of [voyeur.js](http://adriancooney.ie/voyeur.js/) that has made it more simpler to deal with DOM in a 
+relatively new way.
+
+It has a pretty extensive [API](http://nbubna.github.io/HTML/#API) and you could also create your own plugins 
+`HTML._.fn.name = function;`
+
+__Get it:__ `npm install --save html.js`
+
+__Usage Example:__
+
+```js
+let HTML = require('html.js');
+
+HTML.body.header; // returns header element.
+
+HTML.query("#example").h1.em; // chain on, man.
+
+if (!('each' in node)) {
+  HTML.ify(node);
+}
+node.each(function(el){ console.log(el, ' is your friend!'); });
+```
+
+__GIF FTW!__
+
+![html.js](/images/html.js/html.js.gif)
+
+
+Thanks to [Nathan Bubna](https://github.com/nbubna) for this module.
+
