@@ -1,0 +1,38 @@
+---
+layout: post
+title: "fade"
+date: 2015-07-02 16:54:12 +0000
+comments: true
+categories: dom util animation
+---
+
+#[fade](http://npm.im/fade)
+> Fade a HTML element using CSS transitions.
+
+Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto 
+behind this module, that lets us to `fade.in`, `fade.out` and fade an element to a specifie opacity, which also takes a 
+callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.
+
+__Install it:__ `npm install --save fade` # browserify it!
+
+__Usage:__
+
+```js
+var fade = require('fade');
+
+var el = document.querySelector('#el');
+
+fade.out(el); // fade el out in 1s
+fade.in(el, 1500); // fade el in in 1.5s
+fade(el, 0.3, 3000); // fade el to opacity 0.3 in 3s 
+fade.out(el, function() {
+  el.style.display = 'none'; // set display to none after fade out
+});
+```
+
+__GIF FTW!__
+
+![fade.gif](/images/fade/fade.gif)
+
+
+Thanks to [Julian Gruber](http://juliangruber.com/) for this sweet little module.
