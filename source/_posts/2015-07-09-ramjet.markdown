@@ -1,0 +1,42 @@
+---
+layout: post
+title: "ramjet"
+date: 2015-07-09 17:00:40 +0000
+comments: true
+categories: dom animation 
+---
+
+[ramjet](http://npm.im/ramjet)
+> Transform DOM elements into each another with smooth transitions
+
+`ramjet` helps us to Morph DOM elements from one state to another with smooth transitions! 
+
+All it does is:
+
+* Clone the elements and all their children.
+
+* Transform the second element so that it completely overlaps with the first.
+
+* Animating the two elements together until the first element has exactly the same position and dimensions as the second element.
+
+
+__install it:__ `npm install --save ramjet`
+
+
+__sample usage:__
+
+```html
+<div id='a' style='background-color: red; font-size: 4em; padding: 1em;'>a</div>
+<div id='b' style='background-color: blue; font-size: 4em; padding: 1em;'>b</div>
+
+<script>
+  ramjet.transform( a, b );
+</script>
+```
+
+__GIF FTW__
+
+![ramjet.js](/images/ramjet/ramjet.gif)
+
+
+Thanks to [Rich Harris](http://www.rich-harris.co.uk/) for `ramjet` (:
