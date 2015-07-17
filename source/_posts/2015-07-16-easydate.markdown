@@ -1,0 +1,61 @@
+---
+layout: post
+title: "easydate"
+date: 2015-07-16 14:42:07 +0000
+comments: true
+categories: util date
+---
+
+[easydate](https://www.npmjs.com/package/easydate)
+> get date and/or time by pattern.
+
+A simple date and time util that returns the date according to a pattern, `easydate` takes two arguments, first one being a pattern string 
+and second one being an config object.
+
+__Pattern Options:__
+
+* `Y` Full year (number - e.g. `2012`)
+* `y` Year (number - e.g. `12`)
+* `M` Month (number - e.g. `11`)
+* `d` Day (number - e.g. `28`)
+* `h` Hour (number - e.g. `02`)
+* `m` Minute (number - e.g. `01`)
+* `s` Second (number - e.g. `33`)
+* `l` Millisecond (number - e.g. `001`)
+* `z` Timezone (string - e.g. `UTC`, `UTC+1`, `UTC-11`)
+* `x` DST (string - either `'DST'` or `''`)
+
+__Config options:__
+
+```js
+{
+    setDate: 'Date', 
+    timeZone: 'utc/local',
+    adjust: 'Whether or not to adjust DST'
+}
+```
+
+__Install it:__ ``` npm install --save easydate ```
+
+
+__Sample usage:__
+
+```js
+var easydate = require('easydate')
+
+
+easydate('d-M-y');
+
+easydate('h:m:s.l', '2015-11-03T16:06:08.123Z') // "16:06:08.123"
+
+easydate('z', {timeZone: 'utc'}) // => "UTC"
+
+easydate('h:m:s z x', {setDate: '2016-08-01T00:00:00.000Z', adjust: true})
+```
+
+__GIF FTW!__
+
+![easydate](/images/easydate/easydate.gif)
+
+
+Thanks to [Rory Bradford](https://medium.com/@roryrjb) for this handy util.
