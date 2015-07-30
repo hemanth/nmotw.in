@@ -34,3 +34,5 @@ __GIF FTW!__
 
 ![combokeys](/images/combokeys/combokeys.gif)
 
+
+Thanks to [Shahar Or](https://github.com/mightyiam) for porting `mousetrap` to `combokeys`.
