@@ -1,0 +1,56 @@
+---
+layout: post
+title: "npm-check"
+date: 2015-09-10 14:28:00 +0000
+comments: true
+categories: cli npm
+---
+
+#[npm-check](https://www.npmjs.com/package/npm-check)
+> Check for outdated, incorrect, and unused dependencies.
+
+__Features:__
+
+* *Interactive Update* means less typing.
+* Scoped packages support for the modern npm user.
+* Works with public and private registries.
+* Won't query npm registry for packages with `private: true`.
+* Kindly informs you if a dependency is not being used.
+* Emoji in a command-line app, because command-line apps can be fun too.
+
+Very much similar to [npm-check-updates](http://nmotw.in/npm-check-updates/) but far more generic and interactive!
+
+__Get it:__ `npm install -g npm-check`
+
+__Sample usage:__
+
+```sh
+$ npm-check --help
+ 
+  Usage: npm-check [options]
+ 
+  Options:
+ 
+    -h, --help         output usage information
+    -V, --version      output the version number
+    -u, --update       Interactive update.
+    -g, --global       Look at global modules.
+    -s, --skip-unused  Skip check for unused packages.
+    -p, --production   Ignore devDependencies.
+
+```
+
+```js
+var npmCheck = require('npm-check');
+ 
+npmCheck(options)
+  .then(result);
+```
+
+__GIF FTW!__
+
+![npm-check](/images/npm-check/npm-check.gif)
+
+Thanks to [@dylang](https://twitter.com/dylang) for `npm-check`.
+
+
