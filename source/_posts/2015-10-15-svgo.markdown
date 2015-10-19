@@ -1,0 +1,93 @@
+---
+layout: post
+title: "svgo"
+date: 2015-10-15 16:20:41 +0000
+comments: true
+categories: perf util
+---
+
+#[svgo](https://www.npmjs.com/package/svgo)
+>**SVG O**ptimizer
+
+Optimizes SVG by cleaning:
+
+* Editor metadata.
+
+* Comments.
+
+* Hidden elements.
+
+* Default or non-optimal values.
+
+* Other stuff that can be safely removed or converted without affecting SVG rendering result.
+
+__Get it:__ `npm install --global svgo`
+
+__Sample usage on CLI:__
+
+```
+Usage:
+  svgo [OPTIONS] [ARGS]
+
+Options:
+  -h, --help : Help
+  -v, --version : Version
+  -i INPUT, --input=INPUT : Input file, "-" for STDIN
+  -s STRING, --string=STRING : Input SVG data string
+  -f FOLDER, --folder=FOLDER : Input folder, optimize and rewrite all *.svg files
+  -o OUTPUT, --output=OUTPUT : Output file or folder (by default the same as the input), "-" for STDOUT
+  -p PRECISION, --precision=PRECISION : Set number of digits in the fractional part, overrides plugins params
+  --config=CONFIG : Config file to extend or replace default
+  --disable=DISABLE : Disable plugin by name
+  --enable=ENABLE : Enable plugin by name
+  --datauri=DATAURI : Output as Data URI string (base64, URI encoded or unencoded)
+  --pretty : Make SVG pretty printed
+  --show-plugins : Show available plugins and exit
+
+Arguments:
+  INPUT : Alias to --input
+  OUTPUT : Alias to --output
+```
+  
+```sh
+  $ svgo red.svg red.min.svg 
+  
+  Done in 68 ms!
+  0.708 KiB - 70.8% = 0.207 KiB
+```
+  
+__Sample API usage:__
+  
+```js
+var readFile = require('fs').readFile,
+    path = require('path'),
+    SVGO = require('svgo'),
+    filepath = PATH.resolve(__dirname, 'test.svg'),
+    svgo = new SVGO(/*{ custom config object }*/);
+
+readFile(filepath, 'utf8', function(err, data) {
+
+    if (err) {
+        throw err;
+    }
+
+    svgo.optimize(data, function(result) {
+        console.log(result);
+        // {
+        //     // optimized SVG data string
+        //     data: '<svg width="10" height="20">test</svg>'
+        //     // additional info such as width/height
+        //     info: {
+        //         width: '10',
+        //         height: '20'
+        //     }
+        // }
+    });
+});
+```
+  
+P.S: Don't miss to read [How it works!](https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md#how-it-works)
+
+__GIF FTW!__
+
+![svgo.gif](/images/svgo/svgo.gif)
