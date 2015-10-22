@@ -94,3 +94,6 @@ google_analytics_tracking_id: UA-7949129-5
 
 # Facebook Like
 facebook_like: true
+
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
