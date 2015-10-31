@@ -16,7 +16,7 @@ module OctopressFilters
   end
   def post_filter(input)
     input = unwrap(input)
-    RubyPants.new(input).to_html
+    #RubyPants.new(input).to_html
   end
 end
 
