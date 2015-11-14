@@ -1,0 +1,32 @@
+---
+layout: post
+title: "debounce"
+date: 2015-11-12 16:54:27 +0000
+comments: true
+categories: util
+---
+
+#[debounce](https://www.npmjs.com/package/debounce)
+> debounce a function.
+
+Creates and returns a new debounced version of the passed function that will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.
+
+__Get it:__ `npm install --save debounce`
+
+__API:__ `debounce(fn, wait, [ immediate || false ])`
+
+__Sample usage:__
+
+```js
+var debounce = require('debounce');
+window.onresize = debounce(resize, 200);
+ 
+function resize(e) {
+  console.log('height', window.innerHeight);
+  console.log('width', window.innerWidth);
+}
+```
+
+__GIF FTW!__
+
+![debounce.gif](/images/debounce/debounce.gif)
