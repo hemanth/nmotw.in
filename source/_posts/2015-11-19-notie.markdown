@@ -1,0 +1,42 @@
+---
+layout: post
+title: "notie"
+date: 2015-11-19 09:56:38 +0000
+comments: true
+categories: dom
+---
+
+#[notie](https://www.npmjs.com/package/notie)
+> A simple notification plugin.
+
+`notie` - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an input,
+confirmation or alter the users in a more appealing manner. 
+
+It's uses material design, you can override or add styling in a separate `.css` file. 
+
+__Get it:__ `npm install --save notie`
+
+__Sample usage:__
+
+```js
+var notie = require('notie);
+
+notie.alert(style_number, 'message', time_in_seconds);
+
+notie.confirm('Title text', 'Yes button text', 'No button text', yes_callback);
+
+notie.input('Title text', 'Submit button text', 'Cancel button text', 'type', 'placeholder', submit_callback, 'Optional pre-filled value');
+```
+
+```js
+notie.input('What city do you live in?', 'Submit', 'Cancel', 'text', 'Enter your city:', function(value_entered) {
+    notie.alert(1, 'You entered: ' + value_entered, 2);
+}, 'New York');
+```
+
+P.S: `style_number` -> `{1,2,3,4}` <=> `{Success, Warning, Error, Information}`
+
+__GIF FTW:__
+
+![notie](/images/notie/notie.gif)
+
