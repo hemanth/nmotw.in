@@ -1,0 +1,56 @@
+---
+layout: post
+title: "npmlog"
+date: 2015-11-26 14:07:54 +0000
+comments: true
+categories: util cli
+---
+
+#[npmlog](https://www.npmjs.com/package/npmlog)
+>logger for npm
+
+`npmlog` is a simple logger that `npm` uses to log it's messages, this module provides custom levels and colored output.
+
+By default, logs are written to `stderr`, to send log messages to outputs other than streams you can use `log.stream` member, or you can just listen to the events that it emits.
+
+__Get it:__ : `npm install --save nplog`
+
+__Sample usage:__ 
+
+```js
+var log = require('npmlog')
+ 
+// additional stuff ---------------------------+
+// message ----------+                         |
+// prefix ----+      |                         |
+// level -+   |      |                         |
+//        v   v      v                         v
+    log.info('fyi', 'I <3 nmotw: %j', node_modules);
+```
+
+__levels:__
+
+```js
+> log.levels
+{ silly: -Infinity,
+  verbose: 1000,
+  info: 2000,
+  http: 3000,
+  warn: 4000,
+  error: 5000,
+  silent: Infinity }
+
+> log.disp
+{ silly: 'sill',
+  verbose: 'verb',
+  info: 'info',
+  http: 'http',
+  warn: 'WARN',
+  error: 'ERR!',
+  silent: 'silent' }
+```
+
+__GIF FTW!__
+
+![npmlog](/images/npmlog/npmlog.gif)
+
