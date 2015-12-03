@@ -1,0 +1,31 @@
+---
+layout: post
+title: "ambi"
+date: 2015-12-03 15:21:30 +0000
+comments: true
+categories: sync async
+---
+
+#[ambi](https://www.npmjs.com/package/ambi)
+> Execute a function ambidextrously.
+
+`ambi` normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.
+
+__Get it:__ `$ npm install --save ambi`
+
+__Sample usage:__
+
+```js
+var ambi = require('ambi');
+var child_process = require('child_process');
+
+ambi(child_process.execSync, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Async 
+
+ambi(child_process.exec, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Sync
+```
+
+__GIF FTW!__
+
+![ambi](/images/ambi/ambi.gif)
+
+Thanks to [Benjamin Lupton](http://balupton.com/) for this module.
