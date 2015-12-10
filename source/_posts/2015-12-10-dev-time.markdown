@@ -1,0 +1,66 @@
+---
+layout: post
+title: "dev-time"
+date: 2015-12-10 15:40:13 +0000
+comments: true
+categories: github dev time 
+---
+
+#[dev-time](https://github.com/SamVerschueren/dev-time)
+> Get the current local time of a GitHub user.
+
+Ever wanted to ping someone on github and were wondering what time zone does the dev is on? 
+
+`dev-time` helps you with getting the local time of GitHub user.
+
+How does it do that? Well, it gets the latest commit of the user and get the time stamp from there and then find the time.
+
+__Get it:__ `npm install --save dev-time`
+
+__For CLI:__ `npm install --global dev-time-cli`
+
+__Sample usage API:__
+
+```js
+const devTime = require('dev-time');
+
+devTime('SamVerschueren').then(time => {
+    console.log(time);
+    //=> '2015-12-10T21:18:34+05:30'
+});
+```
+
+__On CLI:__
+
+```sh
+$ dev-time --help
+
+  Usage
+    $ dev-time <user> <user2> ...
+
+  Options
+    -v, --verbose  Show UTC offset.
+    --format       The moment format of the output. [Default: HH:mm - D MMM. YYYY]
+    --token        The GitHub authentication token.
+
+  Examples
+    $ dev-time SamVerschueren
+    19:47 - 8 Dec. 2015
+
+    $ dev-time SamVerschueren sindresorhus
+    SamVerschueren
+      19:47 - 8 Dec. 2015
+    sindresorhus
+      18:47 - 8 Dec. 2015
+
+    $ dev-time SamVerschueren -v
+    19:47 - 8 Dec. 2015 - UTC+1
+
+    $ dev-time SamVerschueren --format DD-MM-YYYY
+    07-12-2015
+```
+
+
+__GIF FTW!__
+
+![dev-time](/images/dev-time/dev-time.gif)
