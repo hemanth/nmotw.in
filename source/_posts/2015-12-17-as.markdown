@@ -1,0 +1,48 @@
+---
+layout: post
+title: "as"
+date: 2015-12-17 16:34:55 +0000
+comments: true
+categories: functional
+---
+
+#[as](https://www.npmjs.com/package/as)
+> Convert easily, back and forth between array and object.
+
+A sweet and simple util that help you to convert array to object and vise versa, it also:
+
+* Brings all functional goodness of arrays to objects.
+
+* Brings the flexibility of objects to arrays.
+
+* Works well with a functional programming library.
+
+__Get it__: `npm install --save as`
+
+__Usage:__
+
+```js
+var asArray = require("as/array");
+
+asArray(
+  {a: 1, b: 2}
+  );
+// [ {key: "a", value: 1} 
+// , {key: "b", value: 2} 
+// ] 
+```
+
+```js
+var asObject = require("as/object");
+asObject(
+  [ {key: "a", value: 1}
+  , {key: "b", value: 2}
+  ]);
+// {a: 1, b: 2} 
+```
+
+__GIF FTW!__
+
+![](/images/as/as.gif)
+
+Thanks for 
