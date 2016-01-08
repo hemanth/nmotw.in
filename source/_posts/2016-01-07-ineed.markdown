@@ -1,0 +1,51 @@
+---
+layout: post
+title: "ineed"
+date: 2016-01-07 16:32:52 +0000
+comments: true
+categories: html scraper
+---
+
+#[ineed](https://www.npmjs.com/package/ineed)
+> Web scraping and HTML-reprocessing. The easy way.
+
+![ineed-logo](/images/ineed/ineed-logo.png)
+
+`ineed` allows you collect useful data from web pages using simple and nice API.
+
+It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast! 
+
+__Get it:__ `npm install --save ineed`
+
+__Usage:__ `ineed.<action>[.<plugin>...].<from*>`
+
+Where `action` could be: `collect` or `reprocess`
+
+`plugin` could be one of: `.comments` `.cssCode` `.hyperlinks` `.images` `.jsCode` `.scripts` `.stylesheets` `.texts` `.title`
+
+`from` could be: `from` or `fromHtml`
+
+P.S: One could write a custom plugin using the `.using()` method.
+
+__Code sample:__
+
+```js
+var ineed = require('ineed');
+ 
+ineed.collect.images.hyperlinks.scripts.stylesheets.from('http://nmotw.in',
+    (err, response, result) => console.log(result));
+```
+
+```js
+var ineed = require('ineed');
+
+var result = ineed.collect.texts.images.scripts.fromHtml(html);
+```
+
+__GIF FTW!__
+
+![ineed](/images/ineed/ineed.gif)
+
+Thanks to [Ivan Nikulin](https://twitter.com/nilukini) for this cheeky module.
+
+
