@@ -1,0 +1,53 @@
+---
+layout: post
+title: "fp-dom"
+date: 2016-01-14 16:52:27 +0000
+comments: true
+categories: dom fp 
+---
+
+#[fp-dom](https://www.npmjs.com/package/fp-dom)
+> A collection of functions to favor functional programming in a DOM context.
+
+DOM operations in a functional way with `fp-dom`, it provides support for the below methods:
+
+* animate
+* append
+* addClass
+* removeClass
+* toggleClass
+* hasClass
+* contains
+* elem
+* insertAfter
+* insertBefore
+* interval
+* isdom
+* isvdom
+* listen
+* prepend
+* replace
+* select
+* selectOne
+* setattr
+* timeout
+* velem
+
+__Get it__: `npm install --save fp-dom`
+
+
+__Sample usage:__
+
+
+```js
+fpdom = require('fp-dom');
+let appendtoBody = fpdom.append(document.body),
+  h1 = fpdom.elem('h1','meow');
+
+appendtoBody(h1);
+```
+
+__GIF FTW!__
+
+![fp-dom](/images/fp-dom/fp-dom.gif)
+
