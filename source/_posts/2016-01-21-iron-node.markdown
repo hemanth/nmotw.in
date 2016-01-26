@@ -1,0 +1,51 @@
+---
+layout: post
+title: "iron-node"
+date: 2016-01-21 16:20:46 +0000
+comments: true
+categories: debug
+---
+
+#[iron-node](http://s-a.github.io/iron-node/)
+> Debug Node.js code with Chrome Developer Tools.
+
+Yes you read it right `iron-node` helps you to debug your node code using chrome devtools, it makes use of [electron](http://electron.atom.io/) creates a `browser-window`
+opens the dev-tool re-compile native modules against electron!
+
+It not only helps you to debug your code, but also helps to debug your node build scripts! 
+
+Keep in mind to place the keyword `debugger;` to a place where you want to stop.
+
+__Get it:__ `npm install -g iron-node`
+
+__Sample usage:__
+
+__CLI:__
+
+```
+iron-node PATH_TO_NODE_JS_FILE [--customparm1=foo --customparm2=bar];
+```
+
+__npm scripts:__
+
+```
+  ...
+  "scripts": {
+    ...
+    "debug-mocha": "iron-node node_modules/mocha/bin/_mocha",
+    "debug-grunt": "iron-node node_modules/grunt-cli/bin/grunt build",
+    "debug-gulp": "iron-node node_modules/gulp/bin/gulp.js",
+    ...
+  },
+  ...
+```
+
+__GIF FTW!__
+
+![](/images/iron-node/iron-node.gif)
+
+
+
+
+
+
