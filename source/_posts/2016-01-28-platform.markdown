@@ -1,0 +1,58 @@
+---
+layout: post
+title: "platform"
+date: 2016-01-28 13:12:21 +0000
+comments: true
+categories: util
+---
+
+#[platform](https://www.npmjs.com/package/platform)
+> A platform detection library that works on nearly all JavaScript platforms.
+
+This module provides the below platfrom based information:
+
+* description
+* layout
+* manufacturer
+* name
+* prerelease
+* product
+* ua
+* version
+* os
+
+It can also `parse` an `User-Agent` and give the same information.
+
+P.S:`platform` is for informational purposes only & not intended as a substitution for feature detection/inference checks.
+
+
+__GET IT__ : `npm install --save platform`
+
+__Sample usage:__
+
+```js
+var platform = require('platform');
+
+// on an iPad
+platform.name; // 'Safari'
+platform.version; // '5.1'
+platform.product; // 'iPad'
+platform.manufacturer; // 'Apple'
+platform.layout; // 'WebKit'
+platform.os; // 'iOS 5.0'
+platform.description; // 'Safari 5.1 on Apple iPad (iOS 5.0)'
+```
+
+```js
+var info = platform.parse('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52');
+info.name; // 'Opera'
+info.version; // '11.52'
+info.layout; // 'Presto'
+info.os; // 'Mac OS X 10.7.2'
+info.description; // 'Opera 11.52 (identifying as Firefox 4.0) on Mac OS X 10.7.2'
+```
+
+__GIF FTW!__
+
+![](/images/platform/platform.gif)
+

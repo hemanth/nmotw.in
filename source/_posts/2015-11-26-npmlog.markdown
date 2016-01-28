@@ -13,7 +13,7 @@ categories: util cli
 
 By default, logs are written to `stderr`, to send log messages to outputs other than streams you can use `log.stream` member, or you can just listen to the events that it emits.
 
-__Get it:__ : `npm install --save nplog`
+__Get it:__ : `npm install --save npmlog`
 
 __Sample usage:__ 
 
