@@ -1,0 +1,44 @@
+---
+layout: post
+title: "data.task"
+date: 2016-02-04 14:26:02 +0000
+comments: true
+categories: functional promise 
+alias: [/data.task/index.html]
+---
+
+#[data.task](https://www.npmjs.com/package/data.task)
+> A structure for representing asynchronous actions with automatic resource handling.
+
+`data.task` monad which can be used to replace Continuation-Passing Style form of programming, 
+in order to be able to compose and sequence time-dependent effects using the generic and powerful monadic operations.
+
+__GET IT:__ `npm install --save data.task`
+
+__Sample Usage:__
+
+```js
+var Task = require('data.task');
+> new Task((reject, resolve) => {})
+Task { fork: [Function], cleanup: [Function] }
+```
+
+```js
+var Task = require('data.task');
+var read = path => {
+return new Task((reject, resolve) => {
+  fs.readFile(path, (err, data) => {
+        if (err)  {
+          reject(err)
+        } else {
+          resolve(data) 
+        }
+    });
+  });
+};
+read('/tmp/data.md').fork(console.error, console.log);
+```
+
+__GIF FTW:__
+
+![data.task](/images/data.task/data.task.gif)
