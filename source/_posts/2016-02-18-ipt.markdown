@@ -1,0 +1,44 @@
+---
+layout: post
+title: "ipt"
+date: 2016-02-18 16:07:50 +0000
+comments: true
+categories: util 
+---
+
+#[ipt](https://www.npmjs.com/package/ipt)
+> The missing shell interactive workflow.
+
+`ipt` (pronounced iPipeTo) introduces the missing cli interactive workflow. 
+
+It takes any kind of list as an input and uses that list to build an interactive interface to let you select an element from it.
+
+Stop manually dragging your mouse around to copy output data from a terminal, using the ipt workflow you can pipe data from a command and select what to copy to clipboard from a convenient visual menu.
+
+Selected data is also output to stdout allowing for easily composing various workflows - Just create your custom alias!
+
+P.S: Couldn't explain it better than than author! 
+
+
+__GET IT:__ `npm install -g ipt`
+
+__Sample usage:__
+
+```sh
+git branch -a | ipt | xargs git checkout
+```
+
+```sh
+git --no-pager log --oneline | ipt | cut -d ' ' -f 1 | xargs -o git rebase -i"
+```
+
+P.S: Don't miss to read the wonderful [examples](https://www.npmjs.com/package/ipt#examples)!
+
+__GIF FTW!__
+
+![](/images/ipt/ipt.gif)
+
+
+Thanks to [Ruy Adorno](https://github.com/ruyadorno) for this cheeky module.
+
+
