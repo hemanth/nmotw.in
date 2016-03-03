@@ -1,0 +1,41 @@
+---
+layout: post
+title: "must"
+date: 2016-02-25 13:59:29 +0000
+comments: true
+categories: util test 
+---
+
+#[must](https://www.npmjs.com/package/must)
+> Testing and assertion library with friendly BDD syntax!
+
+`must` provides a BDD syntax for all your assertions and it follows [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) with its use of **MUST**. Good and well testsed stuff.
+
+__Get it:__ `npm install --save must`
+
+__Sample usage:__
+
+```js
+require("must/register");
+
+[].must.be.empty();
+
+obj.must.have.nonenumerable("foo");
+
+(42).must.be.above(13);
+
+Promise.resolve(42).must.then.equal(42);
+
+Promise.resolve([1, 2, 3]).must.eventually.not.include(42);
+
+Promise.reject(new Error("Problemo")).must.reject.with.error(/problem/i);
+```
+
+
+__GIF FTW!__
+
+![must.gif](/images/must/must.gif)
+
+
+We `must` thank [Andri Möll](https://twitter.com/theml) for `must`
+
