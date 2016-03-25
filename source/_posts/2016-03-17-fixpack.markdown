@@ -1,0 +1,88 @@
+---
+layout: post
+title: "fixpack"
+date: 2016-03-17 11:08:38 +0000
+comments: true
+categories: npm util
+---
+
+#[fixpack](https://www.npmjs.com/package/fixpack)
+>A `package.json` file scrubber for the truly insane.
+
+__GET IT:__ `npm install -g fixpack` 
+
+It will re-write your package.json file as follows:
+
+- name first
+- description second
+- version third
+- author fourth
+- all other keys in alphabetical order
+- dependencies and devDependencies sorted alphabetically
+- newline at the end of the file
+
+It will warn you if any of these are missing:
+
+- description
+- author
+- repository
+- keywords
+- main
+- bugs
+- homepage
+- license
+
+It can also read a config from `.fixpackrc`:
+
+```
+{
+    // will put these first in this order if present
+    sortToTop: [
+        'name',
+        'description',
+        'version',
+        'author'
+    ],
+    // will error if these not present
+    required: [
+        'name',
+        'version'
+    ],
+    // will warn if these not present
+    warn: [
+        'description',
+        'author',
+        'repository',
+        'keywords',
+        'main',
+        'bugs',
+        'homepage',
+        'license'
+    ],
+    // if `private: true` in package.json will use the next two lists instead
+    requiredOnPrivate: [],
+    warnOnPrivate: ['name', 'version', 'description', 'main'],
+    // sub items to sort by default
+    sortedSubItems: [
+        'dependencies',
+        'devDependencies',
+        'jshintConfig',
+        'scripts',
+        'keywords'
+    ],
+    // if you set quiet to true it won't do output anything to the console
+    quiet: false,
+    // files to scrub
+    files: ['package.json'],
+    // Will set all deps to '*'
+    // this may be useful because then you can
+    // run npm update --save && npm update --save-dev
+    // to install latest stable releases of everything.
+    wipe: false
+}
+```
+
+__GIF FTW!__
+
+![fixpack](/images/fixpack/fixpack.gif)
+

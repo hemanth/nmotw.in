@@ -1,0 +1,39 @@
+---
+layout: post
+title: "phuzzy"
+date: 2016-03-24 15:56:50 +0000
+comments: true
+categories: search util 
+---
+
+#[phuzzy](https://www.npmjs.com/package/phuzzy)
+> Perform a fuzzy filter on a collection of items.
+
+8 lines of code with some help from `lodash.escaperegexp` this is a cheeky module that helps you with your fuzzy filtering!
+
+__Get it:__ `npm install --save phuzzy`
+
+__Function Signature:__ `phuzzy(collection, search[, pick])`
+
+
+__Sample usage:__
+
+```js
+var phuzzy = require('phuzzy');
+
+phuzzy(['addy','passy', 'hemanth'], 'y'); // ['addy', 'passy'];
+
+var documents = [
+    { text: 'Hello World' },
+    { text: 'Hello Lucy' },
+    { text: 'Hello Maria' }
+];
+
+phuzzy(documents, 'Lu', 'text'); [ { text: 'Hello Lucy' } ]
+
+phuzzy(documents, 'maria', item => item.text) // [ { text: 'Hello Maria' } ]
+```
+
+__GIF FTW!__
+
+![phuzzy](/images/phuzzy/phuzzy.gif)
