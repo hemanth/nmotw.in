@@ -20,7 +20,7 @@ __Sample usage:__
 ```js
 // Just require it once and you shall have `console.json` method for convenience.
 
-require('console.log');
+require('console.json');
 
 
 var data = {
