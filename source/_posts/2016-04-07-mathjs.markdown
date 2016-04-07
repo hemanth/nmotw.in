@@ -1,0 +1,44 @@
+---
+layout: post
+title: "mathjs"
+date: 2016-04-07 13:52:08 +0000
+comments: true
+categories: util math
+---
+
+#[mathjs](https://www.npmjs.com/package/mathjs)
+> Extensive math library with expression parser, big numbers, complex numbers, units, and matrices.
+
+`mathjs` provides you with 200+ util function to do you math!
+
+__Get it:__ `npm install --save mathjs`
+
+__Sample usage:__
+
+```js
+// functions and constants
+math.round(math.e, 3);            // 2.718
+math.atan2(3, -3) / math.pi;      // 0.75
+math.log(10000, 10);              // 4
+math.sqrt(-4);                    // 2i
+math.pow([[-1, 2], [3, 1]], 2);
+     // [[7, 0], [0, 7]]
+
+// expressions
+math.eval('1.2 * (2 + 4.5)');     // 7.8
+math.eval('5.08 cm to inch');     // 2 inch
+math.eval('sin(45 deg) ^ 2');     // 0.5
+math.eval('9 / 3 + 2i');          // 3 + 2i
+math.eval('det([-1, 2; 3, 1])');  // -7
+
+// chaining
+math.chain(3)
+    .add(4)
+    .multiply(2)
+    .done(); // 14
+```
+
+__GIF FTW__
+
+![mathjs](/image/mathjs/mathjs.gif)
+
