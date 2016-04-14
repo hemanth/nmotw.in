@@ -40,5 +40,5 @@ math.chain(3)
 
 __GIF FTW__
 
-![mathjs](/image/mathjs/mathjs.gif)
+![mathjs](/images/mathjs/mathjs.gif)
 
