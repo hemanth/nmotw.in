@@ -1,0 +1,86 @@
+---
+layout: post
+title: "cowsay"
+date: 2016-04-21 15:10:16 +0000
+comments: true
+categories: fun
+---
+
+#[cowsay](https://www.npmjs.com/package/cowsay)
+>A configurable talking cow!
+
+This is a port of  Tony Monroe's `cowsay` Perl module.
+
+__GET IT:__ `npm install --global cowsay` 
+
+__CLI:__
+
+```
+cowsay 
+Usage: cowsay [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text
+
+If any command-line arguments are left over after all switches have been processed, they become the cow's message.
+
+If the program is invoked as cowthink then the cow will think its message instead of saying it.
+
+Options:
+  -b  Mode: Borg                                                                                                                                  
+  -d  Mode: Dead                                                                                                                                  
+  -g  Mode: Greedy                                                                                                                                
+  -p  Mode: Paranoia                                                                                                                              
+  -s  Mode: Stoned                                                                                                                                
+  -t  Mode: Tired                                                                                                                                 
+  -w  Mode: Wired                                                                                                                                 
+  -y  Mode: Youthful                                                                                                                              
+  -e  Select the appearance of the cow's eyes.                                                                                                      [default: "oo"]
+  -T  The tongue is configurable similarly to the eyes through -T and tongue_string.                                                                [default: "  "]
+  -h  Display this help message                                                                                                                   
+  -n  If it is specified, the given message will not be word-wrapped.                                                                             
+  -W  Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.       [default: 40]
+  -f  Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.  [default: "default"]
+  -l  List all cowfiles included in this package.                 
+```
+  
+```sh
+  
+ nmotw.in> cowsay JavaScript FTW!
+ _________________
+< JavaScript FTW! >
+ -----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+                
+```
+
+
+__API:__
+
+```js
+var cowsay = require("cowsay");
+
+console.log(cowsay.say({
+    text : "I'm a moooodule",
+    e : "oO",
+    T : "U "
+}));
+
+// or cowsay.think()
+```
+
+```sh
+ _________________
+( I'm a moooodule )
+ -----------------
+        o   ^__^
+         o  (oO)\_______
+            (__)\       )\/\
+             U  ||----w |
+                ||     ||
+```
+
+__GIF FTW!__
+
+![cowsay.gif](/images/cowsay/cowsay.gif)
