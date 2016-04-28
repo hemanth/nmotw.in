@@ -1,0 +1,53 @@
+---
+layout: post
+title: "trevor"
+date: 2016-04-28 10:26:32 +0000
+comments: true
+categories: test cli
+---
+
+#[trevor](https://www.npmjs.com/package/trevor)
+>Your own Travis CI to run tests locally.
+
+![](/images/trevor/logo.png)
+
+__From the author:__
+
+I often need to run tests for multiple versions of Node.js. 
+
+But I don't want to switch versions manually using n/nvm or push the code to Travis CI just to run the tests.
+
+That's why I created Trevor. 
+
+It reads `.travis.yml` and runs tests in all versions you requested, just like Travis CI. 
+
+Now, you can test before push and keep your git history clean.
+
+
+__Get it:__ `npm install --save trevor`
+
+__Sample usage:__
+
+```sh
+$ trevor --help
+
+  Your own Travis CI to run tests locally
+
+  Usage: trevor [options]
+
+  Options:
+
+    -h, --help    Show this help
+    --no-clean    Don' remove the Docker image after tests
+
+  Required files (in the current directory):
+
+    - package.json
+    - .travis.yml
+```
+
+P.S: `trevor` has a dependency on [docker](https://www.docker.com/) and if `--no-clean` is not used it will remove all the docker images after the test runs.
+
+__GIF FTW!__
+
+![](/images/trevor/trevor.gif)
