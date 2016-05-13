@@ -1,0 +1,45 @@
+---
+layout: post
+title: "obsify"
+date: 2016-05-12 13:19:01 +0000
+comments: true
+categories: util observables 
+---
+
+#[obsify](https://www.npmjs.com/package/obsify)
+>Observableify a callback-style function
+
+
+Observerifies (is that even a word ;)?) a callback-style function into an observable.
+
+__Get it:__ `npm install --save obsify`
+
+__Sample usage:__
+
+```js
+
+const fs = require('fs');
+const obsify = require('obsify');
+
+obsify(fs.readFile)('package.json', 'utf8')
+    .map(data => JSON.parse(data))
+    .subscribe(data => {
+        console.log(data.name);
+        //=> 'obsify'
+    });
+```
+
+or `observableify` all methods in a module
+
+```js
+obsify(fs).readFile('package.json', 'utf8')
+    .map(data => JSON.parse(data))
+    .subscribe(data => {
+        console.log(data.name);
+        //=> 'obsify'
+    });
+```
+
+__GIF FTW!__
+
+![obsify](/images/obsify/obsify.gif)
