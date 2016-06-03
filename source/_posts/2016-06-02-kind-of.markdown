@@ -1,0 +1,156 @@
+---
+layout: post
+title: "kind-of"
+date: 2016-06-02 16:37:20 +0000
+comments: true
+categories: util 
+---
+
+#[kind-of](https://www.npmjs.com/package/kind-of)
+>Get the native type of a value.
+
+
+Most of use would have faced nuances of `typeof` like below:
+
+```js
+> typeof (null)
+'object'
+
+> typeof /RE/
+'object'
+
+> typeof (new Date())
+'object'
+
+> typeof []
+'object'
+
+> typeof {}
+'object'
+```
+
+`kind-of` just fixes these issues and is also `ES6` ready.
+
+__Get it:__ ```npm install --save kind-of```
+
+__Sample usage:__
+
+```js
+var kindOf = require('kind-of');
+ 
+kindOf(undefined);
+//=> 'undefined' 
+ 
+kindOf(null);
+//=> 'null' 
+ 
+kindOf(true);
+//=> 'boolean' 
+ 
+kindOf(false);
+//=> 'boolean' 
+ 
+kindOf(new Boolean(true));
+//=> 'boolean' 
+ 
+kindOf(new Buffer(''));
+//=> 'buffer' 
+ 
+kindOf(42);
+//=> 'number' 
+ 
+kindOf(new Number(42));
+//=> 'number' 
+ 
+kindOf('str');
+//=> 'string' 
+ 
+kindOf(new String('str'));
+//=> 'string' 
+ 
+kindOf(arguments);
+//=> 'arguments' 
+ 
+kindOf({});
+//=> 'object' 
+ 
+kindOf(Object.create(null));
+//=> 'object' 
+ 
+kindOf(new Test());
+//=> 'object' 
+ 
+kindOf(new Date());
+//=> 'date' 
+ 
+kindOf([]);
+//=> 'array' 
+ 
+kindOf([1, 2, 3]);
+//=> 'array' 
+ 
+kindOf(new Array());
+//=> 'array' 
+ 
+kindOf(/foo/);
+//=> 'regexp' 
+ 
+kindOf(new RegExp('foo'));
+//=> 'regexp' 
+ 
+kindOf(function () {});
+//=> 'function' 
+ 
+kindOf(function * () {});
+//=> 'function' 
+ 
+kindOf(new Function());
+//=> 'function' 
+ 
+kindOf(new Map());
+//=> 'map' 
+ 
+kindOf(new WeakMap());
+//=> 'weakmap' 
+ 
+kindOf(new Set());
+//=> 'set' 
+ 
+kindOf(new WeakSet());
+//=> 'weakset' 
+ 
+kindOf(Symbol('str'));
+//=> 'symbol' 
+ 
+kindOf(new Int8Array());
+//=> 'int8array' 
+ 
+kindOf(new Uint8Array());
+//=> 'uint8array' 
+ 
+kindOf(new Uint8ClampedArray());
+//=> 'uint8clampedarray' 
+ 
+kindOf(new Int16Array());
+//=> 'int16array' 
+ 
+kindOf(new Uint16Array());
+//=> 'uint16array' 
+ 
+kindOf(new Int32Array());
+//=> 'int32array' 
+ 
+kindOf(new Uint32Array());
+//=> 'uint32array' 
+ 
+kindOf(new Float32Array());
+//=> 'float32array' 
+ 
+kindOf(new Float64Array());
+//=> 'float64array' 
+```
+
+__GIF FTW__
+
+![kind-of](/images/kind-of/kind-of.gif)
+
