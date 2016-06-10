@@ -1,0 +1,39 @@
+---
+layout: post
+title: "pwaify"
+date: 2016-06-09 12:33:41 +0000
+comments: true
+categories: cli web pwa
+---
+
+#[pwaify](https://www.npmjs.com/package/pwaify)
+> PWA to desktop app!
+
+`pwaify` bring [progressive](https://developers.google.com/web/progressive-web-apps/) [Webapp](https://github.com/hemanth/generator-pwa) to your desktops across platforms! 
+
+Makes use of [Electron](http://electron.atom.io/) extracts the `manifest-json` from the given URL and smartly creates an electron window and loads the required.
+
+__Get it:__ `npm install --global pwaify`
+
+__Sample usage:__
+
+```sh
+nmotw.in> pwaify --help
+
+  Electron PWA (Progressive Web App) Generator
+
+  Usage
+    $ pwaify <input>
+
+  Options
+    --platforms Platforms to build the app.
+    --icon App Icon.
+
+  Examples
+    $ pwaify https://jsfeatures.in --platforms=darwin
+```
+
+__GIF FTW:__
+
+![PWAify](/images/pwaify/PWAify.gif)
+
