@@ -1,0 +1,49 @@
+---
+layout: post
+title: "esbox"
+date: 2016-06-23 13:46:09 +0000
+comments: true
+categories: es-next
+---
+
+#[📦 esbox]()
+>Zero-config REPL for experimenting with next-generation JavaScript.
+
+
+`esbox` is ES2016 in a box!
+
+__Get it:__ `npm install -g esbox`
+
+* It automatically compiles and re-runs your script every time you save.
+
+* JSBin-like setup for your local editor and terminal – with full access to Node APIs and modules.
+
+* ECMAScript features that Babel supports (stage-0 and above).
+
+* For a number of popular libraries, you can just import them without the need to install them first (Bascially all the dependecies of `esbox`).
+
+__Sample usage:__
+
+```sh
+nmotw.in> esbox 
+
+                         
+    📦  ES2016 in a box   
+       git.io/esbox      
+                         
+
+  Usage
+    > esbox FILENAME
+
+  Options
+    --cwd=DIRECTORY   run in a different directory
+    --no-watch        only run your script once
+    --no-clear        disable clearing the display before each run
+    --version         show esbox version
+    --poll            poll file system when watching files
+```
+
+__GIF FTW!__
+
+![esbox](/images/esbox/esbox.gif)
+
