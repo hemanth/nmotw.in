@@ -1,0 +1,67 @@
+---
+layout: post
+title: "listr"
+date: 2016-07-07 10:03:39 +0000
+comments: true
+categories: cli 
+---
+
+#[listr](https://www.npmjs.com/package/listr)
+>Terminal task list.
+
+`listr` is one of those cheeky 💄 modules for your CLI apps.
+
+Below is the gist of this module:
+
+* `listr` accepts an array of tasks, where each task in a object consisting of `title` (string) and `task` (method).
+
+* If a task returns, it means the task was completed succesfully. 
+
+* If a task throws an error, the task failed.
+
+* Task can be async by returning a Promise.
+
+* Task can be an Observable.
+
+* Task can also be a stream, which is in-turn converted to an Observable.
+
+* An instance of `listr` has `add(task)`, `task` and `run` methods. (Names are self explanatory?)
+
+
+__Get it:__ `npm install --save listr`
+
+
+__Sample usage:__
+
+```js
+const tasks = new Listr([
+	{
+		title: 'Success',
+		task: () => 'Foo'
+	},
+	{
+		title: 'Failure',
+		task: () => {
+			throw new Error('Bar')
+		}
+	}
+]);
+```
+
+```js
+tasks.run().catch(err => {
+	console.error(err);
+});
+```
+
+__GIF FTW!__
+
+![listr](/images/listr/listr.gif)
+
+
+
+
+
+
+
+
