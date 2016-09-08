@@ -1,0 +1,71 @@
+---
+layout: post
+title: "quill"
+date: 2016-09-08 13:08:58 +0000
+comments: true
+categories: editor wysiwyg
+---
+
+#[quill](https://www.npmjs.com/package/quill)
+> An API Driven Rich Text Editor.
+
+For the initial commit looks like `quill` has taken two long years to reach `v1.x` and indeed it's proven itself to be a very tidy API driven rich text editor.
+
+__quill has [APIs](http://quilljs.com/docs/api/) for:__
+
+* Content handling.
+
+* Formatting.
+
+* Selection.
+
+* Events
+
+* Extensions.
+
+__quill also [modules](http://quilljs.com/docs/modules/) for:__
+
+* TOOLBAR
+
+* KEYBOARD
+
+* HISTORY
+
+* CLIPBOARD
+
+* FORMULA
+
+* SYNTAX
+
+__Finally, it has theme(s)!:__
+
+* Bubble 
+
+* Snow
+
+
+__Get it:__ `npm install --save quill`
+
+__Sample usage:__
+
+```js
+const Quill = require('quill');
+
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block']
+    ]
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow' // or 'bubble'
+});
+```
+
+__GIF FTW!__
+
+![quill](/images/quill/quill.gif)
+
+
