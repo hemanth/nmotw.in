@@ -20,7 +20,7 @@ categories: wifi util security
 * rssi: signal strength
 
 
-__Get it:__ `npm install --save node-wifi-canner`
+__Get it:__ `npm install --save node-wifi-scanner`
 
 __Sample usage:__
 
