@@ -1,0 +1,46 @@
+---
+layout: post
+title: "granim"
+date: 2016-09-14 23:55:40 +0000
+comments: true
+categories: animation 
+---
+
+#[granim](https://www.npmjs.com/package/granim)
+> Create fluid and interactive gradients animations.
+
+Zero dependencies,`< 10 kB` fun module that helps us to do some cool gradient animations! 
+
+__Get it:__ `npm install granim --save`
+
+__Sample usage:__
+
+
+```html
+<!-- Create a <canvas> element -->
+<canvas id="granim-canvas"></canvas>
+```
+
+```js
+var granimInstance = new Granim({
+   element: '#granim-canvas',
+   name: 'granim',
+   opacity: [1, 1],
+   states : {
+       "default-state": {
+           gradients: [
+               ['#834D9B', '#D04ED6'],
+               ['#1CD8D2', '#93EDC7']
+           ]
+       }
+   }
+});
+</script>
+```
+
+P.S: Don't miss to read their extensive [API](https://sarcadass.github.io/granim.js/api.html)
+
+
+__GIF FTW!__
+
+![granim](/images/granim/granim.gif)
