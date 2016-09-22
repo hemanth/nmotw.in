@@ -1,0 +1,43 @@
+---
+layout: post
+title: "asyncbox"
+date: 2016-09-22 17:07:26 +0000
+comments: true
+categories: async await ES7 ES2017
+---
+
+#[asyncbox](https://www.npmjs.com/package/asyncbox)
+>A collection of small `async/await` utilities.
+
+A simple collection of tiny useful `async/await` utilities, the below are the list of function that `asyncbox` gives:
+
+* sleep
+* retry
+* nodeify
+* nodeifyAll
+* retryInterval
+* asyncify
+* parallel
+* asyncmap
+* asyncfilter
+* waitForCondition
+
+__Get it:__ `npm install --save asyncbox`
+
+__Usage:__
+
+```js
+import { sleep } from 'asyncbox';
+ 
+async function myFn () {
+    // do some stuff 
+    await sleep(1000); // wait one second 
+    // do some other stuff 
+};
+
+myFn();
+```
+
+__GIF FTW!__
+
+![asyncbox](/images/asyncbox/asyncbox.gif)
