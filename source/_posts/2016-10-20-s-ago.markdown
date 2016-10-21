@@ -1,0 +1,33 @@
+---
+layout: post
+title: "s-ago"
+date: 2016-10-20 14:13:46 +0000
+comments: true
+categories: format time util
+---
+
+#[s-ago](https://www.npmjs.com/package/s-ago)
+> Human readable relative times.
+
+`26 SLOC` to convert `Date` objects into human readable relative timestamps, such as `7 minutes ago` or `yesterday` or `2 days ago`
+
+__Get it:__ `npm install --save s-ago`
+
+__Sample usage:__
+
+```js
+const ago = require('s-ago');
+ 
+const now = new Date();
+const yesterday = new Date(now - (24 * 60 * 60 * 1000));
+const hoursAgo = new Date(now - (6 * 60 * 60 * 1000));
+ 
+ago(now); // 'just now' 
+ago(yesterday); // 'yesterday' 
+ago(hoursAgo); // '6 hours ago' 
+```
+
+__GIT FTW!__
+
+![s-ago](/images/s-ago/s-ago.gif)
+
