@@ -1,0 +1,51 @@
+---
+layout: post
+title: "next"
+date: 2016-10-27 14:41:15 +0000
+comments: true
+categories: 
+---
+
+# [next.js](https://www.npmjs.com/package/next)
+> Minimalistic framework for server-rendered React applications.
+
+`next.js` framework helps with SSR of React applications and so far has:
+
+- Automatic transpilation and bundling (with webpack and babel)
+- Hot code reloading
+- Server rendering and indexing of `./pages`
+- Static file serving. `./static/` is mapped to `/static/`
+
+__GET IT:__ `npm instll --save next`
+
+__Sample usage:__
+
+```sh
+$ mkdir pages
+```
+
+```js
+//pages/index.js:
+import React from 'react'
+export default () => <div>Hello Next!</div>
+```
+
+Add a script to the `package.json` like:
+
+```json
+{
+  "scripts": {
+    "start": "next"
+  }
+}
+```
+
+and run:
+
+```
+$ npm start
+```
+
+__GIF FTW__
+
+![](/images/next/next.gif)
