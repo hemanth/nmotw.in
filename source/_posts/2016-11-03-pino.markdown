@@ -1,0 +1,42 @@
+---
+layout: post
+title: "pino"
+date: 2016-11-03 13:11:34 +0000
+comments: true
+categories: util log
+---
+
+#[pino](https://www.npmjs.com/package/pino)
+> super fast, all natural json logger.
+
+`pino` is an uber [fast](https://www.npmjs.com/package/pino#benchmarks) logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files.
+
+__Get it:__ `npm install --save pino`
+
+__Sample usage:__
+
+```js
+var pino = require('pino');
+var logger = pino({
+  name: 'myapp',
+  safe: true,
+  serializers: {
+    req: pino.stdSerializers.req,
+    res: pino.stdSerializers.res
+  }
+});
+
+//logger will have: trace, debug, info, warn, error and fatal level to log.
+```
+
+```js
+var log = pino({level: 'debug'})
+log.debug('interesting object: %j', {foo: 'bar', pino: 'is a way of life'})   
+```
+
+`pino` is available for: `koa`, `express`, `hapi` and `restify` as well.
+
+
+__GIF FTW!__
+
+![pino.gif](/images/pino/pino.gif)
