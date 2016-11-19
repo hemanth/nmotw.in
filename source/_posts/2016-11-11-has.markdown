@@ -1,0 +1,44 @@
+---
+layout: post
+title: "has"
+date: 2016-11-11 06:14:31 +0000
+comments: true
+categories: util tiny
+---
+
+#[has](https://www.npmjs.com/package/has)
+>Object.prototype.hasOwnProperty.call shortcut.
+
+
+This module is one of those live examle where a tiny module can make a lot of impact in the node community.
+
+All that this module does is helps in making a shorting function name to `Object.prototype.hasOwnProperty.call` as `has`, the code in the module is as below:
+
+```js
+var bind = require('function-bind');
+
+module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
+```
+
+The impact it has made with `110` dependencies:
+
+```
+151,565 downloads in the last day
+823,500 downloads in the last week
+3,552,078 downloads in the last month
+``` 
+
+__Get it:__ `npm install --save has`
+
+__Sample usage:__
+
+
+```js
+has({}, 'hasOwnProperty'); // false;
+
+has(Object.prototype, 'hasOwnProperty'); // true;
+```
+
+![](/images/has/has.gif)
+
+

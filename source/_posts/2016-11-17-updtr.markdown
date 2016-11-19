@@ -1,0 +1,43 @@
+---
+layout: post
+title: "updtr"
+date: 2016-11-17 08:27:47 +0000
+comments: true
+categories: npm
+---
+
+#[updtr](https://www.npmjs.com/package/updtr)
+> Update outdated npm modules with zero pain™
+
+`updtr` installs the latest versions of each `npm outdated` dependency. 
+Runs `test` on each update and if the test succeeds, `updtr` saves the new version number to your `package.json`. 
+If the test fails, however, `updtr` rolls back its changes.
+
+
+__Get it:__ ```npm install --global updtr```
+
+__Sample usage:__
+
+```sh
+nmotw.in> updtr --help
+ 
+  Usage: updtr [options]
+ 
+  Update outdated npm modules with zero pain™
+ 
+  Options:
+ 
+    -h, --help                 output usage information
+    -V, --version              output the version number
+    -R, --reporter <reporter>  choose reporter: default, shy
+    -w, --wanted               updates to wanted version specified in package.json instead of the modules latest version
+    -t, --test <test>          change the command for the tests
+    -e, --exclude <exclude>    exclude modules comma seperated, e.g. updtr --exclude module1,module2
+    --test-stdout              shows stdout if your test command fails
+    --save-exact               save exact module version
+    --registry                 change registry
+```
+
+__GIF FTW__
+
+![updtr](/images/updtr/updtr.gif)
