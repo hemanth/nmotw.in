@@ -1,0 +1,42 @@
+---
+layout: post
+title: "regexgen"
+date: 2016-12-22 13:59:30 +0000
+comments: true
+categories: util
+---
+
+#[regexgen](https://www.npmjs.com/package/regexgen)
+> Generates regular expressions that match a set of strings.
+
+__Get it:__ `npm install --save regexgen`
+
+
+__Sample usage in code:__
+
+```javascript
+const regexgen = require('regexgen');
+
+regexgen(['foobar', 'foobaz', 'foozap', 'fooza']); // => /foo(?:zap?|ba[rz])/
+
+//You can also use the `Trie` class directly:
+
+const {Trie} = require('regexgen');
+
+let t = new Trie;
+t.add('foobar');
+t.add('foobaz');
+
+t.toRegExp(); // => /fooba[rz]/
+```
+
+__Sample usage on CLI:__
+
+```
+$ regexgen
+Usage: regexgen [-gimuy] string1 string2 string3...
+```
+
+__GIF FTW!__
+
+![regexgen](/images/regexgen/regexgen.gif)
