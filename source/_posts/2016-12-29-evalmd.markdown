@@ -1,0 +1,63 @@
+---
+layout: post
+title: "evalmd"
+date: 2016-12-29 11:44:52 +0000
+comments: true
+categories: lint eval markdown
+---
+
+#[evalmd](https://www.npmjs.com/package/evalmd)
+> 🎣 Evaluates JavaScript code blocks from markdown files.
+
+`evalmd` parses your markdown files, extract the JavaScript code blocks from them and evaluate it, in the eval bombs it reports and there are ease flags to turn off evaluation for specific code blocks.
+
+The `javascript` or `js` code blocks works fine with it.
+
+
+__Get it:__ `npm install -g evalmd`
+
+__Sample usage CLI:__
+
+```sh
+
+$ evalmd
+
+evalmd - Evaluate the javascript in markdown files
+ 
+Options:
+  -i, --include    Includes prevented blocks  [default: false]
+  -P, --prevent    Prevent code from being evaluated  [default: false]
+  -b, --block      Change the scope to block level  [default: false]
+  -o, --output     Output js  [choices: false, true, "preserve", "concat", "preserveAlter", "concatAlter"] [default: false]
+  -n, --nonstop    Runs all files regardless if error  [default: false]
+  -s, --silent     Silence `evalmd` logging  [default: false]
+  -u, --uniform    Does not use absolute urls when error logging  [default: false]
+  -D, --debug      Debug Output  [default: false]
+  -h, --help       Show help  [boolean]
+  --path           Prefix local module with path  [default: "./"]
+  --package        Th path of a package.json  [default: "./package.json"]
+  --version        Show version number  [boolean]
+  -d, --delimeter  [default: false]
+ 
+Examples:
+  evalmd <file(s)>        Evaluate file(s)
+  evalmd <file(s)> -n     Evaluate file(s) uninterrupted
+  evalmd <file(s)> -b     Evaluate block(s)
+  evalmd <file(s)> -bn    Evaluate block(s) uninterrupted
+  evalmd <file(s)> -Po    Outputs js file(s)
+  evalmd <file(s)> -Pio   Outputs js file(s) with all block(s) (for linting)
+  evalmd <file(s)> -Pob   Outputs block(s)
+  evalmd <file(s)> -Piob  Outputs all blocks(s) (for linting)
+```
+
+__Sample usage from code:__
+
+```js
+var evalmd = require('evalmd');
+assert.equal(typeof evalmd, 'function'); // true
+```
+
+__GIF FTW!__
+
+![evalmd](/images/evalmd/evalmd.gif)
+
