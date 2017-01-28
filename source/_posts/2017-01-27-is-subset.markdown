@@ -1,0 +1,42 @@
+---
+layout: post
+title: "is-subset"
+date: 2017-01-27 08:51:59 +0000
+comments: true
+categories: math 
+---
+
+#[is-subset](https://www.npmjs.com/package/is-subset)
+> Check if an object is contained within another one.
+
+`is-subset` is a tiny little module that is so very useful! All it does is accepts `superSet` and `maybeSubset` objects and check if the `maybeSubset` is a subset of the `superSet`.
+
+__Get it:__ `npm install --save is-subset`
+
+__Sample usage:__
+
+```js
+
+const isSubset = require('is-subset');
+
+
+// True;
+isSubset(
+  {a: 1, b: {c: 3, d: 4}, e: 5},
+  {a: 1, b: {c: 3}}
+);
+
+//False;
+isSubset(
+  {a: 1},
+  {a: 1, b: 2}
+);
+```
+
+__GIF FTW!__
+
+![is-subset](/images/is-subset/is-subset.gif)
+
+
+
+
