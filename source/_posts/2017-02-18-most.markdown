@@ -1,0 +1,61 @@
+---
+layout: post
+title: "most"
+date: 2017-02-18 01:37:22 +0000
+comments: true
+categories: reactive functional
+---
+
+#[most](https://www.npmjs.com/package/most)
+> Monadic streams
+
+`Most.js` is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e.g. WebSocket messages, DOM events, etc, and on time-varying values, e.g. the "current value" of an `<input>`, without many of the hazards of side effects and mutable shared state.
+
+It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.
+
+P.S: Have a look at the [perf test results](test/perf).
+
+__GET IT:__ `npm install --save most`
+
+__Sample usage:__
+
+
+```js
+import { from } from 'most'
+// After 1 second, logs 10
+from([1, 2, 3, 4])
+    .delay(1000)
+    .reduce((result, y) => result + y, 0)
+    .then(result => console.log(result))
+```
+
+```js
+import { fromPromise } from 'most'
+// Logs "hello"
+fromPromise(Promise.resolve('hello'))
+    .observe(message => console.log(message))
+```
+
+```js
+import { generate } from 'most'
+ 
+function* allTheIntegers(interval) {
+    let i=0
+    while(true) {
+        yield delayPromise(interval, i++)
+    }
+}
+ 
+const delayPromise = (ms, value) =>
+    new Promise(resolve => setTimeout(() => resolve(value), ms))
+ 
+// Log the first 100 integers, at 1 second intervals
+generate(allTheIntegers, 1000)
+    .take(100)
+    .observe(x => console.log(x))
+
+```
+
+__GIF FTW!__
+
+![most.js](/images/most/most.js.gif)
