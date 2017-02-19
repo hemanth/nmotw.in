@@ -13,7 +13,7 @@ categories: reactive functional
 
 It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.
 
-P.S: Have a look at the [perf test results](test/perf).
+P.S: Have a look at the [perf test results](https://github.com/cujojs/most/tree/master/test/perf).
 
 __GET IT:__ `npm install --save most`
 
