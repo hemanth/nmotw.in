@@ -1,0 +1,54 @@
+---
+layout: post
+title: "unfetch"
+date: 2017-02-25 03:41:13 +0000
+comments: true
+categories: fetch polyfill
+---
+
+#[unfetch](https://www.npmjs.com/package/unfetch)
+> Tiny 500b fetch "barely-polyfill"
+
+-   **Tiny:** under **500 bytes** of [ES3](https://unpkg.com/unfetch) gzipped
+-   **Minimal:** just `fetch()` with headers and text/json/xml responses
+-   **Familiar:** a subset of the full API
+-   **Supported:** supports IE8+ (<abbr title="Bring Your Own Promises">BYOP</abbr>)
+-   **Standalone:** one function, no dependencies
+-   **Modern:** written in ES2015, transpiled to 500b of old-school JS
+
+> 🤔 **What's Missing?**
+>
+> -   Uses simple Arrays instead of Iterables, since Arrays _are_ iterables
+> -   No streaming, just Promisifies existing XMLHttpRequest response bodies
+
+
+__Get it:__ `npm install --save unfetch`
+
+__Sample usage:__
+
+```js
+// simple GET request: 
+fetch('/foo')
+  .then( r => r.text() )
+  .then( txt => console.log(txt) )
+ 
+ 
+// complex POST request with JSON, headers: 
+fetch('/bear', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ hungry: true })
+}).then( r => {
+  open(r.headers.get('location'));
+  return r.json();
+})
+```
+
+P.S: I you are looking for all the functionalities of `fetch` API, [isomorphic-fetch](https://nmotw.in/isomorphic-fetch/) would be an apt choice.
+
+__GIF FTW!__
+
+![unfetch](/images/unfetch/unfetch.gif)
+
