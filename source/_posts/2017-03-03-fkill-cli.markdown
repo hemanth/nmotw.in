@@ -1,0 +1,44 @@
+---
+layout: post
+title: "fkill-cli"
+date: 2017-03-03 04:55:04 +0000
+comments: true
+categories: util cli 
+---
+
+#[fkill-cli](https://www.npmjs.com/package/fkill-cli)
+> Fabulously kill processes. Cross-platform.
+
+`fkill-cli` helps us kill process with easy across macOS, Linux and Windows, it also has an `autocomplete-prompt` on the list of processes that are currently alive on your machine.
+
+No more playing with `ps`, `grep` and `kill`? 🤔
+
+
+__Get it:__ `npm install -g fkill-cli`
+
+__Sample usage:__
+
+```js
+$ fkill --help
+ 
+  Usage
+    $ fkill [<pid|name> ...]
+ 
+  Options
+    -f, --force  Force kill
+ 
+  Examples
+    $ fkill 1337
+    $ fkill Safari
+    $ fkill 1337 Safari
+    $ fkill
+ 
+  Run without arguments to use the interactive interface.
+```
+
+__GIF FTW!__
+
+![fkill-cli](/images/fkill-cli/fkill-cli.gif)
+
+
+
