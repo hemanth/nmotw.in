@@ -1,0 +1,38 @@
+---
+layout: post
+title: "aos"
+date: 2017-03-30 03:55:30 +0000
+comments: true
+categories: dom
+---
+
+#[aos](https://www.npmjs.com/package/aos)
+> animate on scroll
+
+Small library to animate elements on your page as you scroll.
+
+`AOS` allows you to animate elements as you scroll down, and up. 
+
+If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.
+
+__GET IT:__ `npm install --save`
+
+__Sample usage:__
+
+
+`html`:
+
+```html
+<div data-aos="animation_name"/>
+```
+
+```js
+const aos = require('aos');
+aos.init();
+```
+
+Major set of animations: Fade, Flip, Slide, Zoom, Easing functions and anchor placements.
+
+__GIF FTW!:__
+
+![aos](/images/aos/aos.gif)

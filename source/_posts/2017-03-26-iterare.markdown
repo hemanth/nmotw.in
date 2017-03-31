@@ -1,0 +1,68 @@
+---
+layout: post
+title: "iterare"
+date: 2017-03-26 07:03:44 +0000
+comments: true
+categories: ES6
+---
+
+#[iterare](https://www.npmjs.com/package/iterare)
+> Array methods for ES6 Iterators.
+
+ES6 Iterator library for applying multiple transformations to a collection in a single iteration.
+
+Instead of handling ES6 collections in a messy way like:
+
+```js
+const uris = new Set([
+  'file:///foo.txt',
+  'http:///npmjs.com',
+  'file:///bar/baz.txt'
+]);
+const paths = new Set();
+for (const uri of uris) {
+  if (!uri.startsWith('file://')) {
+    continue;
+  }
+  const path = uri.substr('file:///'.length)l
+  paths.add(path);
+}
+```
+
+or
+
+```js
+new Set(
+  Array.from(uris)
+    .filter(uri => uri.startsWith('file://'))
+    .map(uri => uri.substr('file:///'.length));
+)
+```
+
+Using `iterare` you can do the same with:
+
+```js
+import iterate from 'iterare'
+
+iterate(uris)
+  .filter(uri => uri.startsWith('file://'))
+  .map(uri => uri.substr('file:///'.length))
+  .toSet();
+```
+
+
+__GIF FTW!__
+
+![iterare](/images/iterare/iterare.gif)
+
+
+[Benchmark](https://github.com/felixfbecker/iterare/blob/master/src/benchmark.ts) based on the example above:
+
+Method                       | ops/sec
+-----------------------------|-----------------------------------------------:|
+Loop                         | 2,562,637 ops/sec ±3.95% (80 runs sampled)
+**iterare**                  | 2,023,212 ops/sec ±1.38% (84 runs sampled)
+Array method chain           | 346,117 ops/sec ±2.68% (82 runs sampled)
+Lodash (with lazy evalution) | 335,890 ops/sec ±0.55% (85 runs sampled)
+RxJS                         | 29,480 ops/sec ±7.01% (51 runs sampled)
+
