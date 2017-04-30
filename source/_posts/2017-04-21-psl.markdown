@@ -1,0 +1,47 @@
+---
+layout: post
+title: "psl"
+date: 2017-04-21 09:19:00 +0000
+comments: true
+categories: parser util
+---
+
+#[psl](https://www.npmjs.com/package/psl)
+
+> domain name parser based on the Public Suffix List.
+
+`psl` parser uses [The Public Suffix List](https://www.npmjs.com/package/psl) to parse and validate domain names.
+
+
+__Get it:__ `npm install --save psl`
+
+__Sample usage:__
+
+```js
+const psl = require("psl");
+
+psl.parse('www.nmotw.in'); 
+
+/*
+{
+    domain: "nmotw.in"
+    input: "www.nmotw.in"
+    listed: true
+    sld: "nmotw"
+    subdomain: "www"
+    tld: "in"
+}
+*/
+
+psl.get('www.食狮.公司.cn');  // "食狮.公司.cn"
+
+psl.isValid('1.www.google.co.uk')); // true
+psl.isValid('co.uk')); // false
+```
+
+__GIF FTW__
+
+![psl](/images/psl/psl.gif)
+
+
+

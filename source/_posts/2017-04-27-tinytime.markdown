@@ -1,0 +1,43 @@
+---
+layout: post
+title: "tinytime"
+date: 2017-04-27 15:06:58 +0000
+comments: true
+categories: time  
+---
+
+#[tinytime](https://www.npmjs.com/package/tinytime)
+> A straightforward date and time formatter in 800b.
+
+__Get it:__ `npm install --save tinytime`
+
+`tinytime` exports a single function that returns a template object. This object has a single method, `render`, which
+takes a `Date` and returns a string with the rendered data.
+
+```js
+import tinytime from 'tinytime';
+const template = tinytime('The time is {h}:{mm}:{ss}{a}.');
+template.render(new Date());
+// The time is 11:10:20PM.
+```
+
+__Substitutions:__
+
+ * `MMMM` - Full Month (September)
+ * `MM` - Partial Month (Sep)
+ * `Mo` - Numeric Month (9)
+ * `YYYY` - Full Year (1992)
+ * `YY` - Partial Year (92)
+ * `dddd` - Day of the Week (Monday)
+ * `DD` - Day of the Month (24)
+ * `Do` - Day (24th)
+ * `h` - Hours - 12h format
+ * `H` - Hours - 24h format
+ * `mm` - Minutes (zero padded)
+ * `ss` - Seconds (zero padded)
+ * `a` - AM/PM
+ 
+ __GIF FTW!__
+ 
+ ![tinytime](/images/tinytime/tinytime.gif)
+ 
