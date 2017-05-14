@@ -1,0 +1,83 @@
+---
+layout: post
+title: "compactr"
+date: 2017-05-12 23:17:16 +0000
+comments: true
+categories: encode
+---
+
+#[compactr](https://www.npmjs.com/package/compactr)
+> Schema based serialization made easy!
+
+__What is this and why does it matter?__ [From the horse's mouth]
+
+Protocol Buffers are awesome. Having schemas to deflate and inflate data while maintaining some kind of validation is a great concept. 
+Compactr's goal is to build on that to better suit Node development and reduce repetition by allowing you to build schemas for your data directly in your scripting language. 
+For example, if you have a DB schema for a model, you could use that directly as a schema for Compactr.
+
+__Get it:__ `npm install --save compactr`
+
+__Sample usage:__
+
+```js
+const Compactr = require("compactr");
+const Schema = Compactr.schema({
+      bool: { type: 'boolean' },
+      num: { type: 'number' },
+      str: { type: 'string' },
+      arr: { type: 'array', items: { type: 'string' } },
+      obj: { type: 'object', schema: { sub: { type: 'string' } } }
+});
+
+// decode encoded.
+Schema.read(Schema.write({
+    bool: true,
+    num: 23.23,
+    str: 'hello world',
+    arr: ['a', 'b', 'c'],
+    obj: {
+        sub: 'way'
+    }
+}).array());
+```
+
+
+```js
+const Compactr = require('compactr');
+ 
+// Defining a schema
+const userSchema = Compactr.schema({ 
+    id: { type: 'number' },
+    name: { type: 'string' }
+});
+ 
+ 
+ 
+// Encoding
+userSchema.write({ id: 123, name: 'John' });
+ 
+// Get the schema header bytes (for partial loads)
+const header = userSchema.headerBytes();
+ 
+// Get the partial load bytes
+const partial = userSchema.contentBytes();
+ 
+// Get the full header + content bytes
+const buffer = userSchema.bytes();
+ 
+ 
+ 
+ 
+// Decoding (full)
+const content = userSchema.decode(buffer);
+ 
+// Decoding (partial)
+const content = userSchema.decode(header, partial);
+```
+
+
+__GIF FTW!__
+
+![compactr](/images/compactr/compactr.gif)
+
+
