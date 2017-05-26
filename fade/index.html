@@ -1,0 +1,221 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>fade - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="fade - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/fade/">
+    <meta name="twitter:description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="fade - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/fade/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/fade/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Fade</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-02T22:24:12+05:30" pubdate data-updated="true">Jul 2<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="http://npm.im/fade">fade</a></h1>
+
+<blockquote><p>Fade a HTML element using CSS transitions.</p></blockquote>
+
+<p>Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto
+behind this module, that lets us to <code>fade.in</code>, <code>fade.out</code> and fade an element to a specifie opacity, which also takes a
+callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save fade</code> # browserify it!</p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fade</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fade&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#el&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span> <span class="c1">// fade el out in 1s</span>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="k">in</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mi">1500</span><span class="p">);</span> <span class="c1">// fade el in in 1.5s</span>
+</span><span class='line'><span class="nx">fade</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span> <span class="c1">// fade el to opacity 0.3 in 3s </span>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span> <span class="c1">// set display to none after fade out</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fade/fade.gif" alt="fade.gif" /></p>
+
+<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this sweet little module.</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=fade by @nodemotw&url=http://nmotw.in/fade/" title="Share fade on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/fade/" title="Share fade on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/fade/" title="Share fade on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/fade/';
+        var disqus_url = 'http://nmotw.in//github/fade/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

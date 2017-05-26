@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: async | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/async/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[asyncbox]]></title>
+    <link href="http://nmotw.in//github/asyncbox/"/>
+    <updated>2016-09-22T22:37:26+05:30</updated>
+    <id>http://nmotw.in//github/asyncbox</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
+
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
+
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
+
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+import { sleep } from 'asyncbox';</p>
+
+<p>async function myFn () {</p>
+
+<pre><code>// do some stuff 
+await sleep(1000); // wait one second 
+// do some other stuff 
+</code></pre>
+
+<p>};</p>
+
+<p>myFn();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ambi]]></title>
+    <link href="http://nmotw.in//github/ambi/"/>
+    <updated>2015-12-03T20:51:30+05:30</updated>
+    <id>http://nmotw.in//github/ambi</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
+
+<blockquote><p>Execute a function ambidextrously.</p></blockquote>
+
+<p><code>ambi</code> normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --save ambi</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var ambi = require('ambi');
+var child_process = require('child_process');</p>
+
+<p>ambi(child_process.execSync, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Async</p>
+
+<p>ambi(child_process.exec, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Sync
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ambi/ambi.gif" alt="ambi" /></p>
+
+<p>Thanks to <a href="http://balupton.com/">Benjamin Lupton</a> for this module.</p>
+]]></content>
+  </entry>
+  
+</feed>

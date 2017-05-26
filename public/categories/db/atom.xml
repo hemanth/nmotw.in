@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: db | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/db/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[lowdb]]></title>
+    <link href="http://nmotw.in//github/lowdb/"/>
+    <updated>2014-09-18T18:21:06+05:30</updated>
+    <id>http://nmotw.in//github/lowdb</id>
+    <content type="html"><![CDATA[<blockquote><p>Flat JSON file database for Node</p></blockquote>
+
+<ul>
+<li><p>Serverless.</p></li>
+<li><p>Multiple databases.</p></li>
+<li><p>In-memory or disk-based.</p></li>
+<li><p>80+ methods from Lo-Dash API.</p></li>
+<li><p>Asynchronous and fault-tolerant writing.</p></li>
+<li><p>Extendable</p></li>
+</ul>
+
+
+<p><a href="">LowDB</a> uses Lo-Dash functional progamming API, it's a light weight DB implementation, which could be disk-based or in-memory database.</p>
+
+<p><strong>Installing it:</strong> <code>$ npm install lowdb</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>javascript
+var low = require('lowdb');
+</code></p>
+
+<p><code>javascript
+var db = low();           // in-memory
+var db = low('db.json'); // disk-based
+</code></p>
+
+<p><code>javascript
+var db = low('db.json')
+db('modules').push({ title: 'lowdb', type:'db-util'});
+db('modules').push({ title: 'lodash', type:'util'});
+</code></p>
+
+<p><code>javascript
+// Get all the titles.
+db('modules')
+  .pluck('title')
+  .value()
+</code></p>
+
+<p>On the <code>db</code> object we have the below actions:</p>
+
+<p><code>javascript
+[ 'after',
+  'assign',
+  'at',
+  'bind',
+  'bindAll',
+  'bindKey',
+  'chain',
+  'collect',
+  'compact',
+  'compose',
+  'constant',
+  'countBy',
+  'create',
+  'createCallback',
+  'curry',
+  'debounce',
+  'defaults',
+  'defer',
+  'delay',
+  'difference',
+  'drop',
+  'each',
+  'eachRight',
+  'extend',
+  'filter',
+  'flatten',
+  'forEach',
+  'forEachRight',
+  'forIn',
+  'forInRight',
+  'forOwn',
+  'forOwnRight',
+  'functions',
+  'groupBy',
+  'indexBy',
+  'initial',
+  'intersection',
+  'invert',
+  'invoke',
+  'keys',
+  'map',
+  'mapValues',
+  'max',
+  'memoize',
+  'merge',
+  'methods',
+  'min',
+  'object',
+  'omit',
+  'once',
+  'pairs',
+  'partial',
+  'partialRight',
+  'pick',
+  'pluck',
+  'property',
+  'pull',
+  'range',
+  'reject',
+  'remove',
+  'rest',
+  'select',
+  'shuffle',
+  'sortBy',
+  'tail',
+  'tap',
+  'throttle',
+  'times',
+  'toArray',
+  'transform',
+  'union',
+  'uniq',
+  'unique',
+  'unzip',
+  'values',
+  'where',
+  'without',
+  'wrap',
+  'xor',
+  'zip',
+  'zipObject',
+  'all',
+  'any',
+  'clone',
+  'cloneDeep',
+  'contains',
+  'detect',
+  'escape',
+  'every',
+  'find',
+  'findIndex',
+  'findKey',
+  'findLast',
+  'findLastIndex',
+  'findLastKey',
+  'findWhere',
+  'foldl',
+  'foldr',
+  'has',
+  'identity',
+  'include',
+  'indexOf',
+  'inject',
+  'isArguments',
+  'isArray',
+  'isBoolean',
+  'isDate',
+  'isElement',
+  'isEmpty',
+  'isEqual',
+  'isFinite',
+  'isFunction',
+  'isNaN',
+  'isNull',
+  'isNumber',
+  'isObject',
+  'isPlainObject',
+  'isRegExp',
+  'isString',
+  'isUndefined',
+  'lastIndexOf',
+  'mixin',
+  'noConflict',
+  'noop',
+  'now',
+  'parseInt',
+  'random',
+  'reduce',
+  'reduceRight',
+  'result',
+  'runInContext',
+  'size',
+  'some',
+  'sortedIndex',
+  'template',
+  'unescape',
+  'uniqueId',
+  'support',
+  'templateSettings',
+  'first',
+  'last',
+  'sample',
+  'take',
+  'head',
+  'toString',
+  'value',
+  'valueOf',
+  'join',
+  'pop',
+  'shift',
+  'push',
+  'reverse',
+  'sort',
+  'unshift',
+  'concat',
+  'slice',
+  'splice' ]
+</code></p>
+
+<p>All in all this a module that helps you for a quick prototype, not meant for high performance and is not scalable.</p>
+
+<p>Thanks to <a href="https://twitter.com/typicode">typicode</a> for this sweet module.</p>
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/lowdb/lowdb.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[mongoskin]]></title>
+    <link href="http://nmotw.in//github/mongoskin/"/>
+    <updated>2014-07-10T20:09:46+05:30</updated>
+    <id>http://nmotw.in//github/mongoskin</id>
+    <content type="html"><![CDATA[<h1>mongoskin</h1>
+
+<blockquote><p>The future layer above node-mongodb-native.</p></blockquote>
+
+<p>mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to work easily with mongodb, but how?</p>
+
+<p>Check this out!</p>
+
+<p>Install it like any other module: <code>$ npm install mongoskin</code></p>
+
+<p>With mongoskin you can dburl like <code>mongodb://localhost:27017/test</code> or use Replset :</p>
+
+<p>```javascript
+var replSet = new ReplSetServers([</p>
+
+<pre><code>    new Server('localhost', 30000),
+    new Server('localhost', 30001),
+    new Server('localhost', 30002),
+</code></pre>
+
+<p>]);
+```</p>
+
+<p>Where <code>Server</code> is <code>require('mongoskin').Server</code></p>
+
+<p><strong>Example usage of data insertion:</strong></p>
+
+<p>```javascript
+var mongo = require('mongoskin');</p>
+
+<p>db = mongo.db('mongodb://localhost/test');</p>
+
+<p>db.collection('test').insert({foo: 'bar'}, function(err, result) {</p>
+
+<pre><code>console.log(result);
+db.collection('test').drop();
+db.close();
+</code></pre>
+
+<p>});</p>
+
+<p>```</p>
+
+<p>It has an extensive <a href="https://github.com/kissjs/node-mongoskin#mongoskin-api-part">API</a> with sleeker syntax compared with native.</p>
+
+<p>Thanks to <a href="http://kissjs.org/">kissjs</a> team, specially to <a href="https://github.com/guileen">Gui Lin</a></p>
+]]></content>
+  </entry>
+  
+</feed>

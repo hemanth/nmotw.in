@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: event | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/event/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[combokeys]]></title>
+    <link href="http://nmotw.in//github/combokeys/"/>
+    <updated>2015-07-23T20:02:46+05:30</updated>
+    <id>http://nmotw.in//github/combokeys</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/combokeys">combokeys</a></p>
+
+<blockquote><p>Handles keyboard shortcuts in the browser.</p></blockquote>
+
+<p><code>combokeys</code> is a fork of <a href="https://github.com/ccampbell/mousetrap">ccampbell/mousetrap</a> with two main changes:</p>
+
+<ul>
+<li>Refactored as CommonJS</li>
+<li>Doesn't automatically listen on the document. Instead, it is now a constructor and the element on which to listen must be provided on instantiation.</li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save combokeys</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var Combokeys = require("combokeys");
+var Mousetrap = new Combokeys(document.documentElement);
+// Or, instantiate it for one or more specific elements:
+var firstCombokeys = new Combokeys(document.getElementById("first"));</p>
+
+<p>firstCombokeys.bind('4', function() { console.log('4'); });
+firstCombokeys.bind("?", function() { console.log('show shortcuts!'); });</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/combokeys/combokeys.gif" alt="combokeys" /></p>
+
+<p>Thanks to <a href="https://github.com/mightyiam">Shahar Or</a> for porting <code>mousetrap</code> to <code>combokeys</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

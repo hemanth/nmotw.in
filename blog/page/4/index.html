@@ -1,0 +1,1056 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
+    <meta name="twitter:description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/4/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/next/">
+			
+				Next</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-10-27T20:11:15+05:30" pubdate data-updated="true">Oct 27<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/next">next.js</a></h1>
+
+<blockquote><p>Minimalistic framework for server-rendered React applications.</p></blockquote>
+
+<p><code>next.js</code> framework helps with SSR of React applications and so far has:</p>
+
+<ul>
+<li>Automatic transpilation and bundling (with webpack and babel)</li>
+<li>Hot code reloading</li>
+<li>Server rendering and indexing of <code>./pages</code></li>
+<li>Static file serving. <code>./static/</code> is mapped to <code>/static/</code></li>
+</ul>
+
+
+<p><strong>GET IT:</strong> <code>npm instll --save next</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mkdir pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//pages/index.js:</span>
+</span><span class='line'><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+</span><span class='line'><span class="kr">export</span> <span class="k">default</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">Next</span><span class="o">!&lt;</span><span class="err">/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add a script to the <code>package.json</code> like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;next&quot;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and run:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">$</span> <span class="err">npm</span> <span class="err">start</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/next/next.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/s-ago/">
+			
+				S-ago</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-10-20T19:43:46+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
+
+<blockquote><p>Human readable relative times.</p></blockquote>
+
+<p><code>26 SLOC</code> to convert <code>Date</code> objects into human readable relative timestamps, such as <code>7 minutes ago</code> or <code>yesterday</code> or <code>2 days ago</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save s-ago</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ago</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;s-ago&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">yesterday</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">hoursAgo</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">now</span><span class="p">);</span> <span class="c1">// &#39;just now&#39; </span>
+</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">yesterday</span><span class="p">);</span> <span class="c1">// &#39;yesterday&#39; </span>
+</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">hoursAgo</span><span class="p">);</span> <span class="c1">// &#39;6 hours ago&#39; </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/yarn/">
+			
+				Yarn</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-10-13T19:37:03+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
+
+<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
+
+<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
+
+<ul>
+<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
+<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
+<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
+<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
+<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
+<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
+<li>More emojis. 🐈</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
+
+<p><strong>CLI usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>yarn add
+</span><span class='line'>yarn bin
+</span><span class='line'>yarn cache
+</span><span class='line'>yarn check
+</span><span class='line'>yarn clean
+</span><span class='line'>yarn config
+</span><span class='line'>yarn generate-lock-entry
+</span><span class='line'>yarn global
+</span><span class='line'>yarn info
+</span><span class='line'>yarn init
+</span><span class='line'>yarn install
+</span><span class='line'>yarn licenses
+</span><span class='line'>yarn link
+</span><span class='line'>yarn login
+</span><span class='line'>yarn <span class="nb">logout</span>
+</span><span class='line'>yarn ls
+</span><span class='line'>yarn outdated
+</span><span class='line'>yarn owner
+</span><span class='line'>yarn pack
+</span><span class='line'>yarn publish
+</span><span class='line'>yarn remove
+</span><span class='line'>yarn run
+</span><span class='line'>yarn self-update
+</span><span class='line'>yarn tag
+</span><span class='line'>yarn team
+</span><span class='line'>yarn <span class="nb">test</span>
+</span><span class='line'>yarn unlink
+</span><span class='line'>yarn upgrade
+</span><span class='line'>yarn version
+</span><span class='line'>yarn why
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/resize-observer-polyfill/">
+			
+				Resize-observer-polyfill</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-10-06T22:36:53+05:30" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">resize-observer-polyfill</a></h1>
+
+<blockquote><p>A polyfill for Resize Observer API.</p></blockquote>
+
+<p>Implements event based tracking of changes in the dimensions of elements.</p>
+
+<p>Uses MutationsObserver and falls back to an infinite dirty checking cycle if the first one is not supported.</p>
+
+<p>Handles long running CSS transitions/animations, attributes and nodes mutations along with changes made by :hover pseudo-class (optional).</p>
+
+<p>Compliant with the <a href="http://rawgit.com/WICG/ResizeObserver/master/index.html">spec</a>.</p>
+
+<p>Doesn't contain any publicly available methods except for those described in the spec.</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">resize</span><span class="o">-</span><span class="nx">observer</span><span class="o">-</span><span class="nx">polyfill</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">ResizeObserver</span> <span class="nx">from</span> <span class="s1">&#39;resize-observer-polyfill&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ResizeObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">,</span> <span class="nx">observer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/resize-observer-polyfill/resize-observer-polyfill.gif" alt="resize-observer-polyfill" /></p>
+
+<p>P.S: Checkout the <a href="http://que-etc.github.io/resize-observer-polyfill">Live demo</a>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/autosize-input/">
+			
+				Autosize-input</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-29T19:30:53+05:30" pubdate data-updated="true">Sep 29<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
+
+<blockquote><p>Effortless, dynamic-width text boxes.</p></blockquote>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Dynamically adjusts the width of the text box to fit its current contents</li>
+<li>Can be initialised to fit its <code>placeholder</code> attribute</li>
+<li>Optionally set a <code>min-width</code> based on the element&rsquo;s initial content</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g autosize-input</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#bar&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#baz&#39;</span><span class="p">),</span> <span class="p">{</span> <span class="nx">minWidth</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Implementation details:</strong></p>
+
+<ul>
+<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> property of the given text box is set, inline, to <code>content-box</code>. Therefore, the width we assign to our text box <em>excludes</em> its <code>padding</code> and <code>border</code> properties.</p></li>
+<li><p>A hidden &ldquo;ghost&rdquo; <code>div</code> &mdash; given the same <code>font-size</code> and <code>font-family</code> as the text box &mdash; is used to compute the correct width to assign to the text box. This width is recomputed and assigned to the text box on every <a href="https://developer.mozilla.org/en-US/docs/Web/Events/input"><code>input</code></a> event.</p></li>
+<li><p>The single &ldquo;ghost&rdquo; element is shared amongst all the &ldquo;autosized&rdquo; text boxes on the page.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/asyncbox/">
+			
+				Asyncbox</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
+
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
+
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
+
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do some stuff </span>
+</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
+</span><span class='line'>    <span class="c1">// do some other stuff </span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/granim/">
+			
+				Granim</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
+
+<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
+
+<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
+
+<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Create a &lt;canvas&gt; element --&gt;</span>
+</span><span class='line'><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;granim-canvas&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">granimInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Granim</span><span class="p">({</span>
+</span><span class='line'>   <span class="nx">element</span><span class="o">:</span> <span class="s1">&#39;#granim-canvas&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;granim&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="nx">opacity</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span class='line'>   <span class="nx">states</span> <span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>       <span class="s2">&quot;default-state&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>           <span class="nx">gradients</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#834D9B&#39;</span><span class="p">,</span> <span class="s1">&#39;#D04ED6&#39;</span><span class="p">],</span>
+</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#1CD8D2&#39;</span><span class="p">,</span> <span class="s1">&#39;#93EDC7&#39;</span><span class="p">]</span>
+</span><span class='line'>           <span class="p">]</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/granim/granim.gif" alt="granim" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/quill/">
+			
+				Quill</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-08T18:38:58+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/quill">quill</a></h1>
+
+<blockquote><p>An API Driven Rich Text Editor.</p></blockquote>
+
+<p>For the initial commit looks like <code>quill</code> has taken two long years to reach <code>v1.x</code> and indeed it's proven itself to be a very tidy API driven rich text editor.</p>
+
+<p><strong>quill has <a href="http://quilljs.com/docs/api/">APIs</a> for:</strong></p>
+
+<ul>
+<li><p>Content handling.</p></li>
+<li><p>Formatting.</p></li>
+<li><p>Selection.</p></li>
+<li><p>Events</p></li>
+<li><p>Extensions.</p></li>
+</ul>
+
+
+<p><strong>quill also <a href="http://quilljs.com/docs/modules/">modules</a> for:</strong></p>
+
+<ul>
+<li><p>TOOLBAR</p></li>
+<li><p>KEYBOARD</p></li>
+<li><p>HISTORY</p></li>
+<li><p>CLIPBOARD</p></li>
+<li><p>FORMULA</p></li>
+<li><p>SYNTAX</p></li>
+</ul>
+
+
+<p><strong>Finally, it has theme(s)!:</strong></p>
+
+<ul>
+<li><p>Bubble</p></li>
+<li><p>Snow</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save quill</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Quill</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;quill&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">quill</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Quill</span><span class="p">(</span><span class="s1">&#39;#editor-container&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">modules</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">toolbar</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>      <span class="p">[{</span> <span class="nx">header</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span><span class="p">]</span> <span class="p">}],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="s1">&#39;underline&#39;</span><span class="p">],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;code-block&#39;</span><span class="p">]</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;Compose an epic...&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;snow&#39;</span> <span class="c1">// or &#39;bubble&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/quill/quill.gif" alt="quill" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/auto-install/">
+			
+				Auto-install</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-01T19:35:36+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
+
+<blockquote><p>Auto installs dependencies as you code on save.</p></blockquote>
+
+<p>Have you ever wished that need to having a tool that would just do an <code>npm install</code> of modules that you <code>import</code>?</p>
+
+<p>Well, here is <code>auto-install</code> that does exactly what you wished for!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g auto-install</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In case you run it in a folder that doesn&#39;t have a `package.json`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install --help
+</span><span class='line'>package.json does not exist
+</span><span class='line'>You can create one by using <span class="sb">`</span>npm init<span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># With a package.json</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install
+</span><span class='line'>Watchers initialized
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>CLI Flags:</strong></p>
+
+<p><code>--secure</code>  Install popular modules only (> 10k downloads in the last month)</p>
+
+<p><code>--exact</code>   Install exact version similar to <code>npm install express --save-exact</code></p>
+
+<p><code>--dont-uninstall</code>   Do not uninstall unused modules</p>
+
+<p>P.S: <a href="https://github.com/siddharthkp/auto-install/issues/6">Does it protect against typosquatting?</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/pwmetrics/">
+			
+				Pwmetrics</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-25T19:03:31+05:30" pubdate data-updated="true">Aug 25<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
+
+<blockquote><p>Progressive web metrics at your fingertipz. 💅</p></blockquote>
+
+<p><code>pwmetrics</code> CLI tool and lib to gather performance metrics via <a href="https://github.com/GoogleChrome/lighthouse/">Lighthouse</a>.</p>
+
+<p>P.S: This module is <em>IN BETA</em>, so you must be ready for anything 😉</p>
+
+<p><strong>GET IT:</strong> <code>npm install --global pwmetrics</code> or <code>npm install --save pwmetrics</code></p>
+
+<p><strong>Sample CLI usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run Chrome with port 9222 open</span>
+</span><span class='line'>chrome  --remote-debugging-port<span class="o">=</span>9222 --no-first-run --user-data-dir<span class="o">=</span><span class="k">$(</span>mktemp -d -t pwm.XXXXX<span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run pwmetrics with your url</span>
+</span><span class='line'>pwmetrics https://jsfeatures.in
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>pwmetrics --json https://jsfeatures.in
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;timings&quot;</span>: <span class="o">[</span>
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Contentful Paint&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1875.337
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Meaningful Paint&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1970.7
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Median Visual Completion&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1997
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Visual Change&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1917
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 100%&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 2004
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Time to Interactive&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: -1
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 85%&quot;</span>
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Navigation Start&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 0
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>  <span class="o">]</span>,
+</span><span class='line'>  <span class="s2">&quot;timestamps&quot;</span>: <span class="o">[</span>
+</span><span class='line'>    303915241.28
+</span><span class='line'>  <span class="o">]</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>API:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">PWMetrics</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pwmetrics&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">new</span> <span class="nx">PWMetrics</span><span class="p">(</span><span class="s1">&#39;https://jsfeatures.in&#39;</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span> <span class="c1">// opts =&gt; {data:fileName} for now.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/pwmetrics/pwmetrics.gif" alt="pwmetrics" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/3/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/5/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

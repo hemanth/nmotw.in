@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meta | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/meta/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[music meta data]]></title>
+    <link href="http://nmotw.in//github/music-meta-data/"/>
+    <updated>2014-06-05T18:08:35+05:30</updated>
+    <id>http://nmotw.in//github/music-meta-data</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/leetreveil/musicmetadata">musicmetadata</a> is a streaming music metadata parser for node and the browser, but out focus is more on node side here.</p>
+
+<p>It's worth noting that this module is influnced by <a href="https://github.com/aadsm/node-id3">node-id3</a></p>
+
+<p>This module makes it easier to extra meta data from a given audio file, it supports:</p>
+
+<ul>
+<li>mp{1.1, 2.2, 2.3, 2.4, 3}</li>
+<li>m4a, mp4.</li>
+<li>vorbis (ogg, flac)</li>
+<li>asf (wma, wmv)</li>
+</ul>
+
+
+<p>It parses the files for meaning fully meta data, for example it maintaines a common list of <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L212">GENRES</a> and <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L188">pic types</a> that will be matched and extracted from the Meta Data Atom.</p>
+
+<p>But the clean part of this module is it makes use of Streams :-)</p>
+
+<p>Kudos to <a href="http://twitter.com/leetreveil">Lee Treveil</a> on this.</p>
+
+<p><strong>Let's see an example:</strong></p>
+
+<p>```
+var fs = require('fs');
+var mmd = require('musicmetadata');</p>
+
+<p>var parser = mmd( fs.createReadStream('FreeSWSong.ogg') );</p>
+
+<p>parser.on('metadata',function(res) {</p>
+
+<pre><code>console.log(res);
+</code></pre>
+
+<p>});</p>
+
+<p>```</p>
+
+<p>This would log something like:</p>
+
+<p><code>sh
+{ title: 'Free Software Song',
+  artist: [ 'Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil' ],
+  albumartist: [],
+  album: '',
+  year: '2009',
+  track: { no: 0, of: 0 },
+  genre: [ 'Ethnic' ],
+  disk: { no: 0, of: 0 },
+  picture: [],
+  duration: 0 }
+</code></p>
+
+<p> Now, we could also listen for an event for a particular entinty of the meta data or custom metadata types that are not part of the standard metadata.</p>
+
+<p>```js</p>
+
+<p>parser.on('artist', function(res){</p>
+
+<pre><code>console.log(res);
+</code></pre>
+
+<p>});</p>
+
+<p>```</p>
+
+<p>Would log something like : <code>[ 'Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil' ]</code></p>
+
+<p>A <code>done</code> event is triggered once the parsing is done, we could as well listen for it, to detect any errors.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/music-meta-data/mmd.gif" alt="music-meta-data" /></p>
+]]></content>
+  </entry>
+  
+</feed>

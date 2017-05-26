@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: input | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/input/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[cleave.js]]></title>
+    <link href="http://nmotw.in//github/cleave.js/"/>
+    <updated>2016-07-14T17:53:00+05:30</updated>
+    <id>http://nmotw.in//github/cleave.js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
+
+<blockquote><p>Input text content formatter.</p></blockquote>
+
+<p><code>Cleave.js</code> has a simple purpose: to help you format input text content automatically.</p>
+
+<p>Provides these features:</p>
+
+<ul>
+<li><p>Credit card number formatting</p></li>
+<li><p>Phone number formatting (i18n js lib separated for each country to reduce size)</p></li>
+<li><p>Date formatting</p></li>
+<li><p>Numeral formatting</p></li>
+<li><p>Custom delimiter, prefix and blocks pattern</p></li>
+<li><p>CommonJS / AMD mode</p></li>
+<li><p>ReactJS component port</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save cleave.js</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```html
+<input class="input-phone" type="text"/>
+````</p>
+
+<p>```js
+var Cleave = require('cleave.js');
+require('cleave.js/dist/addons/cleave-phone.{country}');</p>
+
+<p>var cleave = new Cleave('.input-phone', {</p>
+
+<pre><code>phone:      true,
+regionCode: '{country}'
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cleave.js/cleave.js.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

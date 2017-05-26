@@ -1,0 +1,1103 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
+    <meta name="twitter:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/13/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/objectmap/">
+			
+				Objectmap</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-05T19:33:17+05:30" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
+
+<blockquote><p>Use a ES6 map, like an object.</p></blockquote>
+
+<p>This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect API with proxy to make give us a convience method so that maps can be used like an Object.</p>
+
+<p>What other advantages apart from syntax sugar?</p>
+
+<ul>
+<li><p>Iterate it like a regular object with <code>(for in)</code> without worrying about <code>hasOwnProperty</code> checks.</p></li>
+<li><p>Iterate it <code>(for of)</code> you will get arrays of length 2 of both keys and values.</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save objectmap</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">oMap</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;objectmap&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">oMap</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// Same as `map.set(&#39;answer&#39;,42);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span><span class="p">;</span> <span class="c1">// Same as `map.get(&#39;abc&#39;);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">delete</span> <span class="nx">map</span><span class="p">.</span><span class="nx">abc</span><span class="p">;</span> <span class="c1">// Same as `map.delete(&#39;abc&#39;);`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Caveat: <code>map[3]</code> implies <code>map.set('3')</code> not <code>map.set(3)</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/objectmap/objectmap.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com">Calvin</a> for this useful util :)</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/node-rules/">
+			
+				Node-rules</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-29T17:53:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
+
+<blockquote><p>Business Rules Engine for JavaScript.</p></blockquote>
+
+<p><code>node-rules</code> is a module of it's own kind, it's a light weight forward chaining Rule Engine!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save node-rules</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>It's a three step process, to get the engine running:</p>
+
+<ul>
+<li><p>Defining a Rule.</p></li>
+<li><p>Defining a Fact.</p></li>
+<li><p>Initialize the rules engine and execute the rule.</p></li>
+</ul>
+
+
+<p><strong>Create a rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Sample Rule to block a transaction if its below 500 */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;condition&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">transactionTotal</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s2">&quot;consequence&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">reason</span> <span class="o">=</span> <span class="s2">&quot;The transaction was blocked as it was less than 500&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Create a fact:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Fact with less than 500 as transaction, and this should be blocked */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fact</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;user4&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;application&quot;</span><span class="o">:</span> <span class="s2">&quot;MOB2&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;transactionTotal&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;cardType&quot;</span><span class="o">:</span> <span class="s2">&quot;Credit Card&quot;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Initialize the rules engine:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Creating Rule Engine instance and registering rule */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">R</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RuleEngine</span><span class="p">();</span>
+</span><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">rule</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Execute the rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="nx">fact</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valid transaction&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Blocked Reason:&quot;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reason</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-rules/node-rules.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mithunsatheesh">Mithun Satheesh</a> for this adventurous module.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/nsp/">
+			
+				Nsp</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-22T19:03:18+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/nsp/">nsp</a> aka: <a href="http://nodesecurity.io">Node Security Project</a></h1>
+
+<blockquote><p>Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB.</p></blockquote>
+
+<p><strong>Install it:</strong> <code>npm install -g nsp</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; nsp
+</span><span class='line'>
+</span><span class='line'>Usage: <span class="o">[</span><span class="nb">command</span><span class="o">]</span> --arg<span class="o">=</span>value --arg2
+</span><span class='line'>
+</span><span class='line'>Help:
+</span><span class='line'>  <span class="nb">help              </span>Show <span class="nb">help </span>menu
+</span><span class='line'>  <span class="o">[</span>cmd<span class="o">]</span> <span class="nb">help        </span>Show <span class="nb">command help </span>menu
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  version           shows the current version of nsp
+</span><span class='line'>  shrinkwrap        <span class="nb">alias </span>to audit-shrinkwrap
+</span><span class='line'>  audit-shrinkwrap  audits your <span class="sb">`</span>npm shrinkwrap<span class="sb">`</span> against NSP db
+</span><span class='line'>  package           <span class="nb">alias </span>to audit-package
+</span><span class='line'>  audit-package     audits your package.json against NSP db
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; cat package.json
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;test&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;version&quot;</span>: <span class="s2">&quot;0.0.1&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;author&quot;</span>: <span class="s2">&quot;Node Security Project&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;dependencies&quot;</span>: <span class="o">{</span>
+</span><span class='line'>    <span class="s2">&quot;node-print&quot;</span>: <span class="s2">&quot;0.0.4&quot;</span>,
+</span><span class='line'>    <span class="s2">&quot;request&quot;</span>: <span class="s2">&quot;^2.40.0&quot;</span>,
+</span><span class='line'>    <span class="s2">&quot;qs&quot;</span>: <span class="s2">&quot;^0.5&quot;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>nmotw.in&gt; nsp package
+</span><span class='line'>Name  Installed  Patched  Vulnerable Dependency
+</span><span class='line'>qs      0.5.6     &gt;<span class="o">=</span> 1.x  <span class="nb">test</span>@0.0.1 &gt; qs@0.5.6
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The same can be used for auditing <a href="https://docs.npmjs.com/cli/shrinkwrap">shrinkwrap</a>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nsp/nsp.gif" alt="nsp" /></p>
+
+<p>Thanks to the <a href="https://twitter.com/nodesecurity">nodesecurity</a> for making security easy!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/isomorphic-fetch/">
+			
+				Isomorphic-fetch</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-15T20:45:00+05:30" pubdate data-updated="true">Jan 15<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a></p>
+
+<blockquote><p>Isomorphic WHATWG Fetch API, for Node &amp; Browserify</p></blockquote>
+
+<p><code>fetch</code> from GitHub makes it easier to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch <a href="https://fetch.spec.whatwg.org">specification</a>.</p>
+
+<p>Well, <code>fetch</code> was in the nmotw queue for quite some time now, but this week seems to be special as FF nightly and Chrome canary rolled out this API ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install isomorphic-fetch</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Fetch random XKCD comic.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;isomorphic-fetch&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://xkcd-imgs.herokuapp.com/&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="nx">ex</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Would log something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://imgs.xkcd.com/comics/wikifriends.png&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;It\&#39;s crazy how much my gut opinion of a movie/song is swayed by what other people say, regardless of how I felt coming out of the theater.&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/isomorphic-fetch/isomorphic-fetch.gif" alt="isomorphic-fetch" /></p>
+
+<p>Thanks to <a href="https://mattandre.ws/">Matt Andrews</a> for <code>isomorphic-fetch</code> (:</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/safe-json-parse/">
+			
+				Safe-json-parse</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-08T22:26:50+05:30" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/safe-json-parse">safe-json-parse</a></h1>
+
+<blockquote><p>Parse JSON safely without throwing.</p></blockquote>
+
+<p>Sweet, simple and effictive module for parsing JSON safely :)</p>
+
+<p><strong>Get it:</strong> <code>npm install safe-json-parse --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>With callback:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;safe-json-parse&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;{}&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">json</span><span class="p">);});</span>
+</span><span class='line'><span class="kc">null</span> <span class="p">{}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">json</span><span class="p">);});</span>
+</span><span class='line'><span class="p">[</span><span class="nx">SyntaxError</span><span class="o">:</span> <span class="nx">Unexpected</span> <span class="nx">token</span> <span class="nx">m</span><span class="p">]</span> <span class="kc">undefined</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As Tuples:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;safe-json-parse/tuple&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">({})</span>
+</span><span class='line'><span class="p">[</span> <span class="p">[</span><span class="nx">SyntaxError</span><span class="o">:</span> <span class="nx">Unexpected</span> <span class="nx">token</span> <span class="nx">o</span><span class="p">],</span> <span class="kc">undefined</span> <span class="p">]</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;{}&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">[</span> <span class="kc">null</span><span class="p">,</span> <span class="p">{}</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/safe-json-parse/safe-json-parse.gif" alt="safe-json-parse" /></p>
+
+<p>Thanks to <a href="https://twitter.com/raynos">Raynos</a> for helping us with safely parsing JSONs ;)</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/css-explain/">
+			
+				Css-explain</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-01T18:53:53+05:30" pubdate data-updated="true">Jan 1<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/css-explain">css-explain</a></h1>
+
+<blockquote><p>Think of it like SQL EXPLAIN, but for CSS selectors.</p></blockquote>
+
+<p><code>css-explain</code> is one of such rare modules that helps us to learn or explain CSS selectors with ease.</p>
+
+<p><strong>Get it:</strong> <code>npm install css-explain</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">cssExplain</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;css-explain&#39;</span><span class="p">).</span><span class="nx">cssExplain</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div .info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div .info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;.info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;Uses a descendant selector with a rightmost class selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div#info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div#info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div#info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div &gt; p#info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div &gt; p#info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;p#info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span><span class="p">,</span>
+</span><span class='line'>     <span class="s1">&#39;ID is overly qualified by a child selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/css-explain/css-explain.gif" alt="css-explain" /></p>
+
+<p>Thanks to <a href="https://twitter.com/joshpeek">Joshua Peek</a> for css-explain, do <a href="http://josh.github.io/css-explain/">checkout</a> the webbased app of the same.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/printf/">
+			
+				Printf</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-24T18:11:33+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">printf</a></h1>
+
+<p>Full implementation of the <code>printf</code>/<code>sprintf</code> family in pure JS.</p>
+
+<pre><code>            _       _    __ 
+           (_)     | |  / _|
+ _ __  _ __ _ _ __ | |_| |_ 
+| '_ \| '__| | '_ \| __|  _|
+| |_) | |  | | | | | |_| |
+| .__/|_|  |_|_| |_|\__|_|
+| |
+|_|
+</code></pre>
+
+<p><strong>Get it:</strong> <code>npm install printf</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">printf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;printf&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">printf</span><span class="p">(</span><span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
+</span><span class='line'><span class="nx">printf</span><span class="p">(</span><span class="nx">write_stream</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Flags:</strong></p>
+
+<ul>
+<li><p><code></code> (space)</p></li>
+<li><p><code>+</code></p></li>
+<li><p><code>-</code></p></li>
+<li><p><code>0</code></p></li>
+</ul>
+
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><p><code>Width / precision</code> => <code>%2f</code></p></li>
+<li><p><code>Numerical bases</code> => <code>%c</code></p></li>
+<li><p><code>Miscellaneous</code> => <code>%d%%</code>, <code>+%s%+</code></p></li>
+<li><p><code>Extra</code> => The <code>%O</code> converter will call <code>util.inspect(...)</code> at the argument, <code>%-*.*f</code>.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/printf/printf.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://www.adaltas.com">Worms David</a> for <code>printf</code>!</p>
+
+<p><code>printf('******************%s**************',"Merry Xmas!")</code></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/malarkey/">
+			
+				Malarkey</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-18T18:07:40+05:30" pubdate data-updated="true">Dec 18<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/malarkey">malarkey</a></h1>
+
+<blockquote><p>Simulate a typewriter/ticker effect on a DOM element.</p></blockquote>
+
+<p>Even though <code>malarkey</code> means 'meaningless talk; nonsense', this is a sweet module that helps us to simulate typewriter effect on DOM elements.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save malarkey</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.malarkey&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">typeSpeed</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">deleteSpeed</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">pauseDelay</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">loop</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">postfix</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">malarkey</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">opts</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="s1">&#39;Say hello&#39;</span><span class="p">).</span><span class="nx">pause</span><span class="p">().</span><span class="k">delete</span><span class="p">()</span>
+</span><span class='line'><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="s1">&#39;Wave goodbye&#39;</span><span class="p">).</span><span class="nx">pause</span><span class="p">().</span><span class="k">delete</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>API from 1000 feet:</strong></p>
+
+<ul>
+<li><p>malarkey.type</p></li>
+<li><p>malarkey.clear</p></li>
+<li><p>malarkey.pause</p></li>
+<li><p>malarkey.delete</p></li>
+</ul>
+
+
+<p>Read more about them in the <a href="https://github.com/yuanqing/malarkey#api">docs</a></p>
+
+<p><strong>DEMO:</strong></p>
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/gnumanth/efu58rbk/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/malarkey/malarkey.gif" alt="malarkey" /></p>
+
+<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/treeify/">
+			
+				Treeify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-11T18:36:10+05:30" pubdate data-updated="true">Dec 11<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/treeify">treeify</a></h1>
+
+<blockquote><p>converts a JS object into a nice and readable tree structure for the console</p></blockquote>
+
+<p>Say, you an object that has the dependencies of a node module and you want to represent it as a tree structure or may you have a filesystem hierarchy to display on CLI, it's kina tough right? Well...here is <code>treeify</code> for you!</p>
+
+<p><strong>Get it:</strong> <code>npm install treeify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">treeify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;treeify&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">deps</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;npm@2.1.12&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;archy@1.0.0&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>        <span class="s2">&quot;abbrev@1.0.5&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>        <span class="s2">&quot;char-spinner@1.0.1&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>        <span class="s2">&quot;block-stream@0.0.7&quot;</span><span class="o">:</span> <span class="s2">&quot;inherits@2.0.1&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span><span class='line'>   <span class="nx">treeify</span><span class="p">.</span><span class="nx">asTree</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//or</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">treeify</span><span class="p">.</span><span class="nx">asLines</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">line</span><span class="p">){</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Both would output:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">└─</span> <span class="nx">npm</span><span class="err">@</span><span class="mf">2.1</span><span class="p">.</span><span class="mi">12</span>
+</span><span class='line'>   <span class="err">├─</span> <span class="nx">archy</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">0</span>
+</span><span class='line'>   <span class="err">├─</span> <span class="nx">abbrev</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">5</span>
+</span><span class='line'>   <span class="err">├─</span> <span class="kr">char</span><span class="o">-</span><span class="nx">spinner</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">1</span>
+</span><span class='line'>   <span class="err">└─</span> <span class="nx">block</span><span class="o">-</span><span class="nx">stream</span><span class="err">@</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">7</span><span class="o">:</span> <span class="nx">inherits</span><span class="err">@</span><span class="mf">2.0</span><span class="p">.</span><span class="mi">1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/treeify/treeify.gif" alt="treeify" /></p>
+
+<p>Thanks to <a href="http://lukep.org/">Luke Plaster</a> for making our life a bit more easier on the CLI.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/tldr/">
+			
+				Tldr</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-04T17:59:16+05:30" pubdate data-updated="true">Dec 4<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://github.com/tldr-pages/tldr">tldr</a></h1>
+
+<p>If you are new to CLI or not able to recall the flags of your CLI tool, you would consult <code>man pages</code>.</p>
+
+<p><code>tldr</code> is "Too Long Didn't Read" version of man pages ;) i.e it shows us the common usages of a given command.</p>
+
+<p><code>tldr</code> covers:</p>
+
+<ul>
+<li><p>Common commands.</p></li>
+<li><p>GNU/Linux.</p></li>
+<li><p>OSX.</p></li>
+<li><p>SunOS.</p></li>
+</ul>
+
+
+<p><strong>Install it as a CLI app:</strong> <code>$ npm install -g tldr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>tldr sudo
+</span><span class='line'>
+</span><span class='line'>  execute a <span class="nb">command </span>as another user
+</span><span class='line'>
+</span><span class='line'>  - Listing of an unreadable directory:
+</span><span class='line'>
+</span><span class='line'>  sudo ls /usr/local/scrt
+</span><span class='line'>
+</span><span class='line'>  - To edit a file as user www:
+</span><span class='line'>
+</span><span class='line'>  sudo -u www vi /var/www/index.html
+</span><span class='line'>
+</span><span class='line'>  - To shutdown the machine:
+</span><span class='line'>
+</span><span class='line'>  sudo shutdown -r +10 <span class="s2">&quot;Cya soon!&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  - To repeat the last <span class="nb">command </span>as sudo
+</span><span class='line'>
+</span><span class='line'>  sudo !!
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/tldr/tldr.gif" alt="tldr" /></p>
+
+<p>All TLDR pages are in <code>markdown</code> format, checkout <a href="https://github.com/tldr-pages/tldr/blob/master/pages/common/sudo.md">sudo</a> page for an example, this is a community dirven effort, so please feel free to <a href="https://github.com/tldr-pages/tldr/blob/master/CONTRIBUTING.md">contribute</a> :)</p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/12/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/14/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

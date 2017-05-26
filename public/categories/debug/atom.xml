@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: debug | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/debug/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nif]]></title>
+    <link href="http://nmotw.in//github/nif/"/>
+    <updated>2017-05-27T04:34:09+05:30</updated>
+    <id>http://nmotw.in//github/nif</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/nif">nif</a></h1>
+
+<blockquote><p><code>node --inspect</code> a file and open devtool URL.</p></blockquote>
+
+<p><code>nif</code> is for all the lazy folks trying to debug their node script, it runs the <code>node --inspect</code> on the provided file and open the devtool URL <code>chrome-devtools://</code>.</p>
+
+<p>Make sure you have the <a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> installed on your machine,before using this moddule.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g nif</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>sh
+nif ./to-debug.js
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nif/nif.gif" alt="nif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[why-is-node-running]]></title>
+    <link href="http://nmotw.in//github/why-is-node-running/"/>
+    <updated>2016-02-11T20:34:17+05:30</updated>
+    <id>http://nmotw.in//github/why-is-node-running</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/why-is-node-running">why-is-node-running</a></h1>
+
+<blockquote><p>Node is running but you don't know why? why-is-node-running is here to help you.</p></blockquote>
+
+<p>This is a cheeky module that plays with <code>process.binding</code> of node, specifically with <code>process.binding('contextify').ContextifyScript;</code> the core of this library is from node's <a href="https://github.com/nodejs/node/blob/88307974e60346bc98c4e9f70a2b6918ccb6844f/src/node.js">source</a>.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save why-is-node-running</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var log = require('why-is-node-running'); // should be your first require
+var net = require('net');</p>
+
+<p>function createServer () {
+  var server = net.createServer();
+  setInterval(function () {}, 1000);
+  server.listen(0);
+}</p>
+
+<p>createServer();
+createServer();</p>
+
+<p>setTimeout(function () {
+  log() // logs out active handles that are keeping node running
+}, 100);
+```</p>
+
+<p>When executed in <code>/tmp</code> you see an output like:</p>
+
+<p>```sh
+There are 4 known handle(s) keeping the process running and 0 unknown
+Known handles:</p>
+
+<h1>Timer</h1>
+
+<p>/private/tmp/l:6  - setInterval(function () {}, 1000);
+/private/tmp/l:10 - createServer();</p>
+
+<h1>TCP</h1>
+
+<p>/private/tmp/l:7  - server.listen(0);
+/private/tmp/l:10 - createServer();</p>
+
+<h1>TCP</h1>
+
+<p>/private/tmp/l:7  - server.listen(0);
+/private/tmp/l:11 - createServer();</p>
+
+<h1>Timer</h1>
+
+<p>/private/tmp/l:13 - setTimeout(function () {
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="https://nmotw.in/images/why-is-node-running/why-is-node-running.gif" alt="why-is-node-running" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iron-node]]></title>
+    <link href="http://nmotw.in//github/iron-node/"/>
+    <updated>2016-01-21T21:50:46+05:30</updated>
+    <id>http://nmotw.in//github/iron-node</id>
+    <content type="html"><![CDATA[<h1><a href="http://s-a.github.io/iron-node/">iron-node</a></h1>
+
+<blockquote><p>Debug Node.js code with Chrome Developer Tools.</p></blockquote>
+
+<p>Yes you read it right <code>iron-node</code> helps you to debug your node code using chrome devtools, it makes use of <a href="http://electron.atom.io/">electron</a> creates a <code>browser-window</code>
+opens the dev-tool re-compile native modules against electron!</p>
+
+<p>It not only helps you to debug your code, but also helps to debug your node build scripts!</p>
+
+<p>Keep in mind to place the keyword <code>debugger;</code> to a place where you want to stop.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g iron-node</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><strong>CLI:</strong></p>
+
+<p><code>
+iron-node PATH_TO_NODE_JS_FILE [--customparm1=foo --customparm2=bar];
+</code></p>
+
+<p><strong>npm scripts:</strong></p>
+
+<p>```
+  ...
+  "scripts": {</p>
+
+<pre><code>...
+"debug-mocha": "iron-node node_modules/mocha/bin/_mocha",
+"debug-grunt": "iron-node node_modules/grunt-cli/bin/grunt build",
+"debug-gulp": "iron-node node_modules/gulp/bin/gulp.js",
+...
+</code></pre>
+
+<p>  },
+  ...
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/iron-node/iron-node.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[stack-trace]]></title>
+    <link href="http://nmotw.in//github/stack-trace/"/>
+    <updated>2015-12-31T23:17:09+05:30</updated>
+    <id>http://nmotw.in//github/stack-trace</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stack-trace">stack-trace</a></h1>
+
+<blockquote><p>Get v8 stack traces as an array of CallSite objects.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save stack-trace</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var stackTrace = require('stack-trace');
+var trace = stackTrace.get();
+</code></p>
+
+<p><code>js
+var stackTrace = require('stack-trace');
+var err = new Error('something went wrong');
+var trace = stackTrace.parse(err);
+</code></p>
+
+<p>And <code>trace</code> would have CallSite objects and each object will have the below methods:</p>
+
+<ul>
+<li><strong>getThis</strong>: returns the value of this</li>
+<li><strong>getTypeName</strong>: returns the type of this as a string. This is the name of the function stored in the constructor field of this, if available, otherwise the object's [[Class]] internal property.</li>
+<li><strong>getFunction</strong>: returns the current function</li>
+<li><strong>getFunctionName</strong>: returns the name of the current function, typically its name property. If a name property is not available an attempt will be made to try to infer a name from the function's context.</li>
+<li><strong>getMethodName</strong>: returns the name of the property of this or one of its prototypes that holds the current function</li>
+<li><strong>getFileName</strong>: if this function was defined in a script returns the name of the script</li>
+<li><strong>getLineNumber</strong>: if this function was defined in a script returns the current line number</li>
+<li><strong>getColumnNumber</strong>: if this function was defined in a script returns the current column number</li>
+<li><strong>getEvalOrigin</strong>: if this function was created using a call to eval returns a CallSite object representing the location where eval was called</li>
+<li><strong>isToplevel</strong>: is this a toplevel invocation, that is, is this the global object?</li>
+<li><strong>isEval</strong>: does this call take place in code defined by a call to eval?</li>
+<li><strong>isNative</strong>: is this call in native V8 code?</li>
+<li><strong>isConstructor</strong>: is this a constructor call?</li>
+</ul>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/stack-trace/stack-trace.gif" alt="stack-trace" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[require-times]]></title>
+    <link href="http://nmotw.in//github/require-times/"/>
+    <updated>2015-04-09T20:10:22+05:30</updated>
+    <id>http://nmotw.in//github/require-times</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/require-times">require-times</a></h1>
+
+<blockquote><p>Find out how long require calls take in your program.</p></blockquote>
+
+<p>This is cheeky module from <a href="http://maxogden.com/">Max Ogden</a> tap into <code>require.extensions['.js']</code> and lets you know the time consumed by
+the require calls in your code.</p>
+
+<p><strong>Install it:</strong> <code>npm install require-times</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+var rt = require('require-times');
+rt.start();</p>
+
+<p>// hundreds on require statments ;)</p>
+
+<p>rt.end(); // Will spit the time consumed to stdout.
+```</p>
+
+<p><strong>Example:</strong></p>
+
+<p>```js
+var rt = require('require-times')();</p>
+
+<p>rt.start();</p>
+
+<p>require('require-times'); // Dog fooding ;)</p>
+
+<p>rt.end();</p>
+
+<p>// Output => total: 9647ms
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/require-times/require-times.gif" alt="require-times" /></p>
+]]></content>
+  </entry>
+  
+</feed>

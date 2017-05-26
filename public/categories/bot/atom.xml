@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bot | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/bot/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[captionbot]]></title>
+    <link href="http://nmotw.in//github/captionbot/"/>
+    <updated>2016-05-05T18:27:22+05:30</updated>
+    <id>http://nmotw.in//github/captionbot</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/captionbot">captionbot</a></p>
+
+<blockquote><p>Get captions for image using Microsoft's CaptionBot 🤖</p></blockquote>
+
+<p>A cheeky bot that tries recognize an image and explain it like a human would do, it requires node version <code>&gt;=4</code> this is powered by <a href="https://www.captionbot.ai/">CaptionBot</a>, a free service provided by Microsoft.</p>
+
+<p>The author says he would consider this module "for testing only" and does not recommend using in a production system.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save captionbot</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+const captionbot = require('captionbot');</p>
+
+<p>captionbot('http://i.imgur.com/o33PTUp.jpg')
+.then(caption => {</p>
+
+<pre><code>console.log(caption);
+</code></pre>
+
+<p>});</p>
+
+<p>//=> 'I think it's a group of people posing for a picture\nand he seems 😐.'
+```</p>
+
+<p>or</p>
+
+<p>```js
+const captionbot = require('captionbot');</p>
+
+<p>try {</p>
+
+<pre><code>const caption = await captionbot('http://i.imgur.com/o33PTUp.jpg');
+console.log(caption);
+</code></pre>
+
+<p>} catch(e) {</p>
+
+<pre><code>console.error(e);
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/captionbot/captionbot.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

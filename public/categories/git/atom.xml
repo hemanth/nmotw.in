@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/git/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git-promise]]></title>
+    <link href="http://nmotw.in//github/git-promise/"/>
+    <updated>2014-08-14T17:51:17+05:30</updated>
+    <id>http://nmotw.in//github/git-promise</id>
+    <content type="html"><![CDATA[<h2>git-promise</h2>
+
+<blockquote><p>Simple wrapper that allows you to run any <code>git</code> command using a more intuitive syntax.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/git-promise">git-promise</a> is a product of a very good combination of <code>Q</code> and <code>ShellJS</code> and returns a promise for us, it also handles exit code automatically. Parsing the output or dealing with non 0 exit code is also very clean and easy with this.</p>
+
+<p>We can also chain commands, execute the <code>git</code> command in a specific dir. If those are not enough it also provides a copule of <code>util</code> methods.</p>
+
+<p>Installing it: <code>$ npm install git-promise</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript
+var git = require('git-promise');</p>
+
+<p>git("init")
+.then(console.log)
+.fail(console.error);
+```</p>
+
+<p>That would output something like: <code>Initialized empty Git repository in ...</code></p>
+
+<p><strong>More complex example:</strong></p>
+
+<p>Say we have a <code>test</code> dir that has a file named <code>me</code> with the content <code>blame me</code> and we run <code>git blame</code> on it.</p>
+
+<p>```javascript
+git("blame me", {</p>
+
+<pre><code>cwd: "blame"
+</code></pre>
+
+<p>}, function(output, code) {</p>
+
+<pre><code>// output and cwd will be as specified.
+</code></pre>
+
+<p>}).then(function(what) {</p>
+
+<pre><code>// you would have switched back to current dir.
+</code></pre>
+
+<p>}).fail(function(err) {</p>
+
+<pre><code>// If there are any errors
+</code></pre>
+
+<p>}).fin(function() {</p>
+
+<pre><code>// Finally reach here.
+</code></pre>
+
+<p>});
+```</p>
+
+<p>All in all <code>git-promise</code> is a very well composed module and has a lot of potential to get more better, a huge thanks to <a href="https://twitter.com/piuccio">Fabio Crisci</a> for authoring this module.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/git-promise/git-promise.gif" alt="git-promise" /></p>
+]]></content>
+  </entry>
+  
+</feed>

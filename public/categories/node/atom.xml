@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: node | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/node/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[node-nightly]]></title>
+    <link href="http://nmotw.in//github/node-nightly/"/>
+    <updated>2016-06-30T18:01:14+05:30</updated>
+    <id>http://nmotw.in//github/node-nightly</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/node-nightly">node-nightly</a></h1>
+
+<blockquote><p>node-nightly at your finger tips!</p></blockquote>
+
+<p><code>node-nightly</code> as the name says it's the nightly version of <code>node</code>, basically:</p>
+
+<ul>
+<li><p>Check if nightly version of node is available if not install it. (For the first time.)</p></li>
+<li><p>If there is a new version available will notify the user saying there is a newer version available and can update using <code>node-nightly --update</code></p></li>
+</ul>
+
+
+<p><strong>Get it</strong> : <code>npm install -g node-nightly</code> # Preferred global</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+$ node-nightly --inspect --debug-brk index.js
+Debugger listening on port 9229.
+To start debugging, open the following URL in Chrome:</p>
+
+<pre><code>chrome-devtools://devtools/remote/serve_file/@521e5b7e2b7cc66b4006a8a54cb9c4e57494a5ef/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/node
+</code></pre>
+
+<p>Debugger attached.
+Waiting for the debugger to disconnect...
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-nightly/node-nightly.gif" alt="node-nightly" /></p>
+]]></content>
+  </entry>
+  
+</feed>

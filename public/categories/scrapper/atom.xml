@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scrapper | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/scrapper/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nom]]></title>
+    <link href="http://nmotw.in//github/nom/"/>
+    <updated>2014-07-24T19:37:33+05:30</updated>
+    <id>http://nmotw.in//github/nom</id>
+    <content type="html"><![CDATA[<blockquote><p>Om nom nom. Super simple screen scrapper!</p></blockquote>
+
+<p>Nom uses <a href="http://github.com/MatthewMueller/cheerio">cheerio</a> to provide the core jQuery API for grabbing and manipulating the response.</p>
+
+<p>Installation: <code>npm install nom</code> or <code>npm install -g nom</code> if you want to use it on the CLI.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>From script:</p>
+
+<p>```javascript</p>
+
+<p>var nom = require('nom');</p>
+
+<p>nom('http://nmotw.in', function(err,$) {</p>
+
+<pre><code>console.log( $('title').text() );
+</code></pre>
+
+<p>});</p>
+
+<p>// Would log :
+// Node Module Of The Week  | NMOTW</p>
+
+<p>```</p>
+
+<p>From CLI:</p>
+
+<p>```sh</p>
+
+<p>$ nom http://nmotw.in 'title'
+Node Module Of The Week  | NMOTW</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nom/nom.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mattmueller">Matt Mueller</a> for <a href="https://www.npmjs.org/package/nom">nom</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

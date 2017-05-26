@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jsonschema | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/jsonschema/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[json-schema-faker]]></title>
+    <link href="http://nmotw.in//github/json-schema-faker/"/>
+    <updated>2017-03-10T17:49:12+05:30</updated>
+    <id>http://nmotw.in//github/json-schema-faker</id>
+    <content type="html"><![CDATA[<h1><a href="">json-schema-faker</a></h1>
+
+<blockquote><p>JSON-Schema + fake data generators</p></blockquote>
+
+<p>Use <a href="http://json-schema.org/">JSON Schema</a> along with fake generators to provide consistent and meaningful fake data.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save json-schema-faker</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const jsf = require('json-schema-faker');</p>
+
+<p>const schema = {
+  "type": "object",
+  "properties": {</p>
+
+<pre><code>"name": {
+  "type": "string",
+  "faker": "name.findName"
+},
+"email": {
+  "type": "string",
+  "faker": "internet.email"
+}
+</code></pre>
+
+<p>  },
+  "required": [</p>
+
+<pre><code>"name",
+"email"
+</code></pre>
+
+<p>  ]
+};</p>
+
+<p>console.log(jsf(schema));</p>
+
+<p>/*</p>
+
+<p>^ Would log something like:</p>
+
+<p>{
+  "name": "Annetta Weimann",
+  "email": "Assunta_Beer@gmail.com"
+}
+*/
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-schema-faker/json-schema-faker.gif" alt="json-schema-faker" /></p>
+
+<p>P.S: Don't forget to checkout their web-<a href="http://json-schema-faker.js.org/">app</a>!</p>
+]]></content>
+  </entry>
+  
+</feed>

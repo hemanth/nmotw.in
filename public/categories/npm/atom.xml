@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: npm | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/npm/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[cost-of-modules]]></title>
+    <link href="http://nmotw.in//github/cost-of-modules/"/>
+    <updated>2016-12-01T19:06:43+05:30</updated>
+    <id>http://nmotw.in//github/cost-of-modules</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
+
+<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
+
+<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
+identify which dependency is slowing the module down.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
+
+<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--less</code>  Show the biggest 10 modules</p>
+
+<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
+
+<p><code>--no-install</code>  Skip installation</p>
+
+<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[updtr]]></title>
+    <link href="http://nmotw.in//github/updtr/"/>
+    <updated>2016-11-17T13:57:47+05:30</updated>
+    <id>http://nmotw.in//github/updtr</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/updtr">updtr</a></h1>
+
+<blockquote><p>Update outdated npm modules with zero pain™</p></blockquote>
+
+<p><code>updtr</code> installs the latest versions of each <code>npm outdated</code> dependency.
+Runs <code>test</code> on each update and if the test succeeds, <code>updtr</code> saves the new version number to your <code>package.json</code>.
+If the test fails, however, <code>updtr</code> rolls back its changes.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global updtr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> updtr --help</p>
+
+<p>  Usage: updtr [options]</p>
+
+<p>  Update outdated npm modules with zero pain™</p>
+
+<p>  Options:</p>
+
+<pre><code>-h, --help                 output usage information
+-V, --version              output the version number
+-R, --reporter &lt;reporter&gt;  choose reporter: default, shy
+-w, --wanted               updates to wanted version specified in package.json instead of the modules latest version
+-t, --test &lt;test&gt;          change the command for the tests
+-e, --exclude &lt;exclude&gt;    exclude modules comma seperated, e.g. updtr --exclude module1,module2
+--test-stdout              shows stdout if your test command fails
+--save-exact               save exact module version
+--registry                 change registry
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/updtr/updtr.gif" alt="updtr" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[yarn]]></title>
+    <link href="http://nmotw.in//github/yarn/"/>
+    <updated>2016-10-13T19:37:03+05:30</updated>
+    <id>http://nmotw.in//github/yarn</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
+
+<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
+
+<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
+
+<ul>
+<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
+<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
+<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
+<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
+<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
+<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
+<li>More emojis. 🐈</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
+
+<p><strong>CLI usage:</strong></p>
+
+<p><code>sh
+yarn add
+yarn bin
+yarn cache
+yarn check
+yarn clean
+yarn config
+yarn generate-lock-entry
+yarn global
+yarn info
+yarn init
+yarn install
+yarn licenses
+yarn link
+yarn login
+yarn logout
+yarn ls
+yarn outdated
+yarn owner
+yarn pack
+yarn publish
+yarn remove
+yarn run
+yarn self-update
+yarn tag
+yarn team
+yarn test
+yarn unlink
+yarn upgrade
+yarn version
+yarn why
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[next-update]]></title>
+    <link href="http://nmotw.in//github/next-update/"/>
+    <updated>2016-08-11T19:10:05+05:30</updated>
+    <id>http://nmotw.in//github/next-update</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/next-update">next-update</a></h1>
+
+<blockquote><p>Can I update the dependencies without breaking the tests?</p></blockquote>
+
+<p>Summarizing <code>next-update</code> from the authors own words:</p>
+
+<ul>
+<li>A good workflow using <em>next-update</em>
+
+<ul>
+<li>see available new versions <code>next-update --available</code></li>
+<li>check latest version of each module using <code>next-update --latest</code></li>
+<li>install new versions of the desired modules using standard <code>npm i dependency@version --save</code></li>
+</ul>
+</li>
+<li>You can use custom test command, for example <code>next-update -t "grunt test"</code>
+
+<ul>
+<li><code>npm test</code> is used by default.</li>
+</ul>
+</li>
+<li>You can keep each working version in package.json by using <code>--keep</code> flag.</li>
+</ul>
+
+
+<p><strong>Get it:</strong></p>
+
+<p><code>npm install -g next-update  // installs module globally</code></p>
+
+<p><code>npm install --save-dev next-update</code></p>
+
+<p>In your <code>package.json</code> :</p>
+
+<p>```js
+{</p>
+
+<pre><code>"scripts": {
+    "next-update": "next-update -k true --tldr"
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+$ next-update --help | pbcopy
+next-update - Tests if module's dependencies can be updated to the newer version without breaking the tests
+  version: 1.2.2
+  author: {"email":"gleb.bahmutov@gmail.com","name":"Gleb Bahmutov"}</p>
+
+<p>Options:
+  --revert           install original module versions listed in package.json   [default: false]
+  --available, -a    only query available later versions, do not test them     [default: false]
+  --module, -m       checks specific module, can include version name@version  [default: null]
+  --latest, -l       only check latest available update                        [default: true]
+  --color, -c        color terminal output (if available)                      [default: true]
+  --version, -v      show version and exit                                     [default: false]
+  --test, -t         custom test command to run instead of npm test        <br/>
+  --skip             skip running tests first                                  [default: false]
+  --all              install all modules at once before testing                [default: false]
+  --keep, -k         keep tested version if it is working                      [default: false]
+  --allow            allow major / minor / patch updates                       [default: "major"]
+  --type             check dependencies of type (all, prod, dev, peer)         [default: "all"]
+  --tldr             only print VERY important log messages                    [default: false]
+  --changed-log, -L  print commit changes between working versions             [default: true]
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/next-update/next-update.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[trymodule]]></title>
+    <link href="http://nmotw.in//github/trymodule/"/>
+    <updated>2016-03-31T18:41:49+05:30</updated>
+    <id>http://nmotw.in//github/trymodule</id>
+    <content type="html"><![CDATA[<h1><a href="">trymodule</a></h1>
+
+<blockquote><p>It's never been easier to try nodejs modules!</p></blockquote>
+
+<p>Quickly install any node module you want and start a <code>REPL</code> with the installed module in the scope with <code>trymodule</code>!</p>
+
+<p>Basically, it check if the module you are trying exists in the <code>~/.trymodule/node_module</code> if require it and start a <code>REPL</code> or
+else installs it using <code>npmi</code> module and starts the <code>REPL</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g trymodule</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> trymodule xkcd-imgs
+Gonna start a REPL with packages installed and loaded for you
+Couldn't find 'xkcd-imgs' locally, gonna download it now
+xkcd-imgs@1.0.1 ../../Users/hhegadehallimadh/.trymodule/node_modules/xkcd-imgs
+└── request@2.69.0 (aws-sign2@0.6.0, forever-agent@0.6.1, tunnel-agent@0.4.2, oauth-sign@0.8.1, caseless@0.11.0, is-typedarray@1.0.0, stringstream@0.0.5, isstream@0.1.2, json-stringify-safe@5.0.1, extend@3.0.0, tough-cookie@2.2.2, node-uuid@1.4.7, qs@6.0.2, mime-types@2.1.10, form-data@1.0.0-rc4, combined-stream@1.0.5, hawk@3.1.3, aws4@1.3.2, http-signature@1.1.1, bl@1.0.3, har-validator@2.0.6)
+Package 'xkcd-imgs' was loaded and assigned to 'xkcd_imgs' in the current scope
+REPL started...</p>
+
+<blockquote><p>```</p></blockquote>
+
+<p>```js</p>
+
+<blockquote><p>xkcd_imgs
+{ img: [Function] }
+xkcd_imgs.img( (err, res) => console.log(res) );
+undefined
+{ url: 'http://imgs.xkcd.com/comics/instagram.png',
+  title: 'I\'m gonna call the cops and get Chad arrested for theft, then move all my stuff to the house across the street. Hopefully the owners there are more responsible.' }
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trymodule/trymodule.gif" alt="trymodule" /></p>
+]]></content>
+  </entry>
+  
+</feed>

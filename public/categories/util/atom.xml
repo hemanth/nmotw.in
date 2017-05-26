@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: util, | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/util/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[tldr]]></title>
+    <link href="http://nmotw.in//github/tldr/"/>
+    <updated>2014-12-04T17:59:16+05:30</updated>
+    <id>http://nmotw.in//github/tldr</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/tldr-pages/tldr">tldr</a></h1>
+
+<p>If you are new to CLI or not able to recall the flags of your CLI tool, you would consult <code>man pages</code>.</p>
+
+<p><code>tldr</code> is "Too Long Didn't Read" version of man pages ;) i.e it shows us the common usages of a given command.</p>
+
+<p><code>tldr</code> covers:</p>
+
+<ul>
+<li><p>Common commands.</p></li>
+<li><p>GNU/Linux.</p></li>
+<li><p>OSX.</p></li>
+<li><p>SunOS.</p></li>
+</ul>
+
+
+<p><strong>Install it as a CLI app:</strong> <code>$ npm install -g tldr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<p>$ tldr sudo</p>
+
+<p>  execute a command as another user</p>
+
+<ul>
+<li>Listing of an unreadable directory:</li>
+</ul>
+
+
+<p>  sudo ls /usr/local/scrt</p>
+
+<ul>
+<li>To edit a file as user www:</li>
+</ul>
+
+
+<p>  sudo -u www vi /var/www/index.html</p>
+
+<ul>
+<li>To shutdown the machine:</li>
+</ul>
+
+
+<p>  sudo shutdown -r +10 "Cya soon!"</p>
+
+<ul>
+<li>To repeat the last command as sudo</li>
+</ul>
+
+
+<p>  sudo !!</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/tldr/tldr.gif" alt="tldr" /></p>
+
+<p>All TLDR pages are in <code>markdown</code> format, checkout <a href="https://github.com/tldr-pages/tldr/blob/master/pages/common/sudo.md">sudo</a> page for an example, this is a community dirven effort, so please feel free to <a href="https://github.com/tldr-pages/tldr/blob/master/CONTRIBUTING.md">contribute</a> :)</p>
+]]></content>
+  </entry>
+  
+</feed>

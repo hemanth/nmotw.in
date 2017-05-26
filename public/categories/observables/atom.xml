@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: observables | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/observables/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[obsify]]></title>
+    <link href="http://nmotw.in//github/obsify/"/>
+    <updated>2016-05-12T18:49:01+05:30</updated>
+    <id>http://nmotw.in//github/obsify</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/obsify">obsify</a></h1>
+
+<blockquote><p>Observableify a callback-style function</p></blockquote>
+
+<p>Observerifies (is that even a word ;)?) a callback-style function into an observable.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save obsify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const fs = require('fs');
+const obsify = require('obsify');</p>
+
+<p>obsify(fs.readFile)('package.json', 'utf8')</p>
+
+<pre><code>.map(data =&gt; JSON.parse(data))
+.subscribe(data =&gt; {
+    console.log(data.name);
+    //=&gt; 'obsify'
+});
+</code></pre>
+
+<p>```</p>
+
+<p>or <code>observableify</code> all methods in a module</p>
+
+<p>```js
+obsify(fs).readFile('package.json', 'utf8')</p>
+
+<pre><code>.map(data =&gt; JSON.parse(data))
+.subscribe(data =&gt; {
+    console.log(data.name);
+    //=&gt; 'obsify'
+});
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/obsify/obsify.gif" alt="obsify" /></p>
+]]></content>
+  </entry>
+  
+</feed>

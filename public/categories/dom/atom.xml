@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dom | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[what-input]]></title>
+    <link href="http://nmotw.in//github/what-input/"/>
+    <updated>2017-04-07T19:40:55+05:30</updated>
+    <id>http://nmotw.in//github/what-input</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/what-input">what-input</a></p>
+
+<blockquote><p>A global utility for tracking the current input method (mouse, keyboard or touch).</p></blockquote>
+
+<p>What Input adds data attributes to the <html> tag based on the type of input being used.</p>
+
+<p>It also exposes a simple API that can be used for scripting interactions.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save what-input</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>``js
+whatInput.ask(); // returns</code>mouse<code>,</code>keyboard<code>or</code>touch`</p>
+
+<p>whatInput.types(); // ex. returns ['mouse', 'keyboard']</p>
+
+<p>whatInput.ask('loose'); // returns <code>mouse</code> because mouse movement was detected</p>
+
+<p>myButton.addEventListener('click', function() {</p>
+
+<p>  if (whatInput.ask() === 'mouse') {</p>
+
+<pre><code>// do mousy things
+</code></pre>
+
+<p>  } else if (whatInput.ask() === 'keyboard') {</p>
+
+<pre><code>// do keyboard things
+</code></pre>
+
+<p>  }</p>
+
+<p>});
+```</p>
+
+<p>Event mapping:</p>
+
+<p>```js
+// mapping of events to input types
+const inputMap = {</p>
+
+<pre><code>'keyup': 'keyboard',
+'mousedown': 'mouse',
+'mousemove': 'mouse',
+'MSPointerDown': 'pointer',
+'MSPointerMove': 'pointer',
+'pointerdown': 'pointer',
+'pointermove': 'pointer',
+'touchstart': 'touch'
+</code></pre>
+
+<p>};
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/what-input/what-input.gif" alt="what-input" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[aos]]></title>
+    <link href="http://nmotw.in//github/aos/"/>
+    <updated>2017-03-30T09:25:30+05:30</updated>
+    <id>http://nmotw.in//github/aos</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/aos">aos</a></h1>
+
+<blockquote><p>animate on scroll</p></blockquote>
+
+<p>Small library to animate elements on your page as you scroll.</p>
+
+<p><code>AOS</code> allows you to animate elements as you scroll down, and up.</p>
+
+<p>If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>html</code>:</p>
+
+<p>```html</p>
+
+<div data-aos="animation_name"/>
+```
+
+```js
+const aos = require('aos');
+aos.init();
+```
+
+Major set of animations: Fade, Flip, Slide, Zoom, Easing functions and anchor placements.
+
+__GIF FTW!:__
+
+![aos](/images/aos/aos.gif)
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[sweetalert]]></title>
+    <link href="http://nmotw.in//github/sweetalert/"/>
+    <updated>2017-03-17T16:36:18+05:30</updated>
+    <id>http://nmotw.in//github/sweetalert</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sweetalert">sweetalert</a></h1>
+
+<blockquote><p>An awesome replacement/alternative for alert().</p></blockquote>
+
+<p><code>sweetalert</code> is an alternative to annoying alert, it's rather a sweet a simple modal box.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save sweetalert</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p><code>js
+const swal = require('sweetalert');
+</code></p>
+
+<p><code>js
+swal("Oops...", "Something went wrong!", "error");
+</code></p>
+
+<p>```js
+swal({
+  title: 'Ajax request example',
+  text: 'Submit to run ajax request',
+  type: 'info',
+  showCancelButton: true,
+  closeOnConfirm: false,
+  disableButtonsOnConfirm: true,
+  confirmLoadingButtonColor: '#DD6B55'
+}, function(inputValue){
+  setTimeout(function() {</p>
+
+<pre><code>swal('Ajax request finished!');
+</code></pre>
+
+<p>  }, 2000);
+});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/sweetalert/sweetalert.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[color-thief]]></title>
+    <link href="http://nmotw.in//github/color-thief/"/>
+    <updated>2016-03-03T20:20:23+05:30</updated>
+    <id>http://nmotw.in//github/color-thief</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/color-thief">color-thief</a></h1>
+
+<blockquote><p>Grab the color palette or dominant color from an image!</p></blockquote>
+
+<p><code>color-thief</code> helps to grab get the dominant color or the color palette from an image, this module makes use of JS, some cool math and the canvas tag to make it happen.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save color-thief</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var colorThief = new ColorThief();
+colorThief.getColor(sourceImage);</p>
+
+<p>/<em>
+getColor(sourceImage[, quality])
+returns {r: num, g: num, b: num}
+</em>/
+```</p>
+
+<p>```js
+var colorThief = new ColorThief();
+colorThief.getPalette(sourceImage, 8);</p>
+
+<p>/<em>
+getPalette(sourceImage[, colorCount, quality])
+returns [ [num, num, num], [num, num, num], ... ]
+</em>/
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/color-thief/color-thief.gif" alt="color-thief" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[fp-dom]]></title>
+    <link href="http://nmotw.in//github/fp-dom/"/>
+    <updated>2016-01-14T22:22:27+05:30</updated>
+    <id>http://nmotw.in//github/fp-dom</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
+
+<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
+
+<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
+
+<ul>
+<li>animate</li>
+<li>append</li>
+<li>addClass</li>
+<li>removeClass</li>
+<li>toggleClass</li>
+<li>hasClass</li>
+<li>contains</li>
+<li>elem</li>
+<li>insertAfter</li>
+<li>insertBefore</li>
+<li>interval</li>
+<li>isdom</li>
+<li>isvdom</li>
+<li>listen</li>
+<li>prepend</li>
+<li>replace</li>
+<li>select</li>
+<li>selectOne</li>
+<li>setattr</li>
+<li>timeout</li>
+<li>velem</li>
+</ul>
+
+
+<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+fpdom = require('fp-dom');
+let appendtoBody = fpdom.append(document.body),
+  h1 = fpdom.elem('h1','meow');</p>
+
+<p>appendtoBody(h1);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
+]]></content>
+  </entry>
+  
+</feed>

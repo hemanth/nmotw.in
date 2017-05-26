@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: html | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/html/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[autosize-input]]></title>
+    <link href="http://nmotw.in//github/autosize-input/"/>
+    <updated>2016-09-29T19:30:53+05:30</updated>
+    <id>http://nmotw.in//github/autosize-input</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
+
+<blockquote><p>Effortless, dynamic-width text boxes.</p></blockquote>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Dynamically adjusts the width of the text box to fit its current contents</li>
+<li>Can be initialised to fit its <code>placeholder</code> attribute</li>
+<li>Optionally set a <code>min-width</code> based on the element&rsquo;s initial content</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g autosize-input</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+autosizeInput(document.querySelector('#foo'));</p>
+
+<p>autosizeInput(document.querySelector('#bar'));</p>
+
+<p>autosizeInput(document.querySelector('#baz'), { minWidth: true });
+```</p>
+
+<p><strong>Implementation details:</strong></p>
+
+<ul>
+<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> property of the given text box is set, inline, to <code>content-box</code>. Therefore, the width we assign to our text box <em>excludes</em> its <code>padding</code> and <code>border</code> properties.</p></li>
+<li><p>A hidden &ldquo;ghost&rdquo; <code>div</code> &mdash; given the same <code>font-size</code> and <code>font-family</code> as the text box &mdash; is used to compute the correct width to assign to the text box. This width is recomputed and assigned to the text box on every <a href="https://developer.mozilla.org/en-US/docs/Web/Events/input"><code>input</code></a> event.</p></li>
+<li><p>The single &ldquo;ghost&rdquo; element is shared amongst all the &ldquo;autosized&rdquo; text boxes on the page.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cleave.js]]></title>
+    <link href="http://nmotw.in//github/cleave.js/"/>
+    <updated>2016-07-14T17:53:00+05:30</updated>
+    <id>http://nmotw.in//github/cleave.js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
+
+<blockquote><p>Input text content formatter.</p></blockquote>
+
+<p><code>Cleave.js</code> has a simple purpose: to help you format input text content automatically.</p>
+
+<p>Provides these features:</p>
+
+<ul>
+<li><p>Credit card number formatting</p></li>
+<li><p>Phone number formatting (i18n js lib separated for each country to reduce size)</p></li>
+<li><p>Date formatting</p></li>
+<li><p>Numeral formatting</p></li>
+<li><p>Custom delimiter, prefix and blocks pattern</p></li>
+<li><p>CommonJS / AMD mode</p></li>
+<li><p>ReactJS component port</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save cleave.js</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```html
+<input class="input-phone" type="text"/>
+````</p>
+
+<p>```js
+var Cleave = require('cleave.js');
+require('cleave.js/dist/addons/cleave-phone.{country}');</p>
+
+<p>var cleave = new Cleave('.input-phone', {</p>
+
+<pre><code>phone:      true,
+regionCode: '{country}'
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cleave.js/cleave.js.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ineed]]></title>
+    <link href="http://nmotw.in//github/ineed/"/>
+    <updated>2016-01-07T22:02:52+05:30</updated>
+    <id>http://nmotw.in//github/ineed</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
+
+<blockquote><p>Web scraping and HTML-reprocessing. The easy way.</p></blockquote>
+
+<p><img src="/images/ineed/ineed-logo.png" alt="ineed-logo" /></p>
+
+<p><code>ineed</code> allows you collect useful data from web pages using simple and nice API.</p>
+
+<p>It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save ineed</code></p>
+
+<p><strong>Usage:</strong> <code>ineed.&lt;action&gt;[.&lt;plugin&gt;...].&lt;from*&gt;</code></p>
+
+<p>Where <code>action</code> could be: <code>collect</code> or <code>reprocess</code></p>
+
+<p><code>plugin</code> could be one of: <code>.comments</code> <code>.cssCode</code> <code>.hyperlinks</code> <code>.images</code> <code>.jsCode</code> <code>.scripts</code> <code>.stylesheets</code> <code>.texts</code> <code>.title</code></p>
+
+<p><code>from</code> could be: <code>from</code> or <code>fromHtml</code></p>
+
+<p>P.S: One could write a custom plugin using the <code>.using()</code> method.</p>
+
+<p><strong>Code sample:</strong></p>
+
+<p>```js
+var ineed = require('ineed');</p>
+
+<p>ineed.collect.images.hyperlinks.scripts.stylesheets.from('http://nmotw.in',</p>
+
+<pre><code>(err, response, result) =&gt; console.log(result));
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+var ineed = require('ineed');</p>
+
+<p>var result = ineed.collect.texts.images.scripts.fromHtml(html);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ineed/ineed.gif" alt="ineed" /></p>
+
+<p>Thanks to <a href="https://twitter.com/nilukini">Ivan Nikulin</a> for this cheeky module.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[clipboard.js]]></title>
+    <link href="http://nmotw.in//github/clipboard.js/"/>
+    <updated>2015-10-01T18:20:14+05:30</updated>
+    <id>http://nmotw.in//github/clipboard.js</id>
+    <content type="html"><![CDATA[<h1><a href="http://zenorocha.github.io/clipboard.js/">clipboard.js</a></h1>
+
+<blockquote><p>A modern approach to copy text to clipboard!</p></blockquote>
+
+<p>With 4.7K+ stars to it's repo with a modern approach to copy text coded with <code>ES2015/6</code> classes,  No Flash. Just 2kb!</p>
+
+<p><a href="http://zenorocha.com/">Zeno Rocha</a>'s <code>clipboard.js</code> undoubtedly is the nmotw!</p>
+
+<p>It makes use of  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">execCommand</a> APIs.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save clipboard.js</code></p>
+
+<p><strong>Sample usage:</strong>_</p>
+
+<p>```js
+var clipboard = new Clipboard('.btn');</p>
+
+<p>clipboard.on('success', function(e) {</p>
+
+<pre><code>console.info('Action:', e.action);
+console.info('Text:', e.text);
+console.info('Trigger:', e.trigger);
+
+e.clearSelection();
+</code></pre>
+
+<p>});</p>
+
+<p>clipboard.on('error', function(e) {</p>
+
+<pre><code>console.error('Action:', e.action);
+console.error('Trigger:', e.trigger);
+</code></pre>
+
+<p>});
+```</p>
+
+<p>In your <code>HTML</code>:</p>
+
+<p>```html</p>
+
+<!-- Target -->
+
+
+<p><input id="foo" value="https://github.com/zenorocha/clipboard.js.git"></p>
+
+<!-- Trigger -->
+
+
+<p><button class="btn" data-clipboard-target="#foo"></p>
+
+<pre><code>&lt;img src="assets/clippy.svg" alt="Copy to clipboard"&gt;
+</code></pre>
+
+<p></button>
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/clipboard.js/clipboard.js.gif" alt="clipboard.js" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[html.js]]></title>
+    <link href="http://nmotw.in//github/html.js/"/>
+    <updated>2015-06-25T17:42:57+05:30</updated>
+    <id>http://nmotw.in//github/html.js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/html.js">html.js</a></h1>
+
+<blockquote><p>An intuitive, extensible way to work directly with the DOM.</p></blockquote>
+
+<p><code>html.js</code> is a fork of <a href="http://adriancooney.ie/voyeur.js/">voyeur.js</a> that has made it more simpler to deal with DOM in a
+relatively new way.</p>
+
+<p>It has a pretty extensive <a href="http://nbubna.github.io/HTML/#API">API</a> and you could also create your own plugins
+<code>HTML._.fn.name = function;</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save html.js</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<p>```js
+let HTML = require('html.js');</p>
+
+<p>HTML.body.header; // returns header element.</p>
+
+<p>HTML.query("#example").h1.em; // chain on, man.</p>
+
+<p>if (!('each' in node)) {
+  HTML.ify(node);
+}
+node.each(function(el){ console.log(el, ' is your friend!'); });
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/html.js/html.js.gif" alt="html.js" /></p>
+
+<p>Thanks to <a href="https://github.com/nbubna">Nathan Bubna</a> for this module.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scraper | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/scraper/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ineed]]></title>
+    <link href="http://nmotw.in//github/ineed/"/>
+    <updated>2016-01-07T22:02:52+05:30</updated>
+    <id>http://nmotw.in//github/ineed</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
+
+<blockquote><p>Web scraping and HTML-reprocessing. The easy way.</p></blockquote>
+
+<p><img src="/images/ineed/ineed-logo.png" alt="ineed-logo" /></p>
+
+<p><code>ineed</code> allows you collect useful data from web pages using simple and nice API.</p>
+
+<p>It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save ineed</code></p>
+
+<p><strong>Usage:</strong> <code>ineed.&lt;action&gt;[.&lt;plugin&gt;...].&lt;from*&gt;</code></p>
+
+<p>Where <code>action</code> could be: <code>collect</code> or <code>reprocess</code></p>
+
+<p><code>plugin</code> could be one of: <code>.comments</code> <code>.cssCode</code> <code>.hyperlinks</code> <code>.images</code> <code>.jsCode</code> <code>.scripts</code> <code>.stylesheets</code> <code>.texts</code> <code>.title</code></p>
+
+<p><code>from</code> could be: <code>from</code> or <code>fromHtml</code></p>
+
+<p>P.S: One could write a custom plugin using the <code>.using()</code> method.</p>
+
+<p><strong>Code sample:</strong></p>
+
+<p>```js
+var ineed = require('ineed');</p>
+
+<p>ineed.collect.images.hyperlinks.scripts.stylesheets.from('http://nmotw.in',</p>
+
+<pre><code>(err, response, result) =&gt; console.log(result));
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+var ineed = require('ineed');</p>
+
+<p>var result = ineed.collect.texts.images.scripts.fromHtml(html);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ineed/ineed.gif" alt="ineed" /></p>
+
+<p>Thanks to <a href="https://twitter.com/nilukini">Ivan Nikulin</a> for this cheeky module.</p>
+]]></content>
+  </entry>
+  
+</feed>

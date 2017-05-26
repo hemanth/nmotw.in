@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: svg | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/svg/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[svg-captcha]]></title>
+    <link href="http://nmotw.in//github/svg-captcha/"/>
+    <updated>2016-11-24T20:22:03+05:30</updated>
+    <id>http://nmotw.in//github/svg-captcha</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/svg-captcha">svg-captcha</a></h1>
+
+<blockquote><p>Generate svg captcha.</p></blockquote>
+
+<p><code>svg-captcha</code> uses OpenType font parser and text skewing martix logic to generate random SVG captchas.</p>
+
+<p>It returns an object which has the SVG data and the text which was used to generate the same.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save captcha</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var svgCaptcha = require('svg-captcha');</p>
+
+<p>// generate random text of length 4
+var text = svgCaptcha.randomText();</p>
+
+<p>// generate svg image
+var captcha = svgCaptcha(text);</p>
+
+<p>// generate both and returns an object
+var captcha = svgCaptcha.create();</p>
+
+<p>console.log(c);
+// {data: '&lt;svg.../svg>', text: 'abcd'}
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/svg-captcha/svg-captcha.gif" alt="svg-captcha" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[trianglify]]></title>
+    <link href="http://nmotw.in//github/trianglify/"/>
+    <updated>2015-09-24T17:23:44+05:30</updated>
+    <id>http://nmotw.in//github/trianglify</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
+
+<blockquote><p>Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds.</p></blockquote>
+
+<p>This is inspired by <a href="https://github.com/btmills/geopattern">btmills/geopattern</a> thanks to <a href="http://qrohlf.com/">Quinn Rohlf</a> for this.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save trianglify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var Trianglify = require('trianglify');
+var pattern = Trianglify({width: 200, height: 200});
+document.body.appendChild(pattern.canvas());
+</code></p>
+
+<p>There are few wonderful <a href="https://github.com/qrohlf/trianglify/blob/master/Readme.md#options">options</a> <code>color_function</code> being one of them.</p>
+
+<p>Color function that uses the HSL color format to generate a rainbow pattern:</p>
+
+<p>```js
+var colorFunc = function(x, y) {</p>
+
+<pre><code>return 'hsl('+Math.floor(Math.abs(x*y)*360)+',80%,60%)';
+</code></pre>
+
+<p>};</p>
+
+<p>var pattern = Trianglify({color_function: colorFunc})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
+]]></content>
+  </entry>
+  
+</feed>

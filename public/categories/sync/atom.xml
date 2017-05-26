@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sync | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/sync/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ambi]]></title>
+    <link href="http://nmotw.in//github/ambi/"/>
+    <updated>2015-12-03T20:51:30+05:30</updated>
+    <id>http://nmotw.in//github/ambi</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
+
+<blockquote><p>Execute a function ambidextrously.</p></blockquote>
+
+<p><code>ambi</code> normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --save ambi</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var ambi = require('ambi');
+var child_process = require('child_process');</p>
+
+<p>ambi(child_process.execSync, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Async</p>
+
+<p>ambi(child_process.exec, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Sync
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ambi/ambi.gif" alt="ambi" /></p>
+
+<p>Thanks to <a href="http://balupton.com/">Benjamin Lupton</a> for this module.</p>
+]]></content>
+  </entry>
+  
+</feed>

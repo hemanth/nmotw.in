@@ -1,0 +1,275 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>next-update - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="next-update Can I update the dependencies without breaking the tests? Summarizing next-update from the authors own words: A good workflow using next- &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="next-update - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/next-update/">
+    <meta name="twitter:description" content="next-update Can I update the dependencies without breaking the tests? Summarizing next-update from the authors own words: A good workflow using next- &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="next-update - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/next-update/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="next-update Can I update the dependencies without breaking the tests? Summarizing next-update from the authors own words: A good workflow using next- &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/next-update/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Next-update</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-11T19:10:05+05:30" pubdate data-updated="true">Aug 11<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/next-update">next-update</a></h1>
+
+<blockquote><p>Can I update the dependencies without breaking the tests?</p></blockquote>
+
+<p>Summarizing <code>next-update</code> from the authors own words:</p>
+
+<ul>
+<li>A good workflow using <em>next-update</em>
+
+<ul>
+<li>see available new versions <code>next-update --available</code></li>
+<li>check latest version of each module using <code>next-update --latest</code></li>
+<li>install new versions of the desired modules using standard <code>npm i dependency@version --save</code></li>
+</ul>
+</li>
+<li>You can use custom test command, for example <code>next-update -t "grunt test"</code>
+
+<ul>
+<li><code>npm test</code> is used by default.</li>
+</ul>
+</li>
+<li>You can keep each working version in package.json by using <code>--keep</code> flag.</li>
+</ul>
+
+
+<p><strong>Get it:</strong></p>
+
+<p><code>npm install -g next-update  // installs module globally</code></p>
+
+<p><code>npm install --save-dev next-update</code></p>
+
+<p>In your <code>package.json</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;next-update&quot;</span><span class="o">:</span> <span class="s2">&quot;next-update -k true --tldr&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">next</span><span class="o">-</span><span class="nx">update</span> <span class="o">--</span><span class="nx">help</span> <span class="o">|</span> <span class="nx">pbcopy</span>
+</span><span class='line'><span class="nx">next</span><span class="o">-</span><span class="nx">update</span> <span class="o">-</span> <span class="nx">Tests</span> <span class="k">if</span> <span class="nx">module</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">dependencies</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">updated</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">newer</span> <span class="nx">version</span> <span class="nx">without</span> <span class="nx">breaking</span> <span class="nx">the</span> <span class="nx">tests</span>
+</span><span class='line'>  <span class="nx">version</span><span class="o">:</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">2</span>
+</span><span class='line'>  <span class="nx">author</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;gleb.bahmutov@gmail.com&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;Gleb Bahmutov&quot;</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Options</span><span class="o">:</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">revert</span>           <span class="nx">install</span> <span class="nx">original</span> <span class="nx">module</span> <span class="nx">versions</span> <span class="nx">listed</span> <span class="k">in</span> <span class="kr">package</span><span class="p">.</span><span class="nx">json</span>   <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">available</span><span class="p">,</span> <span class="o">-</span><span class="nx">a</span>    <span class="nx">only</span> <span class="nx">query</span> <span class="nx">available</span> <span class="nx">later</span> <span class="nx">versions</span><span class="p">,</span> <span class="k">do</span> <span class="nx">not</span> <span class="nx">test</span> <span class="nx">them</span>     <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">module</span><span class="p">,</span> <span class="o">-</span><span class="nx">m</span>       <span class="nx">checks</span> <span class="nx">specific</span> <span class="nx">module</span><span class="p">,</span> <span class="nx">can</span> <span class="nx">include</span> <span class="nx">version</span> <span class="nx">name</span><span class="err">@</span><span class="nx">version</span>  <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">null</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">latest</span><span class="p">,</span> <span class="o">-</span><span class="nx">l</span>       <span class="nx">only</span> <span class="nx">check</span> <span class="nx">latest</span> <span class="nx">available</span> <span class="nx">update</span>                        <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">color</span><span class="p">,</span> <span class="o">-</span><span class="nx">c</span>        <span class="nx">color</span> <span class="nx">terminal</span> <span class="nx">output</span> <span class="p">(</span><span class="k">if</span> <span class="nx">available</span><span class="p">)</span>                      <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">version</span><span class="p">,</span> <span class="o">-</span><span class="nx">v</span>      <span class="nx">show</span> <span class="nx">version</span> <span class="nx">and</span> <span class="nx">exit</span>                                     <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">test</span><span class="p">,</span> <span class="o">-</span><span class="nx">t</span>         <span class="nx">custom</span> <span class="nx">test</span> <span class="nx">command</span> <span class="nx">to</span> <span class="nx">run</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">npm</span> <span class="nx">test</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">skip</span>             <span class="nx">skip</span> <span class="nx">running</span> <span class="nx">tests</span> <span class="nx">first</span>                                  <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">all</span>              <span class="nx">install</span> <span class="nx">all</span> <span class="nx">modules</span> <span class="nx">at</span> <span class="nx">once</span> <span class="nx">before</span> <span class="nx">testing</span>                <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">keep</span><span class="p">,</span> <span class="o">-</span><span class="nx">k</span>         <span class="nx">keep</span> <span class="nx">tested</span> <span class="nx">version</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">working</span>                      <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">allow</span>            <span class="nx">allow</span> <span class="nx">major</span> <span class="o">/</span> <span class="nx">minor</span> <span class="o">/</span> <span class="nx">patch</span> <span class="nx">updates</span>                       <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="s2">&quot;major&quot;</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">type</span>             <span class="nx">check</span> <span class="nx">dependencies</span> <span class="nx">of</span> <span class="nx">type</span> <span class="p">(</span><span class="nx">all</span><span class="p">,</span> <span class="nx">prod</span><span class="p">,</span> <span class="nx">dev</span><span class="p">,</span> <span class="nx">peer</span><span class="p">)</span>         <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="s2">&quot;all&quot;</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">tldr</span>             <span class="nx">only</span> <span class="nx">print</span> <span class="nx">VERY</span> <span class="nx">important</span> <span class="nx">log</span> <span class="nx">messages</span>                    <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">changed</span><span class="o">-</span><span class="nx">log</span><span class="p">,</span> <span class="o">-</span><span class="nx">L</span>  <span class="nx">print</span> <span class="nx">commit</span> <span class="nx">changes</span> <span class="nx">between</span> <span class="nx">working</span> <span class="nx">versions</span>             <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/next-update/next-update.gif" alt="" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=next-update by @nodemotw&url=http://nmotw.in/next-update/" title="Share next-update on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/next-update/" title="Share next-update on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/next-update/" title="Share next-update on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/next-update/';
+        var disqus_url = 'http://nmotw.in//github/next-update/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

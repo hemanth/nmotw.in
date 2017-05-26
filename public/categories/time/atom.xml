@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: time | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/time/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[tinytime]]></title>
+    <link href="http://nmotw.in//github/tinytime/"/>
+    <updated>2017-04-27T20:36:58+05:30</updated>
+    <id>http://nmotw.in//github/tinytime</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/tinytime">tinytime</a></h1>
+
+<blockquote><p>A straightforward date and time formatter in 800b.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save tinytime</code></p>
+
+<p><code>tinytime</code> exports a single function that returns a template object. This object has a single method, <code>render</code>, which
+takes a <code>Date</code> and returns a string with the rendered data.</p>
+
+<p><code>js
+import tinytime from 'tinytime';
+const template = tinytime('The time is {h}:{mm}:{ss}{a}.');
+template.render(new Date());
+// The time is 11:10:20PM.
+</code></p>
+
+<p><strong>Substitutions:</strong></p>
+
+<ul>
+<li><code>MMMM</code> - Full Month (September)</li>
+<li><code>MM</code> - Partial Month (Sep)</li>
+<li><code>Mo</code> - Numeric Month (9)</li>
+<li><code>YYYY</code> - Full Year (1992)</li>
+<li><code>YY</code> - Partial Year (92)</li>
+<li><code>dddd</code> - Day of the Week (Monday)</li>
+<li><code>DD</code> - Day of the Month (24)</li>
+<li><code>Do</code> - Day (24th)</li>
+<li><code>h</code> - Hours - 12h format</li>
+<li><code>H</code> - Hours - 24h format</li>
+<li><code>mm</code> - Minutes (zero padded)</li>
+<li><code>ss</code> - Seconds (zero padded)</li>
+<li><code>a</code> - AM/PM</li>
+</ul>
+
+
+<p> <strong>GIF FTW!</strong></p>
+
+<p> <img src="/images/tinytime/tinytime.gif" alt="tinytime" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[s-ago]]></title>
+    <link href="http://nmotw.in//github/s-ago/"/>
+    <updated>2016-10-20T19:43:46+05:30</updated>
+    <id>http://nmotw.in//github/s-ago</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
+
+<blockquote><p>Human readable relative times.</p></blockquote>
+
+<p><code>26 SLOC</code> to convert <code>Date</code> objects into human readable relative timestamps, such as <code>7 minutes ago</code> or <code>yesterday</code> or <code>2 days ago</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save s-ago</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const ago = require('s-ago');</p>
+
+<p>const now = new Date();
+const yesterday = new Date(now - (24 * 60 * 60 * 1000));
+const hoursAgo = new Date(now - (6 * 60 * 60 * 1000));</p>
+
+<p>ago(now); // 'just now'
+ago(yesterday); // 'yesterday'
+ago(hoursAgo); // '6 hours ago'
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[dev-time]]></title>
+    <link href="http://nmotw.in//github/dev-time/"/>
+    <updated>2015-12-10T21:10:13+05:30</updated>
+    <id>http://nmotw.in//github/dev-time</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/SamVerschueren/dev-time">dev-time</a></h1>
+
+<blockquote><p>Get the current local time of a GitHub user.</p></blockquote>
+
+<p>Ever wanted to ping someone on github and were wondering what time zone does the dev is on?</p>
+
+<p><code>dev-time</code> helps you with getting the local time of GitHub user.</p>
+
+<p>How does it do that? Well, it gets the latest commit of the user and get the time stamp from there and then find the time.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save dev-time</code></p>
+
+<p><strong>For CLI:</strong> <code>npm install --global dev-time-cli</code></p>
+
+<p><strong>Sample usage API:</strong></p>
+
+<p>```js
+const devTime = require('dev-time');</p>
+
+<p>devTime('SamVerschueren').then(time => {</p>
+
+<pre><code>console.log(time);
+//=&gt; '2015-12-10T21:18:34+05:30'
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>On CLI:</strong></p>
+
+<p>```sh
+$ dev-time --help</p>
+
+<p>  Usage</p>
+
+<pre><code>$ dev-time &lt;user&gt; &lt;user2&gt; ...
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>-v, --verbose  Show UTC offset.
+--format       The moment format of the output. [Default: HH:mm - D MMM. YYYY]
+--token        The GitHub authentication token.
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ dev-time SamVerschueren
+19:47 - 8 Dec. 2015
+
+$ dev-time SamVerschueren sindresorhus
+SamVerschueren
+  19:47 - 8 Dec. 2015
+sindresorhus
+  18:47 - 8 Dec. 2015
+
+$ dev-time SamVerschueren -v
+19:47 - 8 Dec. 2015 - UTC+1
+
+$ dev-time SamVerschueren --format DD-MM-YYYY
+07-12-2015
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dev-time/dev-time.gif" alt="dev-time" /></p>
+]]></content>
+  </entry>
+  
+</feed>

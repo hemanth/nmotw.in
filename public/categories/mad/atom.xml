@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mad | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/mad/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[auto-install]]></title>
+    <link href="http://nmotw.in//github/auto-install/"/>
+    <updated>2016-09-01T19:35:36+05:30</updated>
+    <id>http://nmotw.in//github/auto-install</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
+
+<blockquote><p>Auto installs dependencies as you code on save.</p></blockquote>
+
+<p>Have you ever wished that need to having a tool that would just do an <code>npm install</code> of modules that you <code>import</code>?</p>
+
+<p>Well, here is <code>auto-install</code> that does exactly what you wished for!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g auto-install</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<h1>In case you run it in a folder that doesn't have a <code>package.json</code></h1>
+
+<p>$ auto-install --help
+package.json does not exist
+You can create one by using <code>npm init</code></p>
+
+<h1>With a package.json</h1>
+
+<p>$ auto-install
+Watchers initialized</p>
+
+<p>```</p>
+
+<p><strong>CLI Flags:</strong></p>
+
+<p><code>--secure</code>  Install popular modules only (> 10k downloads in the last month)</p>
+
+<p><code>--exact</code>   Install exact version similar to <code>npm install express --save-exact</code></p>
+
+<p><code>--dont-uninstall</code>   Do not uninstall unused modules</p>
+
+<p>P.S: <a href="https://github.com/siddharthkp/auto-install/issues/6">Does it protect against typosquatting?</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[wifi-triangulate]]></title>
+    <link href="http://nmotw.in//github/wifi-triangulate/"/>
+    <updated>2016-07-21T22:46:26+05:30</updated>
+    <id>http://nmotw.in//github/wifi-triangulate</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/wifi-triangulate">wifi-triangulate</a></h1>
+
+<blockquote><p>Finds your current position on planet earth using the wifi access points in your vicinity.</p></blockquote>
+
+<p>This module requires that the wifi card on your computer is active and that you have access to the internet in order to communicate with Google so that it can triangulate your position.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global wifi-triangulate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var triangulate = require('wifi-triangulate')</p>
+
+<p>triangulate(function (err, location) {
+  if (err) throw err
+  console.log(location) // => { lat: 38.0690894, lng: -122.8069356, accuracy: 42 }
+})
+```</p>
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/wifi-triangulate/wifi-triangulate.gif" alt="wifi-triangulate" /></p>
+]]></content>
+  </entry>
+  
+</feed>

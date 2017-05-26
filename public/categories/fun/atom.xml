@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fun | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rest-your-eyes]]></title>
+    <link href="http://nmotw.in//github/rest-your-eyes/"/>
+    <updated>2017-01-20T22:13:20+05:30</updated>
+    <id>http://nmotw.in//github/rest-your-eyes</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
+
+<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
+Your screen will become bright again after the command completes execution.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>sh
+rest npm install
+</code></p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
+
+<p><strong>Till next time!</strong></p>
+
+<p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rainbowify]]></title>
+    <link href="http://nmotw.in//github/rainbowify/"/>
+    <updated>2016-06-16T19:33:58+05:30</updated>
+    <id>http://nmotw.in//github/rainbowify</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rainbowify">rainbowify</a></h1>
+
+<blockquote><p>rainbow print stuff in terminal</p></blockquote>
+
+<p><code>rainbowify</code> is an module extracted from mocha's <a href="https://github.com/mochajs/mocha/blob/master/lib/reporters/nyan.js">nyan.js</a> which is a fun little module
+that helps to print rainbow text on the terminal.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global rainbowify</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p><code>sh
+$ echo &lt;some_text&gt; | rainbowify
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cowsay]]></title>
+    <link href="http://nmotw.in//github/cowsay/"/>
+    <updated>2016-04-21T20:40:16+05:30</updated>
+    <id>http://nmotw.in//github/cowsay</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cowsay">cowsay</a></h1>
+
+<blockquote><p>A configurable talking cow!</p></blockquote>
+
+<p>This is a port of  Tony Monroe's <code>cowsay</code> Perl module.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --global cowsay</code></p>
+
+<p><strong>CLI:</strong></p>
+
+<p>```
+cowsay
+Usage: cowsay [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text</p>
+
+<p>If any command-line arguments are left over after all switches have been processed, they become the cow's message.</p>
+
+<p>If the program is invoked as cowthink then the cow will think its message instead of saying it.</p>
+
+<p>Options:
+  -b  Mode: Borg                                                                                                                                <br/>
+  -d  Mode: Dead                                                                                                                                <br/>
+  -g  Mode: Greedy                                                                                                                              <br/>
+  -p  Mode: Paranoia                                                                                                                            <br/>
+  -s  Mode: Stoned                                                                                                                              <br/>
+  -t  Mode: Tired                                                                                                                               <br/>
+  -w  Mode: Wired                                                                                                                               <br/>
+  -y  Mode: Youthful                                                                                                                            <br/>
+  -e  Select the appearance of the cow's eyes.                                                                                                      [default: "oo"]
+  -T  The tongue is configurable similarly to the eyes through -T and tongue_string.                                                                [default: "  "]
+  -h  Display this help message                                                                                                                 <br/>
+  -n  If it is specified, the given message will not be word-wrapped.                                                                           <br/>
+  -W  Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.       [default: 40]
+  -f  Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.  [default: "default"]
+  -l  List all cowfiles included in this package.               <br/>
+```</p>
+
+<p>```sh</p>
+
+<p> nmotw.in> cowsay JavaScript FTW!</p>
+
+<hr />
+
+<p>&lt; JavaScript FTW! ></p>
+
+<hr />
+
+<pre><code>    \   ^__^
+     \  (oo)\_______
+        (__)\       )\/\
+            ||----w |
+            ||     ||
+</code></pre>
+
+<p>```</p>
+
+<p><strong>API:</strong></p>
+
+<p>```js
+var cowsay = require("cowsay");</p>
+
+<p>console.log(cowsay.say({</p>
+
+<pre><code>text : "I'm a moooodule",
+e : "oO",
+T : "U "
+</code></pre>
+
+<p>}));</p>
+
+<p>// or cowsay.think()
+```</p>
+
+<p>```sh</p>
+
+<hr />
+
+<p>( I'm a moooodule )</p>
+
+<hr />
+
+<pre><code>    o   ^__^
+     o  (oO)\_______
+        (__)\       )\/\
+         U  ||----w |
+            ||     ||
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cowsay/cowsay.gif" alt="cowsay.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[is-christmas]]></title>
+    <link href="http://nmotw.in//github/is-christmas/"/>
+    <updated>2015-12-24T20:02:35+05:30</updated>
+    <id>http://nmotw.in//github/is-christmas</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-christmas">is-christmas</a></h1>
+
+<blockquote><p>🎅 Is today Christmas? 🎄</p></blockquote>
+
+<p>Simple fun module that returns <code>true</code> or <code>false</code> if it's Christmas or not.</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>$ npm install --save is-christmas</code></p>
+
+<p><code>$ npm install --global is-christmas</code> // for CLI</p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+const isChristmas = require('is-christmas');</p>
+
+<p>isChristmas();
+//=> true
+```</p>
+
+<p>```sh
+$ is-christmas --help</p>
+
+<p>  Usage</p>
+
+<pre><code>is-christmas
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ is-christmas
+true
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas" /></p>
+
+<p>Thanks to <a href="https://twitter.com/thejameskyle">James Kyle</a> for this fun module for this Christmas 😉</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[lightcards]]></title>
+    <link href="http://nmotw.in//github/lightcards/"/>
+    <updated>2015-08-13T19:36:54+05:30</updated>
+    <id>http://nmotw.in//github/lightcards</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
+
+<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
+
+<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
+By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
+after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
+
+<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<p>```sh
+$ lightcards init &amp;&amp; lightcards</p>
+
+<p>Reading vocabulary from vocabulary.txt... OK!
+Generating flashcards... OK!
+Compiling scripts... OK!
+Starting local web server... OK!</p>
+
+<p>Start learning on http://localhost:3000
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
+
+<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
+]]></content>
+  </entry>
+  
+</feed>

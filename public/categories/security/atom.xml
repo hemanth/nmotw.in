@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: security | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/security/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[node-wifi-scanner]]></title>
+    <link href="http://nmotw.in//github/node-wifi-scanner/"/>
+    <updated>2016-08-18T17:03:58+05:30</updated>
+    <id>http://nmotw.in//github/node-wifi-scanner</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/node-wifi-scanner">node-wifi-scanner</a></h1>
+
+<blockquote><p>Scans the available WiFi networks.</p></blockquote>
+
+<p><code>node-wifi-scanner</code> scans the available WiFi networks across operating systems and returns an array with objects, each object representing a network with the following properties:</p>
+
+<ul>
+<li><p>channel: WiFi channel</p></li>
+<li><p>ssid: SSID of the network (if available)</p></li>
+<li><p>mac: MAC Address of the network access point</p></li>
+<li><p>rssi: signal strength</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save node-wifi-scanner</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const scanner = require('node-wifi-scanner');</p>
+
+<p>scanner.scan((err, networks) => {
+  if (err) {</p>
+
+<pre><code>console.error(err);
+return;
+</code></pre>
+
+<p>  }
+  console.log(networks);
+});
+```</p>
+
+<p>Would log something like:</p>
+
+<p>```sh
+[ { ssid: 'Micromax A106',</p>
+
+<pre><code>mac: '82:6a:b0:b7:fe:d2',
+channel: 6,
+rssi: -85 } ]
+</code></pre>
+
+<p>```</p>
+
+<p>Basically uses the underlying OS tools to do the task:</p>
+
+<ul>
+<li><p>airport on Mac OS-X: <code>airport -s</code></p></li>
+<li><p>netsh on Windows: <code>netsh wlan show networks mode=Bssid</code></p></li>
+<li><p>iwlist on Linux: <code>iwlist scan</code></p></li>
+</ul>
+
+
+<p><strong>Features that would be nice to have:</strong></p>
+
+<ul>
+<li><p>Promises rather than callbacks.</p></li>
+<li><p>allowing users to select the network and login in from CLI.</p></li>
+<li><p>Look for a better name, rather that <code>node-wifi-scanner</code> ?</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-wifi-scanner/node-wifi-scanner.gif" alt="node-wifi-scanner" /></p>
+]]></content>
+  </entry>
+  
+</feed>

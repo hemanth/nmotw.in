@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: encode | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/encode/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[compactr]]></title>
+    <link href="http://nmotw.in//github/compactr/"/>
+    <updated>2017-05-13T04:47:16+05:30</updated>
+    <id>http://nmotw.in//github/compactr</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/compactr">compactr</a></h1>
+
+<blockquote><p>Schema based serialization made easy!</p></blockquote>
+
+<p><strong>What is this and why does it matter?</strong> [From the horse's mouth]</p>
+
+<p>Protocol Buffers are awesome. Having schemas to deflate and inflate data while maintaining some kind of validation is a great concept.
+Compactr's goal is to build on that to better suit Node development and reduce repetition by allowing you to build schemas for your data directly in your scripting language.
+For example, if you have a DB schema for a model, you could use that directly as a schema for Compactr.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save compactr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const Compactr = require("compactr");
+const Schema = Compactr.schema({</p>
+
+<pre><code>  bool: { type: 'boolean' },
+  num: { type: 'number' },
+  str: { type: 'string' },
+  arr: { type: 'array', items: { type: 'string' } },
+  obj: { type: 'object', schema: { sub: { type: 'string' } } }
+</code></pre>
+
+<p>});</p>
+
+<p>// decode encoded.
+Schema.read(Schema.write({</p>
+
+<pre><code>bool: true,
+num: 23.23,
+str: 'hello world',
+arr: ['a', 'b', 'c'],
+obj: {
+    sub: 'way'
+}
+</code></pre>
+
+<p>}).array());
+```</p>
+
+<p>```js
+const Compactr = require('compactr');</p>
+
+<p>// Defining a schema
+const userSchema = Compactr.schema({</p>
+
+<pre><code>id: { type: 'number' },
+name: { type: 'string' }
+</code></pre>
+
+<p>});</p>
+
+<p>// Encoding
+userSchema.write({ id: 123, name: 'John' });</p>
+
+<p>// Get the schema header bytes (for partial loads)
+const header = userSchema.headerBytes();</p>
+
+<p>// Get the partial load bytes
+const partial = userSchema.contentBytes();</p>
+
+<p>// Get the full header + content bytes
+const buffer = userSchema.bytes();</p>
+
+<p>// Decoding (full)
+const content = userSchema.decode(buffer);</p>
+
+<p>// Decoding (partial)
+const content = userSchema.decode(header, partial);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/compactr/compactr.gif" alt="compactr" /></p>
+]]></content>
+  </entry>
+  
+</feed>

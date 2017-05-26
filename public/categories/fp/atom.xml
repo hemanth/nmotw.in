@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fp | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/fp/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[fp-dom]]></title>
+    <link href="http://nmotw.in//github/fp-dom/"/>
+    <updated>2016-01-14T22:22:27+05:30</updated>
+    <id>http://nmotw.in//github/fp-dom</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
+
+<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
+
+<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
+
+<ul>
+<li>animate</li>
+<li>append</li>
+<li>addClass</li>
+<li>removeClass</li>
+<li>toggleClass</li>
+<li>hasClass</li>
+<li>contains</li>
+<li>elem</li>
+<li>insertAfter</li>
+<li>insertBefore</li>
+<li>interval</li>
+<li>isdom</li>
+<li>isvdom</li>
+<li>listen</li>
+<li>prepend</li>
+<li>replace</li>
+<li>select</li>
+<li>selectOne</li>
+<li>setattr</li>
+<li>timeout</li>
+<li>velem</li>
+</ul>
+
+
+<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+fpdom = require('fp-dom');
+let appendtoBody = fpdom.append(document.body),
+  h1 = fpdom.elem('h1','meow');</p>
+
+<p>appendtoBody(h1);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,969 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/10/">
+    <meta name="twitter:description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/10/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/10/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/speed-test/">
+			
+				Speed-test</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-03T18:37:24+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/speed-test">speed-test</a></h1>
+
+<blockquote><p>Test your internet connection speed and ping using speedtest.net from the CLI.</p></blockquote>
+
+<p>This is product of <a href="https://github.com/sindresorhus/module-requests/">sindresorhus/module-requests</a> makes use of <a href="https://github.com/ddsol/speedtest.net">speedtest-net</a>
+helps us to know our intenet connection speed and ping with a beautiful UI.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --global speed-test</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>speed-test --help
+</span><span class='line'>
+</span><span class='line'>  Usage
+</span><span class='line'>    <span class="nv">$ </span>speed-test
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/speed-test/speed-test.gif" alt="speed-test" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/url-pattern/">
+			
+				Url-pattern</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-27T14:07:23+05:30" pubdate data-updated="true">Aug 27<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/url-pattern">url-pattern</a></p>
+
+<blockquote><p>easier than regex string matching for urls, domains, filepaths and other strings.</p></blockquote>
+
+<p><code>url-pattern</code> can capture named parts of strings and conveniently returns them as objects.</p>
+
+<p>Also does the reverse and generates strings given a pattern and such an object.</p>
+
+<p><strong>install:</strong> <code>npm install url-pattern</code></p>
+
+<p><strong>simple match example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">UrlPattern</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url-pattern&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users/:id&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/users/10&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/products/5&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kc">null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>complex match example showing off escaping, wildcards and optional segments:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;(http(s)\\://)(:subdomain.):domain.:tld(/*)&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google.de&#39;</span><span class="p">);</span> <span class="c1">// {domain: &#39;google&#39;, tld: &#39;de&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;www&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;http://mail.google.com/mail&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;mail&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;, _: &#39;mail&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="c1">// null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>stringify example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users(/:id)&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">()</span> <span class="c1">// &#39;/api/users&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span> <span class="mi">10</span><span class="p">})</span>  <span class="c1">//&#39; /api/users/10&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/url-pattern/url-pattern.gif" alt="url-pattern" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/human-to-cron/">
+			
+				Human-to-cron</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-20T18:09:33+05:30" pubdate data-updated="true">Aug 20<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/human-to-cron">human-to-cron</a></h1>
+
+<blockquote><p>Converts human readable expression to a cron string!</p></blockquote>
+
+<p>If you can interpert <code>0 */1 * * *</code> as <code>each minute</code> then this module is not for you ;)</p>
+
+<p><code>human-to-cron</code> parsers the human readable expressions with the help of ES6 generators converts it into a <a href="https://en.wikipedia.org/wiki/Cron">cron</a> string.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save human-to-cron</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">humanToCron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;human-to-cron&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each minute&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */1 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; * */2 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each second&#39;</span><span class="p">)</span> <span class="c1">// =&gt; */1 * * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each hour&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 */1 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each day&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 */1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each month&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */1 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each 5 months&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */5 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */2 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once tuesday each 10 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */10 * 1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;august friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 7 *</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/human-to-cron/human-to-cron.gif" alt="human-to-cron" /></p>
+
+<p>Thanks to <a href="https://github.com/rainder">Andrius Skerla</a> for this cheeky module!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/lightcards/">
+			
+				Lightcards</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-13T19:36:54+05:30" pubdate data-updated="true">Aug 13<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
+
+<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
+
+<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
+By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
+after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
+
+<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>lightcards init <span class="o">&amp;&amp;</span> lightcards
+</span><span class='line'>
+</span><span class='line'>Reading vocabulary from vocabulary.txt... OK!
+</span><span class='line'>Generating flashcards... OK!
+</span><span class='line'>Compiling scripts... OK!
+</span><span class='line'>Starting <span class="nb">local </span>web server... OK!
+</span><span class='line'>
+</span><span class='line'>Start learning on http://localhost:3000
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
+
+<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/curry-this/">
+			
+				Curry-this</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-06T20:46:13+05:30" pubdate data-updated="true">Aug 6<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1>Curry-this</h1>
+
+<p><code>Curry-this</code> makes creating curryied function simple and expresive by invoking <code>curry</code> with the <a href="https://github.com/zenparsing/es-function-bind">function bind syntax <code>::</code></a>.
+Apart from the expresive way of creating a curried function, the main feature are placeholders.
+A placeholder (<code>_</code>) is a <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a> which allows to curry specific arguments of a function.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save curry-this</code></p>
+
+<h2>Basic usage</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">curry</span><span class="p">,</span> <span class="nx">_</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;curry-this&#39;</span><span class="p">)();</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Got a simple function?</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">plus</span> <span class="o">=</span> <span class="p">(</span>
+</span><span class='line'>    <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span>
+</span><span class='line'><span class="p">)</span><span class="o">::</span><span class="nx">curry</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Placeholders</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Got a monster function?</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">open</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">newScript</span> <span class="o">=</span> <span class="nx">open</span><span class="o">::</span><span class="nx">curry</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="mi">0755</span><span class="p">,</span> <span class="nx">_</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">newScript</span><span class="p">(</span><span class="s1">&#39;do-wonders.sh&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// The `file` is ready.</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can try this with <code>babel-node</code>. Make sure that you use the <code>--stage=0</code> option.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/curry-this/curry-this.gif" alt="curry-this" /></p>
+
+<p>Thanks to <a href="http://stoeffel.github.io/">Christoph Hermann</a> and <a href="https://github.com/tomekwi">tomekwi</a> for making cury more fun!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/caniuse-cmd/">
+			
+				Caniuse-cmd</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-30T16:02:22+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://github.com/sgentle/caniuse-cmd">caniuse-cmd</a></h1>
+
+<blockquote><p><code>caniuse.com</code> on CLI!</p></blockquote>
+
+<p><code>caniuse-cmd</code> brings the power of <a href="http://caniuse.com">caniuse</a> on to the command line, it makes use of <a href="https://www.npmjs.com/package/caniuse-db">caniuse-db</a> module
+which provides raw browser/feature support data for the same.</p>
+
+<p><strong>Install it:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install --global caniuse-cmd
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw&gt; caniuse webrtc --short
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short -a
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrv
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  FF ✘ 2+ ✔ 22+ᵖ Chr. ✘ 4+ ✔ 23+ᵖ Saf. ✘  Op. ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev --browser ff
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --long
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0% <span class="o">[</span>W3C Working Draft<span class="o">]</span>
+</span><span class='line'>  Method of allowing two users to communicate directly, browser to browser using the RTCPeerConnection API.
+</span><span class='line'>  <span class="c">#JSAPI</span>
+</span><span class='line'>
+</span><span class='line'>  IE ✘
+</span><span class='line'>  Edge ✘
+</span><span class='line'>  Firefox ✘ 2+ ✔ 22+ᵖ
+</span><span class='line'>  Chrome ✘ 4+ ✔ 23+ᵖ
+</span><span class='line'>  Safari ✘
+</span><span class='line'>  Opera ✘ 9+ ✔ 18+ᵖ
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Do cehckout the CLI <a href="https://github.com/sgentle/caniuse-cmd#does-it-have-lots-of-command-line-options">flags</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/caniuse-cmd/caniuse-cmd.gif" alt="caniuse-cmd.gif" /></p>
+
+<p>Thanks to <a href="https://github.com/sgentle">Sam Gentle</a> for bringing this to the CLI.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/combokeys/">
+			
+				Combokeys</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-23T20:02:46+05:30" pubdate data-updated="true">Jul 23<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/combokeys">combokeys</a></p>
+
+<blockquote><p>Handles keyboard shortcuts in the browser.</p></blockquote>
+
+<p><code>combokeys</code> is a fork of <a href="https://github.com/ccampbell/mousetrap">ccampbell/mousetrap</a> with two main changes:</p>
+
+<ul>
+<li>Refactored as CommonJS</li>
+<li>Doesn't automatically listen on the document. Instead, it is now a constructor and the element on which to listen must be provided on instantiation.</li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save combokeys</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Combokeys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;combokeys&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">Mousetrap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// Or, instantiate it for one or more specific elements:</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">firstCombokeys</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">);</span> <span class="p">});</span>
+</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;show shortcuts!&#39;</span><span class="p">);</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/combokeys/combokeys.gif" alt="combokeys" /></p>
+
+<p>Thanks to <a href="https://github.com/mightyiam">Shahar Or</a> for porting <code>mousetrap</code> to <code>combokeys</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/easydate/">
+			
+				Easydate</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-16T20:12:07+05:30" pubdate data-updated="true">Jul 16<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/easydate">easydate</a></p>
+
+<blockquote><p>get date and/or time by pattern.</p></blockquote>
+
+<p>A simple date and time util that returns the date according to a pattern, <code>easydate</code> takes two arguments, first one being a pattern string
+and second one being an config object.</p>
+
+<p><strong>Pattern Options:</strong></p>
+
+<ul>
+<li><code>Y</code> Full year (number - e.g. <code>2012</code>)</li>
+<li><code>y</code> Year (number - e.g. <code>12</code>)</li>
+<li><code>M</code> Month (number - e.g. <code>11</code>)</li>
+<li><code>d</code> Day (number - e.g. <code>28</code>)</li>
+<li><code>h</code> Hour (number - e.g. <code>02</code>)</li>
+<li><code>m</code> Minute (number - e.g. <code>01</code>)</li>
+<li><code>s</code> Second (number - e.g. <code>33</code>)</li>
+<li><code>l</code> Millisecond (number - e.g. <code>001</code>)</li>
+<li><code>z</code> Timezone (string - e.g. <code>UTC</code>, <code>UTC+1</code>, <code>UTC-11</code>)</li>
+<li><code>x</code> DST (string - either <code>'DST'</code> or <code>''</code>)</li>
+</ul>
+
+
+<p><strong>Config options:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc/local&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">adjust</span><span class="o">:</span> <span class="s1">&#39;Whether or not to adjust DST&#39;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install it:</strong> <code>npm install --save easydate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">easydate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;easydate&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;d-M-y&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s.l&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-11-03T16:06:08.123Z&#39;</span><span class="p">)</span> <span class="c1">// &quot;16:06:08.123&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc&#39;</span><span class="p">})</span> <span class="c1">// =&gt; &quot;UTC&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s z x&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;2016-08-01T00:00:00.000Z&#39;</span><span class="p">,</span> <span class="nx">adjust</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/easydate/easydate.gif" alt="easydate" /></p>
+
+<p>Thanks to <a href="https://medium.com/@roryrjb">Rory Bradford</a> for this handy util.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ramjet/">
+			
+				Ramjet</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-09T22:30:40+05:30" pubdate data-updated="true">Jul 9<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/ramjet">ramjet</a></p>
+
+<blockquote><p>Transform DOM elements into each another with smooth transitions</p></blockquote>
+
+<p><code>ramjet</code> helps us to Morph DOM elements from one state to another with smooth transitions!</p>
+
+<p>All it does is:</p>
+
+<ul>
+<li><p>Clone the elements and all their children.</p></li>
+<li><p>Transform the second element so that it completely overlaps with the first.</p></li>
+<li><p>Animating the two elements together until the first element has exactly the same position and dimensions as the second element.</p></li>
+</ul>
+
+
+<p><strong>install it:</strong> <code>npm install --save ramjet</code></p>
+
+<p><strong>sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;a&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: red; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;b&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: blue; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>b<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;script&gt;</span>
+</span><span class='line'>  <span class="nx">ramjet</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
+
+<p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/fade/">
+			
+				Fade</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-02T22:24:12+05:30" pubdate data-updated="true">Jul 2<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/fade">fade</a></h1>
+
+<blockquote><p>Fade a HTML element using CSS transitions.</p></blockquote>
+
+<p>Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto
+behind this module, that lets us to <code>fade.in</code>, <code>fade.out</code> and fade an element to a specifie opacity, which also takes a
+callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save fade</code> # browserify it!</p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fade</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fade&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#el&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span> <span class="c1">// fade el out in 1s</span>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="k">in</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mi">1500</span><span class="p">);</span> <span class="c1">// fade el in in 1.5s</span>
+</span><span class='line'><span class="nx">fade</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span> <span class="c1">// fade el to opacity 0.3 in 3s </span>
+</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span> <span class="c1">// set display to none after fade out</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fade/fade.gif" alt="fade.gif" /></p>
+
+<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this sweet little module.</p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/9/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/11/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

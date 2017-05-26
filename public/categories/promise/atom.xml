@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: promise, | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/promise/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[instapromise]]></title>
+    <link href="http://nmotw.in//github/instapromise/"/>
+    <updated>2015-10-08T17:45:41+05:30</updated>
+    <id>http://nmotw.in//github/instapromise</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/instapromise">instapromise</a></h1>
+
+<blockquote><p>Promisify with <code>.promise</code></p></blockquote>
+
+<p><code>instapromise</code> lets you promisify node-style asynchronous functions by putting a <code>.promise</code> after them or after the object for methods.</p>
+
+<p>It's a part of <a href="http://exponentjs.com/">exponent</a> and this module is influenced from <a href="https://www.npmjs.com/package/fibrous">fibrous</a>.</p>
+
+<p>When one of the maintainers of <code>instapromise</code> was questioned about why the code was in coffeescript :</p>
+
+<p>There’s basically two reasons for that:</p>
+
+<ul>
+<li><p>It’s based on some of the work the people who made fibrous did and they wrote their stuff in coffeescript</p></li>
+<li><p>I used to write a bunch of coffeescript before babel made it reasonable to write ES7+ stuff</p></li>
+<li><p>I wrote it back then, its pretty stable now.</p></li>
+<li><p>I haven’t made any changes to it in months so I don’t think it should be necessary to modify the source too much.</p></li>
+<li><p>Also I do like the way that its commented fairly well.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save instapromise</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p><code>js
+require(‘instapromise’);
+let val = await someObject.promise.someMethodThatTakesANodeStyleCallback(‘but not anymore’);
+</code></p>
+
+<p>Basically, <code>instapromise</code> is one of it's kind a module that is cheeky, tiny and takes a diffrenet apporach on promisifying async functions,
+you need to just <code>require('instapromise')</code> and then you could just use a <code>.promise</code>!</p>
+
+<p><code>js
+require('instapromise');
+var fs = require('fs');
+var p = fs.promise.readFile('/tmp/hello', 'utf8');
+p.then(console.log);
+</code></p>
+
+<p>P.S: The original function is available as a property on the promise-generating function <code>.___instapromiseOriginalFunction___</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/instapromise/instapromise.gif" alt="instapromise" /></p>
+
+<p>Thanks to <a href="https://twitter.com/JI">James Ide</a> and <a href="https://twitter.com/ccheever">Charlie Cheever</a> for instapromise!</p>
+]]></content>
+  </entry>
+  
+</feed>

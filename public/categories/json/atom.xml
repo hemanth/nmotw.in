@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: json | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/json/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[safe-json-parse]]></title>
+    <link href="http://nmotw.in//github/safe-json-parse/"/>
+    <updated>2015-01-08T22:26:50+05:30</updated>
+    <id>http://nmotw.in//github/safe-json-parse</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/safe-json-parse">safe-json-parse</a></h1>
+
+<blockquote><p>Parse JSON safely without throwing.</p></blockquote>
+
+<p>Sweet, simple and effictive module for parsing JSON safely :)</p>
+
+<p><strong>Get it:</strong> <code>npm install safe-json-parse --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>With callback:</p>
+
+<p>```js</p>
+
+<blockquote><p>var sf = require('safe-json-parse');</p>
+
+<p>sf("{}", function (err, json) {console.log(err,json);});
+null {}</p>
+
+<p>sf("meow", function (err, json) {console.log(err,json);});
+[SyntaxError: Unexpected token m] undefined</p></blockquote>
+
+<p>```</p>
+
+<p>As Tuples:</p>
+
+<p>```js</p>
+
+<blockquote><p>var sf = require('safe-json-parse/tuple');
+sf({})
+[ [SyntaxError: Unexpected token o], undefined ]
+sf("{}")
+[ null, {} ]
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/safe-json-parse/safe-json-parse.gif" alt="safe-json-parse" /></p>
+
+<p>Thanks to <a href="https://twitter.com/raynos">Raynos</a> for helping us with safely parsing JSONs ;)</p>
+]]></content>
+  </entry>
+  
+</feed>

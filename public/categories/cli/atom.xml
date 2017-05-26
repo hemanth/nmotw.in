@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cli | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[fkill-cli]]></title>
+    <link href="http://nmotw.in//github/fkill-cli/"/>
+    <updated>2017-03-03T10:25:04+05:30</updated>
+    <id>http://nmotw.in//github/fkill-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fkill-cli">fkill-cli</a></h1>
+
+<blockquote><p>Fabulously kill processes. Cross-platform.</p></blockquote>
+
+<p><code>fkill-cli</code> helps us kill process with easy across macOS, Linux and Windows, it also has an <code>autocomplete-prompt</code> on the list of processes that are currently alive on your machine.</p>
+
+<p>No more playing with <code>ps</code>, <code>grep</code> and <code>kill</code>? 🤔</p>
+
+<p><strong>Get it:</strong> <code>npm install -g fkill-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+$ fkill --help</p>
+
+<p>  Usage</p>
+
+<pre><code>$ fkill [&lt;pid|name&gt; ...]
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>-f, --force  Force kill
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ fkill 1337
+$ fkill Safari
+$ fkill 1337 Safari
+$ fkill
+</code></pre>
+
+<p>  Run without arguments to use the interactive interface.
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fkill-cli/fkill-cli.gif" alt="fkill-cli" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rest-your-eyes]]></title>
+    <link href="http://nmotw.in//github/rest-your-eyes/"/>
+    <updated>2017-01-20T22:13:20+05:30</updated>
+    <id>http://nmotw.in//github/rest-your-eyes</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
+
+<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
+Your screen will become bright again after the command completes execution.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>sh
+rest npm install
+</code></p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
+
+<p><strong>Till next time!</strong></p>
+
+<p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[email-prompt]]></title>
+    <link href="http://nmotw.in//github/email-prompt/"/>
+    <updated>2016-12-08T18:44:32+05:30</updated>
+    <id>http://nmotw.in//github/email-prompt</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/email-prompt">email-prompt</a></h1>
+
+<blockquote><p>CLI email prompt featuring autocompletion and validation.</p></blockquote>
+
+<p><code>email-prompt</code> Powers 𝚫now --login and provides a nice promised based API for email autocompletion and validation.</p>
+
+<p>It's customiziable with the below options:</p>
+
+<p>```js
+{
+  start :'> Enter your email: ',
+  domains :new Set([</p>
+
+<pre><code>'aol.com',
+'gmail.com',
+'google.com',
+'yahoo.com',
+'ymail.com',
+'hotmail.com',
+'live.com',
+'outlook.com',
+'inbox.com',
+'mail.com',
+'gmx.com',
+'icloud.com'
+</code></pre>
+
+<p>  ]),
+  forceLowerCase :true,
+  suggestionColor :'gray',
+  autoCompleteChars :new Set([</p>
+
+<pre><code>'\t' /* tab */,
+'\r' /* return */,
+'\x1b[C' /* right arrow */,
+' ' /* spacebar */
+</code></pre>
+
+<p>  ]),
+  resolveChars :new Set(['\r']),
+  abortChars :new Set(['\x03']),
+  allowInvalidChars :false
+}
+```</p>
+
+<p><strong>Get it:</strong> <code>npm install --save email-prompt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const prompt = require('email-prompt');
+prompt({ /<em> opts </em>/ })
+.then((email) => {
+  console.log('\n> Hello ' + val);
+))
+.catch(() => {
+  console.log('\n> Aborted!');
+})</p>
+
+<p>```</p>
+
+<p><strong>Important to note:</strong></p>
+
+<ul>
+<li><code>email-prompt</code> automatically adapts the mode of <code>process.stdin</code> for you.</li>
+<li>The <code>stdin</code> stream is <code>resume</code>d and <code>pause</code>d upon the promise being
+settled.</li>
+<li>When the promise resolves or rejects, the previous stdin mode is restored.</li>
+<li>The <code>tty</code> mode is set to <code>raw</code>, which means all the caret interactions
+that you come to expect in a regular <code>stdin</code> prompt are simulated.
+This gives us fine-grained control over the output and powers the
+validation.</li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/email-prompt/email-prompt.gif" alt="email-prompt" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cost-of-modules]]></title>
+    <link href="http://nmotw.in//github/cost-of-modules/"/>
+    <updated>2016-12-01T19:06:43+05:30</updated>
+    <id>http://nmotw.in//github/cost-of-modules</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
+
+<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
+
+<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
+identify which dependency is slowing the module down.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
+
+<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--less</code>  Show the biggest 10 modules</p>
+
+<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
+
+<p><code>--no-install</code>  Skip installation</p>
+
+<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[yarn]]></title>
+    <link href="http://nmotw.in//github/yarn/"/>
+    <updated>2016-10-13T19:37:03+05:30</updated>
+    <id>http://nmotw.in//github/yarn</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
+
+<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
+
+<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
+
+<ul>
+<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
+<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
+<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
+<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
+<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
+<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
+<li>More emojis. 🐈</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
+
+<p><strong>CLI usage:</strong></p>
+
+<p><code>sh
+yarn add
+yarn bin
+yarn cache
+yarn check
+yarn clean
+yarn config
+yarn generate-lock-entry
+yarn global
+yarn info
+yarn init
+yarn install
+yarn licenses
+yarn link
+yarn login
+yarn logout
+yarn ls
+yarn outdated
+yarn owner
+yarn pack
+yarn publish
+yarn remove
+yarn run
+yarn self-update
+yarn tag
+yarn team
+yarn test
+yarn unlink
+yarn upgrade
+yarn version
+yarn why
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
+]]></content>
+  </entry>
+  
+</feed>

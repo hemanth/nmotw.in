@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: performance | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/performance/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-05-27T04:53:05+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pwmetrics]]></title>
+    <link href="http://nmotw.in//github/pwmetrics/"/>
+    <updated>2016-08-25T19:03:31+05:30</updated>
+    <id>http://nmotw.in//github/pwmetrics</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
+
+<blockquote><p>Progressive web metrics at your fingertipz. 💅</p></blockquote>
+
+<p><code>pwmetrics</code> CLI tool and lib to gather performance metrics via <a href="https://github.com/GoogleChrome/lighthouse/">Lighthouse</a>.</p>
+
+<p>P.S: This module is <em>IN BETA</em>, so you must be ready for anything 😉</p>
+
+<p><strong>GET IT:</strong> <code>npm install --global pwmetrics</code> or <code>npm install --save pwmetrics</code></p>
+
+<p><strong>Sample CLI usage:</strong></p>
+
+<p>```sh</p>
+
+<h1>run Chrome with port 9222 open</h1>
+
+<p>chrome  --remote-debugging-port=9222 --no-first-run --user-data-dir=$(mktemp -d -t pwm.XXXXX)
+```</p>
+
+<p>```sh</p>
+
+<h1>run pwmetrics with your url</h1>
+
+<p>pwmetrics https://jsfeatures.in
+```</p>
+
+<p>```sh
+$ pwmetrics --json https://jsfeatures.in
+{
+  "timings": [</p>
+
+<pre><code>{
+  "name": "First Contentful Paint",
+  "value": 1875.337
+},
+{
+  "name": "First Meaningful Paint",
+  "value": 1970.7
+},
+{
+  "name": "Median Visual Completion",
+  "value": 1997
+},
+{
+  "name": "First Visual Change",
+  "value": 1917
+},
+{
+  "name": "Visually Complete 100%",
+  "value": 2004
+},
+{
+  "name": "Time to Interactive",
+  "value": -1
+},
+{
+  "name": "Visually Complete 85%"
+},
+{
+  "name": "Navigation Start",
+  "value": 0
+}
+</code></pre>
+
+<p>  ],
+  "timestamps": [</p>
+
+<pre><code>303915241.28
+</code></pre>
+
+<p>  ]
+}
+```</p>
+
+<p><strong>API:</strong></p>
+
+<p>```js
+const PWMetrics = require('pwmetrics');</p>
+
+<p>new PWMetrics('https://jsfeatures.in', opts); // opts => {data:fileName} for now.
+```</p>
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/pwmetrics/pwmetrics.gif" alt="pwmetrics" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[speedline]]></title>
+    <link href="http://nmotw.in//github/speedline/"/>
+    <updated>2016-05-20T10:31:00+05:30</updated>
+    <id>http://nmotw.in//github/speedline</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/speedline">speedline</a></h1>
+
+<blockquote><p>Calculate the speed index and visual performance metrics from chrome dev tool timeline.</p></blockquote>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a> provides useful data that can be used to measure the performance of a website.</p>
+
+<p>Unfortunately this API has never been good at capturing the actual <em>user experience</em> that's where <code>speedline</code> comes to rescue.</p>
+
+<p>It measures <strong>how fast the page content is visually displayed</strong>.</p>
+
+<p>The current implementation is based on the <strong>Visual Progress from Video Capture</strong> calculation method described on the <a href="https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index">Speed Index</a> page.</p>
+
+<p>The visual progress is calculated by comparing the distance between the histogram of the current frame and the final frame.</p>
+
+<p><strong>GET IT:</strong></p>
+
+<p><code>$ npm install --global speedline</code> // For CLI</p>
+
+<p><code>$ npm install --save speedline</code> // As a devdep.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ speedline --help</p>
+
+<p>  Usage</p>
+
+<pre><code>$ speedline &lt;timeline&gt; [options]
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>-p, --pretty  Pretty print the output
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ speedline ./timeline.json
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/speedline/speedline.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PSI]]></title>
+    <link href="http://nmotw.in//github/psi/"/>
+    <updated>2014-06-19T19:22:39+05:30</updated>
+    <id>http://nmotw.in//github/psi</id>
+    <content type="html"><![CDATA[<p>If you are into web development at one point or the other you would have used Google's pagespeed <a href="http://developers.google.com/speed/pagespeed/insights/">insights</a> to improve the performance of your site.</p>
+
+<p>Now it's even easier to get those insights on your CLI with <a href="https://www.npmjs.org/package/psi">psi</a> thanks to the <a href="http://addyosmani.com/blog/">Addy Osmani</a> for such a wonderful module.</p>
+
+<p>Formal defination of the module:</p>
+
+<blockquote><p>PageSpeed Insights With Reporting</p></blockquote>
+
+<p>Run mobile and desktop performance tests for your deployed site using <a href="https://developers.google.com/speed/docs/insights/v1/getting_started">Google PageSpeed Insights</a> with tidy reporting for your build process. A sample <a href="https://github.com/addyosmani/psi-gulp-sample">Gulpfile</a> demonstrating use is also available.</p>
+
+<p>Uses <a href="https://github.com/zrrrzzt/gpagespeed/">gpagespeed</a> and the reporter in <a href="https://github.com/jrcryer/grunt-pagespeed">grunt-pagespeed</a>.</p>
+
+<p>Install it -> <code>$ npm install psi</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>P.S: Registering for an API key from the <a href="https://developers.google.com/speed/docs/insights/v1/getting_started#auth">Google Developer Console</a> is recommended.</p>
+
+<p><strong>In code:</strong></p>
+
+<p>```js
+var psi = require('psi');</p>
+
+<p>psi({</p>
+
+<pre><code>// key: '...', optional
+url: 'http://nmotw.in',
+paths: '',           // optional
+locale: 'en_US',     // optional
+strategy: 'mobile',  // optional
+threshold: 80        // optional
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>On CLI:</strong></p>
+
+<p>```sh
+$ psi http://nmotw.in --strategy desktop
+Running Pagespeed Insights
+Pagespeed Insights: Processing results</p>
+
+<hr />
+
+<p>URL:      http://nmotw.in/
+Strategy: desktop
+Score:    90</p>
+
+<hr />
+
+<p>Number Resources                                 | 16
+Number Hosts                                     | 7
+Total Request Bytes                              | 1538
+Number Static Resources                          | 8
+Html Response Bytes                              | 7019
+Css Response Bytes                               | 17484
+Image Response Bytes                             | 384
+Javascript Response Bytes                        | 228348
+Other Response Bytes                             | 221982
+Number Js Resources                              | 5
+Number Css Resources                             | 3</p>
+
+<hr />
+
+<p>Avoid Landing Page Redirects                     | 0
+Enable Gzip Compression                          | 0
+Leverage Browser Caching                         | 1.5
+Main Resource Server Response Time               | 0
+Minify Css                                       | 0
+Minify HTML                                      | 0
+Minify Java Script                               | 0.16
+Minimize Render Blocking Resources               | 8
+Optimize Images                                  | 0
+Prioritize Visible Content                       | 0</p>
+
+<hr />
+
+<p>```</p>
+
+<p>If you have bunch of sites to analyse you could something like:
+<code>sh
+cat links | xargs -L1 psi &gt; analysis.report
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/psi/psi.gif" alt="psi" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[time-require]]></title>
+    <link href="http://nmotw.in//github/time-require/"/>
+    <updated>2014-05-22T22:26:56+05:30</updated>
+    <id>http://nmotw.in//github/time-require</id>
+    <content type="html"><![CDATA[<p>Were you looking for the stats of how long the require statements took in your scripts?</p>
+
+<p>It's time to use (time-require)[https://www.npmjs.org/package/time-require] a node module that displays the execution time for Node.js modules loading by hooking and tracing all require() calls.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>```sh
+$ cat > time-require
+require("time-require");
+^C</p>
+
+<p>$ node time-require</p>
+
+<p>Start time: (2014-05-22 16:56:02 UTC) [treshold=1%]</p>
+
+<h1>module                          time  %</h1>
+
+<p>1  text-table (.....ble/index.js)  40ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 51%
+2  date-time (../...ime/index.js)   5ms  ▇▇ 6%
+3  parse-ms (../n...-ms/index.js)  10ms  ▇▇▇▇ 13%
+4  pretty-ms (../...-ms/index.js)  12ms  ▇▇▇▇▇ 15%
+5  ansi-styles (....si-styles.js)  10ms  ▇▇▇▇ 13%
+6  strip-ansi (.....nsi/index.js)   5ms  ▇▇ 6%
+7  has-color (../...lor/index.js)   1ms  ▇ 1%
+8  chalk (../node...alk/index.js)  20ms  ▇▇▇▇▇▇▇▇ 26%
+Total require(): 8
+Total time: 78ms
+```</p>
+
+<p>This module makes use of a require (hook)[https://github.com/jaguard/time-require/blob/master/src/requireHook.js#L71] which is loaded as the first module so all the other requires gets counted, unhooks and then prints out a neat table with the <code>totalTime = Date.now() - startTime.getTime();</code> and the number of modules that were required.</p>
+
+<p>Thanks to the module author <a href="http://jaguard.com">Ciprian Popa</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
+]]></content>
+  </entry>
+  
+</feed>
