@@ -1,0 +1,26 @@
+---
+layout: post
+title: "nif"
+date: 2017-05-27 04:34:09 +0530
+comments: true
+categories: debug
+---
+
+#[nif](https://www.npmjs.com/package/nif)
+> `node --inspect` a file and open devtool URL.
+
+`nif` is for all the lazy folks trying to debug their node script, it runs the `node --inspect` on the provided file and open the devtool URL `chrome-devtools://`.
+
+Make sure you have the [chrome-cli](https://github.com/prasmussen/chrome-cli) installed on your machine,before using this moddule.
+
+__Get it:__ `npm i -g nif`
+
+__Sample usage:__
+
+```sh
+nif ./to-debug.js
+```
+
+__GIF FTW!__
+
+![nif](/images/nif/nif.gif)
