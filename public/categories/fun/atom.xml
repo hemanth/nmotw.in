@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-05-27T04:53:05+05:30</updated>
+  <updated>2017-06-01T19:48:29+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[covfefe]]></title>
+    <link href="http://nmotw.in//github/covfefe/"/>
+    <updated>2017-06-01T19:39:33+05:30</updated>
+    <id>http://nmotw.in//github/covfefe</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/covfefe">covfefe</a></h1>
+
+<blockquote><p>Despite the constant negative press covfefe.</p></blockquote>
+
+<p>Time for a fun module this week, it's <code>covfefe</code>. (Hope you are aware of <a href="https://archive.is/f7UL3">it</a>!)</p>
+
+<p><strong>Get it:</strong> <code>npm install covfefe</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<blockquote><p>const covfefe = require('covfefe');</p>
+
+<p>covfefe('Despite the constant negative press');
+"Despite the constant negative press covfefe"</p>
+
+<p>covfefe.translate('I have good coverage of spray tan');
+"I have good covfefe of spray tan"
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[rest-your-eyes]]></title>
@@ -214,42 +246,6 @@ true
 <p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas" /></p>
 
 <p>Thanks to <a href="https://twitter.com/thejameskyle">James Kyle</a> for this fun module for this Christmas 😉</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[lightcards]]></title>
-    <link href="http://nmotw.in//github/lightcards/"/>
-    <updated>2015-08-13T19:36:54+05:30</updated>
-    <id>http://nmotw.in//github/lightcards</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
-
-<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
-
-<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
-By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
-after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
-
-<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
-
-<p><strong>Simple usage:</strong></p>
-
-<p>```sh
-$ lightcards init &amp;&amp; lightcards</p>
-
-<p>Reading vocabulary from vocabulary.txt... OK!
-Generating flashcards... OK!
-Compiling scripts... OK!
-Starting local web server... OK!</p>
-
-<p>Start learning on http://localhost:3000
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
-
-<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
 ]]></content>
   </entry>
   

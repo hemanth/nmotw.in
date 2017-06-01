@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;">   
+    <meta name="description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;">
+    <meta name="twitter:description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="next.js Minimalistic framework for server-rendered React applications. next.js framework helps with SSR of React applications and so far has: &hellip;" />
+    <meta property="og:description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;" />
 
     
 
@@ -67,6 +67,86 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/pino/">
+			
+				Pino</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-11-03T18:41:34+05:30" pubdate data-updated="true">Nov 3<span>rd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/pino">pino</a></h1>
+
+<blockquote><p>super fast, all natural json logger.</p></blockquote>
+
+<p><code>pino</code> is an uber <a href="https://www.npmjs.com/package/pino#benchmarks">fast</a> logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save pino</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">pino</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pino&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">pino</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;myapp&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">safe</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">serializers</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">req</span><span class="o">:</span> <span class="nx">pino</span><span class="p">.</span><span class="nx">stdSerializers</span><span class="p">.</span><span class="nx">req</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">res</span><span class="o">:</span> <span class="nx">pino</span><span class="p">.</span><span class="nx">stdSerializers</span><span class="p">.</span><span class="nx">res</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//logger will have: trace, debug, info, warn, error and fatal level to log.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">pino</span><span class="p">({</span><span class="nx">level</span><span class="o">:</span> <span class="s1">&#39;debug&#39;</span><span class="p">})</span>
+</span><span class='line'><span class="nx">log</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">&#39;interesting object: %j&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nx">pino</span><span class="o">:</span> <span class="s1">&#39;is a way of life&#39;</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>pino</code> is available for: <code>koa</code>, <code>express</code>, <code>hapi</code> and <code>restify</code> as well.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/pino/pino.gif" alt="pino.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -827,162 +907,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/pwmetrics/">
-			
-				Pwmetrics</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-08-25T19:03:31+05:30" pubdate data-updated="true">Aug 25<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
-
-<blockquote><p>Progressive web metrics at your fingertipz. 💅</p></blockquote>
-
-<p><code>pwmetrics</code> CLI tool and lib to gather performance metrics via <a href="https://github.com/GoogleChrome/lighthouse/">Lighthouse</a>.</p>
-
-<p>P.S: This module is <em>IN BETA</em>, so you must be ready for anything 😉</p>
-
-<p><strong>GET IT:</strong> <code>npm install --global pwmetrics</code> or <code>npm install --save pwmetrics</code></p>
-
-<p><strong>Sample CLI usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run Chrome with port 9222 open</span>
-</span><span class='line'>chrome  --remote-debugging-port<span class="o">=</span>9222 --no-first-run --user-data-dir<span class="o">=</span><span class="k">$(</span>mktemp -d -t pwm.XXXXX<span class="k">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run pwmetrics with your url</span>
-</span><span class='line'>pwmetrics https://jsfeatures.in
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>pwmetrics --json https://jsfeatures.in
-</span><span class='line'><span class="o">{</span>
-</span><span class='line'>  <span class="s2">&quot;timings&quot;</span>: <span class="o">[</span>
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Contentful Paint&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1875.337
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Meaningful Paint&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1970.7
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Median Visual Completion&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1997
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Visual Change&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1917
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 100%&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 2004
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Time to Interactive&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: -1
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 85%&quot;</span>
-</span><span class='line'>    <span class="o">}</span>,
-</span><span class='line'>    <span class="o">{</span>
-</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Navigation Start&quot;</span>,
-</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 0
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>  <span class="o">]</span>,
-</span><span class='line'>  <span class="s2">&quot;timestamps&quot;</span>: <span class="o">[</span>
-</span><span class='line'>    303915241.28
-</span><span class='line'>  <span class="o">]</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>API:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">PWMetrics</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pwmetrics&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">new</span> <span class="nx">PWMetrics</span><span class="p">(</span><span class="s1">&#39;https://jsfeatures.in&#39;</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span> <span class="c1">// opts =&gt; {data:fileName} for now.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!:</strong></p>
-
-<p><img src="/images/pwmetrics/pwmetrics.gif" alt="pwmetrics" /></p>
 
 		
 		
