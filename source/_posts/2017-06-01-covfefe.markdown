@@ -1,0 +1,30 @@
+---
+layout: post
+title: "covfefe"
+date: 2017-06-01 19:39:33 +0530
+comments: true
+categories: fun
+---
+
+#[covfefe](https://www.npmjs.com/package/covfefe)
+> Despite the constant negative press covfefe.
+
+Time for a fun module this week, it's `covfefe`. (Hope you are aware of [it](https://archive.is/f7UL3)!)
+
+__Get it:__ `npm install covfefe`
+
+__Sample usage:__
+
+```js
+> const covfefe = require('covfefe');
+ 
+> covfefe('Despite the constant negative press');
+"Despite the constant negative press covfefe"
+ 
+> covfefe.translate('I have good coverage of spray tan');
+"I have good covfefe of spray tan"
+```
+
+__GIF FTW!__
+
+![covfefe.gif](/images/covfefe/covfefe.gif)
