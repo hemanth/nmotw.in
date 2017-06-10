@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-06-01T19:48:29+05:30</updated>
+  <updated>2017-06-10T16:06:22+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vtop]]></title>
+    <link href="http://nmotw.in//github/vtop/"/>
+    <updated>2017-06-10T15:59:12+05:30</updated>
+    <id>http://nmotw.in//github/vtop</id>
+    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/packages/vtop">vtop</a></h1>
+
+<blockquote><p>A graphical activity monitor for the command line.</p></blockquote>
+
+<p><strong>Why?</strong></p>
+
+<p>For mointoring CPU usage and memory across multi-process applications.</p>
+
+<p>Makes use of <a href="https://www.npmjs.com/package/drawille">drawille</a> for drawing in terminal with unicode braille characters.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g vtop</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+➜  nmotw.in>  vtop --help</p>
+
+<p>  Usage: vtop [options]</p>
+
+<p>  Options:</p>
+
+<pre><code>-h, --help              output usage information
+-t, --theme  [name]     set the vtop theme [acid|becca|brew|dark|monokai|parallax|seti|wizard]
+--quit-after [seconds]  Quits vtop after interval
+-V, --version           output the version number
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/vtop/vtop.gif" alt="vtop.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fkill-cli]]></title>
@@ -204,71 +244,6 @@ identify which dependency is slowing the module down.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[yarn]]></title>
-    <link href="http://nmotw.in//github/yarn/"/>
-    <updated>2016-10-13T19:37:03+05:30</updated>
-    <id>http://nmotw.in//github/yarn</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
-
-<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
-
-<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
-
-<ul>
-<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
-<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
-<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
-<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
-<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
-<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
-<li>More emojis. 🐈</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
-
-<p><strong>CLI usage:</strong></p>
-
-<p><code>sh
-yarn add
-yarn bin
-yarn cache
-yarn check
-yarn clean
-yarn config
-yarn generate-lock-entry
-yarn global
-yarn info
-yarn init
-yarn install
-yarn licenses
-yarn link
-yarn login
-yarn logout
-yarn ls
-yarn outdated
-yarn owner
-yarn pack
-yarn publish
-yarn remove
-yarn run
-yarn self-update
-yarn tag
-yarn team
-yarn test
-yarn unlink
-yarn upgrade
-yarn version
-yarn why
-</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
 ]]></content>
   </entry>
   

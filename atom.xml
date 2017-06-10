@@ -4,13 +4,61 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-06-01T19:48:29+05:30</updated>
+  <updated>2017-06-10T16:06:22+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vtop]]></title>
+    <link href="http://nmotw.in/vtop/"/>
+    <updated>2017-06-10T15:59:12+05:30</updated>
+    <id>http://nmotw.in/vtop</id>
+    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/packages/vtop">vtop</a></h1>
+
+<blockquote><p>A graphical activity monitor for the command line.</p></blockquote>
+
+<p><strong>Why?</strong></p>
+
+<p>For mointoring CPU usage and memory across multi-process applications.</p>
+
+<p>Makes use of <a href="https://www.npmjs.com/package/drawille">drawille</a> for drawing in terminal with unicode braille characters.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g vtop</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>➜  nmotw.in&gt;  vtop --help
+</span><span class='line'>
+</span><span class='line'>  Usage: vtop <span class="o">[</span>options<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>  Options:
+</span><span class='line'>
+</span><span class='line'>    -h, --help              output usage information
+</span><span class='line'>    -t, --theme  <span class="o">[</span>name<span class="o">]</span>     <span class="nb">set </span>the vtop theme <span class="o">[</span>acid|becca|brew|dark|monokai|parallax|seti|wizard<span class="o">]</span>
+</span><span class='line'>    --quit-after <span class="o">[</span>seconds<span class="o">]</span>  Quits vtop after interval
+</span><span class='line'>    -V, --version           output the version number
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/vtop/vtop.gif" alt="vtop.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[covfefe]]></title>
@@ -1420,35 +1468,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/is-subset/is-subset.gif" alt="is-subset" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rest-your-eyes]]></title>
-    <link href="http://nmotw.in/rest-your-eyes/"/>
-    <updated>2017-01-20T22:13:20+05:30</updated>
-    <id>http://nmotw.in/rest-your-eyes</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
-
-<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
-Your screen will become bright again after the command completes execution.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rest npm install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
-
-<p><strong>Till next time!</strong></p>
-
-<p><img src="http://nmotw.in/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
 ]]></content>
   </entry>
   
