@@ -1,0 +1,253 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>json-mask - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="json-mask Tiny language and engine for selecting specific parts of a JS object, hiding the rest. The main difference between JSONPath / JSONSelect &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="json-mask - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/json-mask/">
+    <meta name="twitter:description" content="json-mask Tiny language and engine for selecting specific parts of a JS object, hiding the rest. The main difference between JSONPath / JSONSelect &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="json-mask - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/json-mask/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="json-mask Tiny language and engine for selecting specific parts of a JS object, hiding the rest. The main difference between JSONPath / JSONSelect &hellip;" />
+
+    
+    <meta property="og:image" content="http://nmotw.in/images/json-mask/json-mask.gif" />
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/json-mask/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Json-mask</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-17T17:50:46+05:30" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
+
+<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
+
+<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
+
+<p>It's <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> Props ::= Prop | Prop "," Props
+</span><span class='line'>   Prop ::= Object | Array
+</span><span class='line'> Object ::= NAME | NAME "/" Object
+</span><span class='line'>  Array ::= NAME "(" Props ")"
+</span><span class='line'>   NAME ::= ? all visible characters ?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Translating it few examples, that are loosely based on XPath syntax:</p>
+
+<ul>
+<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
+<li><code>a/b/c</code> path will select a field from its parent</li>
+<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
+<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
+</ul>
+
+
+<p><strong>Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">jmask</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-mask&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span><span class="s1">&#39;hm&#39;</span><span class="p">},</span> <span class="nx">age</span><span class="o">:</span><span class="mi">7</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/last&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first,age&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">},</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-mask/json-mask.gif" alt="json-mask" /></p>
+
+<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=json-mask by @nodemotw&url=http://nmotw.in/json-mask/" title="Share json-mask on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/json-mask/" title="Share json-mask on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/json-mask/" title="Share json-mask on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/json-mask/';
+        var disqus_url = 'http://nmotw.in//github/json-mask/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

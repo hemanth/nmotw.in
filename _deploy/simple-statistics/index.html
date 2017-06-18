@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>simple-statistics - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="simple-statistics Descriptive, regression, and inference statistics. simple-statistics module is a neat pack of most commonly used functional for &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="simple-statistics - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/simple-statistics/">
+    <meta name="twitter:description" content="simple-statistics Descriptive, regression, and inference statistics. simple-statistics module is a neat pack of most commonly used functional for &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="simple-statistics - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/simple-statistics/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="simple-statistics Descriptive, regression, and inference statistics. simple-statistics module is a neat pack of most commonly used functional for &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/simple-statistics/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Simple-statistics</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-02-03T10:32:48+05:30" pubdate data-updated="true">Feb 3<span>rd</span>, 2017</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/simple-statistics">simple-statistics</a></h1>
+
+<blockquote><p>Descriptive, regression, and inference statistics.</p></blockquote>
+
+<p><code>simple-statistics</code> module is a neat pack of most commonly used functional for statistical analysis.</p>
+
+<p>It contains about <code>62</code> helper methods bundled with it :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">[</span> <span class="s1">&#39;linearRegression&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;linearRegressionLine&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;standardDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rSquared&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;modeSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;max&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;minSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;maxSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sumSimple&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;product&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;quantile&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;quantileSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;interquartileRange&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;iqr&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mad&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;medianAbsoluteDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chunk&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffleInPlace&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;ckmeans&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniqueCountSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sumNthPowerDeviations&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;equalIntervalBreaks&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleCovariance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleCorrelation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleVariance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleStandardDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleSkewness&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;permutationsHeap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;combinations&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;combinationsReplacement&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;geometricMean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;harmonicMean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;average&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;median&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;medianSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rms&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rootMeanSquare&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;variance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tTest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tTestTwoSample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bayesian&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;perceptron&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;epsilon&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;factorial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bernoulliDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;binomialDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;poissonDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chiSquaredGoodnessOfFit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zScore&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;cumulativeStdNormalProbability&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;standardNormalTable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;erf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;errorFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;inverseErrorFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;probit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bisect&#39;</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install --save simple-statistics</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ss</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;simple-statistics&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">mad</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]);</span>
+</span><span class='line'><span class="c1">// ^ 3; median absolute deviation.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">[</span>
+</span><span class='line'><span class="cm">    [1, 2],</span>
+</span><span class='line'><span class="cm">    [1, 3],</span>
+</span><span class='line'><span class="cm">    [2, 3]</span>
+</span><span class='line'><span class="cm">]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/simple-statistics/simple-statistics.gif" alt="" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=simple-statistics by @nodemotw&url=http://nmotw.in/simple-statistics/" title="Share simple-statistics on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/simple-statistics/" title="Share simple-statistics on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/simple-statistics/" title="Share simple-statistics on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/simple-statistics/';
+        var disqus_url = 'http://nmotw.in//github/simple-statistics/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

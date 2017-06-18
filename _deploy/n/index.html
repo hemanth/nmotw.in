@@ -1,0 +1,530 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>n_ - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="n_ - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/n/">
+    <meta name="twitter:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="n_ - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/n/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;" />
+
+    
+    <meta property="og:image" content="http://nmotw.in/images/n/n.gif" />
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/n/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">N_</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-17T17:51:19+05:30" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p>For all those <a href="https://www.npmjs.org/package/lodash">lodash</a> &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.</p>
+
+<p><a href="https://www.npmjs.org/package/n_">n_</a> is that cli app which does this job for you, it makes use a the <code>repl</code> module and injects lodash into the context.</p>
+
+<p>If you notice in the node REPL, <code>_</code> contains the result of the last expression.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">_</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="mi">8</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As this modules loads Lo-Dash to <code>_</code> it redirects REPL changes of <code>_</code> the new special variable <code>$</code></p>
+
+<p>Install this module globally: <code>npm install -g n_</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>n_ <span class="c"># This would start the node REPL with Lo-Dash loaded.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">n_</span> <span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">VERSION</span>
+</span><span class='line'><span class="s1">&#39;2.4.1&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">n_</span><span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">shuffle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</span><span class='line'><span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">n_</span> <span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">_</span><span class="p">)</span>
+</span><span class='line'><span class="p">[</span> <span class="s1">&#39;support&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;templateSettings&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;after&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;assign&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;at&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bind&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bindAll&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bindKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chain&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;compact&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;compose&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;constant&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;countBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;create&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;createCallback&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;curry&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;debounce&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;defaults&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;defer&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;delay&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;difference&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;filter&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;flatten&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forEach&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forEachRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forIn&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forInRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forOwn&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forOwnRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;functions&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;groupBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;indexBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;initial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;intersection&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;invert&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;invoke&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;keys&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mapValues&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;max&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;memoize&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;merge&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;omit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;once&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pairs&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;partial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;partialRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pick&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pluck&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;property&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pull&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;range&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;remove&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sortBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;throttle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;times&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;toArray&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;transform&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;union&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniq&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;values&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;where&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;without&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;wrap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;xor&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zipObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;collect&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;drop&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;each&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;eachRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;extend&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;methods&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tail&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unique&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unzip&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;clone&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;cloneDeep&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;contains&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;escape&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;every&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;find&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLast&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLastIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLastKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;has&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;identity&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;indexOf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isArguments&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isArray&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isBoolean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isDate&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isElement&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isEmpty&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isEqual&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isFinite&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNaN&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNull&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNumber&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isPlainObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isRegExp&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isString&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isUndefined&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;lastIndexOf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;noConflict&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;noop&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;now&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;parseInt&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;random&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reduce&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reduceRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;result&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;runInContext&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;size&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;some&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sortedIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;template&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unescape&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniqueId&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;all&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;any&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;detect&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findWhere&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;foldl&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;foldr&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;include&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;inject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;last&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;take&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;head&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;VERSION&#39;</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/n_/n_.gif" alt="n_" /></p>
+
+<p>Thanks to <a href="http://borisdiakur.com/">Boris Diakur</a> for publishing this module!</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=n_ by @nodemotw&url=http://nmotw.in/n/" title="Share n_ on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/n/" title="Share n_ on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/n/" title="Share n_ on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/n/';
+        var disqus_url = 'http://nmotw.in//github/n/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>
