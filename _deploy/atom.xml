@@ -4,13 +4,68 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-06-18T15:30:46+05:30</updated>
+  <updated>2017-06-19T09:38:25+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[dom-scroll-into-view]]></title>
+    <link href="http://nmotw.in/dom-scroll-into-view/"/>
+    <updated>2017-06-18T15:32:27+05:30</updated>
+    <id>http://nmotw.in/dom-scroll-into-view</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
+
+<blockquote><p>scroll node in contain to make node visible</p></blockquote>
+
+<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
+
+<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">scrollIntoView</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-scroll-into-view&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span><span class="nx">container</span><span class="p">,</span><span class="nx">config</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//config</span>
+</span><span class='line'>   <span class="p">{</span>
+</span><span class='line'>       <span class="nx">alignWithLeft</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">alignWithTop</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">allowHorizontalScroll</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">onlyScrollIfNeeded</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetTop</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetLeft</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetBottom</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetRight</span>
+</span><span class='line'>   <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[covfefe]]></title>
@@ -1420,35 +1475,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/is-subset/is-subset.gif" alt="is-subset" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rest-your-eyes]]></title>
-    <link href="http://nmotw.in/rest-your-eyes/"/>
-    <updated>2017-01-20T22:13:20+05:30</updated>
-    <id>http://nmotw.in/rest-your-eyes</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
-
-<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
-Your screen will become bright again after the command completes execution.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rest npm install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
-
-<p><strong>Till next time!</strong></p>
-
-<p><img src="http://nmotw.in/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
 ]]></content>
   </entry>
   
