@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;">   
+    <meta name="description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;">
+    <meta name="twitter:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;" />
+    <meta property="og:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;" />
 
     
 
@@ -67,6 +67,101 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dom-event/">
+			
+				Dom-event</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
+
+<blockquote><p>Add/remove DOM events</p></blockquote>
+
+<p>Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser compliance all in just 15 lines of code ;)</p>
+
+<p><strong>Add event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">on</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Remove event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">off</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install it:</strong> <code>npm install dom-event</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">on</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-event&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">off</span> <span class="o">=</span> <span class="nx">on</span><span class="p">.</span><span class="nx">off</span><span class="p">;</span> <span class="c1">// :)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">on</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">off</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span> <span class="c1">// No alerts :)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dom-event/dom-event.gif" alt="dom-event" /></p>
+
+<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -987,96 +1082,6 @@
 <p>Thanks to <a href="http://www.adaltas.com">Worms David</a> for <code>printf</code>!</p>
 
 <p><code>printf('******************%s**************',"Merry Xmas!")</code></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/malarkey/">
-			
-				Malarkey</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-18T18:07:40+05:30" pubdate data-updated="true">Dec 18<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/malarkey">malarkey</a></h1>
-
-<blockquote><p>Simulate a typewriter/ticker effect on a DOM element.</p></blockquote>
-
-<p>Even though <code>malarkey</code> means 'meaningless talk; nonsense', this is a sweet module that helps us to simulate typewriter effect on DOM elements.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save malarkey</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.malarkey&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">typeSpeed</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">deleteSpeed</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">pauseDelay</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">loop</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">postfix</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">malarkey</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">opts</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="s1">&#39;Say hello&#39;</span><span class="p">).</span><span class="nx">pause</span><span class="p">().</span><span class="k">delete</span><span class="p">()</span>
-</span><span class='line'><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="s1">&#39;Wave goodbye&#39;</span><span class="p">).</span><span class="nx">pause</span><span class="p">().</span><span class="k">delete</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>API from 1000 feet:</strong></p>
-
-<ul>
-<li><p>malarkey.type</p></li>
-<li><p>malarkey.clear</p></li>
-<li><p>malarkey.pause</p></li>
-<li><p>malarkey.delete</p></li>
-</ul>
-
-
-<p>Read more about them in the <a href="https://github.com/yuanqing/malarkey#api">docs</a></p>
-
-<p><strong>DEMO:</strong></p>
-
-<iframe width="100%" height="300" src="http://jsfiddle.net/gnumanth/efu58rbk/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/malarkey/malarkey.gif" alt="malarkey" /></p>
-
-<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
 
 		
 		

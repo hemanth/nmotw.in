@@ -1,0 +1,48 @@
+---
+layout: post
+title: "base64-async"
+date: 2017-06-29 13:57:23 +0530
+comments: true
+categories: async util 
+---
+
+#[base64-async](https://www.npmjs.com/package/base64-async)
+> Non-blocking chunked Base64 encoding.
+
+`base64-async` helps us in processing large `Base64` documents without blocking the event loop, one can configure chunk size option to optimise for your use case.
+
+This module exposes: `b64`, `encode` and `decode` methods which accepts `(input, [options])` and returns a promise on innvocation.
+
+
+__Get it:__ `npm install --save base64-async`
+
+__Sample usage:__
+
+```js
+const b64 = require('base64-async');
+const fs = require('fs');
+const buffer = fs.readFileSync('somehugefile.jpg');
+ 
+b64.encode(fileBuffer).then(b64String => console.log(b64String));
+// aGkgbXVt... 
+ 
+b64.decode(b64String).then(buffer => console.log(buffer));
+// <Buffer 68 69 20 6d 75 6d ... > 
+ 
+// or, for the cool kids 
+const b64String = await b64.encode(fileBuffer);
+const originalFileBuffer = await b64.decode(b64String);
+ 
+// which is equivalent to this 
+const b64String = await b64(fileBuffer);
+const originalFileBuffer = await b64(b64String);
+// If no method is specified, buffers are encoded, strings are decoded
+```
+
+__GIF FTW!__
+
+![base64-async.gif](/images/base64-async/base64-async.gif)
+
+
+
+
