@@ -7,9 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="progress Flexible ascii progress bar. Install it: npm install progress Example usage: Create a ProgressBar.
-Give it a format string.
-Give the total &hellip;">   
+    <meta name="description" content="http-teapot Add support for RFC 2324 to any HTTP server. P.S: Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -17,18 +15,14 @@ Give the total &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="progress Flexible ascii progress bar. Install it: npm install progress Example usage: Create a ProgressBar.
-Give it a format string.
-Give the total &hellip;">
+    <meta name="twitter:description" content="http-teapot Add support for RFC 2324 to any HTTP server. P.S: Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="progress Flexible ascii progress bar. Install it: npm install progress Example usage: Create a ProgressBar.
-Give it a format string.
-Give the total &hellip;" />
+    <meta property="og:description" content="http-teapot Add support for RFC 2324 to any HTTP server. P.S: Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP &hellip;" />
 
     
 
@@ -73,6 +67,199 @@ Give the total &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/http-teapot/">
+			
+				Http-teapot</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-16T18:53:28+05:30" pubdate data-updated="true">Oct 16<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/http-teapot">http-teapot</a></h1>
+
+<p>Add support for <a href="https://www.ietf.org/rfc/rfc2324.txt">RFC 2324</a> to any HTTP server.</p>
+
+<p>P.S:  Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP status code <code>418</code>.</p>
+
+<p>BTW if you are wondering why this made in to this list, <code>http-teapot</code> module is the 100,000th module to npm today!</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>congrats to <a href="https://twitter.com/wa7son">@wa7son</a> who published the 100,000th module to npm today, a http 418 teapot protocol implementation <a href="http://t.co/ckKrSizu9Q">pic.twitter.com/ckKrSizu9Q</a></p>&mdash; maxwell ogden (@maxogden) <a href="https://twitter.com/maxogden/status/522413667782914048">October 15, 2014</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h2>Installation</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install http-teapot
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Usage</h2>
+
+<p>Just add http-teapot as a routing function.</p>
+
+<p>Express example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">teapot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http-teapot&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/teapot&#39;</span><span class="p">,</span> <span class="nx">teapot</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/http-teapot/http-teapot.gif" alt="http-teapot" /></p>
+
+<p>Thanks to <a href="https://github.com/watson">Thomas Watson Steen</a> for implementing this RFC and giving us a teapot image ;)</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/is/">
+			
+				Is</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-09T19:38:21+05:30" pubdate data-updated="true">Oct 9<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/is">is</a></h1>
+
+<blockquote><p>This is a definitive JavaScript type testing library.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install is</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">is</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">([],</span> <span class="s1">&#39;object&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">array</span><span class="p">([]);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">odd</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">even</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// So on...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It has all uber cool <code>is</code> checks as below:</p>
+
+<p><code>
+[ 'type',
+  'a',
+  'defined',
+  'empty',
+  'equal',
+  'hosted',
+  'instanceof',
+  'instance',
+  'null',
+  'nil',
+  'undefined',
+  'undef',
+  'arguments',
+  'args',
+  'array',
+  'arraylike',
+  'boolean',
+  'false',
+  'true',
+  'date',
+  'element',
+  'error',
+  'function',
+  'fn',
+  'number',
+  'infinite',
+  'decimal',
+  'divisibleBy',
+  'int',
+  'maximum',
+  'minimum',
+  'nan',
+  'even',
+  'odd',
+  'ge',
+  'gt',
+  'le',
+  'lt',
+  'within',
+  'object',
+  'hash',
+  'regexp',
+  'string' ]
+</code></p>
+
+<p><strong>GIT FTW:</strong></p>
+
+<p><img src="/images/is/is.gif" alt="is" /></p>
+
+<p>Thanks to <a href="https://twitter.com/onirame">Enrico Marino</a> for <code>is</code> :)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1866,243 +2053,6 @@ Give the total &hellip;" />
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/git-promise/git-promise.gif" alt="git-promise" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ms/">
-			
-				Ms</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-07T18:08:24+05:30" pubdate data-updated="true">Aug 7<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="">ms</a> a Tiny milisecond conversion utility, that does the below:</p>
-
-<ul>
-<li><p>number -> (ms) -> string with a unit is returned.</p></li>
-<li><p>string -> (ms) -> string</p></li>
-<li><p>string+number with a valid unit -> (ms) -> number of equivalent ms</p></li>
-</ul>
-
-
-<p><strong>Installing:</strong> <code>npm install ms</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">ms</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ms&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1d&#39;</span><span class="p">);</span> <span class="c1">// 86400000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1h&#39;</span><span class="p">);</span> <span class="c1">// 3600000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1m&#39;</span><span class="p">)</span> <span class="c1">// 60000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1s&#39;</span><span class="p">)</span> <span class="c1">// 1000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">)</span> <span class="c1">// 1000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="s1">&#39;1000&#39;</span><span class="p">,{</span><span class="kr">long</span><span class="o">:</span><span class="kc">true</span><span class="p">})</span> <span class="c1">// 1000</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">,{</span><span class="kr">long</span><span class="o">:</span><span class="kc">true</span><span class="p">})</span> <span class="c1">// &#39;1 second&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>ms</code> is one of those sweet tiny module that does exactly what is expected from it. The code is just 111 lines, logic is pretty simple,
-the method parses the given <code>str</code> and return milliseconds ;) well it also support short and long format for <code>ms</code> and has a Pluralization helper too.</p>
-
-<p>Below as few selected chunks from the source code:</p>
-
-<p><strong>Helpers:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">s</span> <span class="o">*</span> <span class="mi">60</span><span class="p">;</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">m</span> <span class="o">*</span> <span class="mi">60</span><span class="p">;</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">h</span> <span class="o">*</span> <span class="mi">24</span><span class="p">;</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">d</span> <span class="o">*</span> <span class="mf">365.25</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Matcher:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="sr">/^((?:\d+)?\.?\d+) *(ms|seconds?|s|minutes?|m|hours?|h|days?|d|years?|y)?$/i</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Pluralization:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">plural</span><span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">ms</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">ms</span> <span class="o">&lt;</span> <span class="nx">n</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span> <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">ms</span> <span class="o">/</span> <span class="nx">n</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">ms</span> <span class="o">/</span> <span class="nx">n</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;s&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ms/ms.gif" alt="ms" /></p>
-
-<p>Special thanks to <a href="http://twitter.com/rauchg">Guillermo Rauch</a> for this wonderful module :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/address/">
-			
-				Address</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-31T16:58:37+05:30" pubdate data-updated="true">Jul 31<span>st</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>How many times have you checked for the IP, MAC and DNS servers on the CLI?</p>
-
-<p>Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named <code>address</code> that will help you it's sweeter APIs.</p>
-
-<p><img src="/images/address/address.png" alt="" /></p>
-
-<p>Installing it: <code>npm install address</code></p>
-
-<p><strong>Peep in:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_RE</span>
-</span><span class='line'><span class="o">/</span><span class="p">(</span><span class="o">?:</span><span class="nx">ether</span><span class="o">|</span><span class="nx">HWaddr</span><span class="p">)</span><span class="err">\</span><span class="nx">s</span><span class="o">+</span><span class="p">((</span><span class="o">?:</span><span class="p">[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">}</span><span class="err">\</span><span class="o">:</span><span class="p">){</span><span class="mi">5</span><span class="p">}[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">})</span><span class="o">/</span><span class="nx">i</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_IP_RE</span>
-</span><span class='line'><span class="o">/</span><span class="nx">inet</span><span class="err">\</span><span class="nx">s</span><span class="p">(</span><span class="o">?:</span><span class="nx">addr</span><span class="err">\</span><span class="o">:</span><span class="p">)</span><span class="o">?</span><span class="p">(</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="p">)</span><span class="o">/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Example usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// default interface &#39;eth&#39; on linux, &#39;en&#39; on osx.</span>
-</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">();</span>   <span class="c1">// &#39;192.168.0.2&#39;</span>
-</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">();</span> <span class="c1">// &#39;fe80::7aca:39ff:feb0:e67d&#39;</span>
-</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">mac</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addr</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addr</span><span class="p">);</span> <span class="c1">// &#39;78:ca:39:b0:e6:7d&#39;</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// local loopback</span>
-</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">);</span> <span class="c1">// &#39;127.0.0.1&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">dns</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// [&#39;10.13.2.1&#39;, &#39;10.13.2.6&#39;]</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Get them all!</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">address</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">.</span><span class="nx">ip</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">mac</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// &#39;192.168.0.2&#39;, &#39;fe80::7aca:39ff:feb0:e67d&#39;, &#39;78:ca:39:b0:e6:7d&#39;</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW?!</strong></p>
-
-<p><img src="/images/address/address.gif" alt="address" /></p>
-
-<p>Thanks to <a href="http://fengmk2.cnpmjs.org/">fengmk2</a> for helping us to find addresses in ease.</p>
 
 		
 		

@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">   
+    <meta name="description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">
+    <meta name="twitter:description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;" />
+    <meta property="og:description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;" />
 
     
 
@@ -67,6 +67,159 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/confirm-simple/">
+			
+				Confirm-simple</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
+
+<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
+
+<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
+
+<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
+
+<p><strong>API and simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">confirm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;confirm-simple&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Do you accept the EULA?&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span> <span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good for you!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Sorry you wont get to use the software&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
+
+<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dompurify/">
+			
+				Dompurify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
+
+<blockquote><p>Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG!</p></blockquote>
+
+<p>DOMPurify sanitizes HTML and prevents XSS attacks.</p>
+
+<p>|dirty HTML |  => |DOMPurify.sanitize |  => | Clean and safe HTML |</p>
+
+<p>The faster your browser, the faster DOMPurify will be ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install --save dompurify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">DOMpurify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dompurify);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">DOMPurify.sanitize(&#39;</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="nx">x</span> <span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1">//&gt;&#39;); // becomes &lt;img src=&quot;x&quot;&gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="s1">&#39;&lt;svg&gt;&lt;g/onload=alert(2)//&lt;p&gt;&#39;</span><span class="p">);</span> <span class="c1">// becomes &lt;svg&gt;&lt;g&gt;&lt;/g&gt;&lt;/svg&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's configurable: <code>var config = { ALLOWED_TAGS: ['p', '#text'], KEEP_CONTENT: false };</code> and <code>DOMPurify.sanitize(str, config)</code></p>
+
+<p>We can also use <code>hooks</code>:</p>
+
+<ul>
+<li><p>beforeSantitizeElements</p></li>
+<li><p>afterSantitizeElements</p></li>
+<li><p>beforeSantitizeAttributes</p></li>
+<li><p>afterSantitizeAttributes</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">addHook</span><span class="p">(</span><span class="s1">&#39;beforeSantitizeElements&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">currentNode</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Play with currentNode.</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">currentNode</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dompurify/dompurify.gif" alt="dompurify" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -888,200 +1041,6 @@
 <p><img src="/images/safe-json-parse/safe-json-parse.gif" alt="safe-json-parse" /></p>
 
 <p>Thanks to <a href="https://twitter.com/raynos">Raynos</a> for helping us with safely parsing JSONs ;)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/css-explain/">
-			
-				Css-explain</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-01T18:53:53+05:30" pubdate data-updated="true">Jan 1<span>st</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/css-explain">css-explain</a></h1>
-
-<blockquote><p>Think of it like SQL EXPLAIN, but for CSS selectors.</p></blockquote>
-
-<p><code>css-explain</code> is one of such rare modules that helps us to learn or explain CSS selectors with ease.</p>
-
-<p><strong>Get it:</strong> <code>npm install css-explain</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">cssExplain</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;css-explain&#39;</span><span class="p">).</span><span class="nx">cssExplain</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div .info&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div .info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;.info&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;Uses a descendant selector with a rightmost class selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div#info&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div#info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div#info&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span> <span class="p">]</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div &gt; p#info&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div &gt; p#info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;p#info&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span>
-</span><span class='line'>   <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span><span class="p">,</span>
-</span><span class='line'>     <span class="s1">&#39;ID is overly qualified by a child selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/css-explain/css-explain.gif" alt="css-explain" /></p>
-
-<p>Thanks to <a href="https://twitter.com/joshpeek">Joshua Peek</a> for css-explain, do <a href="http://josh.github.io/css-explain/">checkout</a> the webbased app of the same.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/printf/">
-			
-				Printf</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-24T18:11:33+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">printf</a></h1>
-
-<p>Full implementation of the <code>printf</code>/<code>sprintf</code> family in pure JS.</p>
-
-<pre><code>            _       _    __ 
-           (_)     | |  / _|
- _ __  _ __ _ _ __ | |_| |_ 
-| '_ \| '__| | '_ \| __|  _|
-| |_) | |  | | | | | |_| |
-| .__/|_|  |_|_| |_|\__|_|
-| |
-|_|
-</code></pre>
-
-<p><strong>Get it:</strong> <code>npm install printf</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">printf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;printf&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">printf</span><span class="p">(</span><span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
-</span><span class='line'><span class="nx">printf</span><span class="p">(</span><span class="nx">write_stream</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Flags:</strong></p>
-
-<ul>
-<li><p><code></code> (space)</p></li>
-<li><p><code>+</code></p></li>
-<li><p><code>-</code></p></li>
-<li><p><code>0</code></p></li>
-</ul>
-
-
-<p><strong>Features:</strong></p>
-
-<ul>
-<li><p><code>Width / precision</code> => <code>%2f</code></p></li>
-<li><p><code>Numerical bases</code> => <code>%c</code></p></li>
-<li><p><code>Miscellaneous</code> => <code>%d%%</code>, <code>+%s%+</code></p></li>
-<li><p><code>Extra</code> => The <code>%O</code> converter will call <code>util.inspect(...)</code> at the argument, <code>%-*.*f</code>.</p></li>
-</ul>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/printf/printf.gif" alt="" /></p>
-
-<p>Thanks to <a href="http://www.adaltas.com">Worms David</a> for <code>printf</code>!</p>
-
-<p><code>printf('******************%s**************',"Merry Xmas!")</code></p>
 
 		
 		

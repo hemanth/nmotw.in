@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;">   
+    <meta name="description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Runs test on each update and &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;">
+    <meta name="twitter:description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;" />
+    <meta property="og:description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;" />
 
     
 
@@ -70,6 +67,136 @@ Runs test on each update and &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/cost-of-modules/">
+			
+				Cost-of-modules</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-01T19:06:43+05:30" pubdate data-updated="true">Dec 1<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
+
+<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
+
+<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
+identify which dependency is slowing the module down.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
+
+<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--less</code>  Show the biggest 10 modules</p>
+
+<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
+
+<p><code>--no-install</code>  Skip installation</p>
+
+<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/svg-captcha/">
+			
+				Svg-captcha</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-11-24T20:22:03+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/svg-captcha">svg-captcha</a></h1>
+
+<blockquote><p>Generate svg captcha.</p></blockquote>
+
+<p><code>svg-captcha</code> uses OpenType font parser and text skewing martix logic to generate random SVG captchas.</p>
+
+<p>It returns an object which has the SVG data and the text which was used to generate the same.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save captcha</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">svgCaptcha</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;svg-captcha&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate random text of length 4</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">.</span><span class="nx">randomText</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate svg image</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">captcha</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate both and returns an object</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">captcha</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// {data: &#39;&lt;svg.../svg&gt;&#39;, text: &#39;abcd&#39;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/svg-captcha/svg-captcha.gif" alt="svg-captcha" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -720,171 +847,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/asyncbox/">
-			
-				Asyncbox</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
-
-<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
-
-<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
-
-<ul>
-<li>sleep</li>
-<li>retry</li>
-<li>nodeify</li>
-<li>nodeifyAll</li>
-<li>retryInterval</li>
-<li>asyncify</li>
-<li>parallel</li>
-<li>asyncmap</li>
-<li>asyncfilter</li>
-<li>waitForCondition</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// do some stuff </span>
-</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
-</span><span class='line'>    <span class="c1">// do some other stuff </span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/granim/">
-			
-				Granim</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
-
-<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
-
-<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
-
-<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Create a &lt;canvas&gt; element --&gt;</span>
-</span><span class='line'><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;granim-canvas&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">granimInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Granim</span><span class="p">({</span>
-</span><span class='line'>   <span class="nx">element</span><span class="o">:</span> <span class="s1">&#39;#granim-canvas&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;granim&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">opacity</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-</span><span class='line'>   <span class="nx">states</span> <span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>       <span class="s2">&quot;default-state&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>           <span class="nx">gradients</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#834D9B&#39;</span><span class="p">,</span> <span class="s1">&#39;#D04ED6&#39;</span><span class="p">],</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#1CD8D2&#39;</span><span class="p">,</span> <span class="s1">&#39;#93EDC7&#39;</span><span class="p">]</span>
-</span><span class='line'>           <span class="p">]</span>
-</span><span class='line'>       <span class="p">}</span>
-</span><span class='line'>   <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/granim/granim.gif" alt="granim" /></p>
 
 		
 		

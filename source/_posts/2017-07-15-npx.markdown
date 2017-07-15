@@ -1,0 +1,35 @@
+---
+layout: post
+title: "npx"
+date: 2017-07-15 11:07:12 +0530
+comments: true
+categories: npm 
+---
+
+#[npx](https://www.npmjs.com/package/npx)
+> an npm package runner.
+
+Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.
+
+P.S: `npm@5.2.0` is shipped with `npx`!
+
+__Get it:__ `npm install -g npx`
+
+__Sample usage:__
+
+```sh
+
+$ npm i -D cowsay
+
+$ npx cowsay "HolyCow!"
+
+```
+
+__GIF FTW!__
+
+![npx.gif](/images/npx/npx.gif)
+
+
+P.S: In case you have missed reading [Introducing npx: an npm package runner
+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b), do read it!
+
