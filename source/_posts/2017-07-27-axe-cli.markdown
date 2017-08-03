@@ -1,0 +1,45 @@
+---
+layout: post
+title: "axe-cli"
+date: 2017-07-27 16:59:41 +0530
+comments: true
+categories: a11y 
+---
+
+#[axe-cli](https://www.npmjs.com/package/axe-cli)
+>A CLI for accessibility testing using axe-core
+
+Provides a command line interface for `aXe` to run quick accessibility tests.
+
+__Get it:__ `npm install -g axe-cli`
+
+__Sample usage:__
+
+```
+$ axe www.google.com, github.com
+```
+
+```
+#  --rules flag to set which rules you wish to run
+$ axe www.google.com --rules color-contrast,html-has-lang
+```
+
+```
+#  --tags to tell axe to run all rules that have that specific tag.
+axe www.google.com --tags wcag2a
+```
+
+```
+# Saving the results
+$ axe www.google.com --save google-site.json
+$ axe www.google.com --dir ./google-results/
+```
+
+```
+# Defining the scope
+axe www.google.com --include #main --exclude #aside
+```
+
+__GIF FTW!__
+
+![axe-cli.gif](/images/axe-cli/axe-cli.gif)
