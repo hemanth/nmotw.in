@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
-Can be &hellip;">   
+    <meta name="description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Can be &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/5/">
-    <meta name="twitter:description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
-Can be &hellip;">
+    <meta name="twitter:description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/5/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
-Can be &hellip;" />
+    <meta property="og:description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;" />
 
     
 
@@ -70,6 +67,78 @@ Can be &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/resize-observer-polyfill/">
+			
+				Resize-observer-polyfill</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-10-06T22:36:53+05:30" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">resize-observer-polyfill</a></h1>
+
+<blockquote><p>A polyfill for Resize Observer API.</p></blockquote>
+
+<p>Implements event based tracking of changes in the dimensions of elements.</p>
+
+<p>Uses MutationsObserver and falls back to an infinite dirty checking cycle if the first one is not supported.</p>
+
+<p>Handles long running CSS transitions/animations, attributes and nodes mutations along with changes made by :hover pseudo-class (optional).</p>
+
+<p>Compliant with the <a href="http://rawgit.com/WICG/ResizeObserver/master/index.html">spec</a>.</p>
+
+<p>Doesn't contain any publicly available methods except for those described in the spec.</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">resize</span><span class="o">-</span><span class="nx">observer</span><span class="o">-</span><span class="nx">polyfill</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">ResizeObserver</span> <span class="nx">from</span> <span class="s1">&#39;resize-observer-polyfill&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ResizeObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">,</span> <span class="nx">observer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/resize-observer-polyfill/resize-observer-polyfill.gif" alt="resize-observer-polyfill" /></p>
+
+<p>P.S: Checkout the <a href="http://que-etc.github.io/resize-observer-polyfill">Live demo</a>.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -934,94 +1003,6 @@ Can be &hellip;" />
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/currency-symbol-map/curreny-symbol-map.gif" alt="currency-symbol-map" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/reify/">
-			
-				Reify</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-07-28T20:40:10+05:30" pubdate data-updated="true">Jul 28<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/reify">reify</a></h1>
-
-<blockquote><p>Enable ECMAScript 2015 modules in Node today. No caveats. Full stop.</p></blockquote>
-
-<p><strong>Get it:</strong> <code>npm install --save refiy</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<ul>
-<li><p><code>npm install --save reify</code></p></li>
-<li><p><code>require("reify")</code> before <code>import</code> and <code>export</code> declarations.</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;reify/repl&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="kr">import</span> <span class="p">{</span> <span class="nx">strictEqual</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;assert&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">strictEqual</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">);</span>
-</span><span class='line'><span class="nx">AssertionError</span><span class="o">:</span> <span class="mi">4</span> <span class="o">===</span> <span class="mi">7</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">repl</span><span class="o">:</span><span class="mi">1</span><span class="o">:</span><span class="mi">1</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">defaultEval</span> <span class="p">(</span><span class="nx">repl</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">272</span><span class="o">:</span><span class="mi">27</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">bound</span> <span class="p">(</span><span class="nx">domain</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">280</span><span class="o">:</span><span class="mi">14</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">runBound</span> <span class="p">[</span><span class="nx">as</span> <span class="nb">eval</span><span class="p">]</span> <span class="p">(</span><span class="nx">domain</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">293</span><span class="o">:</span><span class="mi">12</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">repl</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">441</span><span class="o">:</span><span class="mi">10</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">emitOne</span> <span class="p">(</span><span class="nx">events</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">101</span><span class="o">:</span><span class="mi">20</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">emit</span> <span class="p">(</span><span class="nx">events</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">188</span><span class="o">:</span><span class="mi">7</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">Interface</span><span class="p">.</span><span class="nx">_onLine</span> <span class="p">(</span><span class="nx">readline</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">224</span><span class="o">:</span><span class="mi">10</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">Interface</span><span class="p">.</span><span class="nx">_line</span> <span class="p">(</span><span class="nx">readline</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">566</span><span class="o">:</span><span class="mi">8</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">at</span> <span class="nx">REPLServer</span><span class="p">.</span><span class="nx">Interface</span><span class="p">.</span><span class="nx">_ttyWrite</span> <span class="p">(</span><span class="nx">readline</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">843</span><span class="o">:</span><span class="mi">14</span><span class="p">)</span>
-</span><span class='line'><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Code generated by the <code>reify</code> compiler relies on a <a href="lib/runtime.js">simple runtime
-API</a>.</p>
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/reify/reify.gif" alt="" /></p>
 
 		
 		
