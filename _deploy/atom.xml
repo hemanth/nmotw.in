@@ -4,13 +4,87 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-08-03T13:44:47+05:30</updated>
+  <updated>2017-08-12T11:02:00+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[csrf]]></title>
+    <link href="http://nmotw.in/csrf/"/>
+    <updated>2017-08-11T15:14:21+05:30</updated>
+    <id>http://nmotw.in/csrf</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/csrf">csrf</a></h1>
+
+<blockquote><p>Logic behind CSRF token creation and verification.</p></blockquote>
+
+<p>Tiny and effective module that helps you to create and verify <code>csrf</code> tokens.</p>
+
+<p><strong>Get it:</strong> <code>npm install csrf</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Tokens</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;csrf&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">function Tokens() =&gt;</span>
+</span><span class='line'><span class="cm">    name: &quot;Tokens&quot;</span>
+</span><span class='line'><span class="cm">    prototype: Tokens</span>
+</span><span class='line'><span class="cm">    _tokenize: function()</span>
+</span><span class='line'><span class="cm">    create: function()</span>
+</span><span class='line'><span class="cm">    secret: function()</span>
+</span><span class='line'><span class="cm">    secretSync: function()</span>
+</span><span class='line'><span class="cm">    verify: function()</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">tokens</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tokens</span><span class="p">();</span>
+</span><span class='line'><span class="nx">await</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">secret</span><span class="p">()</span>
+</span><span class='line'><span class="c1">//^ Something like &quot;8SOJmA_ewWfI0g9qKbcuSvhC&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// also</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">secretSync</span><span class="p">()</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">secret</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// verify</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tokens</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">secret</span><span class="p">,</span> <span class="nx">token</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;invalid token!&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/csrf/csrf.gif" alt="csrf.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fitty]]></title>
@@ -1166,98 +1240,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/sweetalert/sweetalert.gif" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[json-schema-faker]]></title>
-    <link href="http://nmotw.in/json-schema-faker/"/>
-    <updated>2017-03-10T17:49:12+05:30</updated>
-    <id>http://nmotw.in/json-schema-faker</id>
-    <content type="html"><![CDATA[<h1><a href="">json-schema-faker</a></h1>
-
-<blockquote><p>JSON-Schema + fake data generators</p></blockquote>
-
-<p>Use <a href="http://json-schema.org/">JSON Schema</a> along with fake generators to provide consistent and meaningful fake data.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save json-schema-faker</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">jsf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-schema-faker&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">schema</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="s2">&quot;faker&quot;</span><span class="o">:</span> <span class="s2">&quot;name.findName&quot;</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-</span><span class='line'>      <span class="s2">&quot;faker&quot;</span><span class="o">:</span> <span class="s2">&quot;internet.email&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="s2">&quot;required&quot;</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>    <span class="s2">&quot;name&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="s2">&quot;email&quot;</span>
-</span><span class='line'>  <span class="p">]</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">jsf</span><span class="p">(</span><span class="nx">schema</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">^ Would log something like:</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">{</span>
-</span><span class='line'><span class="cm">  &quot;name&quot;: &quot;Annetta Weimann&quot;,</span>
-</span><span class='line'><span class="cm">  &quot;email&quot;: &quot;Assunta_Beer@gmail.com&quot;</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/json-schema-faker/json-schema-faker.gif" alt="json-schema-faker" /></p>
-
-<p>P.S: Don't forget to checkout their web-<a href="http://json-schema-faker.js.org/">app</a>!</p>
 ]]></content>
   </entry>
   
