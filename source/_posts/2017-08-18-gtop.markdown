@@ -1,0 +1,49 @@
+---
+layout: post
+title: "gtop"
+date: 2017-08-18 13:25:20 +0530
+comments: true
+categories: cli util 
+---
+
+#[gtop](https://www.npmjs.com/package/gtop)
+>System monitoring dashboard for terminal.
+
+`gtop` could be termed as the node's version of [htop](http://hisham.hm/htop/), gives a very need interface on the cli that would list out the below:
+
+* CPU history.
+
+* Memory and Swap History.
+
+* Memory and Netowrk usage.
+
+* Disk usage.
+
+* Process list.
+
+You can sort the process table by pressing:
+
+`p`: Process Id
+`c`: CPU usage
+`m`: Memory usage
+
+
+__Get it:__ `npm install -g gtop`
+
+__Sample usage:__
+
+```
+$ gtop
+
+# In case of font issues: LANG=en_US.utf8 TERM=xterm-256color gtop
+```
+
+__GIF FTW!__
+
+![gtop](/images/gtop/gtop.gif)
+
+
+
+
+
+
