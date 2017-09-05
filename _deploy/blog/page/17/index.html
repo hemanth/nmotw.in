@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="mongoskin The future layer above node-mongodb-native. mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to &hellip;">   
+    <meta name="description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/17/">
-    <meta name="twitter:description" content="mongoskin The future layer above node-mongodb-native. mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to &hellip;">
+    <meta name="twitter:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/17/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="mongoskin The future layer above node-mongodb-native. mongoskin -> The promise wrapper for node-mongodb-native, makes life easier by helping us to &hellip;" />
+    <meta property="og:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;" />
 
     
 
@@ -67,6 +67,384 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/n/">
+			
+				N_</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-17T17:51:19+05:30" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>For all those <a href="https://www.npmjs.org/package/lodash">lodash</a> &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default.</p>
+
+<p><a href="https://www.npmjs.org/package/n_">n_</a> is that cli app which does this job for you, it makes use a the <code>repl</code> module and injects lodash into the context.</p>
+
+<p>If you notice in the node REPL, <code>_</code> contains the result of the last expression.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">_</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="mi">8</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As this modules loads Lo-Dash to <code>_</code> it redirects REPL changes of <code>_</code> the new special variable <code>$</code></p>
+
+<p>Install this module globally: <code>npm install -g n_</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>n_ <span class="c"># This would start the node REPL with Lo-Dash loaded.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">n_</span> <span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">VERSION</span>
+</span><span class='line'><span class="s1">&#39;2.4.1&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">n_</span><span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">shuffle</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</span><span class='line'><span class="p">[</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">n_</span> <span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">_</span><span class="p">)</span>
+</span><span class='line'><span class="p">[</span> <span class="s1">&#39;support&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;templateSettings&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;after&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;assign&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;at&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bind&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bindAll&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bindKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chain&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;compact&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;compose&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;constant&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;countBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;create&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;createCallback&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;curry&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;debounce&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;defaults&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;defer&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;delay&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;difference&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;filter&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;flatten&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forEach&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forEachRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forIn&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forInRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forOwn&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forOwnRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;functions&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;groupBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;indexBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;initial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;intersection&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;invert&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;invoke&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;keys&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;map&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mapValues&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;max&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;memoize&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;merge&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;omit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;once&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pairs&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;partial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;partialRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pick&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pluck&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;property&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;pull&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;range&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;remove&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sortBy&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;throttle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;times&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;toArray&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;transform&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;union&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniq&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;values&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;where&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;without&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;wrap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;xor&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zip&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zipObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;collect&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;drop&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;each&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;eachRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;extend&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;methods&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;select&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tail&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unique&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unzip&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;clone&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;cloneDeep&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;contains&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;escape&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;every&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;find&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLast&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLastIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findLastKey&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;has&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;identity&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;indexOf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isArguments&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isArray&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isBoolean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isDate&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isElement&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isEmpty&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isEqual&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isFinite&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNaN&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNull&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isNumber&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isPlainObject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isRegExp&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isString&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;isUndefined&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;lastIndexOf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;noConflict&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;noop&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;now&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;parseInt&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;random&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reduce&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;reduceRight&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;result&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;runInContext&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;size&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;some&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sortedIndex&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;template&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unescape&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniqueId&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;all&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;any&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;detect&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;findWhere&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;foldl&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;foldr&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;include&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;inject&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;last&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;take&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;head&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;VERSION&#39;</span> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/n_/n_.gif" alt="n_" /></p>
+
+<p>Thanks to <a href="http://borisdiakur.com/">Boris Diakur</a> for publishing this module!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1114,163 +1492,6 @@
 <p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
 
 <p><strong>Enjoy talking like the Yeoman! :)</strong></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/omelette/">
-			
-				Omelette</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-08T18:08:15+05:30" pubdate data-updated="true">May 8<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.org/package/omelette">Omelette.js</a> a simple autocompletion helper for node, published by <a href="http://fatihak.in/">Fatih</a>.</p>
-
-<p>It's a beautifuly crafted coffee code, that takes care of tab completions for your CLI tools.</p>
-
-<p>It's takes care of <code>--compgen</code>, <code>--completion</code> and <code>--compzsh</code> for variations of SHELLs.</p>
-
-<p>Say you need a simple CLI tool to greet user:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">comp</span><span class="p">,</span> <span class="nx">omelette</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">omelette</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;omelette&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">comp</span> <span class="o">=</span> <span class="nx">omelette</span><span class="p">(</span><span class="s2">&quot;greeter &lt;user&gt;&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;cruel&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Which on <code>user</code> completes "hello", "cruel", "world".</p>
-
-<p>Say you saved the file as <code>greeter</code> all you have do to generator the completion is :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./greeter --completion
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That would result in the bleow for <code>bash</code> shell:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">### greet completion - begin. generated by omelette ###</span>
-</span><span class='line'><span class="k">if </span><span class="nb">type </span>compdef &amp;&gt;/dev/null; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
-</span><span class='line'>    compadd -- <span class="sb">`</span>greet --compzsh --compgen <span class="s2">&quot;${CURRENT}&quot;</span> <span class="s2">&quot;${words[CURRENT-1]}&quot;</span> <span class="s2">&quot;${BUFFER}&quot;</span><span class="sb">`</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>  compdef _greet_complette greet
-</span><span class='line'><span class="k">elif </span><span class="nb">type complete</span> &amp;&gt;/dev/null; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
-</span><span class='line'>    <span class="nv">COMPREPLY</span><span class="o">=(</span> <span class="k">$(</span><span class="nb">compgen</span> -W <span class="s1">&#39;$(greet --compbash --compgen &quot;${COMP_CWORD}&quot; &quot;${COMP_WORDS[COMP_CWORD-1]}&quot; &quot;${COMP_LINE}&quot;)&#39;</span> -- <span class="s2">&quot;${COMP_WORDS[COMP_CWORD]}&quot;</span><span class="k">)</span> <span class="o">)</span>
-</span><span class='line'>  <span class="o">}</span>
-</span><span class='line'>  <span class="nb">complete</span> -F _greet_complette greet
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'><span class="c">### greet completion - end ###</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In zsh, you can write these:</p>
-
-<p><code>echo '. &lt;(./greeter --completion)' &gt;&gt; .zshrc</code></p>
-
-<p>In bash, you should write:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>./greeter --completion &gt;&gt; ~/greeter.completion.sh
-</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;source ~/greeter.completion.sh&#39;</span> &gt;&gt; .bash_profile
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you must see tab completion for greeter!</p>
-
-<p>You can also use:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Listen all fragments by &quot;complete&quot; event</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fragment</span><span class="p">,</span> <span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Listen events by its order.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;$1&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>A wonderful GIF by the author:</strong></p>
-
-<p><img src="/images/omelette/omelette.gif" alt="omelette.gif" /></p>
-
-<p>Enjoy your tab completions!</p>
 
 		
 		
