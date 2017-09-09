@@ -1,0 +1,65 @@
+---
+layout: post
+title: "build.sh"
+date: 2017-09-08 10:03:31 +0530
+comments: true
+categories: build
+alias: [/build.sh/index.html]
+---
+
+#[build.sh](https://www.npmjs.com/package/build.sh)
+> 🔨 run and visualize the build process.
+
+`build.sh` is one of those unquie node module which likes to take an atypical route in solving problems, this module helps in running and visualize the build process, makes use of `build.yml` at the root of your project for the build pipleline meta-data.
+
+__Get it:__ `npm install -g build.sh`
+
+__Sample usage:__
+
+```sh
+$ build [options]
+
+
+Options:
+
+  -V, --version        output the version number
+  -c, --config [file]  the input file for the build pipeline to run
+  -d, --debug          outputs a debug file of the build process and data captured
+  -h, --help           output usage information
+```
+
+To invoke about the pipeline simply run `build` at the project root. The terminal output will show the pipeline being run and eventually will open the browser to the location of the final report.
+
+```sh
+# cat .build.yml
+
+pipeline:
+  {key}:
+    - {command}
+    - {command}
+```
+
+__Sample `.build.yml`:__
+
+```yaml
+output: ./docs
+pipeline:
+  install:
+    - npm --version
+    - node --version
+    - npm:
+      - npm install
+      - ls -lh node_modules
+  lint:
+    - npm run lint
+  coverage:
+    - npm run coverage
+  test:
+    - npm test
+  docs:
+    - npm run generate-docs
+```
+
+__GIF FTW!__
+
+![build.sh](/images/build.sh/build.sh.gif)
