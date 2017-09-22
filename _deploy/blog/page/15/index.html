@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
-| |_ &hellip;">   
+    <meta name="description" content="css-explain Think of it like SQL EXPLAIN, but for CSS selectors. css-explain is one of such rare modules that helps us to learn or explain CSS &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
-| |_ &hellip;">
+    <meta name="twitter:description" content="css-explain Think of it like SQL EXPLAIN, but for CSS selectors. css-explain is one of such rare modules that helps us to learn or explain CSS &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
-| |_ &hellip;" />
+    <meta property="og:description" content="css-explain Think of it like SQL EXPLAIN, but for CSS selectors. css-explain is one of such rare modules that helps us to learn or explain CSS &hellip;" />
 
     
 
@@ -70,6 +67,115 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/css-explain/">
+			
+				Css-explain</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-01T18:53:53+05:30" pubdate data-updated="true">Jan 1<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/css-explain">css-explain</a></h1>
+
+<blockquote><p>Think of it like SQL EXPLAIN, but for CSS selectors.</p></blockquote>
+
+<p><code>css-explain</code> is one of such rare modules that helps us to learn or explain CSS selectors with ease.</p>
+
+<p><strong>Get it:</strong> <code>npm install css-explain</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">cssExplain</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;css-explain&#39;</span><span class="p">).</span><span class="nx">cssExplain</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div .info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div .info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;.info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;class&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;Uses a descendant selector with a rightmost class selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div#info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div#info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div#info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssExplain</span><span class="p">(</span><span class="s2">&quot;div &gt; p#info&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;div &gt; p#info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;p#info&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">specificity</span><span class="o">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">score</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">messages</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="s1">&#39;ID is overly qualified by a tag name&#39;</span><span class="p">,</span>
+</span><span class='line'>     <span class="s1">&#39;ID is overly qualified by a child selector&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/css-explain/css-explain.gif" alt="css-explain" /></p>
+
+<p>Thanks to <a href="https://twitter.com/joshpeek">Joshua Peek</a> for css-explain, do <a href="http://josh.github.io/css-explain/">checkout</a> the webbased app of the same.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1028,86 +1134,6 @@
 <p><img src="/images/propagate/propagate.gif" alt="propagate" /></p>
 
 <p>Thanks to <a href="http://metaduck.com/">Pedro Teixeira</a> for <a href="https://www.npmjs.org/package/propagate">propagate</a>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/http-teapot/">
-			
-				Http-teapot</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-16T18:53:28+05:30" pubdate data-updated="true">Oct 16<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/http-teapot">http-teapot</a></h1>
-
-<p>Add support for <a href="https://www.ietf.org/rfc/rfc2324.txt">RFC 2324</a> to any HTTP server.</p>
-
-<p>P.S:  Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP status code <code>418</code>.</p>
-
-<p>BTW if you are wondering why this made in to this list, <code>http-teapot</code> module is the 100,000th module to npm today!</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>congrats to <a href="https://twitter.com/wa7son">@wa7son</a> who published the 100,000th module to npm today, a http 418 teapot protocol implementation <a href="http://t.co/ckKrSizu9Q">pic.twitter.com/ckKrSizu9Q</a></p>&mdash; maxwell ogden (@maxogden) <a href="https://twitter.com/maxogden/status/522413667782914048">October 15, 2014</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<h2>Installation</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install http-teapot
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Usage</h2>
-
-<p>Just add http-teapot as a routing function.</p>
-
-<p>Express example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">teapot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http-teapot&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/teapot&#39;</span><span class="p">,</span> <span class="nx">teapot</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/http-teapot/http-teapot.gif" alt="http-teapot" /></p>
-
-<p>Thanks to <a href="https://github.com/watson">Thomas Watson Steen</a> for implementing this RFC and giving us a teapot image ;)</p>
 
 		
 		

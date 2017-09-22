@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="async-retry Retrying made simple, easy, async. async-retry is a promisified version of retry which makes things easier with the async-await syntax. &hellip;">   
+    <meta name="description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="async-retry Retrying made simple, easy, async. async-retry is a promisified version of retry which makes things easier with the async-await syntax. &hellip;">
+    <meta name="twitter:description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="async-retry Retrying made simple, easy, async. async-retry is a promisified version of retry which makes things easier with the async-await syntax. &hellip;" />
+    <meta property="og:description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;" />
 
     
 
@@ -67,6 +67,141 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/comlinkjs/">
+			
+				Comlinkjs</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-22T12:02:46+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/comlinkjs">comlinkjs</a></h1>
+
+<blockquote><p>A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers.</p></blockquote>
+
+<p><code>comlinkjs</code> has the below interface, makes use of <code>MessageChannel</code> helps you to work on objects from another JavaScript realm (like a Worker or an iframe) as if it was a local object. Just use await whenever the remote value is involed.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">interface</span> <span class="nx">Endpoint</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">postMessage</span><span class="p">(</span><span class="nx">message</span><span class="o">:</span> <span class="nx">any</span><span class="p">,</span> <span class="nx">transfer</span><span class="o">?:</span> <span class="nx">any</span><span class="p">[])</span><span class="o">:</span> <span class="k">void</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">addEventListener</span><span class="p">(</span><span class="nx">type</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">listener</span><span class="o">:</span> <span class="nx">EventListenerOrEventListenerObject</span><span class="p">,</span> <span class="nx">options</span><span class="o">?:</span> <span class="p">{})</span><span class="o">:</span> <span class="k">void</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">type</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">listener</span><span class="o">:</span> <span class="nx">EventListenerOrEventListenerObject</span><span class="p">,</span> <span class="nx">options</span><span class="o">?:</span> <span class="p">{})</span><span class="o">:</span> <span class="k">void</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">declare</span> <span class="nx">type</span> <span class="nx">Proxy</span> <span class="o">=</span> <span class="nb">Function</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">declare</span> <span class="kr">const</span> <span class="nx">Comlink</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">proxy</span><span class="o">:</span> <span class="p">(</span><span class="nx">endpoint</span><span class="o">:</span> <span class="nx">Window</span> <span class="o">|</span> <span class="nx">Endpoint</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Function</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">proxyValue</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="o">:</span> <span class="p">{})</span> <span class="o">=&gt;</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="nx">expose</span><span class="o">:</span> <span class="p">(</span><span class="nx">rootObj</span><span class="o">:</span> <span class="nb">Object</span> <span class="o">|</span> <span class="nb">Function</span><span class="p">,</span> <span class="nx">endpoint</span><span class="o">:</span> <span class="nx">Window</span> <span class="o">|</span> <span class="nx">Endpoint</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install comlinkjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// On the site:</span>
+</span><span class='line'>  <span class="kr">const</span> <span class="nx">worker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Worker</span><span class="p">(</span><span class="s1">&#39;worker.js&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// WebWorkers use `postMessage` and therefore work with Comlink.</span>
+</span><span class='line'>  <span class="kr">const</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">Comlink</span><span class="p">.</span><span class="nx">proxy</span><span class="p">(</span><span class="nx">worker</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="p">(</span><span class="nx">async</span> <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Note the usage of `await`:</span>
+</span><span class='line'>    <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">await</span> <span class="k">new</span> <span class="nx">api</span><span class="p">.</span><span class="nx">App</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Counter</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">count</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">inc</span><span class="p">();</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Counter</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">count</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// In the worker</span>
+</span><span class='line'><span class="kr">class</span> <span class="nx">App</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">get</span> <span class="nx">count</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_counter</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">inc</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_counter</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Comlink</span><span class="p">.</span><span class="nx">expose</span><span class="p">({</span><span class="nx">App</span><span class="p">},</span> <span class="nx">self</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/comlinkjs/comlinkjs.gif" alt="comlinkjs" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -869,64 +1004,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/mdconf/mdconf.gif" alt="mdconf.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/npx/">
-			
-				Npx</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-07-15T11:07:12+05:30" pubdate data-updated="true">Jul 15<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/npx">npx</a></h1>
-
-<blockquote><p>an npm package runner.</p></blockquote>
-
-<p>Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.</p>
-
-<p>P.S: <code>npm@5.2.0</code> is shipped with <code>npx</code>!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g npx</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm i -D cowsay
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>npx cowsay <span class="s2">&quot;HolyCow!&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/npx/npx.gif" alt="npx.gif" /></p>
-
-<p>P.S: In case you have missed reading <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b">Introducing npx: an npm package runner
-</a>, do read it!</p>
 
 		
 		

@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="stickybits Alternative to position: sticky polyfills. Aprox ~2KB of javascript that would help us to know when a DOM element is stuck (position: &hellip;">   
+    <meta name="description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="stickybits Alternative to position: sticky polyfills. Aprox ~2KB of javascript that would help us to know when a DOM element is stuck (position: &hellip;">
+    <meta name="twitter:description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="stickybits Alternative to position: sticky polyfills. Aprox ~2KB of javascript that would help us to know when a DOM element is stuck (position: &hellip;" />
+    <meta property="og:description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;" />
 
     
 
@@ -67,6 +67,64 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npx/">
+			
+				Npx</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-07-15T11:07:12+05:30" pubdate data-updated="true">Jul 15<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/npx">npx</a></h1>
+
+<blockquote><p>an npm package runner.</p></blockquote>
+
+<p>Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.</p>
+
+<p>P.S: <code>npm@5.2.0</code> is shipped with <code>npx</code>!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g npx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm i -D cowsay
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>npx cowsay <span class="s2">&quot;HolyCow!&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npx/npx.gif" alt="npx.gif" /></p>
+
+<p>P.S: In case you have missed reading <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b">Introducing npx: an npm package runner
+</a>, do read it!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -790,91 +848,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p> <strong>GIF FTW!</strong></p>
 
 <p> <img src="/images/tinytime/tinytime.gif" alt="tinytime" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/psl/">
-			
-				Psl</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-04-21T14:49:00+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/psl">psl</a></h1>
-
-<blockquote><p>domain name parser based on the Public Suffix List.</p></blockquote>
-
-<p><code>psl</code> parser uses <a href="https://www.npmjs.com/package/psl">The Public Suffix List</a> to parse and validate domain names.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save psl</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">psl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;psl&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;www.nmotw.in&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">{</span>
-</span><span class='line'><span class="cm">    domain: &quot;nmotw.in&quot;</span>
-</span><span class='line'><span class="cm">    input: &quot;www.nmotw.in&quot;</span>
-</span><span class='line'><span class="cm">    listed: true</span>
-</span><span class='line'><span class="cm">    sld: &quot;nmotw&quot;</span>
-</span><span class='line'><span class="cm">    subdomain: &quot;www&quot;</span>
-</span><span class='line'><span class="cm">    tld: &quot;in&quot;</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;www.食狮.公司.cn&#39;</span><span class="p">);</span>  <span class="c1">// &quot;食狮.公司.cn&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="s1">&#39;1.www.google.co.uk&#39;</span><span class="p">));</span> <span class="c1">// true</span>
-</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="s1">&#39;co.uk&#39;</span><span class="p">));</span> <span class="c1">// false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/psl/psl.gif" alt="psl" /></p>
 
 		
 		
