@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
-which provides raw &hellip;">   
+    <meta name="description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ which provides raw &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/12/">
-    <meta name="twitter:description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
-which provides raw &hellip;">
+    <meta name="twitter:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/12/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
-which provides raw &hellip;" />
+    <meta property="og:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;" />
 
     
 
@@ -76,9 +73,9 @@ which provides raw &hellip;" />
 	<header>
 		<h2 class="title">
 			
-			<a href="/caniuse-cmd/">
+			<a href="/color-string/">
 			
-				Caniuse-cmd</a>
+				Color-string</a>
 		</h2>
 		<div class="meta date">
 
@@ -92,22 +89,397 @@ which provides raw &hellip;" />
   
 
 
-<time datetime="2015-07-30T16:02:22+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2015</time></div>
+<time datetime="2015-04-30T19:03:09+05:30" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://github.com/sgentle/caniuse-cmd">caniuse-cmd</a></h1>
+		<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
 
-<blockquote><p><code>caniuse.com</code> on CLI!</p></blockquote>
+<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
 
-<p><code>caniuse-cmd</code> brings the power of <a href="http://caniuse.com">caniuse</a> on to the command line, it makes use of <a href="https://www.npmjs.com/package/caniuse-db">caniuse-db</a> module
-which provides raw browser/feature support data for the same.</p>
+<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
 
-<p><strong>Install it:</strong></p>
+<p>The API names are pretty self explainatory, the module has the below methods:</p>
+
+<p><strong>Methods for parsing:</strong></p>
+
+<ul>
+<li><p>getRgba</p></li>
+<li><p>getHsla</p></li>
+<li><p>getRgb</p></li>
+<li><p>getHsl</p></li>
+<li><p>getHwb</p></li>
+<li><p>getAlpha</p></li>
+</ul>
+
+
+<p><strong>Methods for generating:</strong></p>
+
+<ul>
+<li><p>hexString</p></li>
+<li><p>rgbString</p></li>
+<li><p>rgbaString</p></li>
+<li><p>percentString</p></li>
+<li><p>percentaString</p></li>
+<li><p>hslString</p></li>
+<li><p>hslaString</p></li>
+<li><p>hwbString</p></li>
+<li><p>keyword</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
+
+<p><strong>Sample usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install --global caniuse-cmd
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorString</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;color-string&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">getRgb</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">)</span>  <span class="c1">// [255, 255, 255] </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">keyword</span><span class="p">([</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>       <span class="c1">// &quot;yellow&quot; </span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/exenv/">
+			
+				Exenv</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-23T21:14:08+05:30" pubdate data-updated="true">Apr 23<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/exenv">exenv</a></p>
+
+<blockquote><p>React's ExecutionEnvironment module extracted.</p></blockquote>
+
+<p>Many modules and components out there in the wild, uses React's private <code>ExecutionEnvironment</code> lib for feature detection, like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">canUseDOM</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react/lib/ExecutionEnvironment&#39;</span><span class="p">).</span><span class="nx">canUseDOM</span><span class="p">;</span> <span class="c1">// BAD</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Which is not a good practice as private libs are prone to modification or deletion, so <a href="http://www.thinkmill.com.au">Jed Watson</a> has created
+<code>exenv</code> for us.</p>
+
+<p>P.S: <code>isInWorker</code> has been left out as it's very specific to react.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save exenv</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">exenv</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;exenv&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">exenv</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//Object {canUseDOM: true, canUseWorkers: true, canUseEventListeners: true, canUseViewport: true}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/exenv/exenv.gif" alt="exenv" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/logdown/">
+			
+				Logdown</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-16T18:07:03+05:30" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/logdown">logdown</a></p>
+
+<blockquote><p>Debug utility with markdown support that runs on browser and server.</p></blockquote>
+
+<p>This module lets you to have markdown syntax in your debug logs! It had <code>['log', 'info', 'warn', 'error']</code> as it's logging levels.</p>
+
+<p>One can also prefix the log message, it has support for various terminals <code>/^screen|^xterm|^vt100|color|ansi|cygwin|linux/</code> and also runs
+in the browser env.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save logdown</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Logdown</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;logdown&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">debug</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Logdown</span><span class="p">({</span> <span class="nx">prefix</span><span class="o">:</span> <span class="s1">&#39;meow&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;lorem *ipsum*&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;I can haz _info_&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;shall I `highlight` your code?&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/logdown/logdown.gif" alt="logdown" /></p>
+
+<p>Thanks to <a href="http://caiogondim.com">Caio Gondim</a> for logdown! (:</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/require-times/">
+			
+				Require-times</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-09T20:10:22+05:30" pubdate data-updated="true">Apr 9<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/require-times">require-times</a></h1>
+
+<blockquote><p>Find out how long require calls take in your program.</p></blockquote>
+
+<p>This is cheeky module from <a href="http://maxogden.com/">Max Ogden</a> tap into <code>require.extensions['.js']</code> and lets you know the time consumed by
+the require calls in your code.</p>
+
+<p><strong>Install it:</strong> <code>npm install require-times</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// hundreds on require statments ;)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span> <span class="c1">// Will spit the time consumed to stdout.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">)();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">);</span> <span class="c1">// Dog fooding ;)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Output =&gt; total: 9647ms</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/require-times/require-times.gif" alt="require-times" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/line-numbers/">
+			
+				Line-numbers</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-02T17:10:30+05:30" pubdate data-updated="true">Apr 2<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/line-numbers">line-numbers</a></h1>
+
+<blockquote><p>Add line numbers to a string.</p></blockquote>
+
+<p>A humble module that will add line number to a given string! Mostly useful for text editor and displaying some code snippet.</p>
+
+<p><strong>Install it:</strong> <code>$ npm install --save line-numbers</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lns</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;line-numbers&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">code</span> <span class="o">=</span> <span class="err">`</span><span class="kd">function</span> <span class="nx">meow</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">cb</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;CB is a must!&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">cb</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="err">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">lns</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Would log:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm"> 1 | function meow(cb) { </span>
+</span><span class='line'><span class="cm"> 2 |   if(!cb) throw new Error(&quot;CB is a must!&quot;);</span>
+</span><span class='line'><span class="cm"> 3 |   cb(&quot;meow&quot;);</span>
+</span><span class='line'><span class="cm"> 4 | }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: You can also pass in options like: <code>before</code>, <code>number</code>, <code>width</code>, <code>after</code> and <code>line</code> (They are self explanatory?)</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/line-numbers/line-numbers.gif" alt="line-numbers" /></p>
+
+<p>Thanks to Simon Lydell for <code>line-numbers</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/cssom/">
+			
+				Cssom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-26T19:05:30+05:30" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
+
+<blockquote><p>CSS Object Model implementation and CSS parser.</p></blockquote>
+
+<p><code>cssom</code> is parser written in pure javascript, it also has partially implemented of <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>, works across node/io.js and modren browsers.</p>
+
+<p><strong>Install it:</strong> <code>npm install cssom --save</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -142,47 +514,55 @@ which provides raw browser/feature support data for the same.</p>
 <span class='line-number'>29</span>
 <span class='line-number'>30</span>
 <span class='line-number'>31</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw&gt; caniuse webrtc --short
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
-</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cssom&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">CSSStyleDeclaration</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleDeclaration</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSRule</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSRule</span><span class="p">]</span>
+</span><span class='line'>     <span class="nx">STYLE_RULE</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">IMPORT_RULE</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">MEDIA_RULE</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">FONT_FACE_RULE</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">PAGE_RULE</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAMES_RULE</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAME_RULE</span><span class="o">:</span> <span class="mi">9</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">CSSStyleRule</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleRule</span><span class="p">]</span> <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">MediaList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MediaList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSMediaRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSMediaRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSImportRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSImportRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSFontFaceRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSFontFaceRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">StyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">StyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframesRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframesRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframeRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframeRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">MatcherList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MatcherList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSDocumentRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSDocumentRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValue</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValue</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValueExpression</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValueExpression</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">clone</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">clone</span><span class="p">]</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>nmotw&gt; caniuse webrtc --short -a
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
-</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
-</span><span class='line'>
-</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrv
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
-</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
-</span><span class='line'>
-</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
-</span><span class='line'>  IE ✘  Edge ✘  FF ✘ 2+ ✔ 22+ᵖ Chr. ✘ 4+ ✔ 23+ᵖ Saf. ✘  Op. ✘ 9+ ✔ 18+ᵖ
-</span><span class='line'>
-</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev --browser ff
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>nmotw&gt; caniuse webrtc --long
-</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0% <span class="o">[</span>W3C Working Draft<span class="o">]</span>
-</span><span class='line'>  Method of allowing two users to communicate directly, browser to browser using the RTCPeerConnection API.
-</span><span class='line'>  <span class="c">#JSAPI</span>
-</span><span class='line'>
-</span><span class='line'>  IE ✘
-</span><span class='line'>  Edge ✘
-</span><span class='line'>  Firefox ✘ 2+ ✔ 22+ᵖ
-</span><span class='line'>  Chrome ✘ 4+ ✔ 23+ᵖ
-</span><span class='line'>  Safari ✘
-</span><span class='line'>  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;.main{display:flex}&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">cssRules</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="p">{</span> <span class="nx">parentRule</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nx">Circular</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">selectorText</span><span class="o">:</span> <span class="s1">&#39;.main&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">style</span><span class="o">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">__starts</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">__ends</span><span class="o">:</span> <span class="mi">19</span> <span class="p">}</span> <span class="p">]</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>P.S: Do cehckout the CLI <a href="https://github.com/sgentle/caniuse-cmd#does-it-have-lots-of-command-line-options">flags</a></p>
+<p>Thanks to <a href="http://n12v.com/">Nikita Vasilyev</a> for this early implementation of <code>cssom</code> (:</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/caniuse-cmd/caniuse-cmd.gif" alt="caniuse-cmd.gif" /></p>
-
-<p>Thanks to <a href="https://github.com/sgentle">Sam Gentle</a> for bringing this to the CLI.</p>
+<p><img src="/images/cssom/cssom.gif" alt="cssom" /></p>
 
 		
 		
@@ -195,9 +575,9 @@ which provides raw browser/feature support data for the same.</p>
 	<header>
 		<h2 class="title">
 			
-			<a href="/combokeys/">
+			<a href="/did-you-mean/">
 			
-				Combokeys</a>
+				Did-you-mean</a>
 		</h2>
 		<div class="meta date">
 
@@ -211,577 +591,30 @@ which provides raw browser/feature support data for the same.</p>
   
 
 
-<time datetime="2015-07-23T20:02:46+05:30" pubdate data-updated="true">Jul 23<span>rd</span>, 2015</time></div>
+<time datetime="2015-03-19T17:41:21+05:30" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/combokeys">combokeys</a></p>
+		<h1><a href="https://www.npmjs.com/package/did-you-mean">did-you-mean</a></h1>
 
-<blockquote><p>Handles keyboard shortcuts in the browser.</p></blockquote>
+<blockquote><p>Fuzzy match a command from a list (typo-safety)</p></blockquote>
 
-<p><code>combokeys</code> is a fork of <a href="https://github.com/ccampbell/mousetrap">ccampbell/mousetrap</a> with two main changes:</p>
+<p>This module does a Fuzzy match a word from your list of commands or keywords from node.js/io.js to provide a friendly typo-safe human prompt.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save did-you-mean</code></p>
+
+<p><strong>API:</strong></p>
 
 <ul>
-<li>Refactored as CommonJS</li>
-<li>Doesn't automatically listen on the document. Instead, it is now a constructor and the element on which to listen must be provided on instantiation.</li>
+<li><p>get -> Get the closest match.</p></li>
+<li><p>setThreshold(3) -> Set the threshold (the maximum Levenshtein distance)</p></li>
+<li><p>list('key') -> List all matches.</p></li>
+<li><p>ignoreCase() -> Set ignore case.</p></li>
+<li><p>matchCase() -> Set match case.</p></li>
+<li><p>add('key1','key2',...); -> Add more values.</p></li>
 </ul>
 
-
-<p><strong>Install it:</strong> <code>npm install --save combokeys</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Combokeys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;combokeys&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">Mousetrap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// Or, instantiate it for one or more specific elements:</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">firstCombokeys</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">);</span> <span class="p">});</span>
-</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;show shortcuts!&#39;</span><span class="p">);</span> <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/combokeys/combokeys.gif" alt="combokeys" /></p>
-
-<p>Thanks to <a href="https://github.com/mightyiam">Shahar Or</a> for porting <code>mousetrap</code> to <code>combokeys</code>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/easydate/">
-			
-				Easydate</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-16T20:12:07+05:30" pubdate data-updated="true">Jul 16<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/easydate">easydate</a></p>
-
-<blockquote><p>get date and/or time by pattern.</p></blockquote>
-
-<p>A simple date and time util that returns the date according to a pattern, <code>easydate</code> takes two arguments, first one being a pattern string
-and second one being an config object.</p>
-
-<p><strong>Pattern Options:</strong></p>
-
-<ul>
-<li><code>Y</code> Full year (number - e.g. <code>2012</code>)</li>
-<li><code>y</code> Year (number - e.g. <code>12</code>)</li>
-<li><code>M</code> Month (number - e.g. <code>11</code>)</li>
-<li><code>d</code> Day (number - e.g. <code>28</code>)</li>
-<li><code>h</code> Hour (number - e.g. <code>02</code>)</li>
-<li><code>m</code> Minute (number - e.g. <code>01</code>)</li>
-<li><code>s</code> Second (number - e.g. <code>33</code>)</li>
-<li><code>l</code> Millisecond (number - e.g. <code>001</code>)</li>
-<li><code>z</code> Timezone (string - e.g. <code>UTC</code>, <code>UTC+1</code>, <code>UTC-11</code>)</li>
-<li><code>x</code> DST (string - either <code>'DST'</code> or <code>''</code>)</li>
-</ul>
-
-
-<p><strong>Config options:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc/local&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">adjust</span><span class="o">:</span> <span class="s1">&#39;Whether or not to adjust DST&#39;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Install it:</strong> <code>npm install --save easydate</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">easydate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;easydate&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;d-M-y&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s.l&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-11-03T16:06:08.123Z&#39;</span><span class="p">)</span> <span class="c1">// &quot;16:06:08.123&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc&#39;</span><span class="p">})</span> <span class="c1">// =&gt; &quot;UTC&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s z x&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;2016-08-01T00:00:00.000Z&#39;</span><span class="p">,</span> <span class="nx">adjust</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/easydate/easydate.gif" alt="easydate" /></p>
-
-<p>Thanks to <a href="https://medium.com/@roryrjb">Rory Bradford</a> for this handy util.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ramjet/">
-			
-				Ramjet</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-09T22:30:40+05:30" pubdate data-updated="true">Jul 9<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="http://npm.im/ramjet">ramjet</a></p>
-
-<blockquote><p>Transform DOM elements into each another with smooth transitions</p></blockquote>
-
-<p><code>ramjet</code> helps us to Morph DOM elements from one state to another with smooth transitions!</p>
-
-<p>All it does is:</p>
-
-<ul>
-<li><p>Clone the elements and all their children.</p></li>
-<li><p>Transform the second element so that it completely overlaps with the first.</p></li>
-<li><p>Animating the two elements together until the first element has exactly the same position and dimensions as the second element.</p></li>
-</ul>
-
-
-<p><strong>install it:</strong> <code>npm install --save ramjet</code></p>
-
-<p><strong>sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;a&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: red; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;b&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: blue; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>b<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;script&gt;</span>
-</span><span class='line'>  <span class="nx">ramjet</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
-</span><span class='line'><span class="nt">&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
-
-<p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fade/">
-			
-				Fade</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-02T22:24:12+05:30" pubdate data-updated="true">Jul 2<span>nd</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/fade">fade</a></h1>
-
-<blockquote><p>Fade a HTML element using CSS transitions.</p></blockquote>
-
-<p>Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto
-behind this module, that lets us to <code>fade.in</code>, <code>fade.out</code> and fade an element to a specifie opacity, which also takes a
-callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save fade</code> # browserify it!</p>
 
 <p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fade</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fade&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#el&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span> <span class="c1">// fade el out in 1s</span>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="k">in</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mi">1500</span><span class="p">);</span> <span class="c1">// fade el in in 1.5s</span>
-</span><span class='line'><span class="nx">fade</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span> <span class="c1">// fade el to opacity 0.3 in 3s </span>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span> <span class="c1">// set display to none after fade out</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fade/fade.gif" alt="fade.gif" /></p>
-
-<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this sweet little module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/html.js/">
-			
-				html.js</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-25T17:42:57+05:30" pubdate data-updated="true">Jun 25<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/html.js">html.js</a></h1>
-
-<blockquote><p>An intuitive, extensible way to work directly with the DOM.</p></blockquote>
-
-<p><code>html.js</code> is a fork of <a href="http://adriancooney.ie/voyeur.js/">voyeur.js</a> that has made it more simpler to deal with DOM in a
-relatively new way.</p>
-
-<p>It has a pretty extensive <a href="http://nbubna.github.io/HTML/#API">API</a> and you could also create your own plugins
-<code>HTML._.fn.name = function;</code></p>
-
-<p><strong>Get it:</strong> <code>npm install --save html.js</code></p>
-
-<p><strong>Usage Example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">HTML</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html.js&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">HTML</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">header</span><span class="p">;</span> <span class="c1">// returns header element.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">HTML</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s2">&quot;#example&quot;</span><span class="p">).</span><span class="nx">h1</span><span class="p">.</span><span class="nx">em</span><span class="p">;</span> <span class="c1">// chain on, man.</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="s1">&#39;each&#39;</span> <span class="k">in</span> <span class="nx">node</span><span class="p">))</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">HTML</span><span class="p">.</span><span class="nx">ify</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nx">node</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="s1">&#39; is your friend!&#39;</span><span class="p">);</span> <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/html.js/html.js.gif" alt="html.js" /></p>
-
-<p>Thanks to <a href="https://github.com/nbubna">Nathan Bubna</a> for this module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/browser-repl/">
-			
-				Browser-repl</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-18T22:16:33+05:30" pubdate data-updated="true">Jun 18<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/browser-repl">browser-repl</a></p>
-
-<blockquote><p>Launch a repl on your command line to any browser in the cloud.</p></blockquote>
-
-<p><code>browser-repl</code> is a uber cool module from <a href="http://automattic.com/">automattic</a> that helps us to get a particular OS/Browser
-combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtunnel magic ;)</p>
-
-<p>Currently supported browsers:</p>
-
-<ul>
-<li><p>ie</p></li>
-<li><p>ie6</p></li>
-<li><p>ie7</p></li>
-<li><p>ie8</p></li>
-<li><p>ie9</p></li>
-<li><p>ie10</p></li>
-<li><p>ie11</p></li>
-<li><p>opera</p></li>
-<li><p>safari</p></li>
-<li><p>safari5</p></li>
-<li><p>safari6</p></li>
-<li><p>safari7</p></li>
-<li><p>safari8</p></li>
-<li><p>chrome</p></li>
-<li><p>chromedev</p></li>
-<li><p>firefox</p></li>
-<li><p>firefoxdev</p></li>
-<li><p>ipad</p></li>
-<li><p>ipad4</p></li>
-<li><p>ipad5</p></li>
-<li><p>ipad5.1</p></li>
-<li><p>ipad6</p></li>
-<li><p>ipad6.1</p></li>
-<li><p>iphone</p></li>
-<li><p>iphone4</p></li>
-<li><p>iphone5</p></li>
-<li><p>iphone5.1</p></li>
-<li><p>iphone6</p></li>
-<li><p>iphone6.1</p></li>
-<li><p>android</p></li>
-<li><p>android4.4</p></li>
-<li><p>android4.2</p></li>
-<li><p>android4.1</p></li>
-</ul>
-
-
-<p><strong>Currently supported platforms:</strong></p>
-
-<ul>
-<li><p>winxp</p></li>
-<li><p>win7</p></li>
-<li><p>win8</p></li>
-<li><p>win8.1</p></li>
-<li><p>mac10.6</p></li>
-<li><p>mac10.8</p></li>
-<li><p>mac10.9</p></li>
-<li><p>mac10.10</p></li>
-<li><p>linux</p></li>
-<li><p>android</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install -g browser-repl
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Set up:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In your *.rc file.</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">SAUCE_USERNAME</span><span class="o">=</span><span class="s2">&quot;your username&quot;</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">SAUCE_ACCESS_KEY</span><span class="o">=</span><span class="s2">&quot;your key&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To get the <code>SAUCE</code> stuff, sign up for a free OSS account on <a href="http://saucelabs.com">SauceLabs</a>.</p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>repl
-</span><span class='line'>
-</span><span class='line'>usage: repl &lt;browser&gt;<span class="o">[</span>version<span class="o">]</span> <span class="o">[</span>platform<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>options:
-</span><span class='line'> -h: this message
-</span><span class='line'> -k: no remote <span class="sb">`</span>console<span class="sb">`</span> override
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/browser-repl/brwoser-repl.gif" alt="browser-repl" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/jscpd/">
-			
-				Jscpd</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-11T21:09:12+05:30" pubdate data-updated="true">Jun 11<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/jscpd">jscpd</a></h1>
-
-<blockquote><p>jscpd is a tool for detect copy/paste "design pattern" in programming source code.</p></blockquote>
-
-<p><a href="http://kucherenko.org/">Andrey Kucherenko's</a> <code>jscpd</code> is a smart tool that helps use to detect copy paste code!</p>
-
-<p>It supports the below langauges:</p>
-
-<ul>
-<li>JavaScript</li>
-<li>Java</li>
-<li>CoffeeScript</li>
-<li>TypeScript</li>
-<li>C++</li>
-<li>PHP</li>
-<li>C#</li>
-<li>Go</li>
-<li>Python</li>
-<li>Ruby</li>
-<li>C</li>
-<li>Less</li>
-<li>CSS</li>
-<li>SCSS</li>
-<li>Mixed HTML</li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install -g jscpd</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">jscpd</span> <span class="o">--</span><span class="nx">path</span> <span class="nx">my_project</span><span class="o">/</span> <span class="o">--</span><span class="nx">languages</span> <span class="nx">javascript</span><span class="p">,</span><span class="nx">coffee</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">jscpd</span> <span class="o">-</span><span class="nx">f</span> <span class="o">**</span><span class="cm">/*.js -e **/</span><span class="nx">node_modules</span><span class="cm">/**</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="cm">/*.min.js --output report.xml</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="err">/*.min.js --reporter json --output report.json</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you have a <code>.cpd.yml</code> config file in the <code>pwd</code> jscpd command, you will check code for duplicates according the config.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -796,41 +629,27 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1">#.cpd.yaml</span>
-</span><span class='line'><span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">fixtures/</span>
-</span><span class='line'><span class="l-Scalar-Plain">languages</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">javascript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">coffeescript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">typescript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">php</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">python</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">css</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ruby</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">go</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">java</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;c++src&quot;</span>    <span class="c1"># c++ source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csrc</span>        <span class="c1"># c source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csharp</span>      <span class="c1"># c# source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">htmlmixed</span>   <span class="c1"># html mixed source like knockout.js templates</span>
-</span><span class='line'><span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.min.js&quot;</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.mm.js&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">reporter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">json</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Matcher</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;did-you-mean&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Matcher</span><span class="p">(</span><span class="s1">&#39;init install update upgrade npm brew apt-get&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// &quot;upgrade&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;brwe&#39;</span><span class="p">);</span> <span class="c1">// &quot;brew&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;atp-get&#39;</span><span class="p">);</span> <span class="c1">// &quot;apt-get&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">values</span><span class="p">;</span> <span class="c1">// [&quot;npm&quot;, &quot;brew&quot;, &quot;upgrade&quot;, &quot;update&quot;, &quot;apt-get&quot;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// {distance: 2, value: &quot;upgrade&quot;}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/jscpd/jscpd.gif" alt="jscpd-demo" /></p>
+<p><img src="/images/did-you-mean/did-you-mean.gif" alt="did-you-mean" /></p>
+
+<p>Thanks to Boris Okunskiy for bringing <code>did-you-mean</code> to web and CLI.</p>
 
 		
 		
@@ -843,9 +662,9 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 	<header>
 		<h2 class="title">
 			
-			<a href="/stream-generators/">
+			<a href="/confirm-simple/">
 			
-				Stream-generators</a>
+				Confirm-simple</a>
 		</h2>
 		<div class="meta date">
 
@@ -859,18 +678,20 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
   
 
 
-<time datetime="2015-06-05T01:57:12+05:30" pubdate data-updated="true">Jun 5<span>th</span>, 2015</time></div>
+<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/stream-generators">stream-generators</a></p>
+		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
 
-<blockquote><p>Pipe ES6 Generators through Node.js streams.</p></blockquote>
+<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
 
-<p>This is a cheeky module authored by <a href="https://twitter.com/mimetnet">@mimetent</a> which takes in a ES6 generator function and returns a readable stream!</p>
+<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
 
-<p><strong>Install it:</strong> <code>npm install --save stream-geerators</code></p>
+<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
 
-<p><strong>Sample usage:</strong></p>
+<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
+
+<p><strong>API and simple usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -881,27 +702,23 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">streamify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stream-generators&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">gen</span> <span class="o">=</span> <span class="kd">function</span><span class="o">*</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;Hello &#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;ES6 &#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;Stream gen&#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="nx">os</span><span class="p">.</span><span class="nx">EOL</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">};</span>
-</span><span class='line'><span class="p">;</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">confirm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;confirm-simple&#39;</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'><span class="nx">streamify</span><span class="p">(</span><span class="nx">gen</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+</span><span class='line'><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Do you accept the EULA?&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span> <span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good for you!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Sorry you wont get to use the software&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This would output: <code>Hello ES6 Stream gen</code></p>
-
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/stream-generators/stream-generators.gif" alt="stream-generators" /></p>
+<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
+
+<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
 
 		
 		
@@ -914,9 +731,9 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 	<header>
 		<h2 class="title">
 			
-			<a href="/enable/">
+			<a href="/dompurify/">
 			
-				Enable</a>
+				Dompurify</a>
 		</h2>
 		<div class="meta date">
 
@@ -930,16 +747,20 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
   
 
 
-<time datetime="2015-05-28T21:35:04+05:30" pubdate data-updated="true">May 28<span>th</span>, 2015</time></div>
+<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="enable">https://www.npmjs.com/package/enable</a></h1>
+		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
 
-<blockquote><p>ES6 and ES7 feature detection.</p></blockquote>
+<blockquote><p>Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG!</p></blockquote>
 
-<p>A simple util that would help you to check if the a required ES6 or ES7 is enabled, both in the browser and in CLI.</p>
+<p>DOMPurify sanitizes HTML and prevents XSS attacks.</p>
 
-<p><strong>Get it</strong>: <code>npm install --save enable</code></p>
+<p>|dirty HTML |  => |DOMPurify.sanitize |  => | Clean and safe HTML |</p>
+
+<p>The faster your browser, the faster DOMPurify will be ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install --save dompurify</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -948,27 +769,135 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">enable</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;enable&#39;</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">DOMpurify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dompurify);</span>
 </span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">enable</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">feature</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">feature</span><span class="o">&gt;</span> <span class="nx">is</span> <span class="nx">supported</span><span class="p">);</span>
+</span><span class='line'><span class="s1">DOMPurify.sanitize(&#39;</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="nx">x</span> <span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1">//&gt;&#39;); // becomes &lt;img src=&quot;x&quot;&gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="s1">&#39;&lt;svg&gt;&lt;g/onload=alert(2)//&lt;p&gt;&#39;</span><span class="p">);</span> <span class="c1">// becomes &lt;svg&gt;&lt;g&gt;&lt;/g&gt;&lt;/svg&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's configurable: <code>var config = { ALLOWED_TAGS: ['p', '#text'], KEEP_CONTENT: false };</code> and <code>DOMPurify.sanitize(str, config)</code></p>
+
+<p>We can also use <code>hooks</code>:</p>
+
+<ul>
+<li><p>beforeSantitizeElements</p></li>
+<li><p>afterSantitizeElements</p></li>
+<li><p>beforeSantitizeAttributes</p></li>
+<li><p>afterSantitizeAttributes</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">addHook</span><span class="p">(</span><span class="s1">&#39;beforeSantitizeElements&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">currentNode</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Play with currentNode.</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">currentNode</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dompurify/dompurify.gif" alt="dompurify" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dom-event/">
+			
+				Dom-event</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
+
+<blockquote><p>Add/remove DOM events</p></blockquote>
+
+<p>Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser compliance all in just 15 lines of code ;)</p>
+
+<p><strong>Add event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">on</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/* Example:</span>
-</span><span class='line'><span class="cm">if (enable.generator) {</span>
-</span><span class='line'><span class="cm">  console.log(&#39;supports generator: `function* a() {}`&#39;);</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>_</p>
+<p><strong>Remove event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">off</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install it:</strong> <code>npm install dom-event</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">on</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-event&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">off</span> <span class="o">=</span> <span class="nx">on</span><span class="p">.</span><span class="nx">off</span><span class="p">;</span> <span class="c1">// :)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">on</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">off</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span> <span class="c1">// No alerts :)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dom-event/dom-event.gif" alt="dom-event" /></p>
+
+<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
 
 		
 		

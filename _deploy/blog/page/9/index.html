@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;">   
+    <meta name="description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/9/">
-    <meta name="twitter:description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;">
+    <meta name="twitter:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/9/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;" />
+    <meta property="og:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;" />
 
     
 
@@ -73,9 +73,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/must/">
+			<a href="/npmlog/">
 			
-				Must</a>
+				Npmlog</a>
 		</h2>
 		<div class="meta date">
 
@@ -89,16 +89,18 @@
   
 
 
-<time datetime="2016-02-25T19:29:29+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2016</time></div>
+<time datetime="2015-11-26T19:37:54+05:30" pubdate data-updated="true">Nov 26<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/must">must</a></h1>
+		<h1><a href="https://www.npmjs.com/package/npmlog">npmlog</a></h1>
 
-<blockquote><p>Testing and assertion library with friendly BDD syntax!</p></blockquote>
+<blockquote><p>logger for npm</p></blockquote>
 
-<p><code>must</code> provides a BDD syntax for all your assertions and it follows <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> with its use of <strong>MUST</strong>. Good and well testsed stuff.</p>
+<p><code>npmlog</code> is a simple logger that <code>npm</code> uses to log it's messages, this module provides custom levels and colored output.</p>
 
-<p><strong>Get it:</strong> <code>npm install --save must</code></p>
+<p>By default, logs are written to <code>stderr</code>, to send log messages to outputs other than streams you can use <code>log.stream</code> member, or you can just listen to the events that it emits.</p>
+
+<p><strong>Get it:</strong> : <code>npm install --save npmlog</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -110,175 +112,18 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;must/register&quot;</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npmlog&#39;</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'><span class="p">[].</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">empty</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">must</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">nonenumerable</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">above</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">then</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]).</span><span class="nx">must</span><span class="p">.</span><span class="nx">eventually</span><span class="p">.</span><span class="nx">not</span><span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Problemo&quot;</span><span class="p">)).</span><span class="nx">must</span><span class="p">.</span><span class="nx">reject</span><span class="p">.</span><span class="kd">with</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sr">/problem/i</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// additional stuff ---------------------------+</span>
+</span><span class='line'><span class="c1">// message ----------+                         |</span>
+</span><span class='line'><span class="c1">// prefix ----+      |                         |</span>
+</span><span class='line'><span class="c1">// level -+   |      |                         |</span>
+</span><span class='line'><span class="c1">//        v   v      v                         v</span>
+</span><span class='line'>    <span class="nx">log</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;fyi&#39;</span><span class="p">,</span> <span class="s1">&#39;I &lt;3 nmotw: %j&#39;</span><span class="p">,</span> <span class="nx">node_modules</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/must/must.gif" alt="must.gif" /></p>
-
-<p>We <code>must</code> thank <a href="https://twitter.com/theml">Andri Möll</a> for <code>must</code></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ipt/">
-			
-				Ipt</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-18T21:37:50+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ipt">ipt</a></h1>
-
-<blockquote><p>The missing shell interactive workflow.</p></blockquote>
-
-<p><code>ipt</code> (pronounced iPipeTo) introduces the missing cli interactive workflow.</p>
-
-<p>It takes any kind of list as an input and uses that list to build an interactive interface to let you select an element from it.</p>
-
-<p>Stop manually dragging your mouse around to copy output data from a terminal, using the ipt workflow you can pipe data from a command and select what to copy to clipboard from a convenient visual menu.</p>
-
-<p>Selected data is also output to stdout allowing for easily composing various workflows - Just create your custom alias!</p>
-
-<p>P.S: Couldn't explain it better than than author!</p>
-
-<p><strong>GET IT:</strong> <code>npm install -g ipt</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch -a | ipt | xargs git checkout
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git --no-pager log --oneline | ipt | cut -d <span class="s1">&#39; &#39;</span> -f 1 | xargs -o git rebase -i<span class="err">&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to read the wonderful <a href="https://www.npmjs.com/package/ipt#examples">examples</a>!</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ipt/ipt.gif" alt="" /></p>
-
-<p>Thanks to <a href="https://github.com/ruyadorno">Ruy Adorno</a> for this cheeky module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/why-is-node-running/">
-			
-				Why-is-node-running</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-11T20:34:17+05:30" pubdate data-updated="true">Feb 11<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/why-is-node-running">why-is-node-running</a></h1>
-
-<blockquote><p>Node is running but you don't know why? why-is-node-running is here to help you.</p></blockquote>
-
-<p>This is a cheeky module that plays with <code>process.binding</code> of node, specifically with <code>process.binding('contextify').ContextifyScript;</code> the core of this library is from node's <a href="https://github.com/nodejs/node/blob/88307974e60346bc98c4e9f70a2b6918ccb6844f/src/node.js">source</a>.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --save why-is-node-running</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;why-is-node-running&#39;</span><span class="p">);</span> <span class="c1">// should be your first require </span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;net&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">createServer</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">net</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
-</span><span class='line'>  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span> <span class="mi">1000</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">createServer</span><span class="p">();</span>
-</span><span class='line'><span class="nx">createServer</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">log</span><span class="p">()</span> <span class="c1">// logs out active handles that are keeping node running </span>
-</span><span class='line'><span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When executed in <code>/tmp</code> you see an output like:</p>
+<p><strong>levels:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -297,29 +142,29 @@
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>There are 4 known handle<span class="o">(</span>s<span class="o">)</span> keeping the process running and 0 unknown
-</span><span class='line'>Known handles:
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">log</span><span class="p">.</span><span class="nx">levels</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">silly</span><span class="o">:</span> <span class="o">-</span><span class="kc">Infinity</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">verbose</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">info</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">http</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">warn</span><span class="o">:</span> <span class="mi">4000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="mi">5000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">silent</span><span class="o">:</span> <span class="kc">Infinity</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="c"># Timer</span>
-</span><span class='line'>/private/tmp/l:6  - setInterval<span class="o">(</span><span class="k">function</span> <span class="o">()</span> <span class="o">{}</span>, 1000<span class="o">)</span>;
-</span><span class='line'>/private/tmp/l:10 - createServer<span class="o">()</span>;
-</span><span class='line'>
-</span><span class='line'><span class="c"># TCP</span>
-</span><span class='line'>/private/tmp/l:7  - server.listen<span class="o">(</span>0<span class="o">)</span>;
-</span><span class='line'>/private/tmp/l:10 - createServer<span class="o">()</span>;
-</span><span class='line'>
-</span><span class='line'><span class="c"># TCP</span>
-</span><span class='line'>/private/tmp/l:7  - server.listen<span class="o">(</span>0<span class="o">)</span>;
-</span><span class='line'>/private/tmp/l:11 - createServer<span class="o">()</span>;
-</span><span class='line'>
-</span><span class='line'><span class="c"># Timer</span>
-</span><span class='line'>/private/tmp/l:13 - setTimeout<span class="o">(</span><span class="k">function</span> <span class="o">()</span> <span class="o">{</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">log</span><span class="p">.</span><span class="nx">disp</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">silly</span><span class="o">:</span> <span class="s1">&#39;sill&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">verbose</span><span class="o">:</span> <span class="s1">&#39;verb&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">info</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">http</span><span class="o">:</span> <span class="s1">&#39;http&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">warn</span><span class="o">:</span> <span class="s1">&#39;WARN&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;ERR!&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">silent</span><span class="o">:</span> <span class="s1">&#39;silent&#39;</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="https://nmotw.in/images/why-is-node-running/why-is-node-running.gif" alt="why-is-node-running" /></p>
+<p><img src="/images/npmlog/npmlog.gif" alt="npmlog" /></p>
 
 		
 		
@@ -332,9 +177,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/data.task/">
+			<a href="/notie/">
 			
-				data.task</a>
+				Notie</a>
 		</h2>
 		<div class="meta date">
 
@@ -348,30 +193,222 @@
   
 
 
-<time datetime="2016-02-04T19:56:02+05:30" pubdate data-updated="true">Feb 4<span>th</span>, 2016</time></div>
+<time datetime="2015-11-19T15:26:38+05:30" pubdate data-updated="true">Nov 19<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
+		<h1><a href="https://www.npmjs.com/package/notie">notie</a></h1>
 
-<blockquote><p>A structure for representing asynchronous actions with automatic resource handling.</p></blockquote>
+<blockquote><p>A simple notification plugin.</p></blockquote>
 
-<p><code>data.task</code> monad which can be used to replace Continuation-Passing Style form of programming,
-in order to be able to compose and sequence time-dependent effects using the generic and powerful monadic operations.</p>
+<p><code>notie</code> - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an input,
+confirmation or alter the users in a more appealing manner.</p>
 
-<p><strong>GET IT:</strong> <code>npm install --save data.task</code></p>
+<p>It's uses material design, you can override or add styling in a separate <code>.css</code> file.</p>
 
-<p><strong>Sample Usage:</strong></p>
+<p><strong>Get it:</strong> <code>npm install --save notie</code></p>
+
+<p><strong>Sample usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Task</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;data.task&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">new</span> <span class="nx">Task</span><span class="p">((</span><span class="nx">reject</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span>
-</span><span class='line'><span class="nx">Task</span> <span class="p">{</span> <span class="nx">fork</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span> <span class="nx">cleanup</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">notie</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;notie);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.alert(style_number, &#39;</span><span class="nx">message</span><span class="s1">&#39;, time_in_seconds);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.confirm(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Yes</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">No</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, yes_callback);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.input(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Submit</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Cancel</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">type</span><span class="s1">&#39;, &#39;</span><span class="nx">placeholder</span><span class="s1">&#39;, submit_callback, &#39;</span><span class="nx">Optional</span> <span class="nx">pre</span><span class="o">-</span><span class="nx">filled</span> <span class="nx">value</span><span class="err">&#39;</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">notie</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="s1">&#39;What city do you live in?&#39;</span><span class="p">,</span> <span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="s1">&#39;Cancel&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;Enter your city:&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value_entered</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">notie</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;You entered: &#39;</span> <span class="o">+</span> <span class="nx">value_entered</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="s1">&#39;New York&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: <code>style_number</code> -> <code>{1,2,3,4}</code> &lt;=> <code>{Success, Warning, Error, Information}</code></p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/notie/notie.gif" alt="notie" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/debounce/">
+			
+				Debounce</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-12T22:24:27+05:30" pubdate data-updated="true">Nov 12<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/debounce">debounce</a></h1>
+
+<blockquote><p>debounce a function.</p></blockquote>
+
+<p>Creates and returns a new debounced version of the passed function that will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save debounce</code></p>
+
+<p><strong>API:</strong> <code>debounce(fn, wait, [ immediate || false ])</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;debounce&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">onresize</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">resize</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">resize</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/debounce/debounce.gif" alt="debounce.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/prettysize/">
+			
+				Prettysize</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-05T18:31:20+05:30" pubdate data-updated="true">Nov 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/prettysize">prettysize</a></p>
+
+<blockquote><p>Convert bytes to other sizes for prettier logging.</p></blockquote>
+
+<p>In just 45 lines of code, this cheeky module by <a href="https://twitter.com/davglass">@davlgass</a> makes it easy to humanize file sizes.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save prettysize</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<div id="prettysize">
+var pretty = require('prettysize');
+var str = pretty(123456789);
+</div>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/prettysize/prettysize.gif" alt="prettysize" /></p>
+
+<script src="https://embed.tonicdev.com" data-element-id="prettysize"></script>
+
+
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/sentiment/">
+			
+				Sentiment</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-29T18:47:29+05:30" pubdate data-updated="true">Oct 29<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/sentiment">sentiment</a></h1>
+
+<blockquote><p>AFINN-based sentiment analysis.</p></blockquote>
+
+<p><code>Sentiment</code> uses <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> wordlist to perform <a href="http://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a> on arbitrary blocks of input text.</p>
+
+<p>Sentiment provides serveral things:</p>
+
+<ul>
+<li>Performance.</li>
+<li>The ability to append and overwrite word / value pairs from the AFINN wordlist.</li>
+<li>A build process that makes updating sentiment to future versions of the AFINN word list trivial.</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save sentiment</code></p>
+
+<p><strong>Sample usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -386,25 +423,51 @@ in order to be able to compose and sequence time-dependent effects using the gen
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Task</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;data.task&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">read</span> <span class="o">=</span> <span class="nx">path</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'><span class="k">return</span> <span class="k">new</span> <span class="nx">Task</span><span class="p">((</span><span class="nx">reject</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span>  <span class="p">{</span>
-</span><span class='line'>          <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'><span class="nx">read</span><span class="p">(</span><span class="s1">&#39;/tmp/data.md&#39;</span><span class="p">).</span><span class="nx">fork</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sentiment</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sentiment&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are stupid&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="o">-</span><span class="mf">0.6666666666666666</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are cool&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="mf">0.3333333333333333</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are cool&#39;</span><span class="p">,{</span><span class="s1">&#39;cats&#39;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;cool&#39;</span><span class="o">:</span><span class="mi">10</span><span class="p">});</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span> <span class="p">],</span>
+</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW:</strong></p>
+<p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/data.task/data.task.gif" alt="data.task" /></p>
+<p><img src="/images/sentiment/sentiment.gif" alt="sentiment.gif" /></p>
+
+<p>Thanks to <a href="https://twitter.com/thisandagain">Andrew Sliwinski</a> for this crazy module!</p>
 
 		
 		
@@ -417,9 +480,9 @@ in order to be able to compose and sequence time-dependent effects using the gen
 	<header>
 		<h2 class="title">
 			
-			<a href="/platform/">
+			<a href="/hide-secrets/">
 			
-				Platform</a>
+				Hide-secrets</a>
 		</h2>
 		<div class="meta date">
 
@@ -433,35 +496,152 @@ in order to be able to compose and sequence time-dependent effects using the gen
   
 
 
-<time datetime="2016-01-28T18:42:21+05:30" pubdate data-updated="true">Jan 28<span>th</span>, 2016</time></div>
+<time datetime="2015-10-22T19:39:43+05:30" pubdate data-updated="true">Oct 22<span>nd</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/platform">platform</a></h1>
+		<script src="https://embed.tonicdev.com" data-element-id="hide-secrets"></script>
 
-<blockquote><p>A platform detection library that works on nearly all JavaScript platforms.</p></blockquote>
 
-<p>This module provides the below platfrom based information:</p>
+<h1><a href="https://www.npmjs.com/package/hide-secrets">hide-secrets</a></h1>
+
+<blockquote><p>hide certain restricted fields whiling logging objects.</p></blockquote>
+
+<p>This module obfuscated any of <code>password</code>, <code>pass</code>, <code>token</code>, <code>auth</code>, <code>secret</code> or <code>passphrase</code> attribute's value to <code>'[SECRET]'</code>.
+Very useful when logging an object that has sensitive data!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save hide-secrets</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<div id="hide-secrets">
+var hide = require('hide-secrets')
+ 
+var obj = {
+  innerObject: {
+    password: 'abc123',
+    email: 'xyz@nmotw.in',
+    token: 'my-secret-token'
+  },
+  auth: '' // empty strings are left empty. 
+}
+ 
+hide(obj)
+</div>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/hide-secrets/hide-secrets.gif" alt="hide-secrets" /></p>
+
+<p>Thanks to <a href="https://twitter.com/benjamincoe">Benjamin Coe</a> for helping us hide our secrets ;)</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/svgo/">
+			
+				Svgo</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-15T21:50:41+05:30" pubdate data-updated="true">Oct 15<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/svgo">svgo</a></h1>
+
+<blockquote><p><strong>SVG O</strong>ptimizer</p></blockquote>
+
+<p>Optimizes SVG by cleaning:</p>
 
 <ul>
-<li>description</li>
-<li>layout</li>
-<li>manufacturer</li>
-<li>name</li>
-<li>prerelease</li>
-<li>product</li>
-<li>ua</li>
-<li>version</li>
-<li>os</li>
+<li><p>Editor metadata.</p></li>
+<li><p>Comments.</p></li>
+<li><p>Hidden elements.</p></li>
+<li><p>Default or non-optimal values.</p></li>
+<li><p>Other stuff that can be safely removed or converted without affecting SVG rendering result.</p></li>
 </ul>
 
 
-<p>It can also <code>parse</code> an <code>User-Agent</code> and give the same information.</p>
+<p><strong>Get it:</strong> <code>npm install --global svgo</code></p>
 
-<p>P.S:<code>platform</code> is for informational purposes only &amp; not intended as a substitution for feature detection/inference checks.</p>
+<p><strong>Sample usage on CLI:</strong></p>
 
-<p><strong>GET IT</strong> : <code>npm install --save platform</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Usage:
+</span><span class='line'>  svgo [OPTIONS] [ARGS]
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -h, --help : Help
+</span><span class='line'>  -v, --version : Version
+</span><span class='line'>  -i INPUT, --input=INPUT : Input file, "-" for STDIN
+</span><span class='line'>  -s STRING, --string=STRING : Input SVG data string
+</span><span class='line'>  -f FOLDER, --folder=FOLDER : Input folder, optimize and rewrite all *.svg files
+</span><span class='line'>  -o OUTPUT, --output=OUTPUT : Output file or folder (by default the same as the input), "-" for STDOUT
+</span><span class='line'>  -p PRECISION, --precision=PRECISION : Set number of digits in the fractional part, overrides plugins params
+</span><span class='line'>  --config=CONFIG : Config file to extend or replace default
+</span><span class='line'>  --disable=DISABLE : Disable plugin by name
+</span><span class='line'>  --enable=ENABLE : Enable plugin by name
+</span><span class='line'>  --datauri=DATAURI : Output as Data URI string (base64, URI encoded or unencoded)
+</span><span class='line'>  --pretty : Make SVG pretty printed
+</span><span class='line'>  --show-plugins : Show available plugins and exit
+</span><span class='line'>
+</span><span class='line'>Arguments:
+</span><span class='line'>  INPUT : Alias to --input
+</span><span class='line'>  OUTPUT : Alias to --output</span></code></pre></td></tr></table></div></figure>
 
-<p><strong>Sample usage:</strong></p>
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  <span class="nv">$ </span>svgo red.svg red.min.svg
+</span><span class='line'>
+</span><span class='line'>  Done in 68 ms!
+</span><span class='line'>  0.708 KiB - 70.8% <span class="o">=</span> 0.207 KiB
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample API usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -473,39 +653,54 @@ in order to be able to compose and sequence time-dependent effects using the gen
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">platform</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;platform&#39;</span><span class="p">);</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">readFile</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">readFile</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">SVGO</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;svgo&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">filepath</span> <span class="o">=</span> <span class="nx">PATH</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;test.svg&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">svgo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SVGO</span><span class="p">(</span><span class="cm">/*{ custom config object }*/</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">// on an iPad</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Safari&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;5.1&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">product</span><span class="p">;</span> <span class="c1">// &#39;iPad&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">manufacturer</span><span class="p">;</span> <span class="c1">// &#39;Apple&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;WebKit&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;iOS 5.0&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Safari 5.1 on Apple iPad (iOS 5.0)&#39;</span>
+</span><span class='line'><span class="nx">readFile</span><span class="p">(</span><span class="nx">filepath</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">svgo</span><span class="p">.</span><span class="nx">optimize</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// {</span>
+</span><span class='line'>        <span class="c1">//     // optimized SVG data string</span>
+</span><span class='line'>        <span class="c1">//     data: &#39;&lt;svg width=&quot;10&quot; height=&quot;20&quot;&gt;test&lt;/svg&gt;&#39;</span>
+</span><span class='line'>        <span class="c1">//     // additional info such as width/height</span>
+</span><span class='line'>        <span class="c1">//     info: {</span>
+</span><span class='line'>        <span class="c1">//         width: &#39;10&#39;,</span>
+</span><span class='line'>        <span class="c1">//         height: &#39;20&#39;</span>
+</span><span class='line'>        <span class="c1">//     }</span>
+</span><span class='line'>        <span class="c1">// }</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Opera&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;11.52&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;Presto&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;Mac OS X 10.7.2&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Opera 11.52 (identifying as Firefox 4.0) on Mac OS X 10.7.2&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>P.S: Don't miss to read <a href="https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md#how-it-works">How it works!</a></p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/platform/platform.gif" alt="" /></p>
+<p><img src="/images/svgo/svgo.gif" alt="svgo.gif" /></p>
 
 		
 		
@@ -518,9 +713,9 @@ in order to be able to compose and sequence time-dependent effects using the gen
 	<header>
 		<h2 class="title">
 			
-			<a href="/iron-node/">
+			<a href="/instapromise/">
 			
-				Iron-node</a>
+				Instapromise</a>
 		</h2>
 		<div class="meta date">
 
@@ -534,33 +729,108 @@ in order to be able to compose and sequence time-dependent effects using the gen
   
 
 
-<time datetime="2016-01-21T21:50:46+05:30" pubdate data-updated="true">Jan 21<span>st</span>, 2016</time></div>
+<time datetime="2015-10-08T17:45:41+05:30" pubdate data-updated="true">Oct 8<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="http://s-a.github.io/iron-node/">iron-node</a></h1>
+		<h1><a href="https://www.npmjs.com/package/instapromise">instapromise</a></h1>
 
-<blockquote><p>Debug Node.js code with Chrome Developer Tools.</p></blockquote>
+<blockquote><p>Promisify with <code>.promise</code></p></blockquote>
 
-<p>Yes you read it right <code>iron-node</code> helps you to debug your node code using chrome devtools, it makes use of <a href="http://electron.atom.io/">electron</a> creates a <code>browser-window</code>
-opens the dev-tool re-compile native modules against electron!</p>
+<p><code>instapromise</code> lets you promisify node-style asynchronous functions by putting a <code>.promise</code> after them or after the object for methods.</p>
 
-<p>It not only helps you to debug your code, but also helps to debug your node build scripts!</p>
+<p>It's a part of <a href="http://exponentjs.com/">exponent</a> and this module is influenced from <a href="https://www.npmjs.com/package/fibrous">fibrous</a>.</p>
 
-<p>Keep in mind to place the keyword <code>debugger;</code> to a place where you want to stop.</p>
+<p>When one of the maintainers of <code>instapromise</code> was questioned about why the code was in coffeescript :</p>
 
-<p><strong>Get it:</strong> <code>npm install -g iron-node</code></p>
+<p>There’s basically two reasons for that:</p>
 
-<p><strong>Sample usage:</strong></p>
+<ul>
+<li><p>It’s based on some of the work the people who made fibrous did and they wrote their stuff in coffeescript</p></li>
+<li><p>I used to write a bunch of coffeescript before babel made it reasonable to write ES7+ stuff</p></li>
+<li><p>I wrote it back then, its pretty stable now.</p></li>
+<li><p>I haven’t made any changes to it in months so I don’t think it should be necessary to modify the source too much.</p></li>
+<li><p>Also I do like the way that its commented fairly well.</p></li>
+</ul>
 
-<p><strong>CLI:</strong></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>iron-node PATH_TO_NODE_JS_FILE [--customparm1=foo --customparm2=bar];</span></code></pre></td></tr></table></div></figure>
+<p><strong>Get it:</strong> <code>npm install --save instapromise</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="err">‘</span><span class="nx">instapromise</span><span class="err">’</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">someObject</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">someMethodThatTakesANodeStyleCallback</span><span class="p">(</span><span class="err">‘</span><span class="nx">but</span> <span class="nx">not</span> <span class="nx">anymore</span><span class="err">’</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>npm scripts:</strong></p>
+<p>Basically, <code>instapromise</code> is one of it's kind a module that is cheeky, tiny and takes a diffrenet apporach on promisifying async functions,
+you need to just <code>require('instapromise')</code> and then you could just use a <code>.promise</code>!</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;instapromise&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;/tmp/hello&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: The original function is available as a property on the promise-generating function <code>.___instapromiseOriginalFunction___</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/instapromise/instapromise.gif" alt="instapromise" /></p>
+
+<p>Thanks to <a href="https://twitter.com/JI">James Ide</a> and <a href="https://twitter.com/ccheever">Charlie Cheever</a> for instapromise!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/clipboard.js/">
+			
+				clipboard.js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-01T18:20:14+05:30" pubdate data-updated="true">Oct 1<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://zenorocha.github.io/clipboard.js/">clipboard.js</a></h1>
+
+<blockquote><p>A modern approach to copy text to clipboard!</p></blockquote>
+
+<p>With 4.7K+ stars to it's repo with a modern approach to copy text coded with <code>ES2015/6</code> classes,  No Flash. Just 2kb!</p>
+
+<p><a href="http://zenorocha.com/">Zeno Rocha</a>'s <code>clipboard.js</code> undoubtedly is the nmotw!</p>
+
+<p>It makes use of  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">execCommand</a> APIs.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save clipboard.js</code></p>
+
+<p><strong>Sample usage:</strong>_</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -569,320 +839,29 @@ opens the dev-tool re-compile native modules against electron!</p>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>  ...
-</span><span class='line'>  "scripts": {
-</span><span class='line'>    ...
-</span><span class='line'>    "debug-mocha": "iron-node node_modules/mocha/bin/_mocha",
-</span><span class='line'>    "debug-grunt": "iron-node node_modules/grunt-cli/bin/grunt build",
-</span><span class='line'>    "debug-gulp": "iron-node node_modules/gulp/bin/gulp.js",
-</span><span class='line'>    ...
-</span><span class='line'>  },
-</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/iron-node/iron-node.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fp-dom/">
-			
-				Fp-dom</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-01-14T22:22:27+05:30" pubdate data-updated="true">Jan 14<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
-
-<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
-
-<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
-
-<ul>
-<li>animate</li>
-<li>append</li>
-<li>addClass</li>
-<li>removeClass</li>
-<li>toggleClass</li>
-<li>hasClass</li>
-<li>contains</li>
-<li>elem</li>
-<li>insertAfter</li>
-<li>insertBefore</li>
-<li>interval</li>
-<li>isdom</li>
-<li>isvdom</li>
-<li>listen</li>
-<li>prepend</li>
-<li>replace</li>
-<li>select</li>
-<li>selectOne</li>
-<li>setattr</li>
-<li>timeout</li>
-<li>velem</li>
-</ul>
-
-
-<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">fpdom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fp-dom&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">appendtoBody</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">),</span>
-</span><span class='line'>  <span class="nx">h1</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">elem</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span><span class="s1">&#39;meow&#39;</span><span class="p">);</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">clipboard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="nx">appendtoBody</span><span class="p">(</span><span class="nx">h1</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ineed/">
-			
-				Ineed</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-01-07T22:02:52+05:30" pubdate data-updated="true">Jan 7<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
-
-<blockquote><p>Web scraping and HTML-reprocessing. The easy way.</p></blockquote>
-
-<p><img src="/images/ineed/ineed-logo.png" alt="ineed-logo" /></p>
-
-<p><code>ineed</code> allows you collect useful data from web pages using simple and nice API.</p>
-
-<p>It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast!</p>
-
-<p><strong>Get it:</strong> <code>npm install --save ineed</code></p>
-
-<p><strong>Usage:</strong> <code>ineed.&lt;action&gt;[.&lt;plugin&gt;...].&lt;from*&gt;</code></p>
-
-<p>Where <code>action</code> could be: <code>collect</code> or <code>reprocess</code></p>
-
-<p><code>plugin</code> could be one of: <code>.comments</code> <code>.cssCode</code> <code>.hyperlinks</code> <code>.images</code> <code>.jsCode</code> <code>.scripts</code> <code>.stylesheets</code> <code>.texts</code> <code>.title</code></p>
-
-<p><code>from</code> could be: <code>from</code> or <code>fromHtml</code></p>
-
-<p>P.S: One could write a custom plugin using the <code>.using()</code> method.</p>
-
-<p><strong>Code sample:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Text:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">hyperlinks</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">stylesheets</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s1">&#39;http://nmotw.in&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">e</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
 </span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">texts</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">fromHtml</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+</span><span class='line'><span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ineed/ineed.gif" alt="ineed" /></p>
-
-<p>Thanks to <a href="https://twitter.com/nilukini">Ivan Nikulin</a> for this cheeky module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/stack-trace/">
-			
-				Stack-trace</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-12-31T23:17:09+05:30" pubdate data-updated="true">Dec 31<span>st</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/stack-trace">stack-trace</a></h1>
-
-<blockquote><p>Get v8 stack traces as an array of CallSite objects.</p></blockquote>
-
-<p><strong>Get it:</strong> <code>npm install --save stack-trace</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">stackTrace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stack-trace&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">trace</span> <span class="o">=</span> <span class="nx">stackTrace</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">stackTrace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stack-trace&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">err</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;something went wrong&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">trace</span> <span class="o">=</span> <span class="nx">stackTrace</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And <code>trace</code> would have CallSite objects and each object will have the below methods:</p>
-
-<ul>
-<li><strong>getThis</strong>: returns the value of this</li>
-<li><strong>getTypeName</strong>: returns the type of this as a string. This is the name of the function stored in the constructor field of this, if available, otherwise the object's [[Class]] internal property.</li>
-<li><strong>getFunction</strong>: returns the current function</li>
-<li><strong>getFunctionName</strong>: returns the name of the current function, typically its name property. If a name property is not available an attempt will be made to try to infer a name from the function's context.</li>
-<li><strong>getMethodName</strong>: returns the name of the property of this or one of its prototypes that holds the current function</li>
-<li><strong>getFileName</strong>: if this function was defined in a script returns the name of the script</li>
-<li><strong>getLineNumber</strong>: if this function was defined in a script returns the current line number</li>
-<li><strong>getColumnNumber</strong>: if this function was defined in a script returns the current column number</li>
-<li><strong>getEvalOrigin</strong>: if this function was created using a call to eval returns a CallSite object representing the location where eval was called</li>
-<li><strong>isToplevel</strong>: is this a toplevel invocation, that is, is this the global object?</li>
-<li><strong>isEval</strong>: does this call take place in code defined by a call to eval?</li>
-<li><strong>isNative</strong>: is this call in native V8 code?</li>
-<li><strong>isConstructor</strong>: is this a constructor call?</li>
-</ul>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/stack-trace/stack-trace.gif" alt="stack-trace" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/is-christmas/">
-			
-				Is-christmas</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-12-24T20:02:35+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/is-christmas">is-christmas</a></h1>
-
-<blockquote><p>🎅 Is today Christmas? 🎄</p></blockquote>
-
-<p>Simple fun module that returns <code>true</code> or <code>false</code> if it's Christmas or not.</p>
-
-<p><strong>Get it:</strong></p>
-
-<p><code>$ npm install --save is-christmas</code></p>
-
-<p><code>$ npm install --global is-christmas</code> // for CLI</p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">isChristmas</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is-christmas&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">isChristmas</span><span class="p">();</span>
-</span><span class='line'><span class="c1">//=&gt; true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+<p>In your <code>HTML</code>:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -891,23 +870,89 @@ opens the dev-tool re-compile native modules against electron!</p>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>is-christmas --help
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Target --&gt;</span>
+</span><span class='line'><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;https://github.com/zenorocha/clipboard.js.git&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    is-christmas
-</span><span class='line'>
-</span><span class='line'>  Examples
-</span><span class='line'>    <span class="nv">$ </span>is-christmas
-</span><span class='line'>    <span class="nb">true</span>
+</span><span class='line'><span class="c">&lt;!-- Trigger --&gt;</span>
+</span><span class='line'><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">data-clipboard-target=</span><span class="s">&quot;#foo&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;assets/clippy.svg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Copy to clipboard&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;/button&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas" /></p>
+<p><img src="/images/clipboard.js/clipboard.js.gif" alt="clipboard.js" /></p>
 
-<p>Thanks to <a href="https://twitter.com/thejameskyle">James Kyle</a> for this fun module for this Christmas 😉</p>
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/trianglify/">
+			
+				Trianglify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-24T17:23:44+05:30" pubdate data-updated="true">Sep 24<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
+
+<blockquote><p>Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds.</p></blockquote>
+
+<p>This is inspired by <a href="https://github.com/btmills/geopattern">btmills/geopattern</a> thanks to <a href="http://qrohlf.com/">Quinn Rohlf</a> for this.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save trianglify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Trianglify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;trianglify&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">});</span>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">canvas</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are few wonderful <a href="https://github.com/qrohlf/trianglify/blob/master/Readme.md#options">options</a> <code>color_function</code> being one of them.</p>
+
+<p>Color function that uses the HSL color format to generate a rainbow pattern:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorFunc</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;hsl(&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span><span class="o">*</span><span class="mi">360</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,80%,60%)&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">color_function</span><span class="o">:</span> <span class="nx">colorFunc</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
 
 		
 		
