@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dom | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-06-10T16:06:57+05:30</updated>
+  <updated>2017-09-28T19:54:43+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,133 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fitty]]></title>
+    <link href="http://nmotw.in//github/fitty/"/>
+    <updated>2017-08-03T13:03:33+05:30</updated>
+    <id>http://nmotw.in//github/fitty</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fitty">fitty</a></h1>
+
+<blockquote><p>Makes text fit perfectly.</p></blockquote>
+
+<p>Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container.</p>
+
+<p>The crux is of fitty is the <code>fit</code> method which marks the fitty as dirty and requests a redraw (this will also redraw any other fitty marked as dirty).</p>
+
+<p><strong>Get it:</strong> <code>npm install fitty</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```html
+const fitty = require('fitty');</p>
+
+<p>fitty('#my-element);
+```</p>
+
+<p>Default options:</p>
+
+<p><code>js
+const defaultOptions = {
+  minSize: 16,
+  maxSize: 512,
+  multiLine: true,
+  observeMutations: 'MutationObserver' in w ? mutationObserverDefaultSetting : false
+};
+</code>
+Yes, it uses <code>MutationObserver</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fitty/fitty.gif" alt="fitty" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[stikcybits]]></title>
+    <link href="http://nmotw.in//github/stikcybits/"/>
+    <updated>2017-07-08T15:28:28+05:30</updated>
+    <id>http://nmotw.in//github/stikcybits</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stickybits">stickybits</a></h1>
+
+<blockquote><p>Alternative to position: sticky polyfills.</p></blockquote>
+
+<ul>
+<li><p>Aprox <code>~2KB</code> of javascript that would help us to know when a DOM element is stuck (position:sticky).</p></li>
+<li><p>It can add a CSS Sticky Class <code>.js-is-sticky</code> when <code>position: sticky</code> elements become active and a CSS Stuck Class <code>.js-is-stuck</code> when they become stuck.</p></li>
+<li><p>Loosely mimics <code>position: sticky</code> to consistently stick elements vertically across multiple platforms.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install stickybits</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+ stickybits('selector', options);</p>
+
+<p> /*
+Options:</p>
+
+<pre><code>- target = el (DOM element)
+- offset = 0 || 'dealer's choice'
+- verticalPosition = top || bottom
+- useStickyClasses = true || false
+- elStyles = CSS Styles
+- positionVal = fixed || sticky
+</code></pre>
+
+<p> */
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/stickybits/stickybits.gif" alt="stickybits.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[dom-scroll-into-view]]></title>
+    <link href="http://nmotw.in//github/dom-scroll-into-view/"/>
+    <updated>2017-06-18T15:32:27+05:30</updated>
+    <id>http://nmotw.in//github/dom-scroll-into-view</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
+
+<blockquote><p>scroll node in contain to make node visible</p></blockquote>
+
+<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
+
+<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var scrollIntoView = require('dom-scroll-into-view');
+scrollIntoView(source,container,config);
+</code></p>
+
+<p>```js
+//config
+   {</p>
+
+<pre><code>   alignWithLeft,
+   alignWithTop,
+   allowHorizontalScroll,
+   onlyScrollIfNeeded,
+   offsetTop,
+   offsetLeft,
+   offsetBottom,
+   offsetRight
+</code></pre>
+
+<p>   }
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[what-input]]></title>
@@ -116,149 +243,6 @@ __GIF FTW!:__
 
 ![aos](/images/aos/aos.gif)
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[sweetalert]]></title>
-    <link href="http://nmotw.in//github/sweetalert/"/>
-    <updated>2017-03-17T16:36:18+05:30</updated>
-    <id>http://nmotw.in//github/sweetalert</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sweetalert">sweetalert</a></h1>
-
-<blockquote><p>An awesome replacement/alternative for alert().</p></blockquote>
-
-<p><code>sweetalert</code> is an alternative to annoying alert, it's rather a sweet a simple modal box.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save sweetalert</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p><code>js
-const swal = require('sweetalert');
-</code></p>
-
-<p><code>js
-swal("Oops...", "Something went wrong!", "error");
-</code></p>
-
-<p>```js
-swal({
-  title: 'Ajax request example',
-  text: 'Submit to run ajax request',
-  type: 'info',
-  showCancelButton: true,
-  closeOnConfirm: false,
-  disableButtonsOnConfirm: true,
-  confirmLoadingButtonColor: '#DD6B55'
-}, function(inputValue){
-  setTimeout(function() {</p>
-
-<pre><code>swal('Ajax request finished!');
-</code></pre>
-
-<p>  }, 2000);
-});
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/sweetalert/sweetalert.gif" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[color-thief]]></title>
-    <link href="http://nmotw.in//github/color-thief/"/>
-    <updated>2016-03-03T20:20:23+05:30</updated>
-    <id>http://nmotw.in//github/color-thief</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/color-thief">color-thief</a></h1>
-
-<blockquote><p>Grab the color palette or dominant color from an image!</p></blockquote>
-
-<p><code>color-thief</code> helps to grab get the dominant color or the color palette from an image, this module makes use of JS, some cool math and the canvas tag to make it happen.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save color-thief</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-var colorThief = new ColorThief();
-colorThief.getColor(sourceImage);</p>
-
-<p>/<em>
-getColor(sourceImage[, quality])
-returns {r: num, g: num, b: num}
-</em>/
-```</p>
-
-<p>```js
-var colorThief = new ColorThief();
-colorThief.getPalette(sourceImage, 8);</p>
-
-<p>/<em>
-getPalette(sourceImage[, colorCount, quality])
-returns [ [num, num, num], [num, num, num], ... ]
-</em>/
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/color-thief/color-thief.gif" alt="color-thief" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fp-dom]]></title>
-    <link href="http://nmotw.in//github/fp-dom/"/>
-    <updated>2016-01-14T22:22:27+05:30</updated>
-    <id>http://nmotw.in//github/fp-dom</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
-
-<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
-
-<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
-
-<ul>
-<li>animate</li>
-<li>append</li>
-<li>addClass</li>
-<li>removeClass</li>
-<li>toggleClass</li>
-<li>hasClass</li>
-<li>contains</li>
-<li>elem</li>
-<li>insertAfter</li>
-<li>insertBefore</li>
-<li>interval</li>
-<li>isdom</li>
-<li>isvdom</li>
-<li>listen</li>
-<li>prepend</li>
-<li>replace</li>
-<li>select</li>
-<li>selectOne</li>
-<li>setattr</li>
-<li>timeout</li>
-<li>velem</li>
-</ul>
-
-
-<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-fpdom = require('fp-dom');
-let appendtoBody = fpdom.append(document.body),
-  h1 = fpdom.elem('h1','meow');</p>
-
-<p>appendtoBody(h1);
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: async | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/async/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-06-10T16:06:57+05:30</updated>
+  <updated>2017-09-28T19:54:43+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,102 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[async-retry]]></title>
+    <link href="http://nmotw.in//github/async-retry/"/>
+    <updated>2017-09-14T22:50:23+05:30</updated>
+    <id>http://nmotw.in//github/async-retry</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-retry">async-retry</a></h1>
+
+<blockquote><p>Retrying made simple, easy, async.</p></blockquote>
+
+<p><code>async-retry</code> is a promisified version of <a href="https://www.npmjs.com/package/retry">retry</a> which makes things easier with the <code>async-await</code> syntax.</p>
+
+<p><strong>Get it:</strong> <code>npm install async-retry</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// Packages
+const retry = require('async-retry')
+const fetch = require('node-fetch')</p>
+
+<p>await retry(async bail => {
+  // if anything throws, we retry
+  const res = await fetch('https://google.com')</p>
+
+<p>  if (403 === res.status) {</p>
+
+<pre><code>// don't retry upon 403 
+bail(new Error('Unauthorized'))
+return
+</code></pre>
+
+<p>  }</p>
+
+<p>  const data = await res.text()
+  return data.substr(0, 500)
+}, {
+  retries: 500
+})
+```</p>
+
+<p><strong>Method signature:</strong></p>
+
+<p><code>
+retry(retrier : Function, opts : Object) =&gt; Promise
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/async-retry/async-retry.gif" alt="async-retry" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[base64-async]]></title>
+    <link href="http://nmotw.in//github/base64-async/"/>
+    <updated>2017-06-29T13:57:23+05:30</updated>
+    <id>http://nmotw.in//github/base64-async</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/base64-async">base64-async</a></h1>
+
+<blockquote><p>Non-blocking chunked Base64 encoding.</p></blockquote>
+
+<p><code>base64-async</code> helps us in processing large <code>Base64</code> documents without blocking the event loop, one can configure chunk size option to optimise for your use case.</p>
+
+<p>This module exposes: <code>b64</code>, <code>encode</code> and <code>decode</code> methods which accepts <code>(input, [options])</code> and returns a promise on innvocation.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save base64-async</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const b64 = require('base64-async');
+const fs = require('fs');
+const buffer = fs.readFileSync('somehugefile.jpg');</p>
+
+<p>b64.encode(fileBuffer).then(b64String => console.log(b64String));
+// aGkgbXVt...</p>
+
+<p>b64.decode(b64String).then(buffer => console.log(buffer));
+// <Buffer 68 69 20 6d 75 6d ... ></p>
+
+<p>// or, for the cool kids
+const b64String = await b64.encode(fileBuffer);
+const originalFileBuffer = await b64.decode(b64String);</p>
+
+<p>// which is equivalent to this
+const b64String = await b64(fileBuffer);
+const originalFileBuffer = await b64(b64String);
+// If no method is specified, buffers are encoded, strings are decoded
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[asyncbox]]></title>

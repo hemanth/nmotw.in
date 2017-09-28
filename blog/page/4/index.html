@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">   
+    <meta name="description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">
+    <meta name="twitter:description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;" />
+    <meta property="og:description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;" />
 
     
 
@@ -73,9 +76,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/has/">
+			<a href="/unfetch/">
 			
-				Has</a>
+				Unfetch</a>
 		</h2>
 		<div class="meta date">
 
@@ -89,91 +92,32 @@
   
 
 
-<time datetime="2016-11-11T11:44:31+05:30" pubdate data-updated="true">Nov 11<span>th</span>, 2016</time></div>
+<time datetime="2017-02-25T09:11:13+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/has">has</a></h1>
+		<h1><a href="https://www.npmjs.com/package/unfetch">unfetch</a></h1>
 
-<blockquote><p>Object.prototype.hasOwnProperty.call shortcut.</p></blockquote>
+<blockquote><p>Tiny 500b fetch "barely-polyfill"</p></blockquote>
 
-<p>This module is one of those live examle where a tiny module can make a lot of impact in the node community.</p>
-
-<p>All that this module does is helps in making a shorting function name to <code>Object.prototype.hasOwnProperty.call</code> as <code>has</code>, the code in the module is as below:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">bind</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-bind&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">Function</span><span class="p">.</span><span class="nx">call</span><span class="p">,</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
+<ul>
+<li><strong>Tiny:</strong> under <strong>500 bytes</strong> of <a href="https://unpkg.com/unfetch">ES3</a> gzipped</li>
+<li><strong>Minimal:</strong> just <code>fetch()</code> with headers and text/json/xml responses</li>
+<li><strong>Familiar:</strong> a subset of the full API</li>
+<li><strong>Supported:</strong> supports IE8+ (<abbr title="Bring Your Own Promises">BYOP</abbr>)</li>
+<li><strong>Standalone:</strong> one function, no dependencies</li>
+<li><strong>Modern:</strong> written in ES2015, transpiled to 500b of old-school JS</li>
+</ul>
 
 
-<p>The impact it has made with <code>110</code> dependencies:</p>
+<blockquote><p>🤔 <strong>What's Missing?</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="mi">151</span><span class="p">,</span><span class="mi">565</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">day</span>
-</span><span class='line'><span class="mi">823</span><span class="p">,</span><span class="mi">500</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">week</span>
-</span><span class='line'><span class="mi">3</span><span class="p">,</span><span class="mi">552</span><span class="p">,</span><span class="mi">078</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">month</span>
-</span></code></pre></td></tr></table></div></figure>
+<ul>
+<li>Uses simple Arrays instead of Iterables, since Arrays <em>are</em> iterables</li>
+<li>No streaming, just Promisifies existing XMLHttpRequest response bodies</li>
+</ul>
+</blockquote>
 
-
-<p></p>
-
-<p><strong>Get it:</strong> <code>npm install --save has</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">has</span><span class="p">({},</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// false;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">has</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// true;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/has/has.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/pino/">
-			
-				Pino</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-11-03T18:41:34+05:30" pubdate data-updated="true">Nov 3<span>rd</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/pino">pino</a></h1>
-
-<blockquote><p>super fast, all natural json logger.</p></blockquote>
-
-<p><code>pino</code> is an uber <a href="https://www.npmjs.com/package/pino#benchmarks">fast</a> logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save pino</code></p>
+<p><strong>Get it:</strong> <code>npm install --save unfetch</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -188,34 +132,37 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">pino</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pino&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">pino</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;myapp&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">safe</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">serializers</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">req</span><span class="o">:</span> <span class="nx">pino</span><span class="p">.</span><span class="nx">stdSerializers</span><span class="p">.</span><span class="nx">req</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">res</span><span class="o">:</span> <span class="nx">pino</span><span class="p">.</span><span class="nx">stdSerializers</span><span class="p">.</span><span class="nx">res</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// simple GET request: </span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/foo&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">txt</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'><span class="c1">//logger will have: trace, debug, info, warn, error and fatal level to log.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// complex POST request with JSON, headers: </span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/bear&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="nx">hungry</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">open</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">));</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'><span class="p">})</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">pino</span><span class="p">({</span><span class="nx">level</span><span class="o">:</span> <span class="s1">&#39;debug&#39;</span><span class="p">})</span>
-</span><span class='line'><span class="nx">log</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">&#39;interesting object: %j&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nx">pino</span><span class="o">:</span> <span class="s1">&#39;is a way of life&#39;</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>pino</code> is available for: <code>koa</code>, <code>express</code>, <code>hapi</code> and <code>restify</code> as well.</p>
+<p>P.S: I you are looking for all the functionalities of <code>fetch</code> API, <a href="https://nmotw.in/isomorphic-fetch/">isomorphic-fetch</a> would be an apt choice.</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/pino/pino.gif" alt="pino.gif" /></p>
+<p><img src="/images/unfetch/unfetch.gif" alt="unfetch" /></p>
 
 		
 		
@@ -228,9 +175,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/next/">
+			<a href="/most/">
 			
-				Next</a>
+				Most</a>
 		</h2>
 		<div class="meta date">
 
@@ -244,68 +191,91 @@
   
 
 
-<time datetime="2016-10-27T20:11:15+05:30" pubdate data-updated="true">Oct 27<span>th</span>, 2016</time></div>
+<time datetime="2017-02-18T07:07:22+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/next">next.js</a></h1>
+		<h1><a href="https://www.npmjs.com/package/most">most</a></h1>
 
-<blockquote><p>Minimalistic framework for server-rendered React applications.</p></blockquote>
+<blockquote><p>Monadic streams</p></blockquote>
 
-<p><code>next.js</code> framework helps with SSR of React applications and so far has:</p>
+<p><code>Most.js</code> is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e.g. WebSocket messages, DOM events, etc, and on time-varying values, e.g. the "current value" of an <code>&lt;input&gt;</code>, without many of the hazards of side effects and mutable shared state.</p>
 
-<ul>
-<li>Automatic transpilation and bundling (with webpack and babel)</li>
-<li>Hot code reloading</li>
-<li>Server rendering and indexing of <code>./pages</code></li>
-<li>Static file serving. <code>./static/</code> is mapped to <code>/static/</code></li>
-</ul>
+<p>It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.</p>
 
+<p>P.S: Have a look at the <a href="https://github.com/cujojs/most/tree/master/test/perf">perf test results</a>.</p>
 
-<p><strong>GET IT:</strong> <code>npm instll --save next</code></p>
+<p><strong>GET IT:</strong> <code>npm install --save most</code></p>
 
 <p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mkdir pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//pages/index.js:</span>
-</span><span class='line'><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
-</span><span class='line'><span class="kr">export</span> <span class="k">default</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">Next</span><span class="o">!&lt;</span><span class="err">/div&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Add a script to the <code>package.json</code> like:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="nt">&quot;scripts&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;next&quot;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">from</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
+</span><span class='line'><span class="c1">// After 1 second, logs 10</span>
+</span><span class='line'><span class="nx">from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">result</span> <span class="o">+</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>and run:</p>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">$</span> <span class="err">npm</span> <span class="err">start</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">fromPromise</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
+</span><span class='line'><span class="c1">// Logs &quot;hello&quot;</span>
+</span><span class='line'><span class="nx">fromPromise</span><span class="p">(</span><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">))</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">message</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">))</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW</strong></p>
 
-<p><img src="/images/next/next.gif" alt="" /></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">generate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">allTheIntegers</span><span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span>
+</span><span class='line'>    <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">yield</span> <span class="nx">delayPromise</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">delayPromise</span> <span class="o">=</span> <span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span>
+</span><span class='line'>    <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="o">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span> <span class="nx">ms</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Log the first 100 integers, at 1 second intervals</span>
+</span><span class='line'><span class="nx">generate</span><span class="p">(</span><span class="nx">allTheIntegers</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">take</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/most/most.js.gif" alt="most.js" /></p>
 
 		
 		
@@ -318,9 +288,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/s-ago/">
+			<a href="/common-tags/">
 			
-				S-ago</a>
+				Common-tags</a>
 		</h2>
 		<div class="meta date">
 
@@ -334,16 +304,48 @@
   
 
 
-<time datetime="2016-10-20T19:43:46+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2016</time></div>
+<time datetime="2017-02-10T19:54:05+05:30" pubdate data-updated="true">Feb 10<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
+		<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
 
-<blockquote><p>Human readable relative times.</p></blockquote>
+<blockquote><p>Common utility template tags for ES2015</p></blockquote>
 
-<p><code>26 SLOC</code> to convert <code>Date</code> objects into human readable relative timestamps, such as <code>7 minutes ago</code> or <code>yesterday</code> or <code>2 days ago</code></p>
+<p>🔖 A set of well-tested, commonly used template literal tag functions for use in ES2015+.</p>
 
-<p><strong>Get it:</strong> <code>npm install --save s-ago</code></p>
+<p>🌟 Plus some extra goodies for easily making your own tags.</p>
+
+<p>Provides the below almost self explanatory functions:</p>
+
+<ul>
+<li>TemplateTag</li>
+<li>codeBlock</li>
+<li>commaLists</li>
+<li>commaListsAnd</li>
+<li>commaListsOr</li>
+<li>html</li>
+<li>inlineArrayTransformer</li>
+<li>inlineLists</li>
+<li>oneLine</li>
+<li>oneLineCommaLists</li>
+<li>oneLineCommaListsAnd</li>
+<li>oneLineCommaListsOr</li>
+<li>oneLineInlineLists</li>
+<li>oneLineTrim</li>
+<li>removeNonPrintingValuesTransformer</li>
+<li>replaceResultTransformer</li>
+<li>replaceSubstitutionTransformer</li>
+<li>safeHtml</li>
+<li>source</li>
+<li>splitStringTransformer</li>
+<li>stripIndent</li>
+<li>stripIndentTransformer</li>
+<li>stripIndents</li>
+<li>trimResultTransformer</li>
+</ul>
+
+
+<p><strong>GET IT:</strong> <code>npm install --save common-tags</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -355,22 +357,20 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ago</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;s-ago&#39;</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">oneLine</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;common-tags&#39;</span>
 </span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">yesterday</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">hoursAgo</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">now</span><span class="p">);</span> <span class="c1">// &#39;just now&#39; </span>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">yesterday</span><span class="p">);</span> <span class="c1">// &#39;yesterday&#39; </span>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">hoursAgo</span><span class="p">);</span> <span class="c1">// &#39;6 hours ago&#39; </span>
+</span><span class='line'><span class="nx">oneLine</span><span class="err">`</span>
+</span><span class='line'>  <span class="nx">foo</span>
+</span><span class='line'>  <span class="nx">bar</span>
+</span><span class='line'>  <span class="nx">baz</span>
+</span><span class='line'><span class="err">`</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// &quot;foo bar baz&quot; </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIT FTW!</strong></p>
+<p><strong>GIF FTW:</strong></p>
 
-<p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
+<p><img src="/images/common-tags/common-tags.gif" alt="common-tags" /></p>
 
 		
 		
@@ -383,9 +383,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/yarn/">
+			<a href="/simple-statistics/">
 			
-				Yarn</a>
+				Simple-statistics</a>
 		</h2>
 		<div class="meta date">
 
@@ -399,29 +399,16 @@
   
 
 
-<time datetime="2016-10-13T19:37:03+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2016</time></div>
+<time datetime="2017-02-03T10:32:48+05:30" pubdate data-updated="true">Feb 3<span>rd</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
+		<h1><a href="https://www.npmjs.com/package/simple-statistics">simple-statistics</a></h1>
 
-<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
+<blockquote><p>Descriptive, regression, and inference statistics.</p></blockquote>
 
-<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
+<p><code>simple-statistics</code> module is a neat pack of most commonly used functional for statistical analysis.</p>
 
-<ul>
-<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
-<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
-<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
-<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
-<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
-<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
-<li>More emojis. 🐈</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
-
-<p><strong>CLI usage:</strong></p>
+<p>It contains about <code>62</code> helper methods bundled with it :</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -453,315 +440,108 @@
 <span class='line-number'>28</span>
 <span class='line-number'>29</span>
 <span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>yarn add
-</span><span class='line'>yarn bin
-</span><span class='line'>yarn cache
-</span><span class='line'>yarn check
-</span><span class='line'>yarn clean
-</span><span class='line'>yarn config
-</span><span class='line'>yarn generate-lock-entry
-</span><span class='line'>yarn global
-</span><span class='line'>yarn info
-</span><span class='line'>yarn init
-</span><span class='line'>yarn install
-</span><span class='line'>yarn licenses
-</span><span class='line'>yarn link
-</span><span class='line'>yarn login
-</span><span class='line'>yarn <span class="nb">logout</span>
-</span><span class='line'>yarn ls
-</span><span class='line'>yarn outdated
-</span><span class='line'>yarn owner
-</span><span class='line'>yarn pack
-</span><span class='line'>yarn publish
-</span><span class='line'>yarn remove
-</span><span class='line'>yarn run
-</span><span class='line'>yarn self-update
-</span><span class='line'>yarn tag
-</span><span class='line'>yarn team
-</span><span class='line'>yarn <span class="nb">test</span>
-</span><span class='line'>yarn unlink
-</span><span class='line'>yarn upgrade
-</span><span class='line'>yarn version
-</span><span class='line'>yarn why
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">[</span> <span class="s1">&#39;linearRegression&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;linearRegressionLine&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;standardDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rSquared&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;modeSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;max&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;minSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;maxSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sumSimple&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;product&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;quantile&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;quantileSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;interquartileRange&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;iqr&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mad&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;medianAbsoluteDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chunk&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;shuffleInPlace&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;ckmeans&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uniqueCountSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sumNthPowerDeviations&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;equalIntervalBreaks&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleCovariance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleCorrelation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleVariance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleStandardDeviation&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;sampleSkewness&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;permutationsHeap&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;combinations&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;combinationsReplacement&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;geometricMean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;harmonicMean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;average&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;median&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;medianSorted&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rms&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rootMeanSquare&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;variance&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tTest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;tTestTwoSample&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bayesian&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;perceptron&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;epsilon&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;factorial&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bernoulliDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;binomialDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;poissonDistribution&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;chiSquaredGoodnessOfFit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;zScore&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;cumulativeStdNormalProbability&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;standardNormalTable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;erf&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;errorFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;inverseErrorFunction&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;probit&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;bisect&#39;</span> <span class="p">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/resize-observer-polyfill/">
-			
-				Resize-observer-polyfill</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-10-06T22:36:53+05:30" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">resize-observer-polyfill</a></h1>
-
-<blockquote><p>A polyfill for Resize Observer API.</p></blockquote>
-
-<p>Implements event based tracking of changes in the dimensions of elements.</p>
-
-<p>Uses MutationsObserver and falls back to an infinite dirty checking cycle if the first one is not supported.</p>
-
-<p>Handles long running CSS transitions/animations, attributes and nodes mutations along with changes made by :hover pseudo-class (optional).</p>
-
-<p>Compliant with the <a href="http://rawgit.com/WICG/ResizeObserver/master/index.html">spec</a>.</p>
-
-<p>Doesn't contain any publicly available methods except for those described in the spec.</p>
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">resize</span><span class="o">-</span><span class="nx">observer</span><span class="o">-</span><span class="nx">polyfill</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p><strong>Get it:</strong> <code>npm install --save simple-statistics</code></p>
 
 <p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">ResizeObserver</span> <span class="nx">from</span> <span class="s1">&#39;resize-observer-polyfill&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ResizeObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">,</span> <span class="nx">observer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/resize-observer-polyfill/resize-observer-polyfill.gif" alt="resize-observer-polyfill" /></p>
-
-<p>P.S: Checkout the <a href="http://que-etc.github.io/resize-observer-polyfill">Live demo</a>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/autosize-input/">
-			
-				Autosize-input</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-29T19:30:53+05:30" pubdate data-updated="true">Sep 29<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
-
-<blockquote><p>Effortless, dynamic-width text boxes.</p></blockquote>
-
-<p><strong>Features:</strong></p>
-
-<ul>
-<li>Dynamically adjusts the width of the text box to fit its current contents</li>
-<li>Can be initialised to fit its <code>placeholder</code> attribute</li>
-<li>Optionally set a <code>min-width</code> based on the element&rsquo;s initial content</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g autosize-input</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#bar&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#baz&#39;</span><span class="p">),</span> <span class="p">{</span> <span class="nx">minWidth</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Implementation details:</strong></p>
-
-<ul>
-<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> property of the given text box is set, inline, to <code>content-box</code>. Therefore, the width we assign to our text box <em>excludes</em> its <code>padding</code> and <code>border</code> properties.</p></li>
-<li><p>A hidden &ldquo;ghost&rdquo; <code>div</code> &mdash; given the same <code>font-size</code> and <code>font-family</code> as the text box &mdash; is used to compute the correct width to assign to the text box. This width is recomputed and assigned to the text box on every <a href="https://developer.mozilla.org/en-US/docs/Web/Events/input"><code>input</code></a> event.</p></li>
-<li><p>The single &ldquo;ghost&rdquo; element is shared amongst all the &ldquo;autosized&rdquo; text boxes on the page.</p></li>
-</ul>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/asyncbox/">
-			
-				Asyncbox</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
-
-<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
-
-<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
-
-<ul>
-<li>sleep</li>
-<li>retry</li>
-<li>nodeify</li>
-<li>nodeifyAll</li>
-<li>retryInterval</li>
-<li>asyncify</li>
-<li>parallel</li>
-<li>asyncmap</li>
-<li>asyncfilter</li>
-<li>waitForCondition</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// do some stuff </span>
-</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
-</span><span class='line'>    <span class="c1">// do some other stuff </span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/granim/">
-			
-				Granim</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
-
-<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
-
-<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
-
-<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Create a &lt;canvas&gt; element --&gt;</span>
-</span><span class='line'><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;granim-canvas&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -777,28 +557,28 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">granimInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Granim</span><span class="p">({</span>
-</span><span class='line'>   <span class="nx">element</span><span class="o">:</span> <span class="s1">&#39;#granim-canvas&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;granim&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">opacity</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-</span><span class='line'>   <span class="nx">states</span> <span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>       <span class="s2">&quot;default-state&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>           <span class="nx">gradients</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#834D9B&#39;</span><span class="p">,</span> <span class="s1">&#39;#D04ED6&#39;</span><span class="p">],</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#1CD8D2&#39;</span><span class="p">,</span> <span class="s1">&#39;#93EDC7&#39;</span><span class="p">]</span>
-</span><span class='line'>           <span class="p">]</span>
-</span><span class='line'>       <span class="p">}</span>
-</span><span class='line'>   <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ss</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;simple-statistics&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">mad</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]);</span>
+</span><span class='line'><span class="c1">// ^ 3; median absolute deviation.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">[</span>
+</span><span class='line'><span class="cm">    [1, 2],</span>
+</span><span class='line'><span class="cm">    [1, 3],</span>
+</span><span class='line'><span class="cm">    [2, 3]</span>
+</span><span class='line'><span class="cm">]</span>
+</span><span class='line'><span class="cm">*/</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
-
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/granim/granim.gif" alt="granim" /></p>
+<p><img src="/images/simple-statistics/simple-statistics.gif" alt="" /></p>
 
 		
 		
@@ -811,9 +591,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/quill/">
+			<a href="/is-subset/">
 			
-				Quill</a>
+				Is-subset</a>
 		</h2>
 		<div class="meta date">
 
@@ -827,47 +607,16 @@
   
 
 
-<time datetime="2016-09-08T18:38:58+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
+<time datetime="2017-01-27T14:21:59+05:30" pubdate data-updated="true">Jan 27<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/quill">quill</a></h1>
+		<h1><a href="https://www.npmjs.com/package/is-subset">is-subset</a></h1>
 
-<blockquote><p>An API Driven Rich Text Editor.</p></blockquote>
+<blockquote><p>Check if an object is contained within another one.</p></blockquote>
 
-<p>For the initial commit looks like <code>quill</code> has taken two long years to reach <code>v1.x</code> and indeed it's proven itself to be a very tidy API driven rich text editor.</p>
+<p><code>is-subset</code> is a tiny little module that is so very useful! All it does is accepts <code>superSet</code> and <code>maybeSubset</code> objects and check if the <code>maybeSubset</code> is a subset of the <code>superSet</code>.</p>
 
-<p><strong>quill has <a href="http://quilljs.com/docs/api/">APIs</a> for:</strong></p>
-
-<ul>
-<li><p>Content handling.</p></li>
-<li><p>Formatting.</p></li>
-<li><p>Selection.</p></li>
-<li><p>Events</p></li>
-<li><p>Extensions.</p></li>
-</ul>
-
-
-<p><strong>quill also <a href="http://quilljs.com/docs/modules/">modules</a> for:</strong></p>
-
-<ul>
-<li><p>TOOLBAR</p></li>
-<li><p>KEYBOARD</p></li>
-<li><p>HISTORY</p></li>
-<li><p>CLIPBOARD</p></li>
-<li><p>FORMULA</p></li>
-<li><p>SYNTAX</p></li>
-</ul>
-
-
-<p><strong>Finally, it has theme(s)!:</strong></p>
-
-<ul>
-<li><p>Bubble</p></li>
-<li><p>Snow</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save quill</code></p>
+<p><strong>Get it:</strong> <code>npm install --save is-subset</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -884,25 +633,500 @@
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Quill</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;quill&#39;</span><span class="p">);</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">isSubset</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is-subset&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">quill</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Quill</span><span class="p">(</span><span class="s1">&#39;#editor-container&#39;</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">modules</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">toolbar</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>      <span class="p">[{</span> <span class="nx">header</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span><span class="p">]</span> <span class="p">}],</span>
-</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="s1">&#39;underline&#39;</span><span class="p">],</span>
-</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;code-block&#39;</span><span class="p">]</span>
-</span><span class='line'>    <span class="p">]</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;Compose an epic...&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;snow&#39;</span> <span class="c1">// or &#39;bubble&#39;</span>
-</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// True;</span>
+</span><span class='line'><span class="nx">isSubset</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="mi">4</span><span class="p">},</span> <span class="nx">e</span><span class="o">:</span> <span class="mi">5</span><span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">}}</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//False;</span>
+</span><span class='line'><span class="nx">isSubset</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
+</span><span class='line'><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/quill/quill.gif" alt="quill" /></p>
+<p><img src="/images/is-subset/is-subset.gif" alt="is-subset" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/rest-your-eyes/">
+			
+				Rest-your-eyes</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-20T22:13:20+05:30" pubdate data-updated="true">Jan 20<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
+
+<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
+Your screen will become bright again after the command completes execution.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rest npm install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
+
+<p><strong>Till next time!</strong></p>
+
+<p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ip/">
+			
+				Ip</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-12T21:08:54+05:30" pubdate data-updated="true">Jan 12<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ip">ip</a></h1>
+
+<blockquote><p>IP address utilities.</p></blockquote>
+
+<p><code>ip</code> sweet and simple module that provide the below util methods to play with <code>IP</code>!</p>
+
+<ul>
+<li>toBuffer</li>
+<li>toString</li>
+<li>isV4Format</li>
+<li>isV6Format</li>
+<li>fromPrefixLen</li>
+<li>mask</li>
+<li>cidr</li>
+<li>subnet</li>
+<li>cidrSubnet</li>
+<li>not</li>
+<li>or</li>
+<li>isEqual</li>
+<li>isPrivate</li>
+<li>isPublic</li>
+<li>isLoopback</li>
+<li>loopback</li>
+<li>address</li>
+<li>toLong</li>
+<li>fromLong</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save ip</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ip</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ip&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">address</span><span class="p">()</span> <span class="c1">// my ip address</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">isEqual</span><span class="p">(</span><span class="s1">&#39;::1&#39;</span><span class="p">,</span> <span class="s1">&#39;::0:1&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">toBuffer</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span> <span class="c1">// Buffer([127, 0, 0, 1])</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="k">new</span> <span class="nx">Buffer</span><span class="p">([</span><span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span> <span class="c1">// 127.0.0.1</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">fromPrefixLen</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span> <span class="c1">// 255.255.255.0</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">mask</span><span class="p">(</span><span class="s1">&#39;192.168.1.134&#39;</span><span class="p">,</span> <span class="s1">&#39;255.255.255.0&#39;</span><span class="p">)</span> <span class="c1">// 192.168.1.0</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">cidr</span><span class="p">(</span><span class="s1">&#39;192.168.1.134/26&#39;</span><span class="p">)</span> <span class="c1">// 192.168.1.128</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">not</span><span class="p">(</span><span class="s1">&#39;255.255.255.0&#39;</span><span class="p">)</span> <span class="c1">// 0.0.0.255</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">or</span><span class="p">(</span><span class="s1">&#39;192.168.1.134&#39;</span><span class="p">,</span> <span class="s1">&#39;0.0.0.255&#39;</span><span class="p">)</span> <span class="c1">// 192.168.1.255</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">isPrivate</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">isV4Format</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">isV6Format</span><span class="p">(</span><span class="s1">&#39;::ffff:127.0.0.1&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// operate on buffers in-place</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">buf</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Buffer</span><span class="p">(</span><span class="mi">128</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">offset</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">toBuffer</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="nx">buf</span><span class="p">,</span> <span class="nx">offset</span><span class="p">);</span>  <span class="c1">// [127, 0, 0, 1] at offset 64</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="nx">buf</span><span class="p">,</span> <span class="nx">offset</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>            <span class="c1">// &#39;127.0.0.1&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// subnet information</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">subnet</span><span class="p">(</span><span class="s1">&#39;192.168.1.134&#39;</span><span class="p">,</span> <span class="s1">&#39;255.255.255.192&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// { networkAddress: &#39;192.168.1.128&#39;,</span>
+</span><span class='line'><span class="c1">//   firstAddress: &#39;192.168.1.129&#39;,</span>
+</span><span class='line'><span class="c1">//   lastAddress: &#39;192.168.1.190&#39;,</span>
+</span><span class='line'><span class="c1">//   broadcastAddress: &#39;192.168.1.191&#39;,</span>
+</span><span class='line'><span class="c1">//   subnetMask: &#39;255.255.255.192&#39;,</span>
+</span><span class='line'><span class="c1">//   subnetMaskLength: 26,</span>
+</span><span class='line'><span class="c1">//   numHosts: 62,</span>
+</span><span class='line'><span class="c1">//   length: 64,</span>
+</span><span class='line'><span class="c1">//   contains: function(addr){...} }</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">cidrSubnet</span><span class="p">(</span><span class="s1">&#39;192.168.1.134/26&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// Same as previous.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// range checking</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">cidrSubnet</span><span class="p">(</span><span class="s1">&#39;192.168.1.134/26&#39;</span><span class="p">).</span><span class="nx">contains</span><span class="p">(</span><span class="s1">&#39;192.168.1.190&#39;</span><span class="p">)</span> <span class="c1">// true</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ipv4 long conversion</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">toLong</span><span class="p">(</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">);</span> <span class="c1">// 2130706433</span>
+</span><span class='line'><span class="nx">ip</span><span class="p">.</span><span class="nx">fromLong</span><span class="p">(</span><span class="mi">2130706433</span><span class="p">);</span> <span class="c1">// &#39;127.0.0.1&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ip/ip.gif" alt="ip" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/compressible/">
+			
+				Compressible</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-05T20:02:05+05:30" pubdate data-updated="true">Jan 5<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/compressible">compressible</a></h1>
+
+<blockquote><p>Compressible <code>Content-Type/mime</code> checking</p></blockquote>
+
+<p>Sweet and simple module that Checks if the given <code>Content-Type</code> is compressible.</p>
+
+<p>The type argument is expected to be a value <code>MIME</code> type or <code>Content-Type</code> string, though no validation is performed.</p>
+
+<p>The <code>MIME</code> is looked up in the <code>mime-db</code> and supports:</p>
+
+<ul>
+<li>text/*</li>
+<li><em>/</em>+json</li>
+<li><em>/</em>+text</li>
+<li><em>/</em>+xml</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save compressible</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">compressible</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;compressible&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">compressible</span><span class="p">(</span><span class="s1">&#39;image/png&#39;</span><span class="p">);</span> <span class="c1">// false</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">compressible</span><span class="p">(</span><span class="s1">&#39;image/pn&#39;</span><span class="p">);</span> <span class="c1">// undefined</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">compressible</span><span class="p">(</span><span class="s1">&#39;text/html&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/compressible/compressible.gif" alt="compressible" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/evalmd/">
+			
+				Evalmd</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-29T17:14:52+05:30" pubdate data-updated="true">Dec 29<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/evalmd">evalmd</a></h1>
+
+<blockquote><p>🎣 Evaluates JavaScript code blocks from markdown files.</p></blockquote>
+
+<p><code>evalmd</code> parses your markdown files, extract the JavaScript code blocks from them and evaluate it, in the eval bombs it reports and there are ease flags to turn off evaluation for specific code blocks.</p>
+
+<p>The <code>javascript</code> or <code>js</code> code blocks works fine with it.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g evalmd</code></p>
+
+<p><strong>Sample usage CLI:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>evalmd
+</span><span class='line'>
+</span><span class='line'>evalmd - Evaluate the javascript in markdown files
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -i, --include    Includes prevented blocks  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -P, --prevent    Prevent code from being evaluated  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -b, --block      Change the scope to block level  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -o, --output     Output js  <span class="o">[</span>choices: <span class="nb">false</span>, <span class="nb">true</span>, <span class="s2">&quot;preserve&quot;</span>, <span class="s2">&quot;concat&quot;</span>, <span class="s2">&quot;preserveAlter&quot;</span>, <span class="s2">&quot;concatAlter&quot;</span><span class="o">]</span> <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -n, --nonstop    Runs all files regardless <span class="k">if </span>error  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -s, --silent     Silence <span class="sb">`</span>evalmd<span class="sb">`</span> logging  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -u, --uniform    Does not use absolute urls when error logging  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -D, --debug      Debug Output  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -h, --help       Show <span class="nb">help</span>  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --path           Prefix <span class="nb">local </span>module with path  <span class="o">[</span>default: <span class="s2">&quot;./&quot;</span><span class="o">]</span>
+</span><span class='line'>  --package        Th path of a package.json  <span class="o">[</span>default: <span class="s2">&quot;./package.json&quot;</span><span class="o">]</span>
+</span><span class='line'>  --version        Show version number  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  -d, --delimeter  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Examples:
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt;        Evaluate file<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -n     Evaluate file<span class="o">(</span>s<span class="o">)</span> uninterrupted
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -b     Evaluate block<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -bn    Evaluate block<span class="o">(</span>s<span class="o">)</span> uninterrupted
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Po    Outputs js file<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Pio   Outputs js file<span class="o">(</span>s<span class="o">)</span> with all block<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span><span class="k">for </span>linting<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Pob   Outputs block<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Piob  Outputs all blocks<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span><span class="k">for </span>linting<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage from code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">evalmd</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;evalmd&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">evalmd</span><span class="p">,</span> <span class="s1">&#39;function&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/evalmd/evalmd.gif" alt="evalmd" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/regexgen/">
+			
+				Regexgen</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-22T19:29:30+05:30" pubdate data-updated="true">Dec 22<span>nd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/regexgen">regexgen</a></h1>
+
+<blockquote><p>Generates regular expressions that match a set of strings.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save regexgen</code></p>
+
+<p><strong>Sample usage in code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kr">const</span> <span class="nx">regexgen</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;regexgen&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">regexgen</span><span class="p">([</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="s1">&#39;foobaz&#39;</span><span class="p">,</span> <span class="s1">&#39;foozap&#39;</span><span class="p">,</span> <span class="s1">&#39;fooza&#39;</span><span class="p">]);</span> <span class="c1">// =&gt; /foo(?:zap?|ba[rz])/</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//You can also use the `Trie` class directly:</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">Trie</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;regexgen&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Trie</span><span class="p">;</span>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;foobar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;foobaz&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">toRegExp</span><span class="p">();</span> <span class="c1">// =&gt; /fooba[rz]/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage on CLI:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span> <span class="nx">regexgen</span>
+</span><span class='line'><span class="nx">Usage</span><span class="o">:</span> <span class="nx">regexgen</span> <span class="p">[</span><span class="o">-</span><span class="nx">gimuy</span><span class="p">]</span> <span class="nx">string1</span> <span class="nx">string2</span> <span class="nx">string3</span><span class="p">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/regexgen/regexgen.gif" alt="regexgen" /></p>
 
 		
 		

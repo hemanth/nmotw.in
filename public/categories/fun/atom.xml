@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-06-10T16:06:57+05:30</updated>
+  <updated>2017-09-28T19:54:43+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[unsplash-wallpaper]]></title>
+    <link href="http://nmotw.in//github/unsplash-wallpaper/"/>
+    <updated>2017-09-28T18:52:53+05:30</updated>
+    <id>http://nmotw.in//github/unsplash-wallpaper</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/unsplash-wallpaper">unsplash-wallpaper</a></h1>
+
+<blockquote><p>unsplash images as your wallpaper from CLI.</p></blockquote>
+
+<p><code>unsplash-wallpaper</code> an inviting module that helps you set images from <a href="https://unsplash.com/">unsplash</a>
+as your desktop wallpaper.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g unsplash-wallpaper</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```sh
+$ unsplash-wallpaper</p>
+
+<p>To learn the commands:
+  $ unsplash-wallpaper --help
+To save the image resolution:
+  $ unsplash-wallpaper --width 2880 --height 1800 -s
+To download and use a random image:
+  $ unsplash-wallpaper -r
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/unsplash-wallpaper/unsplash-wallpaper.gif" alt="unsplash-wallpaper" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[covfefe]]></title>
@@ -196,56 +229,6 @@ T : "U "
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/cowsay/cowsay.gif" alt="cowsay.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[is-christmas]]></title>
-    <link href="http://nmotw.in//github/is-christmas/"/>
-    <updated>2015-12-24T20:02:35+05:30</updated>
-    <id>http://nmotw.in//github/is-christmas</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-christmas">is-christmas</a></h1>
-
-<blockquote><p>🎅 Is today Christmas? 🎄</p></blockquote>
-
-<p>Simple fun module that returns <code>true</code> or <code>false</code> if it's Christmas or not.</p>
-
-<p><strong>Get it:</strong></p>
-
-<p><code>$ npm install --save is-christmas</code></p>
-
-<p><code>$ npm install --global is-christmas</code> // for CLI</p>
-
-<p><strong>Usage:</strong></p>
-
-<p>```js
-const isChristmas = require('is-christmas');</p>
-
-<p>isChristmas();
-//=> true
-```</p>
-
-<p>```sh
-$ is-christmas --help</p>
-
-<p>  Usage</p>
-
-<pre><code>is-christmas
-</code></pre>
-
-<p>  Examples</p>
-
-<pre><code>$ is-christmas
-true
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas" /></p>
-
-<p>Thanks to <a href="https://twitter.com/thejameskyle">James Kyle</a> for this fun module for this Christmas 😉</p>
 ]]></content>
   </entry>
   

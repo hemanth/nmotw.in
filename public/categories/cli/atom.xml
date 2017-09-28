@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-06-10T16:06:57+05:30</updated>
+  <updated>2017-09-28T19:54:43+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gtop]]></title>
+    <link href="http://nmotw.in//github/gtop/"/>
+    <updated>2017-08-18T13:25:20+05:30</updated>
+    <id>http://nmotw.in//github/gtop</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/gtop">gtop</a></h1>
+
+<blockquote><p>System monitoring dashboard for terminal.</p></blockquote>
+
+<p><code>gtop</code> could be termed as the node's version of <a href="http://hisham.hm/htop/">htop</a>, gives a very need interface on the cli that would list out the below:</p>
+
+<ul>
+<li><p>CPU history.</p></li>
+<li><p>Memory and Swap History.</p></li>
+<li><p>Memory and Netowrk usage.</p></li>
+<li><p>Disk usage.</p></li>
+<li><p>Process list.</p></li>
+</ul>
+
+
+<p>You can sort the process table by pressing:</p>
+
+<p><code>p</code>: Process Id
+<code>c</code>: CPU usage
+<code>m</code>: Memory usage</p>
+
+<p><strong>Get it:</strong> <code>npm install -g gtop</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```
+$ gtop</p>
+
+<h1>In case of font issues: LANG=en_US.utf8 TERM=xterm-256color gtop</h1>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/gtop/gtop.gif" alt="gtop" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[vtop]]></title>
@@ -212,38 +255,6 @@ validation.</li>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/email-prompt/email-prompt.gif" alt="email-prompt" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cost-of-modules]]></title>
-    <link href="http://nmotw.in//github/cost-of-modules/"/>
-    <updated>2016-12-01T19:06:43+05:30</updated>
-    <id>http://nmotw.in//github/cost-of-modules</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
-
-<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
-
-<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
-identify which dependency is slowing the module down.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
-
-<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
-
-<p><strong>Options</strong></p>
-
-<p><code>--less</code>  Show the biggest 10 modules</p>
-
-<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
-
-<p><code>--no-install</code>  Skip installation</p>
-
-<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
 ]]></content>
   </entry>
   

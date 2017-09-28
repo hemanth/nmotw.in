@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: events | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/events/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-09-28T19:54:43+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mitt]]></title>
+    <link href="http://nmotw.in//github/mitt/"/>
+    <updated>2017-08-27T18:30:28+05:30</updated>
+    <id>http://nmotw.in//github/mitt</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/developit/mitt">mitt</a></h1>
+
+<blockquote><p>Tiny 200b functional event emitter / pubsub.</p></blockquote>
+
+<p>Sweet little implementation of <code>pubsub</code> patter, uses <code>flow</code> internally and provides the below functionality:</p>
+
+<ul>
+<li><p><code>on</code> : Register an event handler for the given type.</p></li>
+<li><p><code>off</code> : Remove an event handler for the given type.</p></li>
+<li><p><code>emit</code>: Invoke all handlers for the given type.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install mitt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const mitt = require('mitt');</p>
+
+<p>const emitter = mitt()</p>
+
+<p>// listen to an event
+emitter.on('foo', e => console.log('foo', e) )</p>
+
+<p>// listen to all events
+emitter.on('*', (type, e) => console.log(type, e) )</p>
+
+<p>// fire an event
+emitter.emit('foo', { a: 'b' })</p>
+
+<p>// working with handler references:
+function onFoo() {}
+emitter.on('foo', onFoo)   // listen
+emitter.off('foo', onFoo)  // unlisten
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mitt/mitt.gif" alt="mitt" /></p>
+]]></content>
+  </entry>
+  
+</feed>

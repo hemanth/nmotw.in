@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: a11y | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/a11y/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2017-09-28T19:54:43+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[axe-cli]]></title>
+    <link href="http://nmotw.in//github/axe-cli/"/>
+    <updated>2017-07-27T16:59:41+05:30</updated>
+    <id>http://nmotw.in//github/axe-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/axe-cli">axe-cli</a></h1>
+
+<blockquote><p>A CLI for accessibility testing using axe-core</p></blockquote>
+
+<p>Provides a command line interface for <code>aXe</code> to run quick accessibility tests.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g axe-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>
+$ axe www.google.com, github.com
+</code></p>
+
+<p>```</p>
+
+<h1>--rules flag to set which rules you wish to run</h1>
+
+<p>$ axe www.google.com --rules color-contrast,html-has-lang
+```</p>
+
+<p>```</p>
+
+<h1>--tags to tell axe to run all rules that have that specific tag.</h1>
+
+<p>axe www.google.com --tags wcag2a
+```</p>
+
+<p>```</p>
+
+<h1>Saving the results</h1>
+
+<p>$ axe www.google.com --save google-site.json
+$ axe www.google.com --dir ./google-results/
+```</p>
+
+<p>```</p>
+
+<h1>Defining the scope</h1>
+
+<p>axe www.google.com --include #main --exclude #aside
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/axe-cli/axe-cli.gif" alt="axe-cli.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>
