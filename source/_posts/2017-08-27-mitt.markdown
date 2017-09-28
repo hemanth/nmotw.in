@@ -1,0 +1,47 @@
+---
+layout: post
+title: "mitt"
+date: 2017-08-27 18:30:28 +0530
+comments: true
+categories: events 
+---
+
+#[mitt](https://github.com/developit/mitt)
+> Tiny 200b functional event emitter / pubsub.
+
+Sweet little implementation of `pubsub` patter, uses `flow` internally and provides the below functionality:
+
+* `on` : Register an event handler for the given type.
+
+* `off` : Remove an event handler for the given type.
+
+* `emit`: Invoke all handlers for the given type.
+
+
+__Get it:__ `npm install mitt`
+
+__Sample usage:__
+
+```js
+const mitt = require('mitt');
+
+const emitter = mitt()
+
+// listen to an event
+emitter.on('foo', e => console.log('foo', e) )
+
+// listen to all events
+emitter.on('*', (type, e) => console.log(type, e) )
+
+// fire an event
+emitter.emit('foo', { a: 'b' })
+
+// working with handler references:
+function onFoo() {}
+emitter.on('foo', onFoo)   // listen
+emitter.off('foo', onFoo)  // unlisten
+```
+
+__GIF FTW!__
+
+![mitt](/images/mitt/mitt.gif)

@@ -1,0 +1,218 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>ipt - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as an &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="ipt - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/ipt/">
+    <meta name="twitter:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as an &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="ipt - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/ipt/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as an &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/ipt/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Ipt</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-18T21:37:50+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/ipt">ipt</a></h1>
+
+<blockquote><p>The missing shell interactive workflow.</p></blockquote>
+
+<p><code>ipt</code> (pronounced iPipeTo) introduces the missing cli interactive workflow.</p>
+
+<p>It takes any kind of list as an input and uses that list to build an interactive interface to let you select an element from it.</p>
+
+<p>Stop manually dragging your mouse around to copy output data from a terminal, using the ipt workflow you can pipe data from a command and select what to copy to clipboard from a convenient visual menu.</p>
+
+<p>Selected data is also output to stdout allowing for easily composing various workflows - Just create your custom alias!</p>
+
+<p>P.S: Couldn't explain it better than than author!</p>
+
+<p><strong>GET IT:</strong> <code>npm install -g ipt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch -a | ipt | xargs git checkout
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git --no-pager log --oneline | ipt | cut -d <span class="s1">&#39; &#39;</span> -f 1 | xargs -o git rebase -i<span class="err">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Don't miss to read the wonderful <a href="https://www.npmjs.com/package/ipt#examples">examples</a>!</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ipt/ipt.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://github.com/ruyadorno">Ruy Adorno</a> for this cheeky module.</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=ipt by @nodemotw&url=http://nmotw.in/ipt/" title="Share ipt on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/ipt/" title="Share ipt on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/ipt/" title="Share ipt on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/ipt/';
+        var disqus_url = 'http://nmotw.in//github/ipt/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

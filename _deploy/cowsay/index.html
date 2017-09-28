@@ -1,0 +1,340 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>cowsay - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="cowsay - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/cowsay/">
+    <meta name="twitter:description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="cowsay - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/cowsay/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/cowsay/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Cowsay</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-21T20:40:16+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/cowsay">cowsay</a></h1>
+
+<blockquote><p>A configurable talking cow!</p></blockquote>
+
+<p>This is a port of  Tony Monroe's <code>cowsay</code> Perl module.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --global cowsay</code></p>
+
+<p><strong>CLI:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cowsay 
+</span><span class='line'>Usage: cowsay [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text
+</span><span class='line'>
+</span><span class='line'>If any command-line arguments are left over after all switches have been processed, they become the cow's message.
+</span><span class='line'>
+</span><span class='line'>If the program is invoked as cowthink then the cow will think its message instead of saying it.
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -b  Mode: Borg                                                                                                                                  
+</span><span class='line'>  -d  Mode: Dead                                                                                                                                  
+</span><span class='line'>  -g  Mode: Greedy                                                                                                                                
+</span><span class='line'>  -p  Mode: Paranoia                                                                                                                              
+</span><span class='line'>  -s  Mode: Stoned                                                                                                                                
+</span><span class='line'>  -t  Mode: Tired                                                                                                                                 
+</span><span class='line'>  -w  Mode: Wired                                                                                                                                 
+</span><span class='line'>  -y  Mode: Youthful                                                                                                                              
+</span><span class='line'>  -e  Select the appearance of the cow's eyes.                                                                                                      [default: "oo"]
+</span><span class='line'>  -T  The tongue is configurable similarly to the eyes through -T and tongue_string.                                                                [default: "  "]
+</span><span class='line'>  -h  Display this help message                                                                                                                   
+</span><span class='line'>  -n  If it is specified, the given message will not be word-wrapped.                                                                             
+</span><span class='line'>  -W  Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.       [default: 40]
+</span><span class='line'>  -f  Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.  [default: "default"]
+</span><span class='line'>  -l  List all cowfiles included in this package.                 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>
+</span><span class='line'> nmotw.in&gt; cowsay JavaScript FTW!
+</span><span class='line'> _________________
+</span><span class='line'>&lt; JavaScript FTW! &gt;
+</span><span class='line'> -----------------
+</span><span class='line'>        <span class="se">\ </span>  ^__^
+</span><span class='line'>         <span class="se">\ </span> <span class="o">(</span>oo<span class="o">)</span><span class="se">\_</span>______
+</span><span class='line'>            <span class="o">(</span>__<span class="o">)</span><span class="se">\ </span>      <span class="o">)</span><span class="se">\/\</span>
+</span><span class='line'>                <span class="o">||</span>----w |
+</span><span class='line'>                <span class="o">||</span>     <span class="o">||</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>API:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">cowsay</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;cowsay&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cowsay</span><span class="p">.</span><span class="nx">say</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">text</span> <span class="o">:</span> <span class="s2">&quot;I&#39;m a moooodule&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">e</span> <span class="o">:</span> <span class="s2">&quot;oO&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">T</span> <span class="o">:</span> <span class="s2">&quot;U &quot;</span>
+</span><span class='line'><span class="p">}));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// or cowsay.think()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'> _________________
+</span><span class='line'><span class="o">(</span> I<span class="err">&#39;</span>m a moooodule <span class="o">)</span>
+</span><span class='line'> -----------------
+</span><span class='line'>        o   ^__^
+</span><span class='line'>         o  <span class="o">(</span>oO<span class="o">)</span><span class="se">\_</span>______
+</span><span class='line'>            <span class="o">(</span>__<span class="o">)</span><span class="se">\ </span>      <span class="o">)</span><span class="se">\/\</span>
+</span><span class='line'>             U  <span class="o">||</span>----w |
+</span><span class='line'>                <span class="o">||</span>     <span class="o">||</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cowsay/cowsay.gif" alt="cowsay.gif" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=cowsay by @nodemotw&url=http://nmotw.in/cowsay/" title="Share cowsay on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/cowsay/" title="Share cowsay on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/cowsay/" title="Share cowsay on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/cowsay/';
+        var disqus_url = 'http://nmotw.in//github/cowsay/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

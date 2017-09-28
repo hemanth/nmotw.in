@@ -1,0 +1,921 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
+    <meta name="twitter:description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="npx an npm package runner. Executes either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for to &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/2/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npx/">
+			
+				Npx</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-07-15T11:07:12+05:30" pubdate data-updated="true">Jul 15<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/npx">npx</a></h1>
+
+<blockquote><p>an npm package runner.</p></blockquote>
+
+<p>Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.</p>
+
+<p>P.S: <code>npm@5.2.0</code> is shipped with <code>npx</code>!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g npx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm i -D cowsay
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>npx cowsay <span class="s2">&quot;HolyCow!&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npx/npx.gif" alt="npx.gif" /></p>
+
+<p>P.S: In case you have missed reading <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b">Introducing npx: an npm package runner
+</a>, do read it!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/stikcybits/">
+			
+				Stikcybits</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-07-08T15:28:28+05:30" pubdate data-updated="true">Jul 8<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/stickybits">stickybits</a></h1>
+
+<blockquote><p>Alternative to position: sticky polyfills.</p></blockquote>
+
+<ul>
+<li><p>Aprox <code>~2KB</code> of javascript that would help us to know when a DOM element is stuck (position:sticky).</p></li>
+<li><p>It can add a CSS Sticky Class <code>.js-is-sticky</code> when <code>position: sticky</code> elements become active and a CSS Stuck Class <code>.js-is-stuck</code> when they become stuck.</p></li>
+<li><p>Loosely mimics <code>position: sticky</code> to consistently stick elements vertically across multiple platforms.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install stickybits</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'> <span class="nx">stickybits</span><span class="p">(</span><span class="s1">&#39;selector&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'> <span class="cm">/*</span>
+</span><span class='line'><span class="cm">Options:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">    - target = el (DOM element)</span>
+</span><span class='line'><span class="cm">    - offset = 0 || &#39;dealer&#39;s choice&#39;</span>
+</span><span class='line'><span class="cm">    - verticalPosition = top || bottom</span>
+</span><span class='line'><span class="cm">    - useStickyClasses = true || false</span>
+</span><span class='line'><span class="cm">    - elStyles = CSS Styles</span>
+</span><span class='line'><span class="cm">    - positionVal = fixed || sticky</span>
+</span><span class='line'><span class="cm"> */</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/stickybits/stickybits.gif" alt="stickybits.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/base64-async/">
+			
+				Base64-async</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-29T13:57:23+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/base64-async">base64-async</a></h1>
+
+<blockquote><p>Non-blocking chunked Base64 encoding.</p></blockquote>
+
+<p><code>base64-async</code> helps us in processing large <code>Base64</code> documents without blocking the event loop, one can configure chunk size option to optimise for your use case.</p>
+
+<p>This module exposes: <code>b64</code>, <code>encode</code> and <code>decode</code> methods which accepts <code>(input, [options])</code> and returns a promise on innvocation.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save base64-async</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">b64</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;base64-async&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;somehugefile.jpg&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">b64</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">b64String</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b64String</span><span class="p">));</span>
+</span><span class='line'><span class="c1">// aGkgbXVt... </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">b64</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">b64String</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">buffer</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">buffer</span><span class="p">));</span>
+</span><span class='line'><span class="c1">// &lt;Buffer 68 69 20 6d 75 6d ... &gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// or, for the cool kids </span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">b64String</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">originalFileBuffer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">b64String</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// which is equivalent to this </span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">b64String</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">originalFileBuffer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">(</span><span class="nx">b64String</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// If no method is specified, buffers are encoded, strings are decoded</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dom-scroll-into-view/">
+			
+				Dom-scroll-into-view</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-18T15:32:27+05:30" pubdate data-updated="true">Jun 18<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
+
+<blockquote><p>scroll node in contain to make node visible</p></blockquote>
+
+<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
+
+<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">scrollIntoView</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-scroll-into-view&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span><span class="nx">container</span><span class="p">,</span><span class="nx">config</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//config</span>
+</span><span class='line'>   <span class="p">{</span>
+</span><span class='line'>       <span class="nx">alignWithLeft</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">alignWithTop</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">allowHorizontalScroll</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">onlyScrollIfNeeded</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetTop</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetLeft</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetBottom</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">offsetRight</span>
+</span><span class='line'>   <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/covfefe/">
+			
+				Covfefe</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-01T19:39:33+05:30" pubdate data-updated="true">Jun 1<span>st</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/covfefe">covfefe</a></h1>
+
+<blockquote><p>Despite the constant negative press covfefe.</p></blockquote>
+
+<p>Time for a fun module this week, it's <code>covfefe</code>. (Hope you are aware of <a href="https://archive.is/f7UL3">it</a>!)</p>
+
+<p><strong>Get it:</strong> <code>npm install covfefe</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kr">const</span> <span class="nx">covfefe</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;covfefe&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">covfefe</span><span class="p">(</span><span class="s1">&#39;Despite the constant negative press&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="s2">&quot;Despite the constant negative press covfefe&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">covfefe</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="s1">&#39;I have good coverage of spray tan&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="s2">&quot;I have good covfefe of spray tan&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/nif/">
+			
+				Nif</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-05-27T04:34:09+05:30" pubdate data-updated="true">May 27<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/nif">nif</a></h1>
+
+<blockquote><p><code>node --inspect</code> a file and open devtool URL.</p></blockquote>
+
+<p><code>nif</code> is for all the lazy folks trying to debug their node script, it runs the <code>node --inspect</code> on the provided file and open the devtool URL <code>chrome-devtools://</code>.</p>
+
+<p>Make sure you have the <a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> installed on your machine,before using this moddule.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g nif</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nif ./to-debug.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nif/nif.gif" alt="nif" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/mockdate/">
+			
+				Mockdate</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-05-19T07:46:27+05:30" pubdate data-updated="true">May 19<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/mockdate">mockdate</a></h1>
+
+<blockquote><p>Mock Date object that can be used to change when "now" is.</p></blockquote>
+
+<p><code>mockdate</code> the names says it all!</p>
+
+<p>This module save the current date context to <code>_date</code> and <code>_getTimezoneOffset = Date.prototype.getTimezoneOffset</code> internally and overwrites them with simpler custom implementation which would useful for unit tests et.al</p>
+
+<p><strong>Get it:</strong> <code>npm install --save mockdate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">mockDate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mockdate&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">mockDate</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;2/1/1988&#39;</span><span class="p">,</span><span class="mi">120</span><span class="p">);</span>
+</span><span class='line'><span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+</span><span class='line'><span class="mi">1988</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span><span class="nx">T18</span><span class="o">:</span><span class="mi">30</span><span class="o">:</span><span class="mf">00.000</span><span class="nx">Z</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mockdate/mockdate.gif" alt="mockdate" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/compactr/">
+			
+				Compactr</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-05-13T04:47:16+05:30" pubdate data-updated="true">May 13<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/compactr">compactr</a></h1>
+
+<blockquote><p>Schema based serialization made easy!</p></blockquote>
+
+<p><strong>What is this and why does it matter?</strong> [From the horse's mouth]</p>
+
+<p>Protocol Buffers are awesome. Having schemas to deflate and inflate data while maintaining some kind of validation is a great concept.
+Compactr's goal is to build on that to better suit Node development and reduce repetition by allowing you to build schemas for your data directly in your scripting language.
+For example, if you have a DB schema for a model, you could use that directly as a schema for Compactr.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save compactr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Compactr</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;compactr&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Schema</span> <span class="o">=</span> <span class="nx">Compactr</span><span class="p">.</span><span class="nx">schema</span><span class="p">({</span>
+</span><span class='line'>      <span class="nx">bool</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;boolean&#39;</span> <span class="p">},</span>
+</span><span class='line'>      <span class="nx">num</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;number&#39;</span> <span class="p">},</span>
+</span><span class='line'>      <span class="nx">str</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">},</span>
+</span><span class='line'>      <span class="nx">arr</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span> <span class="p">},</span>
+</span><span class='line'>      <span class="nx">obj</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="nx">schema</span><span class="o">:</span> <span class="p">{</span> <span class="nx">sub</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// decode encoded.</span>
+</span><span class='line'><span class="nx">Schema</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">Schema</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">bool</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">num</span><span class="o">:</span> <span class="mf">23.23</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">str</span><span class="o">:</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">arr</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">obj</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">sub</span><span class="o">:</span> <span class="s1">&#39;way&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">array</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Compactr</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;compactr&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Defining a schema</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">userSchema</span> <span class="o">=</span> <span class="nx">Compactr</span><span class="p">.</span><span class="nx">schema</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;number&#39;</span> <span class="p">},</span>
+</span><span class='line'>    <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Encoding</span>
+</span><span class='line'><span class="nx">userSchema</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get the schema header bytes (for partial loads)</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">headerBytes</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get the partial load bytes</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">partial</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">contentBytes</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get the full header + content bytes</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">bytes</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Decoding (full)</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Decoding (partial)</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span> <span class="nx">partial</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/compactr/compactr.gif" alt="compactr" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/await-to-js/">
+			
+				Await-to-js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-05-05T08:30:13+05:30" pubdate data-updated="true">May 5<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/await-to-js">await-to-js</a></h1>
+
+<blockquote><p>Async await wrapper for easy error handling!</p></blockquote>
+
+<p>Uber tiny module (10LOC) for making life easier while handling error while async-await.</p>
+
+<p>This module is influenced by GoLang style of handling errors:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>data, err := db.Query("SELECT ...")  
+</span><span class='line'>if err != nil { return err }  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>We would basically covert the below code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">asyncTask</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kr">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">// any async task.</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Handle error.</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">to</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;await-to-js&quot;</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">asyncTask</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span> <span class="nx">err</span><span class="p">,</span> <span class="nx">result</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">to</span><span class="p">(</span><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">retrun</span> <span class="nx">result</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">asyncTask</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install --save await-to-json</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/await-to-js/await-to-js.gif" alt="await-to-js" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/tinytime/">
+			
+				Tinytime</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-27T20:36:58+05:30" pubdate data-updated="true">Apr 27<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/tinytime">tinytime</a></h1>
+
+<blockquote><p>A straightforward date and time formatter in 800b.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save tinytime</code></p>
+
+<p><code>tinytime</code> exports a single function that returns a template object. This object has a single method, <code>render</code>, which
+takes a <code>Date</code> and returns a string with the rendered data.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">tinytime</span> <span class="nx">from</span> <span class="s1">&#39;tinytime&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">tinytime</span><span class="p">(</span><span class="s1">&#39;The time is {h}:{mm}:{ss}{a}.&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+</span><span class='line'><span class="c1">// The time is 11:10:20PM.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Substitutions:</strong></p>
+
+<ul>
+<li><code>MMMM</code> - Full Month (September)</li>
+<li><code>MM</code> - Partial Month (Sep)</li>
+<li><code>Mo</code> - Numeric Month (9)</li>
+<li><code>YYYY</code> - Full Year (1992)</li>
+<li><code>YY</code> - Partial Year (92)</li>
+<li><code>dddd</code> - Day of the Week (Monday)</li>
+<li><code>DD</code> - Day of the Month (24)</li>
+<li><code>Do</code> - Day (24th)</li>
+<li><code>h</code> - Hours - 12h format</li>
+<li><code>H</code> - Hours - 24h format</li>
+<li><code>mm</code> - Minutes (zero padded)</li>
+<li><code>ss</code> - Seconds (zero padded)</li>
+<li><code>a</code> - AM/PM</li>
+</ul>
+
+
+<p> <strong>GIF FTW!</strong></p>
+
+<p> <img src="/images/tinytime/tinytime.gif" alt="tinytime" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/3/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

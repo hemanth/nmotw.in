@@ -1,0 +1,248 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>block.js - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="Block.js: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local. The crux of this module is in these &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="block.js - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/block.js/">
+    <meta name="twitter:description" content="Block.js: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local. The crux of this module is in these &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="block.js - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/block.js/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="Block.js: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local. The crux of this module is in these &hellip;" />
+
+    
+    <meta property="og:image" content="http://nmotw.in/images/block.js/block.js.gif" />
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/block.js/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">block.js</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-24T19:12:16+05:30" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p><a href="https://www.npmjs.org/package/block">Block.js</a>: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local.</p>
+
+<p>The crux of this module is in these simple lines of code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">replace</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+</span><span class='line'>    <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;\\{\\{\\s*&#39;</span> <span class="o">+</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;\\s*\\}\\}&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">value</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>  <span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([.*+?=^!:${}()|[\]\/\\])/g</span><span class="p">,</span> <span class="s1">&#39;\\$1&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The API is also pretty simple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">Block</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//html is a string, and block returns a new templating instance.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">locals</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//locals is an object of &quot;blocks&quot; to replace in the template.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Simple Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">block</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;block&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">tmpl</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;block.html&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">block</span><span class="p">(</span><span class="nx">tmpl</span><span class="p">).</span><span class="nx">render</span><span class="p">(</span> <span class="p">{</span><span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;&lt;div class=&quot;inner&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF GTW!:</strong>
+<img src="/images/block.js/block.js.gif" alt="block" /></p>
+
+<p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
+
+<p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=block.js by @nodemotw&url=http://nmotw.in/block.js/" title="Share block.js on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/block.js/" title="Share block.js on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/block.js/" title="Share block.js on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/block.js/';
+        var disqus_url = 'http://nmotw.in//github/block.js/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

@@ -1,0 +1,1389 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="Turns sync functions into ES6's async generator functions with Nathan Rajlich's (A.K.A TooTallNate) degenerator Get it: $ npm install degenerator &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
+    <meta name="twitter:description" content="Turns sync functions into ES6's async generator functions with Nathan Rajlich's (A.K.A TooTallNate) degenerator Get it: $ npm install degenerator &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="Turns sync functions into ES6's async generator functions with Nathan Rajlich's (A.K.A TooTallNate) degenerator Get it: $ npm install degenerator &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/18/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/degenerator/">
+			
+				Degenerator</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-29T20:22:17+05:30" pubdate data-updated="true">May 29<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Turns sync functions into ES6's async generator functions with <a href="http://n8.io/">Nathan Rajlich's</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
+
+<p>Get it: <code>$ npm install degenerator</code></p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>Say we have few sync function like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">foo</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">baz</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">bar</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">baz</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">bar</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Some degenerator magic!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">degenerator</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;degenerator&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">js</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">sourceName</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">compiled</span> <span class="o">=</span> <span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="s1">&#39;baz&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The complied source would be:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">baz</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">baz</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">yield</span> <span class="nx">bar</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/time-require/">
+			
+				Time-require</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-22T22:26:56+05:30" pubdate data-updated="true">May 22<span>nd</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Were you looking for the stats of how long the require statements took in your scripts?</p>
+
+<p>It's time to use (time-require)[https://www.npmjs.org/package/time-require] a node module that displays the execution time for Node.js modules loading by hooking and tracing all require() calls.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat &gt; <span class="nb">time</span>-require
+</span><span class='line'>require<span class="o">(</span><span class="s2">&quot;time-require&quot;</span><span class="o">)</span>;
+</span><span class='line'>^C
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>node <span class="nb">time</span>-require
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Start <span class="nb">time</span>: <span class="o">(</span>2014-05-22 16:56:02 UTC<span class="o">)</span> <span class="o">[</span><span class="nv">treshold</span><span class="o">=</span>1%<span class="o">]</span>
+</span><span class='line'><span class="c">#  module                          time  %</span>
+</span><span class='line'>1  text-table <span class="o">(</span>.....ble/index.js<span class="o">)</span>  40ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 51%
+</span><span class='line'>2  date-time <span class="o">(</span>../...ime/index.js<span class="o">)</span>   5ms  ▇▇ 6%
+</span><span class='line'>3  parse-ms <span class="o">(</span>../n...-ms/index.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
+</span><span class='line'>4  pretty-ms <span class="o">(</span>../...-ms/index.js<span class="o">)</span>  12ms  ▇▇▇▇▇ 15%
+</span><span class='line'>5  ansi-styles <span class="o">(</span>....si-styles.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
+</span><span class='line'>6  strip-ansi <span class="o">(</span>.....nsi/index.js<span class="o">)</span>   5ms  ▇▇ 6%
+</span><span class='line'>7  has-color <span class="o">(</span>../...lor/index.js<span class="o">)</span>   1ms  ▇ 1%
+</span><span class='line'>8  chalk <span class="o">(</span>../node...alk/index.js<span class="o">)</span>  20ms  ▇▇▇▇▇▇▇▇ 26%
+</span><span class='line'>Total require<span class="o">()</span>: 8
+</span><span class='line'>Total <span class="nb">time</span>: 78ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This module makes use of a require (hook)[https://github.com/jaguard/time-require/blob/master/src/requireHook.js#L71] which is loaded as the first module so all the other requires gets counted, unhooks and then prints out a neat table with the <code>totalTime = Date.now() - startTime.getTime();</code> and the number of modules that were required.</p>
+
+<p>Thanks to the module author <a href="http://jaguard.com">Ciprian Popa</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/yosay/">
+			
+				Yosay</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-15T09:45:56+05:30" pubdate data-updated="true">May 15<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
+
+<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
+
+<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ echo "Yo! Mama. You can pipe." | yosay
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--(o)--|    |  Yo! Mama. You can pipe. |
+</span><span class='line'>   `---------´   '--------------------------'
+</span><span class='line'>    ( _´U`_ )    
+</span><span class='line'>    /___A___\    
+</span><span class='line'>     |  ~  |     
+</span><span class='line'>   __'.___.'__   
+</span><span class='line'> ´   `  |° ´ Y ` </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Node module of the week&quot;</span>
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Node module of the week |
+</span><span class='line'>   <span class="sb">`</span>---------´   <span class="s1">&#39;--------------------------&#39;</span>
+</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>
+</span><span class='line'>    /___A___<span class="se">\ </span>
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Yo! How&#39;s it going&quot;</span> --maxLength 4
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Yo! |
+</span><span class='line'>   <span class="sb">`</span>---------´   | How<span class="s1">&#39;s |</span>
+</span><span class='line'><span class="s1">    ( _´U`_ )    |  it  |</span>
+</span><span class='line'><span class="s1">    /___A___\    | going |</span>
+</span><span class='line'><span class="s1">     |  ~  |     &#39;</span>------<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">   __&#39;</span>.___.<span class="err">&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> If you want to use it in you node script, you could do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'> var <span class="nv">yosay</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;yosay&#39;</span><span class="o">)</span>;
+</span><span class='line'>
+</span><span class='line'> console.log<span class="o">(</span> yosay<span class="o">(</span><span class="s2">&quot;Hope you enjoyed the session :)&quot;</span><span class="o">)</span> <span class="o">)</span>;
+</span><span class='line'>
+</span><span class='line'>      _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |   Hope you enjoyed the   |
+</span><span class='line'>   <span class="sb">`</span>---------´   |        session :<span class="o">)</span>        |
+</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>    <span class="s1">&#39;--------------------------&#39;</span>
+</span><span class='line'>    /___A___<span class="se">\ </span>
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
+
+<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/omelette/">
+			
+				Omelette</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-08T18:08:15+05:30" pubdate data-updated="true">May 8<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.org/package/omelette">Omelette.js</a> a simple autocompletion helper for node, published by <a href="http://fatihak.in/">Fatih</a>.</p>
+
+<p>It's a beautifuly crafted coffee code, that takes care of tab completions for your CLI tools.</p>
+
+<p>It's takes care of <code>--compgen</code>, <code>--completion</code> and <code>--compzsh</code> for variations of SHELLs.</p>
+
+<p>Say you need a simple CLI tool to greet user:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">comp</span><span class="p">,</span> <span class="nx">omelette</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">omelette</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;omelette&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span> <span class="o">=</span> <span class="nx">omelette</span><span class="p">(</span><span class="s2">&quot;greeter &lt;user&gt;&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;cruel&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Which on <code>user</code> completes "hello", "cruel", "world".</p>
+
+<p>Say you saved the file as <code>greeter</code> all you have do to generator the completion is :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./greeter --completion
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That would result in the bleow for <code>bash</code> shell:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">### greet completion - begin. generated by omelette ###</span>
+</span><span class='line'><span class="k">if </span><span class="nb">type </span>compdef &amp;&gt;/dev/null; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    compadd -- <span class="sb">`</span>greet --compzsh --compgen <span class="s2">&quot;${CURRENT}&quot;</span> <span class="s2">&quot;${words[CURRENT-1]}&quot;</span> <span class="s2">&quot;${BUFFER}&quot;</span><span class="sb">`</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  compdef _greet_complette greet
+</span><span class='line'><span class="k">elif </span><span class="nb">type complete</span> &amp;&gt;/dev/null; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="nv">COMPREPLY</span><span class="o">=(</span> <span class="k">$(</span><span class="nb">compgen</span> -W <span class="s1">&#39;$(greet --compbash --compgen &quot;${COMP_CWORD}&quot; &quot;${COMP_WORDS[COMP_CWORD-1]}&quot; &quot;${COMP_LINE}&quot;)&#39;</span> -- <span class="s2">&quot;${COMP_WORDS[COMP_CWORD]}&quot;</span><span class="k">)</span> <span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="nb">complete</span> -F _greet_complette greet
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'><span class="c">### greet completion - end ###</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In zsh, you can write these:</p>
+
+<p><code>echo '. &lt;(./greeter --completion)' &gt;&gt; .zshrc</code></p>
+
+<p>In bash, you should write:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>./greeter --completion &gt;&gt; ~/greeter.completion.sh
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;source ~/greeter.completion.sh&#39;</span> &gt;&gt; .bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you must see tab completion for greeter!</p>
+
+<p>You can also use:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Listen all fragments by &quot;complete&quot; event</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fragment</span><span class="p">,</span> <span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Listen events by its order.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;$1&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>A wonderful GIF by the author:</strong></p>
+
+<p><img src="/images/omelette/omelette.gif" alt="omelette.gif" /></p>
+
+<p>Enjoy your tab completions!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/rhyme/">
+			
+				Rhyme</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-01T13:34:59+05:30" pubdate data-updated="true">May 1<span>st</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Out of all the awesome module that <a href="https://www.npmjs.org/~substack">James Halliday</a> A.K.A <a href="http://substack.net/">substack</a> has authored a module named <a href="https://github.com/substack/node-rhyme">rhyme</a> a rhyming dictionary! This made it to the nmotw list ;)</p>
+
+<p>The module makes use of CMU dictionary's <a href="https://cmusphinx.svn.sourceforge.net/svnroot/cmusphinx/trunk/cmudict/cmudict.0.7a">data</a> and picks up pronounce, syllables and plays around lazily to generate rhyming words for a given word.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">rhyme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rhyme</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">rhyme</span><span class="p">(</span><span class="s1">&#39;rhyme&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>node why.js
+</span><span class='line'>BEIM CHIME CLIMB CRIME DIME GRIME HAIM HEIM HIME I<span class="err">&#39;</span>M KIME LIME LYME MIME PRIME SEIM SIME SLIME SYME THYME TIME
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/rhyme/rhyme.gif" alt="rhyme" /></p>
+
+<p><strong>Real coders use <code>cat</code> ;)?</strong></p>
+
+<p>Keep rhyming till next week!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/block.js/">
+			
+				block.js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-24T19:12:16+05:30" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.org/package/block">Block.js</a>: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local.</p>
+
+<p>The crux of this module is in these simple lines of code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">replace</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
+</span><span class='line'>    <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;\\{\\{\\s*&#39;</span> <span class="o">+</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;\\s*\\}\\}&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">value</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>  <span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([.*+?=^!:${}()|[\]\/\\])/g</span><span class="p">,</span> <span class="s1">&#39;\\$1&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The API is also pretty simple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">Block</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//html is a string, and block returns a new templating instance.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">locals</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//locals is an object of &quot;blocks&quot; to replace in the template.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Simple Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">block</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;block&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">tmpl</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;block.html&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">,</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">block</span><span class="p">(</span><span class="nx">tmpl</span><span class="p">).</span><span class="nx">render</span><span class="p">(</span> <span class="p">{</span><span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;&lt;div class=&quot;inner&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF GTW!:</strong>
+<img src="/images/block.js/block.js.gif" alt="block" /></p>
+
+<p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
+
+<p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/json-mask/">
+			
+				Json-mask</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-17T17:50:46+05:30" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
+
+<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
+
+<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
+
+<p>It's <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> Props ::= Prop | Prop "," Props
+</span><span class='line'>   Prop ::= Object | Array
+</span><span class='line'> Object ::= NAME | NAME "/" Object
+</span><span class='line'>  Array ::= NAME "(" Props ")"
+</span><span class='line'>   NAME ::= ? all visible characters ?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Translating it few examples, that are loosely based on XPath syntax:</p>
+
+<ul>
+<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
+<li><code>a/b/c</code> path will select a field from its parent</li>
+<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
+<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
+</ul>
+
+
+<p><strong>Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">jmask</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-mask&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span><span class="s1">&#39;hm&#39;</span><span class="p">},</span> <span class="nx">age</span><span class="o">:</span><span class="mi">7</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/last&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first,age&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">},</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-mask/json-mask.gif" alt="json-mask" /></p>
+
+<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/lie-denodify/">
+			
+				Lie-denodify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-10T17:38:55+05:30" pubdate data-updated="true">Apr 10<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify's</a> main focus is to turn a node style callback into a promise based one.</p>
+
+<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
+
+<p>All it does to convert an async function to a promise based one is to return a promise with the help of lie:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">denodify</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">concat</span><span class="p">.</span><span class="nx">apply</span><span class="p">([],</span> <span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">args</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>                <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">resolve</span><span class="p">(</span><span class="nx">success</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>            <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">denodify</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<p>Let's try and covert <code>fs.stat</code> function to a promise!</p>
+
+<p>First of all let's have a look at how <code>fs.stat</code> works before conversion.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fstat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fstat</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Would log something like:</span>
+</span><span class='line'><span class="cm">{ dev: 16777217,</span>
+</span><span class='line'><span class="cm">  mode: 17407,</span>
+</span><span class='line'><span class="cm">  nlink: 14,</span>
+</span><span class='line'><span class="cm">  uid: 0,</span>
+</span><span class='line'><span class="cm">  gid: 0,</span>
+</span><span class='line'><span class="cm">  rdev: 0,</span>
+</span><span class='line'><span class="cm">  blksize: 4096,</span>
+</span><span class='line'><span class="cm">  ino: 144575596,</span>
+</span><span class='line'><span class="cm">  size: 476,</span>
+</span><span class='line'><span class="cm">  blocks: 0,</span>
+</span><span class='line'><span class="cm">  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</span>
+</span><span class='line'><span class="cm"> </span>
+</span><span class='line'><span class="cm"> And in case of an Error it would throw an error</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, let's convert it into a promise:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lieDndfy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie-denodify&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">statp</span> <span class="o">=</span> <span class="nx">lieDndfy</span> <span class="p">(</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">statp</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
+
+<p>Learn to lie this week ;)!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/modmod/">
+			
+				Modmod</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-03T17:32:31+05:30" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<blockquote><p>"Simplicity is the ultimate sophistication." ― Leonardo da Vinci</p></blockquote>
+
+<p>Just dig into some node-modules you use or the one you released, how many require statements do you have?</p>
+
+<p><a href="http://stephenplusplus.github.io/me-but-you/">Stephen Sawchuk</a> has made require-ing modules less require-y, with his <a href="https://github.com/stephenplusplus/modmod">modmod</a> module!</p>
+
+<p>Installing it is like another other module: <code>npm install modmod</code></p>
+
+<p><strong>How does it help?</strong></p>
+
+<p>It helps you to reduce:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">util</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;util&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">wiredep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wiredep&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;modmod&#39;</span><span class="p">)(</span><span class="s1">&#39;fs&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;util&#39;</span><span class="p">,</span> <span class="s1">&#39;chalk&#39;</span><span class="p">,</span> <span class="s1">&#39;wiredep&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's just eight lines of code that does the magic:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">builtinLibs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;repl&#39;</span><span class="p">).</span><span class="nx">_builtinLibs</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">).</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">builtinLibs</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="nx">key</span> <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">cwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/node_modules/&#39;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">acc</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span> <span class="p">{});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>require('repl')._builtinLibs</code> will give a list of all node buitins, if not in the list, it will look for the <code>node_modules</code> dir in the current working dir and then <code>require</code> the required there by making it less require-y!</p>
+
+<p><strong>Why?</strong></p>
+
+<p>As said by the author:</p>
+
+<p>It's up to you. There's nothing wrong with the current system of multiple var declarations, and having too many isn't a node problem. Regardless, you may still consider it useful to namespace your dependencies under a name of your choosing, such as M or $, freeing up those "global" variables for use without conflicts.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/modmod/modmod.gif" alt="modmod" /></p>
+
+<p>Enjoy your less require-y week ;)</p>
+
+<p>P.S: This module is just six days old! Will need to evolve on things like <a href="https://github.com/stephenplusplus/modmod/issues/4">this.</a> do contribute your ideas to make it more awesome!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/have/">
+			
+				Have</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-27T18:33:53+05:30" pubdate data-updated="true">Mar 27<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a> that will help you to have your arguments, and validate it too!</p>
+
+<p>Here is a simple example of two functions straight from the source, that does the same argument validations, the first one is without using <code>have</code> and the second one is with <code>have</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withoutHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">id</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;id argument not string or number&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> <span class="s1">&#39;arr member not a string&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="o">!</span><span class="nx">opts</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="s1">&#39;options object not a hash&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">callback</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">,</span> <span class="s1">&#39;callback missing or not a function&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// logic...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">withHave</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">arr</span><span class="p">,</span> <span class="nx">opts</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;str or num&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">arr</span><span class="o">:</span> <span class="s1">&#39;str or str array&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">opts</span><span class="o">:</span> <span class="s1">&#39;optional obj&#39;</span>
+</span><span class='line'>    <span class="p">,</span> <span class="nx">callback</span><span class="o">:</span> <span class="s1">&#39;func&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">))</span> <span class="p">{</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr</span><span class="p">];</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">opts</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">callback</span> <span class="o">=</span> <span class="nx">opts</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">opts</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="s1">&#39;some default value&#39;</span> <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// logic...</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>How's have better than any other argument validator?</strong></p>
+
+<p>Have provides:</p>
+
+<ul>
+<li><p>mini-DSL</p></li>
+<li><p>Soft assertion.</p></li>
+<li><p>Shorter notations.</p></li>
+</ul>
+
+
+<p>You can do a simple assertion with have like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cond</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;WARN: assertion failed: &#39;</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also wrap the exported have function, in case you want to log the function name as well:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">,</span> <span class="nx">have</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;have&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">,</span> <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">have</span><span class="p">.</span><span class="nx">assert</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">assert</span><span class="p">(</span><span class="nx">cond</span><span class="p">,</span> <span class="s1">&#39;inside function: &#39;</span> <span class="o">+</span> <span class="nx">funcName</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="nx">msg</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">have</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">have_</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">callee</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">have_</span><span class="p">(</span><span class="nx">args</span><span class="p">,</span> <span class="nx">schema</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">funcName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">})(</span><span class="nx">have</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">have</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="p">{</span> <span class="nx">one</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">test</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That would result in a output like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>assert.js:92
+</span><span class='line'>  throw new assert.AssertionError<span class="o">({</span>
+</span><span class='line'>        ^
+</span><span class='line'>AssertionError: inside <span class="k">function</span>: <span class="nb">test</span>, one argument is not string
+</span><span class='line'>    at funcName <span class="o">(</span>/private/tmp/k.js:6:3<span class="o">)</span>
+</span><span class='line'>    at ensure <span class="o">(</span>/private/tmp/node_modules/have/have.js:109:5<span class="o">)</span>
+</span><span class='line'>    at have <span class="o">(</span>/private/tmp/node_modules/have/have.js:124:11<span class="o">)</span>
+</span><span class='line'>    at have.one <span class="o">(</span>/private/tmp/k.js:12:5<span class="o">)</span>
+</span><span class='line'>    at <span class="nb">test</span> <span class="o">(</span>/private/tmp/k.js:19:3<span class="o">)</span>
+</span><span class='line'>    at Object.&lt;anonymous&gt; <span class="o">(</span>/private/tmp/k.js:22:1<span class="o">)</span>
+</span><span class='line'>    at Module._compile <span class="o">(</span>module.js:456:26<span class="o">)</span>
+</span><span class='line'>    at Object.Module._extensions..js <span class="o">(</span>module.js:474:10<span class="o">)</span>
+</span><span class='line'>    at Module.load <span class="o">(</span>module.js:356:32<span class="o">)</span>
+</span><span class='line'>    at Function.Module._load <span class="o">(</span>module.js:312:12<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/have/have.gif" alt="" /></p>
+
+<p>Thanks to  <a href="https://github.com/stdarg">Stdarg</a> for <a href="https://github.com/hemanth/nmotw.in/issues/3">suggesting</a> this module and also a special thanks to <a href="http://chakrit.net">chakrit</a> the author of 'have' module</p>
+
+<p>Hope you liked <code>have</code> have fun! :)</p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/17/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/19/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

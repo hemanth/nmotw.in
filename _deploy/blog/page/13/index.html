@@ -1,0 +1,1039 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
+    <meta name="twitter:description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/13/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/function-plot/">
+			
+				Function-plot</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-21T19:21:06+05:30" pubdate data-updated="true">May 21<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/function-plot/">function-plot</a></h1>
+
+<blockquote><p>A simple 2d function plotter powered by d3</p></blockquote>
+
+<p>function-plot helps to render functions with little configuration think of it like a util that would help you to render something like what Google does. <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;es_th=1&amp;ie=UTF-8#q=y+%3D+x+%5E+2">y = x * x</a></p>
+
+<p>The library currently supports interactive line charts and scatterplots, whenever the graph scale is modified the function is evaluated again with
+the new bounds, result: infinite graphs!</p>
+
+<p><strong>Get it</strong> : <code>npm install --save function-plot</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">d3</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">functionPlot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-plot&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">functionPlot</span><span class="p">({</span> <span class="cm">/*Pass in the options*/</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check out the <a href="https://github.com/maurizzzio/function-plot#instance--functionplotoptions">options</a>!</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/function-plot/function-plot.gif" alt="function-plot" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/json-server/">
+			
+				Json-server</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-14T18:23:06+05:30" pubdate data-updated="true">May 14<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/json-server">json-server</a></h1>
+
+<blockquote><p>REST API with zero coding in less than 30 seconds.</p></blockquote>
+
+<p>This module by <a href="https://github.com/typicode">typicode</a> helps front-end developers who need a quick back-end for prototyping and mocking!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p>Either as a CLI app: <code>npm install -g json-server</code></p>
+
+<p>or as a dep for your script: <code>npm install --save json-server</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Assume you have a <code>json.db</code> like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;posts&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;json-server&quot;</span><span class="p">,</span> <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;typicode&quot;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="p">],</span>
+</span><span class='line'>  <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="o">:</span> <span class="s2">&quot;some comment&quot;</span><span class="p">,</span> <span class="s2">&quot;postId&quot;</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you are installed module globally, then do a :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>json-server json.db
+</span><span class='line'>
+</span><span class='line'><span class="c"># or</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>json-server http://example.com/file.json
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if not, include it in your script</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">jsonServer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-server&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span> <span class="c1">// Returns an Express server</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">router</span><span class="p">(</span><span class="s1">&#39;db.json&#39;</span><span class="p">);</span> <span class="c1">// Returns an Express router</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">jsonServer</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span> <span class="c1">// logger, static and cors middlewares</span>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">);</span> <span class="c1">// Mount router on &#39;/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After which the server must be up and running at: <code>http://localhost:3000</code></p>
+
+<p><strong>Avaliable routes:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">title</span><span class="o">=</span><span class="nx">json</span><span class="o">-</span><span class="nx">server</span><span class="o">&amp;</span><span class="nx">author</span><span class="o">=</span><span class="nx">typicode</span>
+</span><span class='line'><span class="nx">POST</span>   <span class="o">/</span><span class="nx">posts</span>
+</span><span class='line'><span class="nx">PUT</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">PATCH</span>  <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">DELETE</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">SLICE</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">SORT</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">views</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">DESC</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">votes</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">ASC</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Query</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">q</span><span class="o">=</span><span class="nx">internet</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">entire</span> <span class="nx">DB</span><span class="o">!</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">db</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>GET on <code>/</code> would look like:</p>
+
+<p><img src="/images/json-server/json-server.png" alt="json-server-screenshot" /></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-server/json-server.gif" alt="json-server" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/console.json/">
+			
+				console.json</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-07T23:44:21+05:30" pubdate data-updated="true">May 7<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://nmp.im/console.json">console.json</a></h1>
+
+<blockquote><p>Adds <code>console.json</code> method that stringifies passed in objects and logs them.</p></blockquote>
+
+<p>This is a sweet little util function by <a href="http://glebbahmutov.com/">Gleb Bahmutov</a> that makes a life bit easier while debugging huge <code>json</code> data in the console.
+P.S: There is <code>console.dir</code> but <code>console.json</code> is kina appleaing expect for the color highlighting part of it.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save console.json</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Just require it once and you shall have `console.json` method for convenience.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;console.json&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;$schema&quot;</span><span class="o">:</span> <span class="s2">&quot;http://json-schema.org/draft-04/schema#&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Product&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;A product from Acme&#39;s catalog&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;The unique identifier for a product&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;integer&quot;</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Name of the product&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s2">&quot;required&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/console.json/console.json.gif" alt="console.json" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/color-string/">
+			
+				Color-string</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-30T19:03:09+05:30" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
+
+<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
+
+<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
+
+<p>The API names are pretty self explainatory, the module has the below methods:</p>
+
+<p><strong>Methods for parsing:</strong></p>
+
+<ul>
+<li><p>getRgba</p></li>
+<li><p>getHsla</p></li>
+<li><p>getRgb</p></li>
+<li><p>getHsl</p></li>
+<li><p>getHwb</p></li>
+<li><p>getAlpha</p></li>
+</ul>
+
+
+<p><strong>Methods for generating:</strong></p>
+
+<ul>
+<li><p>hexString</p></li>
+<li><p>rgbString</p></li>
+<li><p>rgbaString</p></li>
+<li><p>percentString</p></li>
+<li><p>percentaString</p></li>
+<li><p>hslString</p></li>
+<li><p>hslaString</p></li>
+<li><p>hwbString</p></li>
+<li><p>keyword</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorString</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;color-string&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">getRgb</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">)</span>  <span class="c1">// [255, 255, 255] </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">keyword</span><span class="p">([</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>       <span class="c1">// &quot;yellow&quot; </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/exenv/">
+			
+				Exenv</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-23T21:14:08+05:30" pubdate data-updated="true">Apr 23<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/exenv">exenv</a></p>
+
+<blockquote><p>React's ExecutionEnvironment module extracted.</p></blockquote>
+
+<p>Many modules and components out there in the wild, uses React's private <code>ExecutionEnvironment</code> lib for feature detection, like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">canUseDOM</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;react/lib/ExecutionEnvironment&#39;</span><span class="p">).</span><span class="nx">canUseDOM</span><span class="p">;</span> <span class="c1">// BAD</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Which is not a good practice as private libs are prone to modification or deletion, so <a href="http://www.thinkmill.com.au">Jed Watson</a> has created
+<code>exenv</code> for us.</p>
+
+<p>P.S: <code>isInWorker</code> has been left out as it's very specific to react.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save exenv</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">exenv</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;exenv&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">exenv</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//Object {canUseDOM: true, canUseWorkers: true, canUseEventListeners: true, canUseViewport: true}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/exenv/exenv.gif" alt="exenv" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/logdown/">
+			
+				Logdown</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-16T18:07:03+05:30" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/logdown">logdown</a></p>
+
+<blockquote><p>Debug utility with markdown support that runs on browser and server.</p></blockquote>
+
+<p>This module lets you to have markdown syntax in your debug logs! It had <code>['log', 'info', 'warn', 'error']</code> as it's logging levels.</p>
+
+<p>One can also prefix the log message, it has support for various terminals <code>/^screen|^xterm|^vt100|color|ansi|cygwin|linux/</code> and also runs
+in the browser env.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save logdown</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Logdown</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;logdown&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">debug</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Logdown</span><span class="p">({</span> <span class="nx">prefix</span><span class="o">:</span> <span class="s1">&#39;meow&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;lorem *ipsum*&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;I can haz _info_&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;shall I `highlight` your code?&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/logdown/logdown.gif" alt="logdown" /></p>
+
+<p>Thanks to <a href="http://caiogondim.com">Caio Gondim</a> for logdown! (:</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/require-times/">
+			
+				Require-times</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-09T20:10:22+05:30" pubdate data-updated="true">Apr 9<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/require-times">require-times</a></h1>
+
+<blockquote><p>Find out how long require calls take in your program.</p></blockquote>
+
+<p>This is cheeky module from <a href="http://maxogden.com/">Max Ogden</a> tap into <code>require.extensions['.js']</code> and lets you know the time consumed by
+the require calls in your code.</p>
+
+<p><strong>Install it:</strong> <code>npm install require-times</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// hundreds on require statments ;)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span> <span class="c1">// Will spit the time consumed to stdout.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">rt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">)();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;require-times&#39;</span><span class="p">);</span> <span class="c1">// Dog fooding ;)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">rt</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Output =&gt; total: 9647ms</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/require-times/require-times.gif" alt="require-times" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/line-numbers/">
+			
+				Line-numbers</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-02T17:10:30+05:30" pubdate data-updated="true">Apr 2<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/line-numbers">line-numbers</a></h1>
+
+<blockquote><p>Add line numbers to a string.</p></blockquote>
+
+<p>A humble module that will add line number to a given string! Mostly useful for text editor and displaying some code snippet.</p>
+
+<p><strong>Install it:</strong> <code>$ npm install --save line-numbers</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lns</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;line-numbers&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">code</span> <span class="o">=</span> <span class="err">`</span><span class="kd">function</span> <span class="nx">meow</span><span class="p">(</span><span class="nx">cb</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">cb</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;CB is a must!&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">cb</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="err">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">lns</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Would log:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm"> 1 | function meow(cb) { </span>
+</span><span class='line'><span class="cm"> 2 |   if(!cb) throw new Error(&quot;CB is a must!&quot;);</span>
+</span><span class='line'><span class="cm"> 3 |   cb(&quot;meow&quot;);</span>
+</span><span class='line'><span class="cm"> 4 | }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: You can also pass in options like: <code>before</code>, <code>number</code>, <code>width</code>, <code>after</code> and <code>line</code> (They are self explanatory?)</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/line-numbers/line-numbers.gif" alt="line-numbers" /></p>
+
+<p>Thanks to Simon Lydell for <code>line-numbers</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/cssom/">
+			
+				Cssom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-26T19:05:30+05:30" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
+
+<blockquote><p>CSS Object Model implementation and CSS parser.</p></blockquote>
+
+<p><code>cssom</code> is parser written in pure javascript, it also has partially implemented of <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>, works across node/io.js and modren browsers.</p>
+
+<p><strong>Install it:</strong> <code>npm install cssom --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cssom&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">CSSStyleDeclaration</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleDeclaration</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSRule</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSRule</span><span class="p">]</span>
+</span><span class='line'>     <span class="nx">STYLE_RULE</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">IMPORT_RULE</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">MEDIA_RULE</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">FONT_FACE_RULE</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">PAGE_RULE</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAMES_RULE</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAME_RULE</span><span class="o">:</span> <span class="mi">9</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">CSSStyleRule</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleRule</span><span class="p">]</span> <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">MediaList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MediaList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSMediaRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSMediaRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSImportRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSImportRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSFontFaceRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSFontFaceRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">StyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">StyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframesRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframesRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframeRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframeRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">MatcherList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MatcherList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSDocumentRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSDocumentRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValue</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValue</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValueExpression</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValueExpression</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">clone</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">clone</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;.main{display:flex}&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">cssRules</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="p">{</span> <span class="nx">parentRule</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nx">Circular</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">selectorText</span><span class="o">:</span> <span class="s1">&#39;.main&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">style</span><span class="o">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">__starts</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">__ends</span><span class="o">:</span> <span class="mi">19</span> <span class="p">}</span> <span class="p">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Thanks to <a href="http://n12v.com/">Nikita Vasilyev</a> for this early implementation of <code>cssom</code> (:</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cssom/cssom.gif" alt="cssom" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/did-you-mean/">
+			
+				Did-you-mean</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-19T17:41:21+05:30" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/did-you-mean">did-you-mean</a></h1>
+
+<blockquote><p>Fuzzy match a command from a list (typo-safety)</p></blockquote>
+
+<p>This module does a Fuzzy match a word from your list of commands or keywords from node.js/io.js to provide a friendly typo-safe human prompt.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save did-you-mean</code></p>
+
+<p><strong>API:</strong></p>
+
+<ul>
+<li><p>get -> Get the closest match.</p></li>
+<li><p>setThreshold(3) -> Set the threshold (the maximum Levenshtein distance)</p></li>
+<li><p>list('key') -> List all matches.</p></li>
+<li><p>ignoreCase() -> Set ignore case.</p></li>
+<li><p>matchCase() -> Set match case.</p></li>
+<li><p>add('key1','key2',...); -> Add more values.</p></li>
+</ul>
+
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Matcher</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;did-you-mean&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Matcher</span><span class="p">(</span><span class="s1">&#39;init install update upgrade npm brew apt-get&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// &quot;upgrade&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;brwe&#39;</span><span class="p">);</span> <span class="c1">// &quot;brew&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;atp-get&#39;</span><span class="p">);</span> <span class="c1">// &quot;apt-get&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">values</span><span class="p">;</span> <span class="c1">// [&quot;npm&quot;, &quot;brew&quot;, &quot;upgrade&quot;, &quot;update&quot;, &quot;apt-get&quot;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// {distance: 2, value: &quot;upgrade&quot;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/did-you-mean/did-you-mean.gif" alt="did-you-mean" /></p>
+
+<p>Thanks to Boris Okunskiy for bringing <code>did-you-mean</code> to web and CLI.</p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/12/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/14/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

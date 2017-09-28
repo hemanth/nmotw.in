@@ -1,0 +1,496 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>kind-of - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="kind-of Get the native type of a value. Most of use would have faced nuances of typeof like below: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+&gt; typeof (null &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="kind-of - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/kind-of/">
+    <meta name="twitter:description" content="kind-of Get the native type of a value. Most of use would have faced nuances of typeof like below: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+&gt; typeof (null &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="kind-of - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/kind-of/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="kind-of Get the native type of a value. Most of use would have faced nuances of typeof like below: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+&gt; typeof (null &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/kind-of/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Kind-of</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-06-02T22:07:20+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/kind-of">kind-of</a></h1>
+
+<blockquote><p>Get the native type of a value.</p></blockquote>
+
+<p>Most of use would have faced nuances of <code>typeof</code> like below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="sr">/RE/</span>
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">())</span>
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">[]</span>
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">{}</span>
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>kind-of</code> just fixes these issues and is also <code>ES6</code> ready.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save kind-of</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">kindOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;kind-of&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;undefined&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;null&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Buffer</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;buffer&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;number&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;number&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;string&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;string&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;arguments&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">({});</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Test</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;date&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">([]);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;regexp&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;regexp&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kd">function</span> <span class="o">*</span> <span class="p">()</span> <span class="p">{});</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Function</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Map</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;map&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">WeakMap</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;weakmap&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Set</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;set&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">WeakSet</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;weakset&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;symbol&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int8Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;int8array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;uint8array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint8ClampedArray</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;uint8clampedarray&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int16Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;int16array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint16Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;uint16array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int32Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;int32array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint32Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;uint32array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Float32Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;float32array&#39; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Float64Array</span><span class="p">());</span>
+</span><span class='line'><span class="c1">//=&gt; &#39;float64array&#39; </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/kind-of/kind-of.gif" alt="kind-of" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=kind-of by @nodemotw&url=http://nmotw.in/kind-of/" title="Share kind-of on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/kind-of/" title="Share kind-of on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/kind-of/" title="Share kind-of on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/kind-of/';
+        var disqus_url = 'http://nmotw.in//github/kind-of/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

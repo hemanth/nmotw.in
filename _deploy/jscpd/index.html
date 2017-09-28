@@ -1,0 +1,279 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>jscpd - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="jscpd jscpd is a tool for detect copy/paste "design pattern" in programming source code. Andrey Kucherenko's jscpd is a smart tool that helps use to &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="jscpd - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/jscpd/">
+    <meta name="twitter:description" content="jscpd jscpd is a tool for detect copy/paste "design pattern" in programming source code. Andrey Kucherenko's jscpd is a smart tool that helps use to &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="jscpd - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/jscpd/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="jscpd jscpd is a tool for detect copy/paste "design pattern" in programming source code. Andrey Kucherenko's jscpd is a smart tool that helps use to &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/jscpd/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Jscpd</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-11T21:09:12+05:30" pubdate data-updated="true">Jun 11<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="http://npm.im/jscpd">jscpd</a></h1>
+
+<blockquote><p>jscpd is a tool for detect copy/paste "design pattern" in programming source code.</p></blockquote>
+
+<p><a href="http://kucherenko.org/">Andrey Kucherenko's</a> <code>jscpd</code> is a smart tool that helps use to detect copy paste code!</p>
+
+<p>It supports the below langauges:</p>
+
+<ul>
+<li>JavaScript</li>
+<li>Java</li>
+<li>CoffeeScript</li>
+<li>TypeScript</li>
+<li>C++</li>
+<li>PHP</li>
+<li>C#</li>
+<li>Go</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>C</li>
+<li>Less</li>
+<li>CSS</li>
+<li>SCSS</li>
+<li>Mixed HTML</li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install -g jscpd</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">jscpd</span> <span class="o">--</span><span class="nx">path</span> <span class="nx">my_project</span><span class="o">/</span> <span class="o">--</span><span class="nx">languages</span> <span class="nx">javascript</span><span class="p">,</span><span class="nx">coffee</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">jscpd</span> <span class="o">-</span><span class="nx">f</span> <span class="o">**</span><span class="cm">/*.js -e **/</span><span class="nx">node_modules</span><span class="cm">/**</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="cm">/*.min.js --output report.xml</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="err">/*.min.js --reporter json --output report.json</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you have a <code>.cpd.yml</code> config file in the <code>pwd</code> jscpd command, you will check code for duplicates according the config.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1">#.cpd.yaml</span>
+</span><span class='line'><span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">fixtures/</span>
+</span><span class='line'><span class="l-Scalar-Plain">languages</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">javascript</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">coffeescript</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">typescript</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">php</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">python</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">css</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ruby</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">go</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">java</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;c++src&quot;</span>    <span class="c1"># c++ source</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csrc</span>        <span class="c1"># c source</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csharp</span>      <span class="c1"># c# source</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">htmlmixed</span>   <span class="c1"># html mixed source like knockout.js templates</span>
+</span><span class='line'><span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.min.js&quot;</span>
+</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.mm.js&quot;</span>
+</span><span class='line'><span class="l-Scalar-Plain">reporter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">json</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jscpd/jscpd.gif" alt="jscpd-demo" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=jscpd by @nodemotw&url=http://nmotw.in/jscpd/" title="Share jscpd on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/jscpd/" title="Share jscpd on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/jscpd/" title="Share jscpd on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/jscpd/';
+        var disqus_url = 'http://nmotw.in//github/jscpd/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

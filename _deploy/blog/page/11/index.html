@@ -1,0 +1,986 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/blog/page/11/">
+    <meta name="twitter:description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="NMOTW" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content="http://nmotw.in//github/blog/page/11/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/blog/page/11/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/instapromise/">
+			
+				Instapromise</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-08T17:45:41+05:30" pubdate data-updated="true">Oct 8<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/instapromise">instapromise</a></h1>
+
+<blockquote><p>Promisify with <code>.promise</code></p></blockquote>
+
+<p><code>instapromise</code> lets you promisify node-style asynchronous functions by putting a <code>.promise</code> after them or after the object for methods.</p>
+
+<p>It's a part of <a href="http://exponentjs.com/">exponent</a> and this module is influenced from <a href="https://www.npmjs.com/package/fibrous">fibrous</a>.</p>
+
+<p>When one of the maintainers of <code>instapromise</code> was questioned about why the code was in coffeescript :</p>
+
+<p>There’s basically two reasons for that:</p>
+
+<ul>
+<li><p>It’s based on some of the work the people who made fibrous did and they wrote their stuff in coffeescript</p></li>
+<li><p>I used to write a bunch of coffeescript before babel made it reasonable to write ES7+ stuff</p></li>
+<li><p>I wrote it back then, its pretty stable now.</p></li>
+<li><p>I haven’t made any changes to it in months so I don’t think it should be necessary to modify the source too much.</p></li>
+<li><p>Also I do like the way that its commented fairly well.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save instapromise</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="err">‘</span><span class="nx">instapromise</span><span class="err">’</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">someObject</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">someMethodThatTakesANodeStyleCallback</span><span class="p">(</span><span class="err">‘</span><span class="nx">but</span> <span class="nx">not</span> <span class="nx">anymore</span><span class="err">’</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically, <code>instapromise</code> is one of it's kind a module that is cheeky, tiny and takes a diffrenet apporach on promisifying async functions,
+you need to just <code>require('instapromise')</code> and then you could just use a <code>.promise</code>!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;instapromise&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;/tmp/hello&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: The original function is available as a property on the promise-generating function <code>.___instapromiseOriginalFunction___</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/instapromise/instapromise.gif" alt="instapromise" /></p>
+
+<p>Thanks to <a href="https://twitter.com/JI">James Ide</a> and <a href="https://twitter.com/ccheever">Charlie Cheever</a> for instapromise!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/clipboard.js/">
+			
+				clipboard.js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-01T18:20:14+05:30" pubdate data-updated="true">Oct 1<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://zenorocha.github.io/clipboard.js/">clipboard.js</a></h1>
+
+<blockquote><p>A modern approach to copy text to clipboard!</p></blockquote>
+
+<p>With 4.7K+ stars to it's repo with a modern approach to copy text coded with <code>ES2015/6</code> classes,  No Flash. Just 2kb!</p>
+
+<p><a href="http://zenorocha.com/">Zeno Rocha</a>'s <code>clipboard.js</code> undoubtedly is the nmotw!</p>
+
+<p>It makes use of  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">Selection</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">execCommand</a> APIs.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save clipboard.js</code></p>
+
+<p><strong>Sample usage:</strong>_</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">clipboard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Clipboard</span><span class="p">(</span><span class="s1">&#39;.btn&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Text:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">e</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clipboard</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Action:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">action</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Trigger:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">trigger</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In your <code>HTML</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Target --&gt;</span>
+</span><span class='line'><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;foo&quot;</span> <span class="na">value=</span><span class="s">&quot;https://github.com/zenorocha/clipboard.js.git&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">&lt;!-- Trigger --&gt;</span>
+</span><span class='line'><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">data-clipboard-target=</span><span class="s">&quot;#foo&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;assets/clippy.svg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Copy to clipboard&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;/button&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/clipboard.js/clipboard.js.gif" alt="clipboard.js" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/trianglify/">
+			
+				Trianglify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-24T17:23:44+05:30" pubdate data-updated="true">Sep 24<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
+
+<blockquote><p>Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds.</p></blockquote>
+
+<p>This is inspired by <a href="https://github.com/btmills/geopattern">btmills/geopattern</a> thanks to <a href="http://qrohlf.com/">Quinn Rohlf</a> for this.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save trianglify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Trianglify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;trianglify&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">});</span>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">canvas</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are few wonderful <a href="https://github.com/qrohlf/trianglify/blob/master/Readme.md#options">options</a> <code>color_function</code> being one of them.</p>
+
+<p>Color function that uses the HSL color format to generate a rainbow pattern:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorFunc</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;hsl(&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span><span class="o">*</span><span class="mi">360</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,80%,60%)&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">color_function</span><span class="o">:</span> <span class="nx">colorFunc</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ramda-repl/">
+			
+				Ramda-repl</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-17T22:09:50+05:30" pubdate data-updated="true">Sep 17<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
+
+<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
+
+<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ npm install --save ramda-repl</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ramdaRepl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ramda-repl&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ramdaRepl</span><span class="p">();</span>
+</span><span class='line'><span class="c1">//=&gt; Will start a REPL</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>CLI</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install --global ramda-repl
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>$ ramda-repl</p>
+
+<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>Welcome to Ramda REPL!
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof R
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof map
+</span><span class='line'><span class="s1">&#39;function&#39;</span>
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof zipWith
+</span><span class='line'><span class="s1">&#39;function&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>GIF FTW</h2>
+
+<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
+
+<h2>License</h2>
+
+<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npm-check/">
+			
+				Npm-check</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-10T19:58:00+05:30" pubdate data-updated="true">Sep 10<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/npm-check">npm-check</a></h1>
+
+<blockquote><p>Check for outdated, incorrect, and unused dependencies.</p></blockquote>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><em>Interactive Update</em> means less typing.</li>
+<li>Scoped packages support for the modern npm user.</li>
+<li>Works with public and private registries.</li>
+<li>Won't query npm registry for packages with <code>private: true</code>.</li>
+<li>Kindly informs you if a dependency is not being used.</li>
+<li>Emoji in a command-line app, because command-line apps can be fun too.</li>
+</ul>
+
+
+<p>Very much similar to <a href="http://nmotw.in/npm-check-updates/">npm-check-updates</a> but far more generic and interactive!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g npm-check</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check --help
+</span><span class='line'>
+</span><span class='line'>  Usage: npm-check <span class="o">[</span>options<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>  Options:
+</span><span class='line'>
+</span><span class='line'>    -h, --help         output usage information
+</span><span class='line'>    -V, --version      output the version number
+</span><span class='line'>    -u, --update       Interactive update.
+</span><span class='line'>    -g, --global       Look at global modules.
+</span><span class='line'>    -s, --skip-unused  Skip check <span class="k">for </span>unused packages.
+</span><span class='line'>    -p, --production   Ignore devDependencies.
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">npmCheck</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npm-check&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">npmCheck</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npm-check/npm-check.gif" alt="npm-check" /></p>
+
+<p>Thanks to <a href="https://twitter.com/dylang">@dylang</a> for <code>npm-check</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/speed-test/">
+			
+				Speed-test</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-03T18:37:24+05:30" pubdate data-updated="true">Sep 3<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/speed-test">speed-test</a></h1>
+
+<blockquote><p>Test your internet connection speed and ping using speedtest.net from the CLI.</p></blockquote>
+
+<p>This is product of <a href="https://github.com/sindresorhus/module-requests/">sindresorhus/module-requests</a> makes use of <a href="https://github.com/ddsol/speedtest.net">speedtest-net</a>
+helps us to know our intenet connection speed and ping with a beautiful UI.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --global speed-test</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>speed-test --help
+</span><span class='line'>
+</span><span class='line'>  Usage
+</span><span class='line'>    <span class="nv">$ </span>speed-test
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/speed-test/speed-test.gif" alt="speed-test" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/url-pattern/">
+			
+				Url-pattern</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-27T14:07:23+05:30" pubdate data-updated="true">Aug 27<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/url-pattern">url-pattern</a></p>
+
+<blockquote><p>easier than regex string matching for urls, domains, filepaths and other strings.</p></blockquote>
+
+<p><code>url-pattern</code> can capture named parts of strings and conveniently returns them as objects.</p>
+
+<p>Also does the reverse and generates strings given a pattern and such an object.</p>
+
+<p><strong>install:</strong> <code>npm install url-pattern</code></p>
+
+<p><strong>simple match example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">UrlPattern</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url-pattern&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users/:id&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/users/10&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/products/5&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kc">null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>complex match example showing off escaping, wildcards and optional segments:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;(http(s)\\://)(:subdomain.):domain.:tld(/*)&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google.de&#39;</span><span class="p">);</span> <span class="c1">// {domain: &#39;google&#39;, tld: &#39;de&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;www&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;http://mail.google.com/mail&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;mail&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;, _: &#39;mail&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="c1">// null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>stringify example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users(/:id)&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">()</span> <span class="c1">// &#39;/api/users&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span> <span class="mi">10</span><span class="p">})</span>  <span class="c1">//&#39; /api/users/10&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/url-pattern/url-pattern.gif" alt="url-pattern" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/human-to-cron/">
+			
+				Human-to-cron</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-20T18:09:33+05:30" pubdate data-updated="true">Aug 20<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/human-to-cron">human-to-cron</a></h1>
+
+<blockquote><p>Converts human readable expression to a cron string!</p></blockquote>
+
+<p>If you can interpert <code>0 */1 * * *</code> as <code>each minute</code> then this module is not for you ;)</p>
+
+<p><code>human-to-cron</code> parsers the human readable expressions with the help of ES6 generators converts it into a <a href="https://en.wikipedia.org/wiki/Cron">cron</a> string.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save human-to-cron</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">humanToCron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;human-to-cron&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each minute&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */1 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; * */2 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each second&#39;</span><span class="p">)</span> <span class="c1">// =&gt; */1 * * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each hour&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 */1 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each day&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 */1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each month&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */1 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each 5 months&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */5 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */2 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once tuesday each 10 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */10 * 1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;august friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 7 *</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/human-to-cron/human-to-cron.gif" alt="human-to-cron" /></p>
+
+<p>Thanks to <a href="https://github.com/rainder">Andrius Skerla</a> for this cheeky module!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/lightcards/">
+			
+				Lightcards</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-13T19:36:54+05:30" pubdate data-updated="true">Aug 13<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
+
+<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
+
+<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
+By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
+after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
+
+<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>lightcards init <span class="o">&amp;&amp;</span> lightcards
+</span><span class='line'>
+</span><span class='line'>Reading vocabulary from vocabulary.txt... OK!
+</span><span class='line'>Generating flashcards... OK!
+</span><span class='line'>Compiling scripts... OK!
+</span><span class='line'>Starting <span class="nb">local </span>web server... OK!
+</span><span class='line'>
+</span><span class='line'>Start learning on http://localhost:3000
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
+
+<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/curry-this/">
+			
+				Curry-this</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-06T20:46:13+05:30" pubdate data-updated="true">Aug 6<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1>Curry-this</h1>
+
+<p><code>Curry-this</code> makes creating curryied function simple and expresive by invoking <code>curry</code> with the <a href="https://github.com/zenparsing/es-function-bind">function bind syntax <code>::</code></a>.
+Apart from the expresive way of creating a curried function, the main feature are placeholders.
+A placeholder (<code>_</code>) is a <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a> which allows to curry specific arguments of a function.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save curry-this</code></p>
+
+<h2>Basic usage</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">curry</span><span class="p">,</span> <span class="nx">_</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;curry-this&#39;</span><span class="p">)();</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Got a simple function?</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">plus</span> <span class="o">=</span> <span class="p">(</span>
+</span><span class='line'>    <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span>
+</span><span class='line'><span class="p">)</span><span class="o">::</span><span class="nx">curry</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Placeholders</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Got a monster function?</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">open</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">newScript</span> <span class="o">=</span> <span class="nx">open</span><span class="o">::</span><span class="nx">curry</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="mi">0755</span><span class="p">,</span> <span class="nx">_</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">newScript</span><span class="p">(</span><span class="s1">&#39;do-wonders.sh&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// The `file` is ready.</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can try this with <code>babel-node</code>. Make sure that you use the <code>--stage=0</code> option.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/curry-this/curry-this.gif" alt="curry-this" /></p>
+
+<p>Thanks to <a href="http://stoeffel.github.io/">Christoph Hermann</a> and <a href="https://github.com/tomekwi">tomekwi</a> for making cury more fun!</p>
+
+		
+		
+	</div>
+
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/blog/page/10/" class="prev">Previous</a>
+    
+    
+        <a href="/blog/page/12/" class="next">Next</a>
+    
+</nav>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: "mdconf"
+date: 2017-07-20 09:59:26 +0530
+comments: true
+categories: config util
+---
+
+#[mdconf](https://www.npmjs.com/package/mdconf)
+> Markdown driven configuration!
+
+Sweet and simple markdown files are your config!
+
+Markdown headings act as keys, list items with `:` act as maps, otherwise regular lists behave as.. lists.
+
+__Get it:__ `npm install mdconf`
+
+__Usage sample:__
+
+```
+const mdconf = require("mdconf");
+
+// conf normally goes into a diffrent file.
+conf = `
+## Server
+
+  - host: cloudup.com
+  - port: 3000
+  - http: enabled
+  - https: enabled`;
+  
+console.log(mdconf(conf));
+
+/*
+{ server: 
+   { host: 'cloudup.com',
+     port: '3000',
+     http: 'enabled',
+     https: 'enabled' 
+    } 
+}
+*/
+
+__GIF FTW!__
+
+![mdconf.gif](/images/mdconf/mdconf.gif)
+

@@ -1,0 +1,41 @@
+---
+layout: post
+title: "fitty"
+date: 2017-08-03 13:03:33 +0530
+comments: true
+categories: dom 
+---
+
+#[fitty](https://www.npmjs.com/package/fitty)
+> Makes text fit perfectly.
+
+Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container.
+
+The crux is of fitty is the `fit` method which marks the fitty as dirty and requests a redraw (this will also redraw any other fitty marked as dirty).
+
+
+__Get it:__ `npm install fitty`
+
+__Sample usage:__
+
+```html
+const fitty = require('fitty');
+
+fitty('#my-element);
+```
+
+Default options:
+
+```js
+const defaultOptions = {
+  minSize: 16,
+  maxSize: 512,
+  multiLine: true,
+  observeMutations: 'MutationObserver' in w ? mutationObserverDefaultSetting : false
+};
+```
+Yes, it uses `MutationObserver`.
+
+__GIF FTW!__
+
+![fitty](/images/fitty/fitty.gif)

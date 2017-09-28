@@ -1,0 +1,48 @@
+---
+layout: post
+title: "csrf"
+date: 2017-08-11 15:14:21 +0530
+comments: true
+categories: util 
+---
+
+#[csrf](https://www.npmjs.com/package/csrf)
+>Logic behind CSRF token creation and verification.
+
+Tiny and effective module that helps you to create and verify `csrf` tokens.
+
+__Get it:__ `npm install csrf`
+
+__Sample usage:__
+
+```js
+const Tokens = require('csrf');
+
+/*
+function Tokens() =>
+    name: "Tokens"
+    prototype: Tokens
+    _tokenize: function()
+    create: function()
+    secret: function()
+    secretSync: function()
+    verify: function()
+*/
+
+const tokens = new Tokens();
+await tokens.secret()
+//^ Something like "8SOJmA_ewWfI0g9qKbcuSvhC"
+
+// also
+const secret = tokens.secretSync()
+const token = tokens.create(secret)
+
+// verify
+if (!tokens.verify(secret, token)) {
+  throw new Error('invalid token!')
+}
+```
+
+__GIF FTW!__
+
+![csrf.gif](/images/csrf/csrf.gif)

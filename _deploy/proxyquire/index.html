@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>proxyquire - NMOTW</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="proxyquire - NMOTW">
+    <meta name="twitter:url" content="http://nmotw.in//github/proxyquire/">
+    <meta name="twitter:description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="proxyquire - NMOTW" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nmotw.in//github/proxyquire/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;" />
+
+    
+    <meta property="og:image" content="http://nmotw.in/images/proxyquire/proxyquire.gif" />
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="NMOTW" type="application/atom+xml">
+    <link rel="canonical" href="http://nmotw.in//github/proxyquire/">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">NMOTW</a></h1>
+<span class="tagline">Node Module Of The Week!</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/archives">Archives</a></li>
+	<li><a href="/contact">Contact</a></li>
+	<li><a href="/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Proxyquire</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-12T09:21:00+05:30" pubdate data-updated="true">Jun 12<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
+
+<p><a href="http://npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
+
+<p>Installing proxyquire: <code>npm install -D proxyquire</code></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Say we a file <code>baz.js</code> under test and it looks like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">os</span><span class="p">.</span><span class="nx">freemem</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's evident that the return value of this function will never be a constant value.</p>
+
+<p>How do we test it then?</p>
+
+<p>Have a look at the test case:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Get some assertion helper.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// First up we require proxyquire</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">proxyquire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;proxyquire&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// We make a mock of what we need.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">osStub</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">freemem</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">617619456</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now some magic ;)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">freemem</span> <span class="o">=</span> <span class="nx">proxyquire</span><span class="p">(</span><span class="s2">&quot;./baz&quot;</span><span class="p">,{</span><span class="s1">&#39;os&#39;</span><span class="o">:</span><span class="nx">osStub</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should return the amount of free memory&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">freemem</span><span class="p">(),</span><span class="mi">6176197456</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That's it! The test case will be green now :)</p>
+
+<p>Proxyquire basically, <a href="https://github.com/thlorenz/proxyquire/blob/master/lib/proxyquire.js#L135">replaces</a> a module's require function.</p>
+
+<p>There are many other features like:</p>
+
+<ul>
+<li>'noCallThru',</li>
+<li>'callThru',</li>
+<li>'noPreserveCache',</li>
+<li>'preserveCache',</li>
+<li>'load'</li>
+</ul>
+
+
+<p>Please feel free to go through their extensive API <a href="https://github.com/thlorenz/proxyquire#api">DOC</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
+
+<p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=proxyquire by @nodemotw&url=http://nmotw.in/proxyquire/" title="Share proxyquire on Twitter">
+    <img src="/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/proxyquire/" title="Share proxyquire on Facebook">
+    <img src="/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/proxyquire/" title="Share proxyquire on Google Plus">
+    <img src="/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2017
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'nmotw';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://nmotw.in//github/proxyquire/';
+        var disqus_url = 'http://nmotw.in//github/proxyquire/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-5']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

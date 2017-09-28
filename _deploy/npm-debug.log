@@ -1,0 +1,41 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/hhegadehallimadh/.nvm/versions/node/v4.2.1/bin/node',
+1 verbose cli   '/Users/hhegadehallimadh/.nvm/versions/node/v4.2.1/bin/npm',
+1 verbose cli   'home',
+1 verbose cli   'dom-scroll-into-view' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 silly mapToRegistry name dom-scroll-into-view
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry http://npm.paypal.com/
+7 silly mapToRegistry uri http://npm.paypal.com/dom-scroll-into-view
+8 verbose request uri http://npm.paypal.com/dom-scroll-into-view/latest
+9 verbose request no auth needed
+10 info attempt registry request try #1 at 3:33:16 PM
+11 verbose request id af66a7ec2eb8acef
+12 http request GET http://npm.paypal.com/dom-scroll-into-view/latest
+13 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND npm.paypal.com npm.paypal.com:80
+14 info attempt registry request try #2 at 3:33:27 PM
+15 http request GET http://npm.paypal.com/dom-scroll-into-view/latest
+16 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND npm.paypal.com npm.paypal.com:80
+17 info attempt registry request try #3 at 3:34:27 PM
+18 http request GET http://npm.paypal.com/dom-scroll-into-view/latest
+19 verbose stack Error: getaddrinfo ENOTFOUND npm.paypal.com npm.paypal.com:80
+19 verbose stack     at errnoException (dns.js:26:10)
+19 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
+20 verbose cwd /Users/hhegadehallimadh/labs/nmotw.in/source
+21 error Darwin 16.6.0
+22 error argv "/Users/hhegadehallimadh/.nvm/versions/node/v4.2.1/bin/node" "/Users/hhegadehallimadh/.nvm/versions/node/v4.2.1/bin/npm" "home" "dom-scroll-into-view"
+23 error node v4.2.1
+24 error npm  v2.14.7
+25 error code ENOTFOUND
+26 error errno ENOTFOUND
+27 error syscall getaddrinfo
+28 error network getaddrinfo ENOTFOUND npm.paypal.com npm.paypal.com:80
+28 error network This is most likely not a problem with npm itself
+28 error network and is related to network connectivity.
+28 error network In most cases you are behind a proxy or have bad network settings.
+28 error network
+28 error network If you are behind a proxy, please make sure that the
+28 error network 'proxy' config is set properly.  See: 'npm help config'
+29 verbose exit [ 1, true ]
