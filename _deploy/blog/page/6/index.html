@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="📦 esbox Zero-config REPL for experimenting with next-generation JavaScript. esbox is ES2016 in a box! Get it: npm install -g esbox It automatically &hellip;">   
+    <meta name="description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/6/">
-    <meta name="twitter:description" content="📦 esbox Zero-config REPL for experimenting with next-generation JavaScript. esbox is ES2016 in a box! Get it: npm install -g esbox It automatically &hellip;">
+    <meta name="twitter:description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/6/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="📦 esbox Zero-config REPL for experimenting with next-generation JavaScript. esbox is ES2016 in a box! Get it: npm install -g esbox It automatically &hellip;" />
+    <meta property="og:description" content="resize-observer-polyfill A polyfill for Resize Observer API. Implements event based tracking of changes in the dimensions of elements. Uses &hellip;" />
 
     
 
@@ -73,9 +73,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/esbox/">
+			<a href="/resize-observer-polyfill/">
 			
-				Esbox</a>
+				Resize-observer-polyfill</a>
 		</h2>
 		<div class="meta date">
 
@@ -89,23 +89,28 @@
   
 
 
-<time datetime="2016-06-23T19:16:09+05:30" pubdate data-updated="true">Jun 23<span>rd</span>, 2016</time></div>
+<time datetime="2016-10-06T22:36:53+05:30" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="">📦 esbox</a></h1>
+		<h1><a href="">resize-observer-polyfill</a></h1>
 
-<blockquote><p>Zero-config REPL for experimenting with next-generation JavaScript.</p></blockquote>
+<blockquote><p>A polyfill for Resize Observer API.</p></blockquote>
 
-<p><code>esbox</code> is ES2016 in a box!</p>
+<p>Implements event based tracking of changes in the dimensions of elements.</p>
 
-<p><strong>Get it:</strong> <code>npm install -g esbox</code></p>
+<p>Uses MutationsObserver and falls back to an infinite dirty checking cycle if the first one is not supported.</p>
 
-<ul>
-<li><p>It automatically compiles and re-runs your script every time you save.</p></li>
-<li><p>JSBin-like setup for your local editor and terminal – with full access to Node APIs and modules.</p></li>
-<li><p>ECMAScript features that Babel supports (stage-0 and above).</p></li>
-<li><p>For a number of popular libraries, you can just import them without the need to install them first (Bascially all the dependecies of <code>esbox</code>).</p></li>
-</ul>
+<p>Handles long running CSS transitions/animations, attributes and nodes mutations along with changes made by :hover pseudo-class (optional).</p>
+
+<p>Compliant with the <a href="http://rawgit.com/WICG/ResizeObserver/master/index.html">spec</a>.</p>
+
+<p>Doesn't contain any publicly available methods except for those described in the spec.</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">resize</span><span class="o">-</span><span class="nx">observer</span><span class="o">-</span><span class="nx">polyfill</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>Sample usage:</strong></p>
@@ -115,39 +120,19 @@
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; esbox
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">ResizeObserver</span> <span class="nx">from</span> <span class="s1">&#39;resize-observer-polyfill&#39;</span><span class="p">;</span>
 </span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ResizeObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">,</span> <span class="nx">observer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
 </span><span class='line'>
-</span><span class='line'>    📦  ES2016 in a box
-</span><span class='line'>       git.io/esbox
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    &gt; esbox FILENAME
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    --cwd<span class="o">=</span>DIRECTORY   run in a different directory
-</span><span class='line'>    --no-watch        only run your script once
-</span><span class='line'>    --no-clear        disable clearing the display before each run
-</span><span class='line'>    --version         show esbox version
-</span><span class='line'>    --poll            poll file system when watching files
+</span><span class='line'><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/esbox/esbox.gif" alt="esbox" /></p>
+<p><img src="/images/resize-observer-polyfill/resize-observer-polyfill.gif" alt="resize-observer-polyfill" /></p>
+
+<p>P.S: Checkout the <a href="http://que-etc.github.io/resize-observer-polyfill">Live demo</a>.</p>
 
 		
 		
@@ -160,9 +145,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/rainbowify/">
+			<a href="/autosize-input/">
 			
-				Rainbowify</a>
+				Autosize-input</a>
 		</h2>
 		<div class="meta date">
 
@@ -176,28 +161,51 @@
   
 
 
-<time datetime="2016-06-16T19:33:58+05:30" pubdate data-updated="true">Jun 16<span>th</span>, 2016</time></div>
+<time datetime="2016-09-29T19:30:53+05:30" pubdate data-updated="true">Sep 29<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/rainbowify">rainbowify</a></h1>
+		<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
 
-<blockquote><p>rainbow print stuff in terminal</p></blockquote>
+<blockquote><p>Effortless, dynamic-width text boxes.</p></blockquote>
 
-<p><code>rainbowify</code> is an module extracted from mocha's <a href="https://github.com/mochajs/mocha/blob/master/lib/reporters/nyan.js">nyan.js</a> which is a fun little module
-that helps to print rainbow text on the terminal.</p>
+<p><strong>Features:</strong></p>
 
-<p><strong>Get it:</strong> <code>npm install --global rainbowify</code></p>
+<ul>
+<li>Dynamically adjusts the width of the text box to fit its current contents</li>
+<li>Can be initialised to fit its <code>placeholder</code> attribute</li>
+<li>Optionally set a <code>min-width</code> based on the element&rsquo;s initial content</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g autosize-input</code></p>
 
 <p><strong>Usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> &lt;some_text&gt; | rainbowify
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#bar&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#baz&#39;</span><span class="p">),</span> <span class="p">{</span> <span class="nx">minWidth</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
+<p><strong>Implementation details:</strong></p>
 
-<p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
+<ul>
+<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> property of the given text box is set, inline, to <code>content-box</code>. Therefore, the width we assign to our text box <em>excludes</em> its <code>padding</code> and <code>border</code> properties.</p></li>
+<li><p>A hidden &ldquo;ghost&rdquo; <code>div</code> &mdash; given the same <code>font-size</code> and <code>font-family</code> as the text box &mdash; is used to compute the correct width to assign to the text box. This width is recomputed and assigned to the text box on every <a href="https://developer.mozilla.org/en-US/docs/Web/Events/input"><code>input</code></a> event.</p></li>
+<li><p>The single &ldquo;ghost&rdquo; element is shared amongst all the &ldquo;autosized&rdquo; text boxes on the page.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
 
 		
 		
@@ -210,9 +218,9 @@ that helps to print rainbow text on the terminal.</p>
 	<header>
 		<h2 class="title">
 			
-			<a href="/pwaify/">
+			<a href="/asyncbox/">
 			
-				Pwaify</a>
+				Asyncbox</a>
 		</h2>
 		<div class="meta date">
 
@@ -226,20 +234,32 @@ that helps to print rainbow text on the terminal.</p>
   
 
 
-<time datetime="2016-06-09T18:03:41+05:30" pubdate data-updated="true">Jun 9<span>th</span>, 2016</time></div>
+<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/pwaify">pwaify</a></h1>
+		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
 
-<blockquote><p>PWA to desktop app!</p></blockquote>
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
 
-<p><code>pwaify</code> bring <a href="https://developers.google.com/web/progressive-web-apps/">progressive</a> <a href="https://github.com/hemanth/generator-pwa">Webapp</a> to your desktops across platforms!</p>
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
 
-<p>Makes use of <a href="http://electron.atom.io/">Electron</a> extracts the <code>manifest-json</code> from the given URL and smartly creates an electron window and loads the required.</p>
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
 
-<p><strong>Get it:</strong> <code>npm install --global pwaify</code></p>
 
-<p><strong>Sample usage:</strong></p>
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -250,29 +270,21 @@ that helps to print rainbow text on the terminal.</p>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; pwaify --help
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>  Electron PWA <span class="o">(</span>Progressive Web App<span class="o">)</span> Generator
+</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do some stuff </span>
+</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
+</span><span class='line'>    <span class="c1">// do some other stuff </span>
+</span><span class='line'><span class="p">};</span>
 </span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    <span class="nv">$ </span>pwaify &lt;input&gt;
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    --platforms Platforms to build the app.
-</span><span class='line'>    --icon App Icon.
-</span><span class='line'>
-</span><span class='line'>  Examples
-</span><span class='line'>    <span class="nv">$ </span>pwaify https://jsfeatures.in --platforms<span class="o">=</span>darwin
+</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW:</strong></p>
+<p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/pwaify/PWAify.gif" alt="PWAify" /></p>
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
 
 		
 		
@@ -285,9 +297,9 @@ that helps to print rainbow text on the terminal.</p>
 	<header>
 		<h2 class="title">
 			
-			<a href="/kind-of/">
+			<a href="/granim/">
 			
-				Kind-of</a>
+				Granim</a>
 		</h2>
 		<div class="meta date">
 
@@ -301,14 +313,27 @@ that helps to print rainbow text on the terminal.</p>
   
 
 
-<time datetime="2016-06-02T22:07:20+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2016</time></div>
+<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/kind-of">kind-of</a></h1>
+		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
 
-<blockquote><p>Get the native type of a value.</p></blockquote>
+<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
 
-<p>Most of use would have faced nuances of <code>typeof</code> like below:</p>
+<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
+
+<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Create a &lt;canvas&gt; element --&gt;</span>
+</span><span class='line'><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;granim-canvas&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -324,28 +349,271 @@ that helps to print rainbow text on the terminal.</p>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">(</span><span class="kc">null</span><span class="p">)</span>
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="sr">/RE/</span>
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">())</span>
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">[]</span>
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">typeof</span> <span class="p">{}</span>
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">granimInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Granim</span><span class="p">({</span>
+</span><span class='line'>   <span class="nx">element</span><span class="o">:</span> <span class="s1">&#39;#granim-canvas&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;granim&#39;</span><span class="p">,</span>
+</span><span class='line'>   <span class="nx">opacity</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span class='line'>   <span class="nx">states</span> <span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>       <span class="s2">&quot;default-state&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>           <span class="nx">gradients</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#834D9B&#39;</span><span class="p">,</span> <span class="s1">&#39;#D04ED6&#39;</span><span class="p">],</span>
+</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#1CD8D2&#39;</span><span class="p">,</span> <span class="s1">&#39;#93EDC7&#39;</span><span class="p">]</span>
+</span><span class='line'>           <span class="p">]</span>
+</span><span class='line'>       <span class="p">}</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><code>kind-of</code> just fixes these issues and is also <code>ES6</code> ready.</p>
+<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
 
-<p><strong>Get it:</strong> <code>npm install --save kind-of</code></p>
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/granim/granim.gif" alt="granim" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/quill/">
+			
+				Quill</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-08T18:38:58+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/quill">quill</a></h1>
+
+<blockquote><p>An API Driven Rich Text Editor.</p></blockquote>
+
+<p>For the initial commit looks like <code>quill</code> has taken two long years to reach <code>v1.x</code> and indeed it's proven itself to be a very tidy API driven rich text editor.</p>
+
+<p><strong>quill has <a href="http://quilljs.com/docs/api/">APIs</a> for:</strong></p>
+
+<ul>
+<li><p>Content handling.</p></li>
+<li><p>Formatting.</p></li>
+<li><p>Selection.</p></li>
+<li><p>Events</p></li>
+<li><p>Extensions.</p></li>
+</ul>
+
+
+<p><strong>quill also <a href="http://quilljs.com/docs/modules/">modules</a> for:</strong></p>
+
+<ul>
+<li><p>TOOLBAR</p></li>
+<li><p>KEYBOARD</p></li>
+<li><p>HISTORY</p></li>
+<li><p>CLIPBOARD</p></li>
+<li><p>FORMULA</p></li>
+<li><p>SYNTAX</p></li>
+</ul>
+
+
+<p><strong>Finally, it has theme(s)!:</strong></p>
+
+<ul>
+<li><p>Bubble</p></li>
+<li><p>Snow</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save quill</code></p>
 
 <p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Quill</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;quill&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">quill</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Quill</span><span class="p">(</span><span class="s1">&#39;#editor-container&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">modules</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">toolbar</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>      <span class="p">[{</span> <span class="nx">header</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span><span class="p">]</span> <span class="p">}],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="s1">&#39;underline&#39;</span><span class="p">],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;code-block&#39;</span><span class="p">]</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;Compose an epic...&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;snow&#39;</span> <span class="c1">// or &#39;bubble&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/quill/quill.gif" alt="quill" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/auto-install/">
+			
+				Auto-install</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-01T19:35:36+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
+
+<blockquote><p>Auto installs dependencies as you code on save.</p></blockquote>
+
+<p>Have you ever wished that need to having a tool that would just do an <code>npm install</code> of modules that you <code>import</code>?</p>
+
+<p>Well, here is <code>auto-install</code> that does exactly what you wished for!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g auto-install</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In case you run it in a folder that doesn&#39;t have a `package.json`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install --help
+</span><span class='line'>package.json does not exist
+</span><span class='line'>You can create one by using <span class="sb">`</span>npm init<span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># With a package.json</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install
+</span><span class='line'>Watchers initialized
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>CLI Flags:</strong></p>
+
+<p><code>--secure</code>  Install popular modules only (> 10k downloads in the last month)</p>
+
+<p><code>--exact</code>   Install exact version similar to <code>npm install express --save-exact</code></p>
+
+<p><code>--dont-uninstall</code>   Do not uninstall unused modules</p>
+
+<p>P.S: <a href="https://github.com/siddharthkp/auto-install/issues/6">Does it protect against typosquatting?</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/pwmetrics/">
+			
+				Pwmetrics</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-25T19:03:31+05:30" pubdate data-updated="true">Aug 25<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
+
+<blockquote><p>Progressive web metrics at your fingertipz. 💅</p></blockquote>
+
+<p><code>pwmetrics</code> CLI tool and lib to gather performance metrics via <a href="https://github.com/GoogleChrome/lighthouse/">Lighthouse</a>.</p>
+
+<p>P.S: This module is <em>IN BETA</em>, so you must be ready for anything 😉</p>
+
+<p><strong>GET IT:</strong> <code>npm install --global pwmetrics</code> or <code>npm install --save pwmetrics</code></p>
+
+<p><strong>Sample CLI usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run Chrome with port 9222 open</span>
+</span><span class='line'>chrome  --remote-debugging-port<span class="o">=</span>9222 --no-first-run --user-data-dir<span class="o">=</span><span class="k">$(</span>mktemp -d -t pwm.XXXXX<span class="k">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># run pwmetrics with your url</span>
+</span><span class='line'>pwmetrics https://jsfeatures.in
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -386,276 +654,62 @@ that helps to print rainbow text on the terminal.</p>
 <span class='line-number'>37</span>
 <span class='line-number'>38</span>
 <span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-<span class='line-number'>110</span>
-<span class='line-number'>111</span>
-<span class='line-number'>112</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">kindOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;kind-of&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;undefined&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;null&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;boolean&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Buffer</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;buffer&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;number&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;number&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;string&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;string&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;arguments&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">({});</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Test</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;object&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;date&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">([]);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;regexp&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;regexp&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{});</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="kd">function</span> <span class="o">*</span> <span class="p">()</span> <span class="p">{});</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nb">Function</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;function&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Map</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;map&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">WeakMap</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;weakmap&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Set</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;set&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">WeakSet</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;weakset&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;symbol&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int8Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;int8array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;uint8array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint8ClampedArray</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;uint8clampedarray&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int16Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;int16array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint16Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;uint16array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Int32Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;int32array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Uint32Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;uint32array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Float32Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;float32array&#39; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">kindOf</span><span class="p">(</span><span class="k">new</span> <span class="nx">Float64Array</span><span class="p">());</span>
-</span><span class='line'><span class="c1">//=&gt; &#39;float64array&#39; </span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>pwmetrics --json https://jsfeatures.in
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;timings&quot;</span>: <span class="o">[</span>
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Contentful Paint&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1875.337
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Meaningful Paint&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1970.7
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Median Visual Completion&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1997
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;First Visual Change&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 1917
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 100%&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 2004
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Time to Interactive&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: -1
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Visually Complete 85%&quot;</span>
+</span><span class='line'>    <span class="o">}</span>,
+</span><span class='line'>    <span class="o">{</span>
+</span><span class='line'>      <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;Navigation Start&quot;</span>,
+</span><span class='line'>      <span class="s2">&quot;value&quot;</span>: 0
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>  <span class="o">]</span>,
+</span><span class='line'>  <span class="s2">&quot;timestamps&quot;</span>: <span class="o">[</span>
+</span><span class='line'>    303915241.28
+</span><span class='line'>  <span class="o">]</span>
+</span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/kind-of/kind-of.gif" alt="kind-of" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/mediumcli/">
-			
-				Mediumcli</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-05-26T19:43:06+05:30" pubdate data-updated="true">May 26<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/mediumcli">mediumcli</a></h1>
-
-<blockquote><p>A CLI to Medium Stories.</p></blockquote>
-
-<p>A simple tool that helps you to read medium posts on your CLI.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g mediumcli</code></p>
-
-<p><strong>Sample usage:</strong> <code>medium [options] [command]</code></p>
+<p><strong>API:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Commands:
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">PWMetrics</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pwmetrics&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>top <span class="o">[</span>options<span class="o">]</span>         List Medium Top Stories
-</span><span class='line'><span class="nb">read</span> &lt;url&gt;            Read the story right in your terminal
-</span><span class='line'>open <span class="o">[</span>options<span class="o">]</span> &lt;url&gt;  Opens it in your browser
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>
-</span><span class='line'>-h, --help     output usage information
-</span><span class='line'>-V, --version  output the version number
-</span><span class='line'>
-</span><span class='line'>top <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>n, --number &lt;int&gt;<span class="s2">&quot;, &quot;</span>specify number of stories
-</span><span class='line'>
-</span><span class='line'>open <span class="o">[</span>options<span class="o">]</span> &lt;url&gt;
-</span><span class='line'>-a, --app &lt;application&gt;  specify app to open the url. Eg: firefox
+</span><span class='line'><span class="k">new</span> <span class="nx">PWMetrics</span><span class="p">(</span><span class="s1">&#39;https://jsfeatures.in&#39;</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span> <span class="c1">// opts =&gt; {data:fileName} for now.</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
+<p><strong>GIF FTW!:</strong></p>
 
-<p><img src="/images/mediumcli/mediumcli.gif" alt="mediumcli" /></p>
+<p><img src="/images/pwmetrics/pwmetrics.gif" alt="pwmetrics" /></p>
 
 		
 		
@@ -668,9 +722,9 @@ that helps to print rainbow text on the terminal.</p>
 	<header>
 		<h2 class="title">
 			
-			<a href="/speedline/">
+			<a href="/node-wifi-scanner/">
 			
-				Speedline</a>
+				Node-wifi-scanner</a>
 		</h2>
 		<div class="meta date">
 
@@ -684,28 +738,24 @@ that helps to print rainbow text on the terminal.</p>
   
 
 
-<time datetime="2016-05-20T10:31:00+05:30" pubdate data-updated="true">May 20<span>th</span>, 2016</time></div>
+<time datetime="2016-08-18T17:03:58+05:30" pubdate data-updated="true">Aug 18<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/speedline">speedline</a></h1>
+		<h1><a href="https://www.npmjs.com/package/node-wifi-scanner">node-wifi-scanner</a></h1>
 
-<blockquote><p>Calculate the speed index and visual performance metrics from chrome dev tool timeline.</p></blockquote>
+<blockquote><p>Scans the available WiFi networks.</p></blockquote>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a> provides useful data that can be used to measure the performance of a website.</p>
+<p><code>node-wifi-scanner</code> scans the available WiFi networks across operating systems and returns an array with objects, each object representing a network with the following properties:</p>
 
-<p>Unfortunately this API has never been good at capturing the actual <em>user experience</em> that's where <code>speedline</code> comes to rescue.</p>
+<ul>
+<li><p>channel: WiFi channel</p></li>
+<li><p>ssid: SSID of the network (if available)</p></li>
+<li><p>mac: MAC Address of the network access point</p></li>
+<li><p>rssi: signal strength</p></li>
+</ul>
 
-<p>It measures <strong>how fast the page content is visually displayed</strong>.</p>
 
-<p>The current implementation is based on the <strong>Visual Progress from Video Capture</strong> calculation method described on the <a href="https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index">Speed Index</a> page.</p>
-
-<p>The visual progress is calculated by comparing the distance between the histogram of the current frame and the final frame.</p>
-
-<p><strong>GET IT:</strong></p>
-
-<p><code>$ npm install --global speedline</code> // For CLI</p>
-
-<p><code>$ npm install --save speedline</code> // As a devdep.</p>
+<p><strong>Get it:</strong> <code>npm install --save node-wifi-scanner</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -718,324 +768,132 @@ that helps to print rainbow text on the terminal.</p>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>speedline --help
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">scanner</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-wifi-scanner&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    <span class="nv">$ </span>speedline &lt;timeline&gt; <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    -p, --pretty  Pretty print the output
-</span><span class='line'>
-</span><span class='line'>  Examples
-</span><span class='line'>    <span class="nv">$ </span>speedline ./timeline.json
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/speedline/speedline.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/obsify/">
-			
-				Obsify</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-05-12T18:49:01+05:30" pubdate data-updated="true">May 12<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/obsify">obsify</a></h1>
-
-<blockquote><p>Observableify a callback-style function</p></blockquote>
-
-<p>Observerifies (is that even a word ;)?) a callback-style function into an observable.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save obsify</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">obsify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;obsify&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">obsify</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">)(</span><span class="s1">&#39;package.json&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</span><span class='line'>        <span class="c1">//=&gt; &#39;obsify&#39;</span>
-</span><span class='line'>    <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or <code>observableify</code> all methods in a module</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">obsify</span><span class="p">(</span><span class="nx">fs</span><span class="p">).</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</span><span class='line'>        <span class="c1">//=&gt; &#39;obsify&#39;</span>
-</span><span class='line'>    <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/obsify/obsify.gif" alt="obsify" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/captionbot/">
-			
-				Captionbot</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-05-05T18:27:22+05:30" pubdate data-updated="true">May 5<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/captionbot">captionbot</a></p>
-
-<blockquote><p>Get captions for image using Microsoft's CaptionBot 🤖</p></blockquote>
-
-<p>A cheeky bot that tries recognize an image and explain it like a human would do, it requires node version <code>&gt;=4</code> this is powered by <a href="https://www.captionbot.ai/">CaptionBot</a>, a free service provided by Microsoft.</p>
-
-<p>The author says he would consider this module "for testing only" and does not recommend using in a production system.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save captionbot</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">captionbot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;captionbot&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">captionbot</span><span class="p">(</span><span class="s1">&#39;http://i.imgur.com/o33PTUp.jpg&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">caption</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">caption</span><span class="p">);</span>
+</span><span class='line'><span class="nx">scanner</span><span class="p">.</span><span class="nx">scan</span><span class="p">((</span><span class="nx">err</span><span class="p">,</span> <span class="nx">networks</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">networks</span><span class="p">);</span>
 </span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">//=&gt; &#39;I think it&#39;s a group of people posing for a picture\nand he seems 😐.&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>or</p>
+<p>Would log something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[</span> <span class="o">{</span> ssid: <span class="s1">&#39;Micromax A106&#39;</span>,
+</span><span class='line'>    mac: <span class="s1">&#39;82:6a:b0:b7:fe:d2&#39;</span>,
+</span><span class='line'>    channel: 6,
+</span><span class='line'>    rssi: -85 <span class="o">}</span> <span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically uses the underlying OS tools to do the task:</p>
+
+<ul>
+<li><p>airport on Mac OS-X: <code>airport -s</code></p></li>
+<li><p>netsh on Windows: <code>netsh wlan show networks mode=Bssid</code></p></li>
+<li><p>iwlist on Linux: <code>iwlist scan</code></p></li>
+</ul>
+
+
+<p><strong>Features that would be nice to have:</strong></p>
+
+<ul>
+<li><p>Promises rather than callbacks.</p></li>
+<li><p>allowing users to select the network and login in from CLI.</p></li>
+<li><p>Look for a better name, rather that <code>node-wifi-scanner</code> ?</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-wifi-scanner/node-wifi-scanner.gif" alt="node-wifi-scanner" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/next-update/">
+			
+				Next-update</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-11T19:10:05+05:30" pubdate data-updated="true">Aug 11<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/next-update">next-update</a></h1>
+
+<blockquote><p>Can I update the dependencies without breaking the tests?</p></blockquote>
+
+<p>Summarizing <code>next-update</code> from the authors own words:</p>
+
+<ul>
+<li>A good workflow using <em>next-update</em>
+
+<ul>
+<li>see available new versions <code>next-update --available</code></li>
+<li>check latest version of each module using <code>next-update --latest</code></li>
+<li>install new versions of the desired modules using standard <code>npm i dependency@version --save</code></li>
+</ul>
+</li>
+<li>You can use custom test command, for example <code>next-update -t "grunt test"</code>
+
+<ul>
+<li><code>npm test</code> is used by default.</li>
+</ul>
+</li>
+<li>You can keep each working version in package.json by using <code>--keep</code> flag.</li>
+</ul>
+
+
+<p><strong>Get it:</strong></p>
+
+<p><code>npm install -g next-update  // installs module globally</code></p>
+
+<p><code>npm install --save-dev next-update</code></p>
+
+<p>In your <code>package.json</code> :</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">captionbot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;captionbot&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kr">const</span> <span class="nx">caption</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">captionbot</span><span class="p">(</span><span class="s1">&#39;http://i.imgur.com/o33PTUp.jpg&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">caption</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;next-update&quot;</span><span class="o">:</span> <span class="s2">&quot;next-update -k true --tldr&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/captionbot/captionbot.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/trevor/">
-			
-				Trevor</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-04-28T15:56:32+05:30" pubdate data-updated="true">Apr 28<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/trevor">trevor</a></h1>
-
-<blockquote><p>Your own Travis CI to run tests locally.</p></blockquote>
-
-<p><img src="/images/trevor/logo.png" alt="" /></p>
-
-<p><strong>From the author:</strong></p>
-
-<p>I often need to run tests for multiple versions of Node.js.</p>
-
-<p>But I don't want to switch versions manually using n/nvm or push the code to Travis CI just to run the tests.</p>
-
-<p>That's why I created Trevor.</p>
-
-<p>It reads <code>.travis.yml</code> and runs tests in all versions you requested, just like Travis CI.</p>
-
-<p>Now, you can test before push and keep your git history clean.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save trevor</code></p>
-
 <p><strong>Sample usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>trevor --help
-</span><span class='line'>
-</span><span class='line'>  Your own Travis CI to run tests locally
-</span><span class='line'>
-</span><span class='line'>  Usage: trevor <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Options:
-</span><span class='line'>
-</span><span class='line'>    -h, --help    Show this <span class="nb">help</span>
-</span><span class='line'>    --no-clean    Don<span class="err">&#39;</span> remove the Docker image after tests
-</span><span class='line'>
-</span><span class='line'>  Required files <span class="o">(</span>in the current directory<span class="o">)</span>:
-</span><span class='line'>
-</span><span class='line'>    - package.json
-</span><span class='line'>    - .travis.yml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: <code>trevor</code> has a dependency on <a href="https://www.docker.com/">docker</a> and if <code>--no-clean</code> is not used it will remove all the docker images after the test runs.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/trevor/trevor.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/cowsay/">
-			
-				Cowsay</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-04-21T20:40:16+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/cowsay">cowsay</a></h1>
-
-<blockquote><p>A configurable talking cow!</p></blockquote>
-
-<p>This is a port of  Tony Monroe's <code>cowsay</code> Perl module.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --global cowsay</code></p>
-
-<p><strong>CLI:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -1055,32 +913,80 @@ that helps to print rainbow text on the terminal.</p>
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cowsay 
-</span><span class='line'>Usage: cowsay [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">next</span><span class="o">-</span><span class="nx">update</span> <span class="o">--</span><span class="nx">help</span> <span class="o">|</span> <span class="nx">pbcopy</span>
+</span><span class='line'><span class="nx">next</span><span class="o">-</span><span class="nx">update</span> <span class="o">-</span> <span class="nx">Tests</span> <span class="k">if</span> <span class="nx">module</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">dependencies</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">updated</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">newer</span> <span class="nx">version</span> <span class="nx">without</span> <span class="nx">breaking</span> <span class="nx">the</span> <span class="nx">tests</span>
+</span><span class='line'>  <span class="nx">version</span><span class="o">:</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">2</span>
+</span><span class='line'>  <span class="nx">author</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="s2">&quot;gleb.bahmutov@gmail.com&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="s2">&quot;Gleb Bahmutov&quot;</span><span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>If any command-line arguments are left over after all switches have been processed, they become the cow's message.
-</span><span class='line'>
-</span><span class='line'>If the program is invoked as cowthink then the cow will think its message instead of saying it.
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>  -b  Mode: Borg                                                                                                                                  
-</span><span class='line'>  -d  Mode: Dead                                                                                                                                  
-</span><span class='line'>  -g  Mode: Greedy                                                                                                                                
-</span><span class='line'>  -p  Mode: Paranoia                                                                                                                              
-</span><span class='line'>  -s  Mode: Stoned                                                                                                                                
-</span><span class='line'>  -t  Mode: Tired                                                                                                                                 
-</span><span class='line'>  -w  Mode: Wired                                                                                                                                 
-</span><span class='line'>  -y  Mode: Youthful                                                                                                                              
-</span><span class='line'>  -e  Select the appearance of the cow's eyes.                                                                                                      [default: "oo"]
-</span><span class='line'>  -T  The tongue is configurable similarly to the eyes through -T and tongue_string.                                                                [default: "  "]
-</span><span class='line'>  -h  Display this help message                                                                                                                   
-</span><span class='line'>  -n  If it is specified, the given message will not be word-wrapped.                                                                             
-</span><span class='line'>  -W  Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.       [default: 40]
-</span><span class='line'>  -f  Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.  [default: "default"]
-</span><span class='line'>  -l  List all cowfiles included in this package.                 </span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nx">Options</span><span class="o">:</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">revert</span>           <span class="nx">install</span> <span class="nx">original</span> <span class="nx">module</span> <span class="nx">versions</span> <span class="nx">listed</span> <span class="k">in</span> <span class="kr">package</span><span class="p">.</span><span class="nx">json</span>   <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">available</span><span class="p">,</span> <span class="o">-</span><span class="nx">a</span>    <span class="nx">only</span> <span class="nx">query</span> <span class="nx">available</span> <span class="nx">later</span> <span class="nx">versions</span><span class="p">,</span> <span class="k">do</span> <span class="nx">not</span> <span class="nx">test</span> <span class="nx">them</span>     <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">module</span><span class="p">,</span> <span class="o">-</span><span class="nx">m</span>       <span class="nx">checks</span> <span class="nx">specific</span> <span class="nx">module</span><span class="p">,</span> <span class="nx">can</span> <span class="nx">include</span> <span class="nx">version</span> <span class="nx">name</span><span class="err">@</span><span class="nx">version</span>  <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">null</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">latest</span><span class="p">,</span> <span class="o">-</span><span class="nx">l</span>       <span class="nx">only</span> <span class="nx">check</span> <span class="nx">latest</span> <span class="nx">available</span> <span class="nx">update</span>                        <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">color</span><span class="p">,</span> <span class="o">-</span><span class="nx">c</span>        <span class="nx">color</span> <span class="nx">terminal</span> <span class="nx">output</span> <span class="p">(</span><span class="k">if</span> <span class="nx">available</span><span class="p">)</span>                      <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">version</span><span class="p">,</span> <span class="o">-</span><span class="nx">v</span>      <span class="nx">show</span> <span class="nx">version</span> <span class="nx">and</span> <span class="nx">exit</span>                                     <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">test</span><span class="p">,</span> <span class="o">-</span><span class="nx">t</span>         <span class="nx">custom</span> <span class="nx">test</span> <span class="nx">command</span> <span class="nx">to</span> <span class="nx">run</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">npm</span> <span class="nx">test</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">skip</span>             <span class="nx">skip</span> <span class="nx">running</span> <span class="nx">tests</span> <span class="nx">first</span>                                  <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">all</span>              <span class="nx">install</span> <span class="nx">all</span> <span class="nx">modules</span> <span class="nx">at</span> <span class="nx">once</span> <span class="nx">before</span> <span class="nx">testing</span>                <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">keep</span><span class="p">,</span> <span class="o">-</span><span class="nx">k</span>         <span class="nx">keep</span> <span class="nx">tested</span> <span class="nx">version</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">working</span>                      <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">allow</span>            <span class="nx">allow</span> <span class="nx">major</span> <span class="o">/</span> <span class="nx">minor</span> <span class="o">/</span> <span class="nx">patch</span> <span class="nx">updates</span>                       <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="s2">&quot;major&quot;</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">type</span>             <span class="nx">check</span> <span class="nx">dependencies</span> <span class="nx">of</span> <span class="nx">type</span> <span class="p">(</span><span class="nx">all</span><span class="p">,</span> <span class="nx">prod</span><span class="p">,</span> <span class="nx">dev</span><span class="p">,</span> <span class="nx">peer</span><span class="p">)</span>         <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="s2">&quot;all&quot;</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">tldr</span>             <span class="nx">only</span> <span class="nx">print</span> <span class="nx">VERY</span> <span class="nx">important</span> <span class="nx">log</span> <span class="nx">messages</span>                    <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">false</span><span class="p">]</span>
+</span><span class='line'>  <span class="o">--</span><span class="nx">changed</span><span class="o">-</span><span class="nx">log</span><span class="p">,</span> <span class="o">-</span><span class="nx">L</span>  <span class="nx">print</span> <span class="nx">commit</span> <span class="nx">changes</span> <span class="nx">between</span> <span class="nx">working</span> <span class="nx">versions</span>             <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="kc">true</span><span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/next-update/next-update.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/currency-symbol-map/">
+			
+				Currency-symbol-map</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-04T17:22:51+05:30" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/currency-symbol-map">currency-symbol-map</a></h1>
+
+<blockquote><p>Lookup the currency symbol for a given currency code.</p></blockquote>
+
+<p>Name says it all, this is tiny module that's helps one to get the symbol for a given currency or get the currency got given a symbol.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save currency-symbol-map</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">getSymbolFromCurrency</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;currency-symbol-map&#39;</span><span class="p">).</span><span class="nx">getSymbolFromCurrency</span><span class="p">;</span>
+</span><span class='line'><span class="nx">getSymbolFromCurrency</span><span class="p">(</span><span class="s1">&#39;USD&#39;</span><span class="p">);</span> <span class="c1">//=&gt; &#39;$&#39; </span>
+</span><span class='line'><span class="nx">getSymbolFromCurrency</span><span class="p">(</span><span class="s1">&#39;NOT A VALID CODE&#39;</span><span class="p">);</span> <span class="c1">//=&gt; undefined </span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -1088,75 +994,15 @@ that helps to print rainbow text on the terminal.</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>
-</span><span class='line'> nmotw.in&gt; cowsay JavaScript FTW!
-</span><span class='line'> _________________
-</span><span class='line'>&lt; JavaScript FTW! &gt;
-</span><span class='line'> -----------------
-</span><span class='line'>        <span class="se">\ </span>  ^__^
-</span><span class='line'>         <span class="se">\ </span> <span class="o">(</span>oo<span class="o">)</span><span class="se">\_</span>______
-</span><span class='line'>            <span class="o">(</span>__<span class="o">)</span><span class="se">\ </span>      <span class="o">)</span><span class="se">\/\</span>
-</span><span class='line'>                <span class="o">||</span>----w |
-</span><span class='line'>                <span class="o">||</span>     <span class="o">||</span>
-</span><span class='line'>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">getCurrencyFromSymbol</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;currency-symbol-map&#39;</span><span class="p">).</span><span class="nx">getCurrencyFromSymbol</span><span class="p">;</span>
+</span><span class='line'><span class="nx">getCurrencyFromSymbol</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">);</span> <span class="c1">//=&gt; &#39;USD&#39; </span>
+</span><span class='line'><span class="nx">getCurrencyFromSymbol</span><span class="p">(</span><span class="s1">&#39;NOT A VALID CODE&#39;</span><span class="p">);</span> <span class="c1">//=&gt; undefined </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>API:</strong></p>
+<p><strong>GIF FTW:</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">cowsay</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;cowsay&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cowsay</span><span class="p">.</span><span class="nx">say</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">text</span> <span class="o">:</span> <span class="s2">&quot;I&#39;m a moooodule&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">e</span> <span class="o">:</span> <span class="s2">&quot;oO&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">T</span> <span class="o">:</span> <span class="s2">&quot;U &quot;</span>
-</span><span class='line'><span class="p">}));</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// or cowsay.think()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'> _________________
-</span><span class='line'><span class="o">(</span> I<span class="err">&#39;</span>m a moooodule <span class="o">)</span>
-</span><span class='line'> -----------------
-</span><span class='line'>        o   ^__^
-</span><span class='line'>         o  <span class="o">(</span>oO<span class="o">)</span><span class="se">\_</span>______
-</span><span class='line'>            <span class="o">(</span>__<span class="o">)</span><span class="se">\ </span>      <span class="o">)</span><span class="se">\/\</span>
-</span><span class='line'>             U  <span class="o">||</span>----w |
-</span><span class='line'>                <span class="o">||</span>     <span class="o">||</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/cowsay/cowsay.gif" alt="cowsay.gif" /></p>
+<p><img src="/images/currency-symbol-map/curreny-symbol-map.gif" alt="currency-symbol-map" /></p>
 
 		
 		

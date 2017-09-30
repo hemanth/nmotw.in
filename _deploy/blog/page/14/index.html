@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="treeify converts a JS object into a nice and readable tree structure for the console Say, you an object that has the dependencies of a node module &hellip;">   
+    <meta name="description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/14/">
-    <meta name="twitter:description" content="treeify converts a JS object into a nice and readable tree structure for the console Say, you an object that has the dependencies of a node module &hellip;">
+    <meta name="twitter:description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/14/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="treeify converts a JS object into a nice and readable tree structure for the console Say, you an object that has the dependencies of a node module &hellip;" />
+    <meta property="og:description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;" />
 
     
 
@@ -73,9 +73,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/treeify/">
+			<a href="/cssom/">
 			
-				Treeify</a>
+				Cssom</a>
 		</h2>
 		<div class="meta date">
 
@@ -89,16 +89,16 @@
   
 
 
-<time datetime="2014-12-11T18:36:10+05:30" pubdate data-updated="true">Dec 11<span>th</span>, 2014</time></div>
+<time datetime="2015-03-26T19:05:30+05:30" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/treeify">treeify</a></h1>
+		<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
 
-<blockquote><p>converts a JS object into a nice and readable tree structure for the console</p></blockquote>
+<blockquote><p>CSS Object Model implementation and CSS parser.</p></blockquote>
 
-<p>Say, you an object that has the dependencies of a node module and you want to represent it as a tree structure or may you have a filesystem hierarchy to display on CLI, it's kina tough right? Well...here is <code>treeify</code> for you!</p>
+<p><code>cssom</code> is parser written in pure javascript, it also has partially implemented of <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>, works across node/io.js and modren browsers.</p>
 
-<p><strong>Get it:</strong> <code>npm install treeify</code></p>
+<p><strong>Install it:</strong> <code>npm install cssom --save</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -122,49 +122,499 @@
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">treeify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;treeify&#39;</span><span class="p">);</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cssom&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">CSSStyleDeclaration</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleDeclaration</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSRule</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSRule</span><span class="p">]</span>
+</span><span class='line'>     <span class="nx">STYLE_RULE</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">IMPORT_RULE</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">MEDIA_RULE</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">FONT_FACE_RULE</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">PAGE_RULE</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAMES_RULE</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAME_RULE</span><span class="o">:</span> <span class="mi">9</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">CSSStyleRule</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleRule</span><span class="p">]</span> <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">MediaList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MediaList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSMediaRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSMediaRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSImportRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSImportRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSFontFaceRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSFontFaceRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">StyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">StyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframesRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframesRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframeRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframeRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">MatcherList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MatcherList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSDocumentRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSDocumentRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValue</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValue</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValueExpression</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValueExpression</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">clone</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">clone</span><span class="p">]</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">deps</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;npm@2.1.12&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s2">&quot;archy@1.0.0&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;abbrev@1.0.5&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;char-spinner@1.0.1&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;block-stream@0.0.7&quot;</span><span class="o">:</span> <span class="s2">&quot;inherits@2.0.1&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-</span><span class='line'>   <span class="nx">treeify</span><span class="p">.</span><span class="nx">asTree</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
-</span><span class='line'><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">//or</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">treeify</span><span class="p">.</span><span class="nx">asLines</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">line</span><span class="p">){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;.main{display:flex}&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">cssRules</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="p">{</span> <span class="nx">parentRule</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nx">Circular</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">selectorText</span><span class="o">:</span> <span class="s1">&#39;.main&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">style</span><span class="o">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">__starts</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">__ends</span><span class="o">:</span> <span class="mi">19</span> <span class="p">}</span> <span class="p">]</span> <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Both would output:</p>
+<p>Thanks to <a href="http://n12v.com/">Nikita Vasilyev</a> for this early implementation of <code>cssom</code> (:</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cssom/cssom.gif" alt="cssom" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/did-you-mean/">
+			
+				Did-you-mean</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-19T17:41:21+05:30" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/did-you-mean">did-you-mean</a></h1>
+
+<blockquote><p>Fuzzy match a command from a list (typo-safety)</p></blockquote>
+
+<p>This module does a Fuzzy match a word from your list of commands or keywords from node.js/io.js to provide a friendly typo-safe human prompt.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save did-you-mean</code></p>
+
+<p><strong>API:</strong></p>
+
+<ul>
+<li><p>get -> Get the closest match.</p></li>
+<li><p>setThreshold(3) -> Set the threshold (the maximum Levenshtein distance)</p></li>
+<li><p>list('key') -> List all matches.</p></li>
+<li><p>ignoreCase() -> Set ignore case.</p></li>
+<li><p>matchCase() -> Set match case.</p></li>
+<li><p>add('key1','key2',...); -> Add more values.</p></li>
+</ul>
+
+
+<p><strong>Usage:</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">└─</span> <span class="nx">npm</span><span class="err">@</span><span class="mf">2.1</span><span class="p">.</span><span class="mi">12</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="nx">archy</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">0</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="nx">abbrev</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">5</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="kr">char</span><span class="o">-</span><span class="nx">spinner</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">1</span>
-</span><span class='line'>   <span class="err">└─</span> <span class="nx">block</span><span class="o">-</span><span class="nx">stream</span><span class="err">@</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">7</span><span class="o">:</span> <span class="nx">inherits</span><span class="err">@</span><span class="mf">2.0</span><span class="p">.</span><span class="mi">1</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Matcher</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;did-you-mean&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Matcher</span><span class="p">(</span><span class="s1">&#39;init install update upgrade npm brew apt-get&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// &quot;upgrade&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;brwe&#39;</span><span class="p">);</span> <span class="c1">// &quot;brew&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;atp-get&#39;</span><span class="p">);</span> <span class="c1">// &quot;apt-get&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">values</span><span class="p">;</span> <span class="c1">// [&quot;npm&quot;, &quot;brew&quot;, &quot;upgrade&quot;, &quot;update&quot;, &quot;apt-get&quot;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// {distance: 2, value: &quot;upgrade&quot;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/did-you-mean/did-you-mean.gif" alt="did-you-mean" /></p>
+
+<p>Thanks to Boris Okunskiy for bringing <code>did-you-mean</code> to web and CLI.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/confirm-simple/">
+			
+				Confirm-simple</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
+
+<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
+
+<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
+
+<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
+
+<p><strong>API and simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">confirm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;confirm-simple&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Do you accept the EULA?&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span> <span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good for you!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Sorry you wont get to use the software&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
+
+<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dompurify/">
+			
+				Dompurify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
+
+<blockquote><p>Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG!</p></blockquote>
+
+<p>DOMPurify sanitizes HTML and prevents XSS attacks.</p>
+
+<p>|dirty HTML |  => |DOMPurify.sanitize |  => | Clean and safe HTML |</p>
+
+<p>The faster your browser, the faster DOMPurify will be ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install --save dompurify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">DOMpurify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dompurify);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">DOMPurify.sanitize(&#39;</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="nx">x</span> <span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1">//&gt;&#39;); // becomes &lt;img src=&quot;x&quot;&gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="s1">&#39;&lt;svg&gt;&lt;g/onload=alert(2)//&lt;p&gt;&#39;</span><span class="p">);</span> <span class="c1">// becomes &lt;svg&gt;&lt;g&gt;&lt;/g&gt;&lt;/svg&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's configurable: <code>var config = { ALLOWED_TAGS: ['p', '#text'], KEEP_CONTENT: false };</code> and <code>DOMPurify.sanitize(str, config)</code></p>
+
+<p>We can also use <code>hooks</code>:</p>
+
+<ul>
+<li><p>beforeSantitizeElements</p></li>
+<li><p>afterSantitizeElements</p></li>
+<li><p>beforeSantitizeAttributes</p></li>
+<li><p>afterSantitizeAttributes</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">addHook</span><span class="p">(</span><span class="s1">&#39;beforeSantitizeElements&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">currentNode</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Play with currentNode.</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">currentNode</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dompurify/dompurify.gif" alt="dompurify" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dom-event/">
+			
+				Dom-event</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
+
+<blockquote><p>Add/remove DOM events</p></blockquote>
+
+<p>Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser compliance all in just 15 lines of code ;)</p>
+
+<p><strong>Add event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">on</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Remove event:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">off</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install it:</strong> <code>npm install dom-event</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">on</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-event&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">off</span> <span class="o">=</span> <span class="nx">on</span><span class="p">.</span><span class="nx">off</span><span class="p">;</span> <span class="c1">// :)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">on</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">off</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span> <span class="c1">// No alerts :)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dom-event/dom-event.gif" alt="dom-event" /></p>
+
+<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/sentencer/">
+			
+				Sentencer</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-19T19:15:03+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/sentencer">sentencer</a></h1>
+
+<blockquote><p>Templating engine for madlibs-style sentence generating.</p></blockquote>
+
+<p>Create crazy sentences with <code>nouns</code>, <code>adjectives</code> and your own randomness!</p>
+
+<p><code>Sentencer</code> was written for and powers <a href="http://metaphorpsum.com">Metaphorpsum</a>. The noun and adjective lists for form -> <a href="http://www.ashley-bovan.co.uk/words/partsofspeech.html">Word Lists for Writers</a>.</p>
+
+<p><strong>Install it:</strong> <code>npm install sentencer --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Sentencer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sentencer&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot; A  jumped over &quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">//&#39; A agreement jumped over a sprightful&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; A shrine jumped over a wordless&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;  jumped over &quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; an instruction jumped over a scabrous&#39;</span>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; a thistle jumped over a shapely&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Define custom actions:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">rand</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span>  <span class="o">*</span> <span class="mi">10</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="s2">&quot;I like &quot;</span><span class="p">);</span> <span class="c1">// &#39;I like 7&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW:</strong></p>
 
-<p><img src="/images/treeify/treeify.gif" alt="treeify" /></p>
+<p><img src="/images/sentencer/sentencer.gif" alt="sentencer" /></p>
 
-<p>Thanks to <a href="http://lukep.org/">Luke Plaster</a> for making our life a bit more easier on the CLI.</p>
+<p>Thanks to <a href="https://twitter.com/kylestetz">@kylestetz</a> for this fun module! (:</p>
 
 		
 		
@@ -177,9 +627,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/tldr/">
+			<a href="/dehumanize-date/">
 			
-				Tldr</a>
+				Dehumanize-date</a>
 		</h2>
 		<div class="meta date">
 
@@ -193,28 +643,28 @@
   
 
 
-<time datetime="2014-12-04T17:59:16+05:30" pubdate data-updated="true">Dec 4<span>th</span>, 2014</time></div>
+<time datetime="2015-02-12T17:57:21+05:30" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://github.com/tldr-pages/tldr">tldr</a></h1>
+		<h1><a href="https://www.npmjs.com/package/dehumanize-date">dehumanize-date</a></h1>
 
-<p>If you are new to CLI or not able to recall the flags of your CLI tool, you would consult <code>man pages</code>.</p>
+<blockquote><p>Parse dates in all the formats humans like to use.</p></blockquote>
 
-<p><code>tldr</code> is "Too Long Didn't Read" version of man pages ;) i.e it shows us the common usages of a given command.</p>
-
-<p><code>tldr</code> covers:</p>
+<p>Yes, it dehumanize dates will almost all the formates humans like to use, those invovle:</p>
 
 <ul>
-<li><p>Common commands.</p></li>
-<li><p>GNU/Linux.</p></li>
-<li><p>OSX.</p></li>
-<li><p>SunOS.</p></li>
+<li>today/tomorrow/yesterday</li>
+<li>next/this/last Wednesday</li>
+<li>12th January</li>
+<li>12th January 1950</li>
+<li>09-08-2008</li>
+<li>2008-08-09</li>
 </ul>
 
 
-<p><strong>Install it as a CLI app:</strong> <code>$ npm install -g tldr</code></p>
+<p>And returns a computer friendly date of the format: <code>yyyy-dd-mm</code></p>
 
-<p><strong>Sample usage:</strong></p>
+<p>The heart of the module consists of the below regular expressions:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -223,97 +673,15 @@
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>tldr sudo
-</span><span class='line'>
-</span><span class='line'>  execute a <span class="nb">command </span>as another user
-</span><span class='line'>
-</span><span class='line'>  - Listing of an unreadable directory:
-</span><span class='line'>
-</span><span class='line'>  sudo ls /usr/local/scrt
-</span><span class='line'>
-</span><span class='line'>  - To edit a file as user www:
-</span><span class='line'>
-</span><span class='line'>  sudo -u www vi /var/www/index.html
-</span><span class='line'>
-</span><span class='line'>  - To shutdown the machine:
-</span><span class='line'>
-</span><span class='line'>  sudo shutdown -r +10 <span class="s2">&quot;Cya soon!&quot;</span>
-</span><span class='line'>
-</span><span class='line'>  - To repeat the last <span class="nb">command </span>as sudo
-</span><span class='line'>
-</span><span class='line'>  sudo !!
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">NUMBER</span>              <span class="o">=</span> <span class="sr">/^[0-9]+$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_WITH_ORDINAL</span> <span class="o">=</span> <span class="sr">/^([0-9]+)(st|nd|rd|th)?$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE</span>         <span class="o">=</span> <span class="sr">/^(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{4})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_USA</span>     <span class="o">=</span> <span class="sr">/^(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{4})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_SHORT_YEAR</span>         <span class="o">=</span> <span class="sr">/^(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{2})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_SHORT_YEAR_USA</span>     <span class="o">=</span> <span class="sr">/^(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{2})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">ISO_8601_DATE</span>       <span class="o">=</span> <span class="sr">/^([0-9]{4})-?(1[0-2]|0?[1-9])-?(3[0-1]|[1-2][0-9]|0?[1-9])$/</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/tldr/tldr.gif" alt="tldr" /></p>
-
-<p>All TLDR pages are in <code>markdown</code> format, checkout <a href="https://github.com/tldr-pages/tldr/blob/master/pages/common/sudo.md">sudo</a> page for an example, this is a community dirven effort, so please feel free to <a href="https://github.com/tldr-pages/tldr/blob/master/CONTRIBUTING.md">contribute</a> :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fake-identity/">
-			
-				Fake-identity</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-27T17:31:17+05:30" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/fake-identity">fake-identity</a></h1>
-
-<blockquote><p>Generate random identity objects including name, address, etc. This may be useful if you are trying to fill your application with random personal data.</p></blockquote>
-
-<p><strong>What else?</strong></p>
-
-<ul>
-<li>Generates a single random identity or multiple identities in an array.</li>
-<li>Includes first and last names, email address, phone number, street, city, state, zip code, date of birth, sex, company, and department.</li>
-<li>Email address is based off of name.</li>
-<li>First name matches sex.</li>
-<li>All names, streets, and cities are commonly found in the US.</li>
-<li>States are weighted on population, so more populous states appear more often.</li>
-<li>Zip codes are loosely based on state. Zip codes are weird so it's not perfect, though.</li>
-<li>Date of birth will be between 18 and 60.</li>
-<li>Usable in the browser or Node.js.</li>
-<li>No dependencies.</li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install fake-identity</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -353,68 +721,50 @@
 <span class='line-number'>34</span>
 <span class='line-number'>35</span>
 <span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">identity</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fake-identity&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">identity</span><span class="p">.</span><span class="nx">generate</span><span class="p">();</span>
-</span><span class='line'><span class="cm">/* </span>
-</span><span class='line'><span class="cm">Would result in a random object like:</span>
-</span><span class='line'><span class="cm">{ sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">  firstName: &#39;Jonathan&#39;,</span>
-</span><span class='line'><span class="cm">  lastName: &#39;Murphy&#39;,</span>
-</span><span class='line'><span class="cm">  emailAddress: &#39;jmurphy@example.com&#39;,</span>
-</span><span class='line'><span class="cm">  phoneNumber: &#39;(555) 555-2739&#39;,</span>
-</span><span class='line'><span class="cm">  street: &#39;4473 Highland Avenue&#39;,</span>
-</span><span class='line'><span class="cm">  city: &#39;Glendale&#39;,</span>
-</span><span class='line'><span class="cm">  state: &#39;KS&#39;,</span>
-</span><span class='line'><span class="cm">  zipCode: &#39;67069&#39;,</span>
-</span><span class='line'><span class="cm">  dateOfBirth: Mon Jan 24 1955 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">  company: &#39;Woodgrove Bank&#39;,</span>
-</span><span class='line'><span class="cm">  department: &#39;Engineering&#39; }</span>
-</span><span class='line'><span class="cm">*/</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">dehumanizeDate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dehumanize-date&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="nx">identity</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// Int val for the number of records.</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span>
+</span><span class='line'><span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">]</span>
+</span><span class='line'>  <span class="nx">parseNearbyDays</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNearbyDays</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseLastThisNext</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseLastThisNext</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseNumberDate</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNumberDate</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseNumberDateShortYear</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNumberDateShortYear</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseWordyDate</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseWordyDate</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">monthFromName</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">monthFromName</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">date</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">date</span><span class="p">]</span> <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'><span class="cm">/*[ { sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">    firstName: &#39;Nathan&#39;,</span>
-</span><span class='line'><span class="cm">    lastName: &#39;Morgan&#39;,</span>
-</span><span class='line'><span class="cm">    emailAddress: &#39;nmorgan@example.com&#39;,</span>
-</span><span class='line'><span class="cm">    phoneNumber: &#39;(555) 555-5027&#39;,</span>
-</span><span class='line'><span class="cm">    street: &#39;2897 Meadow Lane&#39;,</span>
-</span><span class='line'><span class="cm">    city: &#39;Ashland&#39;,</span>
-</span><span class='line'><span class="cm">    state: &#39;CA&#39;,</span>
-</span><span class='line'><span class="cm">    zipCode: &#39;94347&#39;,</span>
-</span><span class='line'><span class="cm">    dateOfBirth: Fri Jan 14 1966 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">    company: &#39;Northwind Traders&#39;,</span>
-</span><span class='line'><span class="cm">    department: &#39;Product Management&#39; },</span>
-</span><span class='line'><span class="cm">  { sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">    firstName: &#39;Jackson&#39;,</span>
-</span><span class='line'><span class="cm">    lastName: &#39;Wilson&#39;,</span>
-</span><span class='line'><span class="cm">    emailAddress: &#39;jwilson@example.com&#39;,</span>
-</span><span class='line'><span class="cm">    phoneNumber: &#39;(555) 555-7407&#39;,</span>
-</span><span class='line'><span class="cm">    street: &#39;514 Court Street&#39;,</span>
-</span><span class='line'><span class="cm">    city: &#39;Shiloh&#39;,</span>
-</span><span class='line'><span class="cm">    state: &#39;MO&#39;,</span>
-</span><span class='line'><span class="cm">    zipCode: &#39;64416&#39;,</span>
-</span><span class='line'><span class="cm">    dateOfBirth: Sun Apr 02 1995 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">    company: &#39;Fourth Coffee&#39;,</span>
-</span><span class='line'><span class="cm">    department: &#39;Information Systems&#39; } ]</span>
-</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;today&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-12&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;tommorrow&quot;</span><span class="p">)</span> <span class="c1">// In case it does not match any.</span>
+</span><span class='line'><span class="kc">null</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;tomorrow&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-13&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;yesterday&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-11&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;1st January&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-01-01&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;1st January 1997&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;1997-01-01&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;09-09-2009&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2009-09-09&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;2009-09-09&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2009-09-09&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/fake-identity/fake-identity.gif" alt="fake-identity" /></p>
+<p><img src="/images/dehumanize-date/dehumanize-date.gif" alt="dehumanize-date" /></p>
 
-<p>This is pretty modular and sweet util, that needs some more configurability, thanks to <a href="http://travishorn.com/">Travis Horn</a> for fake-identity.</p>
+<p>Thanks for <a href="http://www.jepso.com">Forbes Lindesay</a> for dehumanizing dates ;)</p>
 
 		
 		
@@ -427,9 +777,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/npm-check-updates/">
+			<a href="/objectmap/">
 			
-				Npm-check-updates</a>
+				Objectmap</a>
 		</h2>
 		<div class="meta date">
 
@@ -443,14 +793,24 @@
   
 
 
-<time datetime="2014-11-20T20:22:16+05:30" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time></div>
+<time datetime="2015-02-05T19:33:17+05:30" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/npm-check-updates">npm-check-updates</a></h1>
+		<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
 
-<p>Finding all updates to dependencies and updating them is very easy with <code>npm-check-updates</code>.</p>
+<blockquote><p>Use a ES6 map, like an object.</p></blockquote>
 
-<p><strong>Install it globally:</strong> <code>npm install -g npm-check-updates</code></p>
+<p>This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect API with proxy to make give us a convience method so that maps can be used like an Object.</p>
+
+<p>What other advantages apart from syntax sugar?</p>
+
+<ul>
+<li><p>Iterate it like a regular object with <code>(for in)</code> without worrying about <code>hasOwnProperty</code> checks.</p></li>
+<li><p>Iterate it <code>(for of)</code> you will get arrays of length 2 of both keys and values.</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save objectmap</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
@@ -463,48 +823,25 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates
-</span><span class='line'>npm http GET http://registry.npmjs.org/read-chunk
-</span><span class='line'>npm http GET http://registry.npmjs.org/mocha
-</span><span class='line'>npm http GET http://registry.npmjs.org/browserify
-</span><span class='line'>npm http 304 http://registry.npmjs.org/browserify
-</span><span class='line'>npm http 304 http://registry.npmjs.org/read-chunk
-</span><span class='line'>npm http 304 http://registry.npmjs.org/mocha
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">oMap</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;objectmap&#39;</span><span class="p">);</span>
 </span><span class='line'>
-</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
-</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">oMap</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// Same as `map.set(&#39;answer&#39;,42);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span><span class="p">;</span> <span class="c1">// Same as `map.get(&#39;abc&#39;);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">delete</span> <span class="nx">map</span><span class="p">.</span><span class="nx">abc</span><span class="p">;</span> <span class="c1">// Same as `map.delete(&#39;abc&#39;);`</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates -u
-</span><span class='line'>
-</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
-</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
-</span><span class='line'>
-</span><span class='line'>package.json upgraded
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>npm-check-updates
-</span><span class='line'>
-</span><span class='line'>All dependencies match the latest package versions :<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>Caveat: <code>map[3]</code> implies <code>map.set('3')</code> not <code>map.set(3)</code></p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/npm-check-updates/npm-check-updates.gif" alt="" /></p>
+<p><img src="/images/objectmap/objectmap.gif" alt="" /></p>
 
-<p>Thanks to Tomas Junnonen for this cute little util.</p>
+<p>Thanks to <a href="http://calvinmetcalf.com">Calvin</a> for this useful util :)</p>
 
 		
 		
@@ -517,9 +854,9 @@
 	<header>
 		<h2 class="title">
 			
-			<a href="/npm-me/">
+			<a href="/node-rules/">
 			
-				Npm-me</a>
+				Node-rules</a>
 		</h2>
 		<div class="meta date">
 
@@ -533,16 +870,180 @@
   
 
 
-<time datetime="2014-11-13T18:24:00+05:30" pubdate data-updated="true">Nov 13<span>th</span>, 2014</time></div>
+<time datetime="2015-01-29T17:53:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/npm-me">npm-me</a></h1>
+		<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
 
-<blockquote><p>Get a list of download counts over the last month for a particular user's packages.</p></blockquote>
+<blockquote><p>Business Rules Engine for JavaScript.</p></blockquote>
 
-<p><strong>Installing it:</strong> <code>npm install npm-me</code> or <code>npm install -g npm-me</code></p>
+<p><code>node-rules</code> is a module of it's own kind, it's a light weight forward chaining Rule Engine!</p>
 
-<p><strong>CLI usage:</strong></p>
+<p><strong>Install it:</strong> <code>npm install --save node-rules</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>It's a three step process, to get the engine running:</p>
+
+<ul>
+<li><p>Defining a Rule.</p></li>
+<li><p>Defining a Fact.</p></li>
+<li><p>Initialize the rules engine and execute the rule.</p></li>
+</ul>
+
+
+<p><strong>Create a rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Sample Rule to block a transaction if its below 500 */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;condition&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">transactionTotal</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s2">&quot;consequence&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">reason</span> <span class="o">=</span> <span class="s2">&quot;The transaction was blocked as it was less than 500&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Create a fact:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Fact with less than 500 as transaction, and this should be blocked */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fact</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;user4&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;application&quot;</span><span class="o">:</span> <span class="s2">&quot;MOB2&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;transactionTotal&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;cardType&quot;</span><span class="o">:</span> <span class="s2">&quot;Credit Card&quot;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Initialize the rules engine:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Creating Rule Engine instance and registering rule */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">R</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RuleEngine</span><span class="p">();</span>
+</span><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">rule</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Execute the rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="nx">fact</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valid transaction&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Blocked Reason:&quot;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reason</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-rules/node-rules.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mithunsatheesh">Mithun Satheesh</a> for this adventurous module.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/nsp/">
+			
+				Nsp</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-22T19:03:18+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/nsp/">nsp</a> aka: <a href="http://nodesecurity.io">Node Security Project</a></h1>
+
+<blockquote><p>Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB.</p></blockquote>
+
+<p><strong>Install it:</strong> <code>npm install -g nsp</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; nsp
+</span><span class='line'>
+</span><span class='line'>Usage: <span class="o">[</span><span class="nb">command</span><span class="o">]</span> --arg<span class="o">=</span>value --arg2
+</span><span class='line'>
+</span><span class='line'>Help:
+</span><span class='line'>  <span class="nb">help              </span>Show <span class="nb">help </span>menu
+</span><span class='line'>  <span class="o">[</span>cmd<span class="o">]</span> <span class="nb">help        </span>Show <span class="nb">command help </span>menu
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  version           shows the current version of nsp
+</span><span class='line'>  shrinkwrap        <span class="nb">alias </span>to audit-shrinkwrap
+</span><span class='line'>  audit-shrinkwrap  audits your <span class="sb">`</span>npm shrinkwrap<span class="sb">`</span> against NSP db
+</span><span class='line'>  package           <span class="nb">alias </span>to audit-package
+</span><span class='line'>  audit-package     audits your package.json against NSP db
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -559,597 +1060,31 @@
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw&gt; npm-me hemanth
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; cat package.json
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;test&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;version&quot;</span>: <span class="s2">&quot;0.0.1&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;author&quot;</span>: <span class="s2">&quot;Node Security Project&quot;</span>,
+</span><span class='line'>  <span class="s2">&quot;dependencies&quot;</span>: <span class="o">{</span>
+</span><span class='line'>    <span class="s2">&quot;node-print&quot;</span>: <span class="s2">&quot;0.0.4&quot;</span>,
+</span><span class='line'>    <span class="s2">&quot;request&quot;</span>: <span class="s2">&quot;^2.40.0&quot;</span>,
+</span><span class='line'>    <span class="s2">&quot;qs&quot;</span>: <span class="s2">&quot;^0.5&quot;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
 </span><span class='line'>
-</span><span class='line'>NAME                 COUNT
-</span><span class='line'>has-properties          10
-</span><span class='line'>color-type              11
-</span><span class='line'>yoda-said               12
-</span><span class='line'>systemize               12
-</span><span class='line'>inpm                    13
-</span><span class='line'>cani                    13
-</span><span class='line'>randhex                 14
-</span><span class='line'>gulp-prune-html         14
-</span><span class='line'>gignore                 15
-</span><span class='line'>all-builtins            15
-</span><span class='line'>gandhi-said             15
-</span><span class='line'>an-async                16
-</span><span class='line'>npm-repo                16
-</span><span class='line'>ip2dword                16
-</span><span class='line'>generator-webrtc        17
-</span><span class='line'>gulp-html2txt           17
-</span><span class='line'>ndocs                   17
-</span><span class='line'>get-pdf-urls            18
-</span><span class='line'>gulp-html2md            19
-</span><span class='line'>is-deprecated           19
-</span><span class='line'>humem                   19
-</span><span class='line'>climagic                20
-</span><span class='line'>gntr                    21
-</span><span class='line'>broccoli-md             22
-</span><span class='line'>broccoli-xml2json       22
-</span><span class='line'>lie-fs                  26
-</span><span class='line'>gulp-js2coffee          26
-</span><span class='line'>octodex                 29
-</span><span class='line'>generator-atom          30
-</span><span class='line'>broccoli-es6-arrow      31
-</span><span class='line'>bjs                     33
-</span><span class='line'>xkcd-imgs               35
-</span><span class='line'>prepend-file            37
-</span><span class='line'>gulp-html2jade          39
-</span><span class='line'>grunt-html2jade         42
-</span><span class='line'>gulp-hogan              43
-</span><span class='line'>is-keyword              50
-</span><span class='line'>inline-elements         54
-</span><span class='line'>edich                   61
-</span><span class='line'>gulp-jstransform       104
-</span><span class='line'>is-builtin             114
-</span><span class='line'>is-m4a                 145
-</span><span class='line'>is-mp3                 146
-</span><span class='line'>is-ogg                 148
-</span><span class='line'>is-wav                 148
-</span><span class='line'>is-flac                150
-</span><span class='line'>audio-type             157
-</span><span class='line'>gulp-removelogs        223
-</span><span class='line'>gulp-cleanhtml         448
-</span><span class='line'>rsj                    574
-</span><span class='line'>generator-node         606
-</span><span class='line'><span class="nb">enable               </span>1,193
-</span><span class='line'>void-elements      142,794
-</span><span class='line'>
-</span><span class='line'>Total  147,889
+</span><span class='line'>nmotw.in&gt; nsp package
+</span><span class='line'>Name  Installed  Patched  Vulnerable Dependency
+</span><span class='line'>qs      0.5.6     &gt;<span class="o">=</span> 1.x  <span class="nb">test</span>@0.0.1 &gt; qs@0.5.6
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>API:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">npmme</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npm-me&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">npmme</span><span class="p">(</span><span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">packages</span><span class="p">){</span>
-</span><span class='line'>  <span class="c1">// packages =&gt; [{name: &#39;&#39;, count:0},...]</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>The same can be used for auditing <a href="https://docs.npmjs.com/cli/shrinkwrap">shrinkwrap</a>.</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/npm-me/npm-me.gif" alt="" /></p>
+<p><img src="/images/nsp/nsp.gif" alt="nsp" /></p>
 
-<p>Thanks to <a href="http://twitter.com/hughskennedy">Hugh Kennedy</a> for this cheeky util!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/npm-clone/">
-			
-				Npm-clone</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-30T18:29:03+05:30" pubdate data-updated="true">Oct 30<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/npm-clone">npm-clone</a></h1>
-
-<p>This is a CLI util that will help you to:</p>
-
-<ul>
-<li><p>Clone a node module from it's name.</p></li>
-<li><p>Install all the dependencies.</p></li>
-<li><p>Run its tests!</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g npm-clone</code></p>
-
-<p><strong>Usage example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># clone a node module</span>
-</span><span class='line'>npm-clone is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone using its private url</span>
-</span><span class='line'>npm-clone --ssh is-mp3
-</span><span class='line'>npm-clone --https is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone and install dependencies</span>
-</span><span class='line'>npm-clone install is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone, install dependencies and run its tests</span>
-</span><span class='line'>npm-clone install <span class="nb">test </span>is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># with a short form</span>
-</span><span class='line'>npm-clone all is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># flags still apply</span>
-</span><span class='line'>npm-clone --ssh all is-mp3
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/npm-clone/npm-clone.gif" alt="npm-clone" /></p>
-
-<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this helper! :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/propagate/">
-			
-				Propagate</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-23T18:08:23+05:30" pubdate data-updated="true">Oct 23<span>rd</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/propagate">propagate</a></h1>
-
-<blockquote><p>Propagate events from one event emitter into another.</p></blockquote>
-
-<p>An other sweet and simple module, that helps to propagate events!</p>
-
-<p><strong>Get it:</strong> <code>npm install propagate</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">EventEmitter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;events&#39;</span><span class="p">).</span><span class="nx">EventEmitter</span><span class="p">;</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">propagate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;propagate&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">evn1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">evn2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">propagate</span><span class="p">(</span><span class="nx">evn1</span><span class="p">,</span><span class="nx">evn2</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">evn2</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Got a propagated event&#39;</span><span class="p">,</span> <span class="nx">msg</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">evn1</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;Yo!&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="c1">// Got a propagated event Yo!</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/propagate/propagate.gif" alt="propagate" /></p>
-
-<p>Thanks to <a href="http://metaduck.com/">Pedro Teixeira</a> for <a href="https://www.npmjs.org/package/propagate">propagate</a>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/http-teapot/">
-			
-				Http-teapot</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-16T18:53:28+05:30" pubdate data-updated="true">Oct 16<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/http-teapot">http-teapot</a></h1>
-
-<p>Add support for <a href="https://www.ietf.org/rfc/rfc2324.txt">RFC 2324</a> to any HTTP server.</p>
-
-<p>P.S:  Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0) was a April fools RFC ;) HTTP status code <code>418</code>.</p>
-
-<p>BTW if you are wondering why this made in to this list, <code>http-teapot</code> module is the 100,000th module to npm today!</p>
-
-<blockquote class="twitter-tweet" lang="en"><p>congrats to <a href="https://twitter.com/wa7son">@wa7son</a> who published the 100,000th module to npm today, a http 418 teapot protocol implementation <a href="http://t.co/ckKrSizu9Q">pic.twitter.com/ckKrSizu9Q</a></p>&mdash; maxwell ogden (@maxogden) <a href="https://twitter.com/maxogden/status/522413667782914048">October 15, 2014</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<h2>Installation</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install http-teapot
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Usage</h2>
-
-<p>Just add http-teapot as a routing function.</p>
-
-<p>Express example:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">teapot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http-teapot&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/teapot&#39;</span><span class="p">,</span> <span class="nx">teapot</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/http-teapot/http-teapot.gif" alt="http-teapot" /></p>
-
-<p>Thanks to <a href="https://github.com/watson">Thomas Watson Steen</a> for implementing this RFC and giving us a teapot image ;)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/is/">
-			
-				Is</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-09T19:38:21+05:30" pubdate data-updated="true">Oct 9<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/is">is</a></h1>
-
-<blockquote><p>This is a definitive JavaScript type testing library.</p></blockquote>
-
-<p><strong>Get it:</strong> <code>npm install is</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">is</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">([],</span> <span class="s1">&#39;object&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">array</span><span class="p">([]);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">odd</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">even</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// So on...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It has all uber cool <code>is</code> checks as below:</p>
-
-<p><code>
-[ 'type',
-  'a',
-  'defined',
-  'empty',
-  'equal',
-  'hosted',
-  'instanceof',
-  'instance',
-  'null',
-  'nil',
-  'undefined',
-  'undef',
-  'arguments',
-  'args',
-  'array',
-  'arraylike',
-  'boolean',
-  'false',
-  'true',
-  'date',
-  'element',
-  'error',
-  'function',
-  'fn',
-  'number',
-  'infinite',
-  'decimal',
-  'divisibleBy',
-  'int',
-  'maximum',
-  'minimum',
-  'nan',
-  'even',
-  'odd',
-  'ge',
-  'gt',
-  'le',
-  'lt',
-  'within',
-  'object',
-  'hash',
-  'regexp',
-  'string' ]
-</code></p>
-
-<p><strong>GIT FTW:</strong></p>
-
-<p><img src="/images/is/is.gif" alt="is" /></p>
-
-<p>Thanks to <a href="https://twitter.com/onirame">Enrico Marino</a> for <code>is</code> :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/progress/">
-			
-				Progress</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-02T19:59:44+05:30" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1>progress</h1>
-
-<blockquote><p>Flexible ascii progress bar.</p></blockquote>
-
-<p><strong>Install it:</strong> <code>npm install progress</code></p>
-
-<p><strong>Example usage:</strong></p>
-
-<ul>
-<li>Create a ProgressBar.</li>
-<li>Give it a format string.</li>
-<li>Give the total, telling the progress bar when to stop!</li>
-<li>Finally do tick() appropriately.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">ProgressBar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ProgressBar</span><span class="p">(</span><span class="s1">&#39;:bar&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">total</span><span class="o">:</span> <span class="mi">10</span> <span class="p">});</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">bar</span><span class="p">.</span><span class="nx">tick</span><span class="p">();</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">bar</span><span class="p">.</span><span class="nx">complete</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;\ncomplete\n&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Options</h3>
-
-<p>These are keys in the options object you can pass to the progress bar along with
-<code>total</code> as seen in the example above.</p>
-
-<ul>
-<li><code>total</code> total number of ticks to complete</li>
-<li><code>width</code> the displayed width of the progress bar defaulting to total</li>
-<li><code>stream</code> the output stream defaulting to stderr</li>
-<li><code>complete</code> completion character defaulting to "="</li>
-<li><code>incomplete</code> incomplete character defaulting to "-"</li>
-<li><code>clear</code> option to clear the bar on completion defaulting to false</li>
-<li><code>callback</code> optional function to call when the progress bar completes</li>
-</ul>
-
-
-<h3>Tokens</h3>
-
-<p>These are tokens you can use in the format of your progress bar.</p>
-
-<ul>
-<li><code>:bar</code> the progress bar itself</li>
-<li><code>:current</code> current tick number</li>
-<li><code>:total</code> total ticks</li>
-<li><code>:elapsed</code> time elapsed in seconds</li>
-<li><code>:percent</code> completion percentage</li>
-<li><code>:eta</code> estimated completion time in seconds</li>
-</ul>
-
-
-<p>Do checkout their <a href="https://github.com/visionmedia/node-progress/tree/master/examples">examples</a> folder.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/progress/progress.gif" alt="" /></p>
-
-<p>Thanks to <a href="http://tjholowaychuk.com/">TJ</a> and rest of the maintainers for <a href="https://github.com/visionmedia/node-progress">node-progress</a>!</p>
+<p>Thanks to the <a href="https://twitter.com/nodesecurity">nodesecurity</a> for making security easy!</p>
 
 		
 		
