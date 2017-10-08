@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/css/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-10-08T16:36:58+05:30</updated>
+  <updated>2017-10-08T17:06:51+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -53,7 +53,7 @@ const cssWhat = require('css-what');</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/image/css-what/css-what.gif" alt="css-what.gif" /></p>
+<p><img src="/images/css-what/css-what.gif" alt="css-what.gif" /></p>
 ]]></content>
   </entry>
   
