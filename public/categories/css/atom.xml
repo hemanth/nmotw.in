@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/css/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-09-28T19:54:43+05:30</updated>
+  <updated>2017-10-08T16:36:58+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[css-what]]></title>
+    <link href="http://nmotw.in//github/css-what/"/>
+    <updated>2017-10-08T16:30:16+05:30</updated>
+    <id>http://nmotw.in//github/css-what</id>
+    <content type="html"><![CDATA[<h1><a href="">css-what</a></h1>
+
+<blockquote><p>CSS selector parser.</p></blockquote>
+
+<p><code>css-what</code> <strike>a</strike> <em>THE</em> CSS selector parser! Zero dep module that helps you to parse complex <code>CSS</code> selectors.</p>
+
+<p><strong>Get it:</strong> <code>npm install css-what</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const cssWhat = require('css-what');</p>
+
+<p>cssWhat('foo[bar]:baz');</p>
+
+<p>/*~>
+[ [ { type: 'tag', name: 'foo' },</p>
+
+<pre><code>{ type: 'attribute',
+  name: 'bar',
+  action: 'exists',
+  value: '',
+  ignoreCase: false },
+{ type: 'pseudo',
+  name: 'baz',
+  data: null } ] ]
+</code></pre>
+
+<p>*/
+```</p>
+
+<p>The function returns a two-dimensional array. The first dimension represents selectors separated by commas (eg. sub1, sub2), the second contains the relevant tokens for that selector.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/image/css-what/css-what.gif" alt="css-what.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[color-string]]></title>
