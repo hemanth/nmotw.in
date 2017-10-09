@@ -1,0 +1,40 @@
+---
+layout: post
+title: "css-what"
+date: 2017-10-08 16:30:16 +0530
+comments: true
+categories: css
+---
+
+#[css-what]()
+> CSS selector parser.
+
+`css-what` <strike>a</strike> _THE_ CSS selector parser! Zero dep module that helps you to parse complex `CSS` selectors.
+
+__Get it:__ `npm install css-what`
+
+__Sample usage:__
+
+```js
+const cssWhat = require('css-what');
+
+cssWhat('foo[bar]:baz');
+
+/*~> 
+[ [ { type: 'tag', name: 'foo' },
+    { type: 'attribute',
+      name: 'bar',
+      action: 'exists',
+      value: '',
+      ignoreCase: false },
+    { type: 'pseudo',
+      name: 'baz',
+      data: null } ] ]
+*/
+```
+
+The function returns a two-dimensional array. The first dimension represents selectors separated by commas (eg. sub1, sub2), the second contains the relevant tokens for that selector.
+
+__GIF FTW!__
+
+![css-what.gif](/images/css-what/css-what.gif)

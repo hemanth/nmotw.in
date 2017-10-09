@@ -4,13 +4,69 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-09-28T19:54:43+05:30</updated>
+  <updated>2017-10-08T17:06:51+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[css-what]]></title>
+    <link href="http://nmotw.in/css-what/"/>
+    <updated>2017-10-08T16:30:16+05:30</updated>
+    <id>http://nmotw.in/css-what</id>
+    <content type="html"><![CDATA[<h1><a href="">css-what</a></h1>
+
+<blockquote><p>CSS selector parser.</p></blockquote>
+
+<p><code>css-what</code> <strike>a</strike> <em>THE</em> CSS selector parser! Zero dep module that helps you to parse complex <code>CSS</code> selectors.</p>
+
+<p><strong>Get it:</strong> <code>npm install css-what</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">cssWhat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;css-what&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cssWhat</span><span class="p">(</span><span class="s1">&#39;foo[bar]:baz&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*~&gt; </span>
+</span><span class='line'><span class="cm">[ [ { type: &#39;tag&#39;, name: &#39;foo&#39; },</span>
+</span><span class='line'><span class="cm">    { type: &#39;attribute&#39;,</span>
+</span><span class='line'><span class="cm">      name: &#39;bar&#39;,</span>
+</span><span class='line'><span class="cm">      action: &#39;exists&#39;,</span>
+</span><span class='line'><span class="cm">      value: &#39;&#39;,</span>
+</span><span class='line'><span class="cm">      ignoreCase: false },</span>
+</span><span class='line'><span class="cm">    { type: &#39;pseudo&#39;,</span>
+</span><span class='line'><span class="cm">      name: &#39;baz&#39;,</span>
+</span><span class='line'><span class="cm">      data: null } ] ]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The function returns a two-dimensional array. The first dimension represents selectors separated by commas (eg. sub1, sub2), the second contains the relevant tokens for that selector.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/css-what/css-what.gif" alt="css-what.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[unsplash-wallpaper]]></title>
@@ -1116,137 +1172,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/mockdate/mockdate.gif" alt="mockdate" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[compactr]]></title>
-    <link href="http://nmotw.in/compactr/"/>
-    <updated>2017-05-13T04:47:16+05:30</updated>
-    <id>http://nmotw.in/compactr</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/compactr">compactr</a></h1>
-
-<blockquote><p>Schema based serialization made easy!</p></blockquote>
-
-<p><strong>What is this and why does it matter?</strong> [From the horse's mouth]</p>
-
-<p>Protocol Buffers are awesome. Having schemas to deflate and inflate data while maintaining some kind of validation is a great concept.
-Compactr's goal is to build on that to better suit Node development and reduce repetition by allowing you to build schemas for your data directly in your scripting language.
-For example, if you have a DB schema for a model, you could use that directly as a schema for Compactr.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save compactr</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Compactr</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;compactr&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Schema</span> <span class="o">=</span> <span class="nx">Compactr</span><span class="p">.</span><span class="nx">schema</span><span class="p">({</span>
-</span><span class='line'>      <span class="nx">bool</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;boolean&#39;</span> <span class="p">},</span>
-</span><span class='line'>      <span class="nx">num</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;number&#39;</span> <span class="p">},</span>
-</span><span class='line'>      <span class="nx">str</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">},</span>
-</span><span class='line'>      <span class="nx">arr</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span> <span class="p">},</span>
-</span><span class='line'>      <span class="nx">obj</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span> <span class="nx">schema</span><span class="o">:</span> <span class="p">{</span> <span class="nx">sub</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// decode encoded.</span>
-</span><span class='line'><span class="nx">Schema</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">Schema</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">bool</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">num</span><span class="o">:</span> <span class="mf">23.23</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">str</span><span class="o">:</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">arr</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">],</span>
-</span><span class='line'>    <span class="nx">obj</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">sub</span><span class="o">:</span> <span class="s1">&#39;way&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}).</span><span class="nx">array</span><span class="p">());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Compactr</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;compactr&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Defining a schema</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">userSchema</span> <span class="o">=</span> <span class="nx">Compactr</span><span class="p">.</span><span class="nx">schema</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;number&#39;</span> <span class="p">},</span>
-</span><span class='line'>    <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;string&#39;</span> <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Encoding</span>
-</span><span class='line'><span class="nx">userSchema</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get the schema header bytes (for partial loads)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">header</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">headerBytes</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get the partial load bytes</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">partial</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">contentBytes</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get the full header + content bytes</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">bytes</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Decoding (full)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">buffer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Decoding (partial)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">userSchema</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">header</span><span class="p">,</span> <span class="nx">partial</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/compactr/compactr.gif" alt="compactr" /></p>
 ]]></content>
   </entry>
   
