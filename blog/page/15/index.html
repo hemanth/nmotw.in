@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;">   
+    <meta name="description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;">
+    <meta name="twitter:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;" />
+    <meta property="og:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;" />
 
     
 
@@ -67,6 +67,83 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/objectmap/">
+			
+				Objectmap</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-05T19:33:17+05:30" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
+
+<blockquote><p>Use a ES6 map, like an object.</p></blockquote>
+
+<p>This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect API with proxy to make give us a convience method so that maps can be used like an Object.</p>
+
+<p>What other advantages apart from syntax sugar?</p>
+
+<ul>
+<li><p>Iterate it like a regular object with <code>(for in)</code> without worrying about <code>hasOwnProperty</code> checks.</p></li>
+<li><p>Iterate it <code>(for of)</code> you will get arrays of length 2 of both keys and values.</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save objectmap</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">oMap</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;objectmap&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">oMap</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// Same as `map.set(&#39;answer&#39;,42);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">map</span><span class="p">.</span><span class="nx">answer</span><span class="p">;</span> <span class="c1">// Same as `map.get(&#39;abc&#39;);`</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">delete</span> <span class="nx">map</span><span class="p">.</span><span class="nx">abc</span><span class="p">;</span> <span class="c1">// Same as `map.delete(&#39;abc&#39;);`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Caveat: <code>map[3]</code> implies <code>map.set('3')</code> not <code>map.set(3)</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/objectmap/objectmap.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com">Calvin</a> for this useful util :)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -953,159 +1030,6 @@
 <p><img src="/images/tldr/tldr.gif" alt="tldr" /></p>
 
 <p>All TLDR pages are in <code>markdown</code> format, checkout <a href="https://github.com/tldr-pages/tldr/blob/master/pages/common/sudo.md">sudo</a> page for an example, this is a community dirven effort, so please feel free to <a href="https://github.com/tldr-pages/tldr/blob/master/CONTRIBUTING.md">contribute</a> :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fake-identity/">
-			
-				Fake-identity</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-27T17:31:17+05:30" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/fake-identity">fake-identity</a></h1>
-
-<blockquote><p>Generate random identity objects including name, address, etc. This may be useful if you are trying to fill your application with random personal data.</p></blockquote>
-
-<p><strong>What else?</strong></p>
-
-<ul>
-<li>Generates a single random identity or multiple identities in an array.</li>
-<li>Includes first and last names, email address, phone number, street, city, state, zip code, date of birth, sex, company, and department.</li>
-<li>Email address is based off of name.</li>
-<li>First name matches sex.</li>
-<li>All names, streets, and cities are commonly found in the US.</li>
-<li>States are weighted on population, so more populous states appear more often.</li>
-<li>Zip codes are loosely based on state. Zip codes are weird so it's not perfect, though.</li>
-<li>Date of birth will be between 18 and 60.</li>
-<li>Usable in the browser or Node.js.</li>
-<li>No dependencies.</li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install fake-identity</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">identity</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fake-identity&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">identity</span><span class="p">.</span><span class="nx">generate</span><span class="p">();</span>
-</span><span class='line'><span class="cm">/* </span>
-</span><span class='line'><span class="cm">Would result in a random object like:</span>
-</span><span class='line'><span class="cm">{ sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">  firstName: &#39;Jonathan&#39;,</span>
-</span><span class='line'><span class="cm">  lastName: &#39;Murphy&#39;,</span>
-</span><span class='line'><span class="cm">  emailAddress: &#39;jmurphy@example.com&#39;,</span>
-</span><span class='line'><span class="cm">  phoneNumber: &#39;(555) 555-2739&#39;,</span>
-</span><span class='line'><span class="cm">  street: &#39;4473 Highland Avenue&#39;,</span>
-</span><span class='line'><span class="cm">  city: &#39;Glendale&#39;,</span>
-</span><span class='line'><span class="cm">  state: &#39;KS&#39;,</span>
-</span><span class='line'><span class="cm">  zipCode: &#39;67069&#39;,</span>
-</span><span class='line'><span class="cm">  dateOfBirth: Mon Jan 24 1955 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">  company: &#39;Woodgrove Bank&#39;,</span>
-</span><span class='line'><span class="cm">  department: &#39;Engineering&#39; }</span>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">identity</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// Int val for the number of records.</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*[ { sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">    firstName: &#39;Nathan&#39;,</span>
-</span><span class='line'><span class="cm">    lastName: &#39;Morgan&#39;,</span>
-</span><span class='line'><span class="cm">    emailAddress: &#39;nmorgan@example.com&#39;,</span>
-</span><span class='line'><span class="cm">    phoneNumber: &#39;(555) 555-5027&#39;,</span>
-</span><span class='line'><span class="cm">    street: &#39;2897 Meadow Lane&#39;,</span>
-</span><span class='line'><span class="cm">    city: &#39;Ashland&#39;,</span>
-</span><span class='line'><span class="cm">    state: &#39;CA&#39;,</span>
-</span><span class='line'><span class="cm">    zipCode: &#39;94347&#39;,</span>
-</span><span class='line'><span class="cm">    dateOfBirth: Fri Jan 14 1966 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">    company: &#39;Northwind Traders&#39;,</span>
-</span><span class='line'><span class="cm">    department: &#39;Product Management&#39; },</span>
-</span><span class='line'><span class="cm">  { sex: &#39;male&#39;,</span>
-</span><span class='line'><span class="cm">    firstName: &#39;Jackson&#39;,</span>
-</span><span class='line'><span class="cm">    lastName: &#39;Wilson&#39;,</span>
-</span><span class='line'><span class="cm">    emailAddress: &#39;jwilson@example.com&#39;,</span>
-</span><span class='line'><span class="cm">    phoneNumber: &#39;(555) 555-7407&#39;,</span>
-</span><span class='line'><span class="cm">    street: &#39;514 Court Street&#39;,</span>
-</span><span class='line'><span class="cm">    city: &#39;Shiloh&#39;,</span>
-</span><span class='line'><span class="cm">    state: &#39;MO&#39;,</span>
-</span><span class='line'><span class="cm">    zipCode: &#39;64416&#39;,</span>
-</span><span class='line'><span class="cm">    dateOfBirth: Sun Apr 02 1995 00:00:00 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">    company: &#39;Fourth Coffee&#39;,</span>
-</span><span class='line'><span class="cm">    department: &#39;Information Systems&#39; } ]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fake-identity/fake-identity.gif" alt="fake-identity" /></p>
-
-<p>This is pretty modular and sweet util, that needs some more configurability, thanks to <a href="http://travishorn.com/">Travis Horn</a> for fake-identity.</p>
 
 		
 		

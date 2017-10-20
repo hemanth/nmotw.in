@@ -4,7 +4,7 @@
   <title><![CDATA[Category: a11y | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/a11y/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-10-12T17:58:25+05:30</updated>
+  <updated>2017-10-20T13:21:06+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[accessibilityjs]]></title>
+    <link href="http://nmotw.in//github/accessibilityjs/"/>
+    <updated>2017-10-20T13:13:03+05:30</updated>
+    <id>http://nmotw.in//github/accessibilityjs</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
+
+<blockquote><p>Client side accessibility error scanner.</p></blockquote>
+
+<p><code>accessibilityjs</code> with <code>0</code> dependenices does an wonderful job in scaning and reproting accessibility issues for a given page.</p>
+
+<p>It currently can scan and report the bleow problems:</p>
+
+<ul>
+<li><code>ImageWithoutAltAttributeError</code></li>
+<li><code>ElementWithoutLabelError</code></li>
+<li><code>LinkWithoutLabelOrRoleError</code></li>
+<li><code>LabelMissingControlError</code></li>
+<li><code>InputMissingLabelError</code></li>
+<li><code>ButtonWithoutLabelError</code></li>
+<li><code>ARIAAttributeMissingError</code></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install accessibilityjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import {scanForProblems} from 'accessibilityjs'</p>
+
+<p>function logError(error) {
+  error.element.classList.add('accessibility-error')
+  error.element.addEventListener('click', function () {</p>
+
+<pre><code>alert(`${error.name}\n\n${error.message}`)
+</code></pre>
+
+<p>  }, {once: true})
+}</p>
+
+<p>document.addEventListener('DOMContentLoaded', function() {
+  scanForProblems(document, logError)
+})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[axe-cli]]></title>

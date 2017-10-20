@@ -4,13 +4,74 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-10-12T17:58:25+05:30</updated>
+  <updated>2017-10-20T13:21:06+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[accessibilityjs]]></title>
+    <link href="http://nmotw.in/accessibilityjs/"/>
+    <updated>2017-10-20T13:13:03+05:30</updated>
+    <id>http://nmotw.in/accessibilityjs</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
+
+<blockquote><p>Client side accessibility error scanner.</p></blockquote>
+
+<p><code>accessibilityjs</code> with <code>0</code> dependenices does an wonderful job in scaning and reproting accessibility issues for a given page.</p>
+
+<p>It currently can scan and report the bleow problems:</p>
+
+<ul>
+<li><code>ImageWithoutAltAttributeError</code></li>
+<li><code>ElementWithoutLabelError</code></li>
+<li><code>LinkWithoutLabelOrRoleError</code></li>
+<li><code>LabelMissingControlError</code></li>
+<li><code>InputMissingLabelError</code></li>
+<li><code>ButtonWithoutLabelError</code></li>
+<li><code>ARIAAttributeMissingError</code></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install accessibilityjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">scanForProblems</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;accessibilityjs&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">logError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;accessibility-error&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="err">\</span><span class="nx">n</span><span class="err">\</span><span class="nx">n$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">},</span> <span class="p">{</span><span class="nx">once</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">scanForProblems</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">logError</span><span class="p">)</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[breakable]]></title>
@@ -1209,34 +1270,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[nif]]></title>
-    <link href="http://nmotw.in/nif/"/>
-    <updated>2017-05-27T04:34:09+05:30</updated>
-    <id>http://nmotw.in/nif</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/nif">nif</a></h1>
-
-<blockquote><p><code>node --inspect</code> a file and open devtool URL.</p></blockquote>
-
-<p><code>nif</code> is for all the lazy folks trying to debug their node script, it runs the <code>node --inspect</code> on the provided file and open the devtool URL <code>chrome-devtools://</code>.</p>
-
-<p>Make sure you have the <a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> installed on your machine,before using this moddule.</p>
-
-<p><strong>Get it:</strong> <code>npm i -g nif</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nif ./to-debug.js
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/nif/nif.gif" alt="nif" /></p>
 ]]></content>
   </entry>
   
