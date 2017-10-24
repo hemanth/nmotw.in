@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-10-20T13:38:52+05:30</updated>
+  <updated>2017-10-25T00:41:56+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[babar]]></title>
+    <link href="http://nmotw.in//github/babar/"/>
+    <updated>2017-10-25T00:35:48+05:30</updated>
+    <id>http://nmotw.in//github/babar</id>
+    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/babar">babar</a></h1>
+
+<blockquote><p>Draw bar charts in your console.</p></blockquote>
+
+<p><code>193</code> lines of code to get bar charts on your console!</p>
+
+<p>Easy to use, lightweight, color output, ASCII output, automatically bucketizes values (currently only averages values in a bucket).</p>
+
+<p><strong>Get it:</strong> <code>npm install babar</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var babar = require('babar');
+console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]]));
+</code></p>
+
+<p>```js
+var babar = require('babar');</p>
+
+<p>console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]], {
+  color: 'green',
+  width: 40,
+  height: 10,
+  maxY: 10,
+  yFractions: 1
+}));
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/babar/babar.gif" alt="babar" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[gtop]]></title>
@@ -168,93 +208,6 @@ rest npm install
 <p><strong>Till next time!</strong></p>
 
 <p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[email-prompt]]></title>
-    <link href="http://nmotw.in//github/email-prompt/"/>
-    <updated>2016-12-08T18:44:32+05:30</updated>
-    <id>http://nmotw.in//github/email-prompt</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/email-prompt">email-prompt</a></h1>
-
-<blockquote><p>CLI email prompt featuring autocompletion and validation.</p></blockquote>
-
-<p><code>email-prompt</code> Powers 𝚫now --login and provides a nice promised based API for email autocompletion and validation.</p>
-
-<p>It's customiziable with the below options:</p>
-
-<p>```js
-{
-  start :'> Enter your email: ',
-  domains :new Set([</p>
-
-<pre><code>'aol.com',
-'gmail.com',
-'google.com',
-'yahoo.com',
-'ymail.com',
-'hotmail.com',
-'live.com',
-'outlook.com',
-'inbox.com',
-'mail.com',
-'gmx.com',
-'icloud.com'
-</code></pre>
-
-<p>  ]),
-  forceLowerCase :true,
-  suggestionColor :'gray',
-  autoCompleteChars :new Set([</p>
-
-<pre><code>'\t' /* tab */,
-'\r' /* return */,
-'\x1b[C' /* right arrow */,
-' ' /* spacebar */
-</code></pre>
-
-<p>  ]),
-  resolveChars :new Set(['\r']),
-  abortChars :new Set(['\x03']),
-  allowInvalidChars :false
-}
-```</p>
-
-<p><strong>Get it:</strong> <code>npm install --save email-prompt</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<p>const prompt = require('email-prompt');
-prompt({ /<em> opts </em>/ })
-.then((email) => {
-  console.log('\n> Hello ' + val);
-))
-.catch(() => {
-  console.log('\n> Aborted!');
-})</p>
-
-<p>```</p>
-
-<p><strong>Important to note:</strong></p>
-
-<ul>
-<li><code>email-prompt</code> automatically adapts the mode of <code>process.stdin</code> for you.</li>
-<li>The <code>stdin</code> stream is <code>resume</code>d and <code>pause</code>d upon the promise being
-settled.</li>
-<li>When the promise resolves or rejects, the previous stdin mode is restored.</li>
-<li>The <code>tty</code> mode is set to <code>raw</code>, which means all the caret interactions
-that you come to expect in a regular <code>stdin</code> prompt are simulated.
-This gives us fine-grained control over the output and powers the
-validation.</li>
-</ul>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/email-prompt/email-prompt.gif" alt="email-prompt" /></p>
 ]]></content>
   </entry>
   
