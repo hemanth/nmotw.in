@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-10-25T00:41:56+05:30</updated>
+  <updated>2017-10-31T13:06:38+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[qrcode-terminal]]></title>
+    <link href="http://nmotw.in//github/qrcode-terminal/"/>
+    <updated>2017-10-31T12:56:26+05:30</updated>
+    <id>http://nmotw.in//github/qrcode-terminal</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/qrcode-terminal">qrcode-terminal</a></p>
+
+<blockquote><p>qrcode on terminal.</p></blockquote>
+
+<p><code>qrcode-terminal</code> Going where no QRCode has gone before ;)</p>
+
+<p>Helps you to generate qrcode in your terminal, maybe be URLs or just plain text, this module does a good job in displaying the qrcode on terminal.</p>
+
+<p>It would be great if this module can generate responsive qr-code in the terminal, which can be bit of a challenge, it can generate <code>small</code> or <code>normal</code> ones though.</p>
+
+<p><strong>Get it:</strong> <code>npm install qrcode-terminal</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const qrcode = require('qrcode-terminal');</p>
+
+<p>qrcode.generate('This will be a QRCode, eh!');</p>
+
+<p>qrcode.setErrorLevel('Q');
+qrcode.generate('This will be a QRCode with error level Q!');</p>
+
+<p>qrcode.generate('https://nmotw.in', function (qrcode) {</p>
+
+<pre><code>console.log(qrcode);
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/qrcode-terminal/qrcode-terminal.gif" alt="qrcode-terminal" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[babar]]></title>
@@ -180,34 +221,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/fkill-cli/fkill-cli.gif" alt="fkill-cli" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rest-your-eyes]]></title>
-    <link href="http://nmotw.in//github/rest-your-eyes/"/>
-    <updated>2017-01-20T22:13:20+05:30</updated>
-    <id>http://nmotw.in//github/rest-your-eyes</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
-
-<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
-Your screen will become bright again after the command completes execution.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>sh
-rest npm install
-</code></p>
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
-
-<p><strong>Till next time!</strong></p>
-
-<p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
 ]]></content>
   </entry>
   

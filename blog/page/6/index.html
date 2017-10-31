@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;">   
+    <meta name="description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/6/">
-    <meta name="twitter:description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;">
+    <meta name="twitter:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/6/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="pino super fast, all natural json logger. pino is an uber fast logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log &hellip;" />
+    <meta property="og:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;" />
 
     
 
@@ -67,6 +67,81 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/has/">
+			
+				Has</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-11-11T11:44:31+05:30" pubdate data-updated="true">Nov 11<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/has">has</a></h1>
+
+<blockquote><p>Object.prototype.hasOwnProperty.call shortcut.</p></blockquote>
+
+<p>This module is one of those live examle where a tiny module can make a lot of impact in the node community.</p>
+
+<p>All that this module does is helps in making a shorting function name to <code>Object.prototype.hasOwnProperty.call</code> as <code>has</code>, the code in the module is as below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">bind</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-bind&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">Function</span><span class="p">.</span><span class="nx">call</span><span class="p">,</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The impact it has made with <code>110</code> dependencies:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="mi">151</span><span class="p">,</span><span class="mi">565</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">day</span>
+</span><span class='line'><span class="mi">823</span><span class="p">,</span><span class="mi">500</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">week</span>
+</span><span class='line'><span class="mi">3</span><span class="p">,</span><span class="mi">552</span><span class="p">,</span><span class="mi">078</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">month</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p><strong>Get it:</strong> <code>npm install --save has</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">has</span><span class="p">({},</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// false;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">has</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// true;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/has/has.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -828,85 +903,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/quill/quill.gif" alt="quill" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/auto-install/">
-			
-				Auto-install</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-01T19:35:36+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
-
-<blockquote><p>Auto installs dependencies as you code on save.</p></blockquote>
-
-<p>Have you ever wished that need to having a tool that would just do an <code>npm install</code> of modules that you <code>import</code>?</p>
-
-<p>Well, here is <code>auto-install</code> that does exactly what you wished for!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g auto-install</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In case you run it in a folder that doesn&#39;t have a `package.json`</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>auto-install --help
-</span><span class='line'>package.json does not exist
-</span><span class='line'>You can create one by using <span class="sb">`</span>npm init<span class="sb">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># With a package.json</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>auto-install
-</span><span class='line'>Watchers initialized
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>CLI Flags:</strong></p>
-
-<p><code>--secure</code>  Install popular modules only (> 10k downloads in the last month)</p>
-
-<p><code>--exact</code>   Install exact version similar to <code>npm install express --save-exact</code></p>
-
-<p><code>--dont-uninstall</code>   Do not uninstall unused modules</p>
-
-<p>P.S: <a href="https://github.com/siddharthkp/auto-install/issues/6">Does it protect against typosquatting?</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
 
 		
 		

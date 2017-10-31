@@ -4,13 +4,61 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-10-25T00:41:56+05:30</updated>
+  <updated>2017-10-31T13:06:38+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[qrcode-terminal]]></title>
+    <link href="http://nmotw.in/qrcode-terminal/"/>
+    <updated>2017-10-31T12:56:26+05:30</updated>
+    <id>http://nmotw.in/qrcode-terminal</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/qrcode-terminal">qrcode-terminal</a></p>
+
+<blockquote><p>qrcode on terminal.</p></blockquote>
+
+<p><code>qrcode-terminal</code> Going where no QRCode has gone before ;)</p>
+
+<p>Helps you to generate qrcode in your terminal, maybe be URLs or just plain text, this module does a good job in displaying the qrcode on terminal.</p>
+
+<p>It would be great if this module can generate responsive qr-code in the terminal, which can be bit of a challenge, it can generate <code>small</code> or <code>normal</code> ones though.</p>
+
+<p><strong>Get it:</strong> <code>npm install qrcode-terminal</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">qrcode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;qrcode-terminal&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">qrcode</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s1">&#39;This will be a QRCode, eh!&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">qrcode</span><span class="p">.</span><span class="nx">setErrorLevel</span><span class="p">(</span><span class="s1">&#39;Q&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">qrcode</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s1">&#39;This will be a QRCode with error level Q!&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">qrcode</span><span class="p">.</span><span class="nx">generate</span><span class="p">(</span><span class="s1">&#39;https://nmotw.in&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">qrcode</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">qrcode</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/qrcode-terminal/qrcode-terminal.gif" alt="qrcode-terminal" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[babar]]></title>
@@ -1237,54 +1285,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[vtop]]></title>
-    <link href="http://nmotw.in/vtop/"/>
-    <updated>2017-06-10T15:59:12+05:30</updated>
-    <id>http://nmotw.in/vtop</id>
-    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/packages/vtop">vtop</a></h1>
-
-<blockquote><p>A graphical activity monitor for the command line.</p></blockquote>
-
-<p><strong>Why?</strong></p>
-
-<p>For mointoring CPU usage and memory across multi-process applications.</p>
-
-<p>Makes use of <a href="https://www.npmjs.com/package/drawille">drawille</a> for drawing in terminal with unicode braille characters.</p>
-
-<p><strong>Get it:</strong> <code>npm i -g vtop</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>➜  nmotw.in&gt;  vtop --help
-</span><span class='line'>
-</span><span class='line'>  Usage: vtop <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Options:
-</span><span class='line'>
-</span><span class='line'>    -h, --help              output usage information
-</span><span class='line'>    -t, --theme  <span class="o">[</span>name<span class="o">]</span>     <span class="nb">set </span>the vtop theme <span class="o">[</span>acid|becca|brew|dark|monokai|parallax|seti|wizard<span class="o">]</span>
-</span><span class='line'>    --quit-after <span class="o">[</span>seconds<span class="o">]</span>  Quits vtop after interval
-</span><span class='line'>    -V, --version           output the version number
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/vtop/vtop.gif" alt="vtop.gif" /></p>
 ]]></content>
   </entry>
   
