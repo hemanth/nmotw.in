@@ -1,0 +1,40 @@
+---
+layout: post
+title: "babar"
+date: 2017-10-25 00:35:48 +0530
+comments: true
+categories: cli
+---
+
+#[babar](https://npmjs.org/babar)
+> Draw bar charts in your console.
+
+`193` lines of code to get bar charts on your console! 
+
+Easy to use, lightweight, color output, ASCII output, automatically bucketizes values (currently only averages values in a bucket).
+
+__Get it:__ `npm install babar`
+
+__Sample usage:__
+
+```js
+var babar = require('babar');
+console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]]));
+```
+
+```js
+var babar = require('babar');
+
+console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]], {
+  color: 'green',
+  width: 40,
+  height: 10,
+  maxY: 10,
+  yFractions: 1
+}));
+```
+
+__GIF FTW!__
+
+![babar](/images/babar/babar.gif)
+
