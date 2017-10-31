@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="exenv React's ExecutionEnvironment module extracted. Many modules and components out there in the wild, uses React's private ExecutionEnvironment &hellip;">   
+    <meta name="description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/14/">
-    <meta name="twitter:description" content="exenv React's ExecutionEnvironment module extracted. Many modules and components out there in the wild, uses React's private ExecutionEnvironment &hellip;">
+    <meta name="twitter:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/14/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="exenv React's ExecutionEnvironment module extracted. Many modules and components out there in the wild, uses React's private ExecutionEnvironment &hellip;" />
+    <meta property="og:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;" />
 
     
 
@@ -67,6 +67,92 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/color-string/">
+			
+				Color-string</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-30T19:03:09+05:30" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
+
+<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
+
+<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
+
+<p>The API names are pretty self explainatory, the module has the below methods:</p>
+
+<p><strong>Methods for parsing:</strong></p>
+
+<ul>
+<li><p>getRgba</p></li>
+<li><p>getHsla</p></li>
+<li><p>getRgb</p></li>
+<li><p>getHsl</p></li>
+<li><p>getHwb</p></li>
+<li><p>getAlpha</p></li>
+</ul>
+
+
+<p><strong>Methods for generating:</strong></p>
+
+<ul>
+<li><p>hexString</p></li>
+<li><p>rgbString</p></li>
+<li><p>rgbaString</p></li>
+<li><p>percentString</p></li>
+<li><p>percentaString</p></li>
+<li><p>hslString</p></li>
+<li><p>hslaString</p></li>
+<li><p>hwbString</p></li>
+<li><p>keyword</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorString</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;color-string&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">getRgb</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">)</span>  <span class="c1">// [255, 255, 255] </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">keyword</span><span class="p">([</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>       <span class="c1">// &quot;yellow&quot; </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -812,104 +898,6 @@ the require calls in your code.</p>
 <p><img src="/images/dom-event/dom-event.gif" alt="dom-event" /></p>
 
 <p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/sentencer/">
-			
-				Sentencer</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-19T19:15:03+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/sentencer">sentencer</a></h1>
-
-<blockquote><p>Templating engine for madlibs-style sentence generating.</p></blockquote>
-
-<p>Create crazy sentences with <code>nouns</code>, <code>adjectives</code> and your own randomness!</p>
-
-<p><code>Sentencer</code> was written for and powers <a href="http://metaphorpsum.com">Metaphorpsum</a>. The noun and adjective lists for form -> <a href="http://www.ashley-bovan.co.uk/words/partsofspeech.html">Word Lists for Writers</a>.</p>
-
-<p><strong>Install it:</strong> <code>npm install sentencer --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Sentencer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sentencer&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot; A  jumped over &quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">//&#39; A agreement jumped over a sprightful&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; A shrine jumped over a wordless&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;  jumped over &quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; an instruction jumped over a scabrous&#39;</span>
-</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; a thistle jumped over a shapely&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Define custom actions:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">rand</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span>  <span class="o">*</span> <span class="mi">10</span> <span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="s2">&quot;I like &quot;</span><span class="p">);</span> <span class="c1">// &#39;I like 7&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/sentencer/sentencer.gif" alt="sentencer" /></p>
-
-<p>Thanks to <a href="https://twitter.com/kylestetz">@kylestetz</a> for this fun module! (:</p>
 
 		
 		
