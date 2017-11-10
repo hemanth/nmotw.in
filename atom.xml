@@ -4,13 +4,60 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-10-31T13:14:17+05:30</updated>
+  <updated>2017-11-10T10:10:29+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[server]]></title>
+    <link href="http://nmotw.in/server/"/>
+    <updated>2017-11-10T09:59:34+05:30</updated>
+    <id>http://nmotw.in/server</id>
+    <content type="html"><![CDATA[<p><code>server</code> is build upon <code>express@4</code> tries to bring simplicity in expressing your server code.</p>
+
+<p><img src="http://nmotw.in/images/server/server-info.png" alt="server-info" /></p>
+
+<p><strong>Get it:</strong> <code>npm install server</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">server</span><span class="p">(</span><span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">post</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server/router&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span> <span class="nx">render</span><span class="p">,</span> <span class="nx">json</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server/reply&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">server</span><span class="p">([</span>
+</span><span class='line'>  <span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">render</span><span class="p">(</span><span class="s1">&#39;index.hbs&#39;</span><span class="p">)),</span>
+</span><span class='line'>  <span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">json</span><span class="p">(</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">data</span><span class="p">)),</span>
+</span><span class='line'>  <span class="nx">get</span><span class="p">(</span><span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">))</span>
+</span><span class='line'><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[qrcode-terminal]]></title>
@@ -1230,61 +1277,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dom-scroll-into-view]]></title>
-    <link href="http://nmotw.in/dom-scroll-into-view/"/>
-    <updated>2017-06-18T15:32:27+05:30</updated>
-    <id>http://nmotw.in/dom-scroll-into-view</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
-
-<blockquote><p>scroll node in contain to make node visible</p></blockquote>
-
-<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
-
-<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">scrollIntoView</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-scroll-into-view&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span><span class="nx">container</span><span class="p">,</span><span class="nx">config</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//config</span>
-</span><span class='line'>   <span class="p">{</span>
-</span><span class='line'>       <span class="nx">alignWithLeft</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">alignWithTop</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">allowHorizontalScroll</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">onlyScrollIfNeeded</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetTop</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetLeft</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetBottom</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetRight</span>
-</span><span class='line'>   <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
 ]]></content>
   </entry>
   
