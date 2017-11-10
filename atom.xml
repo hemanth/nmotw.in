@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-11-10T10:12:51+05:30</updated>
+  <updated>2017-11-10T10:20:50+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/server/"/>
     <updated>2017-11-10T09:59:34+05:30</updated>
     <id>http://nmotw.in/server</id>
-    <content type="html"><![CDATA[<p><code>server</code> is build upon <code>express@4</code> tries to bring simplicity in expressing your server code.</p>
+    <content type="html"><![CDATA[<p><a href="https://npmjs.com/server">server</a> is build upon <code>express@4</code> tries to bring simplicity in expressing your server code.</p>
 
 <p><img src="http://nmotw.in/images/server/server-info.png" alt="server-info" /></p>
 
