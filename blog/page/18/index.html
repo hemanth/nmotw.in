@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;">   
+    <meta name="description" content="How many times have you checked for the IP, MAC and DNS servers on the CLI? Well, you would have lost the count if you are into sever admin and &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;">
+    <meta name="twitter:description" content="How many times have you checked for the IP, MAC and DNS servers on the CLI? Well, you would have lost the count if you are into sever admin and &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;" />
+    <meta property="og:description" content="How many times have you checked for the IP, MAC and DNS servers on the CLI? Well, you would have lost the count if you are into sever admin and &hellip;" />
 
     
 
@@ -67,6 +67,119 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/address/">
+			
+				Address</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-31T16:58:37+05:30" pubdate data-updated="true">Jul 31<span>st</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>How many times have you checked for the IP, MAC and DNS servers on the CLI?</p>
+
+<p>Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named <code>address</code> that will help you it's sweeter APIs.</p>
+
+<p><img src="/images/address/address.png" alt="" /></p>
+
+<p>Installing it: <code>npm install address</code></p>
+
+<p><strong>Peep in:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_RE</span>
+</span><span class='line'><span class="o">/</span><span class="p">(</span><span class="o">?:</span><span class="nx">ether</span><span class="o">|</span><span class="nx">HWaddr</span><span class="p">)</span><span class="err">\</span><span class="nx">s</span><span class="o">+</span><span class="p">((</span><span class="o">?:</span><span class="p">[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">}</span><span class="err">\</span><span class="o">:</span><span class="p">){</span><span class="mi">5</span><span class="p">}[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">})</span><span class="o">/</span><span class="nx">i</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_IP_RE</span>
+</span><span class='line'><span class="o">/</span><span class="nx">inet</span><span class="err">\</span><span class="nx">s</span><span class="p">(</span><span class="o">?:</span><span class="nx">addr</span><span class="err">\</span><span class="o">:</span><span class="p">)</span><span class="o">?</span><span class="p">(</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="p">)</span><span class="o">/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// default interface &#39;eth&#39; on linux, &#39;en&#39; on osx.</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">();</span>   <span class="c1">// &#39;192.168.0.2&#39;</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">();</span> <span class="c1">// &#39;fe80::7aca:39ff:feb0:e67d&#39;</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">mac</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addr</span><span class="p">);</span> <span class="c1">// &#39;78:ca:39:b0:e6:7d&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// local loopback</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">);</span> <span class="c1">// &#39;127.0.0.1&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">dns</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// [&#39;10.13.2.1&#39;, &#39;10.13.2.6&#39;]</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Get them all!</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">address</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">.</span><span class="nx">ip</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">mac</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// &#39;192.168.0.2&#39;, &#39;fe80::7aca:39ff:feb0:e67d&#39;, &#39;78:ca:39:b0:e6:7d&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW?!</strong></p>
+
+<p><img src="/images/address/address.gif" alt="address" /></p>
+
+<p>Thanks to <a href="http://fengmk2.cnpmjs.org/">fengmk2</a> for helping us to find addresses in ease.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1326,91 +1439,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/time-require/">
-			
-				Time-require</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-22T22:26:56+05:30" pubdate data-updated="true">May 22<span>nd</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Were you looking for the stats of how long the require statements took in your scripts?</p>
-
-<p>It's time to use (time-require)[https://www.npmjs.org/package/time-require] a node module that displays the execution time for Node.js modules loading by hooking and tracing all require() calls.</p>
-
-<p><strong>Example Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat &gt; <span class="nb">time</span>-require
-</span><span class='line'>require<span class="o">(</span><span class="s2">&quot;time-require&quot;</span><span class="o">)</span>;
-</span><span class='line'>^C
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>node <span class="nb">time</span>-require
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>Start <span class="nb">time</span>: <span class="o">(</span>2014-05-22 16:56:02 UTC<span class="o">)</span> <span class="o">[</span><span class="nv">treshold</span><span class="o">=</span>1%<span class="o">]</span>
-</span><span class='line'><span class="c">#  module                          time  %</span>
-</span><span class='line'>1  text-table <span class="o">(</span>.....ble/index.js<span class="o">)</span>  40ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 51%
-</span><span class='line'>2  date-time <span class="o">(</span>../...ime/index.js<span class="o">)</span>   5ms  ▇▇ 6%
-</span><span class='line'>3  parse-ms <span class="o">(</span>../n...-ms/index.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
-</span><span class='line'>4  pretty-ms <span class="o">(</span>../...-ms/index.js<span class="o">)</span>  12ms  ▇▇▇▇▇ 15%
-</span><span class='line'>5  ansi-styles <span class="o">(</span>....si-styles.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
-</span><span class='line'>6  strip-ansi <span class="o">(</span>.....nsi/index.js<span class="o">)</span>   5ms  ▇▇ 6%
-</span><span class='line'>7  has-color <span class="o">(</span>../...lor/index.js<span class="o">)</span>   1ms  ▇ 1%
-</span><span class='line'>8  chalk <span class="o">(</span>../node...alk/index.js<span class="o">)</span>  20ms  ▇▇▇▇▇▇▇▇ 26%
-</span><span class='line'>Total require<span class="o">()</span>: 8
-</span><span class='line'>Total <span class="nb">time</span>: 78ms
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This module makes use of a require (hook)[https://github.com/jaguard/time-require/blob/master/src/requireHook.js#L71] which is loaded as the first module so all the other requires gets counted, unhooks and then prints out a neat table with the <code>totalTime = Date.now() - startTime.getTime();</code> and the number of modules that were required.</p>
-
-<p>Thanks to the module author <a href="http://jaguard.com">Ciprian Popa</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
 
 		
 		
