@@ -1,0 +1,38 @@
+---
+layout: post
+title: "server"
+date: 2017-11-10 09:59:34 +0530
+comments: true
+categories: util
+---
+
+[server](https://npmjs.com/server) is build upon `express@4` tries to bring simplicity in expressing your server code.
+
+![server-info](/images/server/server-info.png)
+
+__Get it:__ `npm install server`
+
+__Sample usage:__
+
+```js
+const server = require('server');
+server(ctx => 'Hello world');
+```
+
+```js
+const server = require('server');
+const { get, post } = require('server/router');
+const { render, json } = require('server/reply');
+
+server([
+  get('/', ctx => render('index.hbs')),
+  post('/', ctx => json(ctx.data)),
+  get(ctx => status(404))
+]);
+```
+
+__GIF FTW:__
+
+![server.gif](/images/server/server.gif)
+
+
