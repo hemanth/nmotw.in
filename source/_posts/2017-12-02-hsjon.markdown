@@ -1,0 +1,79 @@
+---
+layout: post
+title: "hsjon"
+date: 2017-12-02 11:03:06 +0530
+comments: true
+categories: util
+---
+
+#[hsjon](https://www.npmjs.com/package/hjson)
+> User interface for JSON.
+
+`hsjon` is a syntax extension to JSON, not a replacement nor shall be added to the JSON spec.
+
+It allows (multiline) comments, trailling commas, non-mandatory quotes to name a few.
+
+__Get it:__ `npm install hsjon`
+
+__Sample usage:__
+
+```js
+const Hjson = require('hjson');
+
+const obj = Hjson.parse(hjsonText);
+const text2 = Hjson.stringify(obj);
+```
+
+__Sample hjson file:__
+
+```
+{
+  # comments are treated like whitespace - they are not parsed
+
+  hello:       Hello Human!
+
+  // js style comment
+
+  /*
+  multiline comment
+  multiline comment
+  */
+
+  # text
+  text:        This is a valid string value.
+  quote:       "You need quotes\tfor escapes"
+  otherwise:   <div class="cool">life without escapes is bliss!</div>
+
+  # keys
+  abc-123:      no quotes for keys
+
+  # comma
+  commas:      "can be omitted at the end of the line"
+  but:         [ 1, 2, 3 ] # not between elements on the same line
+  trailing:    [ 1, 2, 3, ] # a trailing comma is OK
+
+  # multiline string
+  multiline:
+    '''
+    first line
+      indented line
+    third line
+    '''
+
+  # numbers, keywords and arrays work just like in JSON
+  number:      5
+  negative:    -4.2
+  yes:         true
+  no:          false
+  null:        null
+  array:       [ 1, 2 ]
+  array2:      [
+    1
+    2
+  ]
+}
+```
+
+__GIF FTW!__
+
+![hjson](/images/hjson/hjson.gif)
