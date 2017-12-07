@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;">   
+    <meta name="description" content="unsplash-wallpaper unsplash images as your wallpaper from CLI. unsplash-wallpaper an inviting module that helps you set images from unsplash
+as your &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;">
+    <meta name="twitter:description" content="unsplash-wallpaper unsplash images as your wallpaper from CLI. unsplash-wallpaper an inviting module that helps you set images from unsplash
+as your &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="comlinkjs A tiny RPC library for windows, iframes, WebWorkers and ServiceWorkers. comlinkjs has the below interface, makes use of MessageChannel &hellip;" />
+    <meta property="og:description" content="unsplash-wallpaper unsplash images as your wallpaper from CLI. unsplash-wallpaper an inviting module that helps you set images from unsplash
+as your &hellip;" />
 
     
 
@@ -67,6 +70,70 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/unsplash-wallpaper/">
+			
+				Unsplash-wallpaper</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-28T18:52:53+05:30" pubdate data-updated="true">Sep 28<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/unsplash-wallpaper">unsplash-wallpaper</a></h1>
+
+<blockquote><p>unsplash images as your wallpaper from CLI.</p></blockquote>
+
+<p><code>unsplash-wallpaper</code> an inviting module that helps you set images from <a href="https://unsplash.com/">unsplash</a>
+as your desktop wallpaper.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g unsplash-wallpaper</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>unsplash-wallpaper
+</span><span class='line'>
+</span><span class='line'>To learn the commands:
+</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper --help
+</span><span class='line'>To save the image resolution:
+</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper --width 2880 --height 1800 -s
+</span><span class='line'>To download and use a random image:
+</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper -r
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/unsplash-wallpaper/unsplash-wallpaper.gif" alt="unsplash-wallpaper" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -927,83 +994,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/axe-cli/axe-cli.gif" alt="axe-cli.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/mdconf/">
-			
-				Mdconf</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-07-20T09:59:26+05:30" pubdate data-updated="true">Jul 20<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/mdconf">mdconf</a></h1>
-
-<blockquote><p>Markdown driven configuration!</p></blockquote>
-
-<p>Sweet and simple markdown files are your config!</p>
-
-<p>Markdown headings act as keys, list items with <code>:</code> act as maps, otherwise regular lists behave as.. lists.</p>
-
-<p><strong>Get it:</strong> <code>npm install mdconf</code></p>
-
-<p><strong>Usage sample:</strong></p>
-
-<p>```
-const mdconf = require("mdconf");</p>
-
-<p>// conf normally goes into a diffrent file.
-conf = `</p>
-
-<h2>Server</h2>
-
-<ul>
-<li>host: cloudup.com</li>
-<li>port: 3000</li>
-<li>http: enabled</li>
-<li>https: enabled`;</li>
-</ul>
-
-
-<p>console.log(mdconf(conf));</p>
-
-<p>/*
-{ server:
-   { host: 'cloudup.com',</p>
-
-<pre><code> port: '3000',
- http: 'enabled',
- https: 'enabled' 
-} 
-</code></pre>
-
-<p>}
-*/</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/mdconf/mdconf.gif" alt="mdconf.gif" /></p>
 
 		
 		
