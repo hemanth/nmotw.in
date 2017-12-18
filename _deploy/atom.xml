@@ -4,13 +4,53 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-12-07T22:36:52+05:30</updated>
+  <updated>2017-12-18T09:27:15+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[portscanner]]></title>
+    <link href="http://nmotw.in/portscanner/"/>
+    <updated>2017-12-17T15:16:40+05:30</updated>
+    <id>http://nmotw.in/portscanner</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/portscanner">portscanner</a></h1>
+
+<blockquote><p>port scanner!</p></blockquote>
+
+<p><code>portscanner</code> helps us to check the port status and free port for a given host.</p>
+
+<p><strong>Get it:</strong> <code>npm install portscanner</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">portScanner</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;portscanner&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">checkPortStatus</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">findAPortInUse</span><span class="p">([</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">3006</span><span class="p">],</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[jsvu]]></title>
@@ -1325,65 +1365,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/fitty/fitty.gif" alt="fitty" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[axe-cli]]></title>
-    <link href="http://nmotw.in/axe-cli/"/>
-    <updated>2017-07-27T16:59:41+05:30</updated>
-    <id>http://nmotw.in/axe-cli</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/axe-cli">axe-cli</a></h1>
-
-<blockquote><p>A CLI for accessibility testing using axe-core</p></blockquote>
-
-<p>Provides a command line interface for <code>aXe</code> to run quick accessibility tests.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g axe-cli</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ axe www.google.com, github.com</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#  --rules flag to set which rules you wish to run
-</span><span class='line'>$ axe www.google.com --rules color-contrast,html-has-lang</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#  --tags to tell axe to run all rules that have that specific tag.
-</span><span class='line'>axe www.google.com --tags wcag2a</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Saving the results
-</span><span class='line'>$ axe www.google.com --save google-site.json
-</span><span class='line'>$ axe www.google.com --dir ./google-results/</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Defining the scope
-</span><span class='line'>axe www.google.com --include #main --exclude #aside</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/axe-cli/axe-cli.gif" alt="axe-cli.gif" /></p>
 ]]></content>
   </entry>
   
