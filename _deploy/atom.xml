@@ -4,13 +4,55 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-12-02T11:12:46+05:30</updated>
+  <updated>2017-12-07T22:36:52+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[jsvu]]></title>
+    <link href="http://nmotw.in/jsvu/"/>
+    <updated>2017-12-07T22:19:37+05:30</updated>
+    <id>http://nmotw.in/jsvu</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/jsvu">jsvu</a></h1>
+
+<blockquote><p>JavaScript (engine) Version Updater.</p></blockquote>
+
+<p><code>jsvu</code> makes it easy to fetch the latest versions of JavaScript engines for a specific OS, without the hassels of compiling them!</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install -g jsvu</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># in your ~/*.rc</span>
+</span><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;${HOME}/.jsvu:${PATH}&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>jsvu
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's prompts for the OS and the engine and install them based on your choice, it can install Chakra/ChakraCore, JavaScriptCore, SpiderMonk
+ey and V8 for you.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/jsvu/jsvu.gif" alt="jsvu.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hsjon]]></title>
@@ -1342,60 +1384,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/axe-cli/axe-cli.gif" alt="axe-cli.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[mdconf]]></title>
-    <link href="http://nmotw.in/mdconf/"/>
-    <updated>2017-07-20T09:59:26+05:30</updated>
-    <id>http://nmotw.in/mdconf</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mdconf">mdconf</a></h1>
-
-<blockquote><p>Markdown driven configuration!</p></blockquote>
-
-<p>Sweet and simple markdown files are your config!</p>
-
-<p>Markdown headings act as keys, list items with <code>:</code> act as maps, otherwise regular lists behave as.. lists.</p>
-
-<p><strong>Get it:</strong> <code>npm install mdconf</code></p>
-
-<p><strong>Usage sample:</strong></p>
-
-<p>```
-const mdconf = require("mdconf");</p>
-
-<p>// conf normally goes into a diffrent file.
-conf = `</p>
-
-<h2>Server</h2>
-
-<ul>
-<li>host: cloudup.com</li>
-<li>port: 3000</li>
-<li>http: enabled</li>
-<li>https: enabled`;</li>
-</ul>
-
-
-<p>console.log(mdconf(conf));</p>
-
-<p>/*
-{ server:
-   { host: 'cloudup.com',</p>
-
-<pre><code> port: '3000',
- http: 'enabled',
- https: 'enabled' 
-} 
-</code></pre>
-
-<p>}
-*/</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/mdconf/mdconf.gif" alt="mdconf.gif" /></p>
 ]]></content>
   </entry>
   

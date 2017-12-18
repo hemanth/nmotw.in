@@ -1,0 +1,34 @@
+---
+layout: post
+title: "jsvu"
+date: 2017-12-07 22:19:37 +0530
+comments: true
+categories:  CLI
+---
+
+#[jsvu](https://www.npmjs.com/package/jsvu)
+>JavaScript (engine) Version Updater.
+
+`jsvu` makes it easy to fetch the latest versions of JavaScript engines for a specific OS, without the hassels of compiling them!
+
+__Get it:__
+
+```
+npm install -g jsvu
+```
+
+```sh
+# in your ~/*.rc
+export PATH="${HOME}/.jsvu:${PATH}"
+```
+
+```sh
+jsvu
+```
+
+It's prompts for the OS and the engine and install them based on your choice, it can install Chakra/ChakraCore, JavaScriptCore, SpiderMonk
+ey and V8 for you.
+
+__GIF FTW!__
+
+![jsvu.gif](/images/jsvu/jsvu.gif)
