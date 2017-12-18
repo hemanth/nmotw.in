@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-12-07T22:36:52+05:30</updated>
+  <updated>2017-12-18T09:27:15+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[portscanner]]></title>
+    <link href="http://nmotw.in//github/portscanner/"/>
+    <updated>2017-12-17T15:16:40+05:30</updated>
+    <id>http://nmotw.in//github/portscanner</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/portscanner">portscanner</a></h1>
+
+<blockquote><p>port scanner!</p></blockquote>
+
+<p><code>portscanner</code> helps us to check the port status and free port for a given host.</p>
+
+<p><strong>Get it:</strong> <code>npm install portscanner</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const portScanner = require('portscanner');</p>
+
+<p>portscanner.checkPortStatus(3000, '127.0.0.1')
+.then(console.log);</p>
+
+<p>portscanner.findAPortInUse([3000, 3005, 3006], '127.0.0.1')
+.then(console.log)
+.catch(console.error);
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[qrcode-terminal]]></title>
@@ -174,53 +207,6 @@ $ gtop</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/vtop/vtop.gif" alt="vtop.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fkill-cli]]></title>
-    <link href="http://nmotw.in//github/fkill-cli/"/>
-    <updated>2017-03-03T10:25:04+05:30</updated>
-    <id>http://nmotw.in//github/fkill-cli</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fkill-cli">fkill-cli</a></h1>
-
-<blockquote><p>Fabulously kill processes. Cross-platform.</p></blockquote>
-
-<p><code>fkill-cli</code> helps us kill process with easy across macOS, Linux and Windows, it also has an <code>autocomplete-prompt</code> on the list of processes that are currently alive on your machine.</p>
-
-<p>No more playing with <code>ps</code>, <code>grep</code> and <code>kill</code>? 🤔</p>
-
-<p><strong>Get it:</strong> <code>npm install -g fkill-cli</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-$ fkill --help</p>
-
-<p>  Usage</p>
-
-<pre><code>$ fkill [&lt;pid|name&gt; ...]
-</code></pre>
-
-<p>  Options</p>
-
-<pre><code>-f, --force  Force kill
-</code></pre>
-
-<p>  Examples</p>
-
-<pre><code>$ fkill 1337
-$ fkill Safari
-$ fkill 1337 Safari
-$ fkill
-</code></pre>
-
-<p>  Run without arguments to use the interactive interface.
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fkill-cli/fkill-cli.gif" alt="fkill-cli" /></p>
 ]]></content>
   </entry>
   
