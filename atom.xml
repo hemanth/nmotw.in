@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-12-24T16:22:27+05:30</updated>
+  <updated>2017-12-24T16:23:40+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -95,70 +95,6 @@
 <span class='line-number'>55</span>
 <span class='line-number'>56</span>
 <span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-<span class='line-number'>110</span>
-<span class='line-number'>111</span>
-<span class='line-number'>112</span>
-<span class='line-number'>113</span>
-<span class='line-number'>114</span>
-<span class='line-number'>115</span>
-<span class='line-number'>116</span>
-<span class='line-number'>117</span>
-<span class='line-number'>118</span>
-<span class='line-number'>119</span>
-<span class='line-number'>120</span>
-<span class='line-number'>121</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>christmas-ascii -a
 </span><span class='line'>
 </span><span class='line'>
@@ -216,70 +152,6 @@
 </span><span class='line'><span class="s1">        (                     )</span>
 </span><span class='line'><span class="s1">         `(                 )&#39;</span>
 </span><span class='line'>           <span class="sb">`</span><span class="s1">&#39;~&#39;</span>---,.,---<span class="s1">&#39;~&#39;</span><span class="sb">`</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>                                                   :#L ;<span class="c">#  ,</span>
-</span><span class='line'>                .,,,...                            :#L ;<span class="c">#  ,dP</span>
-</span><span class='line'>            ,!!!!!!!<span class="s1">&#39;,cd#####e,                 q  4#f,##,z#&#39;</span>
-</span><span class='line'>          ,!!!!!!!<span class="s1">&#39;,c############c              `#o`##kuC3## .zf</span>
-</span><span class='line'><span class="s1">        ,!!!!!!!&#39;</span>,c######P**<span class="s1">&#39;&#39;</span>**?#c              R#beeF?#####<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">       ;!!!!!!! c######&#39;</span>,eed##F<span class="s1">&#39;?t&#39;</span>               <span class="s1">&#39;####bd###&#39;</span>
-</span><span class='line'>      ;!!!!!!!.d#####F j<span class="s1">&#39;j#3#bf&#39;&#39;?b?e,             &#39;</span><span class="c">######P&#39;</span>
-</span><span class='line'>     !!!!!!:  <span class="c">######P J,f ,d##b?#bde`#c          .#k&lt;?????&gt;&#39;#b</span>
-</span><span class='line'>     !!!!!!!####F<span class="s1">&#39;.##&#39;</span>.u##??P<span class="o">}</span><span class="s1">&#39;&#39;&#39;^ ?##c.       d#####dd#####&gt;</span>
-</span><span class='line'><span class="s1">      `!!!!!  ?L e## #####P&#39;</span>zee^<span class="s1">&#39;####boc&#39;</span><span class="c">##,     R############</span>
-</span><span class='line'>       <span class="s1">&#39;!!!   z#####c,&#39;</span><span class="c">#P&#39;d##F&#39;zdbeereee#####eu    &#39;??####PF&#39;</span>
-</span><span class='line'>Mn      !!   d########ee z#P<span class="s1">&#39;,d######c?########C  &#39;</span>!!!::::!!!&gt;
-</span><span class='line'>MMM   ,cec, <span class="s1">&#39;^#########c,&#39;</span>,e##C?######bc?#######k !!!!!!!!!!!!
-</span><span class='line'>MMM<span class="s1">&#39;.#######, ?########P#######bc?T######d####### . -.`!!!!!!!</span>
-</span><span class='line'><span class="s1">nMM d#######F  ##P???&#39;</span>,e4########bcc?############ /~:.!!!!!!!!!
-</span><span class='line'>n.  <span class="s1">&#39;#######&#39;</span>   ::,<span class="s1">&#39;??e,.-.?####################F.C&#39;</span>m.<span class="sb">`</span>!!!!!!!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">M&#39;</span>:!:<span class="sb">`</span><span class="s1">&#39;&#39;&#39;&#39;&#39;   :!!!!!!i:.&#39;</span>?o. <span class="s1">&#39;? ?###??###&#39;</span><span class="c">##F&#39;#P&lt;###b/4.`4!!!</span>
-</span><span class='line'>: 4!!!!h     &lt;!!!!!!!!!!:  .CL.F<span class="s1">&#39;.zeElu. : ?eb o######o(#c&#39;</span><span class="sb">`</span>
-</span><span class='line'>  <span class="s1">&#39;`~!!~.ud !!````&#39;</span>!<span class="s1">&#39;&#39;</span><span class="sb">``</span>zd#####<span class="sb">`</span>d###CuuJ<span class="s1">&#39; !: 4##########c&#39;</span><span class="c">#c</span>
-</span><span class='line'>.<span class="s1">&#39; !~`z###&#39;</span>:!!!~<span class="sb">`</span>..:i! d#######<span class="sb">`</span><span class="c">####FCCJ&#39; !!!: ?#########b #L</span>
-</span><span class='line'><span class="c">##&#39;z#####&#39;:!!! :!!!!!&#39;4########`#####&#39; &#39;&#39; !!!!!:`########## &#39;</span>
-</span><span class='line'>?o######F !!!!!!!!!!! 4########;?#P<span class="s1">&#39;: JL .~!!!!i ####P?&#39;</span>l.u-
-</span><span class='line'><span class="c">########F!!!!!!!!!!!!:&#39;R#######E.:! #.##c3#%:`!!! .l==7Cuec^ &lt;</span>
-</span><span class='line'><span class="c">######## !!!!!!!!!!!!!i ?####P&#39;&lt;!!! ?#`####N.     Rk`######r\</span>
-</span><span class='line'><span class="c">########L`!!!!!!!!!!!!!!! .:::!!!&#39;&#39;`   ######      #c&#39;??&#39;7u+? !</span>
-</span><span class='line'><span class="c">######### !!!!!!!!!!!&#39;` :!!&#39;&#39;`         &#39;&#39;&#39;        .&#39;?b&#39;l.4d# !!!:</span>
-</span><span class='line'><span class="c">#########b `!!!&#39;&#39;&#39;`.. &#39;&#39;&#39;`               ...:::!!!!!! ###.?#b&#39;!!!&gt;</span>
-</span><span class='line'><span class="c">###########beee@########        ..:::!!!!!!!!!!!!!!!! 3##b ?#c`!!!</span>
-</span><span class='line'><span class="c">#######################f .::!!!!!!!!!!!!!!!!!!!!!!!!! d####`##b !!!</span>
-</span><span class='line'><span class="c">###########&#39;3#########&#39;:!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #####,###k !!!</span>
-</span><span class='line'><span class="c">#########P,d########F !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 3##### ###i`!!! 3&gt;</span>
-</span><span class='line'><span class="c">######F#Fz########## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! d#####h`###,!!! #&amp;</span>
-</span><span class='line'><span class="c">#####FJFx########## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&#39;4####### 9###.&#39;.###L</span>
-</span><span class='line'><span class="c">##### F.########F.r !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #######F  ?###e####F</span>
-</span><span class='line'><span class="c">####F .########&#39;d##bu,,.```&#39;&#39;!!!!!!!!!!!!!!!!&#39;&#39;&#39;&#39;&#39;`,d#######F.! ?######F</span>
-</span><span class='line'><span class="c">####F d######## ###########bc,,,,,,,,,,,,,,,,ccd############ !!f ?####&#39;</span>
-</span><span class='line'> <span class="s1">&#39;###e########&amp;&#39;</span><span class="c">############################################ !! #P&#39;</span>
-</span><span class='line'>   <span class="sb">`</span><span class="s1">&#39;?#########e`?########################################## !!&#39;</span>
-</span><span class='line'>      <span class="sb">`</span>?##########e <span class="sb">`</span><span class="s1">&#39;&#39;</span>**???#######################P***<span class="s1">&#39;&#39;</span>..:!!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">         &#39;</span>?########k<span class="sb">`</span>!!!!!!;;;;;;::,,,...... ,,,,,;;!!!!!!!!!!
-</span><span class='line'>             <span class="s1">&#39;&#39;</span>???<span class="s1">&#39;&#39;</span> !!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!:
-</span><span class='line'>                      !!!!!!!!!!!!!!!!!!!<span class="s1">&#39;   !!!!!!!!!!!!!!!!!!</span>
-</span><span class='line'><span class="s1">                       !!!!!!!!!!!!!!!!.   `!!!!!!!!!&#39;&#39;&#39;</span>!!!!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">                     :i !!!!!!!!!!!!!!!!   .``&#39;&#39;`.,uu,,.```.</span>
-</span><span class='line'><span class="s1">                     !!!!!!!!!!!!!!!!!~`    d#################&gt;</span>
-</span><span class='line'><span class="s1">                    c.`~~~~~!!!!!:..        ##################</span>
-</span><span class='line'><span class="s1">                    #####eeeeeeeuuuee#      #################&#39;</span>
-</span><span class='line'>                    <span class="c">##################       &#39;&#39;&#39;&#39;...........</span>
-</span><span class='line'>                    ?###############P<span class="s1">&#39;       &#39;</span>!!!!!!!!!!!!!!
-</span><span class='line'>                      ..<span class="s1">&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;</span>.:          !!!!!!!!!!!!!
-</span><span class='line'>                     :!!!!!!!!!!!!!!          <span class="sb">`</span>!!!!!!!!!!!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">                     i!!!!!!!!!!!!!&#39;</span>          !!!!!!!!!!!<span class="s1">&#39;::</span>
-</span><span class='line'><span class="s1">                     :!!!!!!!!!!!!!           !!!!!!!!!!:!!:.</span>
-</span><span class='line'><span class="s1">                     !!!!!!!!!!&#39;</span>!!!           . <span class="sb">`</span>!!!!!!!!!!!!<span class="sb">`</span>...
-</span><span class='line'>                     <span class="sb">`</span>!!!!!!!! -<span class="s1">&#39;``           !!!!!!!!!!!!!!!!!!!!!::</span>
-</span><span class='line'><span class="s1">                      !!!!!!!!!i!!!:           `~~~~~```~~~~~~~~~~~~`</span>
-</span><span class='line'><span class="s1">                      !!!!!!!!!!!!!!!.</span>
-</span><span class='line'><span class="s1">                        ```&#39;</span>!!!!!!!<span class="s1">&#39;``::..</span>
-</span><span class='line'><span class="s1">                              `!!!!!!!!!!!&#39;</span>
-</span><span class='line'>                                 <span class="sb">`````</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
