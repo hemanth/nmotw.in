@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-12-24T16:20:41+05:30</updated>
+  <updated>2017-12-24T16:22:27+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -185,52 +185,6 @@ M':!:<code>'''''   :!!!!!!i:.'?o. '? ?###??###'##F'#P&lt;###b/4.</code>4!!!
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[is-christmas]]></title>
-    <link href="http://nmotw.in//github/is-christmas/"/>
-    <updated>2017-12-24T15:58:01+05:30</updated>
-    <id>http://nmotw.in//github/is-christmas</id>
-    <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/is-christmas">is-christmas</a></h1>
-
-<blockquote><p>Is today Christmas?</p></blockquote>
-
-<p>Is it christmas today? Well, a fun little module to enjoy your vaction time.</p>
-
-<p>This module on CLI returns true if it's christmas.</p>
-
-<p><strong>Get it:</strong> <code>npm install [-g] is-christmas</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p>```js
-const isChristmas = require('is-christmas');</p>
-
-<p>isChristmas();
-//=> true
-```</p>
-
-<p>```sh
-$ is-christmas --help</p>
-
-<p>  Usage</p>
-
-<pre><code>is-christmas
-</code></pre>
-
-<p>  Examples</p>
-
-<pre><code>$ is-christmas
-true
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[unsplash-wallpaper]]></title>
     <link href="http://nmotw.in//github/unsplash-wallpaper/"/>
     <updated>2017-09-28T18:52:53+05:30</updated>
@@ -320,6 +274,32 @@ rest npm install
 <p><strong>Till next time!</strong></p>
 
 <p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rainbowify]]></title>
+    <link href="http://nmotw.in//github/rainbowify/"/>
+    <updated>2016-06-16T19:33:58+05:30</updated>
+    <id>http://nmotw.in//github/rainbowify</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rainbowify">rainbowify</a></h1>
+
+<blockquote><p>rainbow print stuff in terminal</p></blockquote>
+
+<p><code>rainbowify</code> is an module extracted from mocha's <a href="https://github.com/mochajs/mocha/blob/master/lib/reporters/nyan.js">nyan.js</a> which is a fun little module
+that helps to print rainbow text on the terminal.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global rainbowify</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p><code>sh
+$ echo &lt;some_text&gt; | rainbowify
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
 ]]></content>
   </entry>
   
