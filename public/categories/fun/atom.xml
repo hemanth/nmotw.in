@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-12-24T16:05:46+05:30</updated>
+  <updated>2017-12-24T16:20:41+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,177 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[christmas-ascii]]></title>
+    <link href="http://nmotw.in//github/christmas-ascii/"/>
+    <updated>2017-12-24T16:16:41+05:30</updated>
+    <id>http://nmotw.in//github/christmas-ascii</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmpjs.com/christmas-ascii">christmas-ascii</a></h1>
+
+<blockquote><p>Get some christmas ascii!</p></blockquote>
+
+<p>Enjoy your vacation with some random christmas ascii on your terminal!</p>
+
+<p><strong>Get it</strong> <code>npm install -g christmas-ascii</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const xmas = require('christmas-ascii')</p>
+
+<p>console.log(xmas())
+```</p>
+
+<p>```sh
+$ christmas-ascii -a</p>
+
+<pre><code>                ____
+              ;`    `'-._
+             / \        /\
+           /`   \      |  ;
+          /      \     |  |
+         /        `\   |  |
+        /           \_ /  |
+       ;            / `\  |
+      ,|_  __       \__/  |
+      _\_o/_(             |_
+     /`'=/\==''=='=='=='=='`\
+     |   )/                 |
+     \                      /
+     /';=''==''==''==''==';`\
+     |  /`   /~\  /~\   `\  |
+     |  \  _ \o/  \o/ _  /  |
+     \  ; (_)   __   (_) ;  /
+     /  |\_.-''(__)''-._/|  \
+    |   \       /\       /   |
+   /     '.___.'__'.___.'     \
+  |             \/             |
+  |                            |
+  \                            /
+  |                            |
+   \                          /
+    '.                      .'
+      '-.__            __.-'
+           '---'--'---'
+
+
+
+
+              / \
+             /   \
+            /     \
+           /       \
+          /         \
+         /           \
+        /             \
+       /_______________\
+      [_________________]
+     / / (_o_)   (_o_) \ \
+    (_(______,   ,______)_)
+   ( \      .`---'.      / )
+   ( /`~'''`  ._.  `'''~`\ )
+    (                     )
+   (                       )
+  (                         )
+  (                         )
+   (                       )
+    (                     )
+     `(                 )'
+       `'~'---,.,---'~'`
+
+
+
+
+                                               :#L ;#  ,
+            .,,,...                            :#L ;#  ,dP
+        ,!!!!!!!',cd#####e,                 q  4#f,##,z#'
+      ,!!!!!!!',c############c              `#o`##kuC3## .zf
+    ,!!!!!!!',c######P**''**?#c              R#beeF?#####'
+   ;!!!!!!! c######',eed##F'?t'               '####bd###'
+  ;!!!!!!!.d#####F j'j#3#bf''?b?e,             '######P'
+ !!!!!!:  ######P J,f ,d##b?#bde`#c          .#k&lt;?????&gt;'#b
+ !!!!!!!####F'.##'.u##??P}'''^ ?##c.       d#####dd#####&gt;
+  `!!!!!  ?L e## #####P'zee^'####boc'##,     R############
+   '!!!   z#####c,'#P'd##F'zdbeereee#####eu    '??####PF'
+</code></pre>
+
+<p>Mn      !!   d########ee z#P',d######c?########C  '!!!::::!!!>
+MMM   ,cec, '<sup>#########c,',e##C?######bc?#######k</sup> !!!!!!!!!!!!
+MMM'.#######, ?########P#######bc?T######d####### . -.<code>!!!!!!!
+nMM d#######F  ##P???',e4########bcc?############ /~:.!!!!!!!!!
+n.  '#######'   ::,'??e,.-.?####################F.C'm.</code>!!!!!!!'
+M':!:<code>'''''   :!!!!!!i:.'?o. '? ?###??###'##F'#P&lt;###b/4.</code>4!!!
+: 4!!!!h     &lt;!!!!!!!!!!:  .CL.F'.zeElu. : ?eb o######o(#c'<code>
+  '</code>~!!~.ud !!<code>``'!''</code>zd#####<code>d###CuuJ' !: 4##########c'#c
+.' !~</code>z###':!!!~<code>..:i! d#######</code>####FCCJ' !!!: ?#########b #L</p>
+
+<h2>'z#####':!!! :!!!!!'4########<code>#####' '' !!!!!:</code>########## '</h2>
+
+<p>?o######F !!!!!!!!!!! 4########;?#P': JL .~!!!!i ####P?'l.u-</p>
+
+<h6>##F!!!!!!!!!!!!:'R#######E.:! #.##c3#%:`!!! .l==7Cuec^ &lt;</h6>
+
+<h6>## !!!!!!!!!!!!!i ?####P'&lt;!!! ?#<code>####N.     Rk</code>######r\</h6>
+
+<h6>##L<code>!!!!!!!!!!!!!!! .:::!!!''</code>   ######      #c'??'7u+? !</h6>
+
+<h6>### !!!!!!!!!!!'<code>:!!''</code>         '''        .'?b'l.4d# !!!:</h6>
+
+<h6>###b <code>!!!'''</code>.. '''`               ...:::!!!!!! ###.?#b'!!!></h6>
+
+<h6>#####beee@########        ..:::!!!!!!!!!!!!!!!! 3##b ?#c`!!!</h6>
+
+<h6>#################f .::!!!!!!!!!!!!!!!!!!!!!!!!! d####`##b !!!</h6>
+
+<h6>#####'3#########':!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #####,###k !!!</h6>
+
+<h6>###P,d########F !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 3##### ###i`!!! 3></h6>
+
+<h6>F#Fz########## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! d#####h`###,!!! #&amp;</h6>
+
+<h5>FJFx########## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'4####### 9###.'.###L</h5>
+
+<h5>F.########F.r !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #######F  ?###e####F</h5>
+
+<h4>F .########'d##bu,,.<code>``''!!!!!!!!!!!!!!!!'''''</code>,d#######F.! ?######F</h4>
+
+<h4>F d######## ###########bc,,,,,,,,,,,,,,,,ccd############ !!f ?####'</h4>
+
+<p> '###e########&amp;'############################################ !! #P'
+   <code>'?#########e</code>?########################################## !!'</p>
+
+<pre><code>  `?##########e `''**???#######################P***''..:!!'
+     '?########k`!!!!!!;;;;;;::,,,...... ,,,,,;;!!!!!!!!!!
+         ''???'' !!!!!!!!!!!!!!!!!!!!!!  !!!!!!!!!!!!!!!!!:
+                  !!!!!!!!!!!!!!!!!!!'   !!!!!!!!!!!!!!!!!!
+                   !!!!!!!!!!!!!!!!.   `!!!!!!!!!'''!!!!'
+                 :i !!!!!!!!!!!!!!!!   .``''`.,uu,,.```.
+                 !!!!!!!!!!!!!!!!!~`    d#################&gt;
+                c.`~~~~~!!!!!:..        ##################
+                #####eeeeeeeuuuee#      #################'
+                ##################       ''''...........
+                ?###############P'       '!!!!!!!!!!!!!!
+                  ..''''''''''.:          !!!!!!!!!!!!!
+                 :!!!!!!!!!!!!!!          `!!!!!!!!!!!'
+                 i!!!!!!!!!!!!!'          !!!!!!!!!!!'::
+                 :!!!!!!!!!!!!!           !!!!!!!!!!:!!:.
+                 !!!!!!!!!!'!!!           . `!!!!!!!!!!!!`...
+                 `!!!!!!!! -'``           !!!!!!!!!!!!!!!!!!!!!::
+                  !!!!!!!!!i!!!:           `~~~~~```~~~~~~~~~~~~`
+                  !!!!!!!!!!!!!!!.
+                    ```'!!!!!!!'``::..
+                          `!!!!!!!!!!!'
+                             `````
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[is-christmas]]></title>
@@ -149,32 +320,6 @@ rest npm install
 <p><strong>Till next time!</strong></p>
 
 <p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rainbowify]]></title>
-    <link href="http://nmotw.in//github/rainbowify/"/>
-    <updated>2016-06-16T19:33:58+05:30</updated>
-    <id>http://nmotw.in//github/rainbowify</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rainbowify">rainbowify</a></h1>
-
-<blockquote><p>rainbow print stuff in terminal</p></blockquote>
-
-<p><code>rainbowify</code> is an module extracted from mocha's <a href="https://github.com/mochajs/mocha/blob/master/lib/reporters/nyan.js">nyan.js</a> which is a fun little module
-that helps to print rainbow text on the terminal.</p>
-
-<p><strong>Get it:</strong> <code>npm install --global rainbowify</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p><code>sh
-$ echo &lt;some_text&gt; | rainbowify
-</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
 ]]></content>
   </entry>
   
