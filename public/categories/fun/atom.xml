@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-12-18T09:27:15+05:30</updated>
+  <updated>2017-12-24T16:05:46+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[is-christmas]]></title>
+    <link href="http://nmotw.in//github/is-christmas/"/>
+    <updated>2017-12-24T15:58:01+05:30</updated>
+    <id>http://nmotw.in//github/is-christmas</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/is-christmas">is-christmas</a></h1>
+
+<blockquote><p>Is today Christmas?</p></blockquote>
+
+<p>Is it christmas today? Well, a fun little module to enjoy your vaction time.</p>
+
+<p>This module on CLI returns true if it's christmas.</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] is-christmas</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+const isChristmas = require('is-christmas');</p>
+
+<p>isChristmas();
+//=> true
+```</p>
+
+<p>```sh
+$ is-christmas --help</p>
+
+<p>  Usage</p>
+
+<pre><code>is-christmas
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ is-christmas
+true
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[unsplash-wallpaper]]></title>
@@ -129,106 +175,6 @@ $ echo &lt;some_text&gt; | rainbowify
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cowsay]]></title>
-    <link href="http://nmotw.in//github/cowsay/"/>
-    <updated>2016-04-21T20:40:16+05:30</updated>
-    <id>http://nmotw.in//github/cowsay</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cowsay">cowsay</a></h1>
-
-<blockquote><p>A configurable talking cow!</p></blockquote>
-
-<p>This is a port of  Tony Monroe's <code>cowsay</code> Perl module.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --global cowsay</code></p>
-
-<p><strong>CLI:</strong></p>
-
-<p>```
-cowsay
-Usage: cowsay [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text</p>
-
-<p>If any command-line arguments are left over after all switches have been processed, they become the cow's message.</p>
-
-<p>If the program is invoked as cowthink then the cow will think its message instead of saying it.</p>
-
-<p>Options:
-  -b  Mode: Borg                                                                                                                                <br/>
-  -d  Mode: Dead                                                                                                                                <br/>
-  -g  Mode: Greedy                                                                                                                              <br/>
-  -p  Mode: Paranoia                                                                                                                            <br/>
-  -s  Mode: Stoned                                                                                                                              <br/>
-  -t  Mode: Tired                                                                                                                               <br/>
-  -w  Mode: Wired                                                                                                                               <br/>
-  -y  Mode: Youthful                                                                                                                            <br/>
-  -e  Select the appearance of the cow's eyes.                                                                                                      [default: "oo"]
-  -T  The tongue is configurable similarly to the eyes through -T and tongue_string.                                                                [default: "  "]
-  -h  Display this help message                                                                                                                 <br/>
-  -n  If it is specified, the given message will not be word-wrapped.                                                                           <br/>
-  -W  Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.       [default: 40]
-  -f  Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.  [default: "default"]
-  -l  List all cowfiles included in this package.               <br/>
-```</p>
-
-<p>```sh</p>
-
-<p> nmotw.in> cowsay JavaScript FTW!</p>
-
-<hr />
-
-<p>&lt; JavaScript FTW! ></p>
-
-<hr />
-
-<pre><code>    \   ^__^
-     \  (oo)\_______
-        (__)\       )\/\
-            ||----w |
-            ||     ||
-</code></pre>
-
-<p>```</p>
-
-<p><strong>API:</strong></p>
-
-<p>```js
-var cowsay = require("cowsay");</p>
-
-<p>console.log(cowsay.say({</p>
-
-<pre><code>text : "I'm a moooodule",
-e : "oO",
-T : "U "
-</code></pre>
-
-<p>}));</p>
-
-<p>// or cowsay.think()
-```</p>
-
-<p>```sh</p>
-
-<hr />
-
-<p>( I'm a moooodule )</p>
-
-<hr />
-
-<pre><code>    o   ^__^
-     o  (oO)\_______
-        (__)\       )\/\
-         U  ||----w |
-            ||     ||
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/cowsay/cowsay.gif" alt="cowsay.gif" /></p>
 ]]></content>
   </entry>
   
