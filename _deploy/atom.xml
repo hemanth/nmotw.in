@@ -4,13 +4,162 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-12-18T09:27:15+05:30</updated>
+  <updated>2017-12-24T16:26:40+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[christmas-ascii]]></title>
+    <link href="http://nmotw.in/christmas-ascii/"/>
+    <updated>2017-12-24T16:16:41+05:30</updated>
+    <id>http://nmotw.in/christmas-ascii</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmpjs.com/christmas-ascii">christmas-ascii</a></h1>
+
+<blockquote><p>Get some christmas ascii!</p></blockquote>
+
+<p>Enjoy your vacation with some random christmas ascii on your terminal!</p>
+
+<p><strong>Get it</strong> <code>npm install -g christmas-ascii</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">xmas</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;christmas-ascii&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xmas</span><span class="p">())</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>christmas-ascii -a
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>                    ____
+</span><span class='line'>                  ;<span class="sb">`</span>    <span class="sb">`</span><span class="s1">&#39;-._</span>
+</span><span class='line'><span class="s1">                 / \        /\</span>
+</span><span class='line'><span class="s1">               /`   \      |  ;</span>
+</span><span class='line'><span class="s1">              /      \     |  |</span>
+</span><span class='line'><span class="s1">             /        `\   |  |</span>
+</span><span class='line'><span class="s1">            /           \_ /  |</span>
+</span><span class='line'><span class="s1">           ;            / `\  |</span>
+</span><span class='line'><span class="s1">          ,|_  __       \__/  |</span>
+</span><span class='line'><span class="s1">          _\_o/_(             |_</span>
+</span><span class='line'><span class="s1">         /`&#39;</span><span class="o">=</span>/<span class="se">\=</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">==</span><span class="s1">&#39;==&#39;</span><span class="o">==</span><span class="s1">&#39;==&#39;</span><span class="sb">`</span><span class="se">\</span>
+</span><span class='line'>         |   <span class="o">)</span>/                 |
+</span><span class='line'>         <span class="se">\ </span>                     /
+</span><span class='line'>         /<span class="s1">&#39;;=&#39;&#39;==&#39;&#39;==&#39;&#39;==&#39;&#39;==&#39;</span>;<span class="sb">`</span><span class="se">\</span>
+</span><span class='line'>         |  /<span class="sb">`</span>   /~<span class="se">\ </span> /~<span class="se">\ </span>  <span class="sb">`</span><span class="se">\ </span> |
+</span><span class='line'>         |  <span class="se">\ </span> _ <span class="se">\o</span>/  <span class="se">\o</span>/ _  /  |
+</span><span class='line'>         <span class="se">\ </span> ; <span class="o">(</span>_<span class="o">)</span>   __   <span class="o">(</span>_<span class="o">)</span> ;  /
+</span><span class='line'>         /  |<span class="se">\_</span>.-<span class="s1">&#39;&#39;</span><span class="o">(</span>__<span class="o">)</span><span class="s1">&#39;&#39;</span>-._/|  <span class="se">\</span>
+</span><span class='line'>        |   <span class="se">\ </span>      /<span class="se">\ </span>      /   |
+</span><span class='line'>       /     <span class="s1">&#39;.___.&#39;</span>__<span class="s1">&#39;.___.&#39;</span>     <span class="se">\</span>
+</span><span class='line'>      |             <span class="se">\/</span>             |
+</span><span class='line'>      |                            |
+</span><span class='line'>      <span class="se">\ </span>                           /
+</span><span class='line'>      |                            |
+</span><span class='line'>       <span class="se">\ </span>                         /
+</span><span class='line'>        <span class="s1">&#39;.                      .&#39;</span>
+</span><span class='line'>          <span class="s1">&#39;-.__            __.-&#39;</span>
+</span><span class='line'>               <span class="s1">&#39;---&#39;</span>--<span class="s1">&#39;---&#39;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>                  / <span class="se">\</span>
+</span><span class='line'>                 /   <span class="se">\</span>
+</span><span class='line'>                /     <span class="se">\</span>
+</span><span class='line'>               /       <span class="se">\</span>
+</span><span class='line'>              /         <span class="se">\</span>
+</span><span class='line'>             /           <span class="se">\</span>
+</span><span class='line'>            /             <span class="se">\</span>
+</span><span class='line'>           /_______________<span class="se">\</span>
+</span><span class='line'>          <span class="o">[</span>_________________<span class="o">]</span>
+</span><span class='line'>         / / <span class="o">(</span>_o_<span class="o">)</span>   <span class="o">(</span>_o_<span class="o">)</span> <span class="se">\ \</span>
+</span><span class='line'>        <span class="o">(</span>_<span class="o">(</span>______,   ,______<span class="o">)</span>_<span class="o">)</span>
+</span><span class='line'>       <span class="o">(</span> <span class="se">\ </span>     .<span class="sb">`</span>---<span class="s1">&#39;.      / )</span>
+</span><span class='line'><span class="s1">       ( /`~&#39;&#39;&#39;</span><span class="sb">`</span>  ._.  <span class="sb">`</span><span class="s1">&#39;&#39;&#39;~`\ )</span>
+</span><span class='line'><span class="s1">        (                     )</span>
+</span><span class='line'><span class="s1">       (                       )</span>
+</span><span class='line'><span class="s1">      (                         )</span>
+</span><span class='line'><span class="s1">      (                         )</span>
+</span><span class='line'><span class="s1">       (                       )</span>
+</span><span class='line'><span class="s1">        (                     )</span>
+</span><span class='line'><span class="s1">         `(                 )&#39;</span>
+</span><span class='line'>           <span class="sb">`</span><span class="s1">&#39;~&#39;</span>---,.,---<span class="s1">&#39;~&#39;</span><span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[portscanner]]></title>
@@ -1314,57 +1463,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/csrf/csrf.gif" alt="csrf.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fitty]]></title>
-    <link href="http://nmotw.in/fitty/"/>
-    <updated>2017-08-03T13:03:33+05:30</updated>
-    <id>http://nmotw.in/fitty</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fitty">fitty</a></h1>
-
-<blockquote><p>Makes text fit perfectly.</p></blockquote>
-
-<p>Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container.</p>
-
-<p>The crux is of fitty is the <code>fit</code> method which marks the fitty as dirty and requests a redraw (this will also redraw any other fitty marked as dirty).</p>
-
-<p><strong>Get it:</strong> <code>npm install fitty</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>const fitty = require(&#39;fitty&#39;);
-</span><span class='line'>
-</span><span class='line'>fitty(&#39;#my-element);
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Default options:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">defaultOptions</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">minSize</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">maxSize</span><span class="o">:</span> <span class="mi">512</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">multiLine</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">observeMutations</span><span class="o">:</span> <span class="s1">&#39;MutationObserver&#39;</span> <span class="k">in</span> <span class="nx">w</span> <span class="o">?</span> <span class="nx">mutationObserverDefaultSetting</span> <span class="o">:</span> <span class="kc">false</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yes, it uses <code>MutationObserver</code>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fitty/fitty.gif" alt="fitty" /></p>
 ]]></content>
   </entry>
   
