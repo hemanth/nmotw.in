@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dom | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2017-12-24T16:26:40+05:30</updated>
+  <updated>2017-12-30T15:41:14+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[scrolldir]]></title>
+    <link href="http://nmotw.in//github/scrolldir/"/>
+    <updated>2017-12-30T15:32:47+05:30</updated>
+    <id>http://nmotw.in//github/scrolldir</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/scrolldir">scrolldir</a></h1>
+
+<blockquote><p>leverage scroll direction with CSS ⬆⬇</p></blockquote>
+
+<p><code>0</code> dep, <code>1KB</code> micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute.</p>
+
+<p><strong>Get it:</strong> <code>npm install scrolldir</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+scrollDir();</p>
+
+<p>scrollDir({ attribute: 'new-attribute-name' });</p>
+
+<p>scrollDir({ el: 'your-new-selector' });</p>
+
+<p>scrollDir({ off: true });</p>
+
+<p>scrollDir({ direction: 'up' });
+```</p>
+
+<p>ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/scrolldir/scrolldir.gif" alt="scrolldir.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fitty]]></title>
@@ -203,46 +238,6 @@ const inputMap = {</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/what-input/what-input.gif" alt="what-input" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[aos]]></title>
-    <link href="http://nmotw.in//github/aos/"/>
-    <updated>2017-03-30T09:25:30+05:30</updated>
-    <id>http://nmotw.in//github/aos</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/aos">aos</a></h1>
-
-<blockquote><p>animate on scroll</p></blockquote>
-
-<p>Small library to animate elements on your page as you scroll.</p>
-
-<p><code>AOS</code> allows you to animate elements as you scroll down, and up.</p>
-
-<p>If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>html</code>:</p>
-
-<p>```html</p>
-
-<div data-aos="animation_name"/>
-```
-
-```js
-const aos = require('aos');
-aos.init();
-```
-
-Major set of animations: Fade, Flip, Slide, Zoom, Easing functions and anchor placements.
-
-__GIF FTW!:__
-
-![aos](/images/aos/aos.gif)
-
 ]]></content>
   </entry>
   

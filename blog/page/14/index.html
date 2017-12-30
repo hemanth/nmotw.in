@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="browser-repl Launch a repl on your command line to any browser in the cloud. browser-repl is a uber cool module from automattic that helps us to get &hellip;">   
+    <meta name="description" content="html.js An intuitive, extensible way to work directly with the DOM. html.js is a fork of voyeur.js that has made it more simpler to deal with DOM in &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/14/">
-    <meta name="twitter:description" content="browser-repl Launch a repl on your command line to any browser in the cloud. browser-repl is a uber cool module from automattic that helps us to get &hellip;">
+    <meta name="twitter:description" content="html.js An intuitive, extensible way to work directly with the DOM. html.js is a fork of voyeur.js that has made it more simpler to deal with DOM in &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/14/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="browser-repl Launch a repl on your command line to any browser in the cloud. browser-repl is a uber cool module from automattic that helps us to get &hellip;" />
+    <meta property="og:description" content="html.js An intuitive, extensible way to work directly with the DOM. html.js is a fork of voyeur.js that has made it more simpler to deal with DOM in &hellip;" />
 
     
 
@@ -67,6 +67,79 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/html.js/">
+			
+				html.js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-25T17:42:57+05:30" pubdate data-updated="true">Jun 25<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/html.js">html.js</a></h1>
+
+<blockquote><p>An intuitive, extensible way to work directly with the DOM.</p></blockquote>
+
+<p><code>html.js</code> is a fork of <a href="http://adriancooney.ie/voyeur.js/">voyeur.js</a> that has made it more simpler to deal with DOM in a
+relatively new way.</p>
+
+<p>It has a pretty extensive <a href="http://nbubna.github.io/HTML/#API">API</a> and you could also create your own plugins
+<code>HTML._.fn.name = function;</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save html.js</code></p>
+
+<p><strong>Usage Example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">HTML</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;html.js&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">HTML</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">header</span><span class="p">;</span> <span class="c1">// returns header element.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">HTML</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s2">&quot;#example&quot;</span><span class="p">).</span><span class="nx">h1</span><span class="p">.</span><span class="nx">em</span><span class="p">;</span> <span class="c1">// chain on, man.</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="s1">&#39;each&#39;</span> <span class="k">in</span> <span class="nx">node</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">HTML</span><span class="p">.</span><span class="nx">ify</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">node</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="s1">&#39; is your friend!&#39;</span><span class="p">);</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/html.js/html.js.gif" alt="html.js" /></p>
+
+<p>Thanks to <a href="https://github.com/nbubna">Nathan Bubna</a> for this module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -928,70 +1001,6 @@ P.S: There is <code>console.dir</code> but <code>console.json</code> is kina app
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/exenv/exenv.gif" alt="exenv" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/logdown/">
-			
-				Logdown</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-16T18:07:03+05:30" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="http://npm.im/logdown">logdown</a></p>
-
-<blockquote><p>Debug utility with markdown support that runs on browser and server.</p></blockquote>
-
-<p>This module lets you to have markdown syntax in your debug logs! It had <code>['log', 'info', 'warn', 'error']</code> as it's logging levels.</p>
-
-<p>One can also prefix the log message, it has support for various terminals <code>/^screen|^xterm|^vt100|color|ansi|cygwin|linux/</code> and also runs
-in the browser env.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save logdown</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Logdown</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;logdown&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">debug</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Logdown</span><span class="p">({</span> <span class="nx">prefix</span><span class="o">:</span> <span class="s1">&#39;meow&#39;</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;lorem *ipsum*&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;I can haz _info_&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">debug</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;shall I `highlight` your code?&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/logdown/logdown.gif" alt="logdown" /></p>
-
-<p>Thanks to <a href="http://caiogondim.com">Caio Gondim</a> for logdown! (:</p>
 
 		
 		
