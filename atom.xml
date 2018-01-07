@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-01-07T11:50:37+05:30</updated>
+  <updated>2018-01-07T11:53:08+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -19,7 +19,7 @@
     <id>http://nmotw.in/circular-json</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/circular-json">circular-json</a></h1>
 
-<blockquote><p>Handle JSON</p></blockquote>
+<blockquote><p>Handle circular JSON references with ease!</p></blockquote>
 
 <p>You would have come acorss <code>TypeError: Converting circular structure to JSON</code> if you have been handling JSONs for a while now, <code>circular-json</code> serializes and deserializes otherwise valid JSON objects containing circular references into and from a specialized JSON format.</p>
 
