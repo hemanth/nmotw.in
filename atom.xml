@@ -4,13 +4,71 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2017-12-30T15:41:14+05:30</updated>
+  <updated>2018-01-07T11:50:37+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[circular-json]]></title>
+    <link href="http://nmotw.in/circular-json/"/>
+    <updated>2018-01-07T11:38:12+05:30</updated>
+    <id>http://nmotw.in/circular-json</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/circular-json">circular-json</a></h1>
+
+<blockquote><p>Handle JSON</p></blockquote>
+
+<p>You would have come acorss <code>TypeError: Converting circular structure to JSON</code> if you have been handling JSONs for a while now, <code>circular-json</code> serializes and deserializes otherwise valid JSON objects containing circular references into and from a specialized JSON format.</p>
+
+<p><strong>Get it:</strong> <code>npm install circular-json</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span>
+</span><span class='line'>  <span class="nx">CircularJSON</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;circular-json&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">str</span>
+</span><span class='line'><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">self</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">CircularJSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// &quot;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;self\&quot;:\&quot;~\&quot;}&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">JSON.stringify(obj); would have resulted in:</span>
+</span><span class='line'><span class="cm">TypeError: Converting circular structure to JSON</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/circular-json/circular-json.gif" alt="circular-json" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scrolldir]]></title>
@@ -1389,50 +1447,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/mitt/mitt.gif" alt="mitt" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gtop]]></title>
-    <link href="http://nmotw.in/gtop/"/>
-    <updated>2017-08-18T13:25:20+05:30</updated>
-    <id>http://nmotw.in/gtop</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/gtop">gtop</a></h1>
-
-<blockquote><p>System monitoring dashboard for terminal.</p></blockquote>
-
-<p><code>gtop</code> could be termed as the node's version of <a href="http://hisham.hm/htop/">htop</a>, gives a very need interface on the cli that would list out the below:</p>
-
-<ul>
-<li><p>CPU history.</p></li>
-<li><p>Memory and Swap History.</p></li>
-<li><p>Memory and Netowrk usage.</p></li>
-<li><p>Disk usage.</p></li>
-<li><p>Process list.</p></li>
-</ul>
-
-
-<p>You can sort the process table by pressing:</p>
-
-<p><code>p</code>: Process Id
-<code>c</code>: CPU usage
-<code>m</code>: Memory usage</p>
-
-<p><strong>Get it:</strong> <code>npm install -g gtop</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gtop
-</span><span class='line'>
-</span><span class='line'># In case of font issues: LANG=en_US.utf8 TERM=xterm-256color gtop</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/gtop/gtop.gif" alt="gtop" /></p>
 ]]></content>
   </entry>
   
