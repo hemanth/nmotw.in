@@ -1,0 +1,44 @@
+---
+layout: post
+title: "ccxt"
+date: 2018-01-14 17:37:05 +0530
+comments: true
+categories: crypto
+---
+
+#[ccxt](https://www.npmjs.com/package/ccxt)
+> Connect and trade with cryptocurrency.
+
+`ccxt` is library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.
+
+__Get it:__ `npm install ccxt`
+
+__Sample usage:__
+
+```js
+let ccxt = require('ccxt')
+
+let exchange = new ccxt.bitfinex({
+    apiKey: '4FlEDtxDl35gdEiobnfZ72vJeZteE4Bb7JdvqzjIjHq',
+    secret: 'D4DXM8DZdHuAq9YptUsb42aWT1XBnGlIJgLi8a7tzFH',
+})
+
+await exchange.loadMarkets()
+console.log(exchange.symbols)
+
+let symbol = exchange.symbols[0]
+console.log(symbol)
+
+let ticker = await exchange.fetchTicker(symbol)
+console.log(ticker)
+
+let orderbook = await exchange.fetchOrderBook(symbol)
+console.log(orderbook)
+
+let balance = await exchange.fetchBalance()
+console.log(balance);
+```
+
+__GIF FTW!__
+
+![ccxt](/images/ccxt/ccxt.gif)
