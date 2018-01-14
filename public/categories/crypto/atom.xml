@@ -4,7 +4,7 @@
   <title><![CDATA[Category: crypto | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/crypto/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-01-07T11:53:08+05:30</updated>
+  <updated>2018-01-14T20:59:31+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ccxt]]></title>
+    <link href="http://nmotw.in//github/ccxt/"/>
+    <updated>2018-01-14T17:37:05+05:30</updated>
+    <id>http://nmotw.in//github/ccxt</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ccxt">ccxt</a></h1>
+
+<blockquote><p>Connect and trade with cryptocurrency.</p></blockquote>
+
+<p><code>ccxt</code> is library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.</p>
+
+<p><strong>Get it:</strong> <code>npm install ccxt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+let ccxt = require('ccxt')</p>
+
+<p>let exchange = new ccxt.bitfinex({</p>
+
+<pre><code>apiKey: '4FlEDtxDl35gdEiobnfZ72vJeZteE4Bb7JdvqzjIjHq',
+secret: 'D4DXM8DZdHuAq9YptUsb42aWT1XBnGlIJgLi8a7tzFH',
+</code></pre>
+
+<p>})</p>
+
+<p>await exchange.loadMarkets()
+console.log(exchange.symbols)</p>
+
+<p>let symbol = exchange.symbols[0]
+console.log(symbol)</p>
+
+<p>let ticker = await exchange.fetchTicker(symbol)
+console.log(ticker)</p>
+
+<p>let orderbook = await exchange.fetchOrderBook(symbol)
+console.log(orderbook)</p>
+
+<p>let balance = await exchange.fetchBalance()
+console.log(balance);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ccxt/ccxt.gif" alt="ccxt" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[secure-keys]]></title>
