@@ -4,7 +4,7 @@
   <title><![CDATA[Category: crypto | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/crypto/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-01-14T20:59:31+05:30</updated>
+  <updated>2018-01-21T23:49:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[technicalindicators]]></title>
+    <link href="http://nmotw.in//github/technicalindicators/"/>
+    <updated>2018-01-21T23:43:42+05:30</updated>
+    <id>http://nmotw.in//github/technicalindicators</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/technicalindicators">technicalindicators</a></h1>
+
+<blockquote><p>Techincal Indicators!</p></blockquote>
+
+<p>Techincal Indicators: "Any class of metrics whose value is derived from generic price activity in a stock or asset."</p>
+
+<p>With this module we would get around 20 indicators, 2 charts, 23 candle stick patterns!</p>
+
+<p><strong>Get it:</strong> <code>npm install technicalindicators</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var twoDayBullishInput = {
+  open: [23.25,15.36],
+  high: [25.10,30.87],
+  close: [21.44,27.89],
+  low: [20.82,14.93],
+}</p>
+
+<p>var bullish = require('technicalindicators').bullish;</p>
+
+<p>bullish(twoDayBullishInput) //true
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/technicalindicators/technicalindicators.gif" alt="technicalindicators.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ccxt]]></title>

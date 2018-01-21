@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;">   
+    <meta name="description" content="Trianglify Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds. This is inspired by btmills/geopattern &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;">
+    <meta name="twitter:description" content="Trianglify Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds. This is inspired by btmills/geopattern &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;" />
+    <meta property="og:description" content="Trianglify Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds. This is inspired by btmills/geopattern &hellip;" />
 
     
 
@@ -67,6 +67,76 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/trianglify/">
+			
+				Trianglify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-24T17:23:44+05:30" pubdate data-updated="true">Sep 24<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
+
+<blockquote><p>Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds.</p></blockquote>
+
+<p>This is inspired by <a href="https://github.com/btmills/geopattern">btmills/geopattern</a> thanks to <a href="http://qrohlf.com/">Quinn Rohlf</a> for this.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save trianglify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Trianglify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;trianglify&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">});</span>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">canvas</span><span class="p">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are few wonderful <a href="https://github.com/qrohlf/trianglify/blob/master/Readme.md#options">options</a> <code>color_function</code> being one of them.</p>
+
+<p>Color function that uses the HSL color format to generate a rainbow pattern:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorFunc</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;hsl(&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span><span class="o">*</span><span class="mi">360</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,80%,60%)&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">color_function</span><span class="o">:</span> <span class="nx">colorFunc</span><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -849,107 +919,6 @@ which provides raw browser/feature support data for the same.</p>
 <p><img src="/images/combokeys/combokeys.gif" alt="combokeys" /></p>
 
 <p>Thanks to <a href="https://github.com/mightyiam">Shahar Or</a> for porting <code>mousetrap</code> to <code>combokeys</code>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/easydate/">
-			
-				Easydate</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-16T20:12:07+05:30" pubdate data-updated="true">Jul 16<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/easydate">easydate</a></p>
-
-<blockquote><p>get date and/or time by pattern.</p></blockquote>
-
-<p>A simple date and time util that returns the date according to a pattern, <code>easydate</code> takes two arguments, first one being a pattern string
-and second one being an config object.</p>
-
-<p><strong>Pattern Options:</strong></p>
-
-<ul>
-<li><code>Y</code> Full year (number - e.g. <code>2012</code>)</li>
-<li><code>y</code> Year (number - e.g. <code>12</code>)</li>
-<li><code>M</code> Month (number - e.g. <code>11</code>)</li>
-<li><code>d</code> Day (number - e.g. <code>28</code>)</li>
-<li><code>h</code> Hour (number - e.g. <code>02</code>)</li>
-<li><code>m</code> Minute (number - e.g. <code>01</code>)</li>
-<li><code>s</code> Second (number - e.g. <code>33</code>)</li>
-<li><code>l</code> Millisecond (number - e.g. <code>001</code>)</li>
-<li><code>z</code> Timezone (string - e.g. <code>UTC</code>, <code>UTC+1</code>, <code>UTC-11</code>)</li>
-<li><code>x</code> DST (string - either <code>'DST'</code> or <code>''</code>)</li>
-</ul>
-
-
-<p><strong>Config options:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;Date&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc/local&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">adjust</span><span class="o">:</span> <span class="s1">&#39;Whether or not to adjust DST&#39;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Install it:</strong> <code>npm install --save easydate</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">easydate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;easydate&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;d-M-y&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s.l&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-11-03T16:06:08.123Z&#39;</span><span class="p">)</span> <span class="c1">// &quot;16:06:08.123&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">timeZone</span><span class="o">:</span> <span class="s1">&#39;utc&#39;</span><span class="p">})</span> <span class="c1">// =&gt; &quot;UTC&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">easydate</span><span class="p">(</span><span class="s1">&#39;h:m:s z x&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">setDate</span><span class="o">:</span> <span class="s1">&#39;2016-08-01T00:00:00.000Z&#39;</span><span class="p">,</span> <span class="nx">adjust</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/easydate/easydate.gif" alt="easydate" /></p>
-
-<p>Thanks to <a href="https://medium.com/@roryrjb">Rory Bradford</a> for this handy util.</p>
 
 		
 		
