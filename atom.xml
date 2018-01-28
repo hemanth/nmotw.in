@@ -4,13 +4,80 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-01-21T23:49:39+05:30</updated>
+  <updated>2018-01-28T22:34:06+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[bytes]]></title>
+    <link href="http://nmotw.in/bytes/"/>
+    <updated>2018-01-28T22:24:12+05:30</updated>
+    <id>http://nmotw.in/bytes</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/bytes">bytes</a></h1>
+
+<blockquote><p>parse a string bytes &lt;=> bytes</p></blockquote>
+
+<p><code>bytes</code> is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and vice-versa.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save bytes</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// output: &#39;1KB&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// output: &#39;1000B&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">{</span><span class="nx">thousandsSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
+</span><span class='line'><span class="c1">// output: &#39;1 000B&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mf">1.7</span><span class="p">,</span> <span class="p">{</span><span class="nx">decimalPlaces</span><span class="o">:</span> <span class="mi">0</span><span class="p">});</span>
+</span><span class='line'><span class="c1">// output: &#39;2KB&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="p">{</span><span class="nx">unitSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
+</span><span class='line'><span class="c1">// output: &#39;1 KB&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Supported units and abbreviations:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">b</span> <span class="k">for</span> <span class="nx">bytes</span>
+</span><span class='line'><span class="nx">kb</span> <span class="k">for</span> <span class="nx">kilobytes</span>
+</span><span class='line'><span class="nx">mb</span> <span class="k">for</span> <span class="nx">megabytes</span>
+</span><span class='line'><span class="nx">gb</span> <span class="k">for</span> <span class="nx">gigabytes</span>
+</span><span class='line'><span class="nx">tb</span> <span class="k">for</span> <span class="nx">terabytes</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/bytes/bytes.gif" alt="bytes.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[technicalindicators]]></title>
@@ -1309,102 +1376,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/async-retry/async-retry.gif" alt="async-retry" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[build.sh]]></title>
-    <link href="http://nmotw.in/build.sh/"/>
-    <updated>2017-09-08T10:03:31+05:30</updated>
-    <id>http://nmotw.in/build.sh</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/build.sh">build.sh</a></h1>
-
-<blockquote><p>🔨 run and visualize the build process.</p></blockquote>
-
-<p><code>build.sh</code> is one of those unquie node module which likes to take an atypical route in solving problems, this module helps in running and visualize the build process, makes use of <code>build.yml</code> at the root of your project for the build pipleline meta-data.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g build.sh</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>build <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>
-</span><span class='line'>  -V, --version        output the version number
-</span><span class='line'>  -c, --config <span class="o">[</span>file<span class="o">]</span>  the input file <span class="k">for </span>the build pipeline to run
-</span><span class='line'>  -d, --debug          outputs a debug file of the build process and data captured
-</span><span class='line'>  -h, --help           output usage information
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To invoke about the pipeline simply run <code>build</code> at the project root. The terminal output will show the pipeline being run and eventually will open the browser to the location of the final report.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># cat .build.yml</span>
-</span><span class='line'>
-</span><span class='line'>pipeline:
-</span><span class='line'>  <span class="o">{</span>key<span class="o">}</span>:
-</span><span class='line'>    - <span class="o">{</span><span class="nb">command</span><span class="o">}</span>
-</span><span class='line'>    - <span class="o">{</span><span class="nb">command</span><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Sample <code>.build.yml</code>:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">output</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">./docs</span>
-</span><span class='line'><span class="l-Scalar-Plain">pipeline</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">install</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm --version</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">node --version</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm</span><span class="p-Indicator">:</span>
-</span><span class='line'>      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm install</span>
-</span><span class='line'>      <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ls -lh node_modules</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">lint</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm run lint</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">coverage</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm run coverage</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">test</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm test</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">docs</span><span class="p-Indicator">:</span>
-</span><span class='line'>    <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">npm run generate-docs</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/build.sh/build.sh.gif" alt="build.sh" /></p>
 ]]></content>
   </entry>
   

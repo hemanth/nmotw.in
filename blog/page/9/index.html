@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="node-nightly node-nightly at your finger tips! node-nightly as the name says it's the nightly version of node, basically: Check if nightly version &hellip;">   
+    <meta name="description" content="listr Terminal task list. listr is one of those cheeky 💄 modules for your CLI apps. Below is the gist of this module: listr accepts an array of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/9/">
-    <meta name="twitter:description" content="node-nightly node-nightly at your finger tips! node-nightly as the name says it's the nightly version of node, basically: Check if nightly version &hellip;">
+    <meta name="twitter:description" content="listr Terminal task list. listr is one of those cheeky 💄 modules for your CLI apps. Below is the gist of this module: listr accepts an array of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/9/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="node-nightly node-nightly at your finger tips! node-nightly as the name says it's the nightly version of node, basically: Check if nightly version &hellip;" />
+    <meta property="og:description" content="listr Terminal task list. listr is one of those cheeky 💄 modules for your CLI apps. Below is the gist of this module: listr accepts an array of &hellip;" />
 
     
 
@@ -67,6 +67,101 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/listr/">
+			
+				Listr</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-07-07T15:33:39+05:30" pubdate data-updated="true">Jul 7<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/listr">listr</a></h1>
+
+<blockquote><p>Terminal task list.</p></blockquote>
+
+<p><code>listr</code> is one of those cheeky 💄 modules for your CLI apps.</p>
+
+<p>Below is the gist of this module:</p>
+
+<ul>
+<li><p><code>listr</code> accepts an array of tasks, where each task in a object consisting of <code>title</code> (string) and <code>task</code> (method).</p></li>
+<li><p>If a task returns, it means the task was completed succesfully.</p></li>
+<li><p>If a task throws an error, the task failed.</p></li>
+<li><p>Task can be async by returning a Promise.</p></li>
+<li><p>Task can be an Observable.</p></li>
+<li><p>Task can also be a stream, which is in-turn converted to an Observable.</p></li>
+<li><p>An instance of <code>listr</code> has <code>add(task)</code>, <code>task</code> and <code>run</code> methods. (Names are self explanatory?)</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save listr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">tasks</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Listr</span><span class="p">([</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Success&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">task</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">&#39;Foo&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Failure&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">task</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Bar&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">tasks</span><span class="p">.</span><span class="nx">run</span><span class="p">().</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/listr/listr.gif" alt="listr" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -968,97 +1063,6 @@ that helps to print rainbow text on the terminal.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/captionbot/captionbot.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/trevor/">
-			
-				Trevor</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-04-28T15:56:32+05:30" pubdate data-updated="true">Apr 28<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/trevor">trevor</a></h1>
-
-<blockquote><p>Your own Travis CI to run tests locally.</p></blockquote>
-
-<p><img src="/images/trevor/logo.png" alt="" /></p>
-
-<p><strong>From the author:</strong></p>
-
-<p>I often need to run tests for multiple versions of Node.js.</p>
-
-<p>But I don't want to switch versions manually using n/nvm or push the code to Travis CI just to run the tests.</p>
-
-<p>That's why I created Trevor.</p>
-
-<p>It reads <code>.travis.yml</code> and runs tests in all versions you requested, just like Travis CI.</p>
-
-<p>Now, you can test before push and keep your git history clean.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save trevor</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>trevor --help
-</span><span class='line'>
-</span><span class='line'>  Your own Travis CI to run tests locally
-</span><span class='line'>
-</span><span class='line'>  Usage: trevor <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Options:
-</span><span class='line'>
-</span><span class='line'>    -h, --help    Show this <span class="nb">help</span>
-</span><span class='line'>    --no-clean    Don<span class="err">&#39;</span> remove the Docker image after tests
-</span><span class='line'>
-</span><span class='line'>  Required files <span class="o">(</span>in the current directory<span class="o">)</span>:
-</span><span class='line'>
-</span><span class='line'>    - package.json
-</span><span class='line'>    - .travis.yml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: <code>trevor</code> has a dependency on <a href="https://www.docker.com/">docker</a> and if <code>--no-clean</code> is not used it will remove all the docker images after the test runs.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/trevor/trevor.gif" alt="" /></p>
 
 		
 		
