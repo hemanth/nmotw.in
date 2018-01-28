@@ -1,0 +1,47 @@
+---
+layout: post
+title: "bytes"
+date: 2018-01-28 22:24:12 +0530
+comments: true
+categories: util
+---
+
+#[bytes](https://www.npmjs.com/package/bytes)
+> parse a string bytes <=> bytes
+
+`bytes` is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and vice-versa.
+
+__Get it:__ `npm install --save bytes`
+
+__Sample usage:__
+
+```js
+bytes(1024);
+// output: '1KB'
+
+bytes(1000);
+// output: '1000B'
+
+bytes(1000, {thousandsSeparator: ' '});
+// output: '1 000B'
+
+bytes(1024 * 1.7, {decimalPlaces: 0});
+// output: '2KB'
+
+bytes(1024, {unitSeparator: ' '});
+// output: '1 KB'
+```
+
+Supported units and abbreviations:
+
+```
+b for bytes
+kb for kilobytes
+mb for megabytes
+gb for gigabytes
+tb for terabytes
+```
+
+__GIF FTW!__
+
+![bytes.gif](/images/bytes/bytes.gif)
