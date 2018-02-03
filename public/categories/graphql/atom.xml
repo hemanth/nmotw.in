@@ -4,7 +4,7 @@
   <title><![CDATA[Category: graphql | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/graphql/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-02-04T01:37:00+05:30</updated>
+  <updated>2018-02-04T01:39:24+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -41,7 +41,7 @@ client.request(query, variables).then(data => console.log(data))
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/graphql-client.gif" alt="graphql-client.gif" /></p>
+<p><img src="/images/graphql-request.gif" alt="graphql-request.gif" /></p>
 ]]></content>
   </entry>
   
