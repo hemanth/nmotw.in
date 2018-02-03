@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;">   
+    <meta name="description" content="captionbot Get captions for image using Microsoft's CaptionBot 🤖 A cheeky bot that tries recognize an image and explain it like a human would do, it &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/10/">
-    <meta name="twitter:description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;">
+    <meta name="twitter:description" content="captionbot Get captions for image using Microsoft's CaptionBot 🤖 A cheeky bot that tries recognize an image and explain it like a human would do, it &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/10/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;" />
+    <meta property="og:description" content="captionbot Get captions for image using Microsoft's CaptionBot 🤖 A cheeky bot that tries recognize an image and explain it like a human would do, it &hellip;" />
 
     
 
@@ -67,6 +67,92 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/captionbot/">
+			
+				Captionbot</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-05-05T18:27:22+05:30" pubdate data-updated="true">May 5<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/captionbot">captionbot</a></p>
+
+<blockquote><p>Get captions for image using Microsoft's CaptionBot 🤖</p></blockquote>
+
+<p>A cheeky bot that tries recognize an image and explain it like a human would do, it requires node version <code>&gt;=4</code> this is powered by <a href="https://www.captionbot.ai/">CaptionBot</a>, a free service provided by Microsoft.</p>
+
+<p>The author says he would consider this module "for testing only" and does not recommend using in a production system.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save captionbot</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">captionbot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;captionbot&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">captionbot</span><span class="p">(</span><span class="s1">&#39;http://i.imgur.com/o33PTUp.jpg&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">caption</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">caption</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//=&gt; &#39;I think it&#39;s a group of people posing for a picture\nand he seems 😐.&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">captionbot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;captionbot&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kr">const</span> <span class="nx">caption</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">captionbot</span><span class="p">(</span><span class="s1">&#39;http://i.imgur.com/o33PTUp.jpg&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">caption</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/captionbot/captionbot.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -983,81 +1069,6 @@ Checkout the project's <code>readme.md</code> for <a href="https://github.com/wi
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/color-thief/color-thief.gif" alt="color-thief" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/must/">
-			
-				Must</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-25T19:29:29+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/must">must</a></h1>
-
-<blockquote><p>Testing and assertion library with friendly BDD syntax!</p></blockquote>
-
-<p><code>must</code> provides a BDD syntax for all your assertions and it follows <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> with its use of <strong>MUST</strong>. Good and well testsed stuff.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save must</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;must/register&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">[].</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">empty</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">must</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">nonenumerable</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">above</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">then</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]).</span><span class="nx">must</span><span class="p">.</span><span class="nx">eventually</span><span class="p">.</span><span class="nx">not</span><span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Problemo&quot;</span><span class="p">)).</span><span class="nx">must</span><span class="p">.</span><span class="nx">reject</span><span class="p">.</span><span class="kd">with</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sr">/problem/i</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/must/must.gif" alt="must.gif" /></p>
-
-<p>We <code>must</code> thank <a href="https://twitter.com/theml">Andri Möll</a> for <code>must</code></p>
 
 		
 		

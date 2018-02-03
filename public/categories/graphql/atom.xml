@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: graphql | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/graphql/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2018-02-04T01:37:00+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[graphql-request]]></title>
+    <link href="http://nmotw.in//github/graphql-request/"/>
+    <updated>2018-02-03T22:46:29+05:30</updated>
+    <id>http://nmotw.in//github/graphql-request</id>
+    <content type="html"><![CDATA[<h1><a href="">graphql-request</a></h1>
+
+<blockquote><p>Minimal GraphQL client.</p></blockquote>
+
+<p><code>graphql-request</code> is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it doesn't have a built-in cache and has no integrations for frontend frameworks.</p>
+
+<p><strong>Get it:</strong> <code>npm install graphql-request</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { request, GraphQLClient } from 'graphql-request'</p>
+
+<p>// Run GraphQL queries/mutations using a static function
+request(endpoint, query, variables).then(data => console.log(data))</p>
+
+<p>// ... or create a GraphQL client instance to send requests
+const client = new GraphQLClient(endpoint, { headers: {} })
+client.request(query, variables).then(data => console.log(data))
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/graphql-client.gif" alt="graphql-client.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>
