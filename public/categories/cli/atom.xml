@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-02-04T01:41:16+05:30</updated>
+  <updated>2018-02-09T17:15:09+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[thanks]]></title>
+    <link href="http://nmotw.in//github/thanks/"/>
+    <updated>2018-02-09T17:04:21+05:30</updated>
+    <id>http://nmotw.in//github/thanks</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/thanks">thanks</a></h1>
+
+<blockquote><p>🙌 Give thanks to the open source maintainers you depend on! ✨</p></blockquote>
+
+<p><code>thanks</code> picks up the "nearest" <code>package.json</code> / <code>node_modules</code> folder and fetch all the mainterners who are seeking donation and lists them all in a neat table with the donation URL.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g thanks</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```sh
+$ thanks --help</p>
+
+<p>thanks - 🙌 Give thanks to the open source maintainers you depend on! ✨</p>
+
+<p>Usage:</p>
+
+<pre><code>thanks &lt;flags&gt; [CWD]
+
+If CWD is omitted, then the current working directory is used. The "nearest"
+package.json / node_modules folder will be used.
+</code></pre>
+
+<p>Flags:</p>
+
+<pre><code>-v, --version   Show current version
+-h, --help      Show usage information
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/thanks/thanks.gif" alt="thanks.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[portscanner]]></title>
@@ -167,46 +209,6 @@ $ gtop</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/gtop/gtop.gif" alt="gtop" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[vtop]]></title>
-    <link href="http://nmotw.in//github/vtop/"/>
-    <updated>2017-06-10T15:59:12+05:30</updated>
-    <id>http://nmotw.in//github/vtop</id>
-    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/packages/vtop">vtop</a></h1>
-
-<blockquote><p>A graphical activity monitor for the command line.</p></blockquote>
-
-<p><strong>Why?</strong></p>
-
-<p>For mointoring CPU usage and memory across multi-process applications.</p>
-
-<p>Makes use of <a href="https://www.npmjs.com/package/drawille">drawille</a> for drawing in terminal with unicode braille characters.</p>
-
-<p><strong>Get it:</strong> <code>npm i -g vtop</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```sh
-➜  nmotw.in>  vtop --help</p>
-
-<p>  Usage: vtop [options]</p>
-
-<p>  Options:</p>
-
-<pre><code>-h, --help              output usage information
--t, --theme  [name]     set the vtop theme [acid|becca|brew|dark|monokai|parallax|seti|wizard]
---quit-after [seconds]  Quits vtop after interval
--V, --version           output the version number
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/vtop/vtop.gif" alt="vtop.gif" /></p>
 ]]></content>
   </entry>
   
