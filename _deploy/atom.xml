@@ -4,13 +4,53 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-01-28T22:34:06+05:30</updated>
+  <updated>2018-02-04T01:41:16+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[graphql-request]]></title>
+    <link href="http://nmotw.in/graphql-request/"/>
+    <updated>2018-02-03T22:46:29+05:30</updated>
+    <id>http://nmotw.in/graphql-request</id>
+    <content type="html"><![CDATA[<h1><a href="">graphql-request</a></h1>
+
+<blockquote><p>Minimal GraphQL client.</p></blockquote>
+
+<p><code>graphql-request</code> is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it doesn't have a built-in cache and has no integrations for frontend frameworks.</p>
+
+<p><strong>Get it:</strong> <code>npm install graphql-request</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">GraphQLClient</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;graphql-request&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Run GraphQL queries/mutations using a static function</span>
+</span><span class='line'><span class="nx">request</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ... or create a GraphQL client instance to send requests</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GraphQLClient</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="p">{</span> <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">})</span>
+</span><span class='line'><span class="nx">client</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/graphql-request/graphql-request.gif" alt="graphql-request.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[bytes]]></title>
@@ -1307,75 +1347,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/comlinkjs/comlinkjs.gif" alt="comlinkjs" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[async-retry]]></title>
-    <link href="http://nmotw.in/async-retry/"/>
-    <updated>2017-09-14T22:50:23+05:30</updated>
-    <id>http://nmotw.in/async-retry</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-retry">async-retry</a></h1>
-
-<blockquote><p>Retrying made simple, easy, async.</p></blockquote>
-
-<p><code>async-retry</code> is a promisified version of <a href="https://www.npmjs.com/package/retry">retry</a> which makes things easier with the <code>async-await</code> syntax.</p>
-
-<p><strong>Get it:</strong> <code>npm install async-retry</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Packages </span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">retry</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async-retry&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-fetch&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">await</span> <span class="nx">retry</span><span class="p">(</span><span class="nx">async</span> <span class="nx">bail</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// if anything throws, we retry </span>
-</span><span class='line'>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://google.com&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="mi">403</span> <span class="o">===</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// don&#39;t retry upon 403 </span>
-</span><span class='line'>    <span class="nx">bail</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Unauthorized&#39;</span><span class="p">))</span>
-</span><span class='line'>    <span class="k">return</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-</span><span class='line'><span class="p">},</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">retries</span><span class="o">:</span> <span class="mi">500</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Method signature:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">retry</span><span class="p">(</span><span class="nx">retrier</span> <span class="o">:</span> <span class="nb">Function</span><span class="p">,</span> <span class="nx">opts</span> <span class="o">:</span> <span class="nb">Object</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">Promise</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/async-retry/async-retry.gif" alt="async-retry" /></p>
 ]]></content>
   </entry>
   
