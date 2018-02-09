@@ -1,0 +1,36 @@
+---
+layout: post
+title: "thanks"
+date: 2018-02-09 17:04:21 +0530
+comments: true
+categories: cli
+---
+
+#[thanks](https://www.npmjs.com/package/thanks)
+> 🙌 Give thanks to the open source maintainers you depend on! ✨
+
+`thanks` picks up the "nearest" `package.json` / `node_modules` folder and fetch all the mainterners who are seeking donation and lists them all in a neat table with the donation URL.
+
+__Get it:__ `npm install -g thanks`
+
+__Usage:__
+
+```sh
+$ thanks --help
+
+thanks - 🙌 Give thanks to the open source maintainers you depend on! ✨
+
+Usage:
+    thanks <flags> [CWD]
+
+    If CWD is omitted, then the current working directory is used. The "nearest"
+    package.json / node_modules folder will be used.
+
+Flags:
+    -v, --version   Show current version
+    -h, --help      Show usage information
+```
+
+__GIF FTW!__
+
+![thanks.gif](/images/thanks/thanks.gif)
