@@ -1,0 +1,35 @@
+---
+layout: post
+title: "randexp"
+date: 2018-02-17 21:00:15 +0530
+comments: true
+categories: util
+---
+
+#[randexp](https://www.npmjs.com/package/randexp)
+> Generate a random string that matches a given RegExp.
+
+What better way to generate a random string than with a language you can use to express the string you want? -- 🐴
+
+__Get it:__ `npm install randexp`
+
+__Sample usage:__
+
+```js
+// sets and ranges and references
+new RandExp(/<([a-z]\w{0,20})>foo<\1>/).gen();
+// => <m5xhdg>foo<m5xhdg>
+
+// wildcard
+new RandExp(/random stuff: .+/).gen();
+// => random stuff: l3m;Hf9XYbI [YPaxV>U*4-_F!WXQh9>;rH3i l!8.zoh?[utt1OWFQrE ^~8zEQm]~tK
+
+// ignore case
+new RandExp(/xxx xtreme dragon warrior xxx/i).gen();
+// => xxx xtReME dRAGON warRiOR xXX
+```
+
+__GIF FTW!__
+
+![randexp.gif](/images/randexp/randexp.gif)
+

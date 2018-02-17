@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="Curry-this Curry-this makes creating curryied function simple and expresive by invoking curry with the function bind syntax ::.
-Apart from the &hellip;">   
+    <meta name="description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Apart from the &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/14/">
-    <meta name="twitter:description" content="Curry-this Curry-this makes creating curryied function simple and expresive by invoking curry with the function bind syntax ::.
-Apart from the &hellip;">
+    <meta name="twitter:description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/14/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="Curry-this Curry-this makes creating curryied function simple and expresive by invoking curry with the function bind syntax ::.
-Apart from the &hellip;" />
+    <meta property="og:description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;" />
 
     
 
@@ -70,6 +67,73 @@ Apart from the &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/lightcards/">
+			
+				Lightcards</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-13T19:36:54+05:30" pubdate data-updated="true">Aug 13<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
+
+<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
+
+<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
+By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
+after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
+
+<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>lightcards init <span class="o">&amp;&amp;</span> lightcards
+</span><span class='line'>
+</span><span class='line'>Reading vocabulary from vocabulary.txt... OK!
+</span><span class='line'>Generating flashcards... OK!
+</span><span class='line'>Compiling scripts... OK!
+</span><span class='line'>Starting <span class="nb">local </span>web server... OK!
+</span><span class='line'>
+</span><span class='line'>Start learning on http://localhost:3000
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
+
+<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -929,77 +993,6 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/jscpd/jscpd.gif" alt="jscpd-demo" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/stream-generators/">
-			
-				Stream-generators</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-05T01:57:12+05:30" pubdate data-updated="true">Jun 5<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/stream-generators">stream-generators</a></p>
-
-<blockquote><p>Pipe ES6 Generators through Node.js streams.</p></blockquote>
-
-<p>This is a cheeky module authored by <a href="https://twitter.com/mimetnet">@mimetent</a> which takes in a ES6 generator function and returns a readable stream!</p>
-
-<p><strong>Install it:</strong> <code>npm install --save stream-geerators</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">streamify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stream-generators&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">gen</span> <span class="o">=</span> <span class="kd">function</span><span class="o">*</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;Hello &#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;ES6 &#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="s1">&#39;Stream gen&#39;</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="nx">os</span><span class="p">.</span><span class="nx">EOL</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">};</span>
-</span><span class='line'><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">streamify</span><span class="p">(</span><span class="nx">gen</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This would output: <code>Hello ES6 Stream gen</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/stream-generators/stream-generators.gif" alt="stream-generators" /></p>
 
 		
 		
