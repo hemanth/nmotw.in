@@ -7,7 +7,9 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="propagate Propagate events from one event emitter into another. An other sweet and simple module, that helps to propagate events! Get it: npm &hellip;">   
+    <meta name="description" content="npm-clone This is a CLI util that will help you to: Clone a node module from it's name.
+Install all the dependencies.
+Run its tests! Get it: npm &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +17,18 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="propagate Propagate events from one event emitter into another. An other sweet and simple module, that helps to propagate events! Get it: npm &hellip;">
+    <meta name="twitter:description" content="npm-clone This is a CLI util that will help you to: Clone a node module from it's name.
+Install all the dependencies.
+Run its tests! Get it: npm &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="propagate Propagate events from one event emitter into another. An other sweet and simple module, that helps to propagate events! Get it: npm &hellip;" />
+    <meta property="og:description" content="npm-clone This is a CLI util that will help you to: Clone a node module from it's name.
+Install all the dependencies.
+Run its tests! Get it: npm &hellip;" />
 
     
 
@@ -67,6 +73,96 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npm-clone/">
+			
+				Npm-clone</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-30T18:29:03+05:30" pubdate data-updated="true">Oct 30<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/npm-clone">npm-clone</a></h1>
+
+<p>This is a CLI util that will help you to:</p>
+
+<ul>
+<li><p>Clone a node module from it's name.</p></li>
+<li><p>Install all the dependencies.</p></li>
+<li><p>Run its tests!</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g npm-clone</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># clone a node module</span>
+</span><span class='line'>npm-clone is-mp3
+</span><span class='line'>
+</span><span class='line'><span class="c"># clone using its private url</span>
+</span><span class='line'>npm-clone --ssh is-mp3
+</span><span class='line'>npm-clone --https is-mp3
+</span><span class='line'>
+</span><span class='line'><span class="c"># clone and install dependencies</span>
+</span><span class='line'>npm-clone install is-mp3
+</span><span class='line'>
+</span><span class='line'><span class="c"># clone, install dependencies and run its tests</span>
+</span><span class='line'>npm-clone install <span class="nb">test </span>is-mp3
+</span><span class='line'>
+</span><span class='line'><span class="c"># with a short form</span>
+</span><span class='line'>npm-clone all is-mp3
+</span><span class='line'>
+</span><span class='line'><span class="c"># flags still apply</span>
+</span><span class='line'>npm-clone --ssh all is-mp3
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npm-clone/npm-clone.gif" alt="npm-clone" /></p>
+
+<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this helper! :)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1915,129 +2011,6 @@
 <p><img src="/images/verbal-expressions/verbal-expressions.gif" alt="" /></p>
 
 <p>Thanks to <strong>Mihai Ionut Vilcu</strong> for verbal expressions!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/only/">
-			
-				Only</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-21T06:24:47+05:30" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h2>Only</h2>
-
-<blockquote><p>Return whitelisted properties of an object.</p></blockquote>
-
-<p><a href="https://www.npmjs.org/package/only">Only</a> will only return the properties of an object that we are intrested in.</p>
-
-<p>A simple and an effective module from <a href="http://tjholowaychuk.com/">Tj Holowaychuk </a>.</p>
-
-<p><strong>Install it:</strong> <code>npm install only</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>Say we have a response from a mongo query which looks like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;tobi&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;holowaychuk&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;tobi@learnboost.com&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Out of which we are intrested on only <code>name</code> and <code>email</code>, so all we need to do is:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">let</span> <span class="nx">only</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;only&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;tobi&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;holowaychuk&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;tobi@learnboost.com&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">only</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="s1">&#39;name email&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ Would log { name: &#39;tobi&#39;, email: &#39;tobi@learnboost.com&#39; }</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">only</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="s1">&#39;name foo bar baz&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Smart enough to omit undefineds and logs { name: &#39;tobi&#39; }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The cool part being, the entire module is just ten lines and it reads:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">keys</span><span class="p">){</span>
-</span><span class='line'>  <span class="nx">obj</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">||</span> <span class="p">{};</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;string&#39;</span> <span class="o">==</span> <span class="k">typeof</span> <span class="nx">keys</span><span class="p">)</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/ +/</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ret</span><span class="p">,</span> <span class="nx">key</span><span class="p">){</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
-</span><span class='line'>      <span class="nx">ret</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-</span><span class='line'>      <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">},</span> <span class="p">{});</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/only/only.gif" alt="only" /></p>
 
 		
 		

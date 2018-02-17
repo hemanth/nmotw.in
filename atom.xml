@@ -4,13 +4,59 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-02-09T17:15:09+05:30</updated>
+  <updated>2018-02-17T21:05:46+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[randexp]]></title>
+    <link href="http://nmotw.in/randexp/"/>
+    <updated>2018-02-17T21:00:15+05:30</updated>
+    <id>http://nmotw.in/randexp</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/randexp">randexp</a></h1>
+
+<blockquote><p>Generate a random string that matches a given RegExp.</p></blockquote>
+
+<p>What better way to generate a random string than with a language you can use to express the string you want? -- 🐴</p>
+
+<p><strong>Get it:</strong> <code>npm install randexp</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// sets and ranges and references</span>
+</span><span class='line'><span class="k">new</span> <span class="nx">RandExp</span><span class="p">(</span><span class="sr">/&lt;([a-z]\w{0,20})&gt;foo&lt;\1&gt;/</span><span class="p">).</span><span class="nx">gen</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// =&gt; &lt;m5xhdg&gt;foo&lt;m5xhdg&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// wildcard</span>
+</span><span class='line'><span class="k">new</span> <span class="nx">RandExp</span><span class="p">(</span><span class="sr">/random stuff: .+/</span><span class="p">).</span><span class="nx">gen</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// =&gt; random stuff: l3m;Hf9XYbI [YPaxV&gt;U*4-_F!WXQh9&gt;;rH3i l!8.zoh?[utt1OWFQrE ^~8zEQm]~tK</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ignore case</span>
+</span><span class='line'><span class="k">new</span> <span class="nx">RandExp</span><span class="p">(</span><span class="sr">/xxx xtreme dragon warrior xxx/i</span><span class="p">).</span><span class="nx">gen</span><span class="p">();</span>
+</span><span class='line'><span class="c1">// =&gt; xxx xtReME dRAGON warRiOR xXX</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/randexp/randexp.gif" alt="randexp.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[thanks]]></title>
@@ -1244,47 +1290,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/css-what/css-what.gif" alt="css-what.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[unsplash-wallpaper]]></title>
-    <link href="http://nmotw.in/unsplash-wallpaper/"/>
-    <updated>2017-09-28T18:52:53+05:30</updated>
-    <id>http://nmotw.in/unsplash-wallpaper</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/unsplash-wallpaper">unsplash-wallpaper</a></h1>
-
-<blockquote><p>unsplash images as your wallpaper from CLI.</p></blockquote>
-
-<p><code>unsplash-wallpaper</code> an inviting module that helps you set images from <a href="https://unsplash.com/">unsplash</a>
-as your desktop wallpaper.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g unsplash-wallpaper</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>unsplash-wallpaper
-</span><span class='line'>
-</span><span class='line'>To learn the commands:
-</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper --help
-</span><span class='line'>To save the image resolution:
-</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper --width 2880 --height 1800 -s
-</span><span class='line'>To download and use a random image:
-</span><span class='line'>  <span class="nv">$ </span>unsplash-wallpaper -r
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/unsplash-wallpaper/unsplash-wallpaper.gif" alt="unsplash-wallpaper" /></p>
 ]]></content>
   </entry>
   
