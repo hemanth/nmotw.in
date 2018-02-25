@@ -1,0 +1,58 @@
+---
+layout: post
+title: "pressure"
+date: 2018-02-25 09:29:07 +0530
+comments: true
+categories: util
+---
+
+[pressure](https://www.npmjs.com/package/pressure)
+> Handle Force Touch, 3D Touch, and Pointer Pressure on the web.
+
+Devices implement force differently `pressure` is trying to solve it across all devices, with polyfill and multi touch support.
+
+__Get it:__ `npm install pressure`
+
+__Sample usage:__
+
+```js
+const Pressure = require('pressure');
+
+Pressure.set('#element', {
+  start: function(event){
+    // this is called on force start
+  },
+  end: function(){
+    // this is called on force end
+  },
+  startDeepPress: function(event){
+    // this is called on "force click" / "deep press", aka once the force is greater than 0.5
+  },
+  endDeepPress: function(){
+    // this is called when the "force click" / "deep press" end
+  },
+  change: function(force, event){
+    // this is called every time there is a change in pressure
+    // force will always be a value from 0 to 1 on mobile and desktop
+  },
+  unsupported: function(){
+    // NOTE: this is only called if the polyfill option is disabled!
+    // this is called once there is a touch on the element and the device or browser does not support Force or 3D touch
+  }
+});
+```
+
+Below are the supported devices:
+
+* Microsoft Surface, Wacom Tablets (Device that supports pointer events)
+* iPhone 6s, iPhone 6s Plus, iPhone 7, iPhone 7 Plus
+* MacBook 2015 & MacBook Pro 2015
+* Magic Trackpad 2
+* iPad Pro with Apple Pencil
+* Safari, Chrome, anything using WKWebView
+
+__GIF FTW!__
+
+![pressure](/images/pressure/pressure.gif)
+
+

@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="selectn Resolve deeply-nested object properties via dot/bracket-notation string or array path while mitigating TypeErrors. refactor this: person & &hellip;">   
+    <meta name="description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/11/">
-    <meta name="twitter:description" content="selectn Resolve deeply-nested object properties via dot/bracket-notation string or array path while mitigating TypeErrors. refactor this: person & &hellip;">
+    <meta name="twitter:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/11/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="selectn Resolve deeply-nested object properties via dot/bracket-notation string or array path while mitigating TypeErrors. refactor this: person & &hellip;" />
+    <meta property="og:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;" />
 
     
 
@@ -67,6 +67,167 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/fixpack/">
+			
+				Fixpack</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-17T16:38:38+05:30" pubdate data-updated="true">Mar 17<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/fixpack">fixpack</a></h1>
+
+<blockquote><p>A <code>package.json</code> file scrubber for the truly insane.</p></blockquote>
+
+<p><strong>GET IT:</strong> <code>npm install -g fixpack</code></p>
+
+<p>It will re-write your package.json file as follows:</p>
+
+<ul>
+<li>name first</li>
+<li>description second</li>
+<li>version third</li>
+<li>author fourth</li>
+<li>all other keys in alphabetical order</li>
+<li>dependencies and devDependencies sorted alphabetically</li>
+<li>newline at the end of the file</li>
+</ul>
+
+
+<p>It will warn you if any of these are missing:</p>
+
+<ul>
+<li>description</li>
+<li>author</li>
+<li>repository</li>
+<li>keywords</li>
+<li>main</li>
+<li>bugs</li>
+<li>homepage</li>
+<li>license</li>
+</ul>
+
+
+<p>It can also read a config from <code>.fixpackrc</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    // will put these first in this order if present
+</span><span class='line'>    sortToTop: [
+</span><span class='line'>        'name',
+</span><span class='line'>        'description',
+</span><span class='line'>        'version',
+</span><span class='line'>        'author'
+</span><span class='line'>    ],
+</span><span class='line'>    // will error if these not present
+</span><span class='line'>    required: [
+</span><span class='line'>        'name',
+</span><span class='line'>        'version'
+</span><span class='line'>    ],
+</span><span class='line'>    // will warn if these not present
+</span><span class='line'>    warn: [
+</span><span class='line'>        'description',
+</span><span class='line'>        'author',
+</span><span class='line'>        'repository',
+</span><span class='line'>        'keywords',
+</span><span class='line'>        'main',
+</span><span class='line'>        'bugs',
+</span><span class='line'>        'homepage',
+</span><span class='line'>        'license'
+</span><span class='line'>    ],
+</span><span class='line'>    // if `private: true` in package.json will use the next two lists instead
+</span><span class='line'>    requiredOnPrivate: [],
+</span><span class='line'>    warnOnPrivate: ['name', 'version', 'description', 'main'],
+</span><span class='line'>    // sub items to sort by default
+</span><span class='line'>    sortedSubItems: [
+</span><span class='line'>        'dependencies',
+</span><span class='line'>        'devDependencies',
+</span><span class='line'>        'jshintConfig',
+</span><span class='line'>        'scripts',
+</span><span class='line'>        'keywords'
+</span><span class='line'>    ],
+</span><span class='line'>    // if you set quiet to true it won't do output anything to the console
+</span><span class='line'>    quiet: false,
+</span><span class='line'>    // files to scrub
+</span><span class='line'>    files: ['package.json'],
+</span><span class='line'>    // Will set all deps to '*'
+</span><span class='line'>    // this may be useful because then you can
+</span><span class='line'>    // run npm update --save && npm update --save-dev
+</span><span class='line'>    // to install latest stable releases of everything.
+</span><span class='line'>    wipe: false
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fixpack/fixpack.gif" alt="fixpack" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -834,88 +995,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ineed/">
-			
-				Ineed</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-01-07T22:02:52+05:30" pubdate data-updated="true">Jan 7<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
-
-<blockquote><p>Web scraping and HTML-reprocessing. The easy way.</p></blockquote>
-
-<p><img src="/images/ineed/ineed-logo.png" alt="ineed-logo" /></p>
-
-<p><code>ineed</code> allows you collect useful data from web pages using simple and nice API.</p>
-
-<p>It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast!</p>
-
-<p><strong>Get it:</strong> <code>npm install --save ineed</code></p>
-
-<p><strong>Usage:</strong> <code>ineed.&lt;action&gt;[.&lt;plugin&gt;...].&lt;from*&gt;</code></p>
-
-<p>Where <code>action</code> could be: <code>collect</code> or <code>reprocess</code></p>
-
-<p><code>plugin</code> could be one of: <code>.comments</code> <code>.cssCode</code> <code>.hyperlinks</code> <code>.images</code> <code>.jsCode</code> <code>.scripts</code> <code>.stylesheets</code> <code>.texts</code> <code>.title</code></p>
-
-<p><code>from</code> could be: <code>from</code> or <code>fromHtml</code></p>
-
-<p>P.S: One could write a custom plugin using the <code>.using()</code> method.</p>
-
-<p><strong>Code sample:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">hyperlinks</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">stylesheets</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s1">&#39;http://nmotw.in&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">texts</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">fromHtml</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ineed/ineed.gif" alt="ineed" /></p>
-
-<p>Thanks to <a href="https://twitter.com/nilukini">Ivan Nikulin</a> for this cheeky module.</p>
 
 		
 		
