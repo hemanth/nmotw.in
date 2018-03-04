@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-03-04T12:25:47+05:30</updated>
+  <updated>2018-03-04T12:30:17+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/async-exit-hook/"/>
     <updated>2018-03-04T11:56:54+05:30</updated>
     <id>http://nmotw.in/async-exit-hook</id>
-    <content type="html"><![CDATA[<h1>[async-exit-hook]</h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-exit-hook">async-exit-hook</a></h1>
 
 <blockquote><p>Run some code when the process exits.</p></blockquote>
 
