@@ -4,13 +4,66 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-02-26T09:48:38+05:30</updated>
+  <updated>2018-03-04T12:30:17+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[async-exit-hook]]></title>
+    <link href="http://nmotw.in/async-exit-hook/"/>
+    <updated>2018-03-04T11:56:54+05:30</updated>
+    <id>http://nmotw.in/async-exit-hook</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-exit-hook">async-exit-hook</a></h1>
+
+<blockquote><p>Run some code when the process exits.</p></blockquote>
+
+<p><code>async-exit-hook</code> is a fork from <code>exit-hook</code> which can catch:</p>
+
+<ul>
+<li>process SIGINT, SIGTERM and SIGHUP, SIGBREAK signals</li>
+<li>process beforeExit and exit events</li>
+<li>PM2's exit.</li>
+</ul>
+
+
+<p>As <code>process.on('exit')</code> event doesn't catch all the ways a process can exit.</p>
+
+<p><strong>Get it:</strong> <code>npm install async-exit-hook</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">exitHook</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;exiting&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">exitHook</span><span class="p">(</span><span class="nx">callback</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;exiting&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">callback</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/async-exit-hook/async-exit-hook.gif" alt="async-exit-hook" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[pressure]]></title>
@@ -1219,105 +1272,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[breakable]]></title>
-    <link href="http://nmotw.in/breakable/"/>
-    <updated>2017-10-12T17:39:52+05:30</updated>
-    <id>http://nmotw.in/breakable</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/breakable">breakable</a></h1>
-
-<blockquote><p>Break out of functions in a more composable way.</p></blockquote>
-
-<p><code>breakable</code> is useful when you want to break out of a deep recursion, passing a value, without riddling your code with exception ceremony.</p>
-
-<p><strong>Get it:</strong> <code>npm install breakable</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>Instead of</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">esprima</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;esprima&quot;</span><span class="p">).</span><span class="nx">parse</span><span class="p">;</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">traverse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ast-traverse&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">ast</span> <span class="o">=</span> <span class="nx">esprima</span><span class="p">(</span><span class="s2">&quot;f(!x, y)&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">val</span><span class="p">;</span>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">traverse</span><span class="p">(</span><span class="nx">ast</span><span class="p">,</span> <span class="p">{</span><span class="nx">pre</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;UnaryExpression&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="nx">val</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">argument</span><span class="p">;</span>
-</span><span class='line'>            <span class="k">throw</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}});</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">throw</span> <span class="nx">e</span><span class="p">;</span> <span class="c1">// re-throw if it wasn&#39;t our exception </span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span> <span class="c1">// { type: &#39;Identifier&#39;, name: &#39;x&#39; } </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You could:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">breakable</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;breakable&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">esprima</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;esprima&quot;</span><span class="p">).</span><span class="nx">parse</span><span class="p">;</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">traverse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ast-traverse&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">ast</span> <span class="o">=</span> <span class="nx">esprima</span><span class="p">(</span><span class="s2">&quot;f(!x, y)&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">breakable</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">brk</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">traverse</span><span class="p">(</span><span class="nx">ast</span><span class="p">,</span> <span class="p">{</span><span class="nx">pre</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;UnaryExpression&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="nx">brk</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">argument</span><span class="p">);</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}});</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span> <span class="c1">// { type: &#39;Identifier&#39;, name: &#39;x&#39; } </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/breakable/breakable.gif" alt="breakable" /></p>
-
-<p>P.S: This is a trivial example, if you want to do something like that in the <code>gif</code> you might want <code>.some</code></p>
 ]]></content>
   </entry>
   
