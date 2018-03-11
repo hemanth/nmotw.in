@@ -4,13 +4,43 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-03-04T12:30:17+05:30</updated>
+  <updated>2018-03-11T22:09:46+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[lazy-cache]]></title>
+    <link href="http://nmotw.in/lazy-cache/"/>
+    <updated>2018-03-11T21:59:26+05:30</updated>
+    <id>http://nmotw.in/lazy-cache</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-cache">lazy-cache</a></h1>
+
+<blockquote><p>Cache requires to be lazy-loaded when needed.</p></blockquote>
+
+<p><code>lazy-cache</code> uses native, plain-vanilla, tried and true javascript getters to call node's <code>require()</code> system for faster and safer code. (~1second to 50milliseconds)</p>
+
+<p><strong>Get it:</strong> <code>npm install lazy-cache</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">lazyOS</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;lazy-cache&quot;</span><span class="p">)(</span><span class="nx">require</span><span class="p">)(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">lazyOS</span><span class="p">)</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lazyOS</span><span class="p">().</span><span class="nx">arch</span><span class="p">())</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/lazy-cache/lazy-cache.gif" alt="lazy-cache.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[async-exit-hook]]></title>
@@ -1211,67 +1241,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/babar/babar.gif" alt="babar" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[accessibilityjs]]></title>
-    <link href="http://nmotw.in/accessibilityjs/"/>
-    <updated>2017-10-20T13:13:03+05:30</updated>
-    <id>http://nmotw.in/accessibilityjs</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
-
-<blockquote><p>Client side accessibility error scanner.</p></blockquote>
-
-<p><code>accessibilityjs</code> with <code>0</code> dependenices does an wonderful job in scaning and reproting accessibility issues for a given page.</p>
-
-<p>It currently can scan and report the bleow problems:</p>
-
-<ul>
-<li><code>ImageWithoutAltAttributeError</code></li>
-<li><code>ElementWithoutLabelError</code></li>
-<li><code>LinkWithoutLabelOrRoleError</code></li>
-<li><code>LabelMissingControlError</code></li>
-<li><code>InputMissingLabelError</code></li>
-<li><code>ButtonWithoutLabelError</code></li>
-<li><code>ARIAAttributeMissingError</code></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install accessibilityjs</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">scanForProblems</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;accessibilityjs&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">logError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;accessibility-error&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="err">\</span><span class="nx">n</span><span class="err">\</span><span class="nx">n$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">},</span> <span class="p">{</span><span class="nx">once</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">scanForProblems</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">logError</span><span class="p">)</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
 ]]></content>
   </entry>
   
