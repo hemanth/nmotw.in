@@ -1,0 +1,60 @@
+---
+layout: post
+title: "fkill"
+date: 2018-03-18 09:01:19 +0530
+comments: true
+categories: cli util
+---
+
+#[fkill](https://www.npmjs.com/package/fkill)
+> Fabulously kill processes. Cross-platform.
+
+You you have mostly used something like: `pgrep <progress>` `kill -9 <pid>` `pkill <procees>`, but `fkill` makes it fabulosusly easy to kill!
+
+__Get it:__ `npm install [-g] fkill[-cli]`
+
+__Sample usage:__
+
+```js
+// API
+const fkill = require('fkill');
+
+fkill(8080).then(() => {
+	console.log('Killed process');
+});
+
+fkill('Chrome');
+fkill(':8080');
+
+fkill([1337, 'Chrome', ':8080']);
+```
+
+```
+#cli
+➜  ~ fkill --help
+
+  Fabulously kill processes. Cross-platform.
+
+  Usage
+    $ fkill [<pid|name|:port> …]
+
+  Options
+    --force -f    Force kill
+    --verbose -v  Show process arguments
+
+  Examples
+    $ fkill 1337
+    $ fkill safari
+    $ fkill :8080
+    $ fkill 1337 safari :8080
+    $ fkill
+
+  To kill a port, prefix it with a colon. For example: :8080.
+
+  Run without arguments to use the interactive interface.
+  The process name is case insensitive.
+  ```
+
+__GIF FTW!__
+
+![fkill.gif](/images/fkill/fkill.gif)
