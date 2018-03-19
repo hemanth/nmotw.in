@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-03-11T22:09:46+05:30</updated>
+  <updated>2018-03-19T09:09:20+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,78 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fkill]]></title>
+    <link href="http://nmotw.in//github/fkill/"/>
+    <updated>2018-03-18T09:01:19+05:30</updated>
+    <id>http://nmotw.in//github/fkill</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fkill">fkill</a></h1>
+
+<blockquote><p>Fabulously kill processes. Cross-platform.</p></blockquote>
+
+<p>You you have mostly used something like: <code>pgrep &lt;progress&gt;</code> <code>kill -9 &lt;pid&gt;</code> <code>pkill &lt;procees&gt;</code>, but <code>fkill</code> makes it fabulosusly easy to kill!</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] fkill[-cli]</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// API
+const fkill = require('fkill');</p>
+
+<p>fkill(8080).then(() => {</p>
+
+<pre><code>console.log('Killed process');
+</code></pre>
+
+<p>});</p>
+
+<p>fkill('Chrome');
+fkill(':8080');</p>
+
+<p>fkill([1337, 'Chrome', ':8080']);
+```</p>
+
+<p>```sh</p>
+
+<h1>cli</h1>
+
+<p>➜  ~ fkill --help</p>
+
+<p>  Fabulously kill processes. Cross-platform.</p>
+
+<p>  Usage</p>
+
+<pre><code>$ fkill [&lt;pid|name|:port&gt; …]
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>--force -f    Force kill
+--verbose -v  Show process arguments
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ fkill 1337
+$ fkill safari
+$ fkill :8080
+$ fkill 1337 safari :8080
+$ fkill
+</code></pre>
+
+<p>  To kill a port, prefix it with a colon. For example: :8080.</p>
+
+<p>  Run without arguments to use the interactive interface.
+  The process name is case insensitive.
+  ```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fkill/fkill.gif" alt="fkill.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[thanks]]></title>
@@ -166,49 +238,6 @@ var babar = require('babar');</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/babar/babar.gif" alt="babar" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gtop]]></title>
-    <link href="http://nmotw.in//github/gtop/"/>
-    <updated>2017-08-18T13:25:20+05:30</updated>
-    <id>http://nmotw.in//github/gtop</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/gtop">gtop</a></h1>
-
-<blockquote><p>System monitoring dashboard for terminal.</p></blockquote>
-
-<p><code>gtop</code> could be termed as the node's version of <a href="http://hisham.hm/htop/">htop</a>, gives a very need interface on the cli that would list out the below:</p>
-
-<ul>
-<li><p>CPU history.</p></li>
-<li><p>Memory and Swap History.</p></li>
-<li><p>Memory and Netowrk usage.</p></li>
-<li><p>Disk usage.</p></li>
-<li><p>Process list.</p></li>
-</ul>
-
-
-<p>You can sort the process table by pressing:</p>
-
-<p><code>p</code>: Process Id
-<code>c</code>: CPU usage
-<code>m</code>: Memory usage</p>
-
-<p><strong>Get it:</strong> <code>npm install -g gtop</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```
-$ gtop</p>
-
-<h1>In case of font issues: LANG=en_US.utf8 TERM=xterm-256color gtop</h1>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/gtop/gtop.gif" alt="gtop" /></p>
 ]]></content>
   </entry>
   
