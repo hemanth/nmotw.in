@@ -1,0 +1,63 @@
+---
+layout: post
+title: "prompts"
+date: 2018-03-22 23:39:35 +0530
+comments: true
+categories: cli
+---
+
+#[prompts](https://www.npmjs.com/package/prompts)
+> Lightweight, beautiful and user-friendly interactive CLI prompts
+
+`prompts` Zero dep, promise based, unifined CLI prompt.
+
+__Get it:__ `npm install prompts`
+
+__Sample usage:__
+
+```js
+const prompts = require('prompts');
+
+let questions = [
+    {
+        type: 'text',
+        name: 'dish',
+        message: 'Do you like pizza?'
+    },
+    {
+        type: prev => prev == 'pizza' ? 'text' : null,
+        name: 'topping',
+        message: 'Name a topping'
+    }
+];
+
+let response = await prompts(questions);
+```
+
+__API:__
+
+```
+prompts(prompts, options);
+
+/*
+prompts:
+Type: Array|Object
+
+options: onSubmit or onCancel functions.
+
+prompt object properties:
+
+{
+  type: String || Function,
+  name: String || Function,
+  message: String || Function,
+  initial: String || Function || Async Function
+  format: Function || Async Function,
+  onState: Function
+}
+*/
+```
+
+__GIT FTW!__
+
+![prompts.gif](/images/prompts/prompts.gif)

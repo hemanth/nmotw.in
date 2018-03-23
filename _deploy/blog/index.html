@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fkill Fabulously kill processes. Cross-platform. You you have mostly used something like: pgrep &lt;progress&gt; kill -9 &lt;pid&gt; pkill &lt; &hellip;">   
+    <meta name="description" content="prompts Lightweight, beautiful and user-friendly interactive CLI prompts prompts Zero dep, promise based, unifined CLI prompt. Get it: npm install &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="fkill Fabulously kill processes. Cross-platform. You you have mostly used something like: pgrep &lt;progress&gt; kill -9 &lt;pid&gt; pkill &lt; &hellip;">
+    <meta name="twitter:description" content="prompts Lightweight, beautiful and user-friendly interactive CLI prompts prompts Zero dep, promise based, unifined CLI prompt. Get it: npm install &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fkill Fabulously kill processes. Cross-platform. You you have mostly used something like: pgrep &lt;progress&gt; kill -9 &lt;pid&gt; pkill &lt; &hellip;" />
+    <meta property="og:description" content="prompts Lightweight, beautiful and user-friendly interactive CLI prompts prompts Zero dep, promise based, unifined CLI prompt. Get it: npm install &hellip;" />
 
     
 
@@ -67,6 +67,128 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/prompts/">
+			
+				Prompts</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-03-22T23:39:35+05:30" pubdate data-updated="true">Mar 22<span>nd</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/prompts">prompts</a></h1>
+
+<blockquote><p>Lightweight, beautiful and user-friendly interactive CLI prompts</p></blockquote>
+
+<p><code>prompts</code> Zero dep, promise based, unifined CLI prompt.</p>
+
+<p><strong>Get it:</strong> <code>npm install prompts</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">prompts</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;prompts&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">questions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;dish&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Do you like pizza?&#39;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="nx">type</span><span class="o">:</span> <span class="nx">prev</span> <span class="o">=&gt;</span> <span class="nx">prev</span> <span class="o">==</span> <span class="s1">&#39;pizza&#39;</span> <span class="o">?</span> <span class="s1">&#39;text&#39;</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;topping&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Name a topping&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">prompts</span><span class="p">(</span><span class="nx">questions</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>API:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">prompts</span><span class="p">(</span><span class="nx">prompts</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">prompts:</span>
+</span><span class='line'><span class="cm">Type: Array|Object</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">options: onSubmit or onCancel functions.</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">prompt object properties:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">{</span>
+</span><span class='line'><span class="cm">  type: String || Function,</span>
+</span><span class='line'><span class="cm">  name: String || Function,</span>
+</span><span class='line'><span class="cm">  message: String || Function,</span>
+</span><span class='line'><span class="cm">  initial: String || Function || Async Function</span>
+</span><span class='line'><span class="cm">  format: Function || Async Function,</span>
+</span><span class='line'><span class="cm">  onState: Function</span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/prompts/prompts.gif" alt="prompts.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -764,95 +886,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/technicalindicators/technicalindicators.gif" alt="technicalindicators.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ccxt/">
-			
-				Ccxt</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-01-14T17:37:05+05:30" pubdate data-updated="true">Jan 14<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ccxt">ccxt</a></h1>
-
-<blockquote><p>Connect and trade with cryptocurrency.</p></blockquote>
-
-<p><code>ccxt</code> is library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.</p>
-
-<p><strong>Get it:</strong> <code>npm install ccxt</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">ccxt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ccxt&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">exchange</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ccxt</span><span class="p">.</span><span class="nx">bitfinex</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">apiKey</span><span class="o">:</span> <span class="s1">&#39;4FlEDtxDl35gdEiobnfZ72vJeZteE4Bb7JdvqzjIjHq&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;D4DXM8DZdHuAq9YptUsb42aWT1XBnGlIJgLi8a7tzFH&#39;</span><span class="p">,</span>
-</span><span class='line'><span class="p">})</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">loadMarkets</span><span class="p">()</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">exchange</span><span class="p">.</span><span class="nx">symbols</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">symbols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">ticker</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchTicker</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ticker</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">orderbook</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchOrderBook</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">orderbook</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">balance</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchBalance</span><span class="p">()</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">balance</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ccxt/ccxt.gif" alt="ccxt" /></p>
 
 		
 		
