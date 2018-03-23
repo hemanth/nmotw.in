@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-03-19T09:11:18+05:30</updated>
+  <updated>2018-03-23T11:57:31+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[prompts]]></title>
+    <link href="http://nmotw.in//github/prompts/"/>
+    <updated>2018-03-22T23:39:35+05:30</updated>
+    <id>http://nmotw.in//github/prompts</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/prompts">prompts</a></h1>
+
+<blockquote><p>Lightweight, beautiful and user-friendly interactive CLI prompts</p></blockquote>
+
+<p><code>prompts</code> Zero dep, promise based, unifined CLI prompt.</p>
+
+<p><strong>Get it:</strong> <code>npm install prompts</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const prompts = require('prompts');</p>
+
+<p>let questions = [</p>
+
+<pre><code>{
+    type: 'text',
+    name: 'dish',
+    message: 'Do you like pizza?'
+},
+{
+    type: prev =&gt; prev == 'pizza' ? 'text' : null,
+    name: 'topping',
+    message: 'Name a topping'
+}
+</code></pre>
+
+<p>];</p>
+
+<p>let response = await prompts(questions);
+```</p>
+
+<p><strong>API:</strong></p>
+
+<p>```
+prompts(prompts, options);</p>
+
+<p>/*
+prompts:
+Type: Array|Object</p>
+
+<p>options: onSubmit or onCancel functions.</p>
+
+<p>prompt object properties:</p>
+
+<p>{
+  type: String || Function,
+  name: String || Function,
+  message: String || Function,
+  initial: String || Function || Async Function
+  format: Function || Async Function,
+  onState: Function
+}
+*/
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/prompts/prompts.gif" alt="prompts.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fkill]]></title>
@@ -198,46 +265,6 @@ qrcode.generate('This will be a QRCode with error level Q!');</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/qrcode-terminal/qrcode-terminal.gif" alt="qrcode-terminal" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[babar]]></title>
-    <link href="http://nmotw.in//github/babar/"/>
-    <updated>2017-10-25T00:35:48+05:30</updated>
-    <id>http://nmotw.in//github/babar</id>
-    <content type="html"><![CDATA[<h1><a href="https://npmjs.org/babar">babar</a></h1>
-
-<blockquote><p>Draw bar charts in your console.</p></blockquote>
-
-<p><code>193</code> lines of code to get bar charts on your console!</p>
-
-<p>Easy to use, lightweight, color output, ASCII output, automatically bucketizes values (currently only averages values in a bucket).</p>
-
-<p><strong>Get it:</strong> <code>npm install babar</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>js
-var babar = require('babar');
-console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]]));
-</code></p>
-
-<p>```js
-var babar = require('babar');</p>
-
-<p>console.log(babar([[0, 1], [1, 5], [2, 5], [3, 1], [4, 6]], {
-  color: 'green',
-  width: 40,
-  height: 10,
-  maxY: 10,
-  yFractions: 1
-}));
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/babar/babar.gif" alt="babar" /></p>
 ]]></content>
   </entry>
   
