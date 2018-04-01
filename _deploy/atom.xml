@@ -4,13 +4,81 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-03-23T11:57:31+05:30</updated>
+  <updated>2018-04-01T06:36:22+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[april-fools]]></title>
+    <link href="http://nmotw.in/april-fools/"/>
+    <updated>2018-04-01T05:37:51+05:30</updated>
+    <id>http://nmotw.in/april-fools</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/april-fools">april-fools</a></p>
+
+<blockquote><p>Randomly fool with an <code>Error</code> on April 1st.</p></blockquote>
+
+<p>⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired!</p>
+
+<p>Few lines of code to have fun on April fools day:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>'use strict'
+</span><span class='line'>
+</span><span class='line'>const date = new Date()
+</span><span class='line'>
+</span><span class='line'>if (date.getMonth() === 3 && date.getDate() === 1 && Math.floor(Math.random() * 6) + 1 === 1) {
+</span><span class='line'>  const message = require('sentencer').make("Unexpected  with  ")
+</span><span class='line'>
+</span><span class='line'>  throw new Error(message)
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Related module -> <a href="http://nmotw.in/sentencer/">sentencer</a>.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;april-fools&#39;</span><span class="p">);</span> <span class="c1">// That&#39;s it! And it would randomly throw an error like below.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Error</span><span class="o">:</span> <span class="nx">Unexpected</span> <span class="nx">lunch</span> <span class="kd">with</span> <span class="nx">a</span> <span class="nx">brindle</span> <span class="nx">ravioli</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nb">Object</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span> <span class="p">(</span><span class="err">/private/tmp/node_modules/april-fools/index.js:8:9)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nx">Module</span><span class="p">.</span><span class="nx">_compile</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">652</span><span class="o">:</span><span class="mi">30</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">Module</span><span class="p">.</span><span class="nx">_extensions</span><span class="p">..</span><span class="nx">js</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">663</span><span class="o">:</span><span class="mi">10</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nx">Module</span><span class="p">.</span><span class="nx">load</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">565</span><span class="o">:</span><span class="mi">32</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nx">tryModuleLoad</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">505</span><span class="o">:</span><span class="mi">12</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nb">Function</span><span class="p">.</span><span class="nx">Module</span><span class="p">.</span><span class="nx">_load</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">497</span><span class="o">:</span><span class="mi">3</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nx">Module</span><span class="p">.</span><span class="nx">require</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">596</span><span class="o">:</span><span class="mi">17</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">at</span> <span class="nx">require</span> <span class="p">(</span><span class="nx">internal</span><span class="o">/</span><span class="nx">module</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mi">11</span><span class="o">:</span><span class="mi">18</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/april-fools/april-fools.gif" alt="april-fools" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[prompts]]></title>
@@ -1270,55 +1338,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/webtorrent-element/webtorrent-element.gif" alt="webtorrent-element" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[server]]></title>
-    <link href="http://nmotw.in/server/"/>
-    <updated>2017-11-10T09:59:34+05:30</updated>
-    <id>http://nmotw.in/server</id>
-    <content type="html"><![CDATA[<p><a href="https://npmjs.com/server">server</a> is build upon <code>express@4</code> tries to bring simplicity in expressing your server code.</p>
-
-<p><img src="http://nmotw.in/images/server/server-info.png" alt="server-info" /></p>
-
-<p><strong>Get it:</strong> <code>npm install server</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">server</span><span class="p">(</span><span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="s1">&#39;Hello world&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="p">{</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">post</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server/router&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="p">{</span> <span class="nx">render</span><span class="p">,</span> <span class="nx">json</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;server/reply&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">server</span><span class="p">([</span>
-</span><span class='line'>  <span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">render</span><span class="p">(</span><span class="s1">&#39;index.hbs&#39;</span><span class="p">)),</span>
-</span><span class='line'>  <span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">json</span><span class="p">(</span><span class="nx">ctx</span><span class="p">.</span><span class="nx">data</span><span class="p">)),</span>
-</span><span class='line'>  <span class="nx">get</span><span class="p">(</span><span class="nx">ctx</span> <span class="o">=&gt;</span> <span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">))</span>
-</span><span class='line'><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="http://nmotw.in/images/server/server.gif" alt="server.gif" /></p>
 ]]></content>
   </entry>
   
