@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">   
+    <meta name="description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;">
+    <meta name="twitter:description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="color-string Parser and generator for CSS color strings! A module by Heather Arthur helps us to generator and parser CSS color strings. The API &hellip;" />
+    <meta property="og:description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;" />
 
     
 
@@ -67,6 +67,264 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/json-server/">
+			
+				Json-server</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-14T18:23:06+05:30" pubdate data-updated="true">May 14<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/json-server">json-server</a></h1>
+
+<blockquote><p>REST API with zero coding in less than 30 seconds.</p></blockquote>
+
+<p>This module by <a href="https://github.com/typicode">typicode</a> helps front-end developers who need a quick back-end for prototyping and mocking!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p>Either as a CLI app: <code>npm install -g json-server</code></p>
+
+<p>or as a dep for your script: <code>npm install --save json-server</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Assume you have a <code>json.db</code> like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;posts&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;json-server&quot;</span><span class="p">,</span> <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;typicode&quot;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="p">],</span>
+</span><span class='line'>  <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="o">:</span> <span class="s2">&quot;some comment&quot;</span><span class="p">,</span> <span class="s2">&quot;postId&quot;</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
+</span><span class='line'>  <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you are installed module globally, then do a :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>json-server json.db
+</span><span class='line'>
+</span><span class='line'><span class="c"># or</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>json-server http://example.com/file.json
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if not, include it in your script</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">jsonServer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-server&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span> <span class="c1">// Returns an Express server</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">router</span><span class="p">(</span><span class="s1">&#39;db.json&#39;</span><span class="p">);</span> <span class="c1">// Returns an Express router</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">jsonServer</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span> <span class="c1">// logger, static and cors middlewares</span>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">);</span> <span class="c1">// Mount router on &#39;/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After which the server must be up and running at: <code>http://localhost:3000</code></p>
+
+<p><strong>Avaliable routes:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span>
+</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">title</span><span class="o">=</span><span class="nx">json</span><span class="o">-</span><span class="nx">server</span><span class="o">&amp;</span><span class="nx">author</span><span class="o">=</span><span class="nx">typicode</span>
+</span><span class='line'><span class="nx">POST</span>   <span class="o">/</span><span class="nx">posts</span>
+</span><span class='line'><span class="nx">PUT</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">PATCH</span>  <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'><span class="nx">DELETE</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">SLICE</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">SORT</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">views</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">DESC</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">votes</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">ASC</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Query</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">q</span><span class="o">=</span><span class="nx">internet</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">entire</span> <span class="nx">DB</span><span class="o">!</span>
+</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">db</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>GET on <code>/</code> would look like:</p>
+
+<p><img src="/images/json-server/json-server.png" alt="json-server-screenshot" /></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-server/json-server.gif" alt="json-server" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/console.json/">
+			
+				console.json</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-07T23:44:21+05:30" pubdate data-updated="true">May 7<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://nmp.im/console.json">console.json</a></h1>
+
+<blockquote><p>Adds <code>console.json</code> method that stringifies passed in objects and logs them.</p></blockquote>
+
+<p>This is a sweet little util function by <a href="http://glebbahmutov.com/">Gleb Bahmutov</a> that makes a life bit easier while debugging huge <code>json</code> data in the console.
+P.S: There is <code>console.dir</code> but <code>console.json</code> is kina appleaing expect for the color highlighting part of it.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save console.json</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Just require it once and you shall have `console.json` method for convenience.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;console.json&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;$schema&quot;</span><span class="o">:</span> <span class="s2">&quot;http://json-schema.org/draft-04/schema#&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Product&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;A product from Acme&#39;s catalog&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;properties&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;The unique identifier for a product&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;integer&quot;</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Name of the product&quot;</span><span class="p">,</span>
+</span><span class='line'>            <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s2">&quot;required&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">]</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/console.json/console.json.gif" alt="console.json" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -719,185 +977,6 @@ the require calls in your code.</p>
 <p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
 
 <p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/dompurify/">
-			
-				Dompurify</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
-
-<blockquote><p>Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG!</p></blockquote>
-
-<p>DOMPurify sanitizes HTML and prevents XSS attacks.</p>
-
-<p>|dirty HTML |  => |DOMPurify.sanitize |  => | Clean and safe HTML |</p>
-
-<p>The faster your browser, the faster DOMPurify will be ;)</p>
-
-<p><strong>Install it:</strong>  <code>npm install --save dompurify</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">DOMpurify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dompurify);</span>
-</span><span class='line'>
-</span><span class='line'><span class="s1">DOMPurify.sanitize(&#39;</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="nx">x</span> <span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1">//&gt;&#39;); // becomes &lt;img src=&quot;x&quot;&gt; </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="s1">&#39;&lt;svg&gt;&lt;g/onload=alert(2)//&lt;p&gt;&#39;</span><span class="p">);</span> <span class="c1">// becomes &lt;svg&gt;&lt;g&gt;&lt;/g&gt;&lt;/svg&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It's configurable: <code>var config = { ALLOWED_TAGS: ['p', '#text'], KEEP_CONTENT: false };</code> and <code>DOMPurify.sanitize(str, config)</code></p>
-
-<p>We can also use <code>hooks</code>:</p>
-
-<ul>
-<li><p>beforeSantitizeElements</p></li>
-<li><p>afterSantitizeElements</p></li>
-<li><p>beforeSantitizeAttributes</p></li>
-<li><p>afterSantitizeAttributes</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">addHook</span><span class="p">(</span><span class="s1">&#39;beforeSantitizeElements&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">currentNode</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// Play with currentNode.</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">currentNode</span><span class="p">;</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dompurify/dompurify.gif" alt="dompurify" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/dom-event/">
-			
-				Dom-event</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
-
-<blockquote><p>Add/remove DOM events</p></blockquote>
-
-<p>Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser compliance all in just 15 lines of code ;)</p>
-
-<p><strong>Add event:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">on</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Remove event:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">off</span> <span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">event</span> <span class="o">=</span> <span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">event</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">removeEventListener</span> <span class="o">||</span> <span class="nx">element</span><span class="p">.</span><span class="nx">detachEvent</span><span class="p">)(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">capture</span><span class="p">);</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">callback</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Install it:</strong> <code>npm install dom-event</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">on</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-event&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">off</span> <span class="o">=</span> <span class="nx">on</span><span class="p">.</span><span class="nx">off</span><span class="p">;</span> <span class="c1">// :)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">on</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">off</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">);</span> <span class="c1">// No alerts :)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dom-event/dom-event.gif" alt="dom-event" /></p>
-
-<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
 
 		
 		

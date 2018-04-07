@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-03-23T11:57:31+05:30</updated>
+  <updated>2018-04-07T17:04:34+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[april-fools]]></title>
+    <link href="http://nmotw.in//github/april-fools/"/>
+    <updated>2018-04-01T05:37:51+05:30</updated>
+    <id>http://nmotw.in//github/april-fools</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/april-fools">april-fools</a></p>
+
+<blockquote><p>Randomly fool with an <code>Error</code> on April 1st.</p></blockquote>
+
+<p>⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired!</p>
+
+<p>Few lines of code to have fun on April fools day:</p>
+
+<p>```
+'use strict'</p>
+
+<p>const date = new Date()</p>
+
+<p>if (date.getMonth() === 3 &amp;&amp; date.getDate() === 1 &amp;&amp; Math.floor(Math.random() * 6) + 1 === 1) {
+  const message = require('sentencer').make("Unexpected  with  ")</p>
+
+<p>  throw new Error(message)
+}
+```</p>
+
+<p>Related module -> <a href="http://nmotw.in/sentencer/">sentencer</a>.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+require('april-fools'); // That's it! And it would randomly throw an error like below.</p>
+
+<p>Error: Unexpected lunch with a brindle ravioli</p>
+
+<pre><code>at Object.&lt;anonymous&gt; (/private/tmp/node_modules/april-fools/index.js:8:9)
+at Module._compile (module.js:652:30)
+at Object.Module._extensions..js (module.js:663:10)
+at Module.load (module.js:565:32)
+at tryModuleLoad (module.js:505:12)
+at Function.Module._load (module.js:497:3)
+at Module.require (module.js:596:17)
+at require (internal/module.js:11:18)
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/april-fools/april-fools.gif" alt="april-fools" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[christmas-ascii]]></title>
@@ -190,32 +242,6 @@ rest npm install
 <p><strong>Till next time!</strong></p>
 
 <p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rainbowify]]></title>
-    <link href="http://nmotw.in//github/rainbowify/"/>
-    <updated>2016-06-16T19:33:58+05:30</updated>
-    <id>http://nmotw.in//github/rainbowify</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rainbowify">rainbowify</a></h1>
-
-<blockquote><p>rainbow print stuff in terminal</p></blockquote>
-
-<p><code>rainbowify</code> is an module extracted from mocha's <a href="https://github.com/mochajs/mocha/blob/master/lib/reporters/nyan.js">nyan.js</a> which is a fun little module
-that helps to print rainbow text on the terminal.</p>
-
-<p><strong>Get it:</strong> <code>npm install --global rainbowify</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p><code>sh
-$ echo &lt;some_text&gt; | rainbowify
-</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/rainbowify/rainbowify.gif" alt="rainbowify" /></p>
 ]]></content>
   </entry>
   
