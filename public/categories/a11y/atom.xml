@@ -4,7 +4,7 @@
   <title><![CDATA[Category: a11y | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/a11y/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-04-07T17:11:33+05:30</updated>
+  <updated>2018-04-15T07:12:17+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[a11y]]></title>
+    <link href="http://nmotw.in//github/a11y/"/>
+    <updated>2018-04-15T07:01:25+05:30</updated>
+    <id>http://nmotw.in//github/a11y</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/a11y">a11y</a></h1>
+
+<blockquote><p>Easy accessibility audits powered by the Chrome Accessibility Tools</p></blockquote>
+
+<p><code>a11y</code> conducts audits using the Chrome Accessibility Tools and PhantomJS and lists out the issues for a given URL.</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] a11y</code></p>
+
+<p><strong>Sample CLI usage:</strong></p>
+
+<p>```sh</p>
+
+<p>  Runs an accessibility audit against a URL</p>
+
+<p>  Usage</p>
+
+<pre><code>$ a11y &lt;url&gt;
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>--viewport-size=&lt;size&gt;  Set the viewport size
+--delay                 Set the delay capturing the page
+--verbose               Display more information
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ a11y todomvc.com
+$ a11y http://todomvc.com https://google.com
+$ a11y index.html -=viewport-size=1024x768
+</code></pre>
+
+<p>```</p>
+
+<p><strong>Sample API usage:</strong></p>
+
+<p>```
+const a11y = require('a11y');</p>
+
+<p>a11y('nmotw.in', (err, reports) => {</p>
+
+<pre><code>const audit = reports.audit; // `a11y` Formatted report
+const report = reports.report; // DevTools Accessibility Audit formatted report
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/a11y/a11y.gif" alt="a11y.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[accessibilityjs]]></title>

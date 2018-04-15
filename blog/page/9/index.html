@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="granim Create fluid and interactive gradients animations. Zero dependencies,&lt; 10 kB fun module that helps us to do some cool gradient animations &hellip;">   
+    <meta name="description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/9/">
-    <meta name="twitter:description" content="granim Create fluid and interactive gradients animations. Zero dependencies,&lt; 10 kB fun module that helps us to do some cool gradient animations &hellip;">
+    <meta name="twitter:description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/9/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="granim Create fluid and interactive gradients animations. Zero dependencies,&lt; 10 kB fun module that helps us to do some cool gradient animations &hellip;" />
+    <meta property="og:description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;" />
 
     
 
@@ -67,6 +67,85 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/asyncbox/">
+			
+				Asyncbox</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
+
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
+
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
+
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do some stuff </span>
+</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
+</span><span class='line'>    <span class="c1">// do some other stuff </span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -926,87 +1005,6 @@ API</a>.</p>
 <p><strong>GIF FTW!:</strong></p>
 
 <p><img src="/images/wifi-triangulate/wifi-triangulate.gif" alt="wifi-triangulate" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/cleave.js/">
-			
-				cleave.js</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-07-14T17:53:00+05:30" pubdate data-updated="true">Jul 14<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
-
-<blockquote><p>Input text content formatter.</p></blockquote>
-
-<p><code>Cleave.js</code> has a simple purpose: to help you format input text content automatically.</p>
-
-<p>Provides these features:</p>
-
-<ul>
-<li><p>Credit card number formatting</p></li>
-<li><p>Phone number formatting (i18n js lib separated for each country to reduce size)</p></li>
-<li><p>Date formatting</p></li>
-<li><p>Numeral formatting</p></li>
-<li><p>Custom delimiter, prefix and blocks pattern</p></li>
-<li><p>CommonJS / AMD mode</p></li>
-<li><p>ReactJS component port</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save cleave.js</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-phone&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span><span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>`</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Cleave</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cleave.js&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cleave.js/dist/addons/cleave-phone.{country}&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">cleave</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cleave</span><span class="p">(</span><span class="s1">&#39;.input-phone&#39;</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">phone</span><span class="o">:</span>      <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">regionCode</span><span class="o">:</span> <span class="s1">&#39;{country}&#39;</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/cleave.js/cleave.js.gif" alt="" /></p>
 
 		
 		
