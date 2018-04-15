@@ -1,0 +1,49 @@
+---
+layout: post
+title: "a11y"
+date: 2018-04-15 07:01:25 +0530
+comments: true
+categories: a11y
+---
+
+#[a11y](https://www.npmjs.com/package/a11y)
+> Easy accessibility audits powered by the Chrome Accessibility Tools
+
+`a11y` conducts audits using the Chrome Accessibility Tools and PhantomJS and lists out the issues for a given URL.
+
+__Get it:__ `npm install [-g] a11y`
+
+__Sample CLI usage:__
+
+```sh
+
+  Runs an accessibility audit against a URL
+
+  Usage
+    $ a11y <url>
+
+  Options
+    --viewport-size=<size>  Set the viewport size
+    --delay                 Set the delay capturing the page
+    --verbose               Display more information
+
+  Examples
+    $ a11y todomvc.com
+    $ a11y http://todomvc.com https://google.com
+    $ a11y index.html -=viewport-size=1024x768
+```
+
+__Sample API usage:__
+
+```
+const a11y = require('a11y');
+
+a11y('nmotw.in', (err, reports) => {
+    const audit = reports.audit; // `a11y` Formatted report
+    const report = reports.report; // DevTools Accessibility Audit formatted report
+});
+```
+
+__GIF FTW__
+
+![a11y.gif](/images/a11y/a11y.gif)

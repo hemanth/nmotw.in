@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="bytes parse a string bytes &lt;=> bytes bytes is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and &hellip;">   
+    <meta name="description" content="graphql-request Minimal GraphQL client. graphql-request is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="bytes parse a string bytes &lt;=> bytes bytes is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and &hellip;">
+    <meta name="twitter:description" content="graphql-request Minimal GraphQL client. graphql-request is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="bytes parse a string bytes &lt;=> bytes bytes is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and &hellip;" />
+    <meta property="og:description" content="graphql-request Minimal GraphQL client. graphql-request is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it &hellip;" />
 
     
 
@@ -67,6 +67,69 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/graphql-request/">
+			
+				Graphql-request</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-02-03T22:46:29+05:30" pubdate data-updated="true">Feb 3<span>rd</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">graphql-request</a></h1>
+
+<blockquote><p>Minimal GraphQL client.</p></blockquote>
+
+<p><code>graphql-request</code> is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it doesn't have a built-in cache and has no integrations for frontend frameworks.</p>
+
+<p><strong>Get it:</strong> <code>npm install graphql-request</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">GraphQLClient</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;graphql-request&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Run GraphQL queries/mutations using a static function</span>
+</span><span class='line'><span class="nx">request</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ... or create a GraphQL client instance to send requests</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GraphQLClient</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="p">{</span> <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">})</span>
+</span><span class='line'><span class="nx">client</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/graphql-request/graphql-request.gif" alt="graphql-request.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -909,127 +972,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/hjson/hjson.gif" alt="hjson" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/clean-deep/">
-			
-				Clean-deep</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-11-23T11:12:26+05:30" pubdate data-updated="true">Nov 23<span>rd</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/clean-deep">clean-deep</a></h1>
-
-<blockquote><p>Remove empty values from objects.</p></blockquote>
-
-<p><code>clean-deep</code> helps us to clean objects by removing empty <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>, <code>''</code> from objects.</p>
-
-<p>Around of 50 lines of code which makes use of <code>lodash.transform</code> and recursively clean up your objects.</p>
-
-<p>You could pass in the below options as per your requirement of the clean-up process.</p>
-
-<table>
-<thead>
-<tr>
-<th>Option            </th>
-<th> Default value </th>
-<th> Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>emptyArrays</em>     </td>
-<td> <em>true</em>        </td>
-<td> Remove empty arrays, ie: <code>[]</code></td>
-</tr>
-<tr>
-<td><em>emptyObjects</em>    </td>
-<td> <em>true</em>        </td>
-<td> Remove empty objects, ie: <code>{}</code></td>
-</tr>
-<tr>
-<td><em>emptyStrings</em>    </td>
-<td> <em>true</em>        </td>
-<td> Remove empty strings, ie: <code>''</code></td>
-</tr>
-<tr>
-<td><em>nullValues</em>      </td>
-<td> <em>true</em>        </td>
-<td> Remove null values, ie: <code>null</code></td>
-</tr>
-<tr>
-<td><em>undefinedValues</em> </td>
-<td> <em>true</em>        </td>
-<td> Remove null values, ie: <code>undefined</code></td>
-</tr>
-</tbody>
-</table>
-
-
-<p><strong>Get it:</strong> <code>npm install clean-deep</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kr">const</span> <span class="nx">cleanDeep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;clean-deep&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">bar</span><span class="o">:</span> <span class="p">{},</span>
-</span><span class='line'>  <span class="nx">baz</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">biz</span><span class="o">:</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">net</span><span class="o">:</span> <span class="p">[],</span>
-</span><span class='line'>  <span class="nx">nit</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">qux</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">baz</span><span class="o">:</span> <span class="s1">&#39;boz&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">txi</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">cleanDeep</span><span class="p">(</span><span class="nx">object</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// =&gt; { biz: &#39;baz&#39;, qux: { baz: &#39;boz&#39; } }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/clean-deep/clean-deep.gif" alt="clean-deep" /></p>
 
 		
 		
