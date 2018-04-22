@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;">   
+    <meta name="description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/6/">
-    <meta name="twitter:description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;">
+    <meta name="twitter:description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/6/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;" />
+    <meta property="og:description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;" />
 
     
 
@@ -67,6 +67,79 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/tinytime/">
+			
+				Tinytime</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-27T20:36:58+05:30" pubdate data-updated="true">Apr 27<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/tinytime">tinytime</a></h1>
+
+<blockquote><p>A straightforward date and time formatter in 800b.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save tinytime</code></p>
+
+<p><code>tinytime</code> exports a single function that returns a template object. This object has a single method, <code>render</code>, which
+takes a <code>Date</code> and returns a string with the rendered data.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">tinytime</span> <span class="nx">from</span> <span class="s1">&#39;tinytime&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">tinytime</span><span class="p">(</span><span class="s1">&#39;The time is {h}:{mm}:{ss}{a}.&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+</span><span class='line'><span class="c1">// The time is 11:10:20PM.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Substitutions:</strong></p>
+
+<ul>
+<li><code>MMMM</code> - Full Month (September)</li>
+<li><code>MM</code> - Partial Month (Sep)</li>
+<li><code>Mo</code> - Numeric Month (9)</li>
+<li><code>YYYY</code> - Full Year (1992)</li>
+<li><code>YY</code> - Partial Year (92)</li>
+<li><code>dddd</code> - Day of the Week (Monday)</li>
+<li><code>DD</code> - Day of the Month (24)</li>
+<li><code>Do</code> - Day (24th)</li>
+<li><code>h</code> - Hours - 12h format</li>
+<li><code>H</code> - Hours - 24h format</li>
+<li><code>mm</code> - Minutes (zero padded)</li>
+<li><code>ss</code> - Seconds (zero padded)</li>
+<li><code>a</code> - AM/PM</li>
+</ul>
+
+
+<p> <strong>GIF FTW!</strong></p>
+
+<p> <img src="/images/tinytime/tinytime.gif" alt="tinytime" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -928,119 +1001,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/unfetch/unfetch.gif" alt="unfetch" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/most/">
-			
-				Most</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-02-18T07:07:22+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/most">most</a></h1>
-
-<blockquote><p>Monadic streams</p></blockquote>
-
-<p><code>Most.js</code> is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e.g. WebSocket messages, DOM events, etc, and on time-varying values, e.g. the "current value" of an <code>&lt;input&gt;</code>, without many of the hazards of side effects and mutable shared state.</p>
-
-<p>It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.</p>
-
-<p>P.S: Have a look at the <a href="https://github.com/cujojs/most/tree/master/test/perf">perf test results</a>.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --save most</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">from</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
-</span><span class='line'><span class="c1">// After 1 second, logs 10</span>
-</span><span class='line'><span class="nx">from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">result</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">result</span> <span class="o">+</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">fromPromise</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
-</span><span class='line'><span class="c1">// Logs &quot;hello&quot;</span>
-</span><span class='line'><span class="nx">fromPromise</span><span class="p">(</span><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">))</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">message</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">generate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;most&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span><span class="o">*</span> <span class="nx">allTheIntegers</span><span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span>
-</span><span class='line'>    <span class="k">while</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">yield</span> <span class="nx">delayPromise</span><span class="p">(</span><span class="nx">interval</span><span class="p">,</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">delayPromise</span> <span class="o">=</span> <span class="p">(</span><span class="nx">ms</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span>
-</span><span class='line'>    <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="o">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">),</span> <span class="nx">ms</span><span class="p">))</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Log the first 100 integers, at 1 second intervals</span>
-</span><span class='line'><span class="nx">generate</span><span class="p">(</span><span class="nx">allTheIntegers</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">take</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/most/most.js.gif" alt="most.js" /></p>
 
 		
 		
