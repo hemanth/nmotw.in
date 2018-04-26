@@ -4,13 +4,57 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-04-21T15:56:31+05:30</updated>
+  <updated>2018-04-26T14:46:21+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[dayjs]]></title>
+    <link href="http://nmotw.in/dayjs/"/>
+    <updated>2018-04-26T14:32:27+05:30</updated>
+    <id>http://nmotw.in/dayjs</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dayjs">dayjs</a></h1>
+
+<blockquote><p>⏰ Fast 2KB immutable date library.</p></blockquote>
+
+<p><code>dayjs</code> is a minimalist JavaScript library for modern browsers with a largely Moment.js-compatible API, with:</p>
+
+<p>🕒 Familiar Moment.js API &amp; patterns
+💪 Immutable
+🔥 Chainable
+📦 2kb mini library
+👫 All browsers support</p>
+
+<p><strong>Get it:</strong> <code>npm install dayjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">dayjs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dayjs&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">dayjs</span><span class="p">()</span>
+</span><span class='line'><span class="p">.</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;YYYY-MM-DD HH:mm:ss&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/dayjs/dayjs.gif" alt="dayjs" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tiny-glob]]></title>
@@ -1229,48 +1273,6 @@ $ fkill
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="http://nmotw.in/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[jsvu]]></title>
-    <link href="http://nmotw.in/jsvu/"/>
-    <updated>2017-12-07T22:19:37+05:30</updated>
-    <id>http://nmotw.in/jsvu</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/jsvu">jsvu</a></h1>
-
-<blockquote><p>JavaScript (engine) Version Updater.</p></blockquote>
-
-<p><code>jsvu</code> makes it easy to fetch the latest versions of JavaScript engines for a specific OS, without the hassels of compiling them!</p>
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>npm install -g jsvu</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># in your ~/*.rc</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;${HOME}/.jsvu:${PATH}&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>jsvu
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It's prompts for the OS and the engine and install them based on your choice, it can install Chakra/ChakraCore, JavaScriptCore, SpiderMonk
-ey and V8 for you.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/jsvu/jsvu.gif" alt="jsvu.gif" /></p>
 ]]></content>
   </entry>
   
