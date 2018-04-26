@@ -1,0 +1,36 @@
+---
+layout: post
+title: "dayjs"
+date: 2018-04-26 14:32:27 +0530
+comments: true
+categories: util
+---
+
+#[dayjs](https://www.npmjs.com/package/dayjs)
+> ⏰ Fast 2KB immutable date library.
+
+`dayjs` is a minimalist JavaScript library for modern browsers with a largely Moment.js-compatible API, with:
+
+🕒 Familiar Moment.js API & patterns
+💪 Immutable
+🔥 Chainable
+📦 2kb mini library
+👫 All browsers support
+
+__Get it:__ `npm install dayjs`
+
+__Sample usage:__
+
+```js
+const dayjs = require('dayjs');
+
+dayjs()
+.startOf('month')
+.add(1, 'day')
+.set('year', 2018)
+.format('YYYY-MM-DD HH:mm:ss');
+```
+
+__GIF FTW!__
+
+![dayjs](/images/dayjs/dayjs.gif)
