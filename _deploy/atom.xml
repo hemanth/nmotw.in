@@ -4,13 +4,91 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-04-26T14:46:21+05:30</updated>
+  <updated>2018-05-05T11:51:27+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[global-cache]]></title>
+    <link href="http://nmotw.in/global-cache/"/>
+    <updated>2018-05-05T11:45:30+05:30</updated>
+    <id>http://nmotw.in/global-cache</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/global-cache">global-cache</a></h1>
+
+<blockquote><p>Use global object as a share singleton.</p></blockquote>
+
+<p>From the 🐴's mouth -> Sometimes you have to do horrible things, like use the global object to share a singleton. Abstract that away, with this!</p>
+
+<p><code>global-cache</code> attaches a cache to the global object. It attempts to make it as undiscoverable as possible:</p>
+
+<ul>
+<li><p>uses Symbols if available</p></li>
+<li><p>if not, uses a string key that is not a valid identifier, so as not to show up in dot-notation browser autocomplete</p></li>
+<li><p>makes it non-enumerable if property descriptors are supported</p></li>
+<li><p>keys are required to be strings or symbols.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install global-cache</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="p">{},</span> <span class="nx">key</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">cache</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;global-cache&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">key</span><span class="p">)];</span> <span class="c1">//[ undefined, false ]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="nx">value</span><span class="p">);</span> <span class="c1">//true</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">key</span><span class="p">)];</span> <span class="c1">//[ {}, true ]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cache</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span> <span class="c1">// true</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nx">cache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">key</span><span class="p">)];</span> <span class="c1">// [ undefined, false ]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cache</span>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ clear: [Function: clear],</span>
+</span><span class='line'><span class="cm">  delete: [Function: deleteKey],</span>
+</span><span class='line'><span class="cm">  get: [Function: get],</span>
+</span><span class='line'><span class="cm">  has: [Function: has],</span>
+</span><span class='line'><span class="cm">  set: [Function: set],</span>
+</span><span class='line'><span class="cm">  setIfMissingThenGet: [Function: setIfMissingThenGet] }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/global-cache/global-cache.gif" alt="global-cache.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[dayjs]]></title>
@@ -1233,46 +1311,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[portscanner]]></title>
-    <link href="http://nmotw.in/portscanner/"/>
-    <updated>2017-12-17T15:16:40+05:30</updated>
-    <id>http://nmotw.in/portscanner</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/portscanner">portscanner</a></h1>
-
-<blockquote><p>port scanner!</p></blockquote>
-
-<p><code>portscanner</code> helps us to check the port status and free port for a given host.</p>
-
-<p><strong>Get it:</strong> <code>npm install portscanner</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">portScanner</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;portscanner&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">checkPortStatus</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">findAPortInUse</span><span class="p">([</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">3006</span><span class="p">],</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
 ]]></content>
   </entry>
   
