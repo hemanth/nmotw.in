@@ -1,0 +1,31 @@
+---
+layout: post
+title: "scrape-it"
+date: 2018-05-12 11:34:02 +0530
+comments: true
+categories: util
+---
+
+#[scrape-it](https://www.npmjs.com/package/scrape-it)
+> 
+
+`scrape-it` uses [cheerio](https://www.npmjs.com/package/cheerio) under the hood and makes it easier to scrape websites.
+
+__Get it:__ `npm install [-g] scrape-it`
+
+__Sample usage:__
+
+```js
+const scrapeIt = require("scrape-it")
+ 
+scrapeIt("https://nmotw.in", {tagLine: ".tagline"})
+.then(scraped => console.log(scraped.data))
+.catch(console.error)
+
+// ^ {tagLine: "Node Mode Of The Week"}
+```
+
+__GIF FTW__
+
+![scrape-it.gif](/images/scrape-it/scrape-it.gif)
+

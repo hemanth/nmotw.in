@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="JavaScript Regular Expressions made easy VerbalExpressions helps us to construct difficult regular expressions is an intuitive manner. Install it: &hellip;">   
+    <meta name="description" content="JSONSelect defines a language very similar in syntax and structure to
+CSS3 Selectors. JSONSelect expressions are patterns which can be matched &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/20/">
-    <meta name="twitter:description" content="JavaScript Regular Expressions made easy VerbalExpressions helps us to construct difficult regular expressions is an intuitive manner. Install it: &hellip;">
+    <meta name="twitter:description" content="JSONSelect defines a language very similar in syntax and structure to
+CSS3 Selectors. JSONSelect expressions are patterns which can be matched &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/20/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="JavaScript Regular Expressions made easy VerbalExpressions helps us to construct difficult regular expressions is an intuitive manner. Install it: &hellip;" />
+    <meta property="og:description" content="JSONSelect defines a language very similar in syntax and structure to
+CSS3 Selectors. JSONSelect expressions are patterns which can be matched &hellip;" />
 
     
 
@@ -67,6 +70,94 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/jsonselect/">
+			
+				Jsonselect</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-04T18:20:10+05:30" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>JSONSelect defines a language very similar in syntax and structure to
+<a href="http://www.w3.org/TR/css3-selectors/">CSS3 Selectors</a>.</p>
+
+<p>JSONSelect expressions are patterns which can be matched against JSON documents.</p>
+
+<p>Installing it: <code>npm install jsonselect</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">select</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonselect&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ friends: </span>
+</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39;, password: &#39;bob pass&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;joe&#39;, password: &#39;joe pass&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;jeff&#39;, password: &#39;jeff pass&#39; } ] }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">,</span> <span class="nx">except</span><span class="o">:</span> <span class="s1">&#39;.password&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ friends: </span>
+</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;joe&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;jeff&#39; } ] }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: This module is still in the beta phase. Do checkout <a href="http://jsonselect.org/#overview">jsonselect.org</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jsonselect/jsonselect.gif" alt="jsonselect" /></p>
+
+<p>Thanks to <a href="http://lloyd.io/">Lloyd Hilaiel</a> and wish me the very best with this module!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1256,156 +1347,6 @@ the method parses the given <code>str</code> and return milliseconds ;) well it 
 <p><img src="/images/mute-stream/mute-stream.gif" alt="" /></p>
 
 <p>Thanks to <a href="http://blog.izs.me/">Isaac Z. Schlueter</a> for helping us to mute the noise! ;)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/boom/">
-			
-				Boom</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-26T19:26:34+05:30" pubdate data-updated="true">Jun 26<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of them, but would it not be cool to have more humanized mechanism to handle this?</p>
-
-<p>Well here is <a href="https://www.npmjs.org/package/boom">BOOM</a> HTTP-friendly error objects, as the name suggest it's make the error reporting more friendly.</p>
-
-<p><img src="/images/boom/boom.png" alt="" /></p>
-
-<p>Installing it is like any other node module: <code>npm install boom</code></p>
-
-<p>It provides the below error messages:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span>
-</span><span class='line'>  <span class="s1">&#39;badRequest&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;unauthorized&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;forbidden&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;notFound&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;methodNotAllowed&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;notAcceptable&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;proxyAuthRequired&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;clientTimeout&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;conflict&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;resourceGone&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;lengthRequired&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;preconditionFailed&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;entityTooLarge&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;uriTooLong&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;unsupportedMediaType&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;rangeNotSatisfiable&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;expectationFailed&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;internal&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;notImplemented&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;badGateway&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;serverTimeout&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;gatewayTimeout&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;badImplementation&#39;</span>
-</span><span class='line'> <span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>Sample usage:</h1>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">boom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;boom&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">notFound</span> <span class="o">=</span> <span class="nx">boom</span><span class="p">.</span><span class="nx">notFound</span><span class="p">(</span><span class="s2">&quot;Sorry, it&#39;s not here :(&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">{</span> <span class="p">[</span><span class="nb">Error</span><span class="o">:</span> <span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="s1">&#39;s not here :(]</span>
-</span><span class='line'><span class="s1">  data: null,</span>
-</span><span class='line'><span class="s1">  isBoom: true,</span>
-</span><span class='line'><span class="s1">  output: </span>
-</span><span class='line'><span class="s1">   { statusCode: 404,</span>
-</span><span class='line'><span class="s1">     payload: </span>
-</span><span class='line'><span class="s1">      { statusCode: 404,</span>
-</span><span class='line'><span class="s1">        error: &#39;</span><span class="nx">Not</span> <span class="nx">Found</span><span class="s1">&#39;,</span>
-</span><span class='line'><span class="s1">        message: &#39;</span><span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="err">\</span><span class="s1">&#39;s not here :(&#39;</span> <span class="p">},</span>
-</span><span class='line'>     <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">},</span>
-</span><span class='line'>  <span class="nx">reformat</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">payload</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">{</span> <span class="nx">statusCode</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;Not Found&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Sorry, it\&#39;s not here :(&#39;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>GIF FTW</h1>
-
-<p><img src="/images/boom/boom.gif" alt="" /></p>
-
-<p>Thanks to @WalmartLabs team for this module, specially for the maintainers <a href="http://hueniverse.com">Eran Hammer</a> and <a href="http://jsgeek.com">Wyatt Preul</a></p>
 
 		
 		
