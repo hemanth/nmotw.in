@@ -3,7 +3,7 @@ layout: post
 title: "scrape-it"
 date: 2018-05-12 11:34:02 +0530
 comments: true
-categories: util
+categories: util, scraper
 ---
 
 #[scrape-it](https://www.npmjs.com/package/scrape-it)
