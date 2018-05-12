@@ -7,7 +7,7 @@ categories: util
 ---
 
 #[scrape-it](https://www.npmjs.com/package/scrape-it)
-> 
+> scraper for humans.
 
 `scrape-it` uses [cheerio](https://www.npmjs.com/package/cheerio) under the hood and makes it easier to scrape websites.
 

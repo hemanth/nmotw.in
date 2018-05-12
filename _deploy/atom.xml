@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-05-12T11:56:56+05:30</updated>
+  <updated>2018-05-12T11:59:03+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -19,7 +19,7 @@
     <id>http://nmotw.in/scrape-it</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scrape-it">scrape-it</a></h1>
 
-<blockquote></blockquote>
+<blockquote><p>scraper for humans.</p></blockquote>
 
 <p><code>scrape-it</code> uses <a href="https://www.npmjs.com/package/cheerio">cheerio</a> under the hood and makes it easier to scrape websites.</p>
 
