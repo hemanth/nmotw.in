@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="nsp aka: Node Security Project Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB. &hellip;">   
+    <meta name="description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="nsp aka: Node Security Project Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB. &hellip;">
+    <meta name="twitter:description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="nsp aka: Node Security Project Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB. &hellip;" />
+    <meta property="og:description" content="node-rules Business Rules Engine for JavaScript. node-rules is a module of it's own kind, it's a light weight forward chaining Rule Engine! Install &hellip;" />
 
     
 
@@ -67,6 +67,137 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/node-rules/">
+			
+				Node-rules</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-29T17:53:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
+
+<blockquote><p>Business Rules Engine for JavaScript.</p></blockquote>
+
+<p><code>node-rules</code> is a module of it's own kind, it's a light weight forward chaining Rule Engine!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save node-rules</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>It's a three step process, to get the engine running:</p>
+
+<ul>
+<li><p>Defining a Rule.</p></li>
+<li><p>Defining a Fact.</p></li>
+<li><p>Initialize the rules engine and execute the rule.</p></li>
+</ul>
+
+
+<p><strong>Create a rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Sample Rule to block a transaction if its below 500 */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">rule</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;condition&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">when</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">transactionTotal</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="s2">&quot;consequence&quot;</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">R</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">result</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">reason</span> <span class="o">=</span> <span class="s2">&quot;The transaction was blocked as it was less than 500&quot;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">R</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Create a fact:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Fact with less than 500 as transaction, and this should be blocked */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fact</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;user4&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;application&quot;</span><span class="o">:</span> <span class="s2">&quot;MOB2&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;transactionTotal&quot;</span><span class="o">:</span> <span class="mi">400</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;cardType&quot;</span><span class="o">:</span> <span class="s2">&quot;Credit Card&quot;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Initialize the rules engine:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/* Creating Rule Engine instance and registering rule */</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">R</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RuleEngine</span><span class="p">();</span>
+</span><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="nx">rule</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Execute the rule:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">R</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="nx">fact</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valid transaction&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Blocked Reason:&quot;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">reason</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-rules/node-rules.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mithunsatheesh">Mithun Satheesh</a> for this adventurous module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -975,96 +1106,6 @@
 <p><img src="/images/fake-identity/fake-identity.gif" alt="fake-identity" /></p>
 
 <p>This is pretty modular and sweet util, that needs some more configurability, thanks to <a href="http://travishorn.com/">Travis Horn</a> for fake-identity.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/npm-check-updates/">
-			
-				Npm-check-updates</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-20T20:22:16+05:30" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/npm-check-updates">npm-check-updates</a></h1>
-
-<p>Finding all updates to dependencies and updating them is very easy with <code>npm-check-updates</code>.</p>
-
-<p><strong>Install it globally:</strong> <code>npm install -g npm-check-updates</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates
-</span><span class='line'>npm http GET http://registry.npmjs.org/read-chunk
-</span><span class='line'>npm http GET http://registry.npmjs.org/mocha
-</span><span class='line'>npm http GET http://registry.npmjs.org/browserify
-</span><span class='line'>npm http 304 http://registry.npmjs.org/browserify
-</span><span class='line'>npm http 304 http://registry.npmjs.org/read-chunk
-</span><span class='line'>npm http 304 http://registry.npmjs.org/mocha
-</span><span class='line'>
-</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
-</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates -u
-</span><span class='line'>
-</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
-</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
-</span><span class='line'>
-</span><span class='line'>package.json upgraded
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>npm-check-updates
-</span><span class='line'>
-</span><span class='line'>All dependencies match the latest package versions :<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/npm-check-updates/npm-check-updates.gif" alt="" /></p>
-
-<p>Thanks to Tomas Junnonen for this cute little util.</p>
 
 		
 		
