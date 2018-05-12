@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util, | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/util/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-05-12T11:59:03+05:30</updated>
+  <updated>2018-05-12T12:12:57+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[scrape-it]]></title>
+    <link href="http://nmotw.in//github/scrape-it/"/>
+    <updated>2018-05-12T11:34:02+05:30</updated>
+    <id>http://nmotw.in//github/scrape-it</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scrape-it">scrape-it</a></h1>
+
+<blockquote><p>scraper for humans.</p></blockquote>
+
+<p><code>scrape-it</code> uses <a href="https://www.npmjs.com/package/cheerio">cheerio</a> under the hood and makes it easier to scrape websites.</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] scrape-it</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const scrapeIt = require("scrape-it")</p>
+
+<p>scrapeIt("https://nmotw.in", {tagLine: ".tagline"})
+.then(scraped => console.log(scraped.data))
+.catch(console.error)</p>
+
+<p>// ^ {tagLine: "Node Mode Of The Week"}
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/scrape-it/scrape-it.gif" alt="scrape-it.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tldr]]></title>
