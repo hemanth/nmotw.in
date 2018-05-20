@@ -4,13 +4,55 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-05-12T12:12:57+05:30</updated>
+  <updated>2018-05-20T20:37:55+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[signal-exit]]></title>
+    <link href="http://nmotw.in/signal-exit/"/>
+    <updated>2018-05-20T20:33:02+05:30</updated>
+    <id>http://nmotw.in/signal-exit</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/signal-exit">signal-exit</a></h1>
+
+<blockquote><p>Fire an event no matter how a process exits.</p></blockquote>
+
+<p><code>signal-exit</code> fires an event no matter how a process exits:</p>
+
+<ul>
+<li>reaching the end of execution.</li>
+<li>explicitly having <code>process.exit(code)</code> called.</li>
+<li>having <code>process.kill(pid, sig)</code> called.</li>
+<li>receiving a fatal signal from outside the process</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install signal-exit</code></p>
+
+<p><strong>Sample code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">onExit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;signal-exit&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">onExit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;process exited!&#39;</span><span class="p">,</span> <span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">)</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scrape-it]]></title>
@@ -1156,50 +1198,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/circular-json/circular-json.gif" alt="circular-json" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[scrolldir]]></title>
-    <link href="http://nmotw.in/scrolldir/"/>
-    <updated>2017-12-30T15:32:47+05:30</updated>
-    <id>http://nmotw.in/scrolldir</id>
-    <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/scrolldir">scrolldir</a></h1>
-
-<blockquote><p>leverage scroll direction with CSS ⬆⬇</p></blockquote>
-
-<p><code>0</code> dep, <code>1KB</code> micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute.</p>
-
-<p><strong>Get it:</strong> <code>npm install scrolldir</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">scrollDir</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">attribute</span><span class="o">:</span> <span class="s1">&#39;new-attribute-name&#39;</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;your-new-selector&#39;</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">off</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">direction</span><span class="o">:</span> <span class="s1">&#39;up&#39;</span> <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/scrolldir/scrolldir.gif" alt="scrolldir.gif" /></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-05-12T12:12:57+05:30</updated>
+  <updated>2018-05-20T20:37:55+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[signal-exit]]></title>
+    <link href="http://nmotw.in//github/signal-exit/"/>
+    <updated>2018-05-20T20:33:02+05:30</updated>
+    <id>http://nmotw.in//github/signal-exit</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/signal-exit">signal-exit</a></h1>
+
+<blockquote><p>Fire an event no matter how a process exits.</p></blockquote>
+
+<p><code>signal-exit</code> fires an event no matter how a process exits:</p>
+
+<ul>
+<li>reaching the end of execution.</li>
+<li>explicitly having <code>process.exit(code)</code> called.</li>
+<li>having <code>process.kill(pid, sig)</code> called.</li>
+<li>receiving a fatal signal from outside the process</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install signal-exit</code></p>
+
+<p><strong>Sample code:</strong></p>
+
+<p>```js
+var onExit = require('signal-exit')</p>
+
+<p>onExit(function (code, signal) {
+  console.log('process exited!', code, signal)
+})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[prompts]]></title>
@@ -224,47 +261,6 @@ package.json / node_modules folder will be used.
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[qrcode-terminal]]></title>
-    <link href="http://nmotw.in//github/qrcode-terminal/"/>
-    <updated>2017-10-31T12:56:26+05:30</updated>
-    <id>http://nmotw.in//github/qrcode-terminal</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/qrcode-terminal">qrcode-terminal</a></p>
-
-<blockquote><p>qrcode on terminal.</p></blockquote>
-
-<p><code>qrcode-terminal</code> Going where no QRCode has gone before ;)</p>
-
-<p>Helps you to generate qrcode in your terminal, maybe be URLs or just plain text, this module does a good job in displaying the qrcode on terminal.</p>
-
-<p>It would be great if this module can generate responsive qr-code in the terminal, which can be bit of a challenge, it can generate <code>small</code> or <code>normal</code> ones though.</p>
-
-<p><strong>Get it:</strong> <code>npm install qrcode-terminal</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-const qrcode = require('qrcode-terminal');</p>
-
-<p>qrcode.generate('This will be a QRCode, eh!');</p>
-
-<p>qrcode.setErrorLevel('Q');
-qrcode.generate('This will be a QRCode with error level Q!');</p>
-
-<p>qrcode.generate('https://nmotw.in', function (qrcode) {</p>
-
-<pre><code>console.log(qrcode);
-</code></pre>
-
-<p>});
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/qrcode-terminal/qrcode-terminal.gif" alt="qrcode-terminal" /></p>
 ]]></content>
   </entry>
   
