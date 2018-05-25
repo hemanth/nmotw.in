@@ -1,0 +1,40 @@
+---
+layout: post
+title: "what-dog"
+date: 2018-05-25 16:13:51 +0530
+comments: true
+categories: AI
+---
+
+#[what-dog](https://www.npmjs.com/package/what-dog)
+> What 🐶 is this?
+
+Get the breed of a dog from an image using Microsoft's what-dog.
+
+![](what-dog.demo.png)
+
+__Get it:__ `npm install --save what-dog`
+
+__Sample usage:__
+
+```js
+const whatDog = require('what-dog');
+
+((async () => {
+    console.log(await whatDog('http://imgur.com/B7a15F5.jpg'))
+})());
+
+/*
+{
+  "isDog": true,
+  "breed": "Norfolk Terrier",
+  "about": "Spirited, small but sturdy, feisty yet sweet personality"
+}
+*/
+```
+
+__GIF FTW!__
+
+![what-dog.gif](/images/what-dog/what-dog.gif)
+
+

@@ -4,13 +4,65 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-05-20T20:37:55+05:30</updated>
+  <updated>2018-05-25T16:17:57+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[what-dog]]></title>
+    <link href="http://nmotw.in/what-dog/"/>
+    <updated>2018-05-25T16:13:51+05:30</updated>
+    <id>http://nmotw.in/what-dog</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/what-dog">what-dog</a></h1>
+
+<blockquote><p>What 🐶 is this?</p></blockquote>
+
+<p>Get the breed of a dog from an image using Microsoft's what-dog.</p>
+
+<p><img src="what-dog.demo.png" alt="" /></p>
+
+<p><strong>Get it:</strong> <code>npm install --save what-dog</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">whatDog</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;what-dog&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">((</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">whatDog</span><span class="p">(</span><span class="s1">&#39;http://imgur.com/B7a15F5.jpg&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="p">})());</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{</span>
+</span><span class='line'><span class="cm">  &quot;isDog&quot;: true,</span>
+</span><span class='line'><span class="cm">  &quot;breed&quot;: &quot;Norfolk Terrier&quot;,</span>
+</span><span class='line'><span class="cm">  &quot;about&quot;: &quot;Spirited, small but sturdy, feisty yet sweet personality&quot;</span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/what-dog/what-dog.gif" alt="what-dog.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[signal-exit]]></title>
@@ -1140,64 +1192,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/ccxt/ccxt.gif" alt="ccxt" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[circular-json]]></title>
-    <link href="http://nmotw.in/circular-json/"/>
-    <updated>2018-01-07T11:38:12+05:30</updated>
-    <id>http://nmotw.in/circular-json</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/circular-json">circular-json</a></h1>
-
-<blockquote><p>Handle circular JSON references with ease!</p></blockquote>
-
-<p>You would have come acorss <code>TypeError: Converting circular structure to JSON</code> if you have been handling JSONs for a while now, <code>circular-json</code> serializes and deserializes otherwise valid JSON objects containing circular references into and from a specialized JSON format.</p>
-
-<p><strong>Get it:</strong> <code>npm install circular-json</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span>
-</span><span class='line'>  <span class="nx">CircularJSON</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;circular-json&#39;</span><span class="p">),</span>
-</span><span class='line'>  <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span>
-</span><span class='line'>  <span class="nx">str</span>
-</span><span class='line'><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">self</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">CircularJSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// &quot;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;self\&quot;:\&quot;~\&quot;}&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">JSON.stringify(obj); would have resulted in:</span>
-</span><span class='line'><span class="cm">TypeError: Converting circular structure to JSON</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/circular-json/circular-json.gif" alt="circular-json" /></p>
 ]]></content>
   </entry>
   
