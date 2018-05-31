@@ -4,13 +4,47 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-05-25T16:30:25+05:30</updated>
+  <updated>2018-05-31T15:57:38+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[franc]]></title>
+    <link href="http://nmotw.in/franc/"/>
+    <updated>2018-05-31T15:52:58+05:30</updated>
+    <id>http://nmotw.in/franc</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/franc">franc</a></h1>
+
+<blockquote><p>Detect the language of text.</p></blockquote>
+
+<p><code>franc</code> is a natural language detection lib that supports <code>188</code> languages (1M or more speakers).</p>
+
+<p><strong>Get it:</strong> <code>npm install franc</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">franc</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;franc&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">franc</span><span class="p">(</span><span class="s2">&quot;ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ^ would return &quot;kan&quot; indicating that it&#39;s Kannada</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/franc/franc.gif" alt="franc.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[what-dog]]></title>
@@ -1126,72 +1160,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/technicalindicators/technicalindicators.gif" alt="technicalindicators.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ccxt]]></title>
-    <link href="http://nmotw.in/ccxt/"/>
-    <updated>2018-01-14T17:37:05+05:30</updated>
-    <id>http://nmotw.in/ccxt</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ccxt">ccxt</a></h1>
-
-<blockquote><p>Connect and trade with cryptocurrency.</p></blockquote>
-
-<p><code>ccxt</code> is library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.</p>
-
-<p><strong>Get it:</strong> <code>npm install ccxt</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">ccxt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ccxt&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">exchange</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ccxt</span><span class="p">.</span><span class="nx">bitfinex</span><span class="p">({</span>
-</span><span class='line'>    <span class="nx">apiKey</span><span class="o">:</span> <span class="s1">&#39;4FlEDtxDl35gdEiobnfZ72vJeZteE4Bb7JdvqzjIjHq&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;D4DXM8DZdHuAq9YptUsb42aWT1XBnGlIJgLi8a7tzFH&#39;</span><span class="p">,</span>
-</span><span class='line'><span class="p">})</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">loadMarkets</span><span class="p">()</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">exchange</span><span class="p">.</span><span class="nx">symbols</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">symbols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">ticker</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchTicker</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ticker</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">orderbook</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchOrderBook</span><span class="p">(</span><span class="nx">symbol</span><span class="p">)</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">orderbook</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">balance</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">exchange</span><span class="p">.</span><span class="nx">fetchBalance</span><span class="p">()</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">balance</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/ccxt/ccxt.gif" alt="ccxt" /></p>
 ]]></content>
   </entry>
   
