@@ -1,0 +1,29 @@
+---
+layout: post
+title: "franc"
+date: 2018-05-31 15:52:58 +0530
+comments: true
+categories: NLP
+---
+
+#[franc](https://www.npmjs.com/package/franc)
+> Detect the language of text.
+
+`franc` is a natural language detection lib that supports `188` languages (1M or more speakers).
+
+__Get it:__ `npm install franc`
+
+__Sample usage:__
+
+```js
+var franc = require("franc")
+
+franc("ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ");
+
+// ^ would return "kan" indicating that it's Kannada
+```
+
+__GIF FTW!__
+
+![franc.gif](/images/franc/franc.gif)
+
