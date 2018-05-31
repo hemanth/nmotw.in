@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NLP | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/nlp/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2018-05-31T15:57:38+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[franc]]></title>
+    <link href="http://nmotw.in//github/franc/"/>
+    <updated>2018-05-31T15:52:58+05:30</updated>
+    <id>http://nmotw.in//github/franc</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/franc">franc</a></h1>
+
+<blockquote><p>Detect the language of text.</p></blockquote>
+
+<p><code>franc</code> is a natural language detection lib that supports <code>188</code> languages (1M or more speakers).</p>
+
+<p><strong>Get it:</strong> <code>npm install franc</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var franc = require("franc")</p>
+
+<p>franc("ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ");</p>
+
+<p>// ^ would return "kan" indicating that it's Kannada
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/franc/franc.gif" alt="franc.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>
