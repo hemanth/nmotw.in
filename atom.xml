@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-06-10T16:16:54+05:30</updated>
+  <updated>2018-06-10T17:48:31+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/qw/"/>
     <updated>2018-06-10T16:10:46+05:30</updated>
     <id>http://nmotw.in/qw</id>
-    <content type="html"><![CDATA[<p><a href="">qw</a></p>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/qw">qw</a></p>
 
 <blockquote><p>Quoted word literals!</p></blockquote>
 
