@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="mitt Tiny 200b functional event emitter / pubsub. Sweet little implementation of pubsub patter, uses flow internally and provides the below &hellip;">   
+    <meta name="description" content="nickjs Headless browser automation library nickjs Modern, simple &amp; powerful browser automation library. Works on all dynamic sites.
+async-await &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/5/">
-    <meta name="twitter:description" content="mitt Tiny 200b functional event emitter / pubsub. Sweet little implementation of pubsub patter, uses flow internally and provides the below &hellip;">
+    <meta name="twitter:description" content="nickjs Headless browser automation library nickjs Modern, simple &amp; powerful browser automation library. Works on all dynamic sites.
+async-await &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/5/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="mitt Tiny 200b functional event emitter / pubsub. Sweet little implementation of pubsub patter, uses flow internally and provides the below &hellip;" />
+    <meta property="og:description" content="nickjs Headless browser automation library nickjs Modern, simple &amp; powerful browser automation library. Works on all dynamic sites.
+async-await &hellip;" />
 
     
 
@@ -67,6 +70,118 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/nickjs/">
+			
+				Nickjs</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-09-01T10:15:18+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/nickjs">nickjs</a></p>
+
+<blockquote><p>Headless browser automation library</p></blockquote>
+
+<p><code>nickjs</code> Modern, simple &amp; powerful browser automation library.</p>
+
+<ul>
+<li><p>Works on all dynamic sites.</p></li>
+<li><p>async-await ready.</p></li>
+<li><p>Multi-driver support.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install nickjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Nick</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;nickjs&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">nick</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Nick</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">;(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">const</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">nick</span><span class="p">.</span><span class="nx">newTab</span><span class="p">()</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;news.ycombinator.com&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">untilVisible</span><span class="p">(</span><span class="s2">&quot;#hnmain&quot;</span><span class="p">)</span> <span class="c1">// Make sure we have loaded the page</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">inject</span><span class="p">(</span><span class="s2">&quot;../injectables/jquery-3.0.0.min.js&quot;</span><span class="p">)</span> <span class="c1">// We&#39;re going to use jQuery to scrape</span>
+</span><span class='line'>  <span class="kr">const</span> <span class="nx">hackerNewsLinks</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">tab</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">((</span><span class="nx">arg</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// Here we&#39;re in the page context. It&#39;s like being in your browser&#39;s inspector tool</span>
+</span><span class='line'>      <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.athing&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">((</span><span class="nx">index</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+</span><span class='line'>              <span class="nx">title</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="nx">element</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.storylink&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+</span><span class='line'>              <span class="nx">url</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="nx">element</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.storylink&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+</span><span class='line'>          <span class="p">})</span>
+</span><span class='line'>      <span class="p">})</span>
+</span><span class='line'>      <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">hackerNewsLinks</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span><span class='line'><span class="p">})()</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Job done!&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">nick</span><span class="p">.</span><span class="nx">exit</span><span class="p">()</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Something</span> <span class="nx">went</span> <span class="nx">wrong</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">err</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">nick</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nickjs/nickjs.gif" alt="nickjs.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -765,84 +880,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/dom-scroll-into-view/">
-			
-				Dom-scroll-into-view</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-06-18T15:32:27+05:30" pubdate data-updated="true">Jun 18<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
-
-<blockquote><p>scroll node in contain to make node visible</p></blockquote>
-
-<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
-
-<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">scrollIntoView</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dom-scroll-into-view&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span><span class="nx">container</span><span class="p">,</span><span class="nx">config</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//config</span>
-</span><span class='line'>   <span class="p">{</span>
-</span><span class='line'>       <span class="nx">alignWithLeft</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">alignWithTop</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">allowHorizontalScroll</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">onlyScrollIfNeeded</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetTop</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetLeft</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetBottom</span><span class="p">,</span>
-</span><span class='line'>       <span class="nx">offsetRight</span>
-</span><span class='line'>   <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
 
 		
 		

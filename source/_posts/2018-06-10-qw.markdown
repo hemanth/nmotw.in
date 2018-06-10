@@ -1,0 +1,40 @@
+---
+layout: post
+title: "qw"
+date: 2018-06-10 16:10:46 +0530
+comments: true
+categories: util
+---
+
+[qw]()
+> Quoted word literals!
+
+qw use template strings to bring over this little common convenience from Perl-land.
+
+__Get it:__ `npm install qw`
+
+___Sample usage:__
+
+```js
+
+const qw = require("qw")
+
+qw `
+this
+shall 
+break 
+into 
+an array`
+
+// ^ ["this", "shall", "break", "into", "an", "array"]
+
+qw `also xpression: ${40+2}`
+
+// ^ ["also", "expression:", 42]
+
+```
+
+__GIT FTW!__
+
+
+![qw.gif](/images/qw/qw.gif)
