@@ -6,7 +6,7 @@ comments: true
 categories: util
 ---
 
-[qw]()
+[qw](https://www.npmjs.com/package/qw)
 > Quoted word literals!
 
 qw use template strings to bring over this little common convenience from Perl-land.
