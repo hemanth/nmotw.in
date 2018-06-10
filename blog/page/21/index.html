@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">   
+    <meta name="description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/21/">
-    <meta name="twitter:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;">
+    <meta name="twitter:description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/21/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="For all those lodash &lt;3'rs out there, here is a sleek node module that lets you to start your REPL with Lo-Dash required by default. n_ is that &hellip;" />
+    <meta property="og:description" content="Om nom nom. Super simple screen scrapper! Nom uses cheerio to provide the core jQuery API for grabbing and manipulating the response. Installation: &hellip;" />
 
     
 
@@ -67,6 +67,80 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/nom/">
+			
+				Nom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-24T19:37:33+05:30" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<blockquote><p>Om nom nom. Super simple screen scrapper!</p></blockquote>
+
+<p>Nom uses <a href="http://github.com/MatthewMueller/cheerio">cheerio</a> to provide the core jQuery API for grabbing and manipulating the response.</p>
+
+<p>Installation: <code>npm install nom</code> or <code>npm install -g nom</code> if you want to use it on the CLI.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>From script:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;nom&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">nom</span><span class="p">(</span><span class="s1">&#39;http://nmotw.in&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span> <span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Would log :</span>
+</span><span class='line'><span class="c1">// Node Module Of The Week  | NMOTW</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>From CLI:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>nom http://nmotw.in <span class="s1">&#39;title&#39;</span>
+</span><span class='line'>Node Module Of The Week  | NMOTW
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nom/nom.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mattmueller">Matt Mueller</a> for <a href="https://www.npmjs.org/package/nom">nom</a>.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1337,161 +1411,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/yosay/">
-			
-				Yosay</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-15T09:45:56+05:30" pubdate data-updated="true">May 15<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
-
-<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
-
-<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
-
-<p><strong>Example usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ echo "Yo! Mama. You can pipe." | yosay
-</span><span class='line'>
-</span><span class='line'>     _-----_
-</span><span class='line'>    |       |    .--------------------------.
-</span><span class='line'>    |--(o)--|    |  Yo! Mama. You can pipe. |
-</span><span class='line'>   `---------´   '--------------------------'
-</span><span class='line'>    ( _´U`_ )    
-</span><span class='line'>    /___A___\    
-</span><span class='line'>     |  ~  |     
-</span><span class='line'>   __'.___.'__   
-</span><span class='line'> ´   `  |° ´ Y ` </span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Node module of the week&quot;</span>
-</span><span class='line'>
-</span><span class='line'>     _-----_
-</span><span class='line'>    |       |    .--------------------------.
-</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Node module of the week |
-</span><span class='line'>   <span class="sb">`</span>---------´   <span class="s1">&#39;--------------------------&#39;</span>
-</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>
-</span><span class='line'>    /___A___<span class="se">\ </span>
-</span><span class='line'>     |  ~  |
-</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
-</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Yo! How&#39;s it going&quot;</span> --maxLength 4
-</span><span class='line'>
-</span><span class='line'>     _-----_
-</span><span class='line'>    |       |    .------.
-</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Yo! |
-</span><span class='line'>   <span class="sb">`</span>---------´   | How<span class="s1">&#39;s |</span>
-</span><span class='line'><span class="s1">    ( _´U`_ )    |  it  |</span>
-</span><span class='line'><span class="s1">    /___A___\    | going |</span>
-</span><span class='line'><span class="s1">     |  ~  |     &#39;</span>------<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">   __&#39;</span>.___.<span class="err">&#39;</span>__
-</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> If you want to use it in you node script, you could do:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'> var <span class="nv">yosay</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;yosay&#39;</span><span class="o">)</span>;
-</span><span class='line'>
-</span><span class='line'> console.log<span class="o">(</span> yosay<span class="o">(</span><span class="s2">&quot;Hope you enjoyed the session :)&quot;</span><span class="o">)</span> <span class="o">)</span>;
-</span><span class='line'>
-</span><span class='line'>      _-----_
-</span><span class='line'>    |       |    .--------------------------.
-</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |   Hope you enjoyed the   |
-</span><span class='line'>   <span class="sb">`</span>---------´   |        session :<span class="o">)</span>        |
-</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>    <span class="s1">&#39;--------------------------&#39;</span>
-</span><span class='line'>    /___A___<span class="se">\ </span>
-</span><span class='line'>     |  ~  |
-</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
-</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!:</strong></p>
-
-<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
-
-<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
 
 		
 		
