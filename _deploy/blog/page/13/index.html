@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;">   
+    <meta name="description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;">
+    <meta name="twitter:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;" />
+    <meta property="og:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;" />
 
     
 
@@ -67,6 +67,74 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ipt/">
+			
+				Ipt</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-18T21:37:50+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ipt">ipt</a></h1>
+
+<blockquote><p>The missing shell interactive workflow.</p></blockquote>
+
+<p><code>ipt</code> (pronounced iPipeTo) introduces the missing cli interactive workflow.</p>
+
+<p>It takes any kind of list as an input and uses that list to build an interactive interface to let you select an element from it.</p>
+
+<p>Stop manually dragging your mouse around to copy output data from a terminal, using the ipt workflow you can pipe data from a command and select what to copy to clipboard from a convenient visual menu.</p>
+
+<p>Selected data is also output to stdout allowing for easily composing various workflows - Just create your custom alias!</p>
+
+<p>P.S: Couldn't explain it better than than author!</p>
+
+<p><strong>GET IT:</strong> <code>npm install -g ipt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch -a | ipt | xargs git checkout
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git --no-pager log --oneline | ipt | cut -d <span class="s1">&#39; &#39;</span> -f 1 | xargs -o git rebase -i<span class="err">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Don't miss to read the wonderful <a href="https://www.npmjs.com/package/ipt#examples">examples</a>!</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ipt/ipt.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://github.com/ruyadorno">Ruy Adorno</a> for this cheeky module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -854,126 +922,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><img src="/images/as/as.gif" alt="" /></p>
 
 <p>Thanks for</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/dev-time/">
-			
-				Dev-time</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-12-10T21:10:13+05:30" pubdate data-updated="true">Dec 10<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://github.com/SamVerschueren/dev-time">dev-time</a></h1>
-
-<blockquote><p>Get the current local time of a GitHub user.</p></blockquote>
-
-<p>Ever wanted to ping someone on github and were wondering what time zone does the dev is on?</p>
-
-<p><code>dev-time</code> helps you with getting the local time of GitHub user.</p>
-
-<p>How does it do that? Well, it gets the latest commit of the user and get the time stamp from there and then find the time.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save dev-time</code></p>
-
-<p><strong>For CLI:</strong> <code>npm install --global dev-time-cli</code></p>
-
-<p><strong>Sample usage API:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">devTime</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dev-time&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">devTime</span><span class="p">(</span><span class="s1">&#39;SamVerschueren&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">time</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">time</span><span class="p">);</span>
-</span><span class='line'>    <span class="c1">//=&gt; &#39;2015-12-10T21:18:34+05:30&#39;</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>On CLI:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>dev-time --help
-</span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    <span class="nv">$ </span>dev-time &lt;user&gt; &lt;user2&gt; ...
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    -v, --verbose  Show UTC offset.
-</span><span class='line'>    --format       The moment format of the output. <span class="o">[</span>Default: HH:mm - D MMM. YYYY<span class="o">]</span>
-</span><span class='line'>    --token        The GitHub authentication token.
-</span><span class='line'>
-</span><span class='line'>  Examples
-</span><span class='line'>    <span class="nv">$ </span>dev-time SamVerschueren
-</span><span class='line'>    19:47 - 8 Dec. 2015
-</span><span class='line'>
-</span><span class='line'>    <span class="nv">$ </span>dev-time SamVerschueren sindresorhus
-</span><span class='line'>    SamVerschueren
-</span><span class='line'>      19:47 - 8 Dec. 2015
-</span><span class='line'>    sindresorhus
-</span><span class='line'>      18:47 - 8 Dec. 2015
-</span><span class='line'>
-</span><span class='line'>    <span class="nv">$ </span>dev-time SamVerschueren -v
-</span><span class='line'>    19:47 - 8 Dec. 2015 - UTC+1
-</span><span class='line'>
-</span><span class='line'>    <span class="nv">$ </span>dev-time SamVerschueren --format DD-MM-YYYY
-</span><span class='line'>    07-12-2015
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dev-time/dev-time.gif" alt="dev-time" /></p>
 
 		
 		
