@@ -4,13 +4,80 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-06-10T17:48:31+05:30</updated>
+  <updated>2018-06-15T16:45:54+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[media-typer]]></title>
+    <link href="http://nmotw.in/media-typer/"/>
+    <updated>2018-06-15T16:35:15+05:30</updated>
+    <id>http://nmotw.in/media-typer</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/media-typer">media-typer</a></h1>
+
+<blockquote><p>RFC 6838 media type parser.</p></blockquote>
+
+<p><code>media-typer</code> helps in parsing and formatting media type.</p>
+
+<p><strong>Get it:</strong> <code>npm install media-typer</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">typer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;media-typer&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">typer</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;image/svg+xml; charset=utf-8&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ type: &#39;image&#39;,</span>
+</span><span class='line'><span class="cm">  subtype: &#39;svg&#39;,</span>
+</span><span class='line'><span class="cm">  suffix: &#39;xml&#39;,</span>
+</span><span class='line'><span class="cm">  parameters: { charset: &#39;utf-8&#39; } </span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">typer</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="nx">subtype</span><span class="o">:</span> <span class="s1">&#39;svg&#39;</span><span class="p">,</span> <span class="nx">suffix</span><span class="o">:</span> <span class="s1">&#39;xml&#39;</span><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ^ &#39;image/svg+xml&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">typer</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* ^ Parse the `content-type` header from the given req.</span>
+</span><span class='line'><span class="cm"> Short-cut for typer.parse(req.headers[&#39;content-type&#39;])*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/media-typer/media-typer.gif" alt="media-typer" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[qw]]></title>
@@ -1099,73 +1166,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/graphql-request/graphql-request.gif" alt="graphql-request.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[bytes]]></title>
-    <link href="http://nmotw.in/bytes/"/>
-    <updated>2018-01-28T22:24:12+05:30</updated>
-    <id>http://nmotw.in/bytes</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/bytes">bytes</a></h1>
-
-<blockquote><p>parse a string bytes &lt;=> bytes</p></blockquote>
-
-<p><code>bytes</code> is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and vice-versa.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save bytes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// output: &#39;1KB&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// output: &#39;1000B&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">{</span><span class="nx">thousandsSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;1 000B&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mf">1.7</span><span class="p">,</span> <span class="p">{</span><span class="nx">decimalPlaces</span><span class="o">:</span> <span class="mi">0</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;2KB&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="p">{</span><span class="nx">unitSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;1 KB&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Supported units and abbreviations:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">b</span> <span class="k">for</span> <span class="nx">bytes</span>
-</span><span class='line'><span class="nx">kb</span> <span class="k">for</span> <span class="nx">kilobytes</span>
-</span><span class='line'><span class="nx">mb</span> <span class="k">for</span> <span class="nx">megabytes</span>
-</span><span class='line'><span class="nx">gb</span> <span class="k">for</span> <span class="nx">gigabytes</span>
-</span><span class='line'><span class="nx">tb</span> <span class="k">for</span> <span class="nx">terabytes</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/bytes/bytes.gif" alt="bytes.gif" /></p>
 ]]></content>
   </entry>
   
