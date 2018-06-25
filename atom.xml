@@ -4,13 +4,73 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-06-15T16:45:54+05:30</updated>
+  <updated>2018-06-25T10:18:32+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ent]]></title>
+    <link href="http://nmotw.in/ent/"/>
+    <updated>2018-06-24T10:11:29+05:30</updated>
+    <id>http://nmotw.in/ent</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ent">ent</a></h1>
+
+<blockquote><p>Encode and decode HTML entities.</p></blockquote>
+
+<p><code>ent</code> helps in encoding and ecoding HTML entities.</p>
+
+<p><strong>Get it:</strong> <code>npm install ent</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ent</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="s1">&#39;&lt;span&gt;©moo&lt;/span&gt;&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ent</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="s1">&#39;&amp;pi; &amp;amp; &amp;rho;&#39;</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&amp;</span><span class="err">#</span><span class="mi">60</span><span class="p">;</span><span class="nx">span</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">62</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">169</span><span class="p">;</span><span class="nx">moo</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">60</span><span class="p">;</span><span class="err">/span&amp;#62;</span>
+</span><span class='line'><span class="err">π</span> <span class="o">&amp;</span> <span class="err">ρ</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">encode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/encode&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// ^ Escape unsafe characters in str with html entities.</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">decode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/decode&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// ^ Convert html entities in str back to raw text.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/ent/ent.gif" alt="ent" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[media-typer]]></title>
@@ -1126,46 +1186,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/thanks/thanks.gif" alt="thanks.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[graphql-request]]></title>
-    <link href="http://nmotw.in/graphql-request/"/>
-    <updated>2018-02-03T22:46:29+05:30</updated>
-    <id>http://nmotw.in/graphql-request</id>
-    <content type="html"><![CDATA[<h1><a href="">graphql-request</a></h1>
-
-<blockquote><p>Minimal GraphQL client.</p></blockquote>
-
-<p><code>graphql-request</code> is a minimal GraphQL promise based client. It's perfect for small scripts or simple apps, it doesn't have a built-in cache and has no integrations for frontend frameworks.</p>
-
-<p><strong>Get it:</strong> <code>npm install graphql-request</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">request</span><span class="p">,</span> <span class="nx">GraphQLClient</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;graphql-request&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Run GraphQL queries/mutations using a static function</span>
-</span><span class='line'><span class="nx">request</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ... or create a GraphQL client instance to send requests</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GraphQLClient</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">,</span> <span class="p">{</span> <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">})</span>
-</span><span class='line'><span class="nx">client</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">variables</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/graphql-request/graphql-request.gif" alt="graphql-request.gif" /></p>
 ]]></content>
   </entry>
   

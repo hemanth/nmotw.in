@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dev-time Get the current local time of a GitHub user. Ever wanted to ping someone on github and were wondering what time zone does the dev is on? &hellip;">   
+    <meta name="description" content="as Convert easily, back and forth between array and object. A sweet and simple util that help you to convert array to object and vise versa, it also &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/14/">
-    <meta name="twitter:description" content="dev-time Get the current local time of a GitHub user. Ever wanted to ping someone on github and were wondering what time zone does the dev is on? &hellip;">
+    <meta name="twitter:description" content="as Convert easily, back and forth between array and object. A sweet and simple util that help you to convert array to object and vise versa, it also &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/14/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dev-time Get the current local time of a GitHub user. Ever wanted to ping someone on github and were wondering what time zone does the dev is on? &hellip;" />
+    <meta property="og:description" content="as Convert easily, back and forth between array and object. A sweet and simple util that help you to convert array to object and vise versa, it also &hellip;" />
 
     
 
@@ -67,6 +67,95 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/as/">
+			
+				As</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-17T22:04:55+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/as">as</a></h1>
+
+<blockquote><p>Convert easily, back and forth between array and object.</p></blockquote>
+
+<p>A sweet and simple util that help you to convert array to object and vise versa, it also:</p>
+
+<ul>
+<li><p>Brings all functional goodness of arrays to objects.</p></li>
+<li><p>Brings the flexibility of objects to arrays.</p></li>
+<li><p>Works well with a functional programming library.</p></li>
+</ul>
+
+
+<p><strong>Get it</strong>: <code>npm install --save as</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">asArray</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;as/array&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">asArray</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="c1">// [ {key: &quot;a&quot;, value: 1} </span>
+</span><span class='line'><span class="c1">// , {key: &quot;b&quot;, value: 2} </span>
+</span><span class='line'><span class="c1">// ] </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">asObject</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;as/object&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">asObject</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">[</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
+</span><span class='line'>  <span class="p">,</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
+</span><span class='line'>  <span class="p">]);</span>
+</span><span class='line'><span class="c1">// {a: 1, b: 2} </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/as/as.gif" alt="" /></p>
+
+<p>Thanks for</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -882,90 +971,6 @@ hide(obj)
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/svgo/svgo.gif" alt="svgo.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/instapromise/">
-			
-				Instapromise</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-10-08T17:45:41+05:30" pubdate data-updated="true">Oct 8<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/instapromise">instapromise</a></h1>
-
-<blockquote><p>Promisify with <code>.promise</code></p></blockquote>
-
-<p><code>instapromise</code> lets you promisify node-style asynchronous functions by putting a <code>.promise</code> after them or after the object for methods.</p>
-
-<p>It's a part of <a href="http://exponentjs.com/">exponent</a> and this module is influenced from <a href="https://www.npmjs.com/package/fibrous">fibrous</a>.</p>
-
-<p>When one of the maintainers of <code>instapromise</code> was questioned about why the code was in coffeescript :</p>
-
-<p>There’s basically two reasons for that:</p>
-
-<ul>
-<li><p>It’s based on some of the work the people who made fibrous did and they wrote their stuff in coffeescript</p></li>
-<li><p>I used to write a bunch of coffeescript before babel made it reasonable to write ES7+ stuff</p></li>
-<li><p>I wrote it back then, its pretty stable now.</p></li>
-<li><p>I haven’t made any changes to it in months so I don’t think it should be necessary to modify the source too much.</p></li>
-<li><p>Also I do like the way that its commented fairly well.</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save instapromise</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="err">‘</span><span class="nx">instapromise</span><span class="err">’</span><span class="p">);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">someObject</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">someMethodThatTakesANodeStyleCallback</span><span class="p">(</span><span class="err">‘</span><span class="nx">but</span> <span class="nx">not</span> <span class="nx">anymore</span><span class="err">’</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Basically, <code>instapromise</code> is one of it's kind a module that is cheeky, tiny and takes a diffrenet apporach on promisifying async functions,
-you need to just <code>require('instapromise')</code> and then you could just use a <code>.promise</code>!</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;instapromise&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">promise</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;/tmp/hello&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">p</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: The original function is available as a property on the promise-generating function <code>.___instapromiseOriginalFunction___</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/instapromise/instapromise.gif" alt="instapromise" /></p>
-
-<p>Thanks to <a href="https://twitter.com/JI">James Ide</a> and <a href="https://twitter.com/ccheever">Charlie Cheever</a> for instapromise!</p>
 
 		
 		
