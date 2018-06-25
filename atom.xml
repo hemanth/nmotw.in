@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-06-25T10:18:32+05:30</updated>
+  <updated>2018-06-25T10:20:48+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -54,12 +54,10 @@
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent&#39;</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'><span class="kr">const</span> <span class="nx">encode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/encode&#39;</span><span class="p">);</span>
 </span><span class='line'><span class="c1">// ^ Escape unsafe characters in str with html entities.</span>
-</span><span class='line'>
 </span><span class='line'>
 </span><span class='line'><span class="kr">const</span> <span class="nx">decode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/decode&#39;</span><span class="p">);</span>
 </span><span class='line'><span class="c1">// ^ Convert html entities in str back to raw text.</span>
