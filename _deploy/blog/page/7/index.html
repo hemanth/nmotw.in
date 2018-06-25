@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;">   
+    <meta name="description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/7/">
-    <meta name="twitter:description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;">
+    <meta name="twitter:description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/7/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;" />
+    <meta property="og:description" content="psl domain name parser based on the Public Suffix List. psl parser uses The Public Suffix List to parse and validate domain names. Get it: npm &hellip;" />
 
     
 
@@ -67,6 +67,91 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/psl/">
+			
+				Psl</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-21T14:49:00+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/psl">psl</a></h1>
+
+<blockquote><p>domain name parser based on the Public Suffix List.</p></blockquote>
+
+<p><code>psl</code> parser uses <a href="https://www.npmjs.com/package/psl">The Public Suffix List</a> to parse and validate domain names.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save psl</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">psl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;psl&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;www.nmotw.in&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{</span>
+</span><span class='line'><span class="cm">    domain: &quot;nmotw.in&quot;</span>
+</span><span class='line'><span class="cm">    input: &quot;www.nmotw.in&quot;</span>
+</span><span class='line'><span class="cm">    listed: true</span>
+</span><span class='line'><span class="cm">    sld: &quot;nmotw&quot;</span>
+</span><span class='line'><span class="cm">    subdomain: &quot;www&quot;</span>
+</span><span class='line'><span class="cm">    tld: &quot;in&quot;</span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;www.食狮.公司.cn&#39;</span><span class="p">);</span>  <span class="c1">// &quot;食狮.公司.cn&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="s1">&#39;1.www.google.co.uk&#39;</span><span class="p">));</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">psl</span><span class="p">.</span><span class="nx">isValid</span><span class="p">(</span><span class="s1">&#39;co.uk&#39;</span><span class="p">));</span> <span class="c1">// false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/psl/psl.gif" alt="psl" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -956,101 +1041,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/most/most.js.gif" alt="most.js" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/common-tags/">
-			
-				Common-tags</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-02-10T19:54:05+05:30" pubdate data-updated="true">Feb 10<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
-
-<blockquote><p>Common utility template tags for ES2015</p></blockquote>
-
-<p>🔖 A set of well-tested, commonly used template literal tag functions for use in ES2015+.</p>
-
-<p>🌟 Plus some extra goodies for easily making your own tags.</p>
-
-<p>Provides the below almost self explanatory functions:</p>
-
-<ul>
-<li>TemplateTag</li>
-<li>codeBlock</li>
-<li>commaLists</li>
-<li>commaListsAnd</li>
-<li>commaListsOr</li>
-<li>html</li>
-<li>inlineArrayTransformer</li>
-<li>inlineLists</li>
-<li>oneLine</li>
-<li>oneLineCommaLists</li>
-<li>oneLineCommaListsAnd</li>
-<li>oneLineCommaListsOr</li>
-<li>oneLineInlineLists</li>
-<li>oneLineTrim</li>
-<li>removeNonPrintingValuesTransformer</li>
-<li>replaceResultTransformer</li>
-<li>replaceSubstitutionTransformer</li>
-<li>safeHtml</li>
-<li>source</li>
-<li>splitStringTransformer</li>
-<li>stripIndent</li>
-<li>stripIndentTransformer</li>
-<li>stripIndents</li>
-<li>trimResultTransformer</li>
-</ul>
-
-
-<p><strong>GET IT:</strong> <code>npm install --save common-tags</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">oneLine</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;common-tags&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">oneLine</span><span class="err">`</span>
-</span><span class='line'>  <span class="nx">foo</span>
-</span><span class='line'>  <span class="nx">bar</span>
-</span><span class='line'>  <span class="nx">baz</span>
-</span><span class='line'><span class="err">`</span><span class="p">)</span>
-</span><span class='line'><span class="c1">// &quot;foo bar baz&quot; </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/common-tags/common-tags.gif" alt="common-tags" /></p>
 
 		
 		

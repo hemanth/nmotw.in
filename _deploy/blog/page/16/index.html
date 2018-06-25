@@ -7,8 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
-Doesn' &hellip;">   
+    <meta name="description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
+which provides raw &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +16,16 @@ Doesn' &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
-Doesn' &hellip;">
+    <meta name="twitter:description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
+which provides raw &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
-Doesn' &hellip;" />
+    <meta property="og:description" content="caniuse-cmd caniuse.com on CLI! caniuse-cmd brings the power of caniuse on to the command line, it makes use of caniuse-db module
+which provides raw &hellip;" />
 
     
 
@@ -70,6 +70,125 @@ Doesn' &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/caniuse-cmd/">
+			
+				Caniuse-cmd</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-30T16:02:22+05:30" pubdate data-updated="true">Jul 30<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://github.com/sgentle/caniuse-cmd">caniuse-cmd</a></h1>
+
+<blockquote><p><code>caniuse.com</code> on CLI!</p></blockquote>
+
+<p><code>caniuse-cmd</code> brings the power of <a href="http://caniuse.com">caniuse</a> on to the command line, it makes use of <a href="https://www.npmjs.com/package/caniuse-db">caniuse-db</a> module
+which provides raw browser/feature support data for the same.</p>
+
+<p><strong>Install it:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install --global caniuse-cmd
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw&gt; caniuse webrtc --short
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short -a
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrv
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  Firefox ✘ 2+ ✔ 22+ᵖ Chrome ✘ 4+ ✔ 23+ᵖ Safari ✘  Opera ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>  IE ✘  Edge ✘  FF ✘ 2+ ✔ 22+ᵖ Chr. ✘ 4+ ✔ 23+ᵖ Saf. ✘  Op. ✘ 9+ ✔ 18+ᵖ
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --short --abbrev --browser ff
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0%
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>nmotw&gt; caniuse webrtc --long
+</span><span class='line'>WebRTC Peer-to-peer connections ✔ 55.36% ◒ 0% <span class="o">[</span>W3C Working Draft<span class="o">]</span>
+</span><span class='line'>  Method of allowing two users to communicate directly, browser to browser using the RTCPeerConnection API.
+</span><span class='line'>  <span class="c">#JSAPI</span>
+</span><span class='line'>
+</span><span class='line'>  IE ✘
+</span><span class='line'>  Edge ✘
+</span><span class='line'>  Firefox ✘ 2+ ✔ 22+ᵖ
+</span><span class='line'>  Chrome ✘ 4+ ✔ 23+ᵖ
+</span><span class='line'>  Safari ✘
+</span><span class='line'>  Opera ✘ 9+ ✔ 18+ᵖ
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Do cehckout the CLI <a href="https://github.com/sgentle/caniuse-cmd#does-it-have-lots-of-command-line-options">flags</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/caniuse-cmd/caniuse-cmd.gif" alt="caniuse-cmd.gif" /></p>
+
+<p>Thanks to <a href="https://github.com/sgentle">Sam Gentle</a> for bringing this to the CLI.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -850,64 +969,6 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 
 
 <p>_</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/function-plot/">
-			
-				Function-plot</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-05-21T19:21:06+05:30" pubdate data-updated="true">May 21<span>st</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/function-plot/">function-plot</a></h1>
-
-<blockquote><p>A simple 2d function plotter powered by d3</p></blockquote>
-
-<p>function-plot helps to render functions with little configuration think of it like a util that would help you to render something like what Google does. <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;es_th=1&amp;ie=UTF-8#q=y+%3D+x+%5E+2">y = x * x</a></p>
-
-<p>The library currently supports interactive line charts and scatterplots, whenever the graph scale is modified the function is evaluated again with
-the new bounds, result: infinite graphs!</p>
-
-<p><strong>Get it</strong> : <code>npm install --save function-plot</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">d3</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">functionPlot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-plot&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">functionPlot</span><span class="p">({</span> <span class="cm">/*Pass in the options*/</span> <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Check out the <a href="https://github.com/maurizzzio/function-plot#instance--functionplotoptions">options</a>!</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/function-plot/function-plot.gif" alt="function-plot" /></p>
 
 		
 		
