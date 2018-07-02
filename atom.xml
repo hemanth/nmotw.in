@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-07-02T20:53:06+05:30</updated>
+  <updated>2018-07-02T20:55:01+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/error-stack-parser/"/>
     <updated>2018-07-01T20:42:55+05:30</updated>
     <id>http://nmotw.in/error-stack-parser</id>
-    <content type="html"><![CDATA[<p><a href="https://npm.im/error-stack-parser">error-stack-parser</a></p>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
 
 <blockquote><p>Simple, cross-browser Error parser.</p></blockquote>
 
