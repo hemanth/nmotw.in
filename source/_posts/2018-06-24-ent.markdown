@@ -1,0 +1,42 @@
+---
+layout: post
+title: "ent"
+date: 2018-06-24 10:11:29 +0530
+comments: true
+categories: util 
+---
+
+#[ent](https://www.npmjs.com/package/ent)
+> Encode and decode HTML entities.
+
+`ent` helps in encoding and ecoding HTML entities.
+
+__Get it:__ `npm install ent`
+
+__Sample usage:__
+
+
+```js
+const ent = require('ent');
+console.log(ent.encode('<span>©moo</span>'))
+console.log(ent.decode('&pi; &amp; &rho;'));
+```
+
+```
+&#60;span&#62;&#169;moo&#60;/span&#62;
+π & ρ
+```
+
+```js
+const ent = require('ent');
+
+const encode = require('ent/encode');
+// ^ Escape unsafe characters in str with html entities.
+
+const decode = require('ent/decode');
+// ^ Convert html entities in str back to raw text.
+```
+
+__GIF FTW!__
+
+![ent](/images/ent/ent.gif)
