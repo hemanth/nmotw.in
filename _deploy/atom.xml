@@ -4,13 +4,85 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-06-25T10:20:48+05:30</updated>
+  <updated>2018-07-02T20:55:01+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[error-stack-parser]]></title>
+    <link href="http://nmotw.in/error-stack-parser/"/>
+    <updated>2018-07-01T20:42:55+05:30</updated>
+    <id>http://nmotw.in/error-stack-parser</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
+
+<blockquote><p>Simple, cross-browser Error parser.</p></blockquote>
+
+<p><code>error-stack-parser</code> library parses and extracts function names, URLs, line numbers, and column numbers from the given Error's stack as an Array of StackFrames.</p>
+
+<p><strong>Get it:</strong> <code>npm install error-stack-parser</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ErrorStackParser</span> <span class="o">=</span> <span class="nx">rquire</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">error</span><span class="o">-</span><span class="nx">stack</span><span class="o">-</span><span class="nx">parser</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ErrorStackParser</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;BOOM&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">=&gt; [</span>
+</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;foo&#39;, args: [], fileName: &#39;path/to/file.js&#39;, lineNumber: 35, columnNumber: 79, isNative: false, isEval: false}),</span>
+</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;Bar&#39;, fileName: &#39;https://cdn.somewherefast.com/utils.min.js&#39;, lineNumber: 1, columnNumber: 832, isNative: false, isEval: false, isConstructor: true}),</span>
+</span><span class='line'><span class="cm">        StackFrame(... and so on ...)</span>
+</span><span class='line'><span class="cm">   ]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">ErrorStackParer</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">[ &#39;parse&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;extractLocation&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseV8OrIE&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseFFOrSafari&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera9&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera10&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera11&#39; ]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/error-stack-parser/error-stack-parser.gif" alt="error-stack-parser" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ent]]></title>
@@ -1134,56 +1206,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/randexp/randexp.gif" alt="randexp.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[thanks]]></title>
-    <link href="http://nmotw.in/thanks/"/>
-    <updated>2018-02-09T17:04:21+05:30</updated>
-    <id>http://nmotw.in/thanks</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/thanks">thanks</a></h1>
-
-<blockquote><p>🙌 Give thanks to the open source maintainers you depend on! ✨</p></blockquote>
-
-<p><code>thanks</code> picks up the "nearest" <code>package.json</code> / <code>node_modules</code> folder and fetch all the mainterners who are seeking donation and lists them all in a neat table with the donation URL.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g thanks</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>thanks --help
-</span><span class='line'>
-</span><span class='line'>thanks - 🙌 Give thanks to the open <span class="nb">source </span>maintainers you depend on! ✨
-</span><span class='line'>
-</span><span class='line'>Usage:
-</span><span class='line'>    thanks &lt;flags&gt; <span class="o">[</span>CWD<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>    If CWD is omitted, <span class="k">then </span>the current working directory is used. The <span class="s2">&quot;nearest&quot;</span>
-</span><span class='line'>    package.json / node_modules folder will be used.
-</span><span class='line'>
-</span><span class='line'>Flags:
-</span><span class='line'>    -v, --version   Show current version
-</span><span class='line'>    -h, --help      Show usage information
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/thanks/thanks.gif" alt="thanks.gif" /></p>
 ]]></content>
   </entry>
   
