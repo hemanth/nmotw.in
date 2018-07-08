@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="email-prompt CLI email prompt featuring autocompletion and validation. email-prompt Powers 𝚫now --login and provides a nice promised based API for &hellip;">   
+    <meta name="description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/9/">
-    <meta name="twitter:description" content="email-prompt CLI email prompt featuring autocompletion and validation. email-prompt Powers 𝚫now --login and provides a nice promised based API for &hellip;">
+    <meta name="twitter:description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/9/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="email-prompt CLI email prompt featuring autocompletion and validation. email-prompt Powers 𝚫now --login and provides a nice promised based API for &hellip;" />
+    <meta property="og:description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;" />
 
     
 
@@ -67,6 +67,90 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/image-size/">
+			
+				Image-size</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-15T21:28:47+05:30" pubdate data-updated="true">Dec 15<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/image-size">image-size</a></h1>
+
+<blockquote><p>get dimensions of any image file</p></blockquote>
+
+<p><code>image-size</code> maybe call it <code>image-dimensions</code>? Anyway it's a sweet module that does one thing and does it right!</p>
+
+<p><strong>Supported image types:</strong></p>
+
+<ul>
+<li>BMP</li>
+<li>GIF</li>
+<li>JPEG</li>
+<li>PNG</li>
+<li>PSD</li>
+<li>TIFF</li>
+<li>WebP</li>
+<li>SVG</li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install image-size --save</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sync:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">sizeOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;image-size&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">dimensions</span> <span class="o">=</span> <span class="nx">sizeOf</span><span class="p">(</span><span class="s1">&#39;images/funny-cats.png&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Async:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">sizeOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;image-size&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">sizeOf</span><span class="p">(</span><span class="s1">&#39;images/funny-cats.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/image-size/image-size.gif" alt="image-size" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -840,78 +924,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/resize-observer-polyfill/">
-			
-				Resize-observer-polyfill</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-10-06T22:36:53+05:30" pubdate data-updated="true">Oct 6<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">resize-observer-polyfill</a></h1>
-
-<blockquote><p>A polyfill for Resize Observer API.</p></blockquote>
-
-<p>Implements event based tracking of changes in the dimensions of elements.</p>
-
-<p>Uses MutationsObserver and falls back to an infinite dirty checking cycle if the first one is not supported.</p>
-
-<p>Handles long running CSS transitions/animations, attributes and nodes mutations along with changes made by :hover pseudo-class (optional).</p>
-
-<p>Compliant with the <a href="http://rawgit.com/WICG/ResizeObserver/master/index.html">spec</a>.</p>
-
-<p>Doesn't contain any publicly available methods except for those described in the spec.</p>
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">npm</span> <span class="nx">install</span> <span class="o">--</span><span class="nx">save</span> <span class="nx">resize</span><span class="o">-</span><span class="nx">observer</span><span class="o">-</span><span class="nx">polyfill</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">ResizeObserver</span> <span class="nx">from</span> <span class="s1">&#39;resize-observer-polyfill&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">observer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ResizeObserver</span><span class="p">((</span><span class="nx">entries</span><span class="p">,</span> <span class="nx">observer</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/resize-observer-polyfill/resize-observer-polyfill.gif" alt="resize-observer-polyfill" /></p>
-
-<p>P.S: Checkout the <a href="http://que-etc.github.io/resize-observer-polyfill">Live demo</a>.</p>
 
 		
 		
