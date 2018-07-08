@@ -7,11 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
-Comments.
-Hidden elements.
-Default or non-optimal values.
-Other stuff that can be &hellip;">   
+    <meta name="description" content="hide-secrets hide certain restricted fields whiling logging objects. This module obfuscated any of password, pass, token, auth, secret or passphrase &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -19,22 +15,14 @@ Other stuff that can be &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
-Comments.
-Hidden elements.
-Default or non-optimal values.
-Other stuff that can be &hellip;">
+    <meta name="twitter:description" content="hide-secrets hide certain restricted fields whiling logging objects. This module obfuscated any of password, pass, token, auth, secret or passphrase &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
-Comments.
-Hidden elements.
-Default or non-optimal values.
-Other stuff that can be &hellip;" />
+    <meta property="og:description" content="hide-secrets hide certain restricted fields whiling logging objects. This module obfuscated any of password, pass, token, auth, secret or passphrase &hellip;" />
 
     
 
@@ -79,6 +67,72 @@ Other stuff that can be &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/hide-secrets/">
+			
+				Hide-secrets</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-22T19:39:43+05:30" pubdate data-updated="true">Oct 22<span>nd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<script src="https://embed.tonicdev.com" data-element-id="hide-secrets"></script>
+
+
+<h1><a href="https://www.npmjs.com/package/hide-secrets">hide-secrets</a></h1>
+
+<blockquote><p>hide certain restricted fields whiling logging objects.</p></blockquote>
+
+<p>This module obfuscated any of <code>password</code>, <code>pass</code>, <code>token</code>, <code>auth</code>, <code>secret</code> or <code>passphrase</code> attribute's value to <code>'[SECRET]'</code>.
+Very useful when logging an object that has sensitive data!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save hide-secrets</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<div id="hide-secrets">
+var hide = require('hide-secrets')
+ 
+var obj = {
+  innerObject: {
+    password: 'abc123',
+    email: 'xyz@nmotw.in',
+    token: 'my-secret-token'
+  },
+  auth: '' // empty strings are left empty. 
+}
+ 
+hide(obj)
+</div>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/hide-secrets/hide-secrets.gif" alt="hide-secrets" /></p>
+
+<p>Thanks to <a href="https://twitter.com/benjamincoe">Benjamin Coe</a> for helping us hide our secrets ;)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -927,73 +981,6 @@ helps us to know our intenet connection speed and ping with a beautiful UI.</p>
 <p><img src="/images/human-to-cron/human-to-cron.gif" alt="human-to-cron" /></p>
 
 <p>Thanks to <a href="https://github.com/rainder">Andrius Skerla</a> for this cheeky module!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/lightcards/">
-			
-				Lightcards</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-13T19:36:54+05:30" pubdate data-updated="true">Aug 13<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
-
-<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
-
-<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
-By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
-after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
-
-<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
-
-<p><strong>Simple usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>lightcards init <span class="o">&amp;&amp;</span> lightcards
-</span><span class='line'>
-</span><span class='line'>Reading vocabulary from vocabulary.txt... OK!
-</span><span class='line'>Generating flashcards... OK!
-</span><span class='line'>Compiling scripts... OK!
-</span><span class='line'>Starting <span class="nb">local </span>web server... OK!
-</span><span class='line'>
-</span><span class='line'>Start learning on http://localhost:3000
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
-
-<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
 
 		
 		

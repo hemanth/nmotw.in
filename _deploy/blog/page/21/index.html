@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;">   
+    <meta name="description" content="Only Return whitelisted properties of an object. Only will only return the properties of an object that we are intrested in. A simple and an &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/21/">
-    <meta name="twitter:description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;">
+    <meta name="twitter:description" content="Only Return whitelisted properties of an object. Only will only return the properties of an object that we are intrested in. A simple and an &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/21/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;" />
+    <meta property="og:description" content="Only Return whitelisted properties of an object. Only will only return the properties of an object that we are intrested in. A simple and an &hellip;" />
 
     
 
@@ -67,6 +67,129 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/only/">
+			
+				Only</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-21T06:24:47+05:30" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h2>Only</h2>
+
+<blockquote><p>Return whitelisted properties of an object.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/only">Only</a> will only return the properties of an object that we are intrested in.</p>
+
+<p>A simple and an effective module from <a href="http://tjholowaychuk.com/">Tj Holowaychuk </a>.</p>
+
+<p><strong>Install it:</strong> <code>npm install only</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Say we have a response from a mongo query which looks like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;tobi&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;holowaychuk&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;tobi@learnboost.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Out of which we are intrested on only <code>name</code> and <code>email</code>, so all we need to do is:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">let</span> <span class="nx">only</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;only&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;tobi&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;holowaychuk&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;tobi@learnboost.com&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">_id</span><span class="o">:</span> <span class="s1">&#39;12345&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">only</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="s1">&#39;name email&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ^ Would log { name: &#39;tobi&#39;, email: &#39;tobi@learnboost.com&#39; }</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">only</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="s1">&#39;name foo bar baz&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Smart enough to omit undefineds and logs { name: &#39;tobi&#39; }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The cool part being, the entire module is just ten lines and it reads:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">keys</span><span class="p">){</span>
+</span><span class='line'>  <span class="nx">obj</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;string&#39;</span> <span class="o">==</span> <span class="k">typeof</span> <span class="nx">keys</span><span class="p">)</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/ +/</span><span class="p">);</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ret</span><span class="p">,</span> <span class="nx">key</span><span class="p">){</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">ret</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span> <span class="p">{});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/only/only.gif" alt="only" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1320,125 +1443,6 @@ the method parses the given <code>str</code> and return milliseconds ;) well it 
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/psi/psi.gif" alt="psi" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/proxyquire/">
-			
-				Proxyquire</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-12T09:21:00+05:30" pubdate data-updated="true">Jun 12<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
-
-<p><a href="http://npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
-
-<p>Installing proxyquire: <code>npm install -D proxyquire</code></p>
-
-<p><strong>Example:</strong></p>
-
-<p>Say we a file <code>baz.js</code> under test and it looks like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">os</span><span class="p">.</span><span class="nx">freemem</span><span class="p">();</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It's evident that the return value of this function will never be a constant value.</p>
-
-<p>How do we test it then?</p>
-
-<p>Have a look at the test case:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Get some assertion helper.</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// First up we require proxyquire</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">proxyquire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;proxyquire&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// We make a mock of what we need.</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">osStub</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">freemem</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">617619456</span><span class="p">;</span> <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Now some magic ;)</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">freemem</span> <span class="o">=</span> <span class="nx">proxyquire</span><span class="p">(</span><span class="s2">&quot;./baz&quot;</span><span class="p">,{</span><span class="s1">&#39;os&#39;</span><span class="o">:</span><span class="nx">osStub</span><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should return the amount of free memory&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">freemem</span><span class="p">(),</span><span class="mi">6176197456</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That's it! The test case will be green now :)</p>
-
-<p>Proxyquire basically, <a href="https://github.com/thlorenz/proxyquire/blob/master/lib/proxyquire.js#L135">replaces</a> a module's require function.</p>
-
-<p>There are many other features like:</p>
-
-<ul>
-<li>'noCallThru',</li>
-<li>'callThru',</li>
-<li>'noPreserveCache',</li>
-<li>'preserveCache',</li>
-<li>'load'</li>
-</ul>
-
-
-<p>Please feel free to go through their extensive API <a href="https://github.com/thlorenz/proxyquire#api">DOC</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
-
-<p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
 
 		
 		
