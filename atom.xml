@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-07-15T16:10:55+05:30</updated>
+  <updated>2018-07-15T16:18:31+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,11 +17,11 @@
     <link href="http://nmotw.in/proxymise/"/>
     <updated>2018-07-15T15:52:27+05:30</updated>
     <id>http://nmotw.in/proxymise</id>
-    <content type="html"><![CDATA[<h1><a href="">proxymise</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
 
 <blockquote><p>Chainable Promise Proxy.</p></blockquote>
 
-<p><code>proxymise</code> makes cheeky use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">proxy</a> API and provides a high dose of syntax sugar for handling promises.</p>
+<p><code>proxymise</code> makes cheeky use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a> API and provides a high dose of syntax sugar in chaining promises.</p>
 
 <p><strong>Get it:</strong> <code>npm install proxymise</code></p>
 
