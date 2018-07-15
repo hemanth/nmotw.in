@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="reify Enable ECMAScript 2015 modules in Node today. No caveats. Full stop. Get it: npm install --save refiy Usage: npm install --save reify
-require &hellip;">   
+    <meta name="description" content="currency-symbol-map Lookup the currency symbol for a given currency code. Name says it all, this is tiny module that's helps one to get the symbol &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ require &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/11/">
-    <meta name="twitter:description" content="reify Enable ECMAScript 2015 modules in Node today. No caveats. Full stop. Get it: npm install --save refiy Usage: npm install --save reify
-require &hellip;">
+    <meta name="twitter:description" content="currency-symbol-map Lookup the currency symbol for a given currency code. Name says it all, this is tiny module that's helps one to get the symbol &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/11/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="reify Enable ECMAScript 2015 modules in Node today. No caveats. Full stop. Get it: npm install --save refiy Usage: npm install --save reify
-require &hellip;" />
+    <meta property="og:description" content="currency-symbol-map Lookup the currency symbol for a given currency code. Name says it all, this is tiny module that's helps one to get the symbol &hellip;" />
 
     
 
@@ -70,6 +67,70 @@ require &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/currency-symbol-map/">
+			
+				Currency-symbol-map</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-08-04T17:22:51+05:30" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/currency-symbol-map">currency-symbol-map</a></h1>
+
+<blockquote><p>Lookup the currency symbol for a given currency code.</p></blockquote>
+
+<p>Name says it all, this is tiny module that's helps one to get the symbol for a given currency or get the currency got given a symbol.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save currency-symbol-map</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">getSymbolFromCurrency</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;currency-symbol-map&#39;</span><span class="p">).</span><span class="nx">getSymbolFromCurrency</span><span class="p">;</span>
+</span><span class='line'><span class="nx">getSymbolFromCurrency</span><span class="p">(</span><span class="s1">&#39;USD&#39;</span><span class="p">);</span> <span class="c1">//=&gt; &#39;$&#39; </span>
+</span><span class='line'><span class="nx">getSymbolFromCurrency</span><span class="p">(</span><span class="s1">&#39;NOT A VALID CODE&#39;</span><span class="p">);</span> <span class="c1">//=&gt; undefined </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">getCurrencyFromSymbol</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;currency-symbol-map&#39;</span><span class="p">).</span><span class="nx">getCurrencyFromSymbol</span><span class="p">;</span>
+</span><span class='line'><span class="nx">getCurrencyFromSymbol</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">);</span> <span class="c1">//=&gt; &#39;USD&#39; </span>
+</span><span class='line'><span class="nx">getCurrencyFromSymbol</span><span class="p">(</span><span class="s1">&#39;NOT A VALID CODE&#39;</span><span class="p">);</span> <span class="c1">//=&gt; undefined </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/currency-symbol-map/curreny-symbol-map.gif" alt="currency-symbol-map" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -968,85 +1029,6 @@ that helps to print rainbow text on the terminal.</p>
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/kind-of/kind-of.gif" alt="kind-of" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/mediumcli/">
-			
-				Mediumcli</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-05-26T19:43:06+05:30" pubdate data-updated="true">May 26<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/mediumcli">mediumcli</a></h1>
-
-<blockquote><p>A CLI to Medium Stories.</p></blockquote>
-
-<p>A simple tool that helps you to read medium posts on your CLI.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g mediumcli</code></p>
-
-<p><strong>Sample usage:</strong> <code>medium [options] [command]</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Commands:
-</span><span class='line'>
-</span><span class='line'>top <span class="o">[</span>options<span class="o">]</span>         List Medium Top Stories
-</span><span class='line'><span class="nb">read</span> &lt;url&gt;            Read the story right in your terminal
-</span><span class='line'>open <span class="o">[</span>options<span class="o">]</span> &lt;url&gt;  Opens it in your browser
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>
-</span><span class='line'>-h, --help     output usage information
-</span><span class='line'>-V, --version  output the version number
-</span><span class='line'>
-</span><span class='line'>top <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>n, --number &lt;int&gt;<span class="s2">&quot;, &quot;</span>specify number of stories
-</span><span class='line'>
-</span><span class='line'>open <span class="o">[</span>options<span class="o">]</span> &lt;url&gt;
-</span><span class='line'>-a, --app &lt;application&gt;  specify app to open the url. Eg: firefox
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/mediumcli/mediumcli.gif" alt="mediumcli" /></p>
 
 		
 		
