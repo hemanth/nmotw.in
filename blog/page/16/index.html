@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;">   
+    <meta name="description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;">
+    <meta name="twitter:description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="lightcard Lightweight Chinese flashcards. lightcards is one of those lightweight, single purpose, fun modules! This helps you to make flash cards &hellip;" />
+    <meta property="og:description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;" />
 
     
 
@@ -67,6 +67,85 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/human-to-cron/">
+			
+				Human-to-cron</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-20T18:09:33+05:30" pubdate data-updated="true">Aug 20<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/human-to-cron">human-to-cron</a></h1>
+
+<blockquote><p>Converts human readable expression to a cron string!</p></blockquote>
+
+<p>If you can interpert <code>0 */1 * * *</code> as <code>each minute</code> then this module is not for you ;)</p>
+
+<p><code>human-to-cron</code> parsers the human readable expressions with the help of ES6 generators converts it into a <a href="https://en.wikipedia.org/wiki/Cron">cron</a> string.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save human-to-cron</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">humanToCron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;human-to-cron&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each minute&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */1 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; * */2 * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;each second&#39;</span><span class="p">)</span> <span class="c1">// =&gt; */1 * * * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each hour&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 */1 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each day&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 */1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each month&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */1 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once each 5 months&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 0 */5 *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 0 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;midnight each 2 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */2 0 * * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;once tuesday each 10 minutes&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 */10 * 1 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 * *</span>
+</span><span class='line'><span class="nx">humanToCron</span><span class="p">(</span><span class="s1">&#39;august friday 15:44&#39;</span><span class="p">)</span> <span class="c1">// =&gt; 0 44 15 4 7 *</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/human-to-cron/human-to-cron.gif" alt="human-to-cron" /></p>
+
+<p>Thanks to <a href="https://github.com/rainder">Andrius Skerla</a> for this cheeky module!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -864,135 +943,6 @@ combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtu
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/browser-repl/brwoser-repl.gif" alt="browser-repl" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/jscpd/">
-			
-				Jscpd</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-11T21:09:12+05:30" pubdate data-updated="true">Jun 11<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/jscpd">jscpd</a></h1>
-
-<blockquote><p>jscpd is a tool for detect copy/paste "design pattern" in programming source code.</p></blockquote>
-
-<p><a href="http://kucherenko.org/">Andrey Kucherenko's</a> <code>jscpd</code> is a smart tool that helps use to detect copy paste code!</p>
-
-<p>It supports the below langauges:</p>
-
-<ul>
-<li>JavaScript</li>
-<li>Java</li>
-<li>CoffeeScript</li>
-<li>TypeScript</li>
-<li>C++</li>
-<li>PHP</li>
-<li>C#</li>
-<li>Go</li>
-<li>Python</li>
-<li>Ruby</li>
-<li>C</li>
-<li>Less</li>
-<li>CSS</li>
-<li>SCSS</li>
-<li>Mixed HTML</li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install -g jscpd</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">jscpd</span> <span class="o">--</span><span class="nx">path</span> <span class="nx">my_project</span><span class="o">/</span> <span class="o">--</span><span class="nx">languages</span> <span class="nx">javascript</span><span class="p">,</span><span class="nx">coffee</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">jscpd</span> <span class="o">-</span><span class="nx">f</span> <span class="o">**</span><span class="cm">/*.js -e **/</span><span class="nx">node_modules</span><span class="cm">/**</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="cm">/*.min.js --output report.xml</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">jscpd --files **/</span><span class="o">*</span><span class="p">.</span><span class="nx">js</span> <span class="o">--</span><span class="nx">exclude</span> <span class="o">**</span><span class="err">/*.min.js --reporter json --output report.json</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you have a <code>.cpd.yml</code> config file in the <code>pwd</code> jscpd command, you will check code for duplicates according the config.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1">#.cpd.yaml</span>
-</span><span class='line'><span class="l-Scalar-Plain">path</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">fixtures/</span>
-</span><span class='line'><span class="l-Scalar-Plain">languages</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">javascript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">coffeescript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">typescript</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">php</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">python</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">css</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ruby</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">go</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">java</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;c++src&quot;</span>    <span class="c1"># c++ source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csrc</span>        <span class="c1"># c source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">csharp</span>      <span class="c1"># c# source</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">htmlmixed</span>   <span class="c1"># html mixed source like knockout.js templates</span>
-</span><span class='line'><span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.min.js&quot;</span>
-</span><span class='line'>  <span class="p-Indicator">-</span> <span class="s">&quot;**/*.mm.js&quot;</span>
-</span><span class='line'><span class="l-Scalar-Plain">reporter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">json</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/jscpd/jscpd.gif" alt="jscpd-demo" /></p>
 
 		
 		
