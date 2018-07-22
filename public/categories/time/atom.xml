@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/time/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-07-15T16:18:31+05:30</updated>
+  <updated>2018-07-22T15:19:28+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,90 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[time-stamp]]></title>
+    <link href="http://nmotw.in//github/time-stamp/"/>
+    <updated>2018-07-22T13:12:10+05:30</updated>
+    <id>http://nmotw.in//github/time-stamp</id>
+    <content type="html"><![CDATA[<h1><a href="">time-stamp</a></h1>
+
+<blockquote><p>Get a formatted timestamp.</p></blockquote>
+
+<p>How many times have you created time stamp in your code base?</p>
+
+<p><code>time-stamp</code> makes it easy to create them, this module revovles around the R.E -> <code>/(?=(YYYY|YY|MM|DD|HH|mm|ss|ms))\1([:\/]*)/;</code></p>
+
+<p><strong>Supported formats:</strong></p>
+
+<p><code>
+YYYY: full year (ex: 2018)
+MM: month (ex: 04)
+DD: day (ex: 01)
+HH: hours (ex: 12)
+mm: minutes (ex: 59)
+ss: seconds (ex: 09)
+ms: milliseconds (ex: 532)
+</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const timeStamp = require("time-stamp");</p>
+
+<p>timestamp();
+//=> 2018-07-23</p>
+
+<p>timestamp('YYYYMMDD');
+//=> 20180723</p>
+
+<p>timestamp('YYYYMMDD:ss');
+//=> 20180723:10</p>
+
+<p>timestamp('YYYY/MM/DD:mm:ss');
+//=> 2018/07/23:30:10</p>
+
+<p>timestamp('YYYY:MM:DD');
+//=> 2018:07:23</p>
+
+<p>timestamp('[YYYY:MM:DD]');
+//=> [2018:07:23]</p>
+
+<p>timestamp('YYYY/MM/DD');
+//=> 2018/07/23</p>
+
+<p>timestamp('YYYY:MM');
+//=> 2018:07</p>
+
+<p>timestamp('YYYY');
+//=> 2018</p>
+
+<p>timestamp('MM');
+//=> 07</p>
+
+<p>timestamp('DD');
+//=> 23</p>
+
+<p>timestamp('HH');
+//=> 21</p>
+
+<p>timestamp('mm');
+//=> 30</p>
+
+<p>timestamp('ss');
+//=> 10</p>
+
+<p>timestamp('ms');
+//=> 365</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/time-stamp/time-stamp.gif" alt="time-stamp" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tinytime]]></title>
