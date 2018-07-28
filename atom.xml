@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-07-28T15:19:25+05:30</updated>
+  <updated>2018-07-28T15:21:35+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/hiper/"/>
     <updated>2018-07-28T15:08:33+05:30</updated>
     <id>http://nmotw.in/hiper</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/hiper">hiper</a></p>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
 
 <blockquote><p>🚀 A statistical analysis tool for performance testing.</p></blockquote>
 
