@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-07-22T15:19:28+05:30</updated>
+  <updated>2018-07-28T15:15:01+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,128 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[hiper]]></title>
+    <link href="http://nmotw.in//github/hiper/"/>
+    <updated>2018-07-28T15:08:33+05:30</updated>
+    <id>http://nmotw.in//github/hiper</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/hiper">hiper</a></p>
+
+<blockquote><p>🚀 A statistical analysis tool for performance testing.</p></blockquote>
+
+<p><code>hiper</code> is short for  <em>Hi</em> <em>per</em>formance, makes use of <code>puppeteer</code> and gives us the below performance metrics.</p>
+
+<p><img src="http://7xt9n8.com2.z0.glb.clouddn.com/PerformanceTiming.png" alt="timing" /></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Key                            </th>
+<th align="left"> Value                                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> DNS lookup time                </td>
+<td align="left"> domainLookupEnd          - domainLookupStart |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> TCP connect time               </td>
+<td align="left"> connectEnd               - connectStart      |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> TTFB                           </td>
+<td align="left"> responseStart            - requestStart      |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Download time of the page      </td>
+<td align="left"> responseEnd              - responseStart     |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> After DOM Ready download time  </td>
+<td align="left"> domComplete              - domInteractive    |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> White screen time              </td>
+<td align="left"> domInteractive           - navigationStart   |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> DOM Ready time                 </td>
+<td align="left"> domContentLoadedEventEnd - navigationStart   |</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Load time                      </td>
+<td align="left"> loadEventEnd             - navigationStart   |</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>Get it:</strong> <code>npm install hiper</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+hiper --help</p>
+
+<p>Usage: hiper [options] [url]</p>
+
+<p>🚀 A statistical analysis tool for performance testing</p>
+
+<p>Options:</p>
+
+<p>   -v, --version                output the version number
+   -n, --count <n>              specified loading times (default: 20)
+   -c, --config <path>          load the configuration file
+   -u, --useragent <ua>         to set the useragent
+   -H, --headless [b]           whether to use headless mode (default: true)
+   -e, --executablePath <path>  use the specified chrome browser
+   --no-cache                   disable cache (default: false)
+   --no-javascript              disable javascript (default: false)
+   --no-online                  disable network (defalut: false)
+   -h, --help                   output usage information
+```</p>
+
+<p>```
+$ hiper nmotw.in</p>
+
+<hr />
+
+<p> | | | (<em>)</em> <strong>   </strong><em> _ __
+ | |</em>| | | '<em> \ / _ \ '__|
+ |  _  | | |</em>) |  <strong>/ |
+ |<em>| |</em>|_| .</strong>/ _<em>_|</em>|</p>
+
+<pre><code>     |_|
+</code></pre>
+
+<p>🚀 It takes 1.669 s to load <code>https://nmotw.in</code> 20 times</p>
+
+<p>  DNS lookup time                 1.00 ms
+  TCP connect time                126.00 ms
+  TTFB                            551.00 ms
+  Download time of the page       7.00 ms
+  After DOM Ready download time   558.00 ms
+  White screen time               699.00 ms
+  DOM Ready time                  936.00 ms
+  Load time                       1.26 s
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/hiper/hiper.gif" alt="hiper" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[cost-of-modules]]></title>
