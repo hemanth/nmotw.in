@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-07-28T15:15:01+05:30</updated>
+  <updated>2018-07-28T15:19:25+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -24,59 +24,16 @@
 
 <p><code>hiper</code> is short for  <em>Hi</em> <em>per</em>formance, makes use of <code>puppeteer</code> and gives us the below performance metrics.</p>
 
-<p><img src="http://7xt9n8.com2.z0.glb.clouddn.com/PerformanceTiming.png" alt="timing" /></p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="left"> Key                            </th>
-<th align="left"> Value                                        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="left"> DNS lookup time                </td>
-<td align="left"> domainLookupEnd          - domainLookupStart |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> TCP connect time               </td>
-<td align="left"> connectEnd               - connectStart      |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> TTFB                           </td>
-<td align="left"> responseStart            - requestStart      |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> Download time of the page      </td>
-<td align="left"> responseEnd              - responseStart     |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> After DOM Ready download time  </td>
-<td align="left"> domComplete              - domInteractive    |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> White screen time              </td>
-<td align="left"> domInteractive           - navigationStart   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> DOM Ready time                 </td>
-<td align="left"> domContentLoadedEventEnd - navigationStart   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> Load time                      </td>
-<td align="left"> loadEventEnd             - navigationStart   |</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>DNS lookup time</li>
+<li>TCP connect time</li>
+<li>TTFB</li>
+<li>Download time of the page</li>
+<li>After DOM Ready download time</li>
+<li>White screen time</li>
+<li>DOM Ready time</li>
+<li>Load time</li>
+</ul>
 
 
 <p><strong>Get it:</strong> <code>npm install hiper</code></p>
@@ -109,13 +66,22 @@ $ hiper nmotw.in</p>
 
 <hr />
 
-<p> | | | (<em>)</em> <strong>   </strong><em> _ __
- | |</em>| | | '<em> \ / _ \ '__|
- |  _  | | |</em>) |  <strong>/ |
- |<em>| |</em>|_| .</strong>/ _<em>_|</em>|</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>(<em>)</em> <strong>   </strong>_ _ __</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>|<em>* * * '</em> \ / _ \ '__|</li>
+<li>_  * * |<em>) *  __/ |
+|</em><em> |<em>|</em></em> .<strong>/ _</strong>|_|
 
-<pre><code>     |_|
-</code></pre>
+<pre><code> |_|
+</code></pre></li>
+</ul>
+
 
 <p>🚀 It takes 1.669 s to load <code>https://nmotw.in</code> 20 times</p>
 

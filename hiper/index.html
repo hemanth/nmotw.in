@@ -89,59 +89,16 @@
 
 <p><code>hiper</code> is short for  <em>Hi</em> <em>per</em>formance, makes use of <code>puppeteer</code> and gives us the below performance metrics.</p>
 
-<p><img src="http://7xt9n8.com2.z0.glb.clouddn.com/PerformanceTiming.png" alt="timing" /></p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="left"> Key                            </th>
-<th align="left"> Value                                        </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="left"> DNS lookup time                </td>
-<td align="left"> domainLookupEnd          - domainLookupStart |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> TCP connect time               </td>
-<td align="left"> connectEnd               - connectStart      |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> TTFB                           </td>
-<td align="left"> responseStart            - requestStart      |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> Download time of the page      </td>
-<td align="left"> responseEnd              - responseStart     |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> After DOM Ready download time  </td>
-<td align="left"> domComplete              - domInteractive    |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> White screen time              </td>
-<td align="left"> domInteractive           - navigationStart   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> DOM Ready time                 </td>
-<td align="left"> domContentLoadedEventEnd - navigationStart   |</td>
-</tr>
-<tr>
-<td></td>
-<td align="left"> Load time                      </td>
-<td align="left"> loadEventEnd             - navigationStart   |</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>DNS lookup time</li>
+<li>TCP connect time</li>
+<li>TTFB</li>
+<li>Download time of the page</li>
+<li>After DOM Ready download time</li>
+<li>White screen time</li>
+<li>DOM Ready time</li>
+<li>Load time</li>
+</ul>
 
 
 <p><strong>Get it:</strong> <code>npm install hiper</code></p>
@@ -215,10 +172,10 @@
 </span><span class='line'>
 </span><span class='line'>
 </span><span class='line'>  _   _ _
-</span><span class='line'> | | | <span class="o">(</span>_<span class="o">)</span>_ __   ___ _ __
-</span><span class='line'> | |_| | | <span class="s1">&#39;_ \ / _ \ &#39;</span>__|
-</span><span class='line'> |  _  | | |_<span class="o">)</span> |  __/ |
-</span><span class='line'> |_| |_|_| .__/ <span class="se">\_</span>__|_|
+</span><span class='line'> * * * <span class="o">(</span>_<span class="o">)</span>_ __   ___ _ __
+</span><span class='line'> * |_* * * <span class="s1">&#39;_ \ / _ \ &#39;</span>__|
+</span><span class='line'> *  _  * * |_<span class="o">)</span> *  __/ |
+</span><span class='line'> |_* |_|_* .__/ <span class="se">\_</span>__|_|
 </span><span class='line'>         |_|
 </span><span class='line'>
 </span><span class='line'>
