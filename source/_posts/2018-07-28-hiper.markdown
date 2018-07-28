@@ -1,0 +1,76 @@
+---
+layout: post
+title: "hiper"
+date: 2018-07-28 15:08:33 +0530
+comments: true
+categories: util perf
+---
+
+#[hiper](https://www.npmjs.com/package/hiper)
+> 🚀 A statistical analysis tool for performance testing.
+
+`hiper` is short for  *Hi* *per*formance, makes use of `puppeteer` and gives us the below performance metrics.
+
+* DNS lookup time                
+* TCP connect time               
+* TTFB                           
+* Download time of the page      
+* After DOM Ready download time  
+* White screen time              
+* DOM Ready time                 
+* Load time                      
+
+
+__Get it:__ `npm install hiper`
+
+__Sample usage:__
+
+```sh
+hiper --help
+
+Usage: hiper [options] [url]
+
+🚀 A statistical analysis tool for performance testing
+
+Options:
+
+   -v, --version                output the version number
+   -n, --count <n>              specified loading times (default: 20)
+   -c, --config <path>          load the configuration file
+   -u, --useragent <ua>         to set the useragent
+   -H, --headless [b]           whether to use headless mode (default: true)
+   -e, --executablePath <path>  use the specified chrome browser
+   --no-cache                   disable cache (default: false)
+   --no-javascript              disable javascript (default: false)
+   --no-online                  disable network (defalut: false)
+   -h, --help                   output usage information
+```
+
+```
+$ hiper nmotw.in
+
+
+  _   _ _
+ * * * (_)_ __   ___ _ __
+ * |_* * * '_ \ / _ \ '__|
+ *  _  * * |_) *  __/ |
+ |_* |_|_* .__/ \___|_|
+         |_|
+
+
+🚀 It takes 1.669 s to load `https://nmotw.in` 20 times
+
+
+  DNS lookup time                 1.00 ms
+  TCP connect time                126.00 ms
+  TTFB                            551.00 ms
+  Download time of the page       7.00 ms
+  After DOM Ready download time   558.00 ms
+  White screen time               699.00 ms
+  DOM Ready time                  936.00 ms
+  Load time                       1.26 s
+```
+
+__GIF FTW!__
+
+![hiper](/images/hiper/hiper.gif)
