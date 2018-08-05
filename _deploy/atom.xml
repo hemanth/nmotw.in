@@ -4,13 +4,62 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-07-28T15:21:35+05:30</updated>
+  <updated>2018-08-05T13:46:53+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pretty-error]]></title>
+    <link href="http://nmotw.in/pretty-error/"/>
+    <updated>2018-08-05T13:37:39+05:30</updated>
+    <id>http://nmotw.in/pretty-error</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
+
+<blockquote><p>errors with less clutter</p></blockquote>
+
+<p><code>pretty-error</code> turns error objects into something similar to an html document, and then uses <code>RenderKid</code> to render the document using simple html/css-like commands.</p>
+
+<p><strong>Get it:</strong> <code>npm install pretty-error</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">PrettyError</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pretty-error&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">pe</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PrettyError</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">renderedError</span> <span class="o">=</span> <span class="nx">pe</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Some error message&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">renderedError</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">doSomethingThatThrowsAnError</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pe</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/pretty-error/pretty-error.gif" alt="pretty-error" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hiper]]></title>
@@ -1324,86 +1373,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/prompts/prompts.gif" alt="prompts.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fkill]]></title>
-    <link href="http://nmotw.in/fkill/"/>
-    <updated>2018-03-18T09:01:19+05:30</updated>
-    <id>http://nmotw.in/fkill</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fkill">fkill</a></h1>
-
-<blockquote><p>Fabulously kill processes. Cross-platform.</p></blockquote>
-
-<p>You you have mostly used something like: <code>pgrep &lt;progress&gt;</code> <code>kill -9 &lt;pid&gt;</code> <code>pkill &lt;procees&gt;</code>, but <code>fkill</code> makes it fabulosusly easy to kill!</p>
-
-<p><strong>Get it:</strong> <code>npm install [-g] fkill[-cli]</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// API</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">fkill</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fkill&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fkill</span><span class="p">(</span><span class="mi">8080</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Killed process&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fkill</span><span class="p">(</span><span class="s1">&#39;Chrome&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">fkill</span><span class="p">(</span><span class="s1">&#39;:8080&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fkill</span><span class="p">([</span><span class="mi">1337</span><span class="p">,</span> <span class="s1">&#39;Chrome&#39;</span><span class="p">,</span> <span class="s1">&#39;:8080&#39;</span><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>```</p>
-
-<h1>cli</h1>
-
-<p>➜  ~ fkill --help</p>
-
-<p>  Fabulously kill processes. Cross-platform.</p>
-
-<p>  Usage</p>
-
-<pre><code>$ fkill [&lt;pid|name|:port&gt; …]
-</code></pre>
-
-<p>  Options</p>
-
-<pre><code>--force -f    Force kill
---verbose -v  Show process arguments
-</code></pre>
-
-<p>  Examples</p>
-
-<pre><code>$ fkill 1337
-$ fkill safari
-$ fkill :8080
-$ fkill 1337 safari :8080
-$ fkill
-</code></pre>
-
-<p>  To kill a port, prefix it with a colon. For example: :8080.</p>
-
-<p>  Run without arguments to use the interactive interface.
-  The process name is case insensitive.
-  ```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fkill/fkill.gif" alt="fkill.gif" /></p>
 ]]></content>
   </entry>
   
