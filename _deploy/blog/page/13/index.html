@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;">   
+    <meta name="description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;">
+    <meta name="twitter:description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;" />
+    <meta property="og:description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;" />
 
     
 
@@ -67,6 +67,93 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/mathjs/">
+			
+				Mathjs</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-07T19:22:08+05:30" pubdate data-updated="true">Apr 7<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/mathjs">mathjs</a></h1>
+
+<blockquote><p>Extensive math library with expression parser, big numbers, complex numbers, units, and matrices.</p></blockquote>
+
+<p><code>mathjs</code> provides you with 200+ util function to do you math!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save mathjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// functions and constants</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">e</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>            <span class="c1">// 2.718</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">atan2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="p">;</span>      <span class="c1">// 0.75</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>              <span class="c1">// 4</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>                    <span class="c1">// 2i</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">pow</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'>     <span class="c1">// [[7, 0], [0, 7]]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// expressions</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;1.2 * (2 + 4.5)&#39;</span><span class="p">);</span>     <span class="c1">// 7.8</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;5.08 cm to inch&#39;</span><span class="p">);</span>     <span class="c1">// 2 inch</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;sin(45 deg) ^ 2&#39;</span><span class="p">);</span>     <span class="c1">// 0.5</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;9 / 3 + 2i&#39;</span><span class="p">);</span>          <span class="c1">// 3 + 2i</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;det([-1, 2; 3, 1])&#39;</span><span class="p">);</span>  <span class="c1">// -7</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// chaining</span>
+</span><span class='line'><span class="nx">math</span><span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">done</span><span class="p">();</span> <span class="c1">// 14</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/mathjs/mathjs.gif" alt="mathjs" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -893,107 +980,6 @@ in order to be able to compose and sequence time-dependent effects using the gen
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/data.task/data.task.gif" alt="data.task" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/platform/">
-			
-				Platform</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-01-28T18:42:21+05:30" pubdate data-updated="true">Jan 28<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/platform">platform</a></h1>
-
-<blockquote><p>A platform detection library that works on nearly all JavaScript platforms.</p></blockquote>
-
-<p>This module provides the below platfrom based information:</p>
-
-<ul>
-<li>description</li>
-<li>layout</li>
-<li>manufacturer</li>
-<li>name</li>
-<li>prerelease</li>
-<li>product</li>
-<li>ua</li>
-<li>version</li>
-<li>os</li>
-</ul>
-
-
-<p>It can also <code>parse</code> an <code>User-Agent</code> and give the same information.</p>
-
-<p>P.S:<code>platform</code> is for informational purposes only &amp; not intended as a substitution for feature detection/inference checks.</p>
-
-<p><strong>GET IT</strong> : <code>npm install --save platform</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">platform</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;platform&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// on an iPad</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Safari&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;5.1&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">product</span><span class="p">;</span> <span class="c1">// &#39;iPad&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">manufacturer</span><span class="p">;</span> <span class="c1">// &#39;Apple&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;WebKit&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;iOS 5.0&#39;</span>
-</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Safari 5.1 on Apple iPad (iOS 5.0)&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Opera&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;11.52&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;Presto&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;Mac OS X 10.7.2&#39;</span>
-</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Opera 11.52 (identifying as Firefox 4.0) on Mac OS X 10.7.2&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/platform/platform.gif" alt="" /></p>
 
 		
 		

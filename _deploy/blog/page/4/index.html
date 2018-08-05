@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;">   
+    <meta name="description" content="circular-json Handle circular JSON references with ease! You would have come acorss TypeError: Converting circular structure to JSON if you have &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;">
+    <meta name="twitter:description" content="circular-json Handle circular JSON references with ease! You would have come acorss TypeError: Converting circular structure to JSON if you have &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;" />
+    <meta property="og:description" content="circular-json Handle circular JSON references with ease! You would have come acorss TypeError: Converting circular structure to JSON if you have &hellip;" />
 
     
 
@@ -67,6 +67,87 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/circular-json/">
+			
+				Circular-json</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-01-07T11:38:12+05:30" pubdate data-updated="true">Jan 7<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/circular-json">circular-json</a></h1>
+
+<blockquote><p>Handle circular JSON references with ease!</p></blockquote>
+
+<p>You would have come acorss <code>TypeError: Converting circular structure to JSON</code> if you have been handling JSONs for a while now, <code>circular-json</code> serializes and deserializes otherwise valid JSON objects containing circular references into and from a specialized JSON format.</p>
+
+<p><strong>Get it:</strong> <code>npm install circular-json</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span>
+</span><span class='line'>  <span class="nx">CircularJSON</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;circular-json&#39;</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">str</span>
+</span><span class='line'><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">self</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">CircularJSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// &quot;{\&quot;foo\&quot;:\&quot;bar\&quot;,\&quot;self\&quot;:\&quot;~\&quot;}&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">JSON.stringify(obj); would have resulted in:</span>
+</span><span class='line'><span class="cm">TypeError: Converting circular structure to JSON</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/circular-json/circular-json.gif" alt="circular-json" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -907,82 +988,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/qrcode-terminal/qrcode-terminal.gif" alt="qrcode-terminal" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/babar/">
-			
-				Babar</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-10-25T00:35:48+05:30" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://npmjs.org/babar">babar</a></h1>
-
-<blockquote><p>Draw bar charts in your console.</p></blockquote>
-
-<p><code>193</code> lines of code to get bar charts on your console!</p>
-
-<p>Easy to use, lightweight, color output, ASCII output, automatically bucketizes values (currently only averages values in a bucket).</p>
-
-<p><strong>Get it:</strong> <code>npm install babar</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">babar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;babar&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">babar</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]));</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">babar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;babar&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">babar</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">width</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">height</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">maxY</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">yFractions</span><span class="o">:</span> <span class="mi">1</span>
-</span><span class='line'><span class="p">}));</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/babar/babar.gif" alt="babar" /></p>
 
 		
 		
