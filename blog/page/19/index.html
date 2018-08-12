@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;">   
+    <meta name="description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/19/">
-    <meta name="twitter:description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;">
+    <meta name="twitter:description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/19/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;" />
+    <meta property="og:description" content="sentencer Templating engine for madlibs-style sentence generating. Create crazy sentences with nouns, adjectives and your own randomness! Sentencer &hellip;" />
 
     
 
@@ -67,6 +67,104 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/sentencer/">
+			
+				Sentencer</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-19T19:15:03+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/sentencer">sentencer</a></h1>
+
+<blockquote><p>Templating engine for madlibs-style sentence generating.</p></blockquote>
+
+<p>Create crazy sentences with <code>nouns</code>, <code>adjectives</code> and your own randomness!</p>
+
+<p><code>Sentencer</code> was written for and powers <a href="http://metaphorpsum.com">Metaphorpsum</a>. The noun and adjective lists for form -> <a href="http://www.ashley-bovan.co.uk/words/partsofspeech.html">Word Lists for Writers</a>.</p>
+
+<p><strong>Install it:</strong> <code>npm install sentencer --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Sentencer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sentencer&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot; A  jumped over &quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">//&#39; A agreement jumped over a sprightful&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; A shrine jumped over a wordless&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;  jumped over &quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; an instruction jumped over a scabrous&#39;</span>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// &#39; a thistle jumped over a shapely&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Define custom actions:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">rand</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span>  <span class="o">*</span> <span class="mi">10</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Sentencer</span><span class="p">.</span><span class="nx">make</span><span class="p">(</span><span class="s2">&quot;I like &quot;</span><span class="p">);</span> <span class="c1">// &#39;I like 7&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/sentencer/sentencer.gif" alt="sentencer" /></p>
+
+<p>Thanks to <a href="https://twitter.com/kylestetz">@kylestetz</a> for this fun module! (:</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -979,110 +1077,6 @@
 <p><img src="/images/malarkey/malarkey.gif" alt="malarkey" /></p>
 
 <p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/treeify/">
-			
-				Treeify</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-11T18:36:10+05:30" pubdate data-updated="true">Dec 11<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/treeify">treeify</a></h1>
-
-<blockquote><p>converts a JS object into a nice and readable tree structure for the console</p></blockquote>
-
-<p>Say, you an object that has the dependencies of a node module and you want to represent it as a tree structure or may you have a filesystem hierarchy to display on CLI, it's kina tough right? Well...here is <code>treeify</code> for you!</p>
-
-<p><strong>Get it:</strong> <code>npm install treeify</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">treeify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;treeify&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">deps</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;npm@2.1.12&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s2">&quot;archy@1.0.0&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;abbrev@1.0.5&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;char-spinner@1.0.1&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-</span><span class='line'>        <span class="s2">&quot;block-stream@0.0.7&quot;</span><span class="o">:</span> <span class="s2">&quot;inherits@2.0.1&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-</span><span class='line'>   <span class="nx">treeify</span><span class="p">.</span><span class="nx">asTree</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
-</span><span class='line'><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">//or</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">treeify</span><span class="p">.</span><span class="nx">asLines</span><span class="p">(</span><span class="nx">deps</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">line</span><span class="p">){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Both would output:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">└─</span> <span class="nx">npm</span><span class="err">@</span><span class="mf">2.1</span><span class="p">.</span><span class="mi">12</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="nx">archy</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">0</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="nx">abbrev</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">5</span>
-</span><span class='line'>   <span class="err">├─</span> <span class="kr">char</span><span class="o">-</span><span class="nx">spinner</span><span class="err">@</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">1</span>
-</span><span class='line'>   <span class="err">└─</span> <span class="nx">block</span><span class="o">-</span><span class="nx">stream</span><span class="err">@</span><span class="mf">0.0</span><span class="p">.</span><span class="mi">7</span><span class="o">:</span> <span class="nx">inherits</span><span class="err">@</span><span class="mf">2.0</span><span class="p">.</span><span class="mi">1</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/treeify/treeify.gif" alt="treeify" /></p>
-
-<p>Thanks to <a href="http://lukep.org/">Luke Plaster</a> for making our life a bit more easier on the CLI.</p>
 
 		
 		
