@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-08-19T21:37:04+05:30</updated>
+  <updated>2018-08-19T21:39:30+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -72,7 +72,7 @@
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// do this</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">tryor</span><span class="p">(()</span> <span class="o">=&gt;</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">mayBeString</span><span class="p">),</span> <span class="p">{});</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">tryor</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">mayBeString</span><span class="p">),</span> <span class="p">{});</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
