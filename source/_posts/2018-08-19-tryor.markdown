@@ -1,0 +1,49 @@
+---
+layout: post
+title: "tryor"
+date: 2018-08-19 21:08:06 +0530
+comments: true
+categories: util
+---
+
+#[tryor](https://npm.im/tryor)
+> try or return default.
+
+`tryor` will give you back the return value of the function or, in case the function threw an exception, the default value.
+
+`tryor` just wrap the `fn` and `default` in try-catch as below:
+
+```js
+function tryor(fn, v) {
+    "use strict";
+
+    try {
+        return fn();
+    } catch (e) {
+        return v;
+    }
+};
+```
+
+__Get it:__ `npm install tryor`
+
+__Sample usage:__
+
+```js
+// instead of
+let config;
+try {
+    config = JSON.parse(mayBeString);
+} catch (e) {
+    config = {};
+}
+```
+
+```js
+// do this
+const config = tryor(() => JSON.parse(mayBeString), {});
+```
+
+__GIF FTW!__
+
+![tryor](/images/tryor/tryor.gif)
