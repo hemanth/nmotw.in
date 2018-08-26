@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dom-scroll-into-view scroll node in contain to make node visible dom-scroll-into-view a dom util that helps in scrolling to node that is targeted. &hellip;">   
+    <meta name="description" content="base64-async Non-blocking chunked Base64 encoding. base64-async helps us in processing large Base64 documents without blocking the event loop, one &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/7/">
-    <meta name="twitter:description" content="dom-scroll-into-view scroll node in contain to make node visible dom-scroll-into-view a dom util that helps in scrolling to node that is targeted. &hellip;">
+    <meta name="twitter:description" content="base64-async Non-blocking chunked Base64 encoding. base64-async helps us in processing large Base64 documents without blocking the event loop, one &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/7/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dom-scroll-into-view scroll node in contain to make node visible dom-scroll-into-view a dom util that helps in scrolling to node that is targeted. &hellip;" />
+    <meta property="og:description" content="base64-async Non-blocking chunked Base64 encoding. base64-async helps us in processing large Base64 documents without blocking the event loop, one &hellip;" />
 
     
 
@@ -67,6 +67,91 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/base64-async/">
+			
+				Base64-async</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-29T13:57:23+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/base64-async">base64-async</a></h1>
+
+<blockquote><p>Non-blocking chunked Base64 encoding.</p></blockquote>
+
+<p><code>base64-async</code> helps us in processing large <code>Base64</code> documents without blocking the event loop, one can configure chunk size option to optimise for your use case.</p>
+
+<p>This module exposes: <code>b64</code>, <code>encode</code> and <code>decode</code> methods which accepts <code>(input, [options])</code> and returns a promise on innvocation.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save base64-async</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">b64</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;base64-async&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;somehugefile.jpg&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">b64</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">b64String</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b64String</span><span class="p">));</span>
+</span><span class='line'><span class="c1">// aGkgbXVt... </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">b64</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">b64String</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">buffer</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">buffer</span><span class="p">));</span>
+</span><span class='line'><span class="c1">// &lt;Buffer 68 69 20 6d 75 6d ... &gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// or, for the cool kids </span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">b64String</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">originalFileBuffer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">b64String</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// which is equivalent to this </span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">b64String</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">(</span><span class="nx">fileBuffer</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">originalFileBuffer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">b64</span><span class="p">(</span><span class="nx">b64String</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// If no method is specified, buffers are encoded, strings are decoded</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -785,99 +870,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/psl/psl.gif" alt="psl" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/secure-keys/">
-			
-				Secure-keys</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-04-14T16:11:06+05:30" pubdate data-updated="true">Apr 14<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/secure-keys">secure-keys</a></h1>
-
-<blockquote><p>Encrypts and Decrypts object keys.</p></blockquote>
-
-<p>This module uses node's inbuilt <code>crypto</code> to encrypt and decrypt object keys and the code was yanked out of work by
-<a href="https://github.com/indexzero">@indexzero</a> for <a href="https://github.com/indexzero/nconf"><code>nconf</code></a></p>
-
-<p><strong>Get it:</strong> <code>npm install --save secure-keys</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">secureKeys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;secure-keys&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">sk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">secureKeys</span><span class="p">({</span><span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;NOTW&#39;</span><span class="p">});</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">enCat</span> <span class="o">=</span> <span class="nx">sk</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">({</span><span class="nx">cat</span><span class="o">:</span> <span class="s1">&#39;meow&#39;</span><span class="p">})</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">deCat</span> <span class="o">=</span> <span class="nx">sk</span><span class="p">.</span><span class="nx">decrypt</span><span class="p">(</span><span class="nx">enCat</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;encrypted object:&#39;</span><span class="p">,</span> <span class="nx">enCat</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;decrypted object:&#39;</span><span class="p">,</span> <span class="nx">deCat</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">encrypted object: { cat: { alg: &#39;aes-256-ctr&#39;, value: &#39;3f1ead878c36&#39; } }</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">decrypted object: { cat: &#39;meow&#39; }</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">sec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SecK</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;BEGIN RSA&#39;</span><span class="p">,</span> <span class="c1">// Text of key used for encrypting/decrypting </span>
-</span><span class='line'>  <span class="nx">format</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">,</span> <span class="c1">// optional (defaults to JSON): An object with `stringify` and `parse` methods </span>
-</span><span class='line'>  <span class="nx">alg</span><span class="o">:</span> <span class="s1">&#39;aes-256-ctr&#39;</span> <span class="c1">//optional (this is default) Algorithm to use for encrypt/decrypt </span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/secure-keys/secure-keys.gif" alt="" /></p>
 
 		
 		
