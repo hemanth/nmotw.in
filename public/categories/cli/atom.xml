@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-08-19T21:40:26+05:30</updated>
+  <updated>2018-08-26T14:50:06+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[commitizen]]></title>
+    <link href="http://nmotw.in//github/commitizen/"/>
+    <updated>2018-08-26T14:37:52+05:30</updated>
+    <id>http://nmotw.in//github/commitizen</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
+
+<blockquote><p>Organized, detailed commits to git.</p></blockquote>
+
+<p><code>commitizen</code> prompts to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit or reading the <code>contribution.md</code> for the commit format!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g commitizen</code></p>
+
+<p><strong>Set up:</strong></p>
+
+<p>```sh
+$ npm install -g cz-conventional-changelog</p>
+
+<p>$ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```</p>
+
+<p>or</p>
+
+<p><code>sh
+$ commitizen init cz-conventional-changelog --save-dev --save-exact
+</code></p>
+
+<p>^ this reuslts in modification of your <code>package.json</code> to:</p>
+
+<p>```js
+  "config": {</p>
+
+<pre><code>"commitizen": {
+  "path": "cz-conventional-changelog"
+}
+</code></pre>
+
+<p>  }
+```</p>
+
+<p>Now one can just do <code>git cz</code> instead of <code>git commit</code> and enjoy the benifits!</p>
+
+<p>Also, one could add it to <code>npm-scripts</code></p>
+
+<p>```js
+"scripts": {</p>
+
+<pre><code>"commit": "git-cz"
+</code></pre>
+
+<p>  }
+```</p>
+
+<p>And then execute: <code>npm run commit</code>.</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/commitizen/commitizen.gif" alt="commitizen" /></p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[signal-exit]]></title>
@@ -228,39 +291,6 @@ package.json / node_modules folder will be used.
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/thanks/thanks.gif" alt="thanks.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[portscanner]]></title>
-    <link href="http://nmotw.in//github/portscanner/"/>
-    <updated>2017-12-17T15:16:40+05:30</updated>
-    <id>http://nmotw.in//github/portscanner</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/portscanner">portscanner</a></h1>
-
-<blockquote><p>port scanner!</p></blockquote>
-
-<p><code>portscanner</code> helps us to check the port status and free port for a given host.</p>
-
-<p><strong>Get it:</strong> <code>npm install portscanner</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<p>const portScanner = require('portscanner');</p>
-
-<p>portscanner.checkPortStatus(3000, '127.0.0.1')
-.then(console.log);</p>
-
-<p>portscanner.findAPortInUse([3000, 3005, 3006], '127.0.0.1')
-.then(console.log)
-.catch(console.error);
-```</p>
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
 ]]></content>
   </entry>
   

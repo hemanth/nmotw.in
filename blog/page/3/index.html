@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="april-fools Randomly fool with an Error on April 1st. ⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired! Few &hellip;">   
+    <meta name="description" content="cryptiles General purpose crypto utilities. cryptiles provides util methods for creating cryptographically strong pseudo-random data with the below &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/3/">
-    <meta name="twitter:description" content="april-fools Randomly fool with an Error on April 1st. ⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired! Few &hellip;">
+    <meta name="twitter:description" content="cryptiles General purpose crypto utilities. cryptiles provides util methods for creating cryptographically strong pseudo-random data with the below &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/3/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="april-fools Randomly fool with an Error on April 1st. ⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired! Few &hellip;" />
+    <meta property="og:description" content="cryptiles General purpose crypto utilities. cryptiles provides util methods for creating cryptographically strong pseudo-random data with the below &hellip;" />
 
     
 
@@ -67,6 +67,93 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/cryptiles/">
+			
+				Cryptiles</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-04-07T16:56:08+05:30" pubdate data-updated="true">Apr 7<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npmjs.com/package/cryptiles">cryptiles</a></h1>
+
+<blockquote><p>General purpose crypto utilities.</p></blockquote>
+
+<p><code>cryptiles</code> provides util methods for creating cryptographically strong pseudo-random data with the below methods:</p>
+
+<ul>
+<li>fixedTimeComparison</li>
+<li>randomBits</li>
+<li>randomDigits</li>
+<li>randomString</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install cryptiles</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">cryptiles</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;cryptiles&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">[</span>
+</span><span class='line'><span class="nx">cryptiles</span><span class="p">.</span><span class="nx">fixedTimeComparison</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span><span class="s1">&#39;abcd&#39;</span><span class="p">),</span>
+</span><span class='line'><span class="nx">cryptiles</span><span class="p">.</span><span class="nx">randomBits</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+</span><span class='line'><span class="nx">cryptiles</span><span class="p">.</span><span class="nx">randomDigits</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+</span><span class='line'><span class="nx">cryptiles</span><span class="p">.</span><span class="nx">randomString</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* ^</span>
+</span><span class='line'><span class="cm">[</span>
+</span><span class='line'><span class="cm">  true,</span>
+</span><span class='line'><span class="cm">  Uint8Array &lt;66&gt;,</span>
+</span><span class='line'><span class="cm">  &quot;42115&quot;,</span>
+</span><span class='line'><span class="cm">  &quot;jsmx9&quot;</span>
+</span><span class='line'><span class="cm">]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cryptiles/cryptiles.gif" alt="cryptiles" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -818,96 +905,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/graphql-request/graphql-request.gif" alt="graphql-request.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/bytes/">
-			
-				Bytes</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-01-28T22:24:12+05:30" pubdate data-updated="true">Jan 28<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/bytes">bytes</a></h1>
-
-<blockquote><p>parse a string bytes &lt;=> bytes</p></blockquote>
-
-<p><code>bytes</code> is a sweet little util that helps in parsing a string bytes (ex: 1TB) to bytes (1099511627776) and vice-versa.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save bytes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// output: &#39;1KB&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// output: &#39;1000B&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">{</span><span class="nx">thousandsSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;1 000B&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mf">1.7</span><span class="p">,</span> <span class="p">{</span><span class="nx">decimalPlaces</span><span class="o">:</span> <span class="mi">0</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;2KB&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">bytes</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="p">{</span><span class="nx">unitSeparator</span><span class="o">:</span> <span class="s1">&#39; &#39;</span><span class="p">});</span>
-</span><span class='line'><span class="c1">// output: &#39;1 KB&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Supported units and abbreviations:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">b</span> <span class="k">for</span> <span class="nx">bytes</span>
-</span><span class='line'><span class="nx">kb</span> <span class="k">for</span> <span class="nx">kilobytes</span>
-</span><span class='line'><span class="nx">mb</span> <span class="k">for</span> <span class="nx">megabytes</span>
-</span><span class='line'><span class="nx">gb</span> <span class="k">for</span> <span class="nx">gigabytes</span>
-</span><span class='line'><span class="nx">tb</span> <span class="k">for</span> <span class="nx">terabytes</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/bytes/bytes.gif" alt="bytes.gif" /></p>
 
 		
 		
