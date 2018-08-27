@@ -27,7 +27,7 @@ or
 $ commitizen init cz-conventional-changelog --save-dev --save-exact
 ```
 
-^ this reuslts in modification of your `package.json` to:
+^ this results in modification of your `package.json` to:
 
 ```js
   "config": {
