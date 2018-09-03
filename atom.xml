@@ -4,13 +4,81 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-08-26T14:50:06+05:30</updated>
+  <updated>2018-09-03T09:44:59+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[npm-whoshiring]]></title>
+    <link href="http://nmotw.in/npm-whoshiring/"/>
+    <updated>2018-09-03T09:36:09+05:30</updated>
+    <id>http://nmotw.in/npm-whoshiring</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
+
+<blockquote><p>npm who's hiring?</p></blockquote>
+
+<p><code>npm-whoshiring</code> shows a table on your CLI of currently open jobs listed by npm partners.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g npm-whoshiring</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-whoshiring
+</span><span class='line'>Company              URL                                                                                                                   Vacant?
+</span><span class='line'>-------------------  --------------------------------------------------------------------------------------------------------------------  -------
+</span><span class='line'>Brightcove, Inc.     https://www.brightcove.com/en/company/careers                                                                         YES
+</span><span class='line'>Apply Digital        https://applydigital.co/#careers                                                                                      YES
+</span><span class='line'>DuckDuckGo           https://duckduckgo.com/hiring?s<span class="o">=</span>npm                                                                                   YES
+</span><span class='line'>Meadow               https://getmeadow.com/jobs                                                                                            YES
+</span><span class='line'>MuleSoft             http://www.mulesoft.com/careers                                                                                       YES
+</span><span class='line'>Callisto             https://www.projectcallisto.org/work-with-us#eng                                                                      YES
+</span><span class='line'>Airtable             https://airtable.com/jobs                                                                                             YES
+</span><span class='line'>Triplebyte           https://triplebyte.com/?ref<span class="o">=</span>npm_oct17                                                                                 YES
+</span><span class='line'>ClimaCell            http://www.climacell.co/careers                                                                                       YES
+</span><span class='line'>Tinder               http://www.tinder.com/jobs                                                                                            YES
+</span><span class='line'>blogfoster           https://www.blogfoster.com/engineering/jobs/javascript-engineer/?utm_source<span class="o">=</span>npm&amp;utm_campaign<span class="o">=</span>npm-june                 YES
+</span><span class='line'>Overpass             http://www.overpass.com/careers.html                                                                                  YES
+</span><span class='line'>Yellow Pages Canada  https://jobs-emplois.yp.ca/jobs/développeur-full-stack-mean-1114                                                      YES
+</span><span class='line'>Hired                https://hired.com/join/?utm_source<span class="o">=</span>npmjs&amp;utm_medium<span class="o">=</span>sponsor&amp;utm_campaign<span class="o">=(</span>b2c<span class="o">)(</span>l-all<span class="o">)(</span>r-swe<span class="o">)(</span>q1-17-whos-hiring-page<span class="o">)</span>  YES
+</span><span class='line'>Festicket            https://festicket.workable.com/j/CDA25A0466                                                                           YES
+</span><span class='line'>QuikOrder            https://stackoverflow.com/jobs/companies/quikorder                                                                    YES
+</span><span class='line'>BrandingBrand.com    http://www.brandingbrand.com/jobs                                                                                     YES
+</span><span class='line'>Red Badger           http://red-badger.com/about-us/join-us/software-engineer/                                                             YES
+</span><span class='line'>Voxer                http://www.voxer.com/careers/                                                                                         YES
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
@@ -1328,75 +1396,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/tiny-glob/tiny-glob.gif" alt="tiny-glob" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[a11y]]></title>
-    <link href="http://nmotw.in/a11y/"/>
-    <updated>2018-04-15T07:01:25+05:30</updated>
-    <id>http://nmotw.in/a11y</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/a11y">a11y</a></h1>
-
-<blockquote><p>Easy accessibility audits powered by the Chrome Accessibility Tools</p></blockquote>
-
-<p><code>a11y</code> conducts audits using the Chrome Accessibility Tools and PhantomJS and lists out the issues for a given URL.</p>
-
-<p><strong>Get it:</strong> <code>npm install [-g] a11y</code></p>
-
-<p><strong>Sample CLI usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>  Runs an accessibility audit against a URL
-</span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    <span class="nv">$ </span>a11y &lt;url&gt;
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    --viewport-size<span class="o">=</span>&lt;size&gt;  Set the viewport size
-</span><span class='line'>    --delay                 Set the delay capturing the page
-</span><span class='line'>    --verbose               Display more information
-</span><span class='line'>
-</span><span class='line'>  Examples
-</span><span class='line'>    <span class="nv">$ </span>a11y todomvc.com
-</span><span class='line'>    <span class="nv">$ </span>a11y http://todomvc.com https://google.com
-</span><span class='line'>    <span class="nv">$ </span>a11y index.html -<span class="o">=</span>viewport-size<span class="o">=</span>1024x768
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Sample API usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>const <span class="nv">a11y</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;a11y&#39;</span><span class="o">)</span>;
-</span><span class='line'>
-</span><span class='line'>a11y<span class="o">(</span><span class="s1">&#39;nmotw.in&#39;</span>, <span class="o">(</span>err, reports<span class="o">)</span> <span class="o">=</span>&gt; <span class="o">{</span>
-</span><span class='line'>    const <span class="nv">audit</span> <span class="o">=</span> reports.audit; // <span class="sb">`</span>a11y<span class="sb">`</span> Formatted report
-</span><span class='line'>    const <span class="nv">report</span> <span class="o">=</span> reports.report; // DevTools Accessibility Audit formatted report
-</span><span class='line'><span class="o">})</span>;
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/a11y/a11y.gif" alt="a11y.gif" /></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-08-26T14:50:06+05:30</updated>
+  <updated>2018-09-03T09:44:59+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[npm-whoshiring]]></title>
+    <link href="http://nmotw.in//github/npm-whoshiring/"/>
+    <updated>2018-09-03T09:36:09+05:30</updated>
+    <id>http://nmotw.in//github/npm-whoshiring</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
+
+<blockquote><p>npm who's hiring?</p></blockquote>
+
+<p><code>npm-whoshiring</code> shows a table on your CLI of currently open jobs listed by npm partners.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g npm-whoshiring</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ npm-whoshiring
+Company              URL                                                                                                                   Vacant?</p>
+
+<hr />
+
+<p>Brightcove, Inc.     https://www.brightcove.com/en/company/careers                                                                         YES
+Apply Digital        https://applydigital.co/#careers                                                                                      YES
+DuckDuckGo           https://duckduckgo.com/hiring?s=npm                                                                                   YES
+Meadow               https://getmeadow.com/jobs                                                                                            YES
+MuleSoft             http://www.mulesoft.com/careers                                                                                       YES
+Callisto             https://www.projectcallisto.org/work-with-us#eng                                                                      YES  <br/>
+Airtable             https://airtable.com/jobs                                                                                             YES  <br/>
+Triplebyte           https://triplebyte.com/?ref=npm_oct17                                                                                 YES  <br/>
+ClimaCell            http://www.climacell.co/careers                                                                                       YES  <br/>
+Tinder               http://www.tinder.com/jobs                                                                                            YES  <br/>
+blogfoster           https://www.blogfoster.com/engineering/jobs/javascript-engineer/?utm_source=npm&amp;utm_campaign=npm-june                 YES  <br/>
+Overpass             http://www.overpass.com/careers.html                                                                                  YES  <br/>
+Yellow Pages Canada  https://jobs-emplois.yp.ca/jobs/développeur-full-stack-mean-1114                                                      YES  <br/>
+Hired                https://hired.com/join/?utm_source=npmjs&amp;utm_medium=sponsor&amp;utm_campaign=(b2c)(l-all)(r-swe)(q1-17-whos-hiring-page)  YES  <br/>
+Festicket            https://festicket.workable.com/j/CDA25A0466                                                                           YES  <br/>
+QuikOrder            https://stackoverflow.com/jobs/companies/quikorder                                                                    YES  <br/>
+BrandingBrand.com    http://www.brandingbrand.com/jobs                                                                                     YES  <br/>
+Red Badger           http://red-badger.com/about-us/join-us/software-engineer/                                                             YES  <br/>
+Voxer                http://www.voxer.com/careers/                                                                                         YES  <br/>
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[april-fools]]></title>
@@ -214,34 +262,6 @@ To download and use a random image:
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rest-your-eyes]]></title>
-    <link href="http://nmotw.in//github/rest-your-eyes/"/>
-    <updated>2017-01-20T22:13:20+05:30</updated>
-    <id>http://nmotw.in//github/rest-your-eyes</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/rest-your-eyes">rest-your-eyes</a></h1>
-
-<p><code>rest-your-eyes</code> is a fun little module that makes use of the <code>brightness</code> module to well so that you an rest your eyes while your command runs
-Your screen will become bright again after the command completes execution.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g rest-your-eyes</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>sh
-rest npm install
-</code></p>
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/rest-your-eyes/rest-your-eyes.gif" alt="rest-your-eyes" /></p>
-
-<p><strong>Till next time!</strong></p>
-
-<p><img src="/images/rest-your-eyes/eyes.gif" alt="rest-your-eyes" /></p>
 ]]></content>
   </entry>
   

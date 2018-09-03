@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-08-26T14:50:06+05:30</updated>
+  <updated>2018-09-03T09:44:59+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[npm-whoshiring]]></title>
+    <link href="http://nmotw.in//github/npm-whoshiring/"/>
+    <updated>2018-09-03T09:36:09+05:30</updated>
+    <id>http://nmotw.in//github/npm-whoshiring</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
+
+<blockquote><p>npm who's hiring?</p></blockquote>
+
+<p><code>npm-whoshiring</code> shows a table on your CLI of currently open jobs listed by npm partners.</p>
+
+<p><strong>Get it:</strong> <code>npm i -g npm-whoshiring</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ npm-whoshiring
+Company              URL                                                                                                                   Vacant?</p>
+
+<hr />
+
+<p>Brightcove, Inc.     https://www.brightcove.com/en/company/careers                                                                         YES
+Apply Digital        https://applydigital.co/#careers                                                                                      YES
+DuckDuckGo           https://duckduckgo.com/hiring?s=npm                                                                                   YES
+Meadow               https://getmeadow.com/jobs                                                                                            YES
+MuleSoft             http://www.mulesoft.com/careers                                                                                       YES
+Callisto             https://www.projectcallisto.org/work-with-us#eng                                                                      YES  <br/>
+Airtable             https://airtable.com/jobs                                                                                             YES  <br/>
+Triplebyte           https://triplebyte.com/?ref=npm_oct17                                                                                 YES  <br/>
+ClimaCell            http://www.climacell.co/careers                                                                                       YES  <br/>
+Tinder               http://www.tinder.com/jobs                                                                                            YES  <br/>
+blogfoster           https://www.blogfoster.com/engineering/jobs/javascript-engineer/?utm_source=npm&amp;utm_campaign=npm-june                 YES  <br/>
+Overpass             http://www.overpass.com/careers.html                                                                                  YES  <br/>
+Yellow Pages Canada  https://jobs-emplois.yp.ca/jobs/développeur-full-stack-mean-1114                                                      YES  <br/>
+Hired                https://hired.com/join/?utm_source=npmjs&amp;utm_medium=sponsor&amp;utm_campaign=(b2c)(l-all)(r-swe)(q1-17-whos-hiring-page)  YES  <br/>
+Festicket            https://festicket.workable.com/j/CDA25A0466                                                                           YES  <br/>
+QuikOrder            https://stackoverflow.com/jobs/companies/quikorder                                                                    YES  <br/>
+BrandingBrand.com    http://www.brandingbrand.com/jobs                                                                                     YES  <br/>
+Red Badger           http://red-badger.com/about-us/join-us/software-engineer/                                                             YES  <br/>
+Voxer                http://www.voxer.com/careers/                                                                                         YES  <br/>
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
@@ -249,48 +297,6 @@ $ fkill
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/fkill/fkill.gif" alt="fkill.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[thanks]]></title>
-    <link href="http://nmotw.in//github/thanks/"/>
-    <updated>2018-02-09T17:04:21+05:30</updated>
-    <id>http://nmotw.in//github/thanks</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/thanks">thanks</a></h1>
-
-<blockquote><p>🙌 Give thanks to the open source maintainers you depend on! ✨</p></blockquote>
-
-<p><code>thanks</code> picks up the "nearest" <code>package.json</code> / <code>node_modules</code> folder and fetch all the mainterners who are seeking donation and lists them all in a neat table with the donation URL.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g thanks</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p>```sh
-$ thanks --help</p>
-
-<p>thanks - 🙌 Give thanks to the open source maintainers you depend on! ✨</p>
-
-<p>Usage:</p>
-
-<pre><code>thanks &lt;flags&gt; [CWD]
-
-If CWD is omitted, then the current working directory is used. The "nearest"
-package.json / node_modules folder will be used.
-</code></pre>
-
-<p>Flags:</p>
-
-<pre><code>-v, --version   Show current version
--h, --help      Show usage information
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/thanks/thanks.gif" alt="thanks.gif" /></p>
 ]]></content>
   </entry>
   
