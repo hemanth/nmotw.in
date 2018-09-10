@@ -7,9 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="ms a Tiny milisecond conversion utility, that does the below: number -> (ms) -> string with a unit is returned.
-string -> (ms) -> string
-string+ &hellip;">   
+    <meta name="description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -17,18 +15,14 @@ string+ &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/22/">
-    <meta name="twitter:description" content="ms a Tiny milisecond conversion utility, that does the below: number -> (ms) -> string with a unit is returned.
-string -> (ms) -> string
-string+ &hellip;">
+    <meta name="twitter:description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/22/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="ms a Tiny milisecond conversion utility, that does the below: number -> (ms) -> string with a unit is returned.
-string -> (ms) -> string
-string+ &hellip;" />
+    <meta property="og:description" content="git-promise Simple wrapper that allows you to run any git command using a more intuitive syntax. git-promise is a product of a very good combination &hellip;" />
 
     
 
@@ -73,6 +67,98 @@ string+ &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/git-promise/">
+			
+				Git-promise</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-14T17:51:17+05:30" pubdate data-updated="true">Aug 14<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h2>git-promise</h2>
+
+<blockquote><p>Simple wrapper that allows you to run any <code>git</code> command using a more intuitive syntax.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/git-promise">git-promise</a> is a product of a very good combination of <code>Q</code> and <code>ShellJS</code> and returns a promise for us, it also handles exit code automatically. Parsing the output or dealing with non 0 exit code is also very clean and easy with this.</p>
+
+<p>We can also chain commands, execute the <code>git</code> command in a specific dir. If those are not enough it also provides a copule of <code>util</code> methods.</p>
+
+<p>Installing it: <code>$ npm install git-promise</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">git</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;git-promise&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">git</span><span class="p">(</span><span class="s2">&quot;init&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That would output something like: <code>Initialized empty Git repository in ...</code></p>
+
+<p><strong>More complex example:</strong></p>
+
+<p>Say we have a <code>test</code> dir that has a file named <code>me</code> with the content <code>blame me</code> and we run <code>git blame</code> on it.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">git</span><span class="p">(</span><span class="s2">&quot;blame me&quot;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">cwd</span><span class="o">:</span> <span class="s2">&quot;blame&quot;</span>
+</span><span class='line'><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">output</span><span class="p">,</span> <span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// output and cwd will be as specified.</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">what</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// you would have switched back to current dir.</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// If there are any errors</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">fin</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Finally reach here.</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>All in all <code>git-promise</code> is a very well composed module and has a lot of potential to get more better, a huge thanks to <a href="https://twitter.com/piuccio">Fabio Crisci</a> for authoring this module.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/git-promise/git-promise.gif" alt="git-promise" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1353,121 +1439,6 @@ the method parses the given <code>str</code> and return milliseconds ;) well it 
 <p><img src="/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
 
 <p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/music-meta-data/">
-			
-				Music Meta Data</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-05T18:08:35+05:30" pubdate data-updated="true">Jun 5<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://github.com/leetreveil/musicmetadata">musicmetadata</a> is a streaming music metadata parser for node and the browser, but out focus is more on node side here.</p>
-
-<p>It's worth noting that this module is influnced by <a href="https://github.com/aadsm/node-id3">node-id3</a></p>
-
-<p>This module makes it easier to extra meta data from a given audio file, it supports:</p>
-
-<ul>
-<li>mp{1.1, 2.2, 2.3, 2.4, 3}</li>
-<li>m4a, mp4.</li>
-<li>vorbis (ogg, flac)</li>
-<li>asf (wma, wmv)</li>
-</ul>
-
-
-<p>It parses the files for meaning fully meta data, for example it maintaines a common list of <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L212">GENRES</a> and <a href="https://github.com/leetreveil/musicmetadata/blob/master/lib/common.js#L188">pic types</a> that will be matched and extracted from the Meta Data Atom.</p>
-
-<p>But the clean part of this module is it makes use of Streams :-)</p>
-
-<p>Kudos to <a href="http://twitter.com/leetreveil">Lee Treveil</a> on this.</p>
-
-<p><strong>Let's see an example:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var fs = require('fs');
-</span><span class='line'>var mmd = require('musicmetadata');
-</span><span class='line'>
-</span><span class='line'>var parser = mmd( fs.createReadStream('FreeSWSong.ogg') );
-</span><span class='line'>
-</span><span class='line'>parser.on('metadata',function(res) {
-</span><span class='line'>    console.log(res);
-</span><span class='line'>});
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This would log something like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">{</span> title: <span class="s1">&#39;Free Software Song&#39;</span>,
-</span><span class='line'>  artist: <span class="o">[</span> <span class="s1">&#39;Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil&#39;</span> <span class="o">]</span>,
-</span><span class='line'>  albumartist: <span class="o">[]</span>,
-</span><span class='line'>  album: <span class="s1">&#39;&#39;</span>,
-</span><span class='line'>  year: <span class="s1">&#39;2009&#39;</span>,
-</span><span class='line'>  track: <span class="o">{</span> no: 0, of: 0 <span class="o">}</span>,
-</span><span class='line'>  genre: <span class="o">[</span> <span class="s1">&#39;Ethnic&#39;</span> <span class="o">]</span>,
-</span><span class='line'>  disk: <span class="o">{</span> no: 0, of: 0 <span class="o">}</span>,
-</span><span class='line'>  picture: <span class="o">[]</span>,
-</span><span class='line'>  duration: 0 <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Now, we could also listen for an event for a particular entinty of the meta data or custom metadata types that are not part of the standard metadata.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Would log something like : <code>[ 'Mark Forry, Yvette Osborne, Ron Fox, Steve Finney, Bill Cope, Kip McAtee, Ernie Provencher, Dan Auvil' ]</code></p>
-
-<p>A <code>done</code> event is triggered once the parsing is done, we could as well listen for it, to detect any errors.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/music-meta-data/mmd.gif" alt="music-meta-data" /></p>
 
 		
 		

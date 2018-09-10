@@ -1,0 +1,46 @@
+---
+layout: post
+title: "microjob"
+date: 2018-09-09 00:27:32 +0530
+comments: true
+categories: exp
+---
+
+#[microjob](https://www.npmjs.com/package/microjob)
+> worker threads into easy-to-use routines for CPU-bound.
+
+`microjob` is a tiny wrapper for threads (`worker_threads`) and is intended to perform heavy CPU loads using anonymous functions.
+
+__GET IT:__ `npm install microjob`
+
+__Sample usage:__
+
+```
+(async () => {
+  const { job } = require('microjob')
+
+  try {
+    // this function will be executed in another thread
+    const res = await job(() => {
+      let i = 0
+      for (i = 0; i < 1000000; i++) {
+        // heavy CPU load ...
+      }
+
+      return i
+    })
+
+    console.log(res) // 1000000
+  } catch (err) {
+    console.error(err)
+  }
+})();
+```
+
+P.S: To run this today, you we need node `v>=10` and execute it via `--experimental-worker` flag.
+
+__GIF FTW!__
+
+![microjob](/images/microjob/microjob.gif)
+
+
