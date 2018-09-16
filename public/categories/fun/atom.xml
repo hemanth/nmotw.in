@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-09T00:29:43+05:30</updated>
+  <updated>2018-09-16T18:48:18+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mapscii]]></title>
+    <link href="http://nmotw.in//github/mapscii/"/>
+    <updated>2018-09-16T18:42:56+05:30</updated>
+    <id>http://nmotw.in//github/mapscii</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
+
+<blockquote><p>The Whole World In Your Console!</p></blockquote>
+
+<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
+
+<p><strong>Navigation:</strong></p>
+
+<ul>
+<li>Arrows up, down, left, right to scroll around</li>
+<li>Press a or z to zoom in and out</li>
+<li>Press q to quit</li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ mapscii</p>
+
+<h1>you should see the entire map on the CLI</h1>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mapscii/mapscii.gif" alt="mapscii" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
@@ -230,38 +267,6 @@ To download and use a random image:
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/unsplash-wallpaper/unsplash-wallpaper.gif" alt="unsplash-wallpaper" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[covfefe]]></title>
-    <link href="http://nmotw.in//github/covfefe/"/>
-    <updated>2017-06-01T19:39:33+05:30</updated>
-    <id>http://nmotw.in//github/covfefe</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/covfefe">covfefe</a></h1>
-
-<blockquote><p>Despite the constant negative press covfefe.</p></blockquote>
-
-<p>Time for a fun module this week, it's <code>covfefe</code>. (Hope you are aware of <a href="https://archive.is/f7UL3">it</a>!)</p>
-
-<p><strong>Get it:</strong> <code>npm install covfefe</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<blockquote><p>const covfefe = require('covfefe');</p>
-
-<p>covfefe('Despite the constant negative press');
-"Despite the constant negative press covfefe"</p>
-
-<p>covfefe.translate('I have good coverage of spray tan');
-"I have good covfefe of spray tan"
-```</p></blockquote>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
 ]]></content>
   </entry>
   

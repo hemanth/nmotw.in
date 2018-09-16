@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/git/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-09T00:29:43+05:30</updated>
+  <updated>2018-09-16T18:48:18+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -40,7 +40,7 @@ $ npm install -g cz-conventional-changelog</p>
 $ commitizen init cz-conventional-changelog --save-dev --save-exact
 </code></p>
 
-<p>^ this reuslts in modification of your <code>package.json</code> to:</p>
+<p>^ this results in modification of your <code>package.json</code> to:</p>
 
 <p>```js
   "config": {</p>

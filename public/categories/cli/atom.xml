@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-09T00:29:43+05:30</updated>
+  <updated>2018-09-16T18:48:18+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mapscii]]></title>
+    <link href="http://nmotw.in//github/mapscii/"/>
+    <updated>2018-09-16T18:42:56+05:30</updated>
+    <id>http://nmotw.in//github/mapscii</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
+
+<blockquote><p>The Whole World In Your Console!</p></blockquote>
+
+<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
+
+<p><strong>Navigation:</strong></p>
+
+<ul>
+<li>Arrows up, down, left, right to scroll around</li>
+<li>Press a or z to zoom in and out</li>
+<li>Press q to quit</li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ mapscii</p>
+
+<h1>you should see the entire map on the CLI</h1>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mapscii/mapscii.gif" alt="mapscii" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
@@ -88,7 +125,7 @@ $ npm install -g cz-conventional-changelog</p>
 $ commitizen init cz-conventional-changelog --save-dev --save-exact
 </code></p>
 
-<p>^ this reuslts in modification of your <code>package.json</code> to:</p>
+<p>^ this results in modification of your <code>package.json</code> to:</p>
 
 <p>```js
   "config": {</p>
@@ -225,78 +262,6 @@ Type: Array|Object</p>
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="/images/prompts/prompts.gif" alt="prompts.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fkill]]></title>
-    <link href="http://nmotw.in//github/fkill/"/>
-    <updated>2018-03-18T09:01:19+05:30</updated>
-    <id>http://nmotw.in//github/fkill</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fkill">fkill</a></h1>
-
-<blockquote><p>Fabulously kill processes. Cross-platform.</p></blockquote>
-
-<p>You you have mostly used something like: <code>pgrep &lt;progress&gt;</code> <code>kill -9 &lt;pid&gt;</code> <code>pkill &lt;procees&gt;</code>, but <code>fkill</code> makes it fabulosusly easy to kill!</p>
-
-<p><strong>Get it:</strong> <code>npm install [-g] fkill[-cli]</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-// API
-const fkill = require('fkill');</p>
-
-<p>fkill(8080).then(() => {</p>
-
-<pre><code>console.log('Killed process');
-</code></pre>
-
-<p>});</p>
-
-<p>fkill('Chrome');
-fkill(':8080');</p>
-
-<p>fkill([1337, 'Chrome', ':8080']);
-```</p>
-
-<p>```</p>
-
-<h1>cli</h1>
-
-<p>➜  ~ fkill --help</p>
-
-<p>  Fabulously kill processes. Cross-platform.</p>
-
-<p>  Usage</p>
-
-<pre><code>$ fkill [&lt;pid|name|:port&gt; …]
-</code></pre>
-
-<p>  Options</p>
-
-<pre><code>--force -f    Force kill
---verbose -v  Show process arguments
-</code></pre>
-
-<p>  Examples</p>
-
-<pre><code>$ fkill 1337
-$ fkill safari
-$ fkill :8080
-$ fkill 1337 safari :8080
-$ fkill
-</code></pre>
-
-<p>  To kill a port, prefix it with a colon. For example: :8080.</p>
-
-<p>  Run without arguments to use the interactive interface.
-  The process name is case insensitive.
-  ```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fkill/fkill.gif" alt="fkill.gif" /></p>
 ]]></content>
   </entry>
   

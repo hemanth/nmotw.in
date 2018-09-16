@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;">   
+    <meta name="description" content="await-to-js Async await wrapper for easy error handling! Uber tiny module (10LOC) for making life easier while handling error while async-await. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/8/">
-    <meta name="twitter:description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;">
+    <meta name="twitter:description" content="await-to-js Async await wrapper for easy error handling! Uber tiny module (10LOC) for making life easier while handling error while async-await. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/8/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="tinytime A straightforward date and time formatter in 800b. Get it: npm install --save tinytime tinytime exports a single function that returns a &hellip;" />
+    <meta property="og:description" content="await-to-js Async await wrapper for easy error handling! Uber tiny module (10LOC) for making life easier while handling error while async-await. &hellip;" />
 
     
 
@@ -67,6 +67,100 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/await-to-js/">
+			
+				Await-to-js</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-05-05T08:30:13+05:30" pubdate data-updated="true">May 5<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/await-to-js">await-to-js</a></h1>
+
+<blockquote><p>Async await wrapper for easy error handling!</p></blockquote>
+
+<p>Uber tiny module (10LOC) for making life easier while handling error while async-await.</p>
+
+<p>This module is influenced by GoLang style of handling errors:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>data, err := db.Query("SELECT ...")  
+</span><span class='line'>if err != nil { return err }  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>We would basically covert the below code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">asyncTask</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kr">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">// any async task.</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Handle error.</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">to</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;await-to-js&quot;</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">asyncTask</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span> <span class="nx">err</span><span class="p">,</span> <span class="nx">result</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">to</span><span class="p">(</span><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">));</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">retrun</span> <span class="nx">result</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">asyncTask</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install --save await-to-json</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/await-to-js/await-to-js.gif" alt="await-to-js" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -902,105 +996,6 @@ takes a <code>Date</code> and returns a string with the rendered data.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/fkill-cli/fkill-cli.gif" alt="fkill-cli" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/unfetch/">
-			
-				Unfetch</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-02-25T09:11:13+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/unfetch">unfetch</a></h1>
-
-<blockquote><p>Tiny 500b fetch "barely-polyfill"</p></blockquote>
-
-<ul>
-<li><strong>Tiny:</strong> under <strong>500 bytes</strong> of <a href="https://unpkg.com/unfetch">ES3</a> gzipped</li>
-<li><strong>Minimal:</strong> just <code>fetch()</code> with headers and text/json/xml responses</li>
-<li><strong>Familiar:</strong> a subset of the full API</li>
-<li><strong>Supported:</strong> supports IE8+ (<abbr title="Bring Your Own Promises">BYOP</abbr>)</li>
-<li><strong>Standalone:</strong> one function, no dependencies</li>
-<li><strong>Modern:</strong> written in ES2015, transpiled to 500b of old-school JS</li>
-</ul>
-
-
-<blockquote><p>🤔 <strong>What's Missing?</strong></p>
-
-<ul>
-<li>Uses simple Arrays instead of Iterables, since Arrays <em>are</em> iterables</li>
-<li>No streaming, just Promisifies existing XMLHttpRequest response bodies</li>
-</ul>
-</blockquote>
-
-<p><strong>Get it:</strong> <code>npm install --save unfetch</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// simple GET request: </span>
-</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/foo&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">txt</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// complex POST request with JSON, headers: </span>
-</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/bear&#39;</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>  <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="nx">hungry</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
-</span><span class='line'><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">open</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">));</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: I you are looking for all the functionalities of <code>fetch</code> API, <a href="https://nmotw.in/isomorphic-fetch/">isomorphic-fetch</a> would be an apt choice.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/unfetch/unfetch.gif" alt="unfetch" /></p>
 
 		
 		
