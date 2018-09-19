@@ -4,13 +4,50 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-09-09T00:29:43+05:30</updated>
+  <updated>2018-09-16T18:48:18+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mapscii]]></title>
+    <link href="http://nmotw.in/mapscii/"/>
+    <updated>2018-09-16T18:42:56+05:30</updated>
+    <id>http://nmotw.in/mapscii</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
+
+<blockquote><p>The Whole World In Your Console!</p></blockquote>
+
+<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
+
+<p><strong>Navigation:</strong></p>
+
+<ul>
+<li>Arrows up, down, left, right to scroll around</li>
+<li>Press a or z to zoom in and out</li>
+<li>Press q to quit</li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mapscii
+</span><span class='line'><span class="c"># you should see the entire map on the CLI</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/mapscii/mapscii.gif" alt="mapscii" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[microjob]]></title>
@@ -174,7 +211,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>^ this reuslts in modification of your <code>package.json</code> to:</p>
+<p>^ this results in modification of your <code>package.json</code> to:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1348,50 +1385,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/global-cache/global-cache.gif" alt="global-cache.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dayjs]]></title>
-    <link href="http://nmotw.in/dayjs/"/>
-    <updated>2018-04-26T14:32:27+05:30</updated>
-    <id>http://nmotw.in/dayjs</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dayjs">dayjs</a></h1>
-
-<blockquote><p>⏰ Fast 2KB immutable date library.</p></blockquote>
-
-<p><code>dayjs</code> is a minimalist JavaScript library for modern browsers with a largely Moment.js-compatible API, with:</p>
-
-<p>🕒 Familiar Moment.js API &amp; patterns
-💪 Immutable
-🔥 Chainable
-📦 2kb mini library
-👫 All browsers support</p>
-
-<p><strong>Get it:</strong> <code>npm install dayjs</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">dayjs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dayjs&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">dayjs</span><span class="p">()</span>
-</span><span class='line'><span class="p">.</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;day&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;YYYY-MM-DD HH:mm:ss&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/dayjs/dayjs.gif" alt="dayjs" /></p>
 ]]></content>
   </entry>
   
