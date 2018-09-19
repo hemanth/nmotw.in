@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="most Monadic streams Most.js is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e. &hellip;">   
+    <meta name="description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/9/">
-    <meta name="twitter:description" content="most Monadic streams Most.js is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e. &hellip;">
+    <meta name="twitter:description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/9/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="most Monadic streams Most.js is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e. &hellip;" />
+    <meta property="og:description" content="unfetch Tiny 500b fetch "barely-polyfill" Tiny: under 500 bytes of ES3 gzipped
+Minimal: just fetch() with headers and text/json/xml responses &hellip;" />
 
     
 
@@ -67,6 +70,105 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/unfetch/">
+			
+				Unfetch</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-02-25T09:11:13+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/unfetch">unfetch</a></h1>
+
+<blockquote><p>Tiny 500b fetch "barely-polyfill"</p></blockquote>
+
+<ul>
+<li><strong>Tiny:</strong> under <strong>500 bytes</strong> of <a href="https://unpkg.com/unfetch">ES3</a> gzipped</li>
+<li><strong>Minimal:</strong> just <code>fetch()</code> with headers and text/json/xml responses</li>
+<li><strong>Familiar:</strong> a subset of the full API</li>
+<li><strong>Supported:</strong> supports IE8+ (<abbr title="Bring Your Own Promises">BYOP</abbr>)</li>
+<li><strong>Standalone:</strong> one function, no dependencies</li>
+<li><strong>Modern:</strong> written in ES2015, transpiled to 500b of old-school JS</li>
+</ul>
+
+
+<blockquote><p>🤔 <strong>What's Missing?</strong></p>
+
+<ul>
+<li>Uses simple Arrays instead of Iterables, since Arrays <em>are</em> iterables</li>
+<li>No streaming, just Promisifies existing XMLHttpRequest response bodies</li>
+</ul>
+</blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save unfetch</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// simple GET request: </span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/foo&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="nx">txt</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// complex POST request with JSON, headers: </span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/bear&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="nx">hungry</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+</span><span class='line'><span class="p">}).</span><span class="nx">then</span><span class="p">(</span> <span class="nx">r</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">open</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">));</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">r</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: I you are looking for all the functionalities of <code>fetch</code> API, <a href="https://nmotw.in/isomorphic-fetch/">isomorphic-fetch</a> would be an apt choice.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/unfetch/unfetch.gif" alt="unfetch" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1025,90 +1127,6 @@ Your screen will become bright again after the command completes execution.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/regexgen/regexgen.gif" alt="regexgen" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/image-size/">
-			
-				Image-size</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-12-15T21:28:47+05:30" pubdate data-updated="true">Dec 15<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/image-size">image-size</a></h1>
-
-<blockquote><p>get dimensions of any image file</p></blockquote>
-
-<p><code>image-size</code> maybe call it <code>image-dimensions</code>? Anyway it's a sweet module that does one thing and does it right!</p>
-
-<p><strong>Supported image types:</strong></p>
-
-<ul>
-<li>BMP</li>
-<li>GIF</li>
-<li>JPEG</li>
-<li>PNG</li>
-<li>PSD</li>
-<li>TIFF</li>
-<li>WebP</li>
-<li>SVG</li>
-</ul>
-
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>npm install image-size --save</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Sync:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">sizeOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;image-size&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">dimensions</span> <span class="o">=</span> <span class="nx">sizeOf</span><span class="p">(</span><span class="s1">&#39;images/funny-cats.png&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Async:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">sizeOf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;image-size&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">sizeOf</span><span class="p">(</span><span class="s1">&#39;images/funny-cats.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dimensions</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/image-size/image-size.gif" alt="image-size" /></p>
 
 		
 		

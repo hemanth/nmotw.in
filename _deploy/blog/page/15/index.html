@@ -7,7 +7,9 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="is-christmas 🎅 Is today Christmas? 🎄 Simple fun module that returns true or false if it's Christmas or not. Get it: $ npm install --save is- &hellip;">   
+    <meta name="description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
+2
+var stackTrace = require &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +17,18 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="is-christmas 🎅 Is today Christmas? 🎄 Simple fun module that returns true or false if it's Christmas or not. Get it: $ npm install --save is- &hellip;">
+    <meta name="twitter:description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
+2
+var stackTrace = require &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="is-christmas 🎅 Is today Christmas? 🎄 Simple fun module that returns true or false if it's Christmas or not. Get it: $ npm install --save is- &hellip;" />
+    <meta property="og:description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
+2
+var stackTrace = require &hellip;" />
 
     
 
@@ -67,6 +73,85 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/stack-trace/">
+			
+				Stack-trace</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-31T23:17:09+05:30" pubdate data-updated="true">Dec 31<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/stack-trace">stack-trace</a></h1>
+
+<blockquote><p>Get v8 stack traces as an array of CallSite objects.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save stack-trace</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">stackTrace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stack-trace&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">trace</span> <span class="o">=</span> <span class="nx">stackTrace</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">stackTrace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;stack-trace&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">err</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;something went wrong&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">trace</span> <span class="o">=</span> <span class="nx">stackTrace</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And <code>trace</code> would have CallSite objects and each object will have the below methods:</p>
+
+<ul>
+<li><strong>getThis</strong>: returns the value of this</li>
+<li><strong>getTypeName</strong>: returns the type of this as a string. This is the name of the function stored in the constructor field of this, if available, otherwise the object's [[Class]] internal property.</li>
+<li><strong>getFunction</strong>: returns the current function</li>
+<li><strong>getFunctionName</strong>: returns the name of the current function, typically its name property. If a name property is not available an attempt will be made to try to infer a name from the function's context.</li>
+<li><strong>getMethodName</strong>: returns the name of the property of this or one of its prototypes that holds the current function</li>
+<li><strong>getFileName</strong>: if this function was defined in a script returns the name of the script</li>
+<li><strong>getLineNumber</strong>: if this function was defined in a script returns the current line number</li>
+<li><strong>getColumnNumber</strong>: if this function was defined in a script returns the current column number</li>
+<li><strong>getEvalOrigin</strong>: if this function was created using a call to eval returns a CallSite object representing the location where eval was called</li>
+<li><strong>isToplevel</strong>: is this a toplevel invocation, that is, is this the global object?</li>
+<li><strong>isEval</strong>: does this call take place in code defined by a call to eval?</li>
+<li><strong>isNative</strong>: is this call in native V8 code?</li>
+<li><strong>isConstructor</strong>: is this a constructor call?</li>
+</ul>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/stack-trace/stack-trace.gif" alt="stack-trace" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -820,72 +905,6 @@ var str = pretty(123456789);
 <p><img src="/images/sentiment/sentiment.gif" alt="sentiment.gif" /></p>
 
 <p>Thanks to <a href="https://twitter.com/thisandagain">Andrew Sliwinski</a> for this crazy module!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/hide-secrets/">
-			
-				Hide-secrets</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-10-22T19:39:43+05:30" pubdate data-updated="true">Oct 22<span>nd</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<script src="https://embed.tonicdev.com" data-element-id="hide-secrets"></script>
-
-
-<h1><a href="https://www.npmjs.com/package/hide-secrets">hide-secrets</a></h1>
-
-<blockquote><p>hide certain restricted fields whiling logging objects.</p></blockquote>
-
-<p>This module obfuscated any of <code>password</code>, <code>pass</code>, <code>token</code>, <code>auth</code>, <code>secret</code> or <code>passphrase</code> attribute's value to <code>'[SECRET]'</code>.
-Very useful when logging an object that has sensitive data!</p>
-
-<p><strong>Install it:</strong> <code>npm install --save hide-secrets</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<div id="hide-secrets">
-var hide = require('hide-secrets')
- 
-var obj = {
-  innerObject: {
-    password: 'abc123',
-    email: 'xyz@nmotw.in',
-    token: 'my-secret-token'
-  },
-  auth: '' // empty strings are left empty. 
-}
- 
-hide(obj)
-</div>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/hide-secrets/hide-secrets.gif" alt="hide-secrets" /></p>
-
-<p>Thanks to <a href="https://twitter.com/benjamincoe">Benjamin Coe</a> for helping us hide our secrets ;)</p>
 
 		
 		

@@ -1,0 +1,31 @@
+---
+layout: post
+title: "mapscii"
+date: 2018-09-16 18:42:56 +0530
+comments: true
+categories: fun cli
+---
+
+#[MapSCII](https://www.npmjs.com/package/mapscii)
+> The Whole World In Your Console!
+
+`MapSCII` make major use of `@mapbox/vector-tile` to bring the entire world map to your console.
+
+__Get it:__ `npm install -g mapscii`
+
+__Navigation:__
+
+* Arrows up, down, left, right to scroll around
+* Press a or z to zoom in and out
+* Press q to quit
+
+__Sample usage:__
+
+```sh
+$ mapscii
+# you should see the entire map on the CLI
+```
+
+__GIF FTW!__
+
+![mapscii](/images/mapscii/mapscii.gif)
