@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-16T18:48:18+05:30</updated>
+  <updated>2018-09-23T15:49:50+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[please-upgrade-node]]></title>
+    <link href="http://nmotw.in//github/please-upgrade-node/"/>
+    <updated>2018-09-23T15:42:17+05:30</updated>
+    <id>http://nmotw.in//github/please-upgrade-node</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
+
+<blockquote><p>💁 show a message to your users to upgrade Node instead of a stacktrace</p></blockquote>
+
+<p><code>please-upgrade-node</code>checks if the users node version is statisfying the <code>engines</code> version in your <code>package.json</code> if not warns, uber useful for CLI apps relying on versions.</p>
+
+<p><strong>GET IT:</strong> <code>npm install please-upgrade-node</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<h1>!/usr/bin/env node</h1>
+
+<p>const pkg = require('./package.json')
+require('please-upgrade-node')(pkg) // &lt;- Must run BEFORE requiring any other modules
+```</p>
+
+<p>in <code>package.json</code>:</p>
+
+<p>```
+{
+  "engines": {</p>
+
+<pre><code>"node": "&gt;=6"
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>P.S: <code>&gt;=</code> is the only operator supported.</p>
+
+<p>You could also:</p>
+
+<p>```js
+pleaseUpgradeNode(pkg, {
+  exitCode: 0, // Default: 1
+  message: function(requiredVersion) {</p>
+
+<pre><code>return 'Oops this program require Node ' +  requiredVersion
+</code></pre>
+
+<p>  }
+})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
@@ -195,73 +253,6 @@ var onExit = require('signal-exit')</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[prompts]]></title>
-    <link href="http://nmotw.in//github/prompts/"/>
-    <updated>2018-03-22T23:39:35+05:30</updated>
-    <id>http://nmotw.in//github/prompts</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/prompts">prompts</a></h1>
-
-<blockquote><p>Lightweight, beautiful and user-friendly interactive CLI prompts</p></blockquote>
-
-<p><code>prompts</code> Zero dep, promise based, unifined CLI prompt.</p>
-
-<p><strong>Get it:</strong> <code>npm install prompts</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-const prompts = require('prompts');</p>
-
-<p>let questions = [</p>
-
-<pre><code>{
-    type: 'text',
-    name: 'dish',
-    message: 'Do you like pizza?'
-},
-{
-    type: prev =&gt; prev == 'pizza' ? 'text' : null,
-    name: 'topping',
-    message: 'Name a topping'
-}
-</code></pre>
-
-<p>];</p>
-
-<p>let response = await prompts(questions);
-```</p>
-
-<p><strong>API:</strong></p>
-
-<p>```
-prompts(prompts, options);</p>
-
-<p>/*
-prompts:
-Type: Array|Object</p>
-
-<p>options: onSubmit or onCancel functions.</p>
-
-<p>prompt object properties:</p>
-
-<p>{
-  type: String || Function,
-  name: String || Function,
-  message: String || Function,
-  initial: String || Function || Async Function
-  format: Function || Async Function,
-  onState: Function
-}
-*/
-```</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/prompts/prompts.gif" alt="prompts.gif" /></p>
 ]]></content>
   </entry>
   
