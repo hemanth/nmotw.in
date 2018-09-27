@@ -1,0 +1,44 @@
+---
+layout: post
+title: "emma"
+date: 2018-09-27 12:13:16 +0530
+comments: true
+categories: npm
+---
+
+#[emma](https://www.npmjs.com/package/emma-cli)
+> Install the package you are looking for. 📦
+
+
+Search and install packages more efficiently with `emma` which makes use of [Algolia search API](https://www.algolia.com/), [npm-suggestions](https://github.com/JureSotosek/npm-suggestions) and the [Yarn](http://yarnpkg.com/) package manager.
+
+
+__Get it:__ `npm install -g emma-cli`
+
+
+__Sample usage:__
+
+```
+❯ nmotw.in ~ emma
+Search packages 📦  : grap
+Search results:
+  11   grap           loopingrage     Utility that GReps for gAPs and out of sequence line in log
+  8.4m sass-graph     xzyfer          Parse sass files and extract a graph of imports
+  3.7m @types/graphql DefinitelyTyped TypeScript definitions for graphql
+❯ 2.9m graphql        graphql         A Query Language and Runtime which can target any service.
+  1.8m graphlib       dagrejs         A directed and undirected multi-graph library
+Suggestions results: Press Tab to select suggestions
+  10.2m react-dom  facebook  React package for working with the DOM.
+  14.6m prop-types facebook  Runtime type checking for React props and similar objects.
+  7m    classnames JedWatson A simple utility for conditionally joining classNames toget
+  65.3m lodash     lodash    Lodash modular utilities.
+  7.2m  redux      reactjs   Predictable state container for JavaScript apps
+Search powered by Algolia.
+
+Picked: Press Space to install packages...
+› react  16.5.1
+```
+
+__GIF FTW!__
+
+![](/images/emma/emma-cli.gif)
