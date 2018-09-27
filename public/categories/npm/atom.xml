@@ -4,7 +4,7 @@
   <title><![CDATA[Category: npm | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/npm/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-27T12:20:41+05:30</updated>
+  <updated>2018-09-27T12:22:50+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -28,8 +28,8 @@
 
 <p><strong>Sample usage:</strong></p>
 
-<p>```sh
-❯nmotw.in ~ emma
+<p>``
+❯ nmotw.in ~ emma
 Search packages 📦  : grap
 Search results:
   11   grap           loopingrage     Utility that GReps for gAPs and out of sequence line in log
