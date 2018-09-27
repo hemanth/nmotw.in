@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="If you are into web development at one point or the other you would have used Google's pagespeed insights to improve the performance of your site. &hellip;">   
+    <meta name="description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/23/">
-    <meta name="twitter:description" content="If you are into web development at one point or the other you would have used Google's pagespeed insights to improve the performance of your site. &hellip;">
+    <meta name="twitter:description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/23/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="If you are into web development at one point or the other you would have used Google's pagespeed insights to improve the performance of your site. &hellip;" />
+    <meta property="og:description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;" />
 
     
 
@@ -67,6 +67,156 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/boom/">
+			
+				Boom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-26T19:26:34+05:30" pubdate data-updated="true">Jun 26<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of them, but would it not be cool to have more humanized mechanism to handle this?</p>
+
+<p>Well here is <a href="https://www.npmjs.org/package/boom">BOOM</a> HTTP-friendly error objects, as the name suggest it's make the error reporting more friendly.</p>
+
+<p><img src="/images/boom/boom.png" alt="" /></p>
+
+<p>Installing it is like any other node module: <code>npm install boom</code></p>
+
+<p>It provides the below error messages:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">[</span>
+</span><span class='line'>  <span class="s1">&#39;badRequest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unauthorized&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;forbidden&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notFound&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;methodNotAllowed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notAcceptable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;proxyAuthRequired&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;clientTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;conflict&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;resourceGone&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;lengthRequired&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;preconditionFailed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;entityTooLarge&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;uriTooLong&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;unsupportedMediaType&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;rangeNotSatisfiable&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;expectationFailed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;internal&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;notImplemented&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;badGateway&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;serverTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;gatewayTimeout&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s1">&#39;badImplementation&#39;</span>
+</span><span class='line'> <span class="p">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Sample usage:</h1>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">boom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;boom&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">notFound</span> <span class="o">=</span> <span class="nx">boom</span><span class="p">.</span><span class="nx">notFound</span><span class="p">(</span><span class="s2">&quot;Sorry, it&#39;s not here :(&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">{</span> <span class="p">[</span><span class="nb">Error</span><span class="o">:</span> <span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="s1">&#39;s not here :(]</span>
+</span><span class='line'><span class="s1">  data: null,</span>
+</span><span class='line'><span class="s1">  isBoom: true,</span>
+</span><span class='line'><span class="s1">  output: </span>
+</span><span class='line'><span class="s1">   { statusCode: 404,</span>
+</span><span class='line'><span class="s1">     payload: </span>
+</span><span class='line'><span class="s1">      { statusCode: 404,</span>
+</span><span class='line'><span class="s1">        error: &#39;</span><span class="nx">Not</span> <span class="nx">Found</span><span class="s1">&#39;,</span>
+</span><span class='line'><span class="s1">        message: &#39;</span><span class="nx">Sorry</span><span class="p">,</span> <span class="nx">it</span><span class="err">\</span><span class="s1">&#39;s not here :(&#39;</span> <span class="p">},</span>
+</span><span class='line'>     <span class="nx">headers</span><span class="o">:</span> <span class="p">{}</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">reformat</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">notFound</span><span class="p">.</span><span class="nx">output</span><span class="p">.</span><span class="nx">payload</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">{</span> <span class="nx">statusCode</span><span class="o">:</span> <span class="mi">404</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;Not Found&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Sorry, it\&#39;s not here :(&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>GIF FTW</h1>
+
+<p><img src="/images/boom/boom.gif" alt="" /></p>
+
+<p>Thanks to @WalmartLabs team for this module, specially for the maintainers <a href="http://hueniverse.com">Eran Hammer</a> and <a href="http://jsgeek.com">Wyatt Preul</a></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1120,107 +1270,6 @@
 <p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
 
 <p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/json-mask/">
-			
-				Json-mask</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-17T17:50:46+05:30" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
-
-<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
-
-<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
-
-<p>It's <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> Props ::= Prop | Prop "," Props
-</span><span class='line'>   Prop ::= Object | Array
-</span><span class='line'> Object ::= NAME | NAME "/" Object
-</span><span class='line'>  Array ::= NAME "(" Props ")"
-</span><span class='line'>   NAME ::= ? all visible characters ?</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Translating it few examples, that are loosely based on XPath syntax:</p>
-
-<ul>
-<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
-<li><code>a/b/c</code> path will select a field from its parent</li>
-<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
-<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
-</ul>
-
-
-<p><strong>Example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">jmask</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-mask&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span><span class="s1">&#39;hm&#39;</span><span class="p">},</span> <span class="nx">age</span><span class="o">:</span><span class="mi">7</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/last&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first,age&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">},</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/json-mask/json-mask.gif" alt="json-mask" /></p>
-
-<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
 
 		
 		
