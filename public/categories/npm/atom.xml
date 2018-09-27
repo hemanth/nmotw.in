@@ -4,7 +4,7 @@
   <title><![CDATA[Category: npm | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/npm/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-09-23T15:49:50+05:30</updated>
+  <updated>2018-09-27T12:20:41+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emma]]></title>
+    <link href="http://nmotw.in//github/emma/"/>
+    <updated>2018-09-27T12:13:16+05:30</updated>
+    <id>http://nmotw.in//github/emma</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
+
+<blockquote><p>Install the package you are looking for. 📦</p></blockquote>
+
+<p>Search and install packages more efficiently with <code>emma</code> which makes use of <a href="https://www.algolia.com/">Algolia search API</a>, <a href="https://github.com/JureSotosek/npm-suggestions">npm-suggestions</a> and the <a href="http://yarnpkg.com/">Yarn</a> package manager.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g emma-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+❯nmotw.in ~ emma
+Search packages 📦  : grap
+Search results:
+  11   grap           loopingrage     Utility that GReps for gAPs and out of sequence line in log
+  8.4m sass-graph     xzyfer          Parse sass files and extract a graph of imports
+  3.7m @types/graphql DefinitelyTyped TypeScript definitions for graphql
+❯ 2.9m graphql        graphql         A Query Language and Runtime which can target any service.
+  1.8m graphlib       dagrejs         A directed and undirected multi-graph library
+Suggestions results: Press Tab to select suggestions
+  10.2m react-dom  facebook  React package for working with the DOM.
+  14.6m prop-types facebook  Runtime type checking for React props and similar objects.
+  7m    classnames JedWatson A simple utility for conditionally joining classNames toget
+  65.3m lodash     lodash    Lodash modular utilities.
+  7.2m  redux      reactjs   Predictable state container for JavaScript apps
+Search powered by Algolia.</p>
+
+<p>Picked: Press Space to install packages...
+› react  16.5.1
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/emma/emma-cli.gif" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[npx]]></title>
@@ -186,86 +228,6 @@ yarn why
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[next-update]]></title>
-    <link href="http://nmotw.in//github/next-update/"/>
-    <updated>2016-08-11T19:10:05+05:30</updated>
-    <id>http://nmotw.in//github/next-update</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/next-update">next-update</a></h1>
-
-<blockquote><p>Can I update the dependencies without breaking the tests?</p></blockquote>
-
-<p>Summarizing <code>next-update</code> from the authors own words:</p>
-
-<ul>
-<li>A good workflow using <em>next-update</em>
-
-<ul>
-<li>see available new versions <code>next-update --available</code></li>
-<li>check latest version of each module using <code>next-update --latest</code></li>
-<li>install new versions of the desired modules using standard <code>npm i dependency@version --save</code></li>
-</ul>
-</li>
-<li>You can use custom test command, for example <code>next-update -t "grunt test"</code>
-
-<ul>
-<li><code>npm test</code> is used by default.</li>
-</ul>
-</li>
-<li>You can keep each working version in package.json by using <code>--keep</code> flag.</li>
-</ul>
-
-
-<p><strong>Get it:</strong></p>
-
-<p><code>npm install -g next-update  // installs module globally</code></p>
-
-<p><code>npm install --save-dev next-update</code></p>
-
-<p>In your <code>package.json</code> :</p>
-
-<p>```js
-{</p>
-
-<pre><code>"scripts": {
-    "next-update": "next-update -k true --tldr"
-}
-</code></pre>
-
-<p>}
-```</p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-$ next-update --help | pbcopy
-next-update - Tests if module's dependencies can be updated to the newer version without breaking the tests
-  version: 1.2.2
-  author: {"email":"gleb.bahmutov@gmail.com","name":"Gleb Bahmutov"}</p>
-
-<p>Options:
-  --revert           install original module versions listed in package.json   [default: false]
-  --available, -a    only query available later versions, do not test them     [default: false]
-  --module, -m       checks specific module, can include version name@version  [default: null]
-  --latest, -l       only check latest available update                        [default: true]
-  --color, -c        color terminal output (if available)                      [default: true]
-  --version, -v      show version and exit                                     [default: false]
-  --test, -t         custom test command to run instead of npm test        <br/>
-  --skip             skip running tests first                                  [default: false]
-  --all              install all modules at once before testing                [default: false]
-  --keep, -k         keep tested version if it is working                      [default: false]
-  --allow            allow major / minor / patch updates                       [default: "major"]
-  --type             check dependencies of type (all, prod, dev, peer)         [default: "all"]
-  --tldr             only print VERY important log messages                    [default: false]
-  --changed-log, -L  print commit changes between working versions             [default: true]
-```</p>
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/next-update/next-update.gif" alt="" /></p>
 ]]></content>
   </entry>
   

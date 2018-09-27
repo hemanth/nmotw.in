@@ -4,13 +4,73 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-09-23T15:49:50+05:30</updated>
+  <updated>2018-09-27T12:20:41+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emma]]></title>
+    <link href="http://nmotw.in/emma/"/>
+    <updated>2018-09-27T12:13:16+05:30</updated>
+    <id>http://nmotw.in/emma</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
+
+<blockquote><p>Install the package you are looking for. 📦</p></blockquote>
+
+<p>Search and install packages more efficiently with <code>emma</code> which makes use of <a href="https://www.algolia.com/">Algolia search API</a>, <a href="https://github.com/JureSotosek/npm-suggestions">npm-suggestions</a> and the <a href="http://yarnpkg.com/">Yarn</a> package manager.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g emma-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>❯nmotw.in ~ emma
+</span><span class='line'>Search packages 📦  : grap
+</span><span class='line'>Search results:
+</span><span class='line'>  11   grap           loopingrage     Utility that GReps <span class="k">for </span>gAPs and out of sequence line in log
+</span><span class='line'>  8.4m sass-graph     xzyfer          Parse sass files and extract a graph of imports
+</span><span class='line'>  3.7m @types/graphql DefinitelyTyped TypeScript definitions <span class="k">for </span>graphql
+</span><span class='line'>❯ 2.9m graphql        graphql         A Query Language and Runtime which can target any service.
+</span><span class='line'>  1.8m graphlib       dagrejs         A directed and undirected multi-graph library
+</span><span class='line'>Suggestions results: Press Tab to <span class="k">select </span>suggestions
+</span><span class='line'>  10.2m react-dom  facebook  React package <span class="k">for </span>working with the DOM.
+</span><span class='line'>  14.6m prop-types facebook  Runtime <span class="nb">type </span>checking <span class="k">for </span>React props and similar objects.
+</span><span class='line'>  7m    classnames JedWatson A simple utility <span class="k">for </span>conditionally joining classNames toget
+</span><span class='line'>  65.3m lodash     lodash    Lodash modular utilities.
+</span><span class='line'>  7.2m  redux      reactjs   Predictable state container <span class="k">for </span>JavaScript apps
+</span><span class='line'>Search powered by Algolia.
+</span><span class='line'>
+</span><span class='line'>Picked: Press Space to install packages...
+</span><span class='line'>› react  16.5.1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/emma/emma-cli.gif" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[please-upgrade-node]]></title>
@@ -1333,44 +1393,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[scrape-it]]></title>
-    <link href="http://nmotw.in/scrape-it/"/>
-    <updated>2018-05-12T11:34:02+05:30</updated>
-    <id>http://nmotw.in/scrape-it</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scrape-it">scrape-it</a></h1>
-
-<blockquote><p>scraper for humans.</p></blockquote>
-
-<p><code>scrape-it</code> uses <a href="https://www.npmjs.com/package/cheerio">cheerio</a> under the hood and makes it easier to scrape websites.</p>
-
-<p><strong>Get it:</strong> <code>npm install [-g] scrape-it</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">scrapeIt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;scrape-it&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">scrapeIt</span><span class="p">(</span><span class="s2">&quot;https://nmotw.in&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">tagLine</span><span class="o">:</span> <span class="s2">&quot;.tagline&quot;</span><span class="p">})</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">scraped</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">scraped</span><span class="p">.</span><span class="nx">data</span><span class="p">))</span>
-</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ {tagLine: &quot;Node Mode Of The Week&quot;}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/scrape-it/scrape-it.gif" alt="scrape-it.gif" /></p>
 ]]></content>
   </entry>
   
