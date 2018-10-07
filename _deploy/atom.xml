@@ -4,13 +4,53 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-09-27T12:38:38+05:30</updated>
+  <updated>2018-10-07T14:40:13+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[regex-not]]></title>
+    <link href="http://nmotw.in/regex-not/"/>
+    <updated>2018-10-07T14:29:22+05:30</updated>
+    <id>http://nmotw.in/regex-not</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/regex-not">regex-not</a></h1>
+
+<blockquote><p>Match everything except</p></blockquote>
+
+<p>How many times have you encouraged this sistuation where in you had to match everything execpt a particular string?</p>
+
+<p><code>regex-not</code> creates a regular expression for matching everything except for the given string.</p>
+
+<p><strong>Get it:</strong> <code>npm install regex-not</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">regexNot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;regex-not&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">notFoo</span> <span class="o">=</span> <span class="nx">regexNot</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; /^(?:(?!^(?:foo)$).)*$/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">notFoo</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">);</span> <span class="c1">//false</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">notFoo</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">);</span> <span class="c1">// true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/regex-not/regex-not.gif" alt="regex-not" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[emma]]></title>
@@ -1350,48 +1390,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/what-dog/what-dog.gif" alt="what-dog.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[signal-exit]]></title>
-    <link href="http://nmotw.in/signal-exit/"/>
-    <updated>2018-05-20T20:33:02+05:30</updated>
-    <id>http://nmotw.in/signal-exit</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/signal-exit">signal-exit</a></h1>
-
-<blockquote><p>Fire an event no matter how a process exits.</p></blockquote>
-
-<p><code>signal-exit</code> fires an event no matter how a process exits:</p>
-
-<ul>
-<li>reaching the end of execution.</li>
-<li>explicitly having <code>process.exit(code)</code> called.</li>
-<li>having <code>process.kill(pid, sig)</code> called.</li>
-<li>receiving a fatal signal from outside the process</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install signal-exit</code></p>
-
-<p><strong>Sample code:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">onExit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;signal-exit&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">onExit</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;process exited!&#39;</span><span class="p">,</span> <span class="nx">code</span><span class="p">,</span> <span class="nx">signal</span><span class="p">)</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
 ]]></content>
   </entry>
   

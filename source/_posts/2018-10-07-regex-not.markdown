@@ -1,0 +1,32 @@
+---
+layout: post
+title: "regex-not"
+date: 2018-10-07 14:29:22 +0530
+comments: true
+categories: util regex 
+---
+
+#[regex-not](https://www.npmjs.com/package/regex-not)
+> Match everything except
+
+How many times have you encouraged this sistuation where in you had to match everything execpt a particular string?
+
+`regex-not` creates a regular expression for matching everything except for the given string.
+
+__Get it:__ `npm install regex-not`
+
+__Sample usage:__
+
+```js
+const regexNot = require('regex-not');
+const notFoo = regexNot('foo');
+//=> /^(?:(?!^(?:foo)$).)*$/
+
+notFoo.test("foo"); //false
+
+notFoo.test("foobar"); // true
+```
+
+__GIF FTW__
+
+![regex-not](/images/regex-not/regex-not.gif)
