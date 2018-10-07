@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-10-07T14:35:07+05:30</updated>
+  <updated>2018-10-07T14:40:13+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/regex-not/"/>
     <updated>2018-10-07T14:29:22+05:30</updated>
     <id>http://nmotw.in/regex-not</id>
-    <content type="html"><![CDATA[<h1><a href="">regex-not</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/regex-not">regex-not</a></h1>
 
 <blockquote><p>Match everything except</p></blockquote>
 
