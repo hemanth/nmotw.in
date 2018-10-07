@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: regex | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/regex/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2018-10-07T14:35:07+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[regex-not]]></title>
+    <link href="http://nmotw.in//github/regex-not/"/>
+    <updated>2018-10-07T14:29:22+05:30</updated>
+    <id>http://nmotw.in//github/regex-not</id>
+    <content type="html"><![CDATA[<h1><a href="">regex-not</a></h1>
+
+<blockquote><p>Match everything except</p></blockquote>
+
+<p>How many times have you encouraged this sistuation where in you had to match everything execpt a particular string?</p>
+
+<p><code>regex-not</code> creates a regular expression for matching everything except for the given string.</p>
+
+<p><strong>Get it:</strong> <code>npm install regex-not</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const regexNot = require('regex-not');
+const notFoo = regexNot('foo');
+//=> /<sup>(?:(?!<sup>(?:foo)$).)*$/</sup></sup></p>
+
+<p>notFoo.test("foo"); //false</p>
+
+<p>notFoo.test("foobar"); // true
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/regex-not/regex-not.gif" alt="regex-not" /></p>
+]]></content>
+  </entry>
+  
+</feed>
