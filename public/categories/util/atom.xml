@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util, | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/util/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-10-14T22:51:58+05:30</updated>
+  <updated>2018-10-14T22:54:41+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,64 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[zet]]></title>
-    <link href="http://nmotw.in//github/zet/"/>
-    <updated>2018-10-13T14:47:06+05:30</updated>
-    <id>http://nmotw.in//github/zet</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
-
-<blockquote><p>Set() as it should be.</p></blockquote>
-
-<p><code>zet</code> is an extension of ES6 Set and comes with all its functionality included along with the below:</p>
-
-<ul>
-<li>∪ union</li>
-<li>∩ intersection</li>
-<li><ul>
-<li>difference/subtract</li>
-</ul>
-</li>
-<li>⊖ symmetric difference</li>
-<li>⊆ subset</li>
-<li>⊇ superse</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install zet</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<p>const Zet = require('zet');</p>
-
-<p>let a = new Zet([1, 2, 3]);
-let b = new Zet([3, 4, 5]);
-let c = new Zet([2, 3, 4]);</p>
-
-<p>Zet.union(a, b);
-//=> [Zet] {1, 2, 3, 4, 5}</p>
-
-<p>a.union(b, c);
-//=> [Zet] {1, 2, 3, 4, 5}</p>
-
-<p>a.intersection(b);
-//=> [Zet] {3}</p>
-
-<p>a.symmetricDifference(c);
-//=> [Zet] {1, 4}</p>
-
-<p>a.subset(b);
-//=> false
-```</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/zet/zet.gif" alt="zet" /></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[scrape-it]]></title>
