@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">   
+    <meta name="description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/20/">
-    <meta name="twitter:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;">
+    <meta name="twitter:description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/20/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="mapobject Use a ES6 map, like an object. This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect &hellip;" />
+    <meta property="og:description" content="dehumanize-date Parse dates in all the formats humans like to use. Yes, it dehumanize dates will almost all the formates humans like to use, those &hellip;" />
 
     
 
@@ -67,6 +67,156 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dehumanize-date/">
+			
+				Dehumanize-date</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-12T17:57:21+05:30" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dehumanize-date">dehumanize-date</a></h1>
+
+<blockquote><p>Parse dates in all the formats humans like to use.</p></blockquote>
+
+<p>Yes, it dehumanize dates will almost all the formates humans like to use, those invovle:</p>
+
+<ul>
+<li>today/tomorrow/yesterday</li>
+<li>next/this/last Wednesday</li>
+<li>12th January</li>
+<li>12th January 1950</li>
+<li>09-08-2008</li>
+<li>2008-08-09</li>
+</ul>
+
+
+<p>And returns a computer friendly date of the format: <code>yyyy-dd-mm</code></p>
+
+<p>The heart of the module consists of the below regular expressions:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">NUMBER</span>              <span class="o">=</span> <span class="sr">/^[0-9]+$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_WITH_ORDINAL</span> <span class="o">=</span> <span class="sr">/^([0-9]+)(st|nd|rd|th)?$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE</span>         <span class="o">=</span> <span class="sr">/^(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{4})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_USA</span>     <span class="o">=</span> <span class="sr">/^(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{4})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_SHORT_YEAR</span>         <span class="o">=</span> <span class="sr">/^(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{2})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">NUMBER_DATE_SHORT_YEAR_USA</span>     <span class="o">=</span> <span class="sr">/^(1[0-2]|0?[1-9])[,\|\\\/\-\. ]+(3[0-1]|[1-2][0-9]|0?[1-9])[,\|\\\/\-\. ]+([0-9]{2})$/</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">ISO_8601_DATE</span>       <span class="o">=</span> <span class="sr">/^([0-9]{4})-?(1[0-2]|0?[1-9])-?(3[0-1]|[1-2][0-9]|0?[1-9])$/</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">dehumanizeDate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dehumanize-date&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span>
+</span><span class='line'><span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">]</span>
+</span><span class='line'>  <span class="nx">parseNearbyDays</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNearbyDays</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseLastThisNext</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseLastThisNext</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseNumberDate</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNumberDate</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseNumberDateShortYear</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseNumberDateShortYear</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parseWordyDate</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parseWordyDate</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">monthFromName</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">monthFromName</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">date</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">date</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;today&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-12&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;tommorrow&quot;</span><span class="p">)</span> <span class="c1">// In case it does not match any.</span>
+</span><span class='line'><span class="kc">null</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;tomorrow&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-13&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;yesterday&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-02-11&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;1st January&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2015-01-01&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;1st January 1997&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;1997-01-01&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;09-09-2009&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2009-09-09&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">dehumanizeDate</span><span class="p">(</span><span class="s2">&quot;2009-09-09&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="s1">&#39;2009-09-09&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dehumanize-date/dehumanize-date.gif" alt="dehumanize-date" /></p>
+
+<p>Thanks for <a href="http://www.jepso.com">Forbes Lindesay</a> for dehumanizing dates ;)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -933,103 +1083,6 @@
 <p><img src="/images/treeify/treeify.gif" alt="treeify" /></p>
 
 <p>Thanks to <a href="http://lukep.org/">Luke Plaster</a> for making our life a bit more easier on the CLI.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/tldr/">
-			
-				Tldr</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-04T17:59:16+05:30" pubdate data-updated="true">Dec 4<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://github.com/tldr-pages/tldr">tldr</a></h1>
-
-<p>If you are new to CLI or not able to recall the flags of your CLI tool, you would consult <code>man pages</code>.</p>
-
-<p><code>tldr</code> is "Too Long Didn't Read" version of man pages ;) i.e it shows us the common usages of a given command.</p>
-
-<p><code>tldr</code> covers:</p>
-
-<ul>
-<li><p>Common commands.</p></li>
-<li><p>GNU/Linux.</p></li>
-<li><p>OSX.</p></li>
-<li><p>SunOS.</p></li>
-</ul>
-
-
-<p><strong>Install it as a CLI app:</strong> <code>$ npm install -g tldr</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>tldr sudo
-</span><span class='line'>
-</span><span class='line'>  execute a <span class="nb">command </span>as another user
-</span><span class='line'>
-</span><span class='line'>  - Listing of an unreadable directory:
-</span><span class='line'>
-</span><span class='line'>  sudo ls /usr/local/scrt
-</span><span class='line'>
-</span><span class='line'>  - To edit a file as user www:
-</span><span class='line'>
-</span><span class='line'>  sudo -u www vi /var/www/index.html
-</span><span class='line'>
-</span><span class='line'>  - To shutdown the machine:
-</span><span class='line'>
-</span><span class='line'>  sudo shutdown -r +10 <span class="s2">&quot;Cya soon!&quot;</span>
-</span><span class='line'>
-</span><span class='line'>  - To repeat the last <span class="nb">command </span>as sudo
-</span><span class='line'>
-</span><span class='line'>  sudo !!
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/tldr/tldr.gif" alt="tldr" /></p>
-
-<p>All TLDR pages are in <code>markdown</code> format, checkout <a href="https://github.com/tldr-pages/tldr/blob/master/pages/common/sudo.md">sudo</a> page for an example, this is a community dirven effort, so please feel free to <a href="https://github.com/tldr-pages/tldr/blob/master/CONTRIBUTING.md">contribute</a> :)</p>
 
 		
 		
