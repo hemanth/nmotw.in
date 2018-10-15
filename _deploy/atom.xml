@@ -4,13 +4,90 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-10-07T14:40:13+05:30</updated>
+  <updated>2018-10-14T22:54:41+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[zet]]></title>
+    <link href="http://nmotw.in/zet/"/>
+    <updated>2018-10-13T14:47:06+05:30</updated>
+    <id>http://nmotw.in/zet</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
+
+<blockquote><p>Set() as it should be.</p></blockquote>
+
+<p><code>zet</code> is an extension of ES6 Set and comes with all its functionality included along with the below:</p>
+
+<ul>
+<li>∪ union</li>
+<li>∩ intersection</li>
+<li><ul>
+<li>difference/subtract</li>
+</ul>
+</li>
+<li>⊖ symmetric difference</li>
+<li>⊆ subset</li>
+<li>⊇ superse</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install zet</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Zet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zet&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Zet</span><span class="p">.</span><span class="nx">union</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 2, 3, 4, 5}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">union</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 2, 3, 4, 5}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">intersection</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; [Zet] {3}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">symmetricDifference</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 4}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">subset</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//=&gt; false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/zet/zet.gif" alt="zet" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[regex-not]]></title>
@@ -1338,58 +1415,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/franc/franc.gif" alt="franc.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[what-dog]]></title>
-    <link href="http://nmotw.in/what-dog/"/>
-    <updated>2018-05-25T16:13:51+05:30</updated>
-    <id>http://nmotw.in/what-dog</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/what-dog">what-dog</a></h1>
-
-<blockquote><p>What 🐶 is this?</p></blockquote>
-
-<p>Get the breed of a dog from an image using Microsoft's what-dog.</p>
-
-<p><img src="what-dog.demo.png" alt="" /></p>
-
-<p><strong>Get it:</strong> <code>npm install --save what-dog</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">whatDog</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;what-dog&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">((</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">whatDog</span><span class="p">(</span><span class="s1">&#39;http://imgur.com/B7a15F5.jpg&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="p">})());</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">{</span>
-</span><span class='line'><span class="cm">  &quot;isDog&quot;: true,</span>
-</span><span class='line'><span class="cm">  &quot;breed&quot;: &quot;Norfolk Terrier&quot;,</span>
-</span><span class='line'><span class="cm">  &quot;about&quot;: &quot;Spirited, small but sturdy, feisty yet sweet personality&quot;</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/what-dog/what-dog.gif" alt="what-dog.gif" /></p>
 ]]></content>
   </entry>
   
