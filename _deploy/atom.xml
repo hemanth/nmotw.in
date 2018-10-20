@@ -4,13 +4,73 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-10-14T22:54:41+05:30</updated>
+  <updated>2018-10-20T14:36:18+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[compromise]]></title>
+    <link href="http://nmotw.in/compromise/"/>
+    <updated>2018-10-20T14:26:13+05:30</updated>
+    <id>http://nmotw.in/compromise</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/compromise">compromise</a></h1>
+
+<blockquote><p>modest natural-language processing.</p></blockquote>
+
+<p><code>compromise</code> is not the cleverest, but it is small, quick, and good-enough for a bunch of nlp stuff!</p>
+
+<p>Don't miss to checkout their site <a href="http://compromise.cool/">compromise.cool</a>!</p>
+
+<p><strong>GET IT:</strong> <code>npm install compromise</code></p>
+
+<p><strong>Sample usages:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">nlp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;compromise&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s1">&#39;JS is calling&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">sentences</span><span class="p">().</span><span class="nx">toNegative</span><span class="p">()</span>
+</span><span class='line'><span class="c1">// &#39;JS is not calling&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s2">&quot;the guest-singer&#39;s björk   at seven thirty.&quot;</span><span class="p">).</span><span class="nx">normalize</span><span class="p">().</span><span class="nx">out</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// &#39;The guest singer is Bjork at 7:30.&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s2">&quot;we&#39;re not gonna take it, no we ain&#39;t gonna take it.&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;going&#39;</span><span class="p">)</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;are not&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="c1">// == 2</span>
+</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">contractions</span><span class="p">().</span><span class="nx">expand</span><span class="p">().</span><span class="nx">out</span><span class="p">()</span>
+</span><span class='line'><span class="c1">//&#39;we are not going to take it, no we are not going to take it&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/compromise/compromise.gif" alt="compromise.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[zet]]></title>
@@ -1381,40 +1441,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/qw/qw.gif" alt="qw.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[franc]]></title>
-    <link href="http://nmotw.in/franc/"/>
-    <updated>2018-05-31T15:52:58+05:30</updated>
-    <id>http://nmotw.in/franc</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/franc">franc</a></h1>
-
-<blockquote><p>Detect the language of text.</p></blockquote>
-
-<p><code>franc</code> is a natural language detection lib that supports <code>188</code> languages (1M or more speakers).</p>
-
-<p><strong>Get it:</strong> <code>npm install franc</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">franc</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;franc&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">franc</span><span class="p">(</span><span class="s2">&quot;ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ would return &quot;kan&quot; indicating that it&#39;s Kannada</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/franc/franc.gif" alt="franc.gif" /></p>
 ]]></content>
   </entry>
   
