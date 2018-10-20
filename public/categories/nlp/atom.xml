@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: NLP | NMOTW]]></title>
+  <title><![CDATA[Category: nlp | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/nlp/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-10-14T22:54:41+05:30</updated>
+  <updated>2018-10-20T14:36:18+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,31 +14,48 @@
 
   
   <entry>
-    <title type="html"><![CDATA[franc]]></title>
-    <link href="http://nmotw.in//github/franc/"/>
-    <updated>2018-05-31T15:52:58+05:30</updated>
-    <id>http://nmotw.in//github/franc</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/franc">franc</a></h1>
+    <title type="html"><![CDATA[compromise]]></title>
+    <link href="http://nmotw.in//github/compromise/"/>
+    <updated>2018-10-20T14:26:13+05:30</updated>
+    <id>http://nmotw.in//github/compromise</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/compromise">compromise</a></h1>
 
-<blockquote><p>Detect the language of text.</p></blockquote>
+<blockquote><p>modest natural-language processing.</p></blockquote>
 
-<p><code>franc</code> is a natural language detection lib that supports <code>188</code> languages (1M or more speakers).</p>
+<p><code>compromise</code> is not the cleverest, but it is small, quick, and good-enough for a bunch of nlp stuff!</p>
 
-<p><strong>Get it:</strong> <code>npm install franc</code></p>
+<p>Don't miss to checkout their site <a href="http://compromise.cool/">compromise.cool</a>!</p>
 
-<p><strong>Sample usage:</strong></p>
+<p><strong>GET IT:</strong> <code>npm install compromise</code></p>
 
-<p>```js
-var franc = require("franc")</p>
+<p><strong>Sample usages:</strong></p>
 
-<p>franc("ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ");</p>
+<p>```js</p>
 
-<p>// ^ would return "kan" indicating that it's Kannada
-```</p>
+<p>const nlp = require('compromise')</p>
 
-<p><strong>GIF FTW!</strong></p>
+<p>const doc = nlp('JS is calling')
+doc.sentences().toNegative()
+// 'JS is not calling'</p>
 
-<p><img src="/images/franc/franc.gif" alt="franc.gif" /></p>
+<p>```</p>
+
+<p><code>js
+doc = nlp("the guest-singer's björk   at seven thirty.").normalize().out('text')
+// 'The guest singer is Bjork at 7:30.'
+</code></p>
+
+<p><code>js
+doc = nlp("we're not gonna take it, no we ain't gonna take it.")
+doc.has('going') // true
+doc.match('are not').length // == 2
+doc.contractions().expand().out()
+//'we are not going to take it, no we are not going to take it'
+</code></p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/compromise/compromise.gif" alt="compromise.gif" /></p>
 ]]></content>
   </entry>
   

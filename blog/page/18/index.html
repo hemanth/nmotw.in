@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;">   
+    <meta name="description" content="ramjet Transform DOM elements into each another with smooth transitions ramjet helps us to Morph DOM elements from one state to another with smooth &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;">
+    <meta name="twitter:description" content="ramjet Transform DOM elements into each another with smooth transitions ramjet helps us to Morph DOM elements from one state to another with smooth &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fade Fade a HTML element using CSS transitions. Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right &hellip;" />
+    <meta property="og:description" content="ramjet Transform DOM elements into each another with smooth transitions ramjet helps us to Morph DOM elements from one state to another with smooth &hellip;" />
 
     
 
@@ -67,6 +67,76 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ramjet/">
+			
+				Ramjet</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-09T22:30:40+05:30" pubdate data-updated="true">Jul 9<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="http://npm.im/ramjet">ramjet</a></p>
+
+<blockquote><p>Transform DOM elements into each another with smooth transitions</p></blockquote>
+
+<p><code>ramjet</code> helps us to Morph DOM elements from one state to another with smooth transitions!</p>
+
+<p>All it does is:</p>
+
+<ul>
+<li><p>Clone the elements and all their children.</p></li>
+<li><p>Transform the second element so that it completely overlaps with the first.</p></li>
+<li><p>Animating the two elements together until the first element has exactly the same position and dimensions as the second element.</p></li>
+</ul>
+
+
+<p><strong>install it:</strong> <code>npm install --save ramjet</code></p>
+
+<p><strong>sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;a&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: red; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;b&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: blue; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>b<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;script&gt;</span>
+</span><span class='line'>  <span class="nx">ramjet</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
+
+<p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -923,92 +993,6 @@ P.S: There is <code>console.dir</code> but <code>console.json</code> is kina app
 <p><strong>GIF FTW!:</strong></p>
 
 <p><img src="/images/console.json/console.json.gif" alt="console.json" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/color-string/">
-			
-				Color-string</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-30T19:03:09+05:30" pubdate data-updated="true">Apr 30<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
-
-<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
-
-<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
-
-<p>The API names are pretty self explainatory, the module has the below methods:</p>
-
-<p><strong>Methods for parsing:</strong></p>
-
-<ul>
-<li><p>getRgba</p></li>
-<li><p>getHsla</p></li>
-<li><p>getRgb</p></li>
-<li><p>getHsl</p></li>
-<li><p>getHwb</p></li>
-<li><p>getAlpha</p></li>
-</ul>
-
-
-<p><strong>Methods for generating:</strong></p>
-
-<ul>
-<li><p>hexString</p></li>
-<li><p>rgbString</p></li>
-<li><p>rgbaString</p></li>
-<li><p>percentString</p></li>
-<li><p>percentaString</p></li>
-<li><p>hslString</p></li>
-<li><p>hslaString</p></li>
-<li><p>hwbString</p></li>
-<li><p>keyword</p></li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorString</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;color-string&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">getRgb</span><span class="p">(</span><span class="s2">&quot;#FFF&quot;</span><span class="p">)</span>  <span class="c1">// [255, 255, 255] </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">colorString</span><span class="p">.</span><span class="nx">keyword</span><span class="p">([</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>       <span class="c1">// &quot;yellow&quot; </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
 
 		
 		
