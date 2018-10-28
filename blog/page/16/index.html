@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">   
+    <meta name="description" content="ambi Execute a function ambidextrously. ambi normalizes the differences between synchronous and asynchronous functions! That is treating synchronous &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">
+    <meta name="twitter:description" content="ambi Execute a function ambidextrously. ambi normalizes the differences between synchronous and asynchronous functions! That is treating synchronous &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;" />
+    <meta property="og:description" content="ambi Execute a function ambidextrously. ambi normalizes the differences between synchronous and asynchronous functions! That is treating synchronous &hellip;" />
 
     
 
@@ -67,6 +67,67 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ambi/">
+			
+				Ambi</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-03T20:51:30+05:30" pubdate data-updated="true">Dec 3<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
+
+<blockquote><p>Execute a function ambidextrously.</p></blockquote>
+
+<p><code>ambi</code> normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --save ambi</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ambi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ambi&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">child_process</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ambi</span><span class="p">(</span><span class="nx">child_process</span><span class="p">.</span><span class="nx">execSync</span><span class="p">,</span> <span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">encoding</span><span class="o">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span> <span class="c1">// Async </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ambi</span><span class="p">(</span><span class="nx">child_process</span><span class="p">.</span><span class="nx">exec</span><span class="p">,</span> <span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">encoding</span><span class="o">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span> <span class="c1">// Sync</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ambi/ambi.gif" alt="ambi" /></p>
+
+<p>Thanks to <a href="http://balupton.com/">Benjamin Lupton</a> for this module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -883,76 +944,6 @@ you need to just <code>require('instapromise')</code> and then you could just us
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/clipboard.js/clipboard.js.gif" alt="clipboard.js" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/trianglify/">
-			
-				Trianglify</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-24T17:23:44+05:30" pubdate data-updated="true">Sep 24<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
-
-<blockquote><p>Trianglify generates colorful triangle meshes that can be used as SVG images and CSS backgrounds.</p></blockquote>
-
-<p>This is inspired by <a href="https://github.com/btmills/geopattern">btmills/geopattern</a> thanks to <a href="http://qrohlf.com/">Quinn Rohlf</a> for this.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save trianglify</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Trianglify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;trianglify&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">width</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">200</span><span class="p">});</span>
-</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">canvas</span><span class="p">());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>There are few wonderful <a href="https://github.com/qrohlf/trianglify/blob/master/Readme.md#options">options</a> <code>color_function</code> being one of them.</p>
-
-<p>Color function that uses the HSL color format to generate a rainbow pattern:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">colorFunc</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;hsl(&#39;</span><span class="o">+</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="o">*</span><span class="nx">y</span><span class="p">)</span><span class="o">*</span><span class="mi">360</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;,80%,60%)&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="nx">Trianglify</span><span class="p">({</span><span class="nx">color_function</span><span class="o">:</span> <span class="nx">colorFunc</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
 
 		
 		

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: react | NMOTW]]></title>
+  <link href="http://nmotw.in//github/public/categories/react/atom.xml" rel="self"/>
+  <link href="http://nmotw.in//github/"/>
+  <updated>2018-10-28T23:54:10+05:30</updated>
+  <id>http://nmotw.in//github/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[the-platform]]></title>
+    <link href="http://nmotw.in//github/the-platform/"/>
+    <updated>2018-10-28T15:33:43+05:30</updated>
+    <id>http://nmotw.in//github/the-platform</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
+
+<blockquote><p>Browser API's turned into React Hooks and Suspense-friendly components.</p></blockquote>
+
+<p><code>the-platform</code> is a uber fun module that has React Hooks and Suspense friendly componets, it provides the below:</p>
+
+<p><strong>Hooks:</strong></p>
+
+<p>```</p>
+
+<pre><code>useDeviceMotion()
+useDeviceOrientation()
+useGeoPosition()
+useNetworkStatus()
+useMedia()
+useScript()
+useStylesheet()
+useWindowScrollPosition()
+useWindowSize()
+</code></pre>
+
+<p>```
+<strong>Components:</strong></p>
+
+<p>```</p>
+
+<pre><code>&lt;Img&gt;
+&lt;Script&gt;
+&lt;Video&gt;
+&lt;Audio&gt;
+&lt;Preload&gt;
+&lt;Stylesheet&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>P.S: Looks like it's a pun on <code>#useThePlatform</code> none the less it's an intresting module.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { useGeoPosition } from 'the-platform';</p>
+
+<p>const Example = () => {
+  const {</p>
+
+<pre><code>coords: { latitude, longitude },
+</code></pre>
+
+<p>  } = useGeoPosition();</p>
+
+<p>  // ...
+};
+```</p>
+
+<p>```js
+import React from 'react';
+import { Img } from 'the-platform';</p>
+
+<p>function App() {
+  return (</p>
+
+<pre><code>&lt;div&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;React.Suspense maxDuration={300} fallback={'loading...'}&gt;
+    &lt;Img src="https://source.unsplash.com/random/4000x2000" /&gt;
+  &lt;/React.Suspense&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  );
+}</p>
+
+<p>export default App;
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/the-platform/the-platform.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>
