@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="data.task A structure for representing asynchronous actions with automatic resource handling. data.task monad which can be used to replace &hellip;">   
+    <meta name="description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="data.task A structure for representing asynchronous actions with automatic resource handling. data.task monad which can be used to replace &hellip;">
+    <meta name="twitter:description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="data.task A structure for representing asynchronous actions with automatic resource handling. data.task monad which can be used to replace &hellip;" />
+    <meta property="og:description" content="why-is-node-running Node is running but you don't know why? why-is-node-running is here to help you. This is a cheeky module that plays with process &hellip;" />
 
     
 
@@ -67,6 +67,122 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/why-is-node-running/">
+			
+				Why-is-node-running</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-11T20:34:17+05:30" pubdate data-updated="true">Feb 11<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/why-is-node-running">why-is-node-running</a></h1>
+
+<blockquote><p>Node is running but you don't know why? why-is-node-running is here to help you.</p></blockquote>
+
+<p>This is a cheeky module that plays with <code>process.binding</code> of node, specifically with <code>process.binding('contextify').ContextifyScript;</code> the core of this library is from node's <a href="https://github.com/nodejs/node/blob/88307974e60346bc98c4e9f70a2b6918ccb6844f/src/node.js">source</a>.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save why-is-node-running</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;why-is-node-running&#39;</span><span class="p">);</span> <span class="c1">// should be your first require </span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;net&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">createServer</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">net</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span> <span class="mi">1000</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">createServer</span><span class="p">();</span>
+</span><span class='line'><span class="nx">createServer</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">log</span><span class="p">()</span> <span class="c1">// logs out active handles that are keeping node running </span>
+</span><span class='line'><span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When executed in <code>/tmp</code> you see an output like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>There are 4 known handle<span class="o">(</span>s<span class="o">)</span> keeping the process running and 0 unknown
+</span><span class='line'>Known handles:
+</span><span class='line'>
+</span><span class='line'><span class="c"># Timer</span>
+</span><span class='line'>/private/tmp/l:6  - setInterval<span class="o">(</span><span class="k">function</span> <span class="o">()</span> <span class="o">{}</span>, 1000<span class="o">)</span>;
+</span><span class='line'>/private/tmp/l:10 - createServer<span class="o">()</span>;
+</span><span class='line'>
+</span><span class='line'><span class="c"># TCP</span>
+</span><span class='line'>/private/tmp/l:7  - server.listen<span class="o">(</span>0<span class="o">)</span>;
+</span><span class='line'>/private/tmp/l:10 - createServer<span class="o">()</span>;
+</span><span class='line'>
+</span><span class='line'><span class="c"># TCP</span>
+</span><span class='line'>/private/tmp/l:7  - server.listen<span class="o">(</span>0<span class="o">)</span>;
+</span><span class='line'>/private/tmp/l:11 - createServer<span class="o">()</span>;
+</span><span class='line'>
+</span><span class='line'><span class="c"># Timer</span>
+</span><span class='line'>/private/tmp/l:13 - setTimeout<span class="o">(</span><span class="k">function</span> <span class="o">()</span> <span class="o">{</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="https://nmotw.in/images/why-is-node-running/why-is-node-running.gif" alt="why-is-node-running" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -858,67 +974,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/dev-time/dev-time.gif" alt="dev-time" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ambi/">
-			
-				Ambi</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-12-03T20:51:30+05:30" pubdate data-updated="true">Dec 3<span>rd</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
-
-<blockquote><p>Execute a function ambidextrously.</p></blockquote>
-
-<p><code>ambi</code> normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.</p>
-
-<p><strong>Get it:</strong> <code>$ npm install --save ambi</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ambi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ambi&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">child_process</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ambi</span><span class="p">(</span><span class="nx">child_process</span><span class="p">.</span><span class="nx">execSync</span><span class="p">,</span> <span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">encoding</span><span class="o">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span> <span class="c1">// Async </span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ambi</span><span class="p">(</span><span class="nx">child_process</span><span class="p">.</span><span class="nx">exec</span><span class="p">,</span> <span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">encoding</span><span class="o">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span> <span class="c1">// Sync</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ambi/ambi.gif" alt="ambi" /></p>
-
-<p>Thanks to <a href="http://balupton.com/">Benjamin Lupton</a> for this module.</p>
 
 		
 		

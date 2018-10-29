@@ -4,13 +4,128 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-10-20T14:36:18+05:30</updated>
+  <updated>2018-10-28T23:54:10+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[the-platform]]></title>
+    <link href="http://nmotw.in/the-platform/"/>
+    <updated>2018-10-28T15:33:43+05:30</updated>
+    <id>http://nmotw.in/the-platform</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
+
+<blockquote><p>Browser API's turned into React Hooks and Suspense-friendly components.</p></blockquote>
+
+<p><code>the-platform</code> is a uber fun module that has React Hooks and Suspense friendly componets, it provides the below:</p>
+
+<p><strong>Hooks:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>useDeviceMotion()
+</span><span class='line'>useDeviceOrientation()
+</span><span class='line'>useGeoPosition()
+</span><span class='line'>useNetworkStatus()
+</span><span class='line'>useMedia()
+</span><span class='line'>useScript()
+</span><span class='line'>useStylesheet()
+</span><span class='line'>useWindowScrollPosition()
+</span><span class='line'>useWindowSize()</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Components:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;Img&gt;
+</span><span class='line'>&lt;Script&gt;
+</span><span class='line'>&lt;Video&gt;
+</span><span class='line'>&lt;Audio&gt;
+</span><span class='line'>&lt;Preload&gt;
+</span><span class='line'>&lt;Stylesheet&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Looks like it's a pun on <code>#useThePlatform</code> none the less it's an intresting module.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">useGeoPosition</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;the-platform&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Example</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">const</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">coords</span><span class="o">:</span> <span class="p">{</span> <span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span> <span class="p">},</span>
+</span><span class='line'>  <span class="p">}</span> <span class="o">=</span> <span class="nx">useGeoPosition</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// ...</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">Img</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;the-platform&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">Suspense</span> <span class="nx">maxDuration</span><span class="o">=</span><span class="p">{</span><span class="mi">300</span><span class="p">}</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loading...&#39;</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">Img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://source.unsplash.com/random/4000x2000&quot;</span> <span class="o">/&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/React.Suspense&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/the-platform/the-platform.gif" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[compromise]]></title>
@@ -1389,58 +1504,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/media-typer/media-typer.gif" alt="media-typer" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[qw]]></title>
-    <link href="http://nmotw.in/qw/"/>
-    <updated>2018-06-10T16:10:46+05:30</updated>
-    <id>http://nmotw.in/qw</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/qw">qw</a></p>
-
-<blockquote><p>Quoted word literals!</p></blockquote>
-
-<p>qw use template strings to bring over this little common convenience from Perl-land.</p>
-
-<p><strong>Get it:</strong> <code>npm install qw</code></p>
-
-<p><strong>_Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">qw</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;qw&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">qw</span> <span class="err">`</span>
-</span><span class='line'><span class="k">this</span>
-</span><span class='line'><span class="nx">shall</span>
-</span><span class='line'><span class="k">break</span>
-</span><span class='line'><span class="nx">into</span>
-</span><span class='line'><span class="nx">an</span> <span class="nx">array</span><span class="err">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ [&quot;this&quot;, &quot;shall&quot;, &quot;break&quot;, &quot;into&quot;, &quot;an&quot;, &quot;array&quot;]</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">qw</span> <span class="err">`</span><span class="nx">also</span> <span class="nx">xpression</span><span class="o">:</span> <span class="nx">$</span><span class="p">{</span><span class="mi">40</span><span class="o">+</span><span class="mi">2</span><span class="p">}</span><span class="err">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ [&quot;also&quot;, &quot;expression:&quot;, 42]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/qw/qw.gif" alt="qw.gif" /></p>
 ]]></content>
   </entry>
   
