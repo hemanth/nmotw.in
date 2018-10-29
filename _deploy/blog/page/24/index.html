@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;">   
+    <meta name="description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/24/">
-    <meta name="twitter:description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;">
+    <meta name="twitter:description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/24/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;" />
+    <meta property="og:description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;" />
 
     
 
@@ -67,6 +67,161 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/yosay/">
+			
+				Yosay</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-15T09:45:56+05:30" pubdate data-updated="true">May 15<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
+
+<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
+
+<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ echo "Yo! Mama. You can pipe." | yosay
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--(o)--|    |  Yo! Mama. You can pipe. |
+</span><span class='line'>   `---------´   '--------------------------'
+</span><span class='line'>    ( _´U`_ )    
+</span><span class='line'>    /___A___\    
+</span><span class='line'>     |  ~  |     
+</span><span class='line'>   __'.___.'__   
+</span><span class='line'> ´   `  |° ´ Y ` </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Node module of the week&quot;</span>
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Node module of the week |
+</span><span class='line'>   <span class="sb">`</span>---------´   <span class="s1">&#39;--------------------------&#39;</span>
+</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>
+</span><span class='line'>    /___A___<span class="se">\ </span>
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>yosay <span class="s2">&quot;Yo! How&#39;s it going&quot;</span> --maxLength 4
+</span><span class='line'>
+</span><span class='line'>     _-----_
+</span><span class='line'>    |       |    .------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |  Yo! |
+</span><span class='line'>   <span class="sb">`</span>---------´   | How<span class="s1">&#39;s |</span>
+</span><span class='line'><span class="s1">    ( _´U`_ )    |  it  |</span>
+</span><span class='line'><span class="s1">    /___A___\    | going |</span>
+</span><span class='line'><span class="s1">     |  ~  |     &#39;</span>------<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">   __&#39;</span>.___.<span class="err">&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> If you want to use it in you node script, you could do:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'> var <span class="nv">yosay</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;yosay&#39;</span><span class="o">)</span>;
+</span><span class='line'>
+</span><span class='line'> console.log<span class="o">(</span> yosay<span class="o">(</span><span class="s2">&quot;Hope you enjoyed the session :)&quot;</span><span class="o">)</span> <span class="o">)</span>;
+</span><span class='line'>
+</span><span class='line'>      _-----_
+</span><span class='line'>    |       |    .--------------------------.
+</span><span class='line'>    |--<span class="o">(</span>o<span class="o">)</span>--|    |   Hope you enjoyed the   |
+</span><span class='line'>   <span class="sb">`</span>---------´   |        session :<span class="o">)</span>        |
+</span><span class='line'>    <span class="o">(</span> _´U<span class="sb">`</span>_ <span class="o">)</span>    <span class="s1">&#39;--------------------------&#39;</span>
+</span><span class='line'>    /___A___<span class="se">\ </span>
+</span><span class='line'>     |  ~  |
+</span><span class='line'>   __<span class="s1">&#39;.___.&#39;</span>__
+</span><span class='line'> ´   <span class="sb">`</span>  |° ´ Y <span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
+
+<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1224,92 +1379,12 @@
 
 </article>
 
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/rsvp/">
-			
-				RSVP</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-04T06:23:51+05:30" pubdate data-updated="true">Mar 4<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.org/package/rsvp">RSVP</a> : A lightweight library that provides tools for organizing asynchronous code.</p>
-
-<p>This module gives a tiny implementation of <a href="http://promises-aplus.github.com/promises-spec/">Promises/A+</a>.</p>
-
-<p>As usual do a <code>npm install rsvp</code> to get the module.</p>
-
-<p><strong>Basic Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">RSVP</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rsvp&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RSVP</span><span class="p">.</span><span class="nx">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// succeed</span>
-</span><span class='line'>  <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-</span><span class='line'>  <span class="c1">// or reject</span>
-</span><span class='line'>  <span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// success</span>
-</span><span class='line'><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// failure</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Once a promise has been resolved or rejected, it cannot be resolved or rejected again.</p>
-
-<p>It give some more goddies like:</p>
-
-<ul>
-<li><p>Chaining</p></li>
-<li><p>Easy Error Handling.</p></li>
-<li><p>Compatible with <a href="http://taskjs.org/">TaskJS</a>.</p></li>
-</ul>
-
-
-<p>So, what are you waiting for? Go got it and have fun!</p>
-
-		
-		
-	</div>
-
-</article>
-
 <nav id="pagenavi">
     
         <a href="/blog/page/23/" class="prev">Previous</a>
     
+    
+        <a href="/blog/page/25/" class="next">Next</a>
     
 </nav>
 </div>
