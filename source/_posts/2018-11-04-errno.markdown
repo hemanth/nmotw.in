@@ -1,0 +1,88 @@
+---
+layout: post
+title: "errno"
+date: 2018-11-04 15:15:46 +0530
+comments: true
+categories: util 
+---
+
+#[errno](https://www.npmjs.com/package/errno)
+> Better `libuv` error handling & reporting.
+
+🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno contains the errno mappings direct from libuv so you can use them in your code.
+
+**By errno:**
+
+```js
+require('errno').errno[3]
+// → {
+//     "errno": 3,
+//     "code": "EACCES",
+//     "description": "permission denied"
+//   }
+```
+
+**By code:**
+
+```js
+require('errno').code.ENOTEMPTY
+// → {
+//     "errno": 53,
+//     "code": "ENOTEMPTY",
+//     "description": "directory not empty"
+//   }
+```
+
+**Make your errors more descriptive:**
+
+```js
+var errno = require('errno')
+
+function errmsg(err) {
+  var str = 'Error: '
+  // if it's a libuv error then get the description from errno
+  if (errno.errno[err.errno])
+    str += errno.errno[err.errno].description
+  else
+    str += err.message
+
+  // if it's a `fs` error then it'll have a 'path' property
+  if (err.path)
+    str += ' [' + err.path + ']'
+
+  return str
+}
+
+var fs = require('fs')
+
+fs.readFile('thisisnotarealfile.txt', function (err, data) {
+  if (err)
+    console.log(errmsg(err))
+})
+```
+
+**Use as a command line tool:**
+
+```
+~ $ errno 53
+{
+  "errno": 53,
+  "code": "ENOTEMPTY",
+  "description": "directory not empty"
+}
+~ $ errno EROFS
+{
+  "errno": 56,
+  "code": "EROFS",
+  "description": "read-only file system"
+}
+~ $ errno foo
+No such errno/code: "foo"
+```
+
+P.S: You can also create [custom-erros](https://github.com/rvagg/node-errno/blob/master/README.md#custom-errors).
+
+
+__GIF FTW!__
+
+![errno](/images/errno/errno.gif)

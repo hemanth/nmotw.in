@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="malarkey Simulate a typewriter/ticker effect on a DOM element. Even though malarkey means 'meaningless talk; nonsense', this is a sweet module that &hellip;">   
+    <meta name="description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
+| |_ &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/21/">
-    <meta name="twitter:description" content="malarkey Simulate a typewriter/ticker effect on a DOM element. Even though malarkey means 'meaningless talk; nonsense', this is a sweet module that &hellip;">
+    <meta name="twitter:description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
+| |_ &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/21/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="malarkey Simulate a typewriter/ticker effect on a DOM element. Even though malarkey means 'meaningless talk; nonsense', this is a sweet module that &hellip;" />
+    <meta property="og:description" content="printf Full implementation of the printf/sprintf family in pure JS. _ _ __ (_) | | / _| _ __ _ __ _ _ __ | |_| |_ | '_ \| '__| | '_ \| __| _|
+| |_ &hellip;" />
 
     
 
@@ -67,6 +70,91 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/printf/">
+			
+				Printf</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-24T18:11:33+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">printf</a></h1>
+
+<p>Full implementation of the <code>printf</code>/<code>sprintf</code> family in pure JS.</p>
+
+<pre><code>            _       _    __ 
+           (_)     | |  / _|
+ _ __  _ __ _ _ __ | |_| |_ 
+| '_ \| '__| | '_ \| __|  _|
+| |_) | |  | | | | | |_| |
+| .__/|_|  |_|_| |_|\__|_|
+| |
+|_|
+</code></pre>
+
+<p><strong>Get it:</strong> <code>npm install printf</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">printf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;printf&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">printf</span><span class="p">(</span><span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
+</span><span class='line'><span class="nx">printf</span><span class="p">(</span><span class="nx">write_stream</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Flags:</strong></p>
+
+<ul>
+<li><p><code></code> (space)</p></li>
+<li><p><code>+</code></p></li>
+<li><p><code>-</code></p></li>
+<li><p><code>0</code></p></li>
+</ul>
+
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><p><code>Width / precision</code> => <code>%2f</code></p></li>
+<li><p><code>Numerical bases</code> => <code>%c</code></p></li>
+<li><p><code>Miscellaneous</code> => <code>%d%%</code>, <code>+%s%+</code></p></li>
+<li><p><code>Extra</code> => The <code>%O</code> converter will call <code>util.inspect(...)</code> at the argument, <code>%-*.*f</code>.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/printf/printf.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://www.adaltas.com">Worms David</a> for <code>printf</code>!</p>
+
+<p><code>printf('******************%s**************',"Merry Xmas!")</code></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1020,119 +1108,6 @@
 <p><img src="/images/http-teapot/http-teapot.gif" alt="http-teapot" /></p>
 
 <p>Thanks to <a href="https://github.com/watson">Thomas Watson Steen</a> for implementing this RFC and giving us a teapot image ;)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/is/">
-			
-				Is</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-09T19:38:21+05:30" pubdate data-updated="true">Oct 9<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/is">is</a></h1>
-
-<blockquote><p>This is a definitive JavaScript type testing library.</p></blockquote>
-
-<p><strong>Get it:</strong> <code>npm install is</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">is</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;boolean&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">type</span><span class="p">([],</span> <span class="s1">&#39;object&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">array</span><span class="p">([]);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">odd</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
-</span><span class='line'><span class="nx">is</span><span class="p">.</span><span class="nx">even</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// So on...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It has all uber cool <code>is</code> checks as below:</p>
-
-<p><code>
-[ 'type',
-  'a',
-  'defined',
-  'empty',
-  'equal',
-  'hosted',
-  'instanceof',
-  'instance',
-  'null',
-  'nil',
-  'undefined',
-  'undef',
-  'arguments',
-  'args',
-  'array',
-  'arraylike',
-  'boolean',
-  'false',
-  'true',
-  'date',
-  'element',
-  'error',
-  'function',
-  'fn',
-  'number',
-  'infinite',
-  'decimal',
-  'divisibleBy',
-  'int',
-  'maximum',
-  'minimum',
-  'nan',
-  'even',
-  'odd',
-  'ge',
-  'gt',
-  'le',
-  'lt',
-  'within',
-  'object',
-  'hash',
-  'regexp',
-  'string' ]
-</code></p>
-
-<p><strong>GIT FTW:</strong></p>
-
-<p><img src="/images/is/is.gif" alt="is" /></p>
-
-<p>Thanks to <a href="https://twitter.com/onirame">Enrico Marino</a> for <code>is</code> :)</p>
 
 		
 		
