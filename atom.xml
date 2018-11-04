@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-11-04T15:20:05+05:30</updated>
+  <updated>2018-11-04T15:23:14+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/errno/"/>
     <updated>2018-11-04T15:15:46+05:30</updated>
     <id>http://nmotw.in/errno</id>
-    <content type="html"><![CDATA[<h1><a href="">errno</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
 
 <blockquote><p>Better <code>libuv</code> error handling &amp; reporting.</p></blockquote>
 
