@@ -45,7 +45,7 @@ const asyncTask = async () => {
 const answer = await asyncTask();
 ```
 
-__Get it:__ `npm install --save await-to-json`
+__Get it:__ `npm install --save await-to-js`
 
 __GIF FTW!__
 
