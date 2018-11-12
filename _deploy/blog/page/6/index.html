@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="webtorrent-element webcomponent for torrents. You would not really appreciate this module if you haven't read I’ve seen the future, it’s full of &hellip;">   
+    <meta name="description" content="clean-deep Remove empty values from objects. clean-deep helps us to clean objects by removing empty [], {}, null, undefined, '' from objects. Around &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/6/">
-    <meta name="twitter:description" content="webtorrent-element webcomponent for torrents. You would not really appreciate this module if you haven't read I’ve seen the future, it’s full of &hellip;">
+    <meta name="twitter:description" content="clean-deep Remove empty values from objects. clean-deep helps us to clean objects by removing empty [], {}, null, undefined, '' from objects. Around &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/6/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="webtorrent-element webcomponent for torrents. You would not really appreciate this module if you haven't read I’ve seen the future, it’s full of &hellip;" />
+    <meta property="og:description" content="clean-deep Remove empty values from objects. clean-deep helps us to clean objects by removing empty [], {}, null, undefined, '' from objects. Around &hellip;" />
 
     
 
@@ -73,6 +73,127 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/clean-deep/">
+			
+				Clean-deep</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-11-22T21:42:26-08:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/clean-deep">clean-deep</a></h1>
+
+<blockquote><p>Remove empty values from objects.</p></blockquote>
+
+<p><code>clean-deep</code> helps us to clean objects by removing empty <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>, <code>''</code> from objects.</p>
+
+<p>Around of 50 lines of code which makes use of <code>lodash.transform</code> and recursively clean up your objects.</p>
+
+<p>You could pass in the below options as per your requirement of the clean-up process.</p>
+
+<table>
+<thead>
+<tr>
+<th>Option            </th>
+<th> Default value </th>
+<th> Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>emptyArrays</em>     </td>
+<td> <em>true</em>        </td>
+<td> Remove empty arrays, ie: <code>[]</code></td>
+</tr>
+<tr>
+<td><em>emptyObjects</em>    </td>
+<td> <em>true</em>        </td>
+<td> Remove empty objects, ie: <code>{}</code></td>
+</tr>
+<tr>
+<td><em>emptyStrings</em>    </td>
+<td> <em>true</em>        </td>
+<td> Remove empty strings, ie: <code>''</code></td>
+</tr>
+<tr>
+<td><em>nullValues</em>      </td>
+<td> <em>true</em>        </td>
+<td> Remove null values, ie: <code>null</code></td>
+</tr>
+<tr>
+<td><em>undefinedValues</em> </td>
+<td> <em>true</em>        </td>
+<td> Remove null values, ie: <code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>Get it:</strong> <code>npm install clean-deep</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kr">const</span> <span class="nx">cleanDeep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;clean-deep&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">object</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">bar</span><span class="o">:</span> <span class="p">{},</span>
+</span><span class='line'>  <span class="nx">baz</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">biz</span><span class="o">:</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">net</span><span class="o">:</span> <span class="p">[],</span>
+</span><span class='line'>  <span class="nx">nit</span><span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">qux</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">baz</span><span class="o">:</span> <span class="s1">&#39;boz&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">txi</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">cleanDeep</span><span class="p">(</span><span class="nx">object</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// =&gt; { biz: &#39;baz&#39;, qux: { baz: &#39;boz&#39; } }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/clean-deep/clean-deep.gif" alt="clean-deep" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/webtorrent-element/">
 			
 				Webtorrent-element</a>
@@ -89,7 +210,7 @@
   
 
 
-<time datetime="2017-11-16T16:09:50+05:30" pubdate data-updated="true">Nov 16<span>th</span>, 2017</time></div>
+<time datetime="2017-11-16T02:39:50-08:00" pubdate data-updated="true">Nov 16<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<p><a href="https://npmjs.com/package/webtorrent-element">webtorrent-element</a></p>
@@ -152,7 +273,7 @@
   
 
 
-<time datetime="2017-11-10T09:59:34+05:30" pubdate data-updated="true">Nov 10<span>th</span>, 2017</time></div>
+<time datetime="2017-11-09T20:29:34-08:00" pubdate data-updated="true">Nov 9<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<p><a href="https://npmjs.com/server">server</a> is build upon <code>express@4</code> tries to bring simplicity in expressing your server code.</p>
@@ -224,7 +345,7 @@
   
 
 
-<time datetime="2017-10-31T12:56:26+05:30" pubdate data-updated="true">Oct 31<span>st</span>, 2017</time></div>
+<time datetime="2017-10-31T00:26:26-07:00" pubdate data-updated="true">Oct 31<span>st</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<p><a href="https://www.npmjs.com/package/qrcode-terminal">qrcode-terminal</a></p>
@@ -295,7 +416,7 @@
   
 
 
-<time datetime="2017-10-25T00:35:48+05:30" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time></div>
+<time datetime="2017-10-24T12:05:48-07:00" pubdate data-updated="true">Oct 24<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://npmjs.org/babar">babar</a></h1>
@@ -371,7 +492,7 @@
   
 
 
-<time datetime="2017-10-20T13:13:03+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2017</time></div>
+<time datetime="2017-10-20T00:43:03-07:00" pubdate data-updated="true">Oct 20<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
@@ -455,7 +576,7 @@
   
 
 
-<time datetime="2017-10-12T17:39:52+05:30" pubdate data-updated="true">Oct 12<span>th</span>, 2017</time></div>
+<time datetime="2017-10-12T05:09:52-07:00" pubdate data-updated="true">Oct 12<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/breakable">breakable</a></h1>
@@ -577,7 +698,7 @@
   
 
 
-<time datetime="2017-10-08T16:30:16+05:30" pubdate data-updated="true">Oct 8<span>th</span>, 2017</time></div>
+<time datetime="2017-10-08T04:00:16-07:00" pubdate data-updated="true">Oct 8<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="">css-what</a></h1>
@@ -656,7 +777,7 @@
   
 
 
-<time datetime="2017-09-28T18:52:53+05:30" pubdate data-updated="true">Sep 28<span>th</span>, 2017</time></div>
+<time datetime="2017-09-28T06:22:53-07:00" pubdate data-updated="true">Sep 28<span>th</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://npm.im/unsplash-wallpaper">unsplash-wallpaper</a></h1>
@@ -720,7 +841,7 @@ as your desktop wallpaper.</p>
   
 
 
-<time datetime="2017-09-22T12:02:46+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2017</time></div>
+<time datetime="2017-09-21T23:32:46-07:00" pubdate data-updated="true">Sep 21<span>st</span>, 2017</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/comlinkjs">comlinkjs</a></h1>
@@ -827,98 +948,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/comlinkjs/comlinkjs.gif" alt="comlinkjs" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/async-retry/">
-			
-				Async-retry</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-09-14T22:50:23+05:30" pubdate data-updated="true">Sep 14<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/async-retry">async-retry</a></h1>
-
-<blockquote><p>Retrying made simple, easy, async.</p></blockquote>
-
-<p><code>async-retry</code> is a promisified version of <a href="https://www.npmjs.com/package/retry">retry</a> which makes things easier with the <code>async-await</code> syntax.</p>
-
-<p><strong>Get it:</strong> <code>npm install async-retry</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Packages </span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">retry</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;async-retry&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-fetch&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">await</span> <span class="nx">retry</span><span class="p">(</span><span class="nx">async</span> <span class="nx">bail</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// if anything throws, we retry </span>
-</span><span class='line'>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://google.com&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="mi">403</span> <span class="o">===</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// don&#39;t retry upon 403 </span>
-</span><span class='line'>    <span class="nx">bail</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Unauthorized&#39;</span><span class="p">))</span>
-</span><span class='line'>    <span class="k">return</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-</span><span class='line'><span class="p">},</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">retries</span><span class="o">:</span> <span class="mi">500</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Method signature:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">retry</span><span class="p">(</span><span class="nx">retrier</span> <span class="o">:</span> <span class="nb">Function</span><span class="p">,</span> <span class="nx">opts</span> <span class="o">:</span> <span class="nb">Object</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">Promise</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/async-retry/async-retry.gif" alt="async-retry" /></p>
 
 		
 		
