@@ -1,0 +1,48 @@
+---
+layout: post
+title: "is-vegan"
+date: 2018-11-11 22:37:49 -0800
+comments: true
+categories: fun
+---
+
+#[is-vegan](https://www.npmjs.com/package/is-vegan)
+> Find out which food ingredients are vegan / non-vegan.
+
+If you are vegan you would understand the challenge of staying a vegan, this module helps you to find out which food ingredients are vegan / non-vegan. It can answer that on 1 ingredient or on a list of ingredients. It uses a 850+ entries list of non-vegan ingredients.
+
+It basically had parsed the information from the below sites into a JSON file.
+
+* veganpeace
+* peta
+* veganwolf
+
+__P.S:__ I can be cool to use this as a API and build an app, that would scan the ingeratients and let one know if it's vegan or not!
+
+__Get it:__ `npm install is-vegan`
+
+__Sample usage:__
+
+```js
+const isVegan = require('is-vegan');
+
+// example for single ingredient
+isVegan.isVeganIngredient('soy'); // true
+isVegan.isVeganIngredient('milk'); // false
+
+// example for list of ingredients
+isVegan.isVeganIngredientList(['aspic', 'albumin']); // false
+isVegan.isVeganIngredientList(['soy', 'cacao butter']); // true
+
+// example for list of ingredients wich contain flagged and non-vegan ingredients
+isVegan.checkIngredients(['soy', 'cacao butter', 'pork', 'glycine']);
+// returns
+// {
+//   nonvegan: ['pork', 'beef'],
+//   flagged: ['glycine']
+// }
+```
+
+__GIF FTW!__
+
+![is-vegan](/images/is-vegan/is-vegan.gif)
