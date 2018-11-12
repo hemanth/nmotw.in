@@ -4,7 +4,7 @@
   <title><![CDATA[Category: wifi | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/wifi/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[node-wifi-scanner]]></title>
     <link href="http://nmotw.in//github/node-wifi-scanner/"/>
-    <updated>2016-08-18T17:03:58+05:30</updated>
+    <updated>2016-08-18T04:33:58-07:00</updated>
     <id>http://nmotw.in//github/node-wifi-scanner</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/node-wifi-scanner">node-wifi-scanner</a></h1>
 
@@ -90,7 +90,7 @@ rssi: -85 } ]
   <entry>
     <title type="html"><![CDATA[wifi-triangulate]]></title>
     <link href="http://nmotw.in//github/wifi-triangulate/"/>
-    <updated>2016-07-21T22:46:26+05:30</updated>
+    <updated>2016-07-21T10:16:26-07:00</updated>
     <id>http://nmotw.in//github/wifi-triangulate</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/wifi-triangulate">wifi-triangulate</a></h1>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: streams | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/streams/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[stream-generators]]></title>
     <link href="http://nmotw.in//github/stream-generators/"/>
-    <updated>2015-06-05T01:57:12+05:30</updated>
+    <updated>2015-06-04T13:27:12-07:00</updated>
     <id>http://nmotw.in//github/stream-generators</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/stream-generators">stream-generators</a></p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dom | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[scrolldir]]></title>
     <link href="http://nmotw.in//github/scrolldir/"/>
-    <updated>2017-12-30T15:32:47+05:30</updated>
+    <updated>2017-12-30T02:02:47-08:00</updated>
     <id>http://nmotw.in//github/scrolldir</id>
     <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/scrolldir">scrolldir</a></h1>
 
@@ -51,7 +51,7 @@ scrollDir();</p>
   <entry>
     <title type="html"><![CDATA[fitty]]></title>
     <link href="http://nmotw.in//github/fitty/"/>
-    <updated>2017-08-03T13:03:33+05:30</updated>
+    <updated>2017-08-03T00:33:33-07:00</updated>
     <id>http://nmotw.in//github/fitty</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fitty">fitty</a></h1>
 
@@ -92,7 +92,7 @@ Yes, it uses <code>MutationObserver</code>.</p>
   <entry>
     <title type="html"><![CDATA[stikcybits]]></title>
     <link href="http://nmotw.in//github/stikcybits/"/>
-    <updated>2017-07-08T15:28:28+05:30</updated>
+    <updated>2017-07-08T02:58:28-07:00</updated>
     <id>http://nmotw.in//github/stikcybits</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stickybits">stickybits</a></h1>
 
@@ -135,7 +135,7 @@ Options:</p>
   <entry>
     <title type="html"><![CDATA[dom-scroll-into-view]]></title>
     <link href="http://nmotw.in//github/dom-scroll-into-view/"/>
-    <updated>2017-06-18T15:32:27+05:30</updated>
+    <updated>2017-06-18T03:02:27-07:00</updated>
     <id>http://nmotw.in//github/dom-scroll-into-view</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
 
@@ -178,7 +178,7 @@ scrollIntoView(source,container,config);
   <entry>
     <title type="html"><![CDATA[what-input]]></title>
     <link href="http://nmotw.in//github/what-input/"/>
-    <updated>2017-04-07T19:40:55+05:30</updated>
+    <updated>2017-04-07T07:10:55-07:00</updated>
     <id>http://nmotw.in//github/what-input</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/what-input">what-input</a></p>
 

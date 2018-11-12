@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -13,9 +13,78 @@
 
   
   <entry>
+    <title type="html"><![CDATA[is-vegan]]></title>
+    <link href="http://nmotw.in/is-vegan/"/>
+    <updated>2018-11-11T22:37:49-08:00</updated>
+    <id>http://nmotw.in/is-vegan</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
+
+<blockquote><p>Find out which food ingredients are vegan / non-vegan.</p></blockquote>
+
+<p>If you are vegan you would understand the challenge of staying a vegan, this module helps you to find out which food ingredients are vegan / non-vegan. It can answer that on 1 ingredient or on a list of ingredients. It uses a 850+ entries list of non-vegan ingredients.</p>
+
+<p>It basically had parsed the information from the below sites into a JSON file.</p>
+
+<ul>
+<li>veganpeace</li>
+<li>peta</li>
+<li>veganwolf</li>
+</ul>
+
+
+<p><strong>P.S:</strong> I can be cool to use this as a API and build an app, that would scan the ingeratients and let one know if it's vegan or not!</p>
+
+<p><strong>Get it:</strong> <code>npm install is-vegan</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">isVegan</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is-vegan&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// example for single ingredient</span>
+</span><span class='line'><span class="nx">isVegan</span><span class="p">.</span><span class="nx">isVeganIngredient</span><span class="p">(</span><span class="s1">&#39;soy&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span><span class='line'><span class="nx">isVegan</span><span class="p">.</span><span class="nx">isVeganIngredient</span><span class="p">(</span><span class="s1">&#39;milk&#39;</span><span class="p">);</span> <span class="c1">// false</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// example for list of ingredients</span>
+</span><span class='line'><span class="nx">isVegan</span><span class="p">.</span><span class="nx">isVeganIngredientList</span><span class="p">([</span><span class="s1">&#39;aspic&#39;</span><span class="p">,</span> <span class="s1">&#39;albumin&#39;</span><span class="p">]);</span> <span class="c1">// false</span>
+</span><span class='line'><span class="nx">isVegan</span><span class="p">.</span><span class="nx">isVeganIngredientList</span><span class="p">([</span><span class="s1">&#39;soy&#39;</span><span class="p">,</span> <span class="s1">&#39;cacao butter&#39;</span><span class="p">]);</span> <span class="c1">// true</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// example for list of ingredients wich contain flagged and non-vegan ingredients</span>
+</span><span class='line'><span class="nx">isVegan</span><span class="p">.</span><span class="nx">checkIngredients</span><span class="p">([</span><span class="s1">&#39;soy&#39;</span><span class="p">,</span> <span class="s1">&#39;cacao butter&#39;</span><span class="p">,</span> <span class="s1">&#39;pork&#39;</span><span class="p">,</span> <span class="s1">&#39;glycine&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="c1">// returns</span>
+</span><span class='line'><span class="c1">// {</span>
+</span><span class='line'><span class="c1">//   nonvegan: [&#39;pork&#39;, &#39;beef&#39;],</span>
+</span><span class='line'><span class="c1">//   flagged: [&#39;glycine&#39;]</span>
+</span><span class='line'><span class="c1">// }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/is-vegan/is-vegan.gif" alt="is-vegan" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[errno]]></title>
     <link href="http://nmotw.in/errno/"/>
-    <updated>2018-11-04T15:15:46+05:30</updated>
+    <updated>2018-11-04T01:45:46-08:00</updated>
     <id>http://nmotw.in/errno</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
 
@@ -152,7 +221,7 @@
   <entry>
     <title type="html"><![CDATA[the-platform]]></title>
     <link href="http://nmotw.in/the-platform/"/>
-    <updated>2018-10-28T15:33:43+05:30</updated>
+    <updated>2018-10-28T03:03:43-07:00</updated>
     <id>http://nmotw.in/the-platform</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
 
@@ -267,7 +336,7 @@
   <entry>
     <title type="html"><![CDATA[compromise]]></title>
     <link href="http://nmotw.in/compromise/"/>
-    <updated>2018-10-20T14:26:13+05:30</updated>
+    <updated>2018-10-20T01:56:13-07:00</updated>
     <id>http://nmotw.in/compromise</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/compromise">compromise</a></h1>
 
@@ -327,7 +396,7 @@
   <entry>
     <title type="html"><![CDATA[zet]]></title>
     <link href="http://nmotw.in/zet/"/>
-    <updated>2018-10-13T14:47:06+05:30</updated>
+    <updated>2018-10-13T02:17:06-07:00</updated>
     <id>http://nmotw.in/zet</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
 
@@ -404,7 +473,7 @@
   <entry>
     <title type="html"><![CDATA[regex-not]]></title>
     <link href="http://nmotw.in/regex-not/"/>
-    <updated>2018-10-07T14:29:22+05:30</updated>
+    <updated>2018-10-07T01:59:22-07:00</updated>
     <id>http://nmotw.in/regex-not</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/regex-not">regex-not</a></h1>
 
@@ -444,7 +513,7 @@
   <entry>
     <title type="html"><![CDATA[emma]]></title>
     <link href="http://nmotw.in/emma/"/>
-    <updated>2018-09-27T12:13:16+05:30</updated>
+    <updated>2018-09-26T23:43:16-07:00</updated>
     <id>http://nmotw.in/emma</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
 
@@ -503,7 +572,7 @@
   <entry>
     <title type="html"><![CDATA[please-upgrade-node]]></title>
     <link href="http://nmotw.in/please-upgrade-node/"/>
-    <updated>2018-09-23T15:42:17+05:30</updated>
+    <updated>2018-09-23T03:12:17-07:00</updated>
     <id>http://nmotw.in/please-upgrade-node</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
 
@@ -567,7 +636,7 @@
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in/mapscii/"/>
-    <updated>2018-09-16T18:42:56+05:30</updated>
+    <updated>2018-09-16T06:12:56-07:00</updated>
     <id>http://nmotw.in/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -604,7 +673,7 @@
   <entry>
     <title type="html"><![CDATA[microjob]]></title>
     <link href="http://nmotw.in/microjob/"/>
-    <updated>2018-09-09T00:27:32+05:30</updated>
+    <updated>2018-09-08T11:57:32-07:00</updated>
     <id>http://nmotw.in/microjob</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
 
@@ -667,7 +736,7 @@
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in/npm-whoshiring/"/>
-    <updated>2018-09-02T09:36:09+05:30</updated>
+    <updated>2018-09-01T21:06:09-07:00</updated>
     <id>http://nmotw.in/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -735,7 +804,7 @@
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
     <link href="http://nmotw.in/commitizen/"/>
-    <updated>2018-08-26T14:37:52+05:30</updated>
+    <updated>2018-08-26T02:07:52-07:00</updated>
     <id>http://nmotw.in/commitizen</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
 
@@ -804,7 +873,7 @@
   <entry>
     <title type="html"><![CDATA[tryor]]></title>
     <link href="http://nmotw.in/tryor/"/>
-    <updated>2018-08-19T21:08:06+05:30</updated>
+    <updated>2018-08-19T08:38:06-07:00</updated>
     <id>http://nmotw.in/tryor</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/tryor">tryor</a></h1>
 
@@ -874,7 +943,7 @@
   <entry>
     <title type="html"><![CDATA[aproba]]></title>
     <link href="http://nmotw.in/aproba/"/>
-    <updated>2018-08-12T15:04:36+05:30</updated>
+    <updated>2018-08-12T02:34:36-07:00</updated>
     <id>http://nmotw.in/aproba</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/aproba">aproba</a></h1>
 
@@ -990,7 +1059,7 @@
   <entry>
     <title type="html"><![CDATA[pretty-error]]></title>
     <link href="http://nmotw.in/pretty-error/"/>
-    <updated>2018-08-05T13:37:39+05:30</updated>
+    <updated>2018-08-05T01:07:39-07:00</updated>
     <id>http://nmotw.in/pretty-error</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
 
@@ -1039,7 +1108,7 @@
   <entry>
     <title type="html"><![CDATA[hiper]]></title>
     <link href="http://nmotw.in/hiper/"/>
-    <updated>2018-07-28T15:08:33+05:30</updated>
+    <updated>2018-07-28T02:38:33-07:00</updated>
     <id>http://nmotw.in/hiper</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
 
@@ -1160,7 +1229,7 @@
   <entry>
     <title type="html"><![CDATA[time-stamp]]></title>
     <link href="http://nmotw.in/time-stamp/"/>
-    <updated>2018-07-22T13:12:10+05:30</updated>
+    <updated>2018-07-22T00:42:10-07:00</updated>
     <id>http://nmotw.in/time-stamp</id>
     <content type="html"><![CDATA[<h1><a href="">time-stamp</a></h1>
 
@@ -1294,7 +1363,7 @@
   <entry>
     <title type="html"><![CDATA[proxymise]]></title>
     <link href="http://nmotw.in/proxymise/"/>
-    <updated>2018-07-15T15:52:27+05:30</updated>
+    <updated>2018-07-15T03:22:27-07:00</updated>
     <id>http://nmotw.in/proxymise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
 
@@ -1359,7 +1428,7 @@
   <entry>
     <title type="html"><![CDATA[auto-parse]]></title>
     <link href="http://nmotw.in/auto-parse/"/>
-    <updated>2018-07-07T21:59:37+05:30</updated>
+    <updated>2018-07-07T09:29:37-07:00</updated>
     <id>http://nmotw.in/auto-parse</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/auto-parse">auto-parse</a></h1>
 
@@ -1450,7 +1519,7 @@
   <entry>
     <title type="html"><![CDATA[error-stack-parser]]></title>
     <link href="http://nmotw.in/error-stack-parser/"/>
-    <updated>2018-07-01T20:42:55+05:30</updated>
+    <updated>2018-07-01T08:12:55-07:00</updated>
     <id>http://nmotw.in/error-stack-parser</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
 
@@ -1516,64 +1585,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/error-stack-parser/error-stack-parser.gif" alt="error-stack-parser" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ent]]></title>
-    <link href="http://nmotw.in/ent/"/>
-    <updated>2018-06-24T10:11:29+05:30</updated>
-    <id>http://nmotw.in/ent</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ent">ent</a></h1>
-
-<blockquote><p>Encode and decode HTML entities.</p></blockquote>
-
-<p><code>ent</code> helps in encoding and ecoding HTML entities.</p>
-
-<p><strong>Get it:</strong> <code>npm install ent</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ent</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span><span class="s1">&#39;&lt;span&gt;©moo&lt;/span&gt;&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ent</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="s1">&#39;&amp;pi; &amp;amp; &amp;rho;&#39;</span><span class="p">));</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&amp;</span><span class="err">#</span><span class="mi">60</span><span class="p">;</span><span class="nx">span</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">62</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">169</span><span class="p">;</span><span class="nx">moo</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">60</span><span class="p">;</span><span class="err">/span&amp;#62;</span>
-</span><span class='line'><span class="err">π</span> <span class="o">&amp;</span> <span class="err">ρ</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">encode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/encode&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// ^ Escape unsafe characters in str with html entities.</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">decode</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ent/decode&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="c1">// ^ Convert html entities in str back to raw text.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/ent/ent.gif" alt="ent" /></p>
 ]]></content>
   </entry>
   

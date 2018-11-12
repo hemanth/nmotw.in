@@ -4,7 +4,7 @@
   <title><![CDATA[Category: templating | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/templating/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[block.js]]></title>
     <link href="http://nmotw.in//github/block.js/"/>
-    <updated>2014-04-24T19:12:16+05:30</updated>
+    <updated>2014-04-24T06:42:16-07:00</updated>
     <id>http://nmotw.in//github/block.js</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.org/package/block">Block.js</a>: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local.</p>
 

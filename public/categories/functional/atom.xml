@@ -4,7 +4,7 @@
   <title><![CDATA[Category: functional | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/functional/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[most]]></title>
     <link href="http://nmotw.in//github/most/"/>
-    <updated>2017-02-18T07:07:22+05:30</updated>
+    <updated>2017-02-17T17:37:22-08:00</updated>
     <id>http://nmotw.in//github/most</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/most">most</a></h1>
 
@@ -90,7 +90,7 @@ generate(allTheIntegers, 1000)</p>
   <entry>
     <title type="html"><![CDATA[data.task]]></title>
     <link href="http://nmotw.in//github/data.task/"/>
-    <updated>2016-02-04T19:56:02+05:30</updated>
+    <updated>2016-02-04T06:26:02-08:00</updated>
     <id>http://nmotw.in//github/data.task</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
 
@@ -138,7 +138,7 @@ read('/tmp/data.md').fork(console.error, console.log);
   <entry>
     <title type="html"><![CDATA[as]]></title>
     <link href="http://nmotw.in//github/as/"/>
-    <updated>2015-12-17T22:04:55+05:30</updated>
+    <updated>2015-12-17T08:34:55-08:00</updated>
     <id>http://nmotw.in//github/as</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/as">as</a></h1>
 
@@ -188,7 +188,7 @@ asObject(
   <entry>
     <title type="html"><![CDATA[ramda-repl]]></title>
     <link href="http://nmotw.in//github/ramda-repl/"/>
-    <updated>2015-09-17T22:09:50+05:30</updated>
+    <updated>2015-09-17T09:39:50-07:00</updated>
     <id>http://nmotw.in//github/ramda-repl</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
 

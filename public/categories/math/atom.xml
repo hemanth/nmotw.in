@@ -4,7 +4,7 @@
   <title><![CDATA[Category: math | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/math/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[simple-statistics]]></title>
     <link href="http://nmotw.in//github/simple-statistics/"/>
-    <updated>2017-02-03T10:32:48+05:30</updated>
+    <updated>2017-02-02T21:02:48-08:00</updated>
     <id>http://nmotw.in//github/simple-statistics</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/simple-statistics">simple-statistics</a></h1>
 
@@ -126,7 +126,7 @@ const ss = require('simple-statistics');</p>
   <entry>
     <title type="html"><![CDATA[is-subset]]></title>
     <link href="http://nmotw.in//github/is-subset/"/>
-    <updated>2017-01-27T14:21:59+05:30</updated>
+    <updated>2017-01-27T00:51:59-08:00</updated>
     <id>http://nmotw.in//github/is-subset</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-subset">is-subset</a></h1>
 
@@ -164,7 +164,7 @@ isSubset(
   <entry>
     <title type="html"><![CDATA[mathjs]]></title>
     <link href="http://nmotw.in//github/mathjs/"/>
-    <updated>2016-04-07T19:22:08+05:30</updated>
+    <updated>2016-04-07T06:52:08-07:00</updated>
     <id>http://nmotw.in//github/mathjs</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mathjs">mathjs</a></h1>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: parser | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/parser/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[psl]]></title>
     <link href="http://nmotw.in//github/psl/"/>
-    <updated>2017-04-21T14:49:00+05:30</updated>
+    <updated>2017-04-21T02:19:00-07:00</updated>
     <id>http://nmotw.in//github/psl</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/psl">psl</a></h1>
 
@@ -62,7 +62,7 @@ psl.isValid('co.uk')); // false
   <entry>
     <title type="html"><![CDATA[cssom]]></title>
     <link href="http://nmotw.in//github/cssom/"/>
-    <updated>2015-03-26T19:05:30+05:30</updated>
+    <updated>2015-03-26T06:35:30-07:00</updated>
     <id>http://nmotw.in//github/cssom</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
 

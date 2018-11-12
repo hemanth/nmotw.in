@@ -4,7 +4,7 @@
   <title><![CDATA[Category: time | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/time/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[time-stamp]]></title>
     <link href="http://nmotw.in//github/time-stamp/"/>
-    <updated>2018-07-22T13:12:10+05:30</updated>
+    <updated>2018-07-22T00:42:10-07:00</updated>
     <id>http://nmotw.in//github/time-stamp</id>
     <content type="html"><![CDATA[<h1><a href="">time-stamp</a></h1>
 
@@ -100,7 +100,7 @@ ms: milliseconds (ex: 532)
   <entry>
     <title type="html"><![CDATA[tinytime]]></title>
     <link href="http://nmotw.in//github/tinytime/"/>
-    <updated>2017-04-27T20:36:58+05:30</updated>
+    <updated>2017-04-27T08:06:58-07:00</updated>
     <id>http://nmotw.in//github/tinytime</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/tinytime">tinytime</a></h1>
 
@@ -146,7 +146,7 @@ template.render(new Date());
   <entry>
     <title type="html"><![CDATA[s-ago]]></title>
     <link href="http://nmotw.in//github/s-ago/"/>
-    <updated>2016-10-20T19:43:46+05:30</updated>
+    <updated>2016-10-20T07:13:46-07:00</updated>
     <id>http://nmotw.in//github/s-ago</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
 
@@ -179,7 +179,7 @@ ago(hoursAgo); // '6 hours ago'
   <entry>
     <title type="html"><![CDATA[dev-time]]></title>
     <link href="http://nmotw.in//github/dev-time/"/>
-    <updated>2015-12-10T21:10:13+05:30</updated>
+    <updated>2015-12-10T07:40:13-08:00</updated>
     <id>http://nmotw.in//github/dev-time</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/SamVerschueren/dev-time">dev-time</a></h1>
 

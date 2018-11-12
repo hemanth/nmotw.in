@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,9 +14,61 @@
 
   
   <entry>
+    <title type="html"><![CDATA[is-vegan]]></title>
+    <link href="http://nmotw.in//github/is-vegan/"/>
+    <updated>2018-11-11T22:37:49-08:00</updated>
+    <id>http://nmotw.in//github/is-vegan</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
+
+<blockquote><p>Find out which food ingredients are vegan / non-vegan.</p></blockquote>
+
+<p>If you are vegan you would understand the challenge of staying a vegan, this module helps you to find out which food ingredients are vegan / non-vegan. It can answer that on 1 ingredient or on a list of ingredients. It uses a 850+ entries list of non-vegan ingredients.</p>
+
+<p>It basically had parsed the information from the below sites into a JSON file.</p>
+
+<ul>
+<li>veganpeace</li>
+<li>peta</li>
+<li>veganwolf</li>
+</ul>
+
+
+<p><strong>P.S:</strong> I can be cool to use this as a API and build an app, that would scan the ingeratients and let one know if it's vegan or not!</p>
+
+<p><strong>Get it:</strong> <code>npm install is-vegan</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const isVegan = require('is-vegan');</p>
+
+<p>// example for single ingredient
+isVegan.isVeganIngredient('soy'); // true
+isVegan.isVeganIngredient('milk'); // false</p>
+
+<p>// example for list of ingredients
+isVegan.isVeganIngredientList(['aspic', 'albumin']); // false
+isVegan.isVeganIngredientList(['soy', 'cacao butter']); // true</p>
+
+<p>// example for list of ingredients wich contain flagged and non-vegan ingredients
+isVegan.checkIngredients(['soy', 'cacao butter', 'pork', 'glycine']);
+// returns
+// {
+//   nonvegan: ['pork', 'beef'],
+//   flagged: ['glycine']
+// }
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/is-vegan/is-vegan.gif" alt="is-vegan" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in//github/mapscii/"/>
-    <updated>2018-09-16T18:42:56+05:30</updated>
+    <updated>2018-09-16T06:12:56-07:00</updated>
     <id>http://nmotw.in//github/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -53,7 +105,7 @@ $ mapscii</p>
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in//github/npm-whoshiring/"/>
-    <updated>2018-09-02T09:36:09+05:30</updated>
+    <updated>2018-09-01T21:06:09-07:00</updated>
     <id>http://nmotw.in//github/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -101,7 +153,7 @@ Voxer                http://www.voxer.com/careers/                              
   <entry>
     <title type="html"><![CDATA[april-fools]]></title>
     <link href="http://nmotw.in//github/april-fools/"/>
-    <updated>2018-04-01T05:37:51+05:30</updated>
+    <updated>2018-03-31T17:07:51-07:00</updated>
     <id>http://nmotw.in//github/april-fools</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/april-fools">april-fools</a></p>
 
@@ -153,7 +205,7 @@ at require (internal/module.js:11:18)
   <entry>
     <title type="html"><![CDATA[christmas-ascii]]></title>
     <link href="http://nmotw.in//github/christmas-ascii/"/>
-    <updated>2017-12-24T16:16:41+05:30</updated>
+    <updated>2017-12-24T02:46:41-08:00</updated>
     <id>http://nmotw.in//github/christmas-ascii</id>
     <content type="html"><![CDATA[<h1><a href="https://nmpjs.com/christmas-ascii">christmas-ascii</a></h1>
 
@@ -234,39 +286,6 @@ $ christmas-ascii -a</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[unsplash-wallpaper]]></title>
-    <link href="http://nmotw.in//github/unsplash-wallpaper/"/>
-    <updated>2017-09-28T18:52:53+05:30</updated>
-    <id>http://nmotw.in//github/unsplash-wallpaper</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/unsplash-wallpaper">unsplash-wallpaper</a></h1>
-
-<blockquote><p>unsplash images as your wallpaper from CLI.</p></blockquote>
-
-<p><code>unsplash-wallpaper</code> an inviting module that helps you set images from <a href="https://unsplash.com/">unsplash</a>
-as your desktop wallpaper.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g unsplash-wallpaper</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<p>```sh
-$ unsplash-wallpaper</p>
-
-<p>To learn the commands:
-  $ unsplash-wallpaper --help
-To save the image resolution:
-  $ unsplash-wallpaper --width 2880 --height 1800 -s
-To download and use a random image:
-  $ unsplash-wallpaper -r
-```</p>
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/unsplash-wallpaper/unsplash-wallpaper.gif" alt="unsplash-wallpaper" /></p>
 ]]></content>
   </entry>
   

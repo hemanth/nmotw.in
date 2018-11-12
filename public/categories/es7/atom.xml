@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ES7 | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/es7/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[await-to-js]]></title>
     <link href="http://nmotw.in//github/await-to-js/"/>
-    <updated>2017-05-05T08:30:13+05:30</updated>
+    <updated>2017-05-04T20:00:13-07:00</updated>
     <id>http://nmotw.in//github/await-to-js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/await-to-js">await-to-js</a></h1>
 
@@ -75,7 +75,7 @@ const to = require("await-to-js").default;</p>
   <entry>
     <title type="html"><![CDATA[asyncbox]]></title>
     <link href="http://nmotw.in//github/asyncbox/"/>
-    <updated>2016-09-22T22:37:26+05:30</updated>
+    <updated>2016-09-22T10:07:26-07:00</updated>
     <id>http://nmotw.in//github/asyncbox</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
 
@@ -125,7 +125,7 @@ await sleep(1000); // wait one second
   <entry>
     <title type="html"><![CDATA[curry-this]]></title>
     <link href="http://nmotw.in//github/curry-this/"/>
-    <updated>2015-08-06T20:46:13+05:30</updated>
+    <updated>2015-08-06T08:16:13-07:00</updated>
     <id>http://nmotw.in//github/curry-this</id>
     <content type="html"><![CDATA[<h1>Curry-this</h1>
 

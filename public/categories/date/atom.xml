@@ -4,7 +4,7 @@
   <title><![CDATA[Category: date | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/date/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[mockdate]]></title>
     <link href="http://nmotw.in//github/mockdate/"/>
-    <updated>2017-05-19T07:46:27+05:30</updated>
+    <updated>2017-05-18T19:16:27-07:00</updated>
     <id>http://nmotw.in//github/mockdate</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mockdate">mockdate</a></h1>
 
@@ -46,7 +46,7 @@ new Date()
   <entry>
     <title type="html"><![CDATA[easydate]]></title>
     <link href="http://nmotw.in//github/easydate/"/>
-    <updated>2015-07-16T20:12:07+05:30</updated>
+    <updated>2015-07-16T07:42:07-07:00</updated>
     <id>http://nmotw.in//github/easydate</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/easydate">easydate</a></p>
 

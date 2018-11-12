@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-06T02:33:58+05:30</updated>
+  <updated>2018-11-11T22:55:25-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[hiper]]></title>
     <link href="http://nmotw.in//github/hiper/"/>
-    <updated>2018-07-28T15:08:33+05:30</updated>
+    <updated>2018-07-28T02:38:33-07:00</updated>
     <id>http://nmotw.in//github/hiper</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
 
@@ -104,7 +104,7 @@ $ hiper nmotw.in</p>
   <entry>
     <title type="html"><![CDATA[cost-of-modules]]></title>
     <link href="http://nmotw.in//github/cost-of-modules/"/>
-    <updated>2016-12-01T19:06:43+05:30</updated>
+    <updated>2016-12-01T05:36:43-08:00</updated>
     <id>http://nmotw.in//github/cost-of-modules</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
 
@@ -136,7 +136,7 @@ identify which dependency is slowing the module down.</p>
   <entry>
     <title type="html"><![CDATA[svgo]]></title>
     <link href="http://nmotw.in//github/svgo/"/>
-    <updated>2015-10-15T21:50:41+05:30</updated>
+    <updated>2015-10-15T09:20:41-07:00</updated>
     <id>http://nmotw.in//github/svgo</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/svgo">svgo</a></h1>
 
