@@ -1,0 +1,42 @@
+---
+layout: post
+title: "fx"
+date: 2018-11-15 18:50:35 -0800
+comments: true
+categories: cli util
+---
+
+#[fx](https://www.npmjs.com/package/fx)
+> CLI JSON processing tool
+
+`fx` is one of a kind JSON processing tool, that provides:
+
+* Don't need to learn new syntax
+* Plain JavaScript
+* Formatting and highlighting
+* Standalone binary
+* Interactive mode 🎉
+
+__Get it:__ `npm install -g fx`
+
+__Sample usage:__
+
+
+```sh
+echo '{...}' | fx [code ...]
+```
+
+```sh
+echo '{"foo": [{"bar": "value"}]}' | fx 'x => x.foo[0].bar'
+```
+
+```sh
+$ echo '{"count": 0}' | fx '{...this, count: 1}'
+{
+  "count": 1
+}
+```
+
+__GIF FTW!__
+
+![fx](/images/fx/fx.gif)
