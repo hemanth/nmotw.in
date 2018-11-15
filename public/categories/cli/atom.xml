@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-11T22:57:23-08:00</updated>
+  <updated>2018-11-15T06:08:10-08:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fx]]></title>
+    <link href="http://nmotw.in//github/fx/"/>
+    <updated>2018-11-15T18:50:35-08:00</updated>
+    <id>http://nmotw.in//github/fx</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
+
+<blockquote><p>CLI JSON processing tool</p></blockquote>
+
+<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
+
+<ul>
+<li>Don't need to learn new syntax</li>
+<li>Plain JavaScript</li>
+<li>Formatting and highlighting</li>
+<li>Standalone binary</li>
+<li>Interactive mode 🎉</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>sh
+echo '{...}' | fx [code ...]
+</code></p>
+
+<p><code>sh
+echo '{"foo": [{"bar": "value"}]}' | fx 'x =&gt; x.foo[0].bar'
+</code></p>
+
+<p><code>sh
+$ echo '{"count": 0}' | fx '{...this, count: 1}'
+{
+  "count": 1
+}
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fx/fx.gif" alt="fx" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[please-upgrade-node]]></title>
@@ -216,43 +261,6 @@ $ commitizen init cz-conventional-changelog --save-dev --save-exact
 <p><img src="/images/commitizen/commitizen.gif" alt="commitizen" /></p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[signal-exit]]></title>
-    <link href="http://nmotw.in//github/signal-exit/"/>
-    <updated>2018-05-20T08:03:02-07:00</updated>
-    <id>http://nmotw.in//github/signal-exit</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/signal-exit">signal-exit</a></h1>
-
-<blockquote><p>Fire an event no matter how a process exits.</p></blockquote>
-
-<p><code>signal-exit</code> fires an event no matter how a process exits:</p>
-
-<ul>
-<li>reaching the end of execution.</li>
-<li>explicitly having <code>process.exit(code)</code> called.</li>
-<li>having <code>process.kill(pid, sig)</code> called.</li>
-<li>receiving a fatal signal from outside the process</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install signal-exit</code></p>
-
-<p><strong>Sample code:</strong></p>
-
-<p>```js
-var onExit = require('signal-exit')</p>
-
-<p>onExit(function (code, signal) {
-  console.log('process exited!', code, signal)
-})
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/signal-exit/signal-exit.gif" alt="signal-exit" /></p>
 ]]></content>
   </entry>
   
