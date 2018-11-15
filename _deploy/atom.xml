@@ -4,13 +4,68 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-11-11T22:57:23-08:00</updated>
+  <updated>2018-11-15T06:08:10-08:00</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fx]]></title>
+    <link href="http://nmotw.in/fx/"/>
+    <updated>2018-11-15T18:50:35-08:00</updated>
+    <id>http://nmotw.in/fx</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
+
+<blockquote><p>CLI JSON processing tool</p></blockquote>
+
+<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
+
+<ul>
+<li>Don't need to learn new syntax</li>
+<li>Plain JavaScript</li>
+<li>Formatting and highlighting</li>
+<li>Standalone binary</li>
+<li>Interactive mode 🎉</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{...}&#39;</span> | fx <span class="o">[</span>code ...<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{&quot;foo&quot;: [{&quot;bar&quot;: &quot;value&quot;}]}&#39;</span> | fx <span class="s1">&#39;x =&gt; x.foo[0].bar&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;count&quot;: 0}&#39;</span> | fx <span class="s1">&#39;{...this, count: 1}&#39;</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;count&quot;</span>: 1
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/fx/fx.gif" alt="fx" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[is-vegan]]></title>
@@ -1513,78 +1568,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/auto-parse/auto-parse.gif" alt="auto-parse" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[error-stack-parser]]></title>
-    <link href="http://nmotw.in/error-stack-parser/"/>
-    <updated>2018-07-01T08:12:55-07:00</updated>
-    <id>http://nmotw.in/error-stack-parser</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
-
-<blockquote><p>Simple, cross-browser Error parser.</p></blockquote>
-
-<p><code>error-stack-parser</code> library parses and extracts function names, URLs, line numbers, and column numbers from the given Error's stack as an Array of StackFrames.</p>
-
-<p><strong>Get it:</strong> <code>npm install error-stack-parser</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ErrorStackParser</span> <span class="o">=</span> <span class="nx">rquire</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">error</span><span class="o">-</span><span class="nx">stack</span><span class="o">-</span><span class="nx">parser</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ErrorStackParser</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;BOOM&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">=&gt; [</span>
-</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;foo&#39;, args: [], fileName: &#39;path/to/file.js&#39;, lineNumber: 35, columnNumber: 79, isNative: false, isEval: false}),</span>
-</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;Bar&#39;, fileName: &#39;https://cdn.somewherefast.com/utils.min.js&#39;, lineNumber: 1, columnNumber: 832, isNative: false, isEval: false, isConstructor: true}),</span>
-</span><span class='line'><span class="cm">        StackFrame(... and so on ...)</span>
-</span><span class='line'><span class="cm">   ]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">ErrorStackParer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">[ &#39;parse&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;extractLocation&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseV8OrIE&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseFFOrSafari&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera9&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera10&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera11&#39; ]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/error-stack-parser/error-stack-parser.gif" alt="error-stack-parser" /></p>
 ]]></content>
   </entry>
   
