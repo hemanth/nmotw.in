@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -13,9 +13,89 @@
 
   
   <entry>
+    <title type="html"><![CDATA[query-state]]></title>
+    <link href="http://nmotw.in/query-state/"/>
+    <updated>2018-11-22T16:09:44+05:30</updated>
+    <id>http://nmotw.in/query-state</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
+
+<blockquote><p>Application state in query string.</p></blockquote>
+
+<p><code>query-state</code> is a cheeky module that uses <code>history</code> API and <code>encodeURIComponent</code> magic to maintain the application state in the query string.</p>
+
+<p><strong>Get it:</strong> <code>npm install query-state</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">queryState</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;query-state&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// create a new query state instance</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">queryState</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// get current application state from the hash string:</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">appState</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// you can also monitor for changes in the query string:</span>
+</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">onChange</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">appState</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// prints new application state on each hash update</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;app state changed!&#39;</span><span class="p">,</span> <span class="nx">appState</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// If you want to set a new value in the app state:</span>
+</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;answer&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now the query string will have `answer=42` part in it.</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;answer=42&#39;</span><span class="p">))</span> <span class="c1">// prints value &gt; 0.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// You can also set multiple values at once:</span>
+</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Haddaway&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">song</span><span class="o">:</span> <span class="s1">&#39;What is love?&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// NOTE: The call above merges new properties. It appends two new properties to </span>
+</span><span class='line'><span class="c1">// the current query string</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/query-state/query-state.gif" alt="query-state" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[fx]]></title>
     <link href="http://nmotw.in/fx/"/>
-    <updated>2018-11-15T18:50:35-08:00</updated>
+    <updated>2018-11-16T08:20:35+05:30</updated>
     <id>http://nmotw.in/fx</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
 
@@ -70,7 +150,7 @@
   <entry>
     <title type="html"><![CDATA[is-vegan]]></title>
     <link href="http://nmotw.in/is-vegan/"/>
-    <updated>2018-11-11T22:37:49-08:00</updated>
+    <updated>2018-11-12T12:07:49+05:30</updated>
     <id>http://nmotw.in/is-vegan</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
 
@@ -139,7 +219,7 @@
   <entry>
     <title type="html"><![CDATA[errno]]></title>
     <link href="http://nmotw.in/errno/"/>
-    <updated>2018-11-04T01:45:46-08:00</updated>
+    <updated>2018-11-04T15:15:46+05:30</updated>
     <id>http://nmotw.in/errno</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
 
@@ -276,7 +356,7 @@
   <entry>
     <title type="html"><![CDATA[the-platform]]></title>
     <link href="http://nmotw.in/the-platform/"/>
-    <updated>2018-10-28T03:03:43-07:00</updated>
+    <updated>2018-10-28T15:33:43+05:30</updated>
     <id>http://nmotw.in/the-platform</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
 
@@ -391,7 +471,7 @@
   <entry>
     <title type="html"><![CDATA[compromise]]></title>
     <link href="http://nmotw.in/compromise/"/>
-    <updated>2018-10-20T01:56:13-07:00</updated>
+    <updated>2018-10-20T14:26:13+05:30</updated>
     <id>http://nmotw.in/compromise</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/compromise">compromise</a></h1>
 
@@ -451,7 +531,7 @@
   <entry>
     <title type="html"><![CDATA[zet]]></title>
     <link href="http://nmotw.in/zet/"/>
-    <updated>2018-10-13T02:17:06-07:00</updated>
+    <updated>2018-10-13T14:47:06+05:30</updated>
     <id>http://nmotw.in/zet</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
 
@@ -528,7 +608,7 @@
   <entry>
     <title type="html"><![CDATA[regex-not]]></title>
     <link href="http://nmotw.in/regex-not/"/>
-    <updated>2018-10-07T01:59:22-07:00</updated>
+    <updated>2018-10-07T14:29:22+05:30</updated>
     <id>http://nmotw.in/regex-not</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/regex-not">regex-not</a></h1>
 
@@ -568,7 +648,7 @@
   <entry>
     <title type="html"><![CDATA[emma]]></title>
     <link href="http://nmotw.in/emma/"/>
-    <updated>2018-09-26T23:43:16-07:00</updated>
+    <updated>2018-09-27T12:13:16+05:30</updated>
     <id>http://nmotw.in/emma</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
 
@@ -627,7 +707,7 @@
   <entry>
     <title type="html"><![CDATA[please-upgrade-node]]></title>
     <link href="http://nmotw.in/please-upgrade-node/"/>
-    <updated>2018-09-23T03:12:17-07:00</updated>
+    <updated>2018-09-23T15:42:17+05:30</updated>
     <id>http://nmotw.in/please-upgrade-node</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
 
@@ -691,7 +771,7 @@
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in/mapscii/"/>
-    <updated>2018-09-16T06:12:56-07:00</updated>
+    <updated>2018-09-16T18:42:56+05:30</updated>
     <id>http://nmotw.in/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -728,7 +808,7 @@
   <entry>
     <title type="html"><![CDATA[microjob]]></title>
     <link href="http://nmotw.in/microjob/"/>
-    <updated>2018-09-08T11:57:32-07:00</updated>
+    <updated>2018-09-09T00:27:32+05:30</updated>
     <id>http://nmotw.in/microjob</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
 
@@ -791,7 +871,7 @@
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in/npm-whoshiring/"/>
-    <updated>2018-09-01T21:06:09-07:00</updated>
+    <updated>2018-09-02T09:36:09+05:30</updated>
     <id>http://nmotw.in/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -859,7 +939,7 @@
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
     <link href="http://nmotw.in/commitizen/"/>
-    <updated>2018-08-26T02:07:52-07:00</updated>
+    <updated>2018-08-26T14:37:52+05:30</updated>
     <id>http://nmotw.in/commitizen</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
 
@@ -928,7 +1008,7 @@
   <entry>
     <title type="html"><![CDATA[tryor]]></title>
     <link href="http://nmotw.in/tryor/"/>
-    <updated>2018-08-19T08:38:06-07:00</updated>
+    <updated>2018-08-19T21:08:06+05:30</updated>
     <id>http://nmotw.in/tryor</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/tryor">tryor</a></h1>
 
@@ -998,7 +1078,7 @@
   <entry>
     <title type="html"><![CDATA[aproba]]></title>
     <link href="http://nmotw.in/aproba/"/>
-    <updated>2018-08-12T02:34:36-07:00</updated>
+    <updated>2018-08-12T15:04:36+05:30</updated>
     <id>http://nmotw.in/aproba</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/aproba">aproba</a></h1>
 
@@ -1114,7 +1194,7 @@
   <entry>
     <title type="html"><![CDATA[pretty-error]]></title>
     <link href="http://nmotw.in/pretty-error/"/>
-    <updated>2018-08-05T01:07:39-07:00</updated>
+    <updated>2018-08-05T13:37:39+05:30</updated>
     <id>http://nmotw.in/pretty-error</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
 
@@ -1163,7 +1243,7 @@
   <entry>
     <title type="html"><![CDATA[hiper]]></title>
     <link href="http://nmotw.in/hiper/"/>
-    <updated>2018-07-28T02:38:33-07:00</updated>
+    <updated>2018-07-28T15:08:33+05:30</updated>
     <id>http://nmotw.in/hiper</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
 
@@ -1284,7 +1364,7 @@
   <entry>
     <title type="html"><![CDATA[time-stamp]]></title>
     <link href="http://nmotw.in/time-stamp/"/>
-    <updated>2018-07-22T00:42:10-07:00</updated>
+    <updated>2018-07-22T13:12:10+05:30</updated>
     <id>http://nmotw.in/time-stamp</id>
     <content type="html"><![CDATA[<h1><a href="">time-stamp</a></h1>
 
@@ -1418,7 +1498,7 @@
   <entry>
     <title type="html"><![CDATA[proxymise]]></title>
     <link href="http://nmotw.in/proxymise/"/>
-    <updated>2018-07-15T03:22:27-07:00</updated>
+    <updated>2018-07-15T15:52:27+05:30</updated>
     <id>http://nmotw.in/proxymise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
 
@@ -1477,97 +1557,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="http://nmotw.in/images/proxymise/proxymise.gif" alt="proxymise" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[auto-parse]]></title>
-    <link href="http://nmotw.in/auto-parse/"/>
-    <updated>2018-07-07T09:29:37-07:00</updated>
-    <id>http://nmotw.in/auto-parse</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/auto-parse">auto-parse</a></h1>
-
-<blockquote><p>auto-parse any value you happen to send in.</p></blockquote>
-
-<p><code>auto-parse</code> any value you happen to send in like: <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Array</code>, <code>Object</code>, <code>Function</code>, <code>undefined</code> and <code>null</code> and it shall get parsed to the appropriate value.</p>
-
-<p><strong>GET IT:</strong> <code>npm install auto-parse</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">autoParse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;auto-parse&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">([</span>
-</span><span class='line'>  <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;TrUe&#39;</span><span class="p">,</span> <span class="s1">&#39; undefined &#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39; null &#39;</span><span class="p">,</span> <span class="s1">&#39;[]&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">age</span> <span class="o">:</span> <span class="s2">&quot;50&quot;</span><span class="p">}</span>
-</span><span class='line'><span class="p">]);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">[1, true, undefined, null, [], {age: 50} ]</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Set Type</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Boolean&#39;</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="kc">true</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Number&#39;</span><span class="p">)</span>  <span class="o">=&gt;</span>   <span class="mi">0</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="kc">true</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">Number</span><span class="p">)</span>  <span class="o">=&gt;</span>   <span class="mi">0</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="mi">1234</span><span class="p">,</span> <span class="nb">String</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="s1">&#39;1234&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// dates</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="s1">&#39;1989-11-30&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="nx">Thu</span> <span class="nx">Nov</span> <span class="mi">30</span> <span class="mi">1989</span> <span class="mi">18</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span> <span class="nx">GMT</span><span class="o">-</span><span class="mi">0600</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="s1">&#39;1989-11-30&#39;</span><span class="p">,</span> <span class="nb">Date</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="nx">Thu</span> <span class="nx">Nov</span> <span class="mi">30</span> <span class="mi">1989</span> <span class="mi">18</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span> <span class="nx">GMT</span><span class="o">-</span><span class="mi">0600</span> <span class="p">(</span><span class="nx">CST</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Passing Functions to type</span>
-</span><span class='line'><span class="kd">function</span> <span class="nx">Color</span> <span class="p">(</span><span class="nx">inputColor</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">inputColor</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nx">autoParse</span><span class="p">(</span><span class="s1">&#39;#AAA&#39;</span><span class="p">,</span> <span class="nx">Color</span><span class="p">)</span>  <span class="o">=&gt;</span>  <span class="p">{</span><span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#AAA&#39;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/auto-parse/auto-parse.gif" alt="auto-parse" /></p>
 ]]></content>
   </entry>
   
