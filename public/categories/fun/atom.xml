@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[is-vegan]]></title>
     <link href="http://nmotw.in//github/is-vegan/"/>
-    <updated>2018-11-11T22:37:49-08:00</updated>
+    <updated>2018-11-12T12:07:49+05:30</updated>
     <id>http://nmotw.in//github/is-vegan</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
 
@@ -68,7 +68,7 @@ isVegan.checkIngredients(['soy', 'cacao butter', 'pork', 'glycine']);
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in//github/mapscii/"/>
-    <updated>2018-09-16T06:12:56-07:00</updated>
+    <updated>2018-09-16T18:42:56+05:30</updated>
     <id>http://nmotw.in//github/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -105,7 +105,7 @@ $ mapscii</p>
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in//github/npm-whoshiring/"/>
-    <updated>2018-09-01T21:06:09-07:00</updated>
+    <updated>2018-09-02T09:36:09+05:30</updated>
     <id>http://nmotw.in//github/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -153,7 +153,7 @@ Voxer                http://www.voxer.com/careers/                              
   <entry>
     <title type="html"><![CDATA[april-fools]]></title>
     <link href="http://nmotw.in//github/april-fools/"/>
-    <updated>2018-03-31T17:07:51-07:00</updated>
+    <updated>2018-04-01T05:37:51+05:30</updated>
     <id>http://nmotw.in//github/april-fools</id>
     <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/april-fools">april-fools</a></p>
 
@@ -205,7 +205,7 @@ at require (internal/module.js:11:18)
   <entry>
     <title type="html"><![CDATA[christmas-ascii]]></title>
     <link href="http://nmotw.in//github/christmas-ascii/"/>
-    <updated>2017-12-24T02:46:41-08:00</updated>
+    <updated>2017-12-24T16:16:41+05:30</updated>
     <id>http://nmotw.in//github/christmas-ascii</id>
     <content type="html"><![CDATA[<h1><a href="https://nmpjs.com/christmas-ascii">christmas-ascii</a></h1>
 

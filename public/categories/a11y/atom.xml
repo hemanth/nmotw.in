@@ -4,7 +4,7 @@
   <title><![CDATA[Category: a11y | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/a11y/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[a11y]]></title>
     <link href="http://nmotw.in//github/a11y/"/>
-    <updated>2018-04-14T18:31:25-07:00</updated>
+    <updated>2018-04-15T07:01:25+05:30</updated>
     <id>http://nmotw.in//github/a11y</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/a11y">a11y</a></h1>
 
@@ -76,7 +76,7 @@ const report = reports.report; // DevTools Accessibility Audit formatted report
   <entry>
     <title type="html"><![CDATA[accessibilityjs]]></title>
     <link href="http://nmotw.in//github/accessibilityjs/"/>
-    <updated>2017-10-20T00:43:03-07:00</updated>
+    <updated>2017-10-20T13:13:03+05:30</updated>
     <id>http://nmotw.in//github/accessibilityjs</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
 
@@ -128,7 +128,7 @@ import {scanForProblems} from 'accessibilityjs'</p>
   <entry>
     <title type="html"><![CDATA[axe-cli]]></title>
     <link href="http://nmotw.in//github/axe-cli/"/>
-    <updated>2017-07-27T04:29:41-07:00</updated>
+    <updated>2017-07-27T16:59:41+05:30</updated>
     <id>http://nmotw.in//github/axe-cli</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/axe-cli">axe-cli</a></h1>
 

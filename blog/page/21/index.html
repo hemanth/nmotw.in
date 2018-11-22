@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="safe-json-parse Parse JSON safely without throwing. Sweet, simple and effictive module for parsing JSON safely :) Get it: npm install safe-json- &hellip;">   
+    <meta name="description" content="isomorphic-fetch Isomorphic WHATWG Fetch API, for Node &amp; Browserify fetch from GitHub makes it easier to make web requests and handle responses &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/21/">
-    <meta name="twitter:description" content="safe-json-parse Parse JSON safely without throwing. Sweet, simple and effictive module for parsing JSON safely :) Get it: npm install safe-json- &hellip;">
+    <meta name="twitter:description" content="isomorphic-fetch Isomorphic WHATWG Fetch API, for Node &amp; Browserify fetch from GitHub makes it easier to make web requests and handle responses &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/21/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="safe-json-parse Parse JSON safely without throwing. Sweet, simple and effictive module for parsing JSON safely :) Get it: npm install safe-json- &hellip;" />
+    <meta property="og:description" content="isomorphic-fetch Isomorphic WHATWG Fetch API, for Node &amp; Browserify fetch from GitHub makes it easier to make web requests and handle responses &hellip;" />
 
     
 
@@ -73,6 +73,90 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/isomorphic-fetch/">
+			
+				Isomorphic-fetch</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-15T20:45:00+05:30" pubdate data-updated="true">Jan 15<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a></p>
+
+<blockquote><p>Isomorphic WHATWG Fetch API, for Node &amp; Browserify</p></blockquote>
+
+<p><code>fetch</code> from GitHub makes it easier to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch <a href="https://fetch.spec.whatwg.org">specification</a>.</p>
+
+<p>Well, <code>fetch</code> was in the nmotw queue for quite some time now, but this week seems to be special as FF nightly and Chrome canary rolled out this API ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install isomorphic-fetch</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Fetch random XKCD comic.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;isomorphic-fetch&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://xkcd-imgs.herokuapp.com/&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ex</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="nx">ex</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Would log something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://imgs.xkcd.com/comics/wikifriends.png&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;It\&#39;s crazy how much my gut opinion of a movie/song is swayed by what other people say, regardless of how I felt coming out of the theater.&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/isomorphic-fetch/isomorphic-fetch.gif" alt="isomorphic-fetch" /></p>
+
+<p>Thanks to <a href="https://mattandre.ws/">Matt Andrews</a> for <code>isomorphic-fetch</code> (:</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/safe-json-parse/">
 			
 				Safe-json-parse</a>
@@ -89,7 +173,7 @@
   
 
 
-<time datetime="2015-01-08T08:56:50-08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
+<time datetime="2015-01-08T22:26:50+05:30" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/safe-json-parse">safe-json-parse</a></h1>
@@ -169,7 +253,7 @@
   
 
 
-<time datetime="2015-01-01T05:23:53-08:00" pubdate data-updated="true">Jan 1<span>st</span>, 2015</time></div>
+<time datetime="2015-01-01T18:53:53+05:30" pubdate data-updated="true">Jan 1<span>st</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/css-explain">css-explain</a></h1>
@@ -278,7 +362,7 @@
   
 
 
-<time datetime="2014-12-24T04:41:33-08:00" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
+<time datetime="2014-12-24T18:11:33+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="">printf</a></h1>
@@ -363,7 +447,7 @@
   
 
 
-<time datetime="2014-12-18T04:37:40-08:00" pubdate data-updated="true">Dec 18<span>th</span>, 2014</time></div>
+<time datetime="2014-12-18T18:07:40+05:30" pubdate data-updated="true">Dec 18<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/malarkey">malarkey</a></h1>
@@ -453,7 +537,7 @@
   
 
 
-<time datetime="2014-12-11T05:06:10-08:00" pubdate data-updated="true">Dec 11<span>th</span>, 2014</time></div>
+<time datetime="2014-12-11T18:36:10+05:30" pubdate data-updated="true">Dec 11<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/treeify">treeify</a></h1>
@@ -557,7 +641,7 @@
   
 
 
-<time datetime="2014-12-04T04:29:16-08:00" pubdate data-updated="true">Dec 4<span>th</span>, 2014</time></div>
+<time datetime="2014-12-04T17:59:16+05:30" pubdate data-updated="true">Dec 4<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://github.com/tldr-pages/tldr">tldr</a></h1>
@@ -654,7 +738,7 @@
   
 
 
-<time datetime="2014-11-27T04:01:17-08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time></div>
+<time datetime="2014-11-27T17:31:17+05:30" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.org/package/fake-identity">fake-identity</a></h1>
@@ -807,7 +891,7 @@
   
 
 
-<time datetime="2014-11-20T06:52:16-08:00" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time></div>
+<time datetime="2014-11-20T20:22:16+05:30" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.org/package/npm-check-updates">npm-check-updates</a></h1>
@@ -897,7 +981,7 @@
   
 
 
-<time datetime="2014-11-13T04:54:00-08:00" pubdate data-updated="true">Nov 13<span>th</span>, 2014</time></div>
+<time datetime="2014-11-13T18:24:00+05:30" pubdate data-updated="true">Nov 13<span>th</span>, 2014</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.org/package/npm-me">npm-me</a></h1>
@@ -1047,96 +1131,6 @@
 <p><img src="/images/npm-me/npm-me.gif" alt="" /></p>
 
 <p>Thanks to <a href="http://twitter.com/hughskennedy">Hugh Kennedy</a> for this cheeky util!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/npm-clone/">
-			
-				Npm-clone</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-30T05:59:03-07:00" pubdate data-updated="true">Oct 30<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.org/package/npm-clone">npm-clone</a></h1>
-
-<p>This is a CLI util that will help you to:</p>
-
-<ul>
-<li><p>Clone a node module from it's name.</p></li>
-<li><p>Install all the dependencies.</p></li>
-<li><p>Run its tests!</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g npm-clone</code></p>
-
-<p><strong>Usage example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># clone a node module</span>
-</span><span class='line'>npm-clone is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone using its private url</span>
-</span><span class='line'>npm-clone --ssh is-mp3
-</span><span class='line'>npm-clone --https is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone and install dependencies</span>
-</span><span class='line'>npm-clone install is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># clone, install dependencies and run its tests</span>
-</span><span class='line'>npm-clone install <span class="nb">test </span>is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># with a short form</span>
-</span><span class='line'>npm-clone all is-mp3
-</span><span class='line'>
-</span><span class='line'><span class="c"># flags still apply</span>
-</span><span class='line'>npm-clone --ssh all is-mp3
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/npm-clone/npm-clone.gif" alt="npm-clone" /></p>
-
-<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this helper! :)</p>
 
 		
 		

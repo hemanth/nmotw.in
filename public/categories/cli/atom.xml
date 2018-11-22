@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[fx]]></title>
     <link href="http://nmotw.in//github/fx/"/>
-    <updated>2018-11-15T18:50:35-08:00</updated>
+    <updated>2018-11-16T08:20:35+05:30</updated>
     <id>http://nmotw.in//github/fx</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
 
@@ -61,7 +61,7 @@ $ echo '{"count": 0}' | fx '{...this, count: 1}'
   <entry>
     <title type="html"><![CDATA[please-upgrade-node]]></title>
     <link href="http://nmotw.in//github/please-upgrade-node/"/>
-    <updated>2018-09-23T03:12:17-07:00</updated>
+    <updated>2018-09-23T15:42:17+05:30</updated>
     <id>http://nmotw.in//github/please-upgrade-node</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
 
@@ -119,7 +119,7 @@ pleaseUpgradeNode(pkg, {
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in//github/mapscii/"/>
-    <updated>2018-09-16T06:12:56-07:00</updated>
+    <updated>2018-09-16T18:42:56+05:30</updated>
     <id>http://nmotw.in//github/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -156,7 +156,7 @@ $ mapscii</p>
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in//github/npm-whoshiring/"/>
-    <updated>2018-09-01T21:06:09-07:00</updated>
+    <updated>2018-09-02T09:36:09+05:30</updated>
     <id>http://nmotw.in//github/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -204,7 +204,7 @@ Voxer                http://www.voxer.com/careers/                              
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
     <link href="http://nmotw.in//github/commitizen/"/>
-    <updated>2018-08-26T02:07:52-07:00</updated>
+    <updated>2018-08-26T14:37:52+05:30</updated>
     <id>http://nmotw.in//github/commitizen</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
 

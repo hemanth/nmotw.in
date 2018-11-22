@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/git/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[commitizen]]></title>
     <link href="http://nmotw.in//github/commitizen/"/>
-    <updated>2018-08-26T02:07:52-07:00</updated>
+    <updated>2018-08-26T14:37:52+05:30</updated>
     <id>http://nmotw.in//github/commitizen</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
 
@@ -79,7 +79,7 @@ $ commitizen init cz-conventional-changelog --save-dev --save-exact
   <entry>
     <title type="html"><![CDATA[git-promise]]></title>
     <link href="http://nmotw.in//github/git-promise/"/>
-    <updated>2014-08-14T05:21:17-07:00</updated>
+    <updated>2014-08-14T17:51:17+05:30</updated>
     <id>http://nmotw.in//github/git-promise</id>
     <content type="html"><![CDATA[<h2>git-promise</h2>
 

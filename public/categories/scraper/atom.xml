@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scraper | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/scraper/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[scrape-it]]></title>
     <link href="http://nmotw.in//github/scrape-it/"/>
-    <updated>2018-05-11T23:04:02-07:00</updated>
+    <updated>2018-05-12T11:34:02+05:30</updated>
     <id>http://nmotw.in//github/scrape-it</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scrape-it">scrape-it</a></h1>
 
@@ -47,7 +47,7 @@ const scrapeIt = require("scrape-it")</p>
   <entry>
     <title type="html"><![CDATA[ineed]]></title>
     <link href="http://nmotw.in//github/ineed/"/>
-    <updated>2016-01-07T08:32:52-08:00</updated>
+    <updated>2016-01-07T22:02:52+05:30</updated>
     <id>http://nmotw.in//github/ineed</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
 

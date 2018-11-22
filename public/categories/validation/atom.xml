@@ -4,7 +4,7 @@
   <title><![CDATA[Category: validation | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/validation/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-15T06:08:10-08:00</updated>
+  <updated>2018-11-22T16:20:39+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[have]]></title>
     <link href="http://nmotw.in//github/have/"/>
-    <updated>2014-03-27T06:03:53-07:00</updated>
+    <updated>2014-03-27T18:33:53+05:30</updated>
     <id>http://nmotw.in//github/have</id>
     <content type="html"><![CDATA[<p>Coding a "defensive" or a "contractual" API is a design decision, if you opt for the defensive way, here is a neat module called <a href="https://www.npmjs.org/package/have">have</a> that will help you to have your arguments, and validate it too!</p>
 

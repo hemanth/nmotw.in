@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;">   
+    <meta name="description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/20/">
-    <meta name="twitter:description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;">
+    <meta name="twitter:description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/20/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;" />
+    <meta property="og:description" content="cssom CSS Object Model implementation and CSS parser. cssom is parser written in pure javascript, it also has partially implemented of CSS Object &hellip;" />
 
     
 
@@ -73,6 +73,127 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/cssom/">
+			
+				Cssom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-26T19:05:30+05:30" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
+
+<blockquote><p>CSS Object Model implementation and CSS parser.</p></blockquote>
+
+<p><code>cssom</code> is parser written in pure javascript, it also has partially implemented of <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>, works across node/io.js and modren browsers.</p>
+
+<p><strong>Install it:</strong> <code>npm install cssom --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cssom&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">CSSStyleDeclaration</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleDeclaration</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSRule</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSRule</span><span class="p">]</span>
+</span><span class='line'>     <span class="nx">STYLE_RULE</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">IMPORT_RULE</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">MEDIA_RULE</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">FONT_FACE_RULE</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">PAGE_RULE</span><span class="o">:</span> <span class="mi">6</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAMES_RULE</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span class='line'>     <span class="nx">WEBKIT_KEYFRAME_RULE</span><span class="o">:</span> <span class="mi">9</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">CSSStyleRule</span><span class="o">:</span> <span class="p">{</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleRule</span><span class="p">]</span> <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">MediaList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MediaList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSMediaRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSMediaRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSImportRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSImportRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSFontFaceRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSFontFaceRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">StyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">StyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSStyleSheet</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframesRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframesRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSKeyframeRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSKeyframeRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">MatcherList</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">MatcherList</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSDocumentRule</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSDocumentRule</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValue</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValue</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">CSSValueExpression</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">CSSValueExpression</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">parse</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">parse</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">clone</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="o">:</span> <span class="nx">clone</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">cssom</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;.main{display:flex}&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">cssRules</span><span class="o">:</span>
+</span><span class='line'>   <span class="p">[</span> <span class="p">{</span> <span class="nx">parentRule</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">parentStyleSheet</span><span class="o">:</span> <span class="p">[</span><span class="nx">Circular</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">selectorText</span><span class="o">:</span> <span class="s1">&#39;.main&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">style</span><span class="o">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">],</span>
+</span><span class='line'>       <span class="nx">__starts</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>       <span class="nx">__ends</span><span class="o">:</span> <span class="mi">19</span> <span class="p">}</span> <span class="p">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Thanks to <a href="http://n12v.com/">Nikita Vasilyev</a> for this early implementation of <code>cssom</code> (:</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cssom/cssom.gif" alt="cssom" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/did-you-mean/">
 			
 				Did-you-mean</a>
@@ -89,7 +210,7 @@
   
 
 
-<time datetime="2015-03-19T05:11:21-07:00" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
+<time datetime="2015-03-19T17:41:21+05:30" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/did-you-mean">did-you-mean</a></h1>
@@ -176,7 +297,7 @@
   
 
 
-<time datetime="2015-03-12T08:24:10-07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
+<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
@@ -245,7 +366,7 @@
   
 
 
-<time datetime="2015-03-05T05:17:23-08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
+<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
@@ -329,7 +450,7 @@
   
 
 
-<time datetime="2015-02-26T04:48:25-08:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
+<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
@@ -424,7 +545,7 @@
   
 
 
-<time datetime="2015-02-19T05:45:03-08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
+<time datetime="2015-02-19T19:15:03+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/sentencer">sentencer</a></h1>
@@ -522,7 +643,7 @@
   
 
 
-<time datetime="2015-02-12T04:27:21-08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
+<time datetime="2015-02-12T17:57:21+05:30" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dehumanize-date">dehumanize-date</a></h1>
@@ -672,7 +793,7 @@
   
 
 
-<time datetime="2015-02-05T06:03:17-08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
+<time datetime="2015-02-05T19:33:17+05:30" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
@@ -749,7 +870,7 @@
   
 
 
-<time datetime="2015-01-29T17:53:00-08:00" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
+<time datetime="2015-01-29T17:53:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
@@ -880,7 +1001,7 @@
   
 
 
-<time datetime="2015-01-22T05:33:18-08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
+<time datetime="2015-01-22T19:03:18+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="http://npm.im/nsp/">nsp</a> aka: <a href="http://nodesecurity.io">Node Security Project</a></h1>
@@ -964,90 +1085,6 @@
 <p><img src="/images/nsp/nsp.gif" alt="nsp" /></p>
 
 <p>Thanks to the <a href="https://twitter.com/nodesecurity">nodesecurity</a> for making security easy!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/isomorphic-fetch/">
-			
-				Isomorphic-fetch</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-15T20:45:00-08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a></p>
-
-<blockquote><p>Isomorphic WHATWG Fetch API, for Node &amp; Browserify</p></blockquote>
-
-<p><code>fetch</code> from GitHub makes it easier to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch <a href="https://fetch.spec.whatwg.org">specification</a>.</p>
-
-<p>Well, <code>fetch</code> was in the nmotw queue for quite some time now, but this week seems to be special as FF nightly and Chrome canary rolled out this API ;)</p>
-
-<p><strong>Install it:</strong>  <code>npm install isomorphic-fetch</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Fetch random XKCD comic.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;isomorphic-fetch&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://xkcd-imgs.herokuapp.com/&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-</span><span class='line'>    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ex</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="nx">ex</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Would log something like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="p">{</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://imgs.xkcd.com/comics/wikifriends.png&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;It\&#39;s crazy how much my gut opinion of a movie/song is swayed by what other people say, regardless of how I felt coming out of the theater.&#39;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/isomorphic-fetch/isomorphic-fetch.gif" alt="isomorphic-fetch" /></p>
-
-<p>Thanks to <a href="https://mattandre.ws/">Matt Andrews</a> for <code>isomorphic-fetch</code> (:</p>
 
 		
 		
