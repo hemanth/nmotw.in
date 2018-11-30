@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="randexp Generate a random string that matches a given RegExp. What better way to generate a random string than with a language you can use to &hellip;">   
+    <meta name="description" content="pressure Handle Force Touch, 3D Touch, and Pointer Pressure on the web. Devices implement force differently pressure is trying to solve it across &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/5/">
-    <meta name="twitter:description" content="randexp Generate a random string that matches a given RegExp. What better way to generate a random string than with a language you can use to &hellip;">
+    <meta name="twitter:description" content="pressure Handle Force Touch, 3D Touch, and Pointer Pressure on the web. Devices implement force differently pressure is trying to solve it across &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/5/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="randexp Generate a random string that matches a given RegExp. What better way to generate a random string than with a language you can use to &hellip;" />
+    <meta property="og:description" content="pressure Handle Force Touch, 3D Touch, and Pointer Pressure on the web. Devices implement force differently pressure is trying to solve it across &hellip;" />
 
     
 
@@ -67,6 +67,113 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/pressure/">
+			
+				Pressure</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-02-25T09:29:07+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/pressure">pressure</a></p>
+
+<blockquote><p>Handle Force Touch, 3D Touch, and Pointer Pressure on the web.</p></blockquote>
+
+<p>Devices implement force differently <code>pressure</code> is trying to solve it across all devices, with polyfill and multi touch support.</p>
+
+<p><strong>Get it:</strong> <code>npm install pressure</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Pressure</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Pressure</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">start</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>    <span class="c1">// this is called on force start</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">end</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="c1">// this is called on force end</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">startDeepPress</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>    <span class="c1">// this is called on &quot;force click&quot; / &quot;deep press&quot;, aka once the force is greater than 0.5</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">endDeepPress</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="c1">// this is called when the &quot;force click&quot; / &quot;deep press&quot; end</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">change</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">force</span><span class="p">,</span> <span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>    <span class="c1">// this is called every time there is a change in pressure</span>
+</span><span class='line'>    <span class="c1">// force will always be a value from 0 to 1 on mobile and desktop</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">unsupported</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="c1">// NOTE: this is only called if the polyfill option is disabled!</span>
+</span><span class='line'>    <span class="c1">// this is called once there is a touch on the element and the device or browser does not support Force or 3D touch</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Below are the supported devices:</p>
+
+<ul>
+<li>Microsoft Surface, Wacom Tablets (Device that supports pointer events)</li>
+<li>iPhone 6s, iPhone 6s Plus, iPhone 7, iPhone 7 Plus</li>
+<li>MacBook 2015 &amp; MacBook Pro 2015</li>
+<li>Magic Trackpad 2</li>
+<li>iPad Pro with Apple Pencil</li>
+<li>Safari, Chrome, anything using WKWebView</li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/pressure/pressure.gif" alt="pressure" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -834,69 +941,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/portscanner/">
-			
-				Portscanner</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-12-17T15:16:40+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/portscanner">portscanner</a></h1>
-
-<blockquote><p>port scanner!</p></blockquote>
-
-<p><code>portscanner</code> helps us to check the port status and free port for a given host.</p>
-
-<p><strong>Get it:</strong> <code>npm install portscanner</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">portScanner</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;portscanner&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">checkPortStatus</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">portscanner</span><span class="p">.</span><span class="nx">findAPortInUse</span><span class="p">([</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">3006</span><span class="p">],</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/portscanner/portscanner.gif" alt="portscanner.gif" /></p>
 
 		
 		
