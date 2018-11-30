@@ -7,9 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
-2
-var stackTrace = require &hellip;">   
+    <meta name="description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -17,18 +15,14 @@ var stackTrace = require &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
-2
-var stackTrace = require &hellip;">
+    <meta name="twitter:description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="stack-trace Get v8 stack traces as an array of CallSite objects. Get it: npm install --save stack-trace Sample usage: 1
-2
-var stackTrace = require &hellip;" />
+    <meta property="og:description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;" />
 
     
 
@@ -73,6 +67,88 @@ var stackTrace = require &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ineed/">
+			
+				Ineed</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-07T22:02:52+05:30" pubdate data-updated="true">Jan 7<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
+
+<blockquote><p>Web scraping and HTML-reprocessing. The easy way.</p></blockquote>
+
+<p><img src="/images/ineed/ineed-logo.png" alt="ineed-logo" /></p>
+
+<p><code>ineed</code> allows you collect useful data from web pages using simple and nice API.</p>
+
+<p>It doesn't build and traverse DOM-tree, it operates on sequence of HTML tokens instead. Whole processing is done in one-pass, therefore, it's blazing fast!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save ineed</code></p>
+
+<p><strong>Usage:</strong> <code>ineed.&lt;action&gt;[.&lt;plugin&gt;...].&lt;from*&gt;</code></p>
+
+<p>Where <code>action</code> could be: <code>collect</code> or <code>reprocess</code></p>
+
+<p><code>plugin</code> could be one of: <code>.comments</code> <code>.cssCode</code> <code>.hyperlinks</code> <code>.images</code> <code>.jsCode</code> <code>.scripts</code> <code>.stylesheets</code> <code>.texts</code> <code>.title</code></p>
+
+<p><code>from</code> could be: <code>from</code> or <code>fromHtml</code></p>
+
+<p>P.S: One could write a custom plugin using the <code>.using()</code> method.</p>
+
+<p><strong>Code sample:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">hyperlinks</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">stylesheets</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s1">&#39;http://nmotw.in&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ineed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ineed&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">ineed</span><span class="p">.</span><span class="nx">collect</span><span class="p">.</span><span class="nx">texts</span><span class="p">.</span><span class="nx">images</span><span class="p">.</span><span class="nx">scripts</span><span class="p">.</span><span class="nx">fromHtml</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ineed/ineed.gif" alt="ineed" /></p>
+
+<p>Thanks to <a href="https://twitter.com/nilukini">Ivan Nikulin</a> for this cheeky module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -797,114 +873,6 @@ var str = pretty(123456789);
 
 
 
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/sentiment/">
-			
-				Sentiment</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-10-29T18:47:29+05:30" pubdate data-updated="true">Oct 29<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/sentiment">sentiment</a></h1>
-
-<blockquote><p>AFINN-based sentiment analysis.</p></blockquote>
-
-<p><code>Sentiment</code> uses <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> wordlist to perform <a href="http://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a> on arbitrary blocks of input text.</p>
-
-<p>Sentiment provides serveral things:</p>
-
-<ul>
-<li>Performance.</li>
-<li>The ability to append and overwrite word / value pairs from the AFINN wordlist.</li>
-<li>A build process that makes updating sentiment to future versions of the AFINN word list trivial.</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save sentiment</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sentiment</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sentiment&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are stupid&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="o">-</span><span class="mf">0.6666666666666666</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[],</span>
-</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;stupid&#39;</span> <span class="p">]</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are cool&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="mf">0.3333333333333333</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sentiment</span><span class="p">(</span><span class="s1">&#39;Cats are cool&#39;</span><span class="p">,{</span><span class="s1">&#39;cats&#39;</span><span class="o">:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;cool&#39;</span><span class="o">:</span><span class="mi">10</span><span class="p">});</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">score</span><span class="o">:</span> <span class="mi">15</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">comparative</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">tokens</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;cool&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">words</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">positive</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;cool&#39;</span><span class="p">,</span> <span class="s1">&#39;cats&#39;</span> <span class="p">],</span>
-</span><span class='line'>  <span class="nx">negative</span><span class="o">:</span> <span class="p">[]</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/sentiment/sentiment.gif" alt="sentiment.gif" /></p>
-
-<p>Thanks to <a href="https://twitter.com/thisandagain">Andrew Sliwinski</a> for this crazy module!</p>
 
 		
 		
