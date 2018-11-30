@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-11-30T08:58:54+05:30</updated>
+  <updated>2018-11-30T09:05:03+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -19,7 +19,7 @@
     <id>http://nmotw.in/progress-estimator</id>
     <content type="html"><![CDATA[<h1><a href="">progress-estimator</a></h1>
 
-<blockquote><p>Progress bar and estimation for Promise complition.</p></blockquote>
+<blockquote><p>Progress bar and estimation for Promise compilation.</p></blockquote>
 
 <p><code>progress-estimator</code> logs a progress bar and estimation for how long a Promise will take to complete.</p>
 
