@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="css-what CSS selector parser. css-what a THE CSS selector parser! Zero dep module that helps you to parse complex CSS selectors. Get it: npm install &hellip;">   
+    <meta name="description" content="breakable Break out of functions in a more composable way. breakable is useful when you want to break out of a deep recursion, passing a value, &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/7/">
-    <meta name="twitter:description" content="css-what CSS selector parser. css-what a THE CSS selector parser! Zero dep module that helps you to parse complex CSS selectors. Get it: npm install &hellip;">
+    <meta name="twitter:description" content="breakable Break out of functions in a more composable way. breakable is useful when you want to break out of a deep recursion, passing a value, &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/7/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="css-what CSS selector parser. css-what a THE CSS selector parser! Zero dep module that helps you to parse complex CSS selectors. Get it: npm install &hellip;" />
+    <meta property="og:description" content="breakable Break out of functions in a more composable way. breakable is useful when you want to break out of a deep recursion, passing a value, &hellip;" />
 
     
 
@@ -67,6 +67,128 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/breakable/">
+			
+				Breakable</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-10-12T17:39:52+05:30" pubdate data-updated="true">Oct 12<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/breakable">breakable</a></h1>
+
+<blockquote><p>Break out of functions in a more composable way.</p></blockquote>
+
+<p><code>breakable</code> is useful when you want to break out of a deep recursion, passing a value, without riddling your code with exception ceremony.</p>
+
+<p><strong>Get it:</strong> <code>npm install breakable</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">esprima</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;esprima&quot;</span><span class="p">).</span><span class="nx">parse</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">traverse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ast-traverse&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">ast</span> <span class="o">=</span> <span class="nx">esprima</span><span class="p">(</span><span class="s2">&quot;f(!x, y)&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">val</span><span class="p">;</span>
+</span><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">traverse</span><span class="p">(</span><span class="nx">ast</span><span class="p">,</span> <span class="p">{</span><span class="nx">pre</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;UnaryExpression&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">val</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">argument</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}});</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="nx">e</span><span class="p">;</span> <span class="c1">// re-throw if it wasn&#39;t our exception </span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span> <span class="c1">// { type: &#39;Identifier&#39;, name: &#39;x&#39; } </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You could:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">breakable</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;breakable&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">esprima</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;esprima&quot;</span><span class="p">).</span><span class="nx">parse</span><span class="p">;</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">traverse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;ast-traverse&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">ast</span> <span class="o">=</span> <span class="nx">esprima</span><span class="p">(</span><span class="s2">&quot;f(!x, y)&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">breakable</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">brk</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">traverse</span><span class="p">(</span><span class="nx">ast</span><span class="p">,</span> <span class="p">{</span><span class="nx">pre</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;UnaryExpression&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">operator</span> <span class="o">===</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">brk</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">argument</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}});</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span> <span class="c1">// { type: &#39;Identifier&#39;, name: &#39;x&#39; } </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/breakable/breakable.gif" alt="breakable" /></p>
+
+<p>P.S: This is a trivial example, if you want to do something like that in the <code>gif</code> you might want <code>.some</code></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -914,80 +1036,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/csrf/csrf.gif" alt="csrf.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fitty/">
-			
-				Fitty</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-08-03T13:03:33+05:30" pubdate data-updated="true">Aug 3<span>rd</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fitty">fitty</a></h1>
-
-<blockquote><p>Makes text fit perfectly.</p></blockquote>
-
-<p>Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container.</p>
-
-<p>The crux is of fitty is the <code>fit</code> method which marks the fitty as dirty and requests a redraw (this will also redraw any other fitty marked as dirty).</p>
-
-<p><strong>Get it:</strong> <code>npm install fitty</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>const fitty = require(&#39;fitty&#39;);
-</span><span class='line'>
-</span><span class='line'>fitty(&#39;#my-element);
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Default options:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">defaultOptions</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">minSize</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">maxSize</span><span class="o">:</span> <span class="mi">512</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">multiLine</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">observeMutations</span><span class="o">:</span> <span class="s1">&#39;MutationObserver&#39;</span> <span class="k">in</span> <span class="nx">w</span> <span class="o">?</span> <span class="nx">mutationObserverDefaultSetting</span> <span class="o">:</span> <span class="kc">false</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yes, it uses <code>MutationObserver</code>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fitty/fitty.gif" alt="fitty" /></p>
 
 		
 		
