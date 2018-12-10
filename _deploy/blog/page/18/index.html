@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;">   
+    <meta name="description" content="url-pattern easier than regex string matching for urls, domains, filepaths and other strings. url-pattern can capture named parts of strings and &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;">
+    <meta name="twitter:description" content="url-pattern easier than regex string matching for urls, domains, filepaths and other strings. url-pattern can capture named parts of strings and &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="human-to-cron Converts human readable expression to a cron string! If you can interpert 0 */1 * * * as each minute then this module is not for you &hellip;" />
+    <meta property="og:description" content="url-pattern easier than regex string matching for urls, domains, filepaths and other strings. url-pattern can capture named parts of strings and &hellip;" />
 
     
 
@@ -67,6 +67,111 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/url-pattern/">
+			
+				Url-pattern</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-27T14:07:23+05:30" pubdate data-updated="true">Aug 27<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/url-pattern">url-pattern</a></p>
+
+<blockquote><p>easier than regex string matching for urls, domains, filepaths and other strings.</p></blockquote>
+
+<p><code>url-pattern</code> can capture named parts of strings and conveniently returns them as objects.</p>
+
+<p>Also does the reverse and generates strings given a pattern and such an object.</p>
+
+<p><strong>install:</strong> <code>npm install url-pattern</code></p>
+
+<p><strong>simple match example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">UrlPattern</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url-pattern&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users/:id&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/users/10&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;/api/products/5&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kc">null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>complex match example showing off escaping, wildcards and optional segments:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;(http(s)\\://)(:subdomain.):domain.:tld(/*)&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google.de&#39;</span><span class="p">);</span> <span class="c1">// {domain: &#39;google&#39;, tld: &#39;de&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;https://www.google.com&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;www&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;http://mail.google.com/mail&#39;</span><span class="p">);</span> <span class="c1">// {subdomain: &#39;mail&#39;, domain: &#39;google&#39;, tld: &#39;com&#39;, _: &#39;mail&#39;}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;google&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="c1">// null</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>stringify example:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UrlPattern</span><span class="p">(</span><span class="s1">&#39;/api/users(/:id)&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">()</span> <span class="c1">// &#39;/api/users&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">pattern</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span> <span class="mi">10</span><span class="p">})</span>  <span class="c1">//&#39; /api/users/10&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/url-pattern/url-pattern.gif" alt="url-pattern" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -808,141 +913,6 @@ relatively new way.</p>
 <p><img src="/images/html.js/html.js.gif" alt="html.js" /></p>
 
 <p>Thanks to <a href="https://github.com/nbubna">Nathan Bubna</a> for this module.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/browser-repl/">
-			
-				Browser-repl</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-06-18T22:16:33+05:30" pubdate data-updated="true">Jun 18<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/browser-repl">browser-repl</a></p>
-
-<blockquote><p>Launch a repl on your command line to any browser in the cloud.</p></blockquote>
-
-<p><code>browser-repl</code> is a uber cool module from <a href="http://automattic.com/">automattic</a> that helps us to get a particular OS/Browser
-combo (JS engine) to our CLI with some webdriver protocol, scoket.io and localtunnel magic ;)</p>
-
-<p>Currently supported browsers:</p>
-
-<ul>
-<li><p>ie</p></li>
-<li><p>ie6</p></li>
-<li><p>ie7</p></li>
-<li><p>ie8</p></li>
-<li><p>ie9</p></li>
-<li><p>ie10</p></li>
-<li><p>ie11</p></li>
-<li><p>opera</p></li>
-<li><p>safari</p></li>
-<li><p>safari5</p></li>
-<li><p>safari6</p></li>
-<li><p>safari7</p></li>
-<li><p>safari8</p></li>
-<li><p>chrome</p></li>
-<li><p>chromedev</p></li>
-<li><p>firefox</p></li>
-<li><p>firefoxdev</p></li>
-<li><p>ipad</p></li>
-<li><p>ipad4</p></li>
-<li><p>ipad5</p></li>
-<li><p>ipad5.1</p></li>
-<li><p>ipad6</p></li>
-<li><p>ipad6.1</p></li>
-<li><p>iphone</p></li>
-<li><p>iphone4</p></li>
-<li><p>iphone5</p></li>
-<li><p>iphone5.1</p></li>
-<li><p>iphone6</p></li>
-<li><p>iphone6.1</p></li>
-<li><p>android</p></li>
-<li><p>android4.4</p></li>
-<li><p>android4.2</p></li>
-<li><p>android4.1</p></li>
-</ul>
-
-
-<p><strong>Currently supported platforms:</strong></p>
-
-<ul>
-<li><p>winxp</p></li>
-<li><p>win7</p></li>
-<li><p>win8</p></li>
-<li><p>win8.1</p></li>
-<li><p>mac10.6</p></li>
-<li><p>mac10.8</p></li>
-<li><p>mac10.9</p></li>
-<li><p>mac10.10</p></li>
-<li><p>linux</p></li>
-<li><p>android</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install -g browser-repl
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Set up:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In your *.rc file.</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">SAUCE_USERNAME</span><span class="o">=</span><span class="s2">&quot;your username&quot;</span>
-</span><span class='line'><span class="nb">export </span><span class="nv">SAUCE_ACCESS_KEY</span><span class="o">=</span><span class="s2">&quot;your key&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To get the <code>SAUCE</code> stuff, sign up for a free OSS account on <a href="http://saucelabs.com">SauceLabs</a>.</p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>repl
-</span><span class='line'>
-</span><span class='line'>usage: repl &lt;browser&gt;<span class="o">[</span>version<span class="o">]</span> <span class="o">[</span>platform<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>options:
-</span><span class='line'> -h: this message
-</span><span class='line'> -k: no remote <span class="sb">`</span>console<span class="sb">`</span> override
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/browser-repl/brwoser-repl.gif" alt="browser-repl" /></p>
 
 		
 		
