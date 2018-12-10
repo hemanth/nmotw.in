@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CSS | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/css/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-12-10T09:39:53+05:30</updated>
+  <updated>2018-12-10T09:41:51+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nmotw.in//github/animate-css-grid/"/>
     <updated>2018-12-09T09:21:40+05:30</updated>
     <id>http://nmotw.in//github/animate-css-grid</id>
-    <content type="html"><![CDATA[<h1><a href="">animate-css-gird</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/animate-css-grid">animate-css-gird</a></h1>
 
 <blockquote><p>Easy transitions for CSS Grid.</p></blockquote>
 
@@ -65,7 +65,7 @@ Check out the [DEMO](https://codepen.io/aholachek/pen/VXjOPB)!
 
 __GIF FTW!__
 
-![animate-css-grid](/images/animate-css-grid.gif)
+![animate-css-grid](/images/animate-css-grid/animate-css-grid.gif)
 
 ]]></content>
   </entry>
