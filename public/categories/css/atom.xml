@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: css | NMOTW]]></title>
+  <title><![CDATA[Category: CSS | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/css/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-11-30T09:05:03+05:30</updated>
+  <updated>2018-12-10T09:34:24+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,172 +14,59 @@
 
   
   <entry>
-    <title type="html"><![CDATA[css-what]]></title>
-    <link href="http://nmotw.in//github/css-what/"/>
-    <updated>2017-10-08T16:30:16+05:30</updated>
-    <id>http://nmotw.in//github/css-what</id>
-    <content type="html"><![CDATA[<h1><a href="">css-what</a></h1>
+    <title type="html"><![CDATA[animate-css-grid]]></title>
+    <link href="http://nmotw.in//github/animate-css-grid/"/>
+    <updated>2018-11-10T09:21:40+05:30</updated>
+    <id>http://nmotw.in//github/animate-css-grid</id>
+    <content type="html"><![CDATA[<h1><a href="">animate-css-gird</a></h1>
 
-<blockquote><p>CSS selector parser.</p></blockquote>
+<blockquote><p>Easy transitions for CSS Grid.</p></blockquote>
 
-<p><code>css-what</code> <strike>a</strike> <em>THE</em> CSS selector parser! Zero dep module that helps you to parse complex <code>CSS</code> selectors.</p>
+<p><code>FLIP</code> animation applied on CSS grids with the help of <code>MutationObserver</code> that activates when the grid or one of its children adds or loses a class or element.</p>
 
-<p><strong>Get it:</strong> <code>npm install css-what</code></p>
+<p><strong>Get it:</strong> <code>npm install animate-css-grid</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
 <p>```js
-const cssWhat = require('css-what');</p>
+import { wrapGrid } from animateCSSGrid</p>
 
-<p>cssWhat('foo[bar]:baz');</p>
+<p>const grid = document.querySelector(".grid");
+const config = {
+  // int: default is 0 ms
+  stagger: 100,
+  // int: default is 250 ms
+  duration: 500
+  // string: default is 'easeInOut'
+  easing: 'backInOut'
+};</p>
 
-<p>/*~>
-[ [ { type: 'tag', name: 'foo' },</p>
-
-<pre><code>{ type: 'attribute',
-  name: 'bar',
-  action: 'exists',
-  value: '',
-  ignoreCase: false },
-{ type: 'pseudo',
-  name: 'baz',
-  data: null } ] ]
-</code></pre>
-
-<p>*/
+<p>wrapGrid(grid, config);
 ```</p>
 
-<p>The function returns a two-dimensional array. The first dimension represents selectors separated by commas (eg. sub1, sub2), the second contains the relevant tokens for that selector.</p>
+<p>```html</p>
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/css-what/css-what.gif" alt="css-what.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[color-string]]></title>
-    <link href="http://nmotw.in//github/color-string/"/>
-    <updated>2015-04-30T19:03:09+05:30</updated>
-    <id>http://nmotw.in//github/color-string</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
-
-<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
-
-<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
-
-<p>The API names are pretty self explainatory, the module has the below methods:</p>
-
-<p><strong>Methods for parsing:</strong></p>
-
-<ul>
-<li><p>getRgba</p></li>
-<li><p>getHsla</p></li>
-<li><p>getRgb</p></li>
-<li><p>getHsl</p></li>
-<li><p>getHwb</p></li>
-<li><p>getAlpha</p></li>
-</ul>
+<!-- grid style applied via a class -->
 
 
-<p><strong>Methods for generating:</strong></p>
-
-<ul>
-<li><p>hexString</p></li>
-<li><p>rgbString</p></li>
-<li><p>rgbaString</p></li>
-<li><p>percentString</p></li>
-<li><p>percentaString</p></li>
-<li><p>hslString</p></li>
-<li><p>hslaString</p></li>
-<li><p>hwbString</p></li>
-<li><p>keyword</p></li>
-</ul>
-
-
-<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-var colorString = require('color-string');</p>
-
-<p>colorString.getRgb("#FFF")  // [255, 255, 255]</p>
-
-<p>colorString.keyword([255, 255, 0])       // "yellow"
+<ul class="some-grid-class-that-changes">
+  <!-- each grid item has a single direct child -->
+  <li class="grid-item">
+    <div>
+      <h3>Item title</h3>
+      <div>Item body</div>
+    </div>
+  </li>
+<div>
 ```
-<strong>GIF FTW!</strong></p>
 
-<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cssom]]></title>
-    <link href="http://nmotw.in//github/cssom/"/>
-    <updated>2015-03-26T19:05:30+05:30</updated>
-    <id>http://nmotw.in//github/cssom</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cssom">cssom</a></h1>
+Check out the [DEMO](https://codepen.io/aholachek/pen/VXjOPB)!
 
-<blockquote><p>CSS Object Model implementation and CSS parser.</p></blockquote>
 
-<p><code>cssom</code> is parser written in pure javascript, it also has partially implemented of <a href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>, works across node/io.js and modren browsers.</p>
+__GIF FTW!__
 
-<p><strong>Install it:</strong> <code>npm install cssom --save</code></p>
+![animate-css-grid](/images/animate-css-grid.gif)
 
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<blockquote><p>cssom = require('cssom')
-{ CSSStyleDeclaration: [Function: CSSStyleDeclaration],
-  CSSRule:
-   { [Function: CSSRule]</p>
-
-<pre><code> STYLE_RULE: 1,
- IMPORT_RULE: 3,
- MEDIA_RULE: 4,
- FONT_FACE_RULE: 5,
- PAGE_RULE: 6,
- WEBKIT_KEYFRAMES_RULE: 8,
- WEBKIT_KEYFRAME_RULE: 9 },
-</code></pre>
-
-<p>  CSSStyleRule: { [Function: CSSStyleRule] parse: [Function] },
-  MediaList: [Function: MediaList],
-  CSSMediaRule: [Function: CSSMediaRule],
-  CSSImportRule: [Function: CSSImportRule],
-  CSSFontFaceRule: [Function: CSSFontFaceRule],
-  StyleSheet: [Function: StyleSheet],
-  CSSStyleSheet: [Function: CSSStyleSheet],
-  CSSKeyframesRule: [Function: CSSKeyframesRule],
-  CSSKeyframeRule: [Function: CSSKeyframeRule],
-  MatcherList: [Function: MatcherList],
-  CSSDocumentRule: [Function: CSSDocumentRule],
-  CSSValue: [Function: CSSValue],
-  CSSValueExpression: [Function: CSSValueExpression],
-  parse: [Function: parse],
-  clone: [Function: clone] }</p>
-
-<p>cssom.parse('.main{display:flex}')
-{ parentStyleSheet: null,
-  cssRules:
-   [ { parentRule: null,</p>
-
-<pre><code>   parentStyleSheet: [Circular],
-   selectorText: '.main',
-   style: [Object],
-   __starts: 0,
-   __ends: 19 } ] }
-</code></pre></blockquote>
-
-<p>```</p>
-
-<p>Thanks to <a href="http://n12v.com/">Nikita Vasilyev</a> for this early implementation of <code>cssom</code> (:</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/cssom/cssom.gif" alt="cssom" /></p>
 ]]></content>
   </entry>
   
