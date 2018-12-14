@@ -4,13 +4,81 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-12-10T09:41:51+05:30</updated>
+  <updated>2018-12-14T23:47:08+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[@glorious/demo]]></title>
+    <link href="http://nmotw.in/qlorious-demo/"/>
+    <updated>2018-12-14T23:37:14+05:30</updated>
+    <id>http://nmotw.in/qlorious-demo</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/@glorious/demo">@glorious/demo</a></h1>
+
+<blockquote><p>The easiest way to demonstrate your code in action.</p></blockquote>
+
+<p><code>@glorious/demo</code> a uniq node module that helps in demonstrating your code in action!</p>
+
+<p><strong>Get it:</strong> <code>npm install @glorious/demo --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="s1">&#39;@glorious/demo/gdemo.min.css&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">import</span> <span class="nx">GDemo</span> <span class="nx">from</span> <span class="s1">&#39;@glorious/demo&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">demo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GDemo</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="err">`</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">greet</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">greet</span><span class="p">();</span>
+</span><span class='line'><span class="err">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">demo</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;editor&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">windowTitle</span><span class="o">:</span> <span class="s1">&#39;demo.js&#39;</span><span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">1500</span><span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;terminal&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">promptString</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;node ./demo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">500</span><span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Don't miss to playaround with the <a href="https://glorious.codes/demo?demo=Y29uc3QgZ2RlbW8gPSBuZXcgR0RlbW8oJ1tkYXRhLWRlbW8tY29udGFpbmVyXScpOwoKY29uc3QgY29kZSA9ICdjb25zb2xlLmxvZygibm1vdHcuaW4hIik7JwoKY29uc3QgaGlnaGxpZ2h0ZWRDb2RlID0gUHJpc20uaGlnaGxpZ2h0KAogIGNvZGUsCiAgUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQsCiAgJ2phdmFzY3JpcHQnCik7CgpnZGVtbwogIC5vcGVuQXBwKCdlZGl0b3InLCB7IG1pbkhlaWdodDogJzQwMHB4Jywgd2luZG93VGl0bGU6ICdkZW1vLmpzJyB9KQogIC53cml0ZShoaWdobGlnaHRlZENvZGUsIHsgb25Db21wbGV0ZURlbGF5OiAyMDAwIH0pCiAgLm9wZW5BcHAoJ3Rlcm1pbmFsJywgeyBtaW5IZWlnaHQ6ICc0MDBweCcsIHByb21wdFN0cmluZzogJyQnIH0pCiAgLmNvbW1hbmQoJ25vZGUgLi9kZW1vJykKICAucmVzcG9uZCgnbm1vdHcuaW4hJykKICAuY29tbWFuZCgnJykKICAuZW5kKCk7Cg==">demo</a>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/glorious-demo/glorious-demo.gif" alt="@glorious/demo" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[animate-css-grid]]></title>
@@ -1376,127 +1444,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/pretty-error/pretty-error.gif" alt="pretty-error" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hiper]]></title>
-    <link href="http://nmotw.in/hiper/"/>
-    <updated>2018-07-28T15:08:33+05:30</updated>
-    <id>http://nmotw.in/hiper</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
-
-<blockquote><p>🚀 A statistical analysis tool for performance testing.</p></blockquote>
-
-<p><code>hiper</code> is short for  <em>Hi</em> <em>per</em>formance, makes use of <code>puppeteer</code> and gives us the below performance metrics.</p>
-
-<ul>
-<li>DNS lookup time</li>
-<li>TCP connect time</li>
-<li>TTFB</li>
-<li>Download time of the page</li>
-<li>After DOM Ready download time</li>
-<li>White screen time</li>
-<li>DOM Ready time</li>
-<li>Load time</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install hiper</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>hiper --help
-</span><span class='line'>
-</span><span class='line'>Usage: hiper <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>url<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>🚀 A statistical analysis tool <span class="k">for </span>performance testing
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>
-</span><span class='line'>   -v, --version                output the version number
-</span><span class='line'>   -n, --count &lt;n&gt;              specified loading <span class="nb">times</span> <span class="o">(</span>default: 20<span class="o">)</span>
-</span><span class='line'>   -c, --config &lt;path&gt;          load the configuration file
-</span><span class='line'>   -u, --useragent &lt;ua&gt;         to <span class="nb">set </span>the useragent
-</span><span class='line'>   -H, --headless <span class="o">[</span>b<span class="o">]</span>           whether to use headless mode <span class="o">(</span>default: <span class="nb">true</span><span class="o">)</span>
-</span><span class='line'>   -e, --executablePath &lt;path&gt;  use the specified chrome browser
-</span><span class='line'>   --no-cache                   disable cache <span class="o">(</span>default: <span class="nb">false</span><span class="o">)</span>
-</span><span class='line'>   --no-javascript              disable javascript <span class="o">(</span>default: <span class="nb">false</span><span class="o">)</span>
-</span><span class='line'>   --no-online                  disable network <span class="o">(</span>defalut: <span class="nb">false</span><span class="o">)</span>
-</span><span class='line'>   -h, --help                   output usage information
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>hiper nmotw.in
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  _   _ _
-</span><span class='line'> * * * <span class="o">(</span>_<span class="o">)</span>_ __   ___ _ __
-</span><span class='line'> * |_* * * <span class="s1">&#39;_ \ / _ \ &#39;</span>__|
-</span><span class='line'> *  _  * * |_<span class="o">)</span> *  __/ |
-</span><span class='line'> |_* |_|_* .__/ <span class="se">\_</span>__|_|
-</span><span class='line'>         |_|
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>🚀 It takes 1.669 s to load <span class="sb">`</span>https://nmotw.in<span class="sb">`</span> 20 <span class="nb">times</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nb">  </span>DNS lookup <span class="nb">time                 </span>1.00 ms
-</span><span class='line'>  TCP connect <span class="nb">time                </span>126.00 ms
-</span><span class='line'>  TTFB                            551.00 ms
-</span><span class='line'>  Download <span class="nb">time </span>of the page       7.00 ms
-</span><span class='line'>  After DOM Ready download <span class="nb">time   </span>558.00 ms
-</span><span class='line'>  White screen <span class="nb">time               </span>699.00 ms
-</span><span class='line'>  DOM Ready <span class="nb">time                  </span>936.00 ms
-</span><span class='line'>  Load <span class="nb">time                       </span>1.26 s
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/hiper/hiper.gif" alt="hiper" /></p>
 ]]></content>
   </entry>
   
