@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-12-14T23:47:08+05:30</updated>
+  <updated>2018-12-14T23:49:27+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[@glorious/demo]]></title>
-    <link href="http://nmotw.in/qlorious-demo/"/>
+    <link href="http://nmotw.in/glorious-demo/"/>
     <updated>2018-12-14T23:37:14+05:30</updated>
-    <id>http://nmotw.in/qlorious-demo</id>
+    <id>http://nmotw.in/glorious-demo</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/@glorious/demo">@glorious/demo</a></h1>
 
 <blockquote><p>The easiest way to demonstrate your code in action.</p></blockquote>
