@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;">   
+    <meta name="description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;">
+    <meta name="twitter:description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;" />
+    <meta property="og:description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;" />
 
     
 
@@ -67,6 +67,83 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/iron-node/">
+			
+				Iron-node</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-21T21:50:46+05:30" pubdate data-updated="true">Jan 21<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://s-a.github.io/iron-node/">iron-node</a></h1>
+
+<blockquote><p>Debug Node.js code with Chrome Developer Tools.</p></blockquote>
+
+<p>Yes you read it right <code>iron-node</code> helps you to debug your node code using chrome devtools, it makes use of <a href="http://electron.atom.io/">electron</a> creates a <code>browser-window</code>
+opens the dev-tool re-compile native modules against electron!</p>
+
+<p>It not only helps you to debug your code, but also helps to debug your node build scripts!</p>
+
+<p>Keep in mind to place the keyword <code>debugger;</code> to a place where you want to stop.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g iron-node</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><strong>CLI:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iron-node PATH_TO_NODE_JS_FILE [--customparm1=foo --customparm2=bar];</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>npm scripts:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>  ...
+</span><span class='line'>  "scripts": {
+</span><span class='line'>    ...
+</span><span class='line'>    "debug-mocha": "iron-node node_modules/mocha/bin/_mocha",
+</span><span class='line'>    "debug-grunt": "iron-node node_modules/grunt-cli/bin/grunt build",
+</span><span class='line'>    "debug-gulp": "iron-node node_modules/gulp/bin/gulp.js",
+</span><span class='line'>    ...
+</span><span class='line'>  },
+</span><span class='line'>  ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/iron-node/iron-node.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -837,69 +914,6 @@ confirmation or alter the users in a more appealing manner.</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/notie/notie.gif" alt="notie" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/debounce/">
-			
-				Debounce</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-11-12T22:24:27+05:30" pubdate data-updated="true">Nov 12<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/debounce">debounce</a></h1>
-
-<blockquote><p>debounce a function.</p></blockquote>
-
-<p>Creates and returns a new debounced version of the passed function that will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save debounce</code></p>
-
-<p><strong>API:</strong> <code>debounce(fn, wait, [ immediate || false ])</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">debounce</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;debounce&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nb">window</span><span class="p">.</span><span class="nx">onresize</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">resize</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">resize</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/debounce/debounce.gif" alt="debounce.gif" /></p>
 
 		
 		

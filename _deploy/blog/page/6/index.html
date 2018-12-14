@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="christmas-ascii Get some christmas ascii! Enjoy your vacation with some random christmas ascii on your terminal! Get it npm install -g christmas- &hellip;">   
+    <meta name="description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/6/">
-    <meta name="twitter:description" content="christmas-ascii Get some christmas ascii! Enjoy your vacation with some random christmas ascii on your terminal! Get it npm install -g christmas- &hellip;">
+    <meta name="twitter:description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/6/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="christmas-ascii Get some christmas ascii! Enjoy your vacation with some random christmas ascii on your terminal! Get it npm install -g christmas- &hellip;" />
+    <meta property="og:description" content="scrolldir leverage scroll direction with CSS ⬆⬇ 0 dep, 1KB micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute. &hellip;" />
 
     
 
@@ -67,6 +67,73 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/scrolldir/">
+			
+				Scrolldir</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-12-30T15:32:47+05:30" pubdate data-updated="true">Dec 30<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://nmpjs.org/scrolldir">scrolldir</a></h1>
+
+<blockquote><p>leverage scroll direction with CSS ⬆⬇</p></blockquote>
+
+<p><code>0</code> dep, <code>1KB</code> micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute.</p>
+
+<p><strong>Get it:</strong> <code>npm install scrolldir</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">scrollDir</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">attribute</span><span class="o">:</span> <span class="s1">&#39;new-attribute-name&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;your-new-selector&#39;</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">off</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollDir</span><span class="p">({</span> <span class="nx">direction</span><span class="o">:</span> <span class="s1">&#39;up&#39;</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/scrolldir/scrolldir.gif" alt="scrolldir.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -916,90 +983,6 @@ ey and V8 for you.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/babar/babar.gif" alt="babar" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/accessibilityjs/">
-			
-				Accessibilityjs</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-10-20T13:13:03+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
-
-<blockquote><p>Client side accessibility error scanner.</p></blockquote>
-
-<p><code>accessibilityjs</code> with <code>0</code> dependenices does an wonderful job in scaning and reproting accessibility issues for a given page.</p>
-
-<p>It currently can scan and report the bleow problems:</p>
-
-<ul>
-<li><code>ImageWithoutAltAttributeError</code></li>
-<li><code>ElementWithoutLabelError</code></li>
-<li><code>LinkWithoutLabelOrRoleError</code></li>
-<li><code>LabelMissingControlError</code></li>
-<li><code>InputMissingLabelError</code></li>
-<li><code>ButtonWithoutLabelError</code></li>
-<li><code>ARIAAttributeMissingError</code></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install accessibilityjs</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">scanForProblems</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;accessibilityjs&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">logError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;accessibility-error&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="nx">error</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">alert</span><span class="p">(</span><span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="err">\</span><span class="nx">n</span><span class="err">\</span><span class="nx">n$</span><span class="p">{</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">},</span> <span class="p">{</span><span class="nx">once</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">scanForProblems</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="nx">logError</span><span class="p">)</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
 
 		
 		
