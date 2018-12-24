@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;">   
+    <meta name="description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
+Scoped packages support for the &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;">
+    <meta name="twitter:description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
+Scoped packages support for the &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="speed-test Test your internet connection speed and ping using speedtest.net from the CLI. This is product of sindresorhus/module-requests makes use &hellip;" />
+    <meta property="og:description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
+Scoped packages support for the &hellip;" />
 
     
 
@@ -67,6 +70,104 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npm-check/">
+			
+				Npm-check</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-10T19:58:00+05:30" pubdate data-updated="true">Sep 10<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/npm-check">npm-check</a></h1>
+
+<blockquote><p>Check for outdated, incorrect, and unused dependencies.</p></blockquote>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><em>Interactive Update</em> means less typing.</li>
+<li>Scoped packages support for the modern npm user.</li>
+<li>Works with public and private registries.</li>
+<li>Won't query npm registry for packages with <code>private: true</code>.</li>
+<li>Kindly informs you if a dependency is not being used.</li>
+<li>Emoji in a command-line app, because command-line apps can be fun too.</li>
+</ul>
+
+
+<p>Very much similar to <a href="http://nmotw.in/npm-check-updates/">npm-check-updates</a> but far more generic and interactive!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g npm-check</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check --help
+</span><span class='line'>
+</span><span class='line'>  Usage: npm-check <span class="o">[</span>options<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>  Options:
+</span><span class='line'>
+</span><span class='line'>    -h, --help         output usage information
+</span><span class='line'>    -V, --version      output the version number
+</span><span class='line'>    -u, --update       Interactive update.
+</span><span class='line'>    -g, --global       Look at global modules.
+</span><span class='line'>    -s, --skip-unused  Skip check <span class="k">for </span>unused packages.
+</span><span class='line'>    -p, --production   Ignore devDependencies.
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">npmCheck</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npm-check&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">npmCheck</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npm-check/npm-check.gif" alt="npm-check" /></p>
+
+<p>Thanks to <a href="https://twitter.com/dylang">@dylang</a> for <code>npm-check</code>.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -825,77 +926,6 @@ and second one being an config object.</p>
 <p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
 
 <p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fade/">
-			
-				Fade</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-02T22:24:12+05:30" pubdate data-updated="true">Jul 2<span>nd</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/fade">fade</a></h1>
-
-<blockquote><p>Fade a HTML element using CSS transitions.</p></blockquote>
-
-<p>Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto
-behind this module, that lets us to <code>fade.in</code>, <code>fade.out</code> and fade an element to a specifie opacity, which also takes a
-callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save fade</code> # browserify it!</p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fade</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fade&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#el&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">);</span> <span class="c1">// fade el out in 1s</span>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="k">in</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mi">1500</span><span class="p">);</span> <span class="c1">// fade el in in 1.5s</span>
-</span><span class='line'><span class="nx">fade</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3000</span><span class="p">);</span> <span class="c1">// fade el to opacity 0.3 in 3s </span>
-</span><span class='line'><span class="nx">fade</span><span class="p">.</span><span class="nx">out</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">;</span> <span class="c1">// set display to none after fade out</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fade/fade.gif" alt="fade.gif" /></p>
-
-<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this sweet little module.</p>
 
 		
 		
