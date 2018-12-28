@@ -1,0 +1,58 @@
+---
+layout: post
+title: "iron"
+date: 2018-12-28 15:29:33 +0530
+comments: true
+categories: util
+---
+
+#[iron]()
+> Sealing a JSON object using symmetric key encryption.
+
+`iron` provide a neat way to seal a JSON object using symmetric key encryption with message integrity verification!
+
+__Get it:__ `npm install iron`
+
+__Sample usage:__
+
+```js
+
+//Encrypt 
+
+const Iron = require("iron");
+
+const obj = {
+    a: 1,
+    b: 2,
+    c: [3, 4, 5],
+    d: {
+        e: 'f'
+    }
+};
+
+const password = 'some_not_random_password_that_is_at_least_32_characters';
+
+try {
+    (async () => {
+        const sealed = await Iron.seal(obj, password, Iron.defaults);
+        console.log(sealed);
+    })();
+} catch (err) {
+    console.log(err.message);
+}
+```
+
+```js
+// Decrypt
+try {
+    (async () => {
+        const unsealed = await Iron.unseal(sealed, password, Iron.defaults);
+    })();
+} catch (err) {
+    console.log(err.message);
+}
+```
+
+__GIF FTW!__
+
+![iron](/images/iron/iron.gif)
