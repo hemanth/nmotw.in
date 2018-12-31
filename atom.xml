@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-12-28T15:42:59+05:30</updated>
+  <updated>2018-12-31T07:29:43+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -13,11 +13,51 @@
 
   
   <entry>
+    <title type="html"><![CDATA[gauge]]></title>
+    <link href="http://nmotw.in/gauge/"/>
+    <updated>2018-12-30T06:59:09+05:30</updated>
+    <id>http://nmotw.in/gauge</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/gauge">gauge</a></h1>
+
+<blockquote><p>Terminal based horizontal gauge.</p></blockquote>
+
+<p><code>gauge</code> is a terminal based horizontal gauge / progress bar which provides the user the totally control on the progess indication, plusation or hiding the porgress bar. It has provides a convenient theming option.</p>
+
+<p><strong>Get it:</strong> <code>npm install gauge</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Gauge</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gauge&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">gauge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gauge</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gauge</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gauge</span><span class="p">.</span><span class="nx">pulse</span><span class="p">(</span><span class="s2">&quot;this&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gauge</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/gauge/gauge.gif" alt="gauge" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[iron]]></title>
     <link href="http://nmotw.in/iron/"/>
     <updated>2018-12-28T15:29:33+05:30</updated>
     <id>http://nmotw.in/iron</id>
-    <content type="html"><![CDATA[<h1><a href="">iron</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/iron">iron</a></h1>
 
 <blockquote><p>Sealing a JSON object using symmetric key encryption.</p></blockquote>
 
@@ -1341,76 +1381,6 @@
 <p><img src="http://nmotw.in/images/commitizen/commitizen.gif" alt="commitizen" /></p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[tryor]]></title>
-    <link href="http://nmotw.in/tryor/"/>
-    <updated>2018-08-19T21:08:06+05:30</updated>
-    <id>http://nmotw.in/tryor</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/tryor">tryor</a></h1>
-
-<blockquote><p>try or return default.</p></blockquote>
-
-<p><code>tryor</code> will give you back the return value of the function or, in case the function threw an exception, the default value.</p>
-
-<p><code>tryor</code> just wrap the <code>fn</code> and <code>default</code> in try-catch as below:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">tryor</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nx">fn</span><span class="p">();</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nx">v</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Get it:</strong> <code>npm install tryor</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// instead of</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">config</span><span class="p">;</span>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">config</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">mayBeString</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">config</span> <span class="o">=</span> <span class="p">{};</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// do this</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">tryor</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">mayBeString</span><span class="p">),</span> <span class="p">{});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/tryor/tryor.gif" alt="tryor" /></p>
 ]]></content>
   </entry>
   

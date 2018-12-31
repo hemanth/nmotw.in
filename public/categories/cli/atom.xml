@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cli | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2018-12-28T15:42:59+05:30</updated>
+  <updated>2018-12-31T07:29:43+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gauge]]></title>
+    <link href="http://nmotw.in//github/gauge/"/>
+    <updated>2018-12-30T06:59:09+05:30</updated>
+    <id>http://nmotw.in//github/gauge</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/gauge">gauge</a></h1>
+
+<blockquote><p>Terminal based horizontal gauge.</p></blockquote>
+
+<p><code>gauge</code> is a terminal based horizontal gauge / progress bar which provides the user the totally control on the progess indication, plusation or hiding the porgress bar. It has provides a convenient theming option.</p>
+
+<p><strong>Get it:</strong> <code>npm install gauge</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const Gauge = require('gauge');
+const gauge = new Gauge();</p>
+
+<p>gauge.show("test", 0.20);</p>
+
+<p>gauge.pulse("this");</p>
+
+<p>gauge.hide();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/gauge/gauge.gif" alt="gauge" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fx]]></title>
@@ -198,69 +230,6 @@ Voxer                http://www.voxer.com/careers/                              
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[commitizen]]></title>
-    <link href="http://nmotw.in//github/commitizen/"/>
-    <updated>2018-08-26T14:37:52+05:30</updated>
-    <id>http://nmotw.in//github/commitizen</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
-
-<blockquote><p>Organized, detailed commits to git.</p></blockquote>
-
-<p><code>commitizen</code> prompts to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit or reading the <code>contribution.md</code> for the commit format!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g commitizen</code></p>
-
-<p><strong>Set up:</strong></p>
-
-<p>```sh
-$ npm install -g cz-conventional-changelog</p>
-
-<p>$ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
-```</p>
-
-<p>or</p>
-
-<p><code>sh
-$ commitizen init cz-conventional-changelog --save-dev --save-exact
-</code></p>
-
-<p>^ this results in modification of your <code>package.json</code> to:</p>
-
-<p>```js
-  "config": {</p>
-
-<pre><code>"commitizen": {
-  "path": "cz-conventional-changelog"
-}
-</code></pre>
-
-<p>  }
-```</p>
-
-<p>Now one can just do <code>git cz</code> instead of <code>git commit</code> and enjoy the benifits!</p>
-
-<p>Also, one could add it to <code>npm-scripts</code></p>
-
-<p>```js
-"scripts": {</p>
-
-<pre><code>"commit": "git-cz"
-</code></pre>
-
-<p>  }
-```</p>
-
-<p>And then execute: <code>npm run commit</code>.</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/commitizen/commitizen.gif" alt="commitizen" /></p>
-
-<p>```</p>
 ]]></content>
   </entry>
   
