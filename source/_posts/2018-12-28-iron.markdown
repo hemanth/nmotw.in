@@ -6,7 +6,7 @@ comments: true
 categories: util
 ---
 
-#[iron]()
+#[iron](https://npm.im/iron)
 > Sealing a JSON object using symmetric key encryption.
 
 `iron` provide a neat way to seal a JSON object using symmetric key encryption with message integrity verification!

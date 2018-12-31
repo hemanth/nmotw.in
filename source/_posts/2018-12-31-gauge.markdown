@@ -1,0 +1,31 @@
+---
+layout: post
+title: "gauge"
+date: 2018-12-30 06:59:09 +0530
+comments: true
+categories: util cli
+---
+
+#[gauge](https://npm.im/gauge)
+> Terminal based horizontal gauge.
+
+`gauge` is a terminal based horizontal gauge / progress bar which provides the user the totally control on the progess indication, plusation or hiding the porgress bar. It has provides a convenient theming option.
+
+__Get it:__ `npm install gauge`
+
+__Sample usage:__
+
+```js
+const Gauge = require('gauge');
+const gauge = new Gauge();
+
+gauge.show("test", 0.20);
+
+gauge.pulse("this");
+
+gauge.hide();
+```
+
+__GIF FTW!__
+
+![gauge](/images/gauge/gauge.gif)
