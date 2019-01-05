@@ -1,0 +1,53 @@
+---
+layout: post
+title: "caseless"
+date: 2019-01-05 14:22:02 +0530
+comments: true
+categories: 
+---
+
+#[caseless](https://www.npmjs.com/package/caseless)
+> caseless semantic `get/set/check` for headers.
+
+`caseless` helps to `get/set/check` specially for headers in a caseless manner while also preserving the caseing of headers the first time they are set.
+
+__Get it:__ `npm install caseless`
+
+__Sample usage:__
+
+```js
+const c = require('caseless');
+let headers = {
+    'a-header': 'asdf',
+    'Content-Length': 1000
+   }
+  , c = caseless(headers)
+  ;
+
+// Get set
+c.set('a-Header', 'asdf');
+c.get('a-header') === 'asdf';
+
+// has check
+c.has('a-header') === 'a-Header';
+
+// set values
+c.set('a-Header', 'fdas')
+c.set('a-HEADER', 'more', false)
+c.get('a-header') === 'fdsa,more'
+
+// del
+c.del('Content-length');
+
+// swap
+c.set('a-Header', 'fdas')
+c.swap('a-HEADER')
+c.has('a-header') === 'a-HEADER'
+// headers === {'a-HEADER': 'fdas'}
+
+```
+
+__GIF FTW!__
+
+![caseless](/images/caseless/caseless.gif)
+
