@@ -4,13 +4,93 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2018-12-31T07:29:43+05:30</updated>
+  <updated>2019-01-05T14:35:37+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[caseless]]></title>
+    <link href="http://nmotw.in/caseless/"/>
+    <updated>2019-01-05T14:22:02+05:30</updated>
+    <id>http://nmotw.in/caseless</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/caseless">caseless</a></h1>
+
+<blockquote><p>caseless semantic <code>get/set/check</code> for headers.</p></blockquote>
+
+<p><code>caseless</code> helps to <code>get/set/check</code> specially for headers in a caseless manner while also preserving the caseing of headers the first time they are set.</p>
+
+<p><strong>Get it:</strong> <code>npm install caseless</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;caseless&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s1">&#39;a-header&#39;</span><span class="o">:</span> <span class="s1">&#39;asdf&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;Content-Length&#39;</span><span class="o">:</span> <span class="mi">1000</span>
+</span><span class='line'>   <span class="p">}</span>
+</span><span class='line'>  <span class="p">,</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">caseless</span><span class="p">(</span><span class="nx">headers</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Get set</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;asdf&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;asdf&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// has check</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;a-Header&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// set values</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;fdas&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-HEADER&#39;</span><span class="p">,</span> <span class="s1">&#39;more&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;fdsa,more&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// del</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">del</span><span class="p">(</span><span class="s1">&#39;Content-length&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// swap</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;fdas&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">swap</span><span class="p">(</span><span class="s1">&#39;a-HEADER&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;a-HEADER&#39;</span>
+</span><span class='line'><span class="c1">// headers === {&#39;a-HEADER&#39;: &#39;fdas&#39;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/caseless/caseless.gif" alt="caseless" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[gauge]]></title>
@@ -1312,75 +1392,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="http://nmotw.in/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[commitizen]]></title>
-    <link href="http://nmotw.in/commitizen/"/>
-    <updated>2018-08-26T14:37:52+05:30</updated>
-    <id>http://nmotw.in/commitizen</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
-
-<blockquote><p>Organized, detailed commits to git.</p></blockquote>
-
-<p><code>commitizen</code> prompts to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit or reading the <code>contribution.md</code> for the commit format!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g commitizen</code></p>
-
-<p><strong>Set up:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install -g cz-conventional-changelog
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{ &quot;path&quot;: &quot;cz-conventional-changelog&quot; }&#39;</span> &gt; ~/.czrc
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>commitizen init cz-conventional-changelog --save-dev --save-exact
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>^ this results in modification of your <code>package.json</code> to:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;commitizen&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;cz-conventional-changelog&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now one can just do <code>git cz</code> instead of <code>git commit</code> and enjoy the benifits!</p>
-
-<p>Also, one could add it to <code>npm-scripts</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;commit&quot;</span><span class="o">:</span> <span class="s2">&quot;git-cz&quot;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then execute: <code>npm run commit</code>.</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/commitizen/commitizen.gif" alt="commitizen" /></p>
-
-<p>```</p>
 ]]></content>
   </entry>
   

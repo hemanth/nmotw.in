@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">   
+    <meta name="description" content="dompurify Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG! DOMPurify sanitizes HTML and prevents XSS attacks. |dirty HTML | => | &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/21/">
-    <meta name="twitter:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;">
+    <meta name="twitter:description" content="dompurify Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG! DOMPurify sanitizes HTML and prevents XSS attacks. |dirty HTML | => | &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/21/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dom-event Add/remove DOM events Sweet and simple module that helps you to attach and remove events to a DOM element with ease and cross browser &hellip;" />
+    <meta property="og:description" content="dompurify Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG! DOMPurify sanitizes HTML and prevents XSS attacks. |dirty HTML | => | &hellip;" />
 
     
 
@@ -67,6 +67,90 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/dompurify/">
+			
+				Dompurify</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
+
+<blockquote><p>Super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG!</p></blockquote>
+
+<p>DOMPurify sanitizes HTML and prevents XSS attacks.</p>
+
+<p>|dirty HTML |  => |DOMPurify.sanitize |  => | Clean and safe HTML |</p>
+
+<p>The faster your browser, the faster DOMPurify will be ;)</p>
+
+<p><strong>Install it:</strong>  <code>npm install --save dompurify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">DOMpurify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dompurify);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">DOMPurify.sanitize(&#39;</span><span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="nx">x</span> <span class="nx">onerror</span><span class="o">=</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1">//&gt;&#39;); // becomes &lt;img src=&quot;x&quot;&gt; </span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="s1">&#39;&lt;svg&gt;&lt;g/onload=alert(2)//&lt;p&gt;&#39;</span><span class="p">);</span> <span class="c1">// becomes &lt;svg&gt;&lt;g&gt;&lt;/g&gt;&lt;/svg&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's configurable: <code>var config = { ALLOWED_TAGS: ['p', '#text'], KEEP_CONTENT: false };</code> and <code>DOMPurify.sanitize(str, config)</code></p>
+
+<p>We can also use <code>hooks</code>:</p>
+
+<ul>
+<li><p>beforeSantitizeElements</p></li>
+<li><p>afterSantitizeElements</p></li>
+<li><p>beforeSantitizeAttributes</p></li>
+<li><p>afterSantitizeAttributes</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">addHook</span><span class="p">(</span><span class="s1">&#39;beforeSantitizeElements&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">currentNode</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Play with currentNode.</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">currentNode</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dompurify/dompurify.gif" alt="dompurify" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1004,91 +1088,6 @@
 
 </article>
 
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/printf/">
-			
-				Printf</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-24T18:11:33+05:30" pubdate data-updated="true">Dec 24<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">printf</a></h1>
-
-<p>Full implementation of the <code>printf</code>/<code>sprintf</code> family in pure JS.</p>
-
-<pre><code>            _       _    __ 
-           (_)     | |  / _|
- _ __  _ __ _ _ __ | |_| |_ 
-| '_ \| '__| | '_ \| __|  _|
-| |_) | |  | | | | | |_| |
-| .__/|_|  |_|_| |_|\__|_|
-| |
-|_|
-</code></pre>
-
-<p><strong>Get it:</strong> <code>npm install printf</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">printf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;printf&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">printf</span><span class="p">(</span><span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
-</span><span class='line'><span class="nx">printf</span><span class="p">(</span><span class="nx">write_stream</span><span class="p">,</span> <span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="p">...);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Flags:</strong></p>
-
-<ul>
-<li><p><code></code> (space)</p></li>
-<li><p><code>+</code></p></li>
-<li><p><code>-</code></p></li>
-<li><p><code>0</code></p></li>
-</ul>
-
-
-<p><strong>Features:</strong></p>
-
-<ul>
-<li><p><code>Width / precision</code> => <code>%2f</code></p></li>
-<li><p><code>Numerical bases</code> => <code>%c</code></p></li>
-<li><p><code>Miscellaneous</code> => <code>%d%%</code>, <code>+%s%+</code></p></li>
-<li><p><code>Extra</code> => The <code>%O</code> converter will call <code>util.inspect(...)</code> at the argument, <code>%-*.*f</code>.</p></li>
-</ul>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/printf/printf.gif" alt="" /></p>
-
-<p>Thanks to <a href="http://www.adaltas.com">Worms David</a> for <code>printf</code>!</p>
-
-<p><code>printf('******************%s**************',"Merry Xmas!")</code></p>
-
-		
-		
-	</div>
-
-</article>
-
 <nav id="pagenavi">
     
         <a href="/blog/page/20/" class="prev">Previous</a>
@@ -1102,7 +1101,7 @@
 <br>
 <br>
 <br>
-&copy; 2018
+&copy; 2019
 
    <a href="http://h3manth.com">Hemanth.HM</a>
    <br>

@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="what-input A global utility for tracking the current input method (mouse, keyboard or touch). What Input adds data attributes to the tag based on &hellip;">   
+    <meta name="description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/10/">
-    <meta name="twitter:description" content="what-input A global utility for tracking the current input method (mouse, keyboard or touch). What Input adds data attributes to the tag based on &hellip;">
+    <meta name="twitter:description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/10/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="what-input A global utility for tracking the current input method (mouse, keyboard or touch). What Input adds data attributes to the tag based on &hellip;" />
+    <meta property="og:description" content="secure-keys Encrypts and Decrypts object keys. This module uses node's inbuilt crypto to encrypt and decrypt object keys and the code was yanked out &hellip;" />
 
     
 
@@ -67,6 +67,99 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/secure-keys/">
+			
+				Secure-keys</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-14T16:11:06+05:30" pubdate data-updated="true">Apr 14<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/secure-keys">secure-keys</a></h1>
+
+<blockquote><p>Encrypts and Decrypts object keys.</p></blockquote>
+
+<p>This module uses node's inbuilt <code>crypto</code> to encrypt and decrypt object keys and the code was yanked out of work by
+<a href="https://github.com/indexzero">@indexzero</a> for <a href="https://github.com/indexzero/nconf"><code>nconf</code></a></p>
+
+<p><strong>Get it:</strong> <code>npm install --save secure-keys</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">secureKeys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;secure-keys&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">sk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">secureKeys</span><span class="p">({</span><span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;NOTW&#39;</span><span class="p">});</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">enCat</span> <span class="o">=</span> <span class="nx">sk</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">({</span><span class="nx">cat</span><span class="o">:</span> <span class="s1">&#39;meow&#39;</span><span class="p">})</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">deCat</span> <span class="o">=</span> <span class="nx">sk</span><span class="p">.</span><span class="nx">decrypt</span><span class="p">(</span><span class="nx">enCat</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;encrypted object:&#39;</span><span class="p">,</span> <span class="nx">enCat</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;decrypted object:&#39;</span><span class="p">,</span> <span class="nx">deCat</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">encrypted object: { cat: { alg: &#39;aes-256-ctr&#39;, value: &#39;3f1ead878c36&#39; } }</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">decrypted object: { cat: &#39;meow&#39; }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">sec</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SecK</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;BEGIN RSA&#39;</span><span class="p">,</span> <span class="c1">// Text of key used for encrypting/decrypting </span>
+</span><span class='line'>  <span class="nx">format</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">,</span> <span class="c1">// optional (defaults to JSON): An object with `stringify` and `parse` methods </span>
+</span><span class='line'>  <span class="nx">alg</span><span class="o">:</span> <span class="s1">&#39;aes-256-ctr&#39;</span> <span class="c1">//optional (this is default) Algorithm to use for encrypt/decrypt </span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/secure-keys/secure-keys.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -965,214 +1058,6 @@
 
 </article>
 
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/simple-statistics/">
-			
-				Simple-statistics</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-02-03T10:32:48+05:30" pubdate data-updated="true">Feb 3<span>rd</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/simple-statistics">simple-statistics</a></h1>
-
-<blockquote><p>Descriptive, regression, and inference statistics.</p></blockquote>
-
-<p><code>simple-statistics</code> module is a neat pack of most commonly used functional for statistical analysis.</p>
-
-<p>It contains about <code>62</code> helper methods bundled with it :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">[</span> <span class="s1">&#39;linearRegression&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;linearRegressionLine&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;standardDeviation&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;rSquared&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;modeSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;min&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;max&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;minSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;maxSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sum&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sumSimple&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;product&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;quantile&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;quantileSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;interquartileRange&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;iqr&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;mad&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;medianAbsoluteDeviation&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;chunk&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;shuffle&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;shuffleInPlace&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sample&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;ckmeans&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;uniqueCountSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sumNthPowerDeviations&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;equalIntervalBreaks&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sampleCovariance&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sampleCorrelation&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sampleVariance&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sampleStandardDeviation&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;sampleSkewness&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;permutationsHeap&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;combinations&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;combinationsReplacement&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;geometricMean&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;harmonicMean&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;average&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;median&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;medianSorted&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;rms&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;rootMeanSquare&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;variance&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;tTest&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;tTestTwoSample&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;bayesian&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;perceptron&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;epsilon&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;factorial&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;bernoulliDistribution&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;binomialDistribution&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;poissonDistribution&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;chiSquaredGoodnessOfFit&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;zScore&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;cumulativeStdNormalProbability&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;standardNormalTable&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;erf&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;errorFunction&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;inverseErrorFunction&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;probit&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;mixin&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s1">&#39;bisect&#39;</span> <span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Get it:</strong> <code>npm install --save simple-statistics</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ss</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;simple-statistics&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">mad</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]);</span>
-</span><span class='line'><span class="c1">// ^ 3; median absolute deviation.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ss</span><span class="p">.</span><span class="nx">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">2</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">[</span>
-</span><span class='line'><span class="cm">    [1, 2],</span>
-</span><span class='line'><span class="cm">    [1, 3],</span>
-</span><span class='line'><span class="cm">    [2, 3]</span>
-</span><span class='line'><span class="cm">]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/simple-statistics/simple-statistics.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
 <nav id="pagenavi">
     
         <a href="/blog/page/9/" class="prev">Previous</a>
@@ -1186,7 +1071,7 @@
 <br>
 <br>
 <br>
-&copy; 2018
+&copy; 2019
 
    <a href="http://h3manth.com">Hemanth.HM</a>
    <br>
