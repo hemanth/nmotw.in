@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-12T02:50:16+05:30</updated>
+  <updated>2019-01-12T02:52:18+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -23,7 +23,7 @@
 
 <p><code>meant</code> uses <code>levenshteinD</code> and provides a <code>Did you mean?</code> like feature.</p>
 
-<p><strong>GET IT:</strong> <code>npm install meant</code></p>
+<p><strong>Get it:</strong> <code>npm install meant</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
