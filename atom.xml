@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-12T02:52:18+05:30</updated>
+  <updated>2019-01-12T02:54:13+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -19,7 +19,7 @@
     <id>http://nmotw.in/meant</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/meant">meant</a></h1>
 
-<blockquote><p>Best Similiarity, like did you mean.</p></blockquote>
+<blockquote><p>Best Similiarity, like "did you mean".</p></blockquote>
 
 <p><code>meant</code> uses <code>levenshteinD</code> and provides a <code>Did you mean?</code> like feature.</p>
 
