@@ -1,0 +1,27 @@
+---
+layout: post
+title: "meant"
+date: 2019-01-12 02:44:43 +0530
+comments: true
+categories: util
+---
+
+#[meant](https://npm.im/meant)
+> Best Similarity, like "did you mean".
+
+`meant` uses `levenshteinD` and provides a `Did you mean?` like feature.
+
+__Get it:__ `npm install meant`
+
+__Sample usage:__
+
+```js
+const meant = require('meant');
+
+meant('lk', ['ll', 'ls', 'ts'])
+// => [ 'll', 'ls' ]
+```
+
+__GIF FTW!__
+
+![meant](/images/meant/meant.gif)

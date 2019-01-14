@@ -4,13 +4,45 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-05T14:35:37+05:30</updated>
+  <updated>2019-01-12T02:57:05+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[meant]]></title>
+    <link href="http://nmotw.in/meant/"/>
+    <updated>2019-01-12T02:44:43+05:30</updated>
+    <id>http://nmotw.in/meant</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/meant">meant</a></h1>
+
+<blockquote><p>Best Similarity, like "did you mean".</p></blockquote>
+
+<p><code>meant</code> uses <code>levenshteinD</code> and provides a <code>Did you mean?</code> like feature.</p>
+
+<p><strong>Get it:</strong> <code>npm install meant</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">meant</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;meant&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">meant</span><span class="p">(</span><span class="s1">&#39;lk&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="s1">&#39;ls&#39;</span><span class="p">,</span> <span class="s1">&#39;ts&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="c1">// =&gt; [ &#39;ll&#39;, &#39;ls&#39; ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/meant/meant.gif" alt="meant" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[caseless]]></title>
@@ -1324,74 +1356,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/microjob/microjob.gif" alt="microjob" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[npm-whoshiring]]></title>
-    <link href="http://nmotw.in/npm-whoshiring/"/>
-    <updated>2018-09-02T09:36:09+05:30</updated>
-    <id>http://nmotw.in/npm-whoshiring</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
-
-<blockquote><p>npm who's hiring?</p></blockquote>
-
-<p><code>npm-whoshiring</code> shows a table on your CLI of currently open jobs listed by npm partners.</p>
-
-<p><strong>Get it:</strong> <code>npm i -g npm-whoshiring</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-whoshiring
-</span><span class='line'>Company              URL                                                                                                                   Vacant?
-</span><span class='line'>-------------------  --------------------------------------------------------------------------------------------------------------------  -------
-</span><span class='line'>Brightcove, Inc.     https://www.brightcove.com/en/company/careers                                                                         YES
-</span><span class='line'>Apply Digital        https://applydigital.co/#careers                                                                                      YES
-</span><span class='line'>DuckDuckGo           https://duckduckgo.com/hiring?s<span class="o">=</span>npm                                                                                   YES
-</span><span class='line'>Meadow               https://getmeadow.com/jobs                                                                                            YES
-</span><span class='line'>MuleSoft             http://www.mulesoft.com/careers                                                                                       YES
-</span><span class='line'>Callisto             https://www.projectcallisto.org/work-with-us#eng                                                                      YES
-</span><span class='line'>Airtable             https://airtable.com/jobs                                                                                             YES
-</span><span class='line'>Triplebyte           https://triplebyte.com/?ref<span class="o">=</span>npm_oct17                                                                                 YES
-</span><span class='line'>ClimaCell            http://www.climacell.co/careers                                                                                       YES
-</span><span class='line'>Tinder               http://www.tinder.com/jobs                                                                                            YES
-</span><span class='line'>blogfoster           https://www.blogfoster.com/engineering/jobs/javascript-engineer/?utm_source<span class="o">=</span>npm&amp;utm_campaign<span class="o">=</span>npm-june                 YES
-</span><span class='line'>Overpass             http://www.overpass.com/careers.html                                                                                  YES
-</span><span class='line'>Yellow Pages Canada  https://jobs-emplois.yp.ca/jobs/développeur-full-stack-mean-1114                                                      YES
-</span><span class='line'>Hired                https://hired.com/join/?utm_source<span class="o">=</span>npmjs&amp;utm_medium<span class="o">=</span>sponsor&amp;utm_campaign<span class="o">=(</span>b2c<span class="o">)(</span>l-all<span class="o">)(</span>r-swe<span class="o">)(</span>q1-17-whos-hiring-page<span class="o">)</span>  YES
-</span><span class='line'>Festicket            https://festicket.workable.com/j/CDA25A0466                                                                           YES
-</span><span class='line'>QuikOrder            https://stackoverflow.com/jobs/companies/quikorder                                                                    YES
-</span><span class='line'>BrandingBrand.com    http://www.brandingbrand.com/jobs                                                                                     YES
-</span><span class='line'>Red Badger           http://red-badger.com/about-us/join-us/software-engineer/                                                             YES
-</span><span class='line'>Voxer                http://www.voxer.com/careers/                                                                                         YES
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="http://nmotw.in/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
 ]]></content>
   </entry>
   
