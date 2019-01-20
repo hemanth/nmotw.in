@@ -7,7 +7,11 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;">   
+    <meta name="description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
+Comments.
+Hidden elements.
+Default or non-optimal values.
+Other stuff that can be &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +19,22 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;">
+    <meta name="twitter:description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
+Comments.
+Hidden elements.
+Default or non-optimal values.
+Other stuff that can be &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="instapromise Promisify with .promise instapromise lets you promisify node-style asynchronous functions by putting a .promise after them or after the &hellip;" />
+    <meta property="og:description" content="svgo SVG Optimizer Optimizes SVG by cleaning: Editor metadata.
+Comments.
+Hidden elements.
+Default or non-optimal values.
+Other stuff that can be &hellip;" />
 
     
 
@@ -67,6 +79,173 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/svgo/">
+			
+				Svgo</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-15T21:50:41+05:30" pubdate data-updated="true">Oct 15<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/svgo">svgo</a></h1>
+
+<blockquote><p><strong>SVG O</strong>ptimizer</p></blockquote>
+
+<p>Optimizes SVG by cleaning:</p>
+
+<ul>
+<li><p>Editor metadata.</p></li>
+<li><p>Comments.</p></li>
+<li><p>Hidden elements.</p></li>
+<li><p>Default or non-optimal values.</p></li>
+<li><p>Other stuff that can be safely removed or converted without affecting SVG rendering result.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --global svgo</code></p>
+
+<p><strong>Sample usage on CLI:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Usage:
+</span><span class='line'>  svgo [OPTIONS] [ARGS]
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -h, --help : Help
+</span><span class='line'>  -v, --version : Version
+</span><span class='line'>  -i INPUT, --input=INPUT : Input file, "-" for STDIN
+</span><span class='line'>  -s STRING, --string=STRING : Input SVG data string
+</span><span class='line'>  -f FOLDER, --folder=FOLDER : Input folder, optimize and rewrite all *.svg files
+</span><span class='line'>  -o OUTPUT, --output=OUTPUT : Output file or folder (by default the same as the input), "-" for STDOUT
+</span><span class='line'>  -p PRECISION, --precision=PRECISION : Set number of digits in the fractional part, overrides plugins params
+</span><span class='line'>  --config=CONFIG : Config file to extend or replace default
+</span><span class='line'>  --disable=DISABLE : Disable plugin by name
+</span><span class='line'>  --enable=ENABLE : Enable plugin by name
+</span><span class='line'>  --datauri=DATAURI : Output as Data URI string (base64, URI encoded or unencoded)
+</span><span class='line'>  --pretty : Make SVG pretty printed
+</span><span class='line'>  --show-plugins : Show available plugins and exit
+</span><span class='line'>
+</span><span class='line'>Arguments:
+</span><span class='line'>  INPUT : Alias to --input
+</span><span class='line'>  OUTPUT : Alias to --output</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  <span class="nv">$ </span>svgo red.svg red.min.svg
+</span><span class='line'>
+</span><span class='line'>  Done in 68 ms!
+</span><span class='line'>  0.708 KiB - 70.8% <span class="o">=</span> 0.207 KiB
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample API usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">readFile</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">readFile</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">SVGO</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;svgo&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">filepath</span> <span class="o">=</span> <span class="nx">PATH</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;test.svg&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">svgo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SVGO</span><span class="p">(</span><span class="cm">/*{ custom config object }*/</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">readFile</span><span class="p">(</span><span class="nx">filepath</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">svgo</span><span class="p">.</span><span class="nx">optimize</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// {</span>
+</span><span class='line'>        <span class="c1">//     // optimized SVG data string</span>
+</span><span class='line'>        <span class="c1">//     data: &#39;&lt;svg width=&quot;10&quot; height=&quot;20&quot;&gt;test&lt;/svg&gt;&#39;</span>
+</span><span class='line'>        <span class="c1">//     // additional info such as width/height</span>
+</span><span class='line'>        <span class="c1">//     info: {</span>
+</span><span class='line'>        <span class="c1">//         width: &#39;10&#39;,</span>
+</span><span class='line'>        <span class="c1">//         height: &#39;20&#39;</span>
+</span><span class='line'>        <span class="c1">//     }</span>
+</span><span class='line'>        <span class="c1">// }</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: Don't miss to read <a href="https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md#how-it-works">How it works!</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/svgo/svgo.gif" alt="svgo.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -815,104 +994,6 @@ after which it will start a minimalistic server with a cute interface to go thro
 <p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
 
 <p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/curry-this/">
-			
-				Curry-this</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-08-06T20:46:13+05:30" pubdate data-updated="true">Aug 6<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1>Curry-this</h1>
-
-<p><code>Curry-this</code> makes creating curryied function simple and expresive by invoking <code>curry</code> with the <a href="https://github.com/zenparsing/es-function-bind">function bind syntax <code>::</code></a>.
-Apart from the expresive way of creating a curried function, the main feature are placeholders.
-A placeholder (<code>_</code>) is a <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a> which allows to curry specific arguments of a function.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save curry-this</code></p>
-
-<h2>Basic usage</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">curry</span><span class="p">,</span> <span class="nx">_</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;curry-this&#39;</span><span class="p">)();</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Got a simple function?</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">plus</span> <span class="o">=</span> <span class="p">(</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span>
-</span><span class='line'><span class="p">)</span><span class="o">::</span><span class="nx">curry</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
-</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
-</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
-</span><span class='line'><span class="nx">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//» 6</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Placeholders</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Got a monster function?</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">open</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">newScript</span> <span class="o">=</span> <span class="nx">open</span><span class="o">::</span><span class="nx">curry</span><span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="mi">0755</span><span class="p">,</span> <span class="nx">_</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">newScript</span><span class="p">(</span><span class="s1">&#39;do-wonders.sh&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// The `file` is ready.</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can try this with <code>babel-node</code>. Make sure that you use the <code>--stage=0</code> option.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/curry-this/curry-this.gif" alt="curry-this" /></p>
-
-<p>Thanks to <a href="http://stoeffel.github.io/">Christoph Hermann</a> and <a href="https://github.com/tomekwi">tomekwi</a> for making cury more fun!</p>
 
 		
 		

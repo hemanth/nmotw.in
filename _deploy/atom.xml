@@ -4,13 +4,125 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-12T02:57:05+05:30</updated>
+  <updated>2019-01-20T20:08:54+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[clockmoji]]></title>
+    <link href="http://nmotw.in/clockmoji/"/>
+    <updated>2019-01-20T20:00:13+05:30</updated>
+    <id>http://nmotw.in/clockmoji</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/clockmoji">clockmoji</a></h1>
+
+<blockquote><p>🕗 Get an emoji clock based on the time.</p></blockquote>
+
+<p><code>clockmoji</code> is fun little module for representation of the current time in emoji.</p>
+
+<p>It calculates the short hard, long hard for the clock and fetch the required emoji's unicode.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">*</span> <span class="mi">60000</span><span class="p">)</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">shortHand</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">%</span> <span class="mi">12</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">longHand</span> <span class="o">=</span> <span class="p">(</span><span class="nx">min</span> <span class="o">-</span> <span class="p">(</span><span class="nx">min</span> <span class="o">%</span> <span class="mi">30</span><span class="p">))</span> <span class="o">/</span> <span class="mi">30</span> <span class="o">?</span> <span class="s1">&#39;30&#39;</span> <span class="o">:</span> <span class="s1">&#39;00&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install clockmoji</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">date</span>
+</span><span class='line'><span class="nx">Tue</span> <span class="nx">May</span> <span class="mi">26</span> <span class="mi">18</span><span class="o">:</span><span class="mi">19</span><span class="o">:</span><span class="mi">10</span> <span class="nx">CDT</span> <span class="mi">2015</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">no</span> <span class="nx">arguments</span> <span class="nx">will</span> <span class="k">return</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">time</span>
+</span><span class='line'><span class="nx">clockmoji</span>
+</span><span class='line'><span class="err">🕡</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Pass</span> <span class="nx">a</span> <span class="nx">time</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">format</span> <span class="nx">mm</span><span class="o">:</span><span class="nx">ss</span>
+</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">10</span><span class="o">:</span><span class="mi">00</span>
+</span><span class='line'><span class="err">🕙</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">Military</span> <span class="nx">time</span> <span class="nx">supported</span>
+</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">14</span><span class="o">:</span><span class="mi">00</span>
+</span><span class='line'><span class="err">🕑</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">any</span> <span class="nx">arbitrary</span> <span class="nx">time</span> <span class="nx">works</span> <span class="o">--</span> <span class="nx">rounds</span> <span class="nx">down</span> <span class="k">if</span> <span class="nx">its</span> <span class="nx">less</span> <span class="nx">than</span> <span class="o">:</span><span class="mi">15</span>
+</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">12</span><span class="o">:</span><span class="mi">04</span>
+</span><span class='line'><span class="err">🕛</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">rounds</span> <span class="nx">up</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">minutes</span> <span class="nx">are</span> <span class="o">:</span><span class="mi">15</span>
+</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">12</span><span class="o">:</span><span class="mi">24</span>
+</span><span class='line'><span class="err">🕧</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">supports</span> <span class="nx">piping</span>
+</span><span class='line'><span class="nx">echo</span> <span class="mi">6</span><span class="o">:</span><span class="mi">30</span> <span class="o">|</span> <span class="nx">clockmoji</span>
+</span><span class='line'><span class="err">🕡</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">#</span> <span class="nx">invalid</span> <span class="nx">time</span> <span class="nx">returns</span> <span class="err">⚠</span>
+</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">9999</span>
+</span><span class='line'><span class="err">⚠</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">clockmoji</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;clockmoji&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">())</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">(</span><span class="s1">&#39;12:00&#39;</span><span class="p">))</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">(</span><span class="s1">&#39;18:30&#39;</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/clockmoji/clockmoji.gif" alt="clockmoji" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[meant]]></title>
@@ -1293,69 +1405,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/mapscii/mapscii.gif" alt="mapscii" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[microjob]]></title>
-    <link href="http://nmotw.in/microjob/"/>
-    <updated>2018-09-09T00:27:32+05:30</updated>
-    <id>http://nmotw.in/microjob</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
-
-<blockquote><p>worker threads into easy-to-use routines for CPU-bound.</p></blockquote>
-
-<p><code>microjob</code> is a tiny wrapper for threads (<code>worker_threads</code>) and is intended to perform heavy CPU loads using anonymous functions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install microjob</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(async () =&gt; {
-</span><span class='line'>  const { job } = require('microjob')
-</span><span class='line'>
-</span><span class='line'>  try {
-</span><span class='line'>    // this function will be executed in another thread
-</span><span class='line'>    const res = await job(() =&gt; {
-</span><span class='line'>      let i = 0
-</span><span class='line'>      for (i = 0; i &lt; 1000000; i++) {
-</span><span class='line'>        // heavy CPU load ...
-</span><span class='line'>      }
-</span><span class='line'>
-</span><span class='line'>      return i
-</span><span class='line'>    })
-</span><span class='line'>
-</span><span class='line'>    console.log(res) // 1000000
-</span><span class='line'>  } catch (err) {
-</span><span class='line'>    console.error(err)
-</span><span class='line'>  }
-</span><span class='line'>})();</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: To run this today, you we need node <code>v&gt;=10</code> and execute it via <code>--experimental-worker</code> flag.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/microjob/microjob.gif" alt="microjob" /></p>
 ]]></content>
   </entry>
   
