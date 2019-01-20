@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-01-12T02:57:05+05:30</updated>
+  <updated>2019-01-20T20:04:59+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,84 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[clockmoji]]></title>
+    <link href="http://nmotw.in//github/clockmoji/"/>
+    <updated>2019-01-20T20:00:13+05:30</updated>
+    <id>http://nmotw.in//github/clockmoji</id>
+    <content type="html"><![CDATA[<h1><a href="">clockmoji</a></h1>
+
+<blockquote><p>🕗 Get an emoji clock based on the time.</p></blockquote>
+
+<p><code>clockmoji</code> is fun little module for representation of the current time in emoji.</p>
+
+<p>It calculates the short hard, long hard for the clock and fetch the required emoji's unicode.</p>
+
+<p><code>js
+  var date = new Date(date.getTime() + 15 * 60000)
+  var shortHand = date.getHours() % 12
+  var min = date.getMinutes()
+  var longHand = (min - (min % 30)) / 30 ? '30' : '00'
+</code></p>
+
+<p><strong>Get it:</strong> <code>npm install clockmoji</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+date
+Tue May 26 18:19:10 CDT 2015</p>
+
+<h1>no arguments will return the current time</h1>
+
+<p>clockmoji
+🕡</p>
+
+<h1>Pass a time in the format mm:ss</h1>
+
+<p>clockmoji 10:00
+🕙</p>
+
+<h1>Military time supported</h1>
+
+<p>clockmoji 14:00
+🕑</p>
+
+<h1>any arbitrary time works -- rounds down if its less than :15</h1>
+
+<p>clockmoji 12:04
+🕛</p>
+
+<h1>rounds up if the minutes are :15</h1>
+
+<p>clockmoji 12:24
+🕧</p>
+
+<h1>supports piping</h1>
+
+<p>echo 6:30 | clockmoji
+🕡</p>
+
+<h1>invalid time returns ⚠</h1>
+
+<p>clockmoji 9999
+⚠
+```</p>
+
+<p>```js
+const clockmoji = require('clockmoji')</p>
+
+<p>console.log(clockmoji())
+console.log(clockmoji('12:00'))
+console.log(clockmoji('18:30'))
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/clockmoji/clockmoji.gif" alt="clockmoji" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[is-vegan]]></title>
@@ -199,93 +277,6 @@ at require (internal/module.js:11:18)
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/april-fools/april-fools.gif" alt="april-fools" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[christmas-ascii]]></title>
-    <link href="http://nmotw.in//github/christmas-ascii/"/>
-    <updated>2017-12-24T16:16:41+05:30</updated>
-    <id>http://nmotw.in//github/christmas-ascii</id>
-    <content type="html"><![CDATA[<h1><a href="https://nmpjs.com/christmas-ascii">christmas-ascii</a></h1>
-
-<blockquote><p>Get some christmas ascii!</p></blockquote>
-
-<p>Enjoy your vacation with some random christmas ascii on your terminal!</p>
-
-<p><strong>Get it</strong> <code>npm install -g christmas-ascii</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-const xmas = require('christmas-ascii')</p>
-
-<p>console.log(xmas())
-```</p>
-
-<p>```sh
-$ christmas-ascii -a</p>
-
-<pre><code>                ____
-              ;`    `'-._
-             / \        /\
-           /`   \      |  ;
-          /      \     |  |
-         /        `\   |  |
-        /           \_ /  |
-       ;            / `\  |
-      ,|_  __       \__/  |
-      _\_o/_(             |_
-     /`'=/\==''=='=='=='=='`\
-     |   )/                 |
-     \                      /
-     /';=''==''==''==''==';`\
-     |  /`   /~\  /~\   `\  |
-     |  \  _ \o/  \o/ _  /  |
-     \  ; (_)   __   (_) ;  /
-     /  |\_.-''(__)''-._/|  \
-    |   \       /\       /   |
-   /     '.___.'__'.___.'     \
-  |             \/             |
-  |                            |
-  \                            /
-  |                            |
-   \                          /
-    '.                      .'
-      '-.__            __.-'
-           '---'--'---'
-
-
-
-
-              / \
-             /   \
-            /     \
-           /       \
-          /         \
-         /           \
-        /             \
-       /_______________\
-      [_________________]
-     / / (_o_)   (_o_) \ \
-    (_(______,   ,______)_)
-   ( \      .`---'.      / )
-   ( /`~'''`  ._.  `'''~`\ )
-    (                     )
-   (                       )
-  (                         )
-  (                         )
-   (                       )
-    (                     )
-     `(                 )'
-       `'~'---,.,---'~'`
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/christmas-ascii/christmas-ascii.gif" alt="christmas-ascii" /></p>
 ]]></content>
   </entry>
   
