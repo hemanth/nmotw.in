@@ -4,13 +4,90 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-20T20:08:54+05:30</updated>
+  <updated>2019-01-26T14:16:24+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[lazy-property]]></title>
+    <link href="http://nmotw.in/lazy-property/"/>
+    <updated>2019-01-26T14:08:16+05:30</updated>
+    <id>http://nmotw.in/lazy-property</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-property">lazy-property</a></h1>
+
+<blockquote><p>Add a lazily initialized property to an object.</p></blockquote>
+
+<p><code>lazy-propert</code> play well with <code>Object.defineProperty</code> to provide laziness over object's properties.</p>
+
+<p><strong>Get it:</strong> <code>npm install lazy-property</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;lazy-property&quot;</span><span class="p">)(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">init</span><span class="p">[,</span> <span class="nx">enumerable</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>^ Adds a lazily initialized property to the object.</p>
+
+<ul>
+<li><code>obj</code> is the object to add the property to</li>
+<li><code>name</code> is the name of the property</li>
+<li><code>init</code> is a function that computes the value of the property</li>
+<li><code>enumerable</code> if the property is enumerable (default false)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">addLazyProperty</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;lazy-property&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">addLazyProperty</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;initialized!&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="s2">&quot;bar&quot;</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//Access the property</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">foo</span><span class="p">)</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">foo</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//Prints out:</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//    initialized!</span>
+</span><span class='line'><span class="c1">//    bar</span>
+</span><span class='line'><span class="c1">//    bar</span>
+</span><span class='line'><span class="c1">//</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/lazy-property/lazy-proptery.gif" alt="lazy-property" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[clockmoji]]></title>
@@ -1368,43 +1445,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[mapscii]]></title>
-    <link href="http://nmotw.in/mapscii/"/>
-    <updated>2018-09-16T18:42:56+05:30</updated>
-    <id>http://nmotw.in/mapscii</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
-
-<blockquote><p>The Whole World In Your Console!</p></blockquote>
-
-<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
-
-<p><strong>Navigation:</strong></p>
-
-<ul>
-<li>Arrows up, down, left, right to scroll around</li>
-<li>Press a or z to zoom in and out</li>
-<li>Press q to quit</li>
-</ul>
-
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mapscii
-</span><span class='line'><span class="c"># you should see the entire map on the CLI</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/mapscii/mapscii.gif" alt="mapscii" /></p>
 ]]></content>
   </entry>
   

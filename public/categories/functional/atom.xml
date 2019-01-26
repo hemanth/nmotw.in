@@ -4,7 +4,7 @@
   <title><![CDATA[Category: functional | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/functional/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-01-20T20:08:54+05:30</updated>
+  <updated>2019-01-26T14:16:24+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[lazy-property]]></title>
+    <link href="http://nmotw.in//github/lazy-property/"/>
+    <updated>2019-01-26T14:08:16+05:30</updated>
+    <id>http://nmotw.in//github/lazy-property</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-property">lazy-property</a></h1>
+
+<blockquote><p>Add a lazily initialized property to an object.</p></blockquote>
+
+<p><code>lazy-propert</code> play well with <code>Object.defineProperty</code> to provide laziness over object's properties.</p>
+
+<p><strong>Get it:</strong> <code>npm install lazy-property</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+require("lazy-property")(obj, name, init[, enumerable])
+</code></p>
+
+<p>^ Adds a lazily initialized property to the object.</p>
+
+<ul>
+<li><code>obj</code> is the object to add the property to</li>
+<li><code>name</code> is the name of the property</li>
+<li><code>init</code> is a function that computes the value of the property</li>
+<li><code>enumerable</code> if the property is enumerable (default false)</li>
+</ul>
+
+
+<p>```js
+var addLazyProperty = require("lazy-property")</p>
+
+<p>var obj = {}</p>
+
+<p>addLazyProperty(obj, "foo", function() {
+  console.log("initialized!")
+  return "bar"
+})</p>
+
+<p>//Access the property
+console.log(obj.foo)
+console.log(obj.foo)</p>
+
+<p>//Prints out:
+//
+//    initialized!
+//    bar
+//    bar
+//
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lazy-property/lazy-proptery.gif" alt="lazy-property" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[most]]></title>
