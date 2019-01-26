@@ -4,7 +4,7 @@
   <title><![CDATA[Category: functional | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/functional/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-01-26T14:16:24+05:30</updated>
+  <updated>2019-01-26T14:18:30+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -66,7 +66,7 @@ console.log(obj.foo)</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/lazy-property/lazy-proptery.gif" alt="lazy-property" /></p>
+<p><img src="/images/lazy-property/lazy-property.gif" alt="lazy-property" /></p>
 ]]></content>
   </entry>
   
