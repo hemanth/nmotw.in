@@ -1,0 +1,39 @@
+---
+layout: post
+title: "to-regex"
+date: 2019-02-02 15:59:03 +0530
+comments: true
+categories: util 
+---
+
+# [to-regex](https://www.npmjs.com/package/to-regex)
+> Generate a regex from a string or array of strings.
+
+`to-regex` is tiny module that helps us to easily create R.E from a `string` or an `array` of strings.
+
+__Get it:__ `npm install to-regex`
+
+__Sample usage:__
+
+```js
+const toRegex = require('to-regex');
+ 
+console.log(toRegex('foo'));
+//=> /^(?:foo)$/
+ 
+console.log(toRegex('foo', {negate: true}));
+//=> /^(?:(?:(?!^(?:foo)$).)*)$/
+ 
+console.log(toRegex('foo', {contains: true}));
+//=> /(?:foo)/
+ 
+console.log(toRegex(['foo', 'bar'], {negate: true}));
+//=> /^(?:(?:(?!^(?:(?:foo)|(?:bar))$).)*)$/
+ 
+console.log(toRegex(['foo', 'bar'], {negate: true, contains: true}));
+//=> /^(?:(?:(?!(?:(?:foo)|(?:bar))).)*)$/
+```
+
+__GIF FTW!__
+
+![to-regex](/images/to-regex/to-regex.gif )
