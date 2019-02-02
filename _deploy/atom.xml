@@ -4,13 +4,69 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-01-26T14:18:30+05:30</updated>
+  <updated>2019-02-02T16:06:02+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[to-regex]]></title>
+    <link href="http://nmotw.in/to-regex/"/>
+    <updated>2019-02-02T15:59:03+05:30</updated>
+    <id>http://nmotw.in/to-regex</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/to-regex">to-regex</a></h1>
+
+<blockquote><p>Generate a regex from a string or array of strings.</p></blockquote>
+
+<p><code>to-regex</code> is tiny module that helps us to easily create R.E from a <code>string</code> or an <code>array</code> of strings.</p>
+
+<p><strong>Get it:</strong> <code>npm install to-regex</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">toRegex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;to-regex&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="c1">//=&gt; /^(?:foo)$/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
+</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!^(?:foo)$).)*)$/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">contains</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
+</span><span class='line'><span class="c1">//=&gt; /(?:foo)/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
+</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!^(?:(?:foo)|(?:bar))$).)*)$/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">contains</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
+</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!(?:(?:foo)|(?:bar))).)*)$/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/to-regex/to-regex.gif" alt="to-regex" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[lazy-property]]></title>
@@ -1381,70 +1437,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/emma/emma-cli.gif" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[please-upgrade-node]]></title>
-    <link href="http://nmotw.in/please-upgrade-node/"/>
-    <updated>2018-09-23T15:42:17+05:30</updated>
-    <id>http://nmotw.in/please-upgrade-node</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
-
-<blockquote><p>💁 show a message to your users to upgrade Node instead of a stacktrace</p></blockquote>
-
-<p><code>please-upgrade-node</code>checks if the users node version is statisfying the <code>engines</code> version in your <code>package.json</code> if not warns, uber useful for CLI apps relying on versions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install please-upgrade-node</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">pkg</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./package.json&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;please-upgrade-node&#39;</span><span class="p">)(</span><span class="nx">pkg</span><span class="p">)</span> <span class="c1">// &lt;- Must run BEFORE requiring any other modules</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in <code>package.json</code>:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;engines&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;&gt;=6&quot;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: <code>&gt;=</code> is the only operator supported.</p>
-
-<p>You could also:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">pleaseUpgradeNode</span><span class="p">(</span><span class="nx">pkg</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">exitCode</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// Default: 1</span>
-</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">requiredVersion</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;Oops this program require Node &#39;</span> <span class="o">+</span>  <span class="nx">requiredVersion</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
 ]]></content>
   </entry>
   
