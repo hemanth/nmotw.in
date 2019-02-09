@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-02-09T12:03:00+05:30</updated>
+  <updated>2019-02-09T12:04:47+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/soted-object/"/>
     <updated>2019-02-09T11:55:29+05:30</updated>
     <id>http://nmotw.in/soted-object</id>
-    <content type="html"><![CDATA[<h1>[sorted-object]</h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
 
 <blockquote><p>sort object by keys.</p></blockquote>
 
