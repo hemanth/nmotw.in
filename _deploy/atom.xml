@@ -4,13 +4,47 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-02-02T16:06:02+05:30</updated>
+  <updated>2019-02-09T12:06:47+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[soted-object]]></title>
+    <link href="http://nmotw.in/soted-object/"/>
+    <updated>2019-02-09T11:55:29+05:30</updated>
+    <id>http://nmotw.in/soted-object</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
+
+<blockquote><p>sort object by keys.</p></blockquote>
+
+<p><code>sorted-object</code> is an uber tiny module that helps us sort an object by it's keys.</p>
+
+<p>P.S: It got a <code>232,037</code> downloads last week ;)</p>
+
+<p><strong>Get it:</strong> <code>npm install sorted-object</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">sortedObject</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sorted-object&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">sortedObject</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">c</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="nx">a</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="o">:</span><span class="mi">0</span><span class="p">})</span>
+</span><span class='line'><span class="c1">// =&gt; { &#39;0&#39;: 0, a: 3, b: 1, c: 2 }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/sorted-object/sorted-object.gif" alt="sorted-object" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[to-regex]]></title>
@@ -1378,65 +1412,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="http://nmotw.in/images/regex-not/regex-not.gif" alt="regex-not" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[emma]]></title>
-    <link href="http://nmotw.in/emma/"/>
-    <updated>2018-09-27T12:13:16+05:30</updated>
-    <id>http://nmotw.in/emma</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
-
-<blockquote><p>Install the package you are looking for. 📦</p></blockquote>
-
-<p>Search and install packages more efficiently with <code>emma</code> which makes use of <a href="https://www.algolia.com/">Algolia search API</a>, <a href="https://github.com/JureSotosek/npm-suggestions">npm-suggestions</a> and the <a href="http://yarnpkg.com/">Yarn</a> package manager.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g emma-cli</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>❯ nmotw.in ~ emma
-</span><span class='line'>Search packages 📦  : grap
-</span><span class='line'>Search results:
-</span><span class='line'>  11   grap           loopingrage     Utility that GReps for gAPs and out of sequence line in log
-</span><span class='line'>  8.4m sass-graph     xzyfer          Parse sass files and extract a graph of imports
-</span><span class='line'>  3.7m @types/graphql DefinitelyTyped TypeScript definitions for graphql
-</span><span class='line'>❯ 2.9m graphql        graphql         A Query Language and Runtime which can target any service.
-</span><span class='line'>  1.8m graphlib       dagrejs         A directed and undirected multi-graph library
-</span><span class='line'>Suggestions results: Press Tab to select suggestions
-</span><span class='line'>  10.2m react-dom  facebook  React package for working with the DOM.
-</span><span class='line'>  14.6m prop-types facebook  Runtime type checking for React props and similar objects.
-</span><span class='line'>  7m    classnames JedWatson A simple utility for conditionally joining classNames toget
-</span><span class='line'>  65.3m lodash     lodash    Lodash modular utilities.
-</span><span class='line'>  7.2m  redux      reactjs   Predictable state container for JavaScript apps
-</span><span class='line'>Search powered by Algolia.
-</span><span class='line'>
-</span><span class='line'>Picked: Press Space to install packages...
-</span><span class='line'>› react  16.5.1</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/emma/emma-cli.gif" alt="" /></p>
 ]]></content>
   </entry>
   
