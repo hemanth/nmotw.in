@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="npm-me Get a list of download counts over the last month for a particular user's packages. Installing it: npm install npm-me or npm install -g npm- &hellip;">   
+    <meta name="description" content="npm-check-updates Finding all updates to dependencies and updating them is very easy with npm-check-updates. Install it globally: npm install -g npm &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/23/">
-    <meta name="twitter:description" content="npm-me Get a list of download counts over the last month for a particular user's packages. Installing it: npm install npm-me or npm install -g npm- &hellip;">
+    <meta name="twitter:description" content="npm-check-updates Finding all updates to dependencies and updating them is very easy with npm-check-updates. Install it globally: npm install -g npm &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/23/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="npm-me Get a list of download counts over the last month for a particular user's packages. Installing it: npm install npm-me or npm install -g npm- &hellip;" />
+    <meta property="og:description" content="npm-check-updates Finding all updates to dependencies and updating them is very easy with npm-check-updates. Install it globally: npm install -g npm &hellip;" />
 
     
 
@@ -67,6 +67,96 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npm-check-updates/">
+			
+				Npm-check-updates</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-20T20:22:16+05:30" pubdate data-updated="true">Nov 20<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/npm-check-updates">npm-check-updates</a></h1>
+
+<p>Finding all updates to dependencies and updating them is very easy with <code>npm-check-updates</code>.</p>
+
+<p><strong>Install it globally:</strong> <code>npm install -g npm-check-updates</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates
+</span><span class='line'>npm http GET http://registry.npmjs.org/read-chunk
+</span><span class='line'>npm http GET http://registry.npmjs.org/mocha
+</span><span class='line'>npm http GET http://registry.npmjs.org/browserify
+</span><span class='line'>npm http 304 http://registry.npmjs.org/browserify
+</span><span class='line'>npm http 304 http://registry.npmjs.org/read-chunk
+</span><span class='line'>npm http 304 http://registry.npmjs.org/mocha
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
+</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check-updates -u
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot;browserify&quot;</span> can be updated from ^3.0.0 to ^6.3.2 <span class="o">(</span>Installed: 3.44.2, Latest: 6.3.2<span class="o">)</span>
+</span><span class='line'><span class="s2">&quot;read-chunk&quot;</span> can be updated from ^0.1.0 to ^1.0.0 <span class="o">(</span>Installed: 0.1.0, Latest: 1.0.0<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>package.json upgraded
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>npm-check-updates
+</span><span class='line'>
+</span><span class='line'>All dependencies match the latest package versions :<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npm-check-updates/npm-check-updates.gif" alt="" /></p>
+
+<p>Thanks to Tomas Junnonen for this cute little util.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1967,94 +2057,6 @@
 <p><img src="/images/dateformat/dateformat.gif" alt="" /></p>
 
 <p>Thanks to the author <a href="https://twitter.com/felixge">Felix Geisendörfer</a> for a sweet date formatter! :)</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/jsonselect/">
-			
-				Jsonselect</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-04T18:20:10+05:30" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>JSONSelect defines a language very similar in syntax and structure to
-<a href="http://www.w3.org/TR/css3-selectors/">CSS3 Selectors</a>.</p>
-
-<p>JSONSelect expressions are patterns which can be matched against JSON documents.</p>
-
-<p>Installing it: <code>npm install jsonselect</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">select</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonselect&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">{ friends: </span>
-</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39;, password: &#39;bob pass&#39; },</span>
-</span><span class='line'><span class="cm">     { username: &#39;joe&#39;, password: &#39;joe pass&#39; },</span>
-</span><span class='line'><span class="cm">     { username: &#39;jeff&#39;, password: &#39;jeff pass&#39; } ] }</span>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">,</span> <span class="nx">except</span><span class="o">:</span> <span class="s1">&#39;.password&#39;</span><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">{ friends: </span>
-</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39; },</span>
-</span><span class='line'><span class="cm">     { username: &#39;joe&#39; },</span>
-</span><span class='line'><span class="cm">     { username: &#39;jeff&#39; } ] }</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: This module is still in the beta phase. Do checkout <a href="http://jsonselect.org/#overview">jsonselect.org</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/jsonselect/jsonselect.gif" alt="jsonselect" /></p>
-
-<p>Thanks to <a href="http://lloyd.io/">Lloyd Hilaiel</a> and wish me the very best with this module!</p>
 
 		
 		

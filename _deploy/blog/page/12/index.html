@@ -7,16 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;">   
+    <meta name="description" content="evalmd 🎣 Evaluates JavaScript code blocks from markdown files. evalmd parses your markdown files, extract the JavaScript code blocks from them and &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -24,32 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/12/">
-    <meta name="twitter:description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;">
+    <meta name="twitter:description" content="evalmd 🎣 Evaluates JavaScript code blocks from markdown files. evalmd parses your markdown files, extract the JavaScript code blocks from them and &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/12/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;" />
+    <meta property="og:description" content="evalmd 🎣 Evaluates JavaScript code blocks from markdown files. evalmd parses your markdown files, extract the JavaScript code blocks from them and &hellip;" />
 
     
 
@@ -94,6 +67,120 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/evalmd/">
+			
+				Evalmd</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-29T17:14:52+05:30" pubdate data-updated="true">Dec 29<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/evalmd">evalmd</a></h1>
+
+<blockquote><p>🎣 Evaluates JavaScript code blocks from markdown files.</p></blockquote>
+
+<p><code>evalmd</code> parses your markdown files, extract the JavaScript code blocks from them and evaluate it, in the eval bombs it reports and there are ease flags to turn off evaluation for specific code blocks.</p>
+
+<p>The <code>javascript</code> or <code>js</code> code blocks works fine with it.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g evalmd</code></p>
+
+<p><strong>Sample usage CLI:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>evalmd
+</span><span class='line'>
+</span><span class='line'>evalmd - Evaluate the javascript in markdown files
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -i, --include    Includes prevented blocks  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -P, --prevent    Prevent code from being evaluated  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -b, --block      Change the scope to block level  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -o, --output     Output js  <span class="o">[</span>choices: <span class="nb">false</span>, <span class="nb">true</span>, <span class="s2">&quot;preserve&quot;</span>, <span class="s2">&quot;concat&quot;</span>, <span class="s2">&quot;preserveAlter&quot;</span>, <span class="s2">&quot;concatAlter&quot;</span><span class="o">]</span> <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -n, --nonstop    Runs all files regardless <span class="k">if </span>error  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -s, --silent     Silence <span class="sb">`</span>evalmd<span class="sb">`</span> logging  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -u, --uniform    Does not use absolute urls when error logging  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -D, --debug      Debug Output  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>  -h, --help       Show <span class="nb">help</span>  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --path           Prefix <span class="nb">local </span>module with path  <span class="o">[</span>default: <span class="s2">&quot;./&quot;</span><span class="o">]</span>
+</span><span class='line'>  --package        Th path of a package.json  <span class="o">[</span>default: <span class="s2">&quot;./package.json&quot;</span><span class="o">]</span>
+</span><span class='line'>  --version        Show version number  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  -d, --delimeter  <span class="o">[</span>default: <span class="nb">false</span><span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Examples:
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt;        Evaluate file<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -n     Evaluate file<span class="o">(</span>s<span class="o">)</span> uninterrupted
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -b     Evaluate block<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -bn    Evaluate block<span class="o">(</span>s<span class="o">)</span> uninterrupted
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Po    Outputs js file<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Pio   Outputs js file<span class="o">(</span>s<span class="o">)</span> with all block<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span><span class="k">for </span>linting<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Pob   Outputs block<span class="o">(</span>s<span class="o">)</span>
+</span><span class='line'>  evalmd &lt;file<span class="o">(</span>s<span class="o">)</span>&gt; -Piob  Outputs all blocks<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span><span class="k">for </span>linting<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage from code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">evalmd</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;evalmd&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">evalmd</span><span class="p">,</span> <span class="s1">&#39;function&#39;</span><span class="p">);</span> <span class="c1">// true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/evalmd/evalmd.gif" alt="evalmd" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -848,71 +935,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/next/next.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/s-ago/">
-			
-				S-ago</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-10-20T19:43:46+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
-
-<blockquote><p>Human readable relative times.</p></blockquote>
-
-<p><code>26 SLOC</code> to convert <code>Date</code> objects into human readable relative timestamps, such as <code>7 minutes ago</code> or <code>yesterday</code> or <code>2 days ago</code></p>
-
-<p><strong>Get it:</strong> <code>npm install --save s-ago</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ago</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;s-ago&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">yesterday</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">hoursAgo</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">now</span><span class="p">);</span> <span class="c1">// &#39;just now&#39; </span>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">yesterday</span><span class="p">);</span> <span class="c1">// &#39;yesterday&#39; </span>
-</span><span class='line'><span class="nx">ago</span><span class="p">(</span><span class="nx">hoursAgo</span><span class="p">);</span> <span class="c1">// &#39;6 hours ago&#39; </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
 
 		
 		
