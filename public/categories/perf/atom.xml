@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-02-09T12:06:47+05:30</updated>
+  <updated>2019-02-13T09:28:16+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[package-size]]></title>
+    <link href="http://nmotw.in//github/package-size/"/>
+    <updated>2019-02-13T00:21:28+05:30</updated>
+    <id>http://nmotw.in//github/package-size</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
+
+<blockquote><p>Get the bundle size of an npm packages.</p></blockquote>
+
+<p><code>package-size</code> is a sweet CLI util, that gives us info about the bundle size of npm packages.</p>
+
+<p><strong>What it does?</strong></p>
+
+<ul>
+<li>Install the packages to a temp directory.</li>
+<li>Bundle the packages with webpack and get the bundle size.</li>
+<li>Show you the bundle size and cache it by package version.</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g package-size</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<h1>get the size of vue bundle</h1>
+
+<p>package-size vue</p>
+
+<h1>get the size of react+react-dom bundle</h1>
+
+<p>package-size react,react-dom</p>
+
+<h1>get the size of vue react+react-dom preact bundles</h1>
+
+<p>package-size vue react,react-dom preact</p>
+
+<h1>get the size of react+react-dom without using the cache</h1>
+
+<p>package-size react,react-dom --no-cache</p>
+
+<h1>get the size of file in current working directory</h1>
+
+<p>package-size ./dist/index.js</p>
+
+<h1>or a package in current working directory, explictly using <code>--cwd</code> flag</h1>
+
+<p>package-size vue --cwd</p>
+
+<h1>or event multiple versions for the same package!</h1>
+
+<p>package-size react@0.10 react@0.14 react@15</p>
+
+<h1>save results to file system in JSON format</h1>
+
+<h1>defaults to ./package-size-output.json</h1>
+
+<p>package-size cherow --output</p>
+
+<h1>or custom path</h1>
+
+<p>package-size cherow --output stats.json</p>
+
+<h1>analyze bundle with webpack-bundle-analyzer</h1>
+
+<p>package-size cherow --analyze
+```</p>
+
+<p>```js
+const getSizes = require('package-size')</p>
+
+<p>getSizes('react,react-dom', options)
+  .then(data => {</p>
+
+<pre><code>console.log(data)
+//=&gt;
+{
+  name: 'react,react-dom',
+  size: 12023, // in bytes
+  minified: 2342,
+  gzipped: 534,
+  versionedName: 'react@16.0.0,react-dom@16.0.0'
+}
+</code></pre>
+
+<p>  })
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/package-size/package-size.gif" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[hiper]]></title>
