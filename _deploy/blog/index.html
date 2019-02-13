@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="sorted-object sort object by keys. sorted-object is an uber tiny module that helps us sort an object by it's keys. P.S: It got a 232,037 downloads &hellip;">   
+    <meta name="description" content="package-size Get the bundle size of an npm packages. package-size is a sweet CLI util, that gives us info about the bundle size of npm packages. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="sorted-object sort object by keys. sorted-object is an uber tiny module that helps us sort an object by it's keys. P.S: It got a 232,037 downloads &hellip;">
+    <meta name="twitter:description" content="package-size Get the bundle size of an npm packages. package-size is a sweet CLI util, that gives us info about the bundle size of npm packages. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="sorted-object sort object by keys. sorted-object is an uber tiny module that helps us sort an object by it's keys. P.S: It got a 232,037 downloads &hellip;" />
+    <meta property="og:description" content="package-size Get the bundle size of an npm packages. package-size is a sweet CLI util, that gives us info about the bundle size of npm packages. &hellip;" />
 
     
 
@@ -67,6 +67,151 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/package-size/">
+			
+				Package-size</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-02-13T00:21:28+05:30" pubdate data-updated="true">Feb 13<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
+
+<blockquote><p>Get the bundle size of an npm packages.</p></blockquote>
+
+<p><code>package-size</code> is a sweet CLI util, that gives us info about the bundle size of npm packages.</p>
+
+<p><strong>What it does?</strong></p>
+
+<ul>
+<li>Install the packages to a temp directory.</li>
+<li>Bundle the packages with webpack and get the bundle size.</li>
+<li>Show you the bundle size and cache it by package version.</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g package-size</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># get the size of vue bundle</span>
+</span><span class='line'>package-size vue
+</span><span class='line'>
+</span><span class='line'><span class="c"># get the size of react+react-dom bundle</span>
+</span><span class='line'>package-size react,react-dom
+</span><span class='line'>
+</span><span class='line'><span class="c"># get the size of vue react+react-dom preact bundles</span>
+</span><span class='line'>package-size vue react,react-dom preact
+</span><span class='line'>
+</span><span class='line'><span class="c"># get the size of react+react-dom without using the cache</span>
+</span><span class='line'>package-size react,react-dom --no-cache
+</span><span class='line'>
+</span><span class='line'><span class="c"># get the size of file in current working directory</span>
+</span><span class='line'>package-size ./dist/index.js
+</span><span class='line'><span class="c"># or a package in current working directory, explictly using `--cwd` flag</span>
+</span><span class='line'>package-size vue --cwd
+</span><span class='line'>
+</span><span class='line'><span class="c"># or event multiple versions for the same package!</span>
+</span><span class='line'>package-size react@0.10 react@0.14 react@15
+</span><span class='line'>
+</span><span class='line'><span class="c"># save results to file system in JSON format</span>
+</span><span class='line'><span class="c"># defaults to ./package-size-output.json</span>
+</span><span class='line'>package-size cherow --output
+</span><span class='line'><span class="c"># or custom path</span>
+</span><span class='line'>package-size cherow --output stats.json
+</span><span class='line'>
+</span><span class='line'><span class="c"># analyze bundle with webpack-bundle-analyzer</span>
+</span><span class='line'>package-size cherow --analyze
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">getSizes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;package-size&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">getSizes</span><span class="p">(</span><span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+</span><span class='line'>    <span class="c1">//=&gt;</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">size</span><span class="o">:</span> <span class="mi">12023</span><span class="p">,</span> <span class="c1">// in bytes</span>
+</span><span class='line'>      <span class="nx">minified</span><span class="o">:</span> <span class="mi">2342</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">gzipped</span><span class="o">:</span> <span class="mi">534</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">versionedName</span><span class="o">:</span> <span class="s1">&#39;react@16.0.0,react-dom@16.0.0&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/package-size/package-size.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -831,97 +976,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/intl-tel-input/intl-tel-input.gif" alt="intl-tel-input" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/glorious-demo/">
-			
-				@glorious/demo</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-12-14T23:37:14+05:30" pubdate data-updated="true">Dec 14<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/@glorious/demo">@glorious/demo</a></h1>
-
-<blockquote><p>The easiest way to demonstrate your code in action.</p></blockquote>
-
-<p><code>@glorious/demo</code> a uniq node module that helps in demonstrating your code in action!</p>
-
-<p><strong>Get it:</strong> <code>npm install @glorious/demo --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="s1">&#39;@glorious/demo/gdemo.min.css&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="kr">import</span> <span class="nx">GDemo</span> <span class="nx">from</span> <span class="s1">&#39;@glorious/demo&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">demo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GDemo</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="err">`</span>
-</span><span class='line'><span class="kd">function</span> <span class="nx">greet</span><span class="p">(){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">greet</span><span class="p">();</span>
-</span><span class='line'><span class="err">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">demo</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;editor&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">windowTitle</span><span class="o">:</span> <span class="s1">&#39;demo.js&#39;</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">1500</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;terminal&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">promptString</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;node ./demo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">500</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to playaround with the <a href="https://glorious.codes/demo?demo=Y29uc3QgZ2RlbW8gPSBuZXcgR0RlbW8oJ1tkYXRhLWRlbW8tY29udGFpbmVyXScpOwoKY29uc3QgY29kZSA9ICdjb25zb2xlLmxvZygibm1vdHcuaW4hIik7JwoKY29uc3QgaGlnaGxpZ2h0ZWRDb2RlID0gUHJpc20uaGlnaGxpZ2h0KAogIGNvZGUsCiAgUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQsCiAgJ2phdmFzY3JpcHQnCik7CgpnZGVtbwogIC5vcGVuQXBwKCdlZGl0b3InLCB7IG1pbkhlaWdodDogJzQwMHB4Jywgd2luZG93VGl0bGU6ICdkZW1vLmpzJyB9KQogIC53cml0ZShoaWdobGlnaHRlZENvZGUsIHsgb25Db21wbGV0ZURlbGF5OiAyMDAwIH0pCiAgLm9wZW5BcHAoJ3Rlcm1pbmFsJywgeyBtaW5IZWlnaHQ6ICc0MDBweCcsIHByb21wdFN0cmluZzogJyQnIH0pCiAgLmNvbW1hbmQoJ25vZGUgLi9kZW1vJykKICAucmVzcG9uZCgnbm1vdHcuaW4hJykKICAuY29tbWFuZCgnJykKICAuZW5kKCk7Cg==">demo</a>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/glorious-demo/glorious-demo.gif" alt="@glorious/demo" /></p>
 
 		
 		

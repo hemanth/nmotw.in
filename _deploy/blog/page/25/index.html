@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;">   
+    <meta name="description" content="Bytes go in, but they don't come out (when muted). mute-stream as the name says it mutes the stream, as in it's a pass-through stream, but when &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/25/">
-    <meta name="twitter:description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;">
+    <meta name="twitter:description" content="Bytes go in, but they don't come out (when muted). mute-stream as the name says it mutes the stream, as in it's a pass-through stream, but when &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/25/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="How often do we visit the list of HTTP status code to check or to inform the user about the status of the request? Well you might remember most of &hellip;" />
+    <meta property="og:description" content="Bytes go in, but they don't come out (when muted). mute-stream as the name says it mutes the stream, as in it's a pass-through stream, but when &hellip;" />
 
     
 
@@ -67,6 +67,83 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/mute-stream/">
+			
+				Mute-stream</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-03T18:32:49+05:30" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<blockquote><p>Bytes go in, but they don't come out (when muted).</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/mute-stream">mute-stream</a> as the name says it mutes the stream, as in it's a pass-through stream, but when muted, the bytes are silently dropped, rather than being passed through.</p>
+
+<p><strong>Installing it:</strong> <code>npm install mute-stream</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">ms</span> <span class="o">=</span> <span class="k">new</span> <span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mute-stream&#39;</span><span class="p">))({});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Shout\n&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">mute</span><span class="p">();</span>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Shout louder!\n&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">unmute</span><span class="p">();</span>
+</span><span class='line'><span class="nx">ms</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Phew!\n&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>({})</code> is the options part, that can be either of:</p>
+
+<ul>
+<li><p>replace => Replaces the muted string with the specified string. (Check the gif)</p></li>
+<li><p>prompt =>  prompt with a readline stream, to avoid backspace overwrites.</p></li>
+</ul>
+
+
+<p>It also provides <code>ms.muted()</code> method to check if the stream is already muted.</p>
+
+<blockquote><p>The MuteStream object acts as a facade to its pipe source and destination.</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mute-stream/mute-stream.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://blog.izs.me/">Isaac Z. Schlueter</a> for helping us to mute the noise! ;)</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1174,102 +1251,6 @@
 <p><strong>Real coders use <code>cat</code> ;)?</strong></p>
 
 <p>Keep rhyming till next week!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/block.js/">
-			
-				block.js</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T19:12:16+05:30" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.org/package/block">Block.js</a>: Ridiculously simple HTML templating. All it does is replaces "blocks" in your template with a local.</p>
-
-<p>The crux of this module is in these simple lines of code:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">replace</span><span class="p">(</span><span class="nx">string</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span>
-</span><span class='line'>    <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;\\{\\{\\s*&#39;</span> <span class="o">+</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;\\s*\\}\\}&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">value</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
-</span><span class='line'>  <span class="p">)</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">escapeRegExp</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([.*+?=^!:${}()|[\]\/\\])/g</span><span class="p">,</span> <span class="s1">&#39;\\$1&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The API is also pretty simple:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">Block</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//html is a string, and block returns a new templating instance.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">locals</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//locals is an object of &quot;blocks&quot; to replace in the template.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Simple Example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">block</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;block&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">,</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">,</span> <span class="nx">tmpl</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;block.html&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">,</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">block</span><span class="p">(</span><span class="nx">tmpl</span><span class="p">).</span><span class="nx">render</span><span class="p">(</span> <span class="p">{</span><span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;&lt;div class=&quot;inner&quot;&gt;&lt;/div&gt;&#39;</span><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF GTW!:</strong>
-<img src="/images/block.js/block.js.gif" alt="block" /></p>
-
-<p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
-
-<p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
 
 		
 		
