@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="hiper 🚀 A statistical analysis tool for performance testing. hiper is short for Hi performance, makes use of puppeteer and gives us the below &hellip;">   
+    <meta name="description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="hiper 🚀 A statistical analysis tool for performance testing. hiper is short for Hi performance, makes use of puppeteer and gives us the below &hellip;">
+    <meta name="twitter:description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="hiper 🚀 A statistical analysis tool for performance testing. hiper is short for Hi performance, makes use of puppeteer and gives us the below &hellip;" />
+    <meta property="og:description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;" />
 
     
 
@@ -67,6 +67,78 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/pretty-error/">
+			
+				Pretty-error</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-08-05T13:37:39+05:30" pubdate data-updated="true">Aug 5<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
+
+<blockquote><p>errors with less clutter</p></blockquote>
+
+<p><code>pretty-error</code> turns error objects into something similar to an html document, and then uses <code>RenderKid</code> to render the document using simple html/css-like commands.</p>
+
+<p><strong>Get it:</strong> <code>npm install pretty-error</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">PrettyError</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;pretty-error&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">pe</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PrettyError</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">renderedError</span> <span class="o">=</span> <span class="nx">pe</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Some error message&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">renderedError</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">doSomethingThatThrowsAnError</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pe</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/pretty-error/pretty-error.gif" alt="pretty-error" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -962,81 +1034,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/franc/franc.gif" alt="franc.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/what-dog/">
-			
-				What-dog</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-05-25T16:13:51+05:30" pubdate data-updated="true">May 25<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/what-dog">what-dog</a></h1>
-
-<blockquote><p>What 🐶 is this?</p></blockquote>
-
-<p>Get the breed of a dog from an image using Microsoft's what-dog.</p>
-
-<p><img src="what-dog.demo.png" alt="" /></p>
-
-<p><strong>Get it:</strong> <code>npm install --save what-dog</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">whatDog</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;what-dog&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">((</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">whatDog</span><span class="p">(</span><span class="s1">&#39;http://imgur.com/B7a15F5.jpg&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="p">})());</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">{</span>
-</span><span class='line'><span class="cm">  &quot;isDog&quot;: true,</span>
-</span><span class='line'><span class="cm">  &quot;breed&quot;: &quot;Norfolk Terrier&quot;,</span>
-</span><span class='line'><span class="cm">  &quot;about&quot;: &quot;Spirited, small but sturdy, feisty yet sweet personality&quot;</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/what-dog/what-dog.gif" alt="what-dog.gif" /></p>
 
 		
 		
