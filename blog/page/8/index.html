@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="accessibilityjs Client side accessibility error scanner. accessibilityjs with 0 dependenices does an wonderful job in scaning and reproting &hellip;">   
+    <meta name="description" content="babar Draw bar charts in your console. 193 lines of code to get bar charts on your console! Easy to use, lightweight, color output, ASCII output, &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/8/">
-    <meta name="twitter:description" content="accessibilityjs Client side accessibility error scanner. accessibilityjs with 0 dependenices does an wonderful job in scaning and reproting &hellip;">
+    <meta name="twitter:description" content="babar Draw bar charts in your console. 193 lines of code to get bar charts on your console! Easy to use, lightweight, color output, ASCII output, &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/8/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="accessibilityjs Client side accessibility error scanner. accessibilityjs with 0 dependenices does an wonderful job in scaning and reproting &hellip;" />
+    <meta property="og:description" content="babar Draw bar charts in your console. 193 lines of code to get bar charts on your console! Easy to use, lightweight, color output, ASCII output, &hellip;" />
 
     
 
@@ -67,6 +67,82 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/babar/">
+			
+				Babar</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-10-25T00:35:48+05:30" pubdate data-updated="true">Oct 25<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npmjs.org/babar">babar</a></h1>
+
+<blockquote><p>Draw bar charts in your console.</p></blockquote>
+
+<p><code>193</code> lines of code to get bar charts on your console!</p>
+
+<p>Easy to use, lightweight, color output, ASCII output, automatically bucketizes values (currently only averages values in a bucket).</p>
+
+<p><strong>Get it:</strong> <code>npm install babar</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">babar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;babar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">babar</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">babar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;babar&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">babar</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">width</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">height</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">maxY</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">yFractions</span><span class="o">:</span> <span class="mi">1</span>
+</span><span class='line'><span class="p">}));</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/babar/babar.gif" alt="babar" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -956,73 +1032,6 @@ as your desktop wallpaper.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/mitt/mitt.gif" alt="mitt" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/gtop/">
-			
-				Gtop</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-08-18T13:25:20+05:30" pubdate data-updated="true">Aug 18<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/gtop">gtop</a></h1>
-
-<blockquote><p>System monitoring dashboard for terminal.</p></blockquote>
-
-<p><code>gtop</code> could be termed as the node's version of <a href="http://hisham.hm/htop/">htop</a>, gives a very need interface on the cli that would list out the below:</p>
-
-<ul>
-<li><p>CPU history.</p></li>
-<li><p>Memory and Swap History.</p></li>
-<li><p>Memory and Netowrk usage.</p></li>
-<li><p>Disk usage.</p></li>
-<li><p>Process list.</p></li>
-</ul>
-
-
-<p>You can sort the process table by pressing:</p>
-
-<p><code>p</code>: Process Id
-<code>c</code>: CPU usage
-<code>m</code>: Memory usage</p>
-
-<p><strong>Get it:</strong> <code>npm install -g gtop</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gtop
-</span><span class='line'>
-</span><span class='line'># In case of font issues: LANG=en_US.utf8 TERM=xterm-256color gtop</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/gtop/gtop.gif" alt="gtop" /></p>
 
 		
 		

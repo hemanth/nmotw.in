@@ -4,13 +4,89 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-02-13T09:28:16+05:30</updated>
+  <updated>2019-02-24T10:40:43+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[abort-controller]]></title>
+    <link href="http://nmotw.in/abort-controller/"/>
+    <updated>2019-02-23T11:10:52+05:30</updated>
+    <id>http://nmotw.in/abort-controller</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
+
+<blockquote><p>An implementation of WHATWG AbortController interface.</p></blockquote>
+
+<p>The AbortController interface allows us to abort one or more DOM requests as per the need.</p>
+
+<p>From the <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">sepc</a>:</p>
+
+<p>The <code>AbortController()</code> constructor, when invoked, must run these steps:</p>
+
+<ul>
+<li><p>Let signal be a <code>new AbortSignal</code> object.</p></li>
+<li><p>Let controller be a <code>new AbortController</code> object whose signal is signal.</p></li>
+<li><p>Return controller.</p></li>
+</ul>
+
+
+<p>The <code>signal</code> attribute’s getter, when invoked, must return the context object’s signal.</p>
+
+<p>The <code>abort()</code> method, when invoked, must signal abort on the context object’s signal.</p>
+
+<p><strong>Get it:</strong> <code>npm install abort-controller</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">AbortController</span> <span class="nx">from</span> <span class="s2">&quot;abort-controller&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// or</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">AbortController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;abort-controller&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// or UMD version defines a global variable:</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">AbortController</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">AbortControllerShim</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">AbortController</span> <span class="nx">from</span> <span class="s2">&quot;abort-controller&quot;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AbortController</span><span class="p">();</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">signal</span> <span class="o">=</span> <span class="nx">controller</span><span class="p">.</span><span class="nx">signal</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">signal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;abort&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;aborted!&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">controller</span><span class="p">.</span><span class="nx">abort</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/abort-controller/abort-controller.gif" alt="abort-controller" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[package-size]]></title>
@@ -1417,83 +1493,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/compromise/compromise.gif" alt="compromise.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[zet]]></title>
-    <link href="http://nmotw.in/zet/"/>
-    <updated>2018-10-13T14:47:06+05:30</updated>
-    <id>http://nmotw.in/zet</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
-
-<blockquote><p>Set() as it should be.</p></blockquote>
-
-<p><code>zet</code> is an extension of ES6 Set and comes with all its functionality included along with the below:</p>
-
-<ul>
-<li>∪ union</li>
-<li>∩ intersection</li>
-<li><ul>
-<li>difference/subtract</li>
-</ul>
-</li>
-<li>⊖ symmetric difference</li>
-<li>⊆ subset</li>
-<li>⊇ superse</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install zet</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Zet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zet&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Zet</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">Zet</span><span class="p">.</span><span class="nx">union</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 2, 3, 4, 5}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">union</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 2, 3, 4, 5}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">intersection</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; [Zet] {3}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">symmetricDifference</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; [Zet] {1, 4}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">a</span><span class="p">.</span><span class="nx">subset</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//=&gt; false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/zet/zet.gif" alt="zet" /></p>
 ]]></content>
   </entry>
   
