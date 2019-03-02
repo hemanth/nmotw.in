@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="intl-tel-input International Telephone Input Eentering and validating international telephone numbers made easy with intl-tel-input. It adds a flag &hellip;">   
+    <meta name="description" content="iron Sealing a JSON object using symmetric key encryption. iron provide a neat way to seal a JSON object using symmetric key encryption with message &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="intl-tel-input International Telephone Input Eentering and validating international telephone numbers made easy with intl-tel-input. It adds a flag &hellip;">
+    <meta name="twitter:description" content="iron Sealing a JSON object using symmetric key encryption. iron provide a neat way to seal a JSON object using symmetric key encryption with message &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="intl-tel-input International Telephone Input Eentering and validating international telephone numbers made easy with intl-tel-input. It adds a flag &hellip;" />
+    <meta property="og:description" content="iron Sealing a JSON object using symmetric key encryption. iron provide a neat way to seal a JSON object using symmetric key encryption with message &hellip;" />
 
     
 
@@ -67,6 +67,120 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/iron/">
+			
+				Iron</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-12-28T15:29:33+05:30" pubdate data-updated="true">Dec 28<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/iron">iron</a></h1>
+
+<blockquote><p>Sealing a JSON object using symmetric key encryption.</p></blockquote>
+
+<p><code>iron</code> provide a neat way to seal a JSON object using symmetric key encryption with message integrity verification!</p>
+
+<p><strong>Get it:</strong> <code>npm install iron</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//Encrypt </span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Iron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">c</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">d</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">e</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="s1">&#39;some_not_random_password_that_is_at_least_32_characters&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kr">const</span> <span class="nx">sealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">seal</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sealed</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">})();</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Decrypt</span>
+</span><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kr">const</span> <span class="nx">unsealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">unseal</span><span class="p">(</span><span class="nx">sealed</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">})();</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/iron/iron.gif" alt="iron" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -972,89 +1086,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="/images/the-platform/the-platform.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/compromise/">
-			
-				Compromise</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-10-20T14:26:13+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://npm.im/compromise">compromise</a></h1>
-
-<blockquote><p>modest natural-language processing.</p></blockquote>
-
-<p><code>compromise</code> is not the cleverest, but it is small, quick, and good-enough for a bunch of nlp stuff!</p>
-
-<p>Don't miss to checkout their site <a href="http://compromise.cool/">compromise.cool</a>!</p>
-
-<p><strong>GET IT:</strong> <code>npm install compromise</code></p>
-
-<p><strong>Sample usages:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">nlp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;compromise&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s1">&#39;JS is calling&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">sentences</span><span class="p">().</span><span class="nx">toNegative</span><span class="p">()</span>
-</span><span class='line'><span class="c1">// &#39;JS is not calling&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s2">&quot;the guest-singer&#39;s björk   at seven thirty.&quot;</span><span class="p">).</span><span class="nx">normalize</span><span class="p">().</span><span class="nx">out</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="c1">// &#39;The guest singer is Bjork at 7:30.&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">doc</span> <span class="o">=</span> <span class="nx">nlp</span><span class="p">(</span><span class="s2">&quot;we&#39;re not gonna take it, no we ain&#39;t gonna take it.&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;going&#39;</span><span class="p">)</span> <span class="c1">// true</span>
-</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s1">&#39;are not&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="c1">// == 2</span>
-</span><span class='line'><span class="nx">doc</span><span class="p">.</span><span class="nx">contractions</span><span class="p">().</span><span class="nx">expand</span><span class="p">().</span><span class="nx">out</span><span class="p">()</span>
-</span><span class='line'><span class="c1">//&#39;we are not going to take it, no we are not going to take it&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/compromise/compromise.gif" alt="compromise.gif" /></p>
 
 		
 		
