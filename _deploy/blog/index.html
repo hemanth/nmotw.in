@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="abort-controller An implementation of WHATWG AbortController interface. The AbortController interface allows us to abort one or more DOM requests as &hellip;">   
+    <meta name="description" content="scroll-init-view-if-needed Element.scrollIntoView ponyfills for things like "if-needed" and "smooth". This is a ponyfill for Element. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="abort-controller An implementation of WHATWG AbortController interface. The AbortController interface allows us to abort one or more DOM requests as &hellip;">
+    <meta name="twitter:description" content="scroll-init-view-if-needed Element.scrollIntoView ponyfills for things like "if-needed" and "smooth". This is a ponyfill for Element. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="abort-controller An implementation of WHATWG AbortController interface. The AbortController interface allows us to abort one or more DOM requests as &hellip;" />
+    <meta property="og:description" content="scroll-init-view-if-needed Element.scrollIntoView ponyfills for things like "if-needed" and "smooth". This is a ponyfill for Element. &hellip;" />
 
     
 
@@ -67,6 +67,89 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/scroll-into-view-if-needed/">
+			
+				Scroll-into-view-if-needed</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-02T23:25:04+05:30" pubdate data-updated="true">Mar 2<span>nd</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
+
+<blockquote><p>Element.scrollIntoView ponyfills for things like "if-needed" and "smooth".</p></blockquote>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.png" alt="scroll-into-view-if-needed" /></p>
+
+<p>This is a ponyfill for <code>Element.scrollIntoViewIfNeeded</code>. Since then the CSS working group have decided to implement its features in <code>Element.scrollIntoView</code> as the option <code>scrollMode: "if-needed"</code>. Thus this library got rewritten to implement that spec instead of the soon to be deprecated one.</p>
+
+<p>Don't miss the <a href="https://scroll-into-view-if-needed.netlify.com">Demo</a>.</p>
+
+<p><strong>Get it:</strong> <code>npm install scroll-into-view-if-needed</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// es6 import</span>
+</span><span class='line'><span class="kr">import</span> <span class="nx">scrollIntoView</span> <span class="nx">from</span> <span class="s1">&#39;scroll-into-view-if-needed&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">node</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;hero&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">scrollMode</span><span class="o">:</span> <span class="s1">&#39;if-needed&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">block</span><span class="o">:</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">inline</span><span class="o">:</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="p">{</span> <span class="nx">block</span><span class="o">:</span> <span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="nx">inline</span><span class="o">:</span> <span class="s1">&#39;center&#39;</span> <span class="p">});</span>
+</span><span class='line'><span class="c1">// scrollMode is &quot;always&quot; by default</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// smooth scroll if the browser supports it and if the element isn&#39;t visible</span>
+</span><span class='line'><span class="nx">scrollIntoView</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="p">{</span> <span class="nx">behavior</span><span class="o">:</span> <span class="s1">&#39;smooth&#39;</span><span class="p">,</span> <span class="nx">scrollMode</span><span class="o">:</span> <span class="s1">&#39;if-needed&#39;</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.gif" alt="scroll-into-view-if-needed" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -897,120 +980,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/gauge/gauge.gif" alt="gauge" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/iron/">
-			
-				Iron</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-12-28T15:29:33+05:30" pubdate data-updated="true">Dec 28<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://npm.im/iron">iron</a></h1>
-
-<blockquote><p>Sealing a JSON object using symmetric key encryption.</p></blockquote>
-
-<p><code>iron</code> provide a neat way to seal a JSON object using symmetric key encryption with message integrity verification!</p>
-
-<p><strong>Get it:</strong> <code>npm install iron</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//Encrypt </span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Iron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">c</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-</span><span class='line'>    <span class="nx">d</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">e</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="s1">&#39;some_not_random_password_that_is_at_least_32_characters&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kr">const</span> <span class="nx">sealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">seal</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sealed</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">})();</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Decrypt</span>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kr">const</span> <span class="nx">unsealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">unseal</span><span class="p">(</span><span class="nx">sealed</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">})();</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/iron/iron.gif" alt="iron" /></p>
 
 		
 		
