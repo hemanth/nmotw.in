@@ -4,13 +4,96 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-03-02T23:39:14+05:30</updated>
+  <updated>2019-03-08T15:07:50+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[image-promise]]></title>
+    <link href="http://nmotw.in/image-promise/"/>
+    <updated>2019-03-08T15:00:54+05:30</updated>
+    <id>http://nmotw.in/image-promise</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
+
+<blockquote><p>Promisfied image loading!</p></blockquote>
+
+<p>Load one or more images, return a promise that resolves if the image loads or rejects in case of an error.</p>
+
+<p><strong>Get it:</strong> <code>npm install image-pormise</code></p>
+
+<p><strong>Sample code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;dog.jpg&#39;</span><span class="p">];</span>
+</span><span class='line'><span class="c1">// var images = $(&#39;img&#39;); // it can also be a jQuery object</span>
+</span><span class='line'><span class="c1">// var images = document.querySelectorAll(&#39;img&#39;); // or a NodeList</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">loadImage</span><span class="p">(</span><span class="nx">images</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">allImgs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allImgs</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="s1">&#39;images loaded!&#39;</span><span class="p">,</span> <span class="nx">allImgs</span><span class="p">);</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;One or more images have failed to load :(&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">errored</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;But these loaded fine:&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">loaded</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// for CORS enabled imgs</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">image</span> <span class="o">=</span> <span class="s1">&#39;http://catpics.com/cat.jpg&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">loadImage</span><span class="p">(</span><span class="nx">image</span><span class="p">,</span> <span class="p">{</span> <span class="nx">crossorigin</span><span class="o">:</span> <span class="s1">&#39;anonymous&#39;</span> <span class="p">})</span>
+</span><span class='line'><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">img</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// now you can do this</span>
+</span><span class='line'>  <span class="nx">canvas</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="s1">&#39;image/png&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Image failed to load :(&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/image-promise/image-promise.gif" alt="image-promise" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
@@ -1378,121 +1461,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/errno/errno.gif" alt="errno" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[the-platform]]></title>
-    <link href="http://nmotw.in/the-platform/"/>
-    <updated>2018-10-28T15:33:43+05:30</updated>
-    <id>http://nmotw.in/the-platform</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
-
-<blockquote><p>Browser API's turned into React Hooks and Suspense-friendly components.</p></blockquote>
-
-<p><code>the-platform</code> is a uber fun module that has React Hooks and Suspense friendly componets, it provides the below:</p>
-
-<p><strong>Hooks:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>useDeviceMotion()
-</span><span class='line'>useDeviceOrientation()
-</span><span class='line'>useGeoPosition()
-</span><span class='line'>useNetworkStatus()
-</span><span class='line'>useMedia()
-</span><span class='line'>useScript()
-</span><span class='line'>useStylesheet()
-</span><span class='line'>useWindowScrollPosition()
-</span><span class='line'>useWindowSize()</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Components:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;Img&gt;
-</span><span class='line'>&lt;Script&gt;
-</span><span class='line'>&lt;Video&gt;
-</span><span class='line'>&lt;Audio&gt;
-</span><span class='line'>&lt;Preload&gt;
-</span><span class='line'>&lt;Stylesheet&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Looks like it's a pun on <code>#useThePlatform</code> none the less it's an intresting module.</p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">useGeoPosition</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;the-platform&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Example</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kr">const</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">coords</span><span class="o">:</span> <span class="p">{</span> <span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span> <span class="p">},</span>
-</span><span class='line'>  <span class="p">}</span> <span class="o">=</span> <span class="nx">useGeoPosition</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// ...</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">Img</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;the-platform&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="p">(</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">Suspense</span> <span class="nx">maxDuration</span><span class="o">=</span><span class="p">{</span><span class="mi">300</span><span class="p">}</span> <span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loading...&#39;</span><span class="p">}</span><span class="o">&gt;</span>
-</span><span class='line'>        <span class="o">&lt;</span><span class="nx">Img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://source.unsplash.com/random/4000x2000&quot;</span> <span class="o">/&gt;</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="err">/React.Suspense&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span><span class='line'>  <span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/the-platform/the-platform.gif" alt="" /></p>
 ]]></content>
   </entry>
   
