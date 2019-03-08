@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="rest-your-eyes rest-your-eyes is a fun little module that makes use of the brightness module to well so that you an rest your eyes while your &hellip;">   
+    <meta name="description" content="is-subset Check if an object is contained within another one. is-subset is a tiny little module that is so very useful! All it does is accepts &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/12/">
-    <meta name="twitter:description" content="rest-your-eyes rest-your-eyes is a fun little module that makes use of the brightness module to well so that you an rest your eyes while your &hellip;">
+    <meta name="twitter:description" content="is-subset Check if an object is contained within another one. is-subset is a tiny little module that is so very useful! All it does is accepts &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/12/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="rest-your-eyes rest-your-eyes is a fun little module that makes use of the brightness module to well so that you an rest your eyes while your &hellip;" />
+    <meta property="og:description" content="is-subset Check if an object is contained within another one. is-subset is a tiny little module that is so very useful! All it does is accepts &hellip;" />
 
     
 
@@ -67,6 +67,81 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/is-subset/">
+			
+				Is-subset</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-27T14:21:59+05:30" pubdate data-updated="true">Jan 27<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/is-subset">is-subset</a></h1>
+
+<blockquote><p>Check if an object is contained within another one.</p></blockquote>
+
+<p><code>is-subset</code> is a tiny little module that is so very useful! All it does is accepts <code>superSet</code> and <code>maybeSubset</code> objects and check if the <code>maybeSubset</code> is a subset of the <code>superSet</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save is-subset</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">isSubset</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;is-subset&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// True;</span>
+</span><span class='line'><span class="nx">isSubset</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="mi">4</span><span class="p">},</span> <span class="nx">e</span><span class="o">:</span> <span class="mi">5</span><span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">}}</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//False;</span>
+</span><span class='line'><span class="nx">isSubset</span><span class="p">(</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
+</span><span class='line'><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/is-subset/is-subset.gif" alt="is-subset" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -886,89 +961,6 @@ identify which dependency is slowing the module down.</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/svg-captcha/svg-captcha.gif" alt="svg-captcha" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/updtr/">
-			
-				Updtr</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-11-17T13:57:47+05:30" pubdate data-updated="true">Nov 17<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/updtr">updtr</a></h1>
-
-<blockquote><p>Update outdated npm modules with zero pain™</p></blockquote>
-
-<p><code>updtr</code> installs the latest versions of each <code>npm outdated</code> dependency.
-Runs <code>test</code> on each update and if the test succeeds, <code>updtr</code> saves the new version number to your <code>package.json</code>.
-If the test fails, however, <code>updtr</code> rolls back its changes.</p>
-
-<p><strong>Get it:</strong> <code>npm install --global updtr</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; updtr --help
-</span><span class='line'>
-</span><span class='line'>  Usage: updtr <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Update outdated npm modules with zero pain™
-</span><span class='line'>
-</span><span class='line'>  Options:
-</span><span class='line'>
-</span><span class='line'>    -h, --help                 output usage information
-</span><span class='line'>    -V, --version              output the version number
-</span><span class='line'>    -R, --reporter &lt;reporter&gt;  choose reporter: default, shy
-</span><span class='line'>    -w, --wanted               updates to wanted version specified in package.json instead of the modules latest version
-</span><span class='line'>    -t, --test &lt;<span class="nb">test</span>&gt;          change the <span class="nb">command </span><span class="k">for </span>the tests
-</span><span class='line'>    -e, --exclude &lt;exclude&gt;    exclude modules comma seperated, e.g. updtr --exclude module1,module2
-</span><span class='line'>    --test-stdout              shows stdout <span class="k">if </span>your <span class="nb">test command </span>fails
-</span><span class='line'>    --save-exact               save exact module version
-</span><span class='line'>    --registry                 change registry
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/updtr/updtr.gif" alt="updtr" /></p>
 
 		
 		
