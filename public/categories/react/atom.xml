@@ -4,7 +4,7 @@
   <title><![CDATA[Category: react | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/react/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-03-16T15:27:23+05:30</updated>
+  <updated>2019-03-16T15:29:14+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[react-window]]></title>
+    <link href="http://nmotw.in//github/react-window/"/>
+    <updated>2019-03-16T15:14:26+05:30</updated>
+    <id>http://nmotw.in//github/react-window</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
+
+<blockquote><p>React components for efficiently rendering large lists and tabular data.</p></blockquote>
+
+<p>From the horse's mouth, what is <code>react-window</code>?</p>
+
+<blockquote><p>react-window is a complete rewrite of react-virtualized. I didn't try to solve as many problems or support as many use cases. Instead I focused on making the package smaller1 and faster. I also put a lot of thought into making the API (and documentation) as beginner-friendly as possible (with the caveat that windowing is still kind of an advanced use case).</p></blockquote>
+
+<p>The compoents react-window provides:</p>
+
+<ul>
+<li>FixedSizeList</li>
+<li>VariableSizeList</li>
+<li>FixedSizeGrid</li>
+<li>VariableSizeGrid</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install react-window</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { FixedSizeList as List } from 'react-window';</p>
+
+<p>const Column = ({ index, style }) => (
+  <div style={style}>عمود {index}</div>
+);</p>
+
+<p>const Example = () => (
+  &lt;List</p>
+
+<pre><code>direction="rtl"
+height={75}
+itemCount={1000}
+itemSize={100}
+layout="horizontal"
+width={300}
+</code></pre>
+
+<blockquote><pre><code>{Column}
+</code></pre>
+
+<p>  </List>
+);
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/react-window/react-window.gif" alt="react-window" /></p>
+
+<p>P.S: Don't miss to checkout the <a href="https://react-window.now.sh/">demos</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[the-platform]]></title>
