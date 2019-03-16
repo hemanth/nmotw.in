@@ -7,16 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;">   
+    <meta name="description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -24,32 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/16/">
-    <meta name="twitter:description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;">
+    <meta name="twitter:description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/16/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="cowsay A configurable talking cow! This is a port of Tony Monroe's cowsay Perl module. GET IT: npm install --global cowsay CLI: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10 &hellip;" />
+    <meta property="og:description" content="trevor Your own Travis CI to run tests locally. From the author: I often need to run tests for multiple versions of Node.js. But I don't want to &hellip;" />
 
     
 
@@ -94,6 +67,97 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/trevor/">
+			
+				Trevor</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-28T15:56:32+05:30" pubdate data-updated="true">Apr 28<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/trevor">trevor</a></h1>
+
+<blockquote><p>Your own Travis CI to run tests locally.</p></blockquote>
+
+<p><img src="/images/trevor/logo.png" alt="" /></p>
+
+<p><strong>From the author:</strong></p>
+
+<p>I often need to run tests for multiple versions of Node.js.</p>
+
+<p>But I don't want to switch versions manually using n/nvm or push the code to Travis CI just to run the tests.</p>
+
+<p>That's why I created Trevor.</p>
+
+<p>It reads <code>.travis.yml</code> and runs tests in all versions you requested, just like Travis CI.</p>
+
+<p>Now, you can test before push and keep your git history clean.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save trevor</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>trevor --help
+</span><span class='line'>
+</span><span class='line'>  Your own Travis CI to run tests locally
+</span><span class='line'>
+</span><span class='line'>  Usage: trevor <span class="o">[</span>options<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>  Options:
+</span><span class='line'>
+</span><span class='line'>    -h, --help    Show this <span class="nb">help</span>
+</span><span class='line'>    --no-clean    Don<span class="err">&#39;</span> remove the Docker image after tests
+</span><span class='line'>
+</span><span class='line'>  Required files <span class="o">(</span>in the current directory<span class="o">)</span>:
+</span><span class='line'>
+</span><span class='line'>    - package.json
+</span><span class='line'>    - .travis.yml
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: <code>trevor</code> has a dependency on <a href="https://www.docker.com/">docker</a> and if <code>--no-clean</code> is not used it will remove all the docker images after the test runs.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/trevor/trevor.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -994,74 +1058,6 @@ Checkout the project's <code>readme.md</code> for <a href="https://github.com/wi
 <p><img src="/images/must/must.gif" alt="must.gif" /></p>
 
 <p>We <code>must</code> thank <a href="https://twitter.com/theml">Andri Möll</a> for <code>must</code></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ipt/">
-			
-				Ipt</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-18T21:37:50+05:30" pubdate data-updated="true">Feb 18<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ipt">ipt</a></h1>
-
-<blockquote><p>The missing shell interactive workflow.</p></blockquote>
-
-<p><code>ipt</code> (pronounced iPipeTo) introduces the missing cli interactive workflow.</p>
-
-<p>It takes any kind of list as an input and uses that list to build an interactive interface to let you select an element from it.</p>
-
-<p>Stop manually dragging your mouse around to copy output data from a terminal, using the ipt workflow you can pipe data from a command and select what to copy to clipboard from a convenient visual menu.</p>
-
-<p>Selected data is also output to stdout allowing for easily composing various workflows - Just create your custom alias!</p>
-
-<p>P.S: Couldn't explain it better than than author!</p>
-
-<p><strong>GET IT:</strong> <code>npm install -g ipt</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git branch -a | ipt | xargs git checkout
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git --no-pager log --oneline | ipt | cut -d <span class="s1">&#39; &#39;</span> -f 1 | xargs -o git rebase -i<span class="err">&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to read the wonderful <a href="https://www.npmjs.com/package/ipt#examples">examples</a>!</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/ipt/ipt.gif" alt="" /></p>
-
-<p>Thanks to <a href="https://github.com/ruyadorno">Ruy Adorno</a> for this cheeky module.</p>
 
 		
 		

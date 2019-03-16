@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;">   
+    <meta name="description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Runs test on each update and &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/13/">
-    <meta name="twitter:description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;">
+    <meta name="twitter:description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/13/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="updtr Update outdated npm modules with zero pain™ updtr installs the latest versions of each npm outdated dependency.
-Runs test on each update and &hellip;" />
+    <meta property="og:description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;" />
 
     
 
@@ -70,6 +67,81 @@ Runs test on each update and &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/svg-captcha/">
+			
+				Svg-captcha</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-11-24T20:22:03+05:30" pubdate data-updated="true">Nov 24<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/svg-captcha">svg-captcha</a></h1>
+
+<blockquote><p>Generate svg captcha.</p></blockquote>
+
+<p><code>svg-captcha</code> uses OpenType font parser and text skewing martix logic to generate random SVG captchas.</p>
+
+<p>It returns an object which has the SVG data and the text which was used to generate the same.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save captcha</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">svgCaptcha</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;svg-captcha&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate random text of length 4</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">.</span><span class="nx">randomText</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate svg image</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">captcha</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// generate both and returns an object</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">captcha</span> <span class="o">=</span> <span class="nx">svgCaptcha</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// {data: &#39;&lt;svg.../svg&gt;&#39;, text: &#39;abcd&#39;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/svg-captcha/svg-captcha.gif" alt="svg-captcha" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -799,92 +871,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/granim/">
-			
-				Granim</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
-
-<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
-
-<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
-
-<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- Create a &lt;canvas&gt; element --&gt;</span>
-</span><span class='line'><span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;granim-canvas&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">granimInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Granim</span><span class="p">({</span>
-</span><span class='line'>   <span class="nx">element</span><span class="o">:</span> <span class="s1">&#39;#granim-canvas&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;granim&#39;</span><span class="p">,</span>
-</span><span class='line'>   <span class="nx">opacity</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-</span><span class='line'>   <span class="nx">states</span> <span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>       <span class="s2">&quot;default-state&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>           <span class="nx">gradients</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#834D9B&#39;</span><span class="p">,</span> <span class="s1">&#39;#D04ED6&#39;</span><span class="p">],</span>
-</span><span class='line'>               <span class="p">[</span><span class="s1">&#39;#1CD8D2&#39;</span><span class="p">,</span> <span class="s1">&#39;#93EDC7&#39;</span><span class="p">]</span>
-</span><span class='line'>           <span class="p">]</span>
-</span><span class='line'>       <span class="p">}</span>
-</span><span class='line'>   <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/granim/granim.gif" alt="granim" /></p>
 
 		
 		

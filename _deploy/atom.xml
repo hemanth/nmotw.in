@@ -4,13 +4,87 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-03-08T15:17:51+05:30</updated>
+  <updated>2019-03-16T15:25:27+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[react-window]]></title>
+    <link href="http://nmotw.in/react-window/"/>
+    <updated>2019-03-16T15:14:26+05:30</updated>
+    <id>http://nmotw.in/react-window</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
+
+<blockquote><p>React components for efficiently rendering large lists and tabular data.</p></blockquote>
+
+<p>From the horse's mouth, what is <code>react-window</code>?</p>
+
+<blockquote><p>react-window is a complete rewrite of react-virtualized. I didn't try to solve as many problems or support as many use cases. Instead I focused on making the package smaller1 and faster. I also put a lot of thought into making the API (and documentation) as beginner-friendly as possible (with the caveat that windowing is still kind of an advanced use case).</p></blockquote>
+
+<p>The compoents react-window provides:</p>
+
+<ul>
+<li>FixedSizeList</li>
+<li>VariableSizeList</li>
+<li>FixedSizeGrid</li>
+<li>VariableSizeGrid</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install react-window</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">FixedSizeList</span> <span class="nx">as</span> <span class="nx">List</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-window&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Column</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">style</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}</span><span class="o">&gt;</span><span class="err">عمود</span> <span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Example</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">List</span>
+</span><span class='line'>    <span class="nx">direction</span><span class="o">=</span><span class="s2">&quot;rtl&quot;</span>
+</span><span class='line'>    <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">75</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">itemCount</span><span class="o">=</span><span class="p">{</span><span class="mi">1000</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">itemSize</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">layout</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span>
+</span><span class='line'>    <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">300</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&gt;</span>
+</span><span class='line'>    <span class="p">{</span><span class="nx">Column</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/List&gt;</span>
+</span><span class='line'><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/react-window/react-window.gif" alt="react-window" /></p>
+
+<p>P.S: Don't miss to checkout the <a href="https://react-window.now.sh/">demos</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[image-promise]]></title>
@@ -1357,143 +1431,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/is-vegan/is-vegan.gif" alt="is-vegan" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[errno]]></title>
-    <link href="http://nmotw.in/errno/"/>
-    <updated>2018-11-04T15:15:46+05:30</updated>
-    <id>http://nmotw.in/errno</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
-
-<blockquote><p>Better <code>libuv</code> error handling &amp; reporting.</p></blockquote>
-
-<p>🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno contains the errno mappings direct from libuv so you can use them in your code.</p>
-
-<p><strong>By errno:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">).</span><span class="nx">errno</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-</span><span class='line'><span class="c1">// → {</span>
-</span><span class='line'><span class="c1">//     &quot;errno&quot;: 3,</span>
-</span><span class='line'><span class="c1">//     &quot;code&quot;: &quot;EACCES&quot;,</span>
-</span><span class='line'><span class="c1">//     &quot;description&quot;: &quot;permission denied&quot;</span>
-</span><span class='line'><span class="c1">//   }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>By code:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">).</span><span class="nx">code</span><span class="p">.</span><span class="nx">ENOTEMPTY</span>
-</span><span class='line'><span class="c1">// → {</span>
-</span><span class='line'><span class="c1">//     &quot;errno&quot;: 53,</span>
-</span><span class='line'><span class="c1">//     &quot;code&quot;: &quot;ENOTEMPTY&quot;,</span>
-</span><span class='line'><span class="c1">//     &quot;description&quot;: &quot;directory not empty&quot;</span>
-</span><span class='line'><span class="c1">//   }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Make your errors more descriptive:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">errno</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">function</span> <span class="nx">errmsg</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;Error: &#39;</span>
-</span><span class='line'>  <span class="c1">// if it&#39;s a libuv error then get the description from errno</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">errno</span><span class="p">.</span><span class="nx">errno</span><span class="p">[</span><span class="nx">err</span><span class="p">.</span><span class="nx">errno</span><span class="p">])</span>
-</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">errno</span><span class="p">.</span><span class="nx">errno</span><span class="p">[</span><span class="nx">err</span><span class="p">.</span><span class="nx">errno</span><span class="p">].</span><span class="nx">description</span>
-</span><span class='line'>  <span class="k">else</span>
-</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">err</span><span class="p">.</span><span class="nx">message</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// if it&#39;s a `fs` error then it&#39;ll have a &#39;path&#39; property</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">path</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39; [&#39;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">path</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">str</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;thisisnotarealfile.txt&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">errmsg</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Use as a command line tool:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="mi">53</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;errno&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-</span><span class='line'>  <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;ENOTEMPTY&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;directory not empty&quot;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="nx">EROFS</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;errno&quot;</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
-</span><span class='line'>  <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EROFS&quot;</span><span class="p">,</span>
-</span><span class='line'>  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;read-only file system&quot;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="nx">foo</span>
-</span><span class='line'><span class="nx">No</span> <span class="nx">such</span> <span class="nx">errno</span><span class="o">/</span><span class="nx">code</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: You can also create <a href="https://github.com/rvagg/node-errno/blob/master/README.md#custom-errors">custom-erros</a>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/errno/errno.gif" alt="errno" /></p>
 ]]></content>
   </entry>
   
