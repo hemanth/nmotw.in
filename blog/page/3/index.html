@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="the-platform Browser API's turned into React Hooks and Suspense-friendly components. the-platform is a uber fun module that has React Hooks and &hellip;">   
+    <meta name="description" content="errno Better libuv error handling &amp; reporting. 🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/3/">
-    <meta name="twitter:description" content="the-platform Browser API's turned into React Hooks and Suspense-friendly components. the-platform is a uber fun module that has React Hooks and &hellip;">
+    <meta name="twitter:description" content="errno Better libuv error handling &amp; reporting. 🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/3/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="the-platform Browser API's turned into React Hooks and Suspense-friendly components. the-platform is a uber fun module that has React Hooks and &hellip;" />
+    <meta property="og:description" content="errno Better libuv error handling &amp; reporting. 🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno &hellip;" />
 
     
 
@@ -67,6 +67,166 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/errno/">
+			
+				Errno</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-11-04T15:15:46+05:30" pubdate data-updated="true">Nov 4<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
+
+<blockquote><p>Better <code>libuv</code> error handling &amp; reporting.</p></blockquote>
+
+<p>🐴 said: Ever find yourself needing more details about Node.js errors? Me too, so node-errno contains the errno mappings direct from libuv so you can use them in your code.</p>
+
+<p><strong>By errno:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">).</span><span class="nx">errno</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</span><span class='line'><span class="c1">// → {</span>
+</span><span class='line'><span class="c1">//     &quot;errno&quot;: 3,</span>
+</span><span class='line'><span class="c1">//     &quot;code&quot;: &quot;EACCES&quot;,</span>
+</span><span class='line'><span class="c1">//     &quot;description&quot;: &quot;permission denied&quot;</span>
+</span><span class='line'><span class="c1">//   }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>By code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">).</span><span class="nx">code</span><span class="p">.</span><span class="nx">ENOTEMPTY</span>
+</span><span class='line'><span class="c1">// → {</span>
+</span><span class='line'><span class="c1">//     &quot;errno&quot;: 53,</span>
+</span><span class='line'><span class="c1">//     &quot;code&quot;: &quot;ENOTEMPTY&quot;,</span>
+</span><span class='line'><span class="c1">//     &quot;description&quot;: &quot;directory not empty&quot;</span>
+</span><span class='line'><span class="c1">//   }</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Make your errors more descriptive:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">errno</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;errno&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">function</span> <span class="nx">errmsg</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;Error: &#39;</span>
+</span><span class='line'>  <span class="c1">// if it&#39;s a libuv error then get the description from errno</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">errno</span><span class="p">.</span><span class="nx">errno</span><span class="p">[</span><span class="nx">err</span><span class="p">.</span><span class="nx">errno</span><span class="p">])</span>
+</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">errno</span><span class="p">.</span><span class="nx">errno</span><span class="p">[</span><span class="nx">err</span><span class="p">.</span><span class="nx">errno</span><span class="p">].</span><span class="nx">description</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="nx">err</span><span class="p">.</span><span class="nx">message</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// if it&#39;s a `fs` error then it&#39;ll have a &#39;path&#39; property</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">path</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">str</span> <span class="o">+=</span> <span class="s1">&#39; [&#39;</span> <span class="o">+</span> <span class="nx">err</span><span class="p">.</span><span class="nx">path</span> <span class="o">+</span> <span class="s1">&#39;]&#39;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">str</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;thisisnotarealfile.txt&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">errmsg</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Use as a command line tool:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="mi">53</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;errno&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;ENOTEMPTY&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;directory not empty&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="nx">EROFS</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;errno&quot;</span><span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;EROFS&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;read-only file system&quot;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">~</span> <span class="nx">$</span> <span class="nx">errno</span> <span class="nx">foo</span>
+</span><span class='line'><span class="nx">No</span> <span class="nx">such</span> <span class="nx">errno</span><span class="o">/</span><span class="nx">code</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: You can also create <a href="https://github.com/rvagg/node-errno/blob/master/README.md#custom-errors">custom-erros</a>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/errno/errno.gif" alt="errno" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -851,98 +1011,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/commitizen/">
-			
-				Commitizen</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-08-26T14:37:52+05:30" pubdate data-updated="true">Aug 26<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
-
-<blockquote><p>Organized, detailed commits to git.</p></blockquote>
-
-<p><code>commitizen</code> prompts to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit or reading the <code>contribution.md</code> for the commit format!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g commitizen</code></p>
-
-<p><strong>Set up:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install -g cz-conventional-changelog
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{ &quot;path&quot;: &quot;cz-conventional-changelog&quot; }&#39;</span> &gt; ~/.czrc
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>commitizen init cz-conventional-changelog --save-dev --save-exact
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>^ this results in modification of your <code>package.json</code> to:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;commitizen&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>      <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="s2">&quot;cz-conventional-changelog&quot;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now one can just do <code>git cz</code> instead of <code>git commit</code> and enjoy the benifits!</p>
-
-<p>Also, one could add it to <code>npm-scripts</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;commit&quot;</span><span class="o">:</span> <span class="s2">&quot;git-cz&quot;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then execute: <code>npm run commit</code>.</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/commitizen/commitizen.gif" alt="commitizen" /></p>
-
-<p>```</p>
 
 		
 		
