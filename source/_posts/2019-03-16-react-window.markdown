@@ -3,7 +3,7 @@ layout: post
 title: "react-window"
 date: 2019-03-16 15:14:26 +0530
 comments: true
-categories: util 
+categories: util react
 ---
 
 #[react-window](https://www.npmjs.com/package/react-window)
