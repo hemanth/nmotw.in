@@ -102,108 +102,165 @@
 
 <p><strong>Sample usage:</strong></p>
 
-<p>``sh
-nmotw.in> eshost -e 'Date.parse("1 Octopus 2018")'</p>
-
-<h4>Chakra</h4>
-
-<p>NaN</p>
-
-<h4>JavaScriptCore</h4>
-
-<p>1538332200000</p>
-
-<h4>SpiderMonkey</h4>
-
-<p>NaN</p>
-
-<h4>V8</h4>
-
-<p>1538332200000</p>
-
-<h4>V8 --harmony</h4>
-
-<p>1538332200000</p>
-
-<h4>XS</h4>
-
-<p>NaN</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost -e <span class="s1">&#39;Date.parse(&quot;1 Octopus 2018&quot;)&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#### Chakra</span>
+</span><span class='line'>NaN
+</span><span class='line'>
+</span><span class='line'><span class="c">#### JavaScriptCore</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### SpiderMonkey</span>
+</span><span class='line'>NaN
+</span><span class='line'>
+</span><span class='line'><span class="c">#### V8</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### V8 --harmony</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### XS</span>
+</span><span class='line'>NaN
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>sh
-nmotw.in> eshost --help
-Usage: eshost [options] [input-file]</p>
 
-<pre><code>   eshost [options] -e "input-script"
-   eshost --list
-   eshost --add [host name] [host type] &lt;host path&gt; --args &lt;host arguments&gt;
-   eshost --delete [host name]
-</code></pre>
 
-<p>Options:
-  -e, --eval        eval an expression and print the result
-  -x, --execute     execute a multi-statement program
-  -h, --host        select hosts by name (glob syntax is supported as well)
-  -g, --hostGroup   select host groups by host type
-  --tags            select hosts by tag
-  -c, --config      select a config file
-  --table, -t       output in a table                                  [boolean]
-  --coalesce, -s    coalesce like output into a single entry           [boolean]
-  --showSource, -i  show input source                                  [boolean]
-  --unanimous, -u   If all engines agree, exit(0) with no output, otherwise</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost --help
+</span><span class='line'>Usage: eshost <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>input-file<span class="o">]</span>
+</span><span class='line'>       eshost <span class="o">[</span>options<span class="o">]</span> -e <span class="s2">&quot;input-script&quot;</span>
+</span><span class='line'>       eshost --list
+</span><span class='line'>       eshost --add <span class="o">[</span>host name<span class="o">]</span> <span class="o">[</span>host <span class="nb">type</span><span class="o">]</span> &lt;host path&gt; --args &lt;host arguments&gt;
+</span><span class='line'>       eshost --delete <span class="o">[</span>host name<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -e, --eval        <span class="nb">eval </span>an expression and print the result
+</span><span class='line'>  -x, --execute     execute a multi-statement program
+</span><span class='line'>  -h, --host        <span class="k">select </span>hosts by name <span class="o">(</span>glob syntax is supported as well<span class="o">)</span>
+</span><span class='line'>  -g, --hostGroup   <span class="k">select </span>host groups by host <span class="nb">type</span>
+</span><span class='line'>  --tags            <span class="k">select </span>hosts by tag
+</span><span class='line'>  -c, --config      <span class="k">select </span>a config file
+</span><span class='line'>  --table, -t       output in a table                                  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --coalesce, -s    coalesce like output into a single entry           <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --showSource, -i  show input <span class="nb">source</span>                                  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --unanimous, -u   If all engines agree, <span class="nb">exit</span><span class="o">(</span>0<span class="o">)</span> with no output, otherwise
+</span><span class='line'>                    print and <span class="nb">exit</span><span class="o">(</span>1<span class="o">)</span>; implies --coalesce              <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --add             add a host
+</span><span class='line'>  --edit            edit a host
+</span><span class='line'>  --delete          delete a host
+</span><span class='line'>  --args            <span class="nb">set </span>arguments <span class="k">for </span>a host entry <span class="o">(</span>use with --add<span class="o">)</span>
+</span><span class='line'>  --configure-jsvu  Configure jsvu hosts in the config                 <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --jsvu-prefix     <span class="o">[</span>OPTIONAL<span class="o">]</span> Set the prefix of the configured hosts. If prefix
+</span><span class='line'>                    is <span class="s2">&quot;jsvu&quot;</span> <span class="k">then </span>hosts will be configured as, e.g., <span class="s2">&quot;jsvu-sm&quot;</span>.
+</span><span class='line'>                    By default, no prefix <span class="o">(</span>e.g. <span class="s2">&quot;sm&quot;</span><span class="o">)</span>. Use this flag with
+</span><span class='line'>                    --configure-jsvu.
+</span><span class='line'>  --jsvu-root       <span class="o">[</span>OPTIONAL<span class="o">]</span> Use this path containing the .jsvu folder <span class="o">(</span>use
+</span><span class='line'>                    this option <span class="k">if</span> .jsvu is located somewhere other than the
+</span><span class='line'>                    home directory<span class="o">)</span>. Use this flag with --configure-jsvu.
+</span><span class='line'>  --help            Show <span class="nb">help</span>                                          <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  -a, --async       <span class="nb">wait </span><span class="k">for </span>realm destruction before reporting results<span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Examples:
+</span><span class='line'>  eshost --list
+</span><span class='line'>  eshost --add d8 d8 path/to/d8 --args
+</span><span class='line'>  <span class="s2">&quot;--harmony&quot;</span>
+</span><span class='line'>  eshost --add ch ch path/to/ch --tags
+</span><span class='line'>  latest
+</span><span class='line'>  eshost --add ch ch path/to/ch --tags
+</span><span class='line'>  latest,greatest
+</span><span class='line'>  eshost --configure-jsvu
+</span><span class='line'>  eshost --configure-jsvu --jsvu-prefix
+</span><span class='line'>  jsvu
+</span><span class='line'>  eshost test.js
+</span><span class='line'>  eshost -e <span class="s2">&quot;1+1&quot;</span>
+</span><span class='line'>  eshost -its -x <span class="s2">&quot;for (let i=0; i&lt;10; ++i)</span>
+</span><span class='line'><span class="s2">  { print(i) }&quot;</span>
+</span><span class='line'>  eshost -h d8 -h chakra test.js
+</span><span class='line'>  eshost -h d8,sm test.js
+</span><span class='line'>  eshost -g node,ch test.js
+</span><span class='line'>  eshost -h d8 -g node test.js
+</span><span class='line'>  eshost -h ch-*,node test.js
+</span><span class='line'>  eshost -h ch-1.?.? test.js
+</span><span class='line'>  eshost --tags latest test.js
+</span><span class='line'>  eshost --unanimous test.js
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>                print and exit(1); implies --coalesce              [boolean]
-</code></pre>
-
-<p>  --add             add a host
-  --edit            edit a host
-  --delete          delete a host
-  --args            set arguments for a host entry (use with --add)
-  --configure-jsvu  Configure jsvu hosts in the config                 [boolean]
-  --jsvu-prefix     [OPTIONAL] Set the prefix of the configured hosts. If prefix</p>
-
-<pre><code>                is "jsvu" then hosts will be configured as, e.g., "jsvu-sm".
-                By default, no prefix (e.g. "sm"). Use this flag with
-                --configure-jsvu.
-</code></pre>
-
-<p>  --jsvu-root       [OPTIONAL] Use this path containing the .jsvu folder (use</p>
-
-<pre><code>                this option if .jsvu is located somewhere other than the
-                home directory). Use this flag with --configure-jsvu.
-</code></pre>
-
-<p>  --help            Show help                                          [boolean]
-  -a, --async       wait for realm destruction before reporting results[boolean]</p>
-
-<p>Examples:
-  eshost --list
-  eshost --add d8 d8 path/to/d8 --args
-  "--harmony"
-  eshost --add ch ch path/to/ch --tags
-  latest
-  eshost --add ch ch path/to/ch --tags
-  latest,greatest
-  eshost --configure-jsvu
-  eshost --configure-jsvu --jsvu-prefix
-  jsvu
-  eshost test.js
-  eshost -e "1+1"
-  eshost -its -x "for (let i=0; i&lt;10; ++i)
-  { print(i) }"
-  eshost -h d8 -h chakra test.js
-  eshost -h d8,sm test.js
-  eshost -g node,ch test.js
-  eshost -h d8 -g node test.js
-  eshost -h ch-*,node test.js
-  eshost -h ch-1.?.? test.js
-  eshost --tags latest test.js
-  eshost --unanimous test.js
-```</p>
 
 <p><strong>GIT FTW!</strong></p>
 

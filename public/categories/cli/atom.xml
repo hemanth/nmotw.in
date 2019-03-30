@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-03-30T11:41:15+05:30</updated>
+  <updated>2019-03-30T11:43:08+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -28,7 +28,7 @@
 
 <p><strong>Sample usage:</strong></p>
 
-<p>``sh
+<p>```sh
 nmotw.in> eshost -e 'Date.parse("1 Octopus 2018")'</p>
 
 <h4>Chakra</h4>
