@@ -4,13 +4,194 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-03-22T22:34:58+05:30</updated>
+  <updated>2019-03-30T11:43:08+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[eshost-cli]]></title>
+    <link href="http://nmotw.in/eshost-cli/"/>
+    <updated>2019-03-30T11:37:02+05:30</updated>
+    <id>http://nmotw.in/eshost-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
+
+<blockquote><p>Run ECMAScript code uniformly across any ECMAScript host.</p></blockquote>
+
+<p><code>eshost-cli</code> makes it easy to run and compare <code>ECMAScript</code> code uniformly across a number of runtimes. Support for runtimes is provided by the library <code>eshost</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g eshost-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost -e <span class="s1">&#39;Date.parse(&quot;1 Octopus 2018&quot;)&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#### Chakra</span>
+</span><span class='line'>NaN
+</span><span class='line'>
+</span><span class='line'><span class="c">#### JavaScriptCore</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### SpiderMonkey</span>
+</span><span class='line'>NaN
+</span><span class='line'>
+</span><span class='line'><span class="c">#### V8</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### V8 --harmony</span>
+</span><span class='line'>1538332200000
+</span><span class='line'>
+</span><span class='line'><span class="c">#### XS</span>
+</span><span class='line'>NaN
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost --help
+</span><span class='line'>Usage: eshost <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>input-file<span class="o">]</span>
+</span><span class='line'>       eshost <span class="o">[</span>options<span class="o">]</span> -e <span class="s2">&quot;input-script&quot;</span>
+</span><span class='line'>       eshost --list
+</span><span class='line'>       eshost --add <span class="o">[</span>host name<span class="o">]</span> <span class="o">[</span>host <span class="nb">type</span><span class="o">]</span> &lt;host path&gt; --args &lt;host arguments&gt;
+</span><span class='line'>       eshost --delete <span class="o">[</span>host name<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  -e, --eval        <span class="nb">eval </span>an expression and print the result
+</span><span class='line'>  -x, --execute     execute a multi-statement program
+</span><span class='line'>  -h, --host        <span class="k">select </span>hosts by name <span class="o">(</span>glob syntax is supported as well<span class="o">)</span>
+</span><span class='line'>  -g, --hostGroup   <span class="k">select </span>host groups by host <span class="nb">type</span>
+</span><span class='line'>  --tags            <span class="k">select </span>hosts by tag
+</span><span class='line'>  -c, --config      <span class="k">select </span>a config file
+</span><span class='line'>  --table, -t       output in a table                                  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --coalesce, -s    coalesce like output into a single entry           <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --showSource, -i  show input <span class="nb">source</span>                                  <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --unanimous, -u   If all engines agree, <span class="nb">exit</span><span class="o">(</span>0<span class="o">)</span> with no output, otherwise
+</span><span class='line'>                    print and <span class="nb">exit</span><span class="o">(</span>1<span class="o">)</span>; implies --coalesce              <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --add             add a host
+</span><span class='line'>  --edit            edit a host
+</span><span class='line'>  --delete          delete a host
+</span><span class='line'>  --args            <span class="nb">set </span>arguments <span class="k">for </span>a host entry <span class="o">(</span>use with --add<span class="o">)</span>
+</span><span class='line'>  --configure-jsvu  Configure jsvu hosts in the config                 <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  --jsvu-prefix     <span class="o">[</span>OPTIONAL<span class="o">]</span> Set the prefix of the configured hosts. If prefix
+</span><span class='line'>                    is <span class="s2">&quot;jsvu&quot;</span> <span class="k">then </span>hosts will be configured as, e.g., <span class="s2">&quot;jsvu-sm&quot;</span>.
+</span><span class='line'>                    By default, no prefix <span class="o">(</span>e.g. <span class="s2">&quot;sm&quot;</span><span class="o">)</span>. Use this flag with
+</span><span class='line'>                    --configure-jsvu.
+</span><span class='line'>  --jsvu-root       <span class="o">[</span>OPTIONAL<span class="o">]</span> Use this path containing the .jsvu folder <span class="o">(</span>use
+</span><span class='line'>                    this option <span class="k">if</span> .jsvu is located somewhere other than the
+</span><span class='line'>                    home directory<span class="o">)</span>. Use this flag with --configure-jsvu.
+</span><span class='line'>  --help            Show <span class="nb">help</span>                                          <span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>  -a, --async       <span class="nb">wait </span><span class="k">for </span>realm destruction before reporting results<span class="o">[</span>boolean<span class="o">]</span>
+</span><span class='line'>
+</span><span class='line'>Examples:
+</span><span class='line'>  eshost --list
+</span><span class='line'>  eshost --add d8 d8 path/to/d8 --args
+</span><span class='line'>  <span class="s2">&quot;--harmony&quot;</span>
+</span><span class='line'>  eshost --add ch ch path/to/ch --tags
+</span><span class='line'>  latest
+</span><span class='line'>  eshost --add ch ch path/to/ch --tags
+</span><span class='line'>  latest,greatest
+</span><span class='line'>  eshost --configure-jsvu
+</span><span class='line'>  eshost --configure-jsvu --jsvu-prefix
+</span><span class='line'>  jsvu
+</span><span class='line'>  eshost test.js
+</span><span class='line'>  eshost -e <span class="s2">&quot;1+1&quot;</span>
+</span><span class='line'>  eshost -its -x <span class="s2">&quot;for (let i=0; i&lt;10; ++i)</span>
+</span><span class='line'><span class="s2">  { print(i) }&quot;</span>
+</span><span class='line'>  eshost -h d8 -h chakra test.js
+</span><span class='line'>  eshost -h d8,sm test.js
+</span><span class='line'>  eshost -g node,ch test.js
+</span><span class='line'>  eshost -h d8 -g node test.js
+</span><span class='line'>  eshost -h ch-*,node test.js
+</span><span class='line'>  eshost -h ch-1.?.? test.js
+</span><span class='line'>  eshost --tags latest test.js
+</span><span class='line'>  eshost --unanimous test.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[carbon-now-cli]]></title>
@@ -1394,61 +1575,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/query-state/query-state.gif" alt="query-state" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fx]]></title>
-    <link href="http://nmotw.in/fx/"/>
-    <updated>2018-11-16T08:20:35+05:30</updated>
-    <id>http://nmotw.in/fx</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
-
-<blockquote><p>CLI JSON processing tool</p></blockquote>
-
-<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
-
-<ul>
-<li>Don't need to learn new syntax</li>
-<li>Plain JavaScript</li>
-<li>Formatting and highlighting</li>
-<li>Standalone binary</li>
-<li>Interactive mode 🎉</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{...}&#39;</span> | fx <span class="o">[</span>code ...<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{&quot;foo&quot;: [{&quot;bar&quot;: &quot;value&quot;}]}&#39;</span> | fx <span class="s1">&#39;x =&gt; x.foo[0].bar&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;count&quot;: 0}&#39;</span> | fx <span class="s1">&#39;{...this, count: 1}&#39;</span>
-</span><span class='line'><span class="o">{</span>
-</span><span class='line'>  <span class="s2">&quot;count&quot;</span>: 1
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fx/fx.gif" alt="fx" /></p>
 ]]></content>
   </entry>
   
