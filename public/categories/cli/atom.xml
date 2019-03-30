@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: cli | NMOTW]]></title>
+  <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-03-22T22:34:58+05:30</updated>
+  <updated>2019-03-30T11:41:15+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,269 +14,364 @@
 
   
   <entry>
-    <title type="html"><![CDATA[package-size]]></title>
-    <link href="http://nmotw.in//github/package-size/"/>
-    <updated>2019-02-13T00:21:28+05:30</updated>
-    <id>http://nmotw.in//github/package-size</id>
-    <content type="html"><![CDATA[<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
+    <title type="html"><![CDATA[eshost-cli]]></title>
+    <link href="http://nmotw.in//github/eshost-cli/"/>
+    <updated>2019-03-30T11:37:02+05:30</updated>
+    <id>http://nmotw.in//github/eshost-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
 
-<blockquote><p>Get the bundle size of an npm packages.</p></blockquote>
+<blockquote><p>Run ECMAScript code uniformly across any ECMAScript host.</p></blockquote>
 
-<p><code>package-size</code> is a sweet CLI util, that gives us info about the bundle size of npm packages.</p>
+<p><code>eshost-cli</code> makes it easy to run and compare <code>ECMAScript</code> code uniformly across a number of runtimes. Support for runtimes is provided by the library <code>eshost</code>.</p>
 
-<p><strong>What it does?</strong></p>
-
-<ul>
-<li>Install the packages to a temp directory.</li>
-<li>Bundle the packages with webpack and get the bundle size.</li>
-<li>Show you the bundle size and cache it by package version.</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g package-size</code></p>
+<p><strong>Get it:</strong> <code>npm install -g eshost-cli</code></p>
 
 <p><strong>Sample usage:</strong></p>
+
+<p>``sh
+nmotw.in> eshost -e 'Date.parse("1 Octopus 2018")'</p>
+
+<h4>Chakra</h4>
+
+<p>NaN</p>
+
+<h4>JavaScriptCore</h4>
+
+<p>1538332200000</p>
+
+<h4>SpiderMonkey</h4>
+
+<p>NaN</p>
+
+<h4>V8</h4>
+
+<p>1538332200000</p>
+
+<h4>V8 --harmony</h4>
+
+<p>1538332200000</p>
+
+<h4>XS</h4>
+
+<p>NaN
+```</p>
+
+<p>```sh
+nmotw.in> eshost --help
+Usage: eshost [options] [input-file]</p>
+
+<pre><code>   eshost [options] -e "input-script"
+   eshost --list
+   eshost --add [host name] [host type] &lt;host path&gt; --args &lt;host arguments&gt;
+   eshost --delete [host name]
+</code></pre>
+
+<p>Options:
+  -e, --eval        eval an expression and print the result
+  -x, --execute     execute a multi-statement program
+  -h, --host        select hosts by name (glob syntax is supported as well)
+  -g, --hostGroup   select host groups by host type
+  --tags            select hosts by tag
+  -c, --config      select a config file
+  --table, -t       output in a table                                  [boolean]
+  --coalesce, -s    coalesce like output into a single entry           [boolean]
+  --showSource, -i  show input source                                  [boolean]
+  --unanimous, -u   If all engines agree, exit(0) with no output, otherwise</p>
+
+<pre><code>                print and exit(1); implies --coalesce              [boolean]
+</code></pre>
+
+<p>  --add             add a host
+  --edit            edit a host
+  --delete          delete a host
+  --args            set arguments for a host entry (use with --add)
+  --configure-jsvu  Configure jsvu hosts in the config                 [boolean]
+  --jsvu-prefix     [OPTIONAL] Set the prefix of the configured hosts. If prefix</p>
+
+<pre><code>                is "jsvu" then hosts will be configured as, e.g., "jsvu-sm".
+                By default, no prefix (e.g. "sm"). Use this flag with
+                --configure-jsvu.
+</code></pre>
+
+<p>  --jsvu-root       [OPTIONAL] Use this path containing the .jsvu folder (use</p>
+
+<pre><code>                this option if .jsvu is located somewhere other than the
+                home directory). Use this flag with --configure-jsvu.
+</code></pre>
+
+<p>  --help            Show help                                          [boolean]
+  -a, --async       wait for realm destruction before reporting results[boolean]</p>
+
+<p>Examples:
+  eshost --list
+  eshost --add d8 d8 path/to/d8 --args
+  "--harmony"
+  eshost --add ch ch path/to/ch --tags
+  latest
+  eshost --add ch ch path/to/ch --tags
+  latest,greatest
+  eshost --configure-jsvu
+  eshost --configure-jsvu --jsvu-prefix
+  jsvu
+  eshost test.js
+  eshost -e "1+1"
+  eshost -its -x "for (let i=0; i&lt;10; ++i)
+  { print(i) }"
+  eshost -h d8 -h chakra test.js
+  eshost -h d8,sm test.js
+  eshost -g node,ch test.js
+  eshost -h d8 -g node test.js
+  eshost -h ch-*,node test.js
+  eshost -h ch-1.?.? test.js
+  eshost --tags latest test.js
+  eshost --unanimous test.js
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[jsvu]]></title>
+    <link href="http://nmotw.in//github/jsvu/"/>
+    <updated>2017-12-07T22:19:37+05:30</updated>
+    <id>http://nmotw.in//github/jsvu</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/jsvu">jsvu</a></h1>
+
+<blockquote><p>JavaScript (engine) Version Updater.</p></blockquote>
+
+<p><code>jsvu</code> makes it easy to fetch the latest versions of JavaScript engines for a specific OS, without the hassels of compiling them!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+npm install -g jsvu
+</code></p>
 
 <p>```sh</p>
 
-<h1>get the size of vue bundle</h1>
+<h1>in your ~/*.rc</h1>
 
-<p>package-size vue</p>
-
-<h1>get the size of react+react-dom bundle</h1>
-
-<p>package-size react,react-dom</p>
-
-<h1>get the size of vue react+react-dom preact bundles</h1>
-
-<p>package-size vue react,react-dom preact</p>
-
-<h1>get the size of react+react-dom without using the cache</h1>
-
-<p>package-size react,react-dom --no-cache</p>
-
-<h1>get the size of file in current working directory</h1>
-
-<p>package-size ./dist/index.js</p>
-
-<h1>or a package in current working directory, explictly using <code>--cwd</code> flag</h1>
-
-<p>package-size vue --cwd</p>
-
-<h1>or event multiple versions for the same package!</h1>
-
-<p>package-size react@0.10 react@0.14 react@15</p>
-
-<h1>save results to file system in JSON format</h1>
-
-<h1>defaults to ./package-size-output.json</h1>
-
-<p>package-size cherow --output</p>
-
-<h1>or custom path</h1>
-
-<p>package-size cherow --output stats.json</p>
-
-<h1>analyze bundle with webpack-bundle-analyzer</h1>
-
-<p>package-size cherow --analyze
+<p>export PATH="${HOME}/.jsvu:${PATH}"
 ```</p>
+
+<p><code>sh
+jsvu
+</code></p>
+
+<p>It's prompts for the OS and the engine and install them based on your choice, it can install Chakra/ChakraCore, JavaScriptCore, SpiderMonk
+ey and V8 for you.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jsvu/jsvu.gif" alt="jsvu.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ramda-repl]]></title>
+    <link href="http://nmotw.in//github/ramda-repl/"/>
+    <updated>2015-09-17T22:09:50+05:30</updated>
+    <id>http://nmotw.in//github/ramda-repl</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
+
+<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
+
+<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+$ npm install --save ramda-repl
+</code></p>
+
+<p><strong>usage:</strong></p>
 
 <p>```js
-const getSizes = require('package-size')</p>
+var ramdaRepl = require('ramda-repl');</p>
 
-<p>getSizes('react,react-dom', options)
-  .then(data => {</p>
-
-<pre><code>console.log(data)
-//=&gt;
-{
-  name: 'react,react-dom',
-  size: 12023, // in bytes
-  minified: 2342,
-  gzipped: 534,
-  versionedName: 'react@16.0.0,react-dom@16.0.0'
-}
-</code></pre>
-
-<p>  })
+<p>ramdaRepl();
+//=> Will start a REPL
 ```</p>
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/package-size/package-size.gif" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gauge]]></title>
-    <link href="http://nmotw.in//github/gauge/"/>
-    <updated>2018-12-30T06:59:09+05:30</updated>
-    <id>http://nmotw.in//github/gauge</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/gauge">gauge</a></h1>
-
-<blockquote><p>Terminal based horizontal gauge.</p></blockquote>
-
-<p><code>gauge</code> is a terminal based horizontal gauge / progress bar which provides the user the totally control on the progess indication, plusation or hiding the porgress bar. It has provides a convenient theming option.</p>
-
-<p><strong>Get it:</strong> <code>npm install gauge</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-const Gauge = require('gauge');
-const gauge = new Gauge();</p>
-
-<p>gauge.show("test", 0.20);</p>
-
-<p>gauge.pulse("this");</p>
-
-<p>gauge.hide();
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/gauge/gauge.gif" alt="gauge" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fx]]></title>
-    <link href="http://nmotw.in//github/fx/"/>
-    <updated>2018-11-16T08:20:35+05:30</updated>
-    <id>http://nmotw.in//github/fx</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
-
-<blockquote><p>CLI JSON processing tool</p></blockquote>
-
-<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
-
-<ul>
-<li>Don't need to learn new syntax</li>
-<li>Plain JavaScript</li>
-<li>Formatting and highlighting</li>
-<li>Standalone binary</li>
-<li>Interactive mode 🎉</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
-
-<p><strong>Sample usage:</strong></p>
+<h2>CLI</h2>
 
 <p><code>sh
-echo '{...}' | fx [code ...]
+$ npm install --global ramda-repl
 </code></p>
 
-<p><code>sh
-echo '{"foo": [{"bar": "value"}]}' | fx 'x =&gt; x.foo[0].bar'
-</code></p>
+<p>$ ramda-repl</p>
 
-<p><code>sh
-$ echo '{"count": 0}' | fx '{...this, count: 1}'
-{
-  "count": 1
-}
-</code></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fx/fx.gif" alt="fx" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[please-upgrade-node]]></title>
-    <link href="http://nmotw.in//github/please-upgrade-node/"/>
-    <updated>2018-09-23T15:42:17+05:30</updated>
-    <id>http://nmotw.in//github/please-upgrade-node</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
-
-<blockquote><p>💁 show a message to your users to upgrade Node instead of a stacktrace</p></blockquote>
-
-<p><code>please-upgrade-node</code>checks if the users node version is statisfying the <code>engines</code> version in your <code>package.json</code> if not warns, uber useful for CLI apps relying on versions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install please-upgrade-node</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js</p>
-
-<h1>!/usr/bin/env node</h1>
-
-<p>const pkg = require('./package.json')
-require('please-upgrade-node')(pkg) // &lt;- Must run BEFORE requiring any other modules
-```</p>
-
-<p>in <code>package.json</code>:</p>
+<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
 
 <p>```
-{
-  "engines": {</p>
+Welcome to Ramda REPL!</p>
 
-<pre><code>"node": "&gt;=6"
-</code></pre>
+<p>λ > typeof R
+'object'</p>
 
-<p>  }
-}
-```</p>
+<p>λ > typeof map
+'function'</p>
 
-<p>P.S: <code>&gt;=</code> is the only operator supported.</p>
-
-<p>You could also:</p>
-
-<p>```js
-pleaseUpgradeNode(pkg, {
-  exitCode: 0, // Default: 1
-  message: function(requiredVersion) {</p>
-
-<pre><code>return 'Oops this program require Node ' +  requiredVersion
-</code></pre>
-
-<p>  }
-})
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[mapscii]]></title>
-    <link href="http://nmotw.in//github/mapscii/"/>
-    <updated>2018-09-16T18:42:56+05:30</updated>
-    <id>http://nmotw.in//github/mapscii</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
-
-<blockquote><p>The Whole World In Your Console!</p></blockquote>
-
-<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
-
-<p><strong>Navigation:</strong></p>
-
-<ul>
-<li>Arrows up, down, left, right to scroll around</li>
-<li>Press a or z to zoom in and out</li>
-<li>Press q to quit</li>
-</ul>
-
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```sh
-$ mapscii</p>
-
-<h1>you should see the entire map on the CLI</h1>
+<p>λ > typeof zipWith
+'function'</p>
 
 <p>```</p>
 
+<h2>GIF FTW</h2>
+
+<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
+
+<h2>License</h2>
+
+<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[confirm-simple]]></title>
+    <link href="http://nmotw.in//github/confirm-simple/"/>
+    <updated>2015-03-12T20:54:10+05:30</updated>
+    <id>http://nmotw.in//github/confirm-simple</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
+
+<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
+
+<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
+
+<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
+
+<p><strong>API and simple usage:</strong></p>
+
+<p>```js
+var confirm = require('confirm-simple')</p>
+
+<p>confirm('Do you accept the EULA?', ['yes', 'no'] ,function (yes) {</p>
+
+<pre><code>if (yes) { 
+  console.log('Good for you!');
+} else {
+  console.log('Sorry you wont get to use the software');
+}
+</code></pre>
+
+<p>});
+```</p>
+
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/mapscii/mapscii.gif" alt="mapscii" /></p>
+<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
+
+<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[yosay]]></title>
+    <link href="http://nmotw.in//github/yosay/"/>
+    <updated>2014-05-15T09:45:56+05:30</updated>
+    <id>http://nmotw.in//github/yosay</id>
+    <content type="html"><![CDATA[<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
+
+<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
+
+<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>```</p>
+
+<p>$ echo "Yo! Mama. You can pipe." | yosay</p>
+
+<pre><code> _-----_
+|       |    .--------------------------.
+|--(o)--|    |  Yo! Mama. You can pipe. |
+</code></pre>
+
+<p>   `---------´   '--------------------------'</p>
+
+<pre><code>( _´U`_ )    
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p>```sh</p>
+
+<p>$ yosay "Node module of the week"</p>
+
+<pre><code> _-----_
+|       |    .--------------------------.
+|--(o)--|    |  Node module of the week |
+</code></pre>
+
+<p>   `---------´   '--------------------------'</p>
+
+<pre><code>( _´U`_ )    
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p>```sh
+$ yosay "Yo! How's it going" --maxLength 4</p>
+
+<pre><code> _-----_
+|       |    .------.
+|--(o)--|    |  Yo! |
+</code></pre>
+
+<p>   `---------´   | How's |</p>
+
+<pre><code>( _´U`_ )    |  it  |
+/___A___\    | going |
+ |  ~  |     '------'
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code>
+```</p>
+
+<p> If you want to use it in you node script, you could do:</p>
+
+<p>```</p>
+
+<p> var yosay = require('yosay');</p>
+
+<p> console.log( yosay("Hope you enjoyed the session :)") );</p>
+
+<pre><code>  _-----_
+|       |    .--------------------------.
+|--(o)--|    |   Hope you enjoyed the   |
+</code></pre>
+
+<p>   `---------´   |        session :)        |</p>
+
+<pre><code>( _´U`_ )    '--------------------------'
+/___A___\    
+ |  ~  |     
+</code></pre>
+
+<p>   <strong>'.</strong>_.'__ <br/>
+ ´   <code> |° ´ Y</code></p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!:</strong></p>
+
+<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
+
+<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
 ]]></content>
   </entry>
   

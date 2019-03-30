@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: dom | NMOTW]]></title>
+  <title><![CDATA[Category: DOM | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-03-22T22:34:58+05:30</updated>
+  <updated>2019-03-30T11:41:15+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,230 +14,282 @@
 
   
   <entry>
-    <title type="html"><![CDATA[scrolldir]]></title>
-    <link href="http://nmotw.in//github/scrolldir/"/>
-    <updated>2017-12-30T15:32:47+05:30</updated>
-    <id>http://nmotw.in//github/scrolldir</id>
-    <content type="html"><![CDATA[<h1><a href="https://nmpjs.org/scrolldir">scrolldir</a></h1>
+    <title type="html"><![CDATA[image-promise]]></title>
+    <link href="http://nmotw.in//github/image-promise/"/>
+    <updated>2019-03-08T15:00:54+05:30</updated>
+    <id>http://nmotw.in//github/image-promise</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
 
-<blockquote><p>leverage scroll direction with CSS ⬆⬇</p></blockquote>
+<blockquote><p>Promisfied image loading!</p></blockquote>
 
-<p><code>0</code> dep, <code>1KB</code> micro JS lib to easily leverage vertical scroll direction in CSS via a data attribute.</p>
+<p>Load one or more images, return a promise that resolves if the image loads or rejects in case of an error.</p>
 
-<p><strong>Get it:</strong> <code>npm install scrolldir</code></p>
+<p><strong>Get it:</strong> <code>npm install image-pormise</code></p>
 
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-scrollDir();</p>
-
-<p>scrollDir({ attribute: 'new-attribute-name' });</p>
-
-<p>scrollDir({ el: 'your-new-selector' });</p>
-
-<p>scrollDir({ off: true });</p>
-
-<p>scrollDir({ direction: 'up' });
-```</p>
-
-<p>ScrollDir will set the <code>data-scrolldir</code> attribute on the <code>&lt;html&gt;</code> element to <code>up</code> or <code>down</code>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/scrolldir/scrolldir.gif" alt="scrolldir.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fitty]]></title>
-    <link href="http://nmotw.in//github/fitty/"/>
-    <updated>2017-08-03T13:03:33+05:30</updated>
-    <id>http://nmotw.in//github/fitty</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fitty">fitty</a></h1>
-
-<blockquote><p>Makes text fit perfectly.</p></blockquote>
-
-<p>Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container.</p>
-
-<p>The crux is of fitty is the <code>fit</code> method which marks the fitty as dirty and requests a redraw (this will also redraw any other fitty marked as dirty).</p>
-
-<p><strong>Get it:</strong> <code>npm install fitty</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```html
-const fitty = require('fitty');</p>
-
-<p>fitty('#my-element);
-```</p>
-
-<p>Default options:</p>
-
-<p><code>js
-const defaultOptions = {
-  minSize: 16,
-  maxSize: 512,
-  multiLine: true,
-  observeMutations: 'MutationObserver' in w ? mutationObserverDefaultSetting : false
-};
-</code>
-Yes, it uses <code>MutationObserver</code>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fitty/fitty.gif" alt="fitty" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[stikcybits]]></title>
-    <link href="http://nmotw.in//github/stikcybits/"/>
-    <updated>2017-07-08T15:28:28+05:30</updated>
-    <id>http://nmotw.in//github/stikcybits</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stickybits">stickybits</a></h1>
-
-<blockquote><p>Alternative to position: sticky polyfills.</p></blockquote>
-
-<ul>
-<li><p>Aprox <code>~2KB</code> of javascript that would help us to know when a DOM element is stuck (position:sticky).</p></li>
-<li><p>It can add a CSS Sticky Class <code>.js-is-sticky</code> when <code>position: sticky</code> elements become active and a CSS Stuck Class <code>.js-is-stuck</code> when they become stuck.</p></li>
-<li><p>Loosely mimics <code>position: sticky</code> to consistently stick elements vertically across multiple platforms.</p></li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install stickybits</code></p>
-
-<p><strong>Sample usage:</strong></p>
+<p><strong>Sample code:</strong></p>
 
 <p>```js
- stickybits('selector', options);</p>
+var images = ['cat.jpg', 'dog.jpg'];
+// var images = $('img'); // it can also be a jQuery object
+// var images = document.querySelectorAll('img'); // or a NodeList</p>
 
-<p> /*
-Options:</p>
+<p>loadImage(images)
+.then(function (allImgs) {</p>
 
-<pre><code>- target = el (DOM element)
-- offset = 0 || 'dealer's choice'
-- verticalPosition = top || bottom
-- useStickyClasses = true || false
-- elStyles = CSS Styles
-- positionVal = fixed || sticky
+<pre><code>console.log(allImgs.length, 'images loaded!', allImgs);
 </code></pre>
 
-<p> */
-```</p>
+<p>})
+.catch(function (err) {</p>
 
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/stickybits/stickybits.gif" alt="stickybits.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dom-scroll-into-view]]></title>
-    <link href="http://nmotw.in//github/dom-scroll-into-view/"/>
-    <updated>2017-06-18T15:32:27+05:30</updated>
-    <id>http://nmotw.in//github/dom-scroll-into-view</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dom-scroll-into-view">dom-scroll-into-view</a></h1>
-
-<blockquote><p>scroll node in contain to make node visible</p></blockquote>
-
-<p><code>dom-scroll-into-view</code> a dom util that helps in scrolling to node that is targeted.</p>
-
-<p><strong>Get it:</strong> <code>npm install dom-scroll-into-view</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>js
-var scrollIntoView = require('dom-scroll-into-view');
-scrollIntoView(source,container,config);
-</code></p>
-
-<p>```js
-//config
-   {</p>
-
-<pre><code>   alignWithLeft,
-   alignWithTop,
-   allowHorizontalScroll,
-   onlyScrollIfNeeded,
-   offsetTop,
-   offsetLeft,
-   offsetBottom,
-   offsetRight
+<pre><code>console.error('One or more images have failed to load :(');
+console.error(err.errored);
+console.info('But these loaded fine:');
+console.info(err.loaded);
 </code></pre>
-
-<p>   }
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dom-scroll-into-view/dom-scroll-into-view.gif" alt="dom-scroll-into-view.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[what-input]]></title>
-    <link href="http://nmotw.in//github/what-input/"/>
-    <updated>2017-04-07T19:40:55+05:30</updated>
-    <id>http://nmotw.in//github/what-input</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/what-input">what-input</a></p>
-
-<blockquote><p>A global utility for tracking the current input method (mouse, keyboard or touch).</p></blockquote>
-
-<p>What Input adds data attributes to the <html> tag based on the type of input being used.</p>
-
-<p>It also exposes a simple API that can be used for scripting interactions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --save what-input</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p><code>``js
-whatInput.ask(); // returns</code>mouse<code>,</code>keyboard<code>or</code>touch`</p>
-
-<p>whatInput.types(); // ex. returns ['mouse', 'keyboard']</p>
-
-<p>whatInput.ask('loose'); // returns <code>mouse</code> because mouse movement was detected</p>
-
-<p>myButton.addEventListener('click', function() {</p>
-
-<p>  if (whatInput.ask() === 'mouse') {</p>
-
-<pre><code>// do mousy things
-</code></pre>
-
-<p>  } else if (whatInput.ask() === 'keyboard') {</p>
-
-<pre><code>// do keyboard things
-</code></pre>
-
-<p>  }</p>
 
 <p>});
 ```</p>
 
-<p>Event mapping:</p>
+<p>```
+const images = [
+  "https://unsplash.it/800/600?random&amp;0",
+  "https://unsplash.it/800/600?random&amp;1",
+  "https://unsplash.it/800/600?random&amp;2",
+  "https://unsplash.it/800/600?random&amp;3"
+];</p>
 
-<p>```js
-// mapping of events to input types
-const inputMap = {</p>
+<p>(async () => {</p>
 
-<pre><code>'keyup': 'keyboard',
-'mousedown': 'mouse',
-'mousemove': 'mouse',
-'MSPointerDown': 'pointer',
-'MSPointerMove': 'pointer',
-'pointerdown': 'pointer',
-'pointermove': 'pointer',
-'touchstart': 'touch'
+<pre><code>try {
+    const imgs = await ImageLoader(images);
+} catch(err) {
+    console.error(err.errored);
+}
 </code></pre>
 
-<p>};
+<p>})();</p>
+
+<p>```</p>
+
+<p>```
+// for CORS enabled imgs
+const image = 'http://catpics.com/cat.jpg';</p>
+
+<p>loadImage(image, { crossorigin: 'anonymous' })
+.then(function (img) {</p>
+
+<pre><code>ctx.drawImage(img, 0, 0, 10, 10);
+
+// now you can do this
+canvas.toDataURL('image/png')
+</code></pre>
+
+<p>})
+.catch(function () {</p>
+
+<pre><code>console.error('Image failed to load :(');
+</code></pre>
+
+<p>});
 ```</p>
 
-<p><strong>GIF FTW:</strong></p>
+<p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/what-input/what-input.gif" alt="what-input" /></p>
+<p><img src="/images/image-promise/image-promise.gif" alt="image-promise" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
+    <link href="http://nmotw.in//github/scroll-into-view-if-needed/"/>
+    <updated>2019-03-02T23:25:04+05:30</updated>
+    <id>http://nmotw.in//github/scroll-into-view-if-needed</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
+
+<blockquote><p>Element.scrollIntoView ponyfills for things like "if-needed" and "smooth".</p></blockquote>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.png" alt="scroll-into-view-if-needed" /></p>
+
+<p>This is a ponyfill for <code>Element.scrollIntoViewIfNeeded</code>. Since then the CSS working group have decided to implement its features in <code>Element.scrollIntoView</code> as the option <code>scrollMode: "if-needed"</code>. Thus this library got rewritten to implement that spec instead of the soon to be deprecated one.</p>
+
+<p>Don't miss the <a href="https://scroll-into-view-if-needed.netlify.com">Demo</a>.</p>
+
+<p><strong>Get it:</strong> <code>npm install scroll-into-view-if-needed</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+// es6 import
+import scrollIntoView from 'scroll-into-view-if-needed';</p>
+
+<p>const node = document.getElementById('hero');</p>
+
+<p>scrollIntoView(node, {
+  scrollMode: 'if-needed',
+  block: 'nearest',
+  inline: 'nearest',
+})</p>
+
+<p>scrollIntoView(node, { block: 'center', inline: 'center' });
+// scrollMode is "always" by default</p>
+
+<p>// smooth scroll if the browser supports it and if the element isn't visible
+scrollIntoView(node, { behavior: 'smooth', scrollMode: 'if-needed' });
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.gif" alt="scroll-into-view-if-needed" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[abort-controller]]></title>
+    <link href="http://nmotw.in//github/abort-controller/"/>
+    <updated>2019-02-23T11:10:52+05:30</updated>
+    <id>http://nmotw.in//github/abort-controller</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
+
+<blockquote><p>An implementation of WHATWG AbortController interface.</p></blockquote>
+
+<p>The AbortController interface allows us to abort one or more DOM requests as per the need.</p>
+
+<p>From the <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">sepc</a>:</p>
+
+<p>The <code>AbortController()</code> constructor, when invoked, must run these steps:</p>
+
+<ul>
+<li><p>Let signal be a <code>new AbortSignal</code> object.</p></li>
+<li><p>Let controller be a <code>new AbortController</code> object whose signal is signal.</p></li>
+<li><p>Return controller.</p></li>
+</ul>
+
+
+<p>The <code>signal</code> attribute’s getter, when invoked, must return the context object’s signal.</p>
+
+<p>The <code>abort()</code> method, when invoked, must signal abort on the context object’s signal.</p>
+
+<p><strong>Get it:</strong> <code>npm install abort-controller</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+import AbortController from "abort-controller";
+// or
+const AbortController = require("abort-controller");</p>
+
+<p>// or UMD version defines a global variable:
+const AbortController = window.AbortControllerShim;
+```</p>
+
+<p>```js
+import AbortController from "abort-controller";</p>
+
+<p>const controller = new AbortController();
+const signal = controller.signal;</p>
+
+<p>signal.addEventListener("abort", () => {</p>
+
+<pre><code>console.log("aborted!");
+</code></pre>
+
+<p>})</p>
+
+<p>controller.abort();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/abort-controller/abort-controller.gif" alt="abort-controller" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[intl-tel-input]]></title>
+    <link href="http://nmotw.in//github/intl-tel-input/"/>
+    <updated>2018-12-23T11:37:47+05:30</updated>
+    <id>http://nmotw.in//github/intl-tel-input</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/intl-tel-input">intl-tel-input</a></h1>
+
+<blockquote><p>International Telephone Input</p></blockquote>
+
+<p>Eentering and validating international telephone numbers made easy with <code>intl-tel-input</code>.</p>
+
+<p>It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder and provides formatting/validation methods!</p>
+
+<p><strong>Get it:</strong> <code>npm i intl-tel-input</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>html
+&lt;input type="tel" id="phone"&gt;
+</code></p>
+
+<p><code>js
+require("node_modules/intl-tel-input/src/css/intlTelInput.css");
+const intlTelInput = require("intl-tel-input");
+const input = document.querySelector("#phone");
+intlTelInput(input);
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/intl-tel-input/intl-tel-input.gif" alt="intl-tel-input" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[query-state]]></title>
+    <link href="http://nmotw.in//github/query-state/"/>
+    <updated>2018-11-22T16:09:44+05:30</updated>
+    <id>http://nmotw.in//github/query-state</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
+
+<blockquote><p>Application state in query string.</p></blockquote>
+
+<p><code>query-state</code> is a cheeky module that uses <code>history</code> API and <code>encodeURIComponent</code> magic to maintain the application state in the query string.</p>
+
+<p><strong>Get it:</strong> <code>npm install query-state</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const queryState = require('query-state');</p>
+
+<p>// create a new query state instance
+const qs = queryState();</p>
+
+<p>// get current application state from the hash string:
+const appState = qs.get();</p>
+
+<p>// you can also monitor for changes in the query string:
+qs.onChange(function(appState) {
+  // prints new application state on each hash update
+  console.log('app state changed!', appState);
+});</p>
+
+<p>// If you want to set a new value in the app state:
+qs.set('answer', 42);</p>
+
+<p>// Now the query string will have <code>answer=42</code> part in it.
+console.log(window.location.hash.indexOf('answer=42')) // prints value > 0.</p>
+
+<p>// You can also set multiple values at once:
+qs.set({
+  name: 'Haddaway',
+  song: 'What is love?'
+});</p>
+
+<p>// NOTE: The call above merges new properties. It appends two new properties to
+// the current query string</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/query-state/query-state.gif" alt="query-state" /></p>
 ]]></content>
   </entry>
   

@@ -4,13 +4,137 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-03-22T22:34:58+05:30</updated>
+  <updated>2019-03-30T11:41:15+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[eshost-cli]]></title>
+    <link href="http://nmotw.in/eshost-cli/"/>
+    <updated>2019-03-30T11:37:02+05:30</updated>
+    <id>http://nmotw.in/eshost-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
+
+<blockquote><p>Run ECMAScript code uniformly across any ECMAScript host.</p></blockquote>
+
+<p><code>eshost-cli</code> makes it easy to run and compare <code>ECMAScript</code> code uniformly across a number of runtimes. Support for runtimes is provided by the library <code>eshost</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g eshost-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>``sh
+nmotw.in> eshost -e 'Date.parse("1 Octopus 2018")'</p>
+
+<h4>Chakra</h4>
+
+<p>NaN</p>
+
+<h4>JavaScriptCore</h4>
+
+<p>1538332200000</p>
+
+<h4>SpiderMonkey</h4>
+
+<p>NaN</p>
+
+<h4>V8</h4>
+
+<p>1538332200000</p>
+
+<h4>V8 --harmony</h4>
+
+<p>1538332200000</p>
+
+<h4>XS</h4>
+
+<p>NaN</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sh
+nmotw.in> eshost --help
+Usage: eshost [options] [input-file]</p>
+
+<pre><code>   eshost [options] -e "input-script"
+   eshost --list
+   eshost --add [host name] [host type] &lt;host path&gt; --args &lt;host arguments&gt;
+   eshost --delete [host name]
+</code></pre>
+
+<p>Options:
+  -e, --eval        eval an expression and print the result
+  -x, --execute     execute a multi-statement program
+  -h, --host        select hosts by name (glob syntax is supported as well)
+  -g, --hostGroup   select host groups by host type
+  --tags            select hosts by tag
+  -c, --config      select a config file
+  --table, -t       output in a table                                  [boolean]
+  --coalesce, -s    coalesce like output into a single entry           [boolean]
+  --showSource, -i  show input source                                  [boolean]
+  --unanimous, -u   If all engines agree, exit(0) with no output, otherwise</p>
+
+<pre><code>                print and exit(1); implies --coalesce              [boolean]
+</code></pre>
+
+<p>  --add             add a host
+  --edit            edit a host
+  --delete          delete a host
+  --args            set arguments for a host entry (use with --add)
+  --configure-jsvu  Configure jsvu hosts in the config                 [boolean]
+  --jsvu-prefix     [OPTIONAL] Set the prefix of the configured hosts. If prefix</p>
+
+<pre><code>                is "jsvu" then hosts will be configured as, e.g., "jsvu-sm".
+                By default, no prefix (e.g. "sm"). Use this flag with
+                --configure-jsvu.
+</code></pre>
+
+<p>  --jsvu-root       [OPTIONAL] Use this path containing the .jsvu folder (use</p>
+
+<pre><code>                this option if .jsvu is located somewhere other than the
+                home directory). Use this flag with --configure-jsvu.
+</code></pre>
+
+<p>  --help            Show help                                          [boolean]
+  -a, --async       wait for realm destruction before reporting results[boolean]</p>
+
+<p>Examples:
+  eshost --list
+  eshost --add d8 d8 path/to/d8 --args
+  "--harmony"
+  eshost --add ch ch path/to/ch --tags
+  latest
+  eshost --add ch ch path/to/ch --tags
+  latest,greatest
+  eshost --configure-jsvu
+  eshost --configure-jsvu --jsvu-prefix
+  jsvu
+  eshost test.js
+  eshost -e "1+1"
+  eshost -its -x "for (let i=0; i&lt;10; ++i)
+  { print(i) }"
+  eshost -h d8 -h chakra test.js
+  eshost -h d8,sm test.js
+  eshost -g node,ch test.js
+  eshost -h d8 -g node test.js
+  eshost -h ch-*,node test.js
+  eshost -h ch-1.?.? test.js
+  eshost --tags latest test.js
+  eshost --unanimous test.js
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[carbon-now-cli]]></title>
@@ -1394,61 +1518,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/query-state/query-state.gif" alt="query-state" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fx]]></title>
-    <link href="http://nmotw.in/fx/"/>
-    <updated>2018-11-16T08:20:35+05:30</updated>
-    <id>http://nmotw.in/fx</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
-
-<blockquote><p>CLI JSON processing tool</p></blockquote>
-
-<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
-
-<ul>
-<li>Don't need to learn new syntax</li>
-<li>Plain JavaScript</li>
-<li>Formatting and highlighting</li>
-<li>Standalone binary</li>
-<li>Interactive mode 🎉</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{...}&#39;</span> | fx <span class="o">[</span>code ...<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{&quot;foo&quot;: [{&quot;bar&quot;: &quot;value&quot;}]}&#39;</span> | fx <span class="s1">&#39;x =&gt; x.foo[0].bar&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;count&quot;: 0}&#39;</span> | fx <span class="s1">&#39;{...this, count: 1}&#39;</span>
-</span><span class='line'><span class="o">{</span>
-</span><span class='line'>  <span class="s2">&quot;count&quot;</span>: 1
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fx/fx.gif" alt="fx" /></p>
 ]]></content>
   </entry>
   

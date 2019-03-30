@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ES6 | NMOTW]]></title>
+  <title><![CDATA[Category: es6 | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/es6/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-03-22T22:34:58+05:30</updated>
+  <updated>2019-03-30T11:41:15+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,247 +14,210 @@
 
   
   <entry>
-    <title type="html"><![CDATA[zet]]></title>
-    <link href="http://nmotw.in//github/zet/"/>
-    <updated>2018-10-13T14:47:06+05:30</updated>
-    <id>http://nmotw.in//github/zet</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
+    <title type="html"><![CDATA[common-tags]]></title>
+    <link href="http://nmotw.in//github/common-tags/"/>
+    <updated>2017-02-10T19:54:05+05:30</updated>
+    <id>http://nmotw.in//github/common-tags</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
 
-<blockquote><p>Set() as it should be.</p></blockquote>
+<blockquote><p>Common utility template tags for ES2015</p></blockquote>
 
-<p><code>zet</code> is an extension of ES6 Set and comes with all its functionality included along with the below:</p>
+<p>🔖 A set of well-tested, commonly used template literal tag functions for use in ES2015+.</p>
+
+<p>🌟 Plus some extra goodies for easily making your own tags.</p>
+
+<p>Provides the below almost self explanatory functions:</p>
 
 <ul>
-<li>∪ union</li>
-<li>∩ intersection</li>
-<li><ul>
-<li>difference/subtract</li>
-</ul>
-</li>
-<li>⊖ symmetric difference</li>
-<li>⊆ subset</li>
-<li>⊇ superse</li>
+<li>TemplateTag</li>
+<li>codeBlock</li>
+<li>commaLists</li>
+<li>commaListsAnd</li>
+<li>commaListsOr</li>
+<li>html</li>
+<li>inlineArrayTransformer</li>
+<li>inlineLists</li>
+<li>oneLine</li>
+<li>oneLineCommaLists</li>
+<li>oneLineCommaListsAnd</li>
+<li>oneLineCommaListsOr</li>
+<li>oneLineInlineLists</li>
+<li>oneLineTrim</li>
+<li>removeNonPrintingValuesTransformer</li>
+<li>replaceResultTransformer</li>
+<li>replaceSubstitutionTransformer</li>
+<li>safeHtml</li>
+<li>source</li>
+<li>splitStringTransformer</li>
+<li>stripIndent</li>
+<li>stripIndentTransformer</li>
+<li>stripIndents</li>
+<li>trimResultTransformer</li>
 </ul>
 
 
-<p><strong>Get it:</strong> <code>npm install zet</code></p>
+<p><strong>GET IT:</strong> <code>npm install --save common-tags</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
-<p>```js</p>
-
-<p>const Zet = require('zet');</p>
-
-<p>let a = new Zet([1, 2, 3]);
-let b = new Zet([3, 4, 5]);
-let c = new Zet([2, 3, 4]);</p>
-
-<p>Zet.union(a, b);
-//=> [Zet] {1, 2, 3, 4, 5}</p>
-
-<p>a.union(b, c);
-//=> [Zet] {1, 2, 3, 4, 5}</p>
-
-<p>a.intersection(b);
-//=> [Zet] {3}</p>
-
-<p>a.symmetricDifference(c);
-//=> [Zet] {1, 4}</p>
-
-<p>a.subset(b);
-//=> false
-```</p>
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/zet/zet.gif" alt="zet" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iterare]]></title>
-    <link href="http://nmotw.in//github/iterare/"/>
-    <updated>2017-03-26T12:33:44+05:30</updated>
-    <id>http://nmotw.in//github/iterare</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/iterare">iterare</a></h1>
-
-<blockquote><p>Array methods for ES6 Iterators.</p></blockquote>
-
-<p>ES6 Iterator library for applying multiple transformations to a collection in a single iteration.</p>
-
-<p>Instead of handling ES6 collections in a messy way like:</p>
-
 <p>```js
-const uris = new Set([
-  'file:///foo.txt',
-  'http:///npmjs.com',
-  'file:///bar/baz.txt'
-]);
-const paths = new Set();
-for (const uri of uris) {
-  if (!uri.startsWith('file://')) {</p>
+import {oneLine} from 'common-tags'</p>
 
-<pre><code>continue;
-</code></pre>
-
-<p>  }
-  const path = uri.substr('file:///'.length)l
-  paths.add(path);
-}
+<p>oneLine<code>
+  foo
+  bar
+  baz
+</code>)
+// "foo bar baz"
 ```</p>
-
-<p>or</p>
-
-<p>```js
-new Set(
-  Array.from(uris)</p>
-
-<pre><code>.filter(uri =&gt; uri.startsWith('file://'))
-.map(uri =&gt; uri.substr('file:///'.length));
-</code></pre>
-
-<p>)
-```</p>
-
-<p>Using <code>iterare</code> you can do the same with:</p>
-
-<p>```js
-import iterate from 'iterare'</p>
-
-<p>iterate(uris)
-  .filter(uri => uri.startsWith('file://'))
-  .map(uri => uri.substr('file:///'.length))
-  .toSet();
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/iterare/iterare.gif" alt="iterare" /></p>
-
-<p><a href="https://github.com/felixfbecker/iterare/blob/master/src/benchmark.ts">Benchmark</a> based on the example above:</p>
-
-<table>
-<thead>
-<tr>
-<th>Method                       </th>
-<th align="right"> ops/sec</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Loop                         </td>
-<td align="right"> 2,562,637 ops/sec ±3.95% (80 runs sampled)</td>
-</tr>
-<tr>
-<td><strong>iterare</strong>                  </td>
-<td align="right"> 2,023,212 ops/sec ±1.38% (84 runs sampled)</td>
-</tr>
-<tr>
-<td>Array method chain           </td>
-<td align="right"> 346,117 ops/sec ±2.68% (82 runs sampled)</td>
-</tr>
-<tr>
-<td>Lodash (with lazy evalution) </td>
-<td align="right"> 335,890 ops/sec ±0.55% (85 runs sampled)</td>
-</tr>
-<tr>
-<td>RxJS                         </td>
-<td align="right"> 29,480 ops/sec ±7.01% (51 runs sampled)</td>
-</tr>
-</tbody>
-</table>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[reify]]></title>
-    <link href="http://nmotw.in//github/reify/"/>
-    <updated>2016-07-28T20:40:10+05:30</updated>
-    <id>http://nmotw.in//github/reify</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/reify">reify</a></h1>
-
-<blockquote><p>Enable ECMAScript 2015 modules in Node today. No caveats. Full stop.</p></blockquote>
-
-<p><strong>Get it:</strong> <code>npm install --save refiy</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<ul>
-<li><p><code>npm install --save reify</code></p></li>
-<li><p><code>require("reify")</code> before <code>import</code> and <code>export</code> declarations.</p></li>
-</ul>
-
-
-<p>```js</p>
-
-<blockquote><p>require("reify/repl");</p>
-
-<p>import { strictEqual } from "assert";</p>
-
-<p>strictEqual(2+2,7);
-AssertionError: 4 === 7</p>
-
-<pre><code>at repl:1:1
-at REPLServer.defaultEval (repl.js:272:27)
-at bound (domain.js:280:14)
-at REPLServer.runBound [as eval] (domain.js:293:12)
-at REPLServer.&lt;anonymous&gt; (repl.js:441:10)
-at emitOne (events.js:101:20)
-at REPLServer.emit (events.js:188:7)
-at REPLServer.Interface._onLine (readline.js:224:10)
-at REPLServer.Interface._line (readline.js:566:8)
-at REPLServer.Interface._ttyWrite (readline.js:843:14)
-</code></pre>
-
-<p>```</p></blockquote>
-
-<p>Code generated by the <code>reify</code> compiler relies on a <a href="lib/runtime.js">simple runtime
-API</a>.</p>
 
 <p><strong>GIF FTW:</strong></p>
 
-<p><img src="/images/reify/reify.gif" alt="" /></p>
+<p><img src="/images/common-tags/common-tags.gif" alt="common-tags" /></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[stream-generators]]></title>
-    <link href="http://nmotw.in//github/stream-generators/"/>
-    <updated>2015-06-05T01:57:12+05:30</updated>
-    <id>http://nmotw.in//github/stream-generators</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/stream-generators">stream-generators</a></p>
+    <title type="html"><![CDATA[enable]]></title>
+    <link href="http://nmotw.in//github/enable/"/>
+    <updated>2015-05-28T21:35:04+05:30</updated>
+    <id>http://nmotw.in//github/enable</id>
+    <content type="html"><![CDATA[<h1><a href="enable">https://www.npmjs.com/package/enable</a></h1>
 
-<blockquote><p>Pipe ES6 Generators through Node.js streams.</p></blockquote>
+<blockquote><p>ES6 and ES7 feature detection.</p></blockquote>
 
-<p>This is a cheeky module authored by <a href="https://twitter.com/mimetnet">@mimetent</a> which takes in a ES6 generator function and returns a readable stream!</p>
+<p>A simple util that would help you to check if the a required ES6 or ES7 is enabled, both in the browser and in CLI.</p>
 
-<p><strong>Install it:</strong> <code>npm install --save stream-geerators</code></p>
+<p><strong>Get it</strong>: <code>npm install --save enable</code></p>
 
 <p><strong>Sample usage:</strong></p>
 
 <p>```js
-var streamify = require('stream-generators'),</p>
+var enable = require('enable');</p>
 
-<pre><code>os = require('os')
-gen = function*() {
-    yield 'Hello ';
-    yield 'ES6 ';
-    yield 'Stream gen';
-    yield os.EOL;
-};
-</code></pre>
+<p>if (enable.<feature>) {
+  console.log(<feature> is supported);
+}</p>
 
-<p>;</p>
-
-<p>streamify(gen).pipe(process.stdout);
+<p>/<em> Example:
+if (enable.generator) {
+  console.log('supports generator: <code>function* a() {}</code>');
+}
+</em>/
 ```</p>
 
-<p>This would output: <code>Hello ES6 Stream gen</code></p>
+<p>_</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[objectmap]]></title>
+    <link href="http://nmotw.in//github/objectmap/"/>
+    <updated>2015-02-05T19:33:17+05:30</updated>
+    <id>http://nmotw.in//github/objectmap</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
+
+<blockquote><p>Use a ES6 map, like an object.</p></blockquote>
+
+<p>This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect API with proxy to make give us a convience method so that maps can be used like an Object.</p>
+
+<p>What other advantages apart from syntax sugar?</p>
+
+<ul>
+<li><p>Iterate it like a regular object with <code>(for in)</code> without worrying about <code>hasOwnProperty</code> checks.</p></li>
+<li><p>Iterate it <code>(for of)</code> you will get arrays of length 2 of both keys and values.</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save objectmap</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>var oMap = require('objectmap');</p>
+
+<p>var map = oMap();</p>
+
+<p>map.answer = 42; // Same as <code>map.set('answer',42);</code></p>
+
+<p>map.answer; // Same as <code>map.get('abc');</code></p>
+
+<p>delete map.abc; // Same as <code>map.delete('abc');</code></p>
+
+<p>```</p>
+
+<p>Caveat: <code>map[3]</code> implies <code>map.set('3')</code> not <code>map.set(3)</code></p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/stream-generators/stream-generators.gif" alt="stream-generators" /></p>
+<p><img src="/images/objectmap/objectmap.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com">Calvin</a> for this useful util :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[degenerator]]></title>
+    <link href="http://nmotw.in//github/degenerator/"/>
+    <updated>2014-05-29T20:22:17+05:30</updated>
+    <id>http://nmotw.in//github/degenerator</id>
+    <content type="html"><![CDATA[<p>Turns sync functions into ES6's async generator functions with <a href="http://n8.io/">Nathan Rajlich's</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
+
+<p>Get it: <code>$ npm install degenerator</code></p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>Say we have few sync function like:</p>
+
+<p>```javascript
+function foo () {
+  return baz();
+}</p>
+
+<p>function bar () {
+  return foo(baz);
+}</p>
+
+<p>function baz () {
+  return bar();
+}
+```</p>
+
+<p>Some degenerator magic!</p>
+
+<p><code>javascript
+var degenerator = require('degenerator')
+var js = fs.readFileSync(sourceName, 'utf8');
+var compiled = (js, ['foo','bar','baz']);
+</code></p>
+
+<p>The complied source would be:</p>
+
+<p>```javascript
+function* foo() {</p>
+
+<pre><code>return yield baz();
+</code></pre>
+
+<p>}
+function* bar() {</p>
+
+<pre><code>return yield foo(baz);
+</code></pre>
+
+<p>}
+function* baz() {</p>
+
+<pre><code>return yield bar();
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
 ]]></content>
   </entry>
   
