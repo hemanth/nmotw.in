@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="musicmetadata is a streaming music metadata parser for node and the browser, but out focus is more on node side here. It's worth noting that this &hellip;">   
+    <meta name="description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/26/">
-    <meta name="twitter:description" content="musicmetadata is a streaming music metadata parser for node and the browser, but out focus is more on node side here. It's worth noting that this &hellip;">
+    <meta name="twitter:description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/26/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="musicmetadata is a streaming music metadata parser for node and the browser, but out focus is more on node side here. It's worth noting that this &hellip;" />
+    <meta property="og:description" content="Test cases always involves mocks and stub, sometimes there will be a need to mock require itself, that where proxyquire comes for our rescue. &hellip;" />
 
     
 
@@ -67,6 +67,125 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/proxyquire/">
+			
+				Proxyquire</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-12T09:21:00+05:30" pubdate data-updated="true">Jun 12<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
+
+<p><a href="http://npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
+
+<p>Installing proxyquire: <code>npm install -D proxyquire</code></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Say we a file <code>baz.js</code> under test and it looks like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">os</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;os&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">os</span><span class="p">.</span><span class="nx">freemem</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It's evident that the return value of this function will never be a constant value.</p>
+
+<p>How do we test it then?</p>
+
+<p>Have a look at the test case:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Get some assertion helper.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">assert</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;assert&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// First up we require proxyquire</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">proxyquire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;proxyquire&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// We make a mock of what we need.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">osStub</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">freemem</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">617619456</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now some magic ;)</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">freemem</span> <span class="o">=</span> <span class="nx">proxyquire</span><span class="p">(</span><span class="s2">&quot;./baz&quot;</span><span class="p">,{</span><span class="s1">&#39;os&#39;</span><span class="o">:</span><span class="nx">osStub</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should return the amount of free memory&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">freemem</span><span class="p">(),</span><span class="mi">6176197456</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That's it! The test case will be green now :)</p>
+
+<p>Proxyquire basically, <a href="https://github.com/thlorenz/proxyquire/blob/master/lib/proxyquire.js#L135">replaces</a> a module's require function.</p>
+
+<p>There are many other features like:</p>
+
+<ul>
+<li>'noCallThru',</li>
+<li>'callThru',</li>
+<li>'noPreserveCache',</li>
+<li>'preserveCache',</li>
+<li>'load'</li>
+</ul>
+
+
+<p>Please feel free to go through their extensive API <a href="https://github.com/thlorenz/proxyquire#api">DOC</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
+
+<p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1104,105 +1223,6 @@
 <p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
 
 <p>Learn to lie this week ;)!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/modmod/">
-			
-				Modmod</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-03T17:32:31+05:30" pubdate data-updated="true">Apr 3<span>rd</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<blockquote><p>"Simplicity is the ultimate sophistication." ― Leonardo da Vinci</p></blockquote>
-
-<p>Just dig into some node-modules you use or the one you released, how many require statements do you have?</p>
-
-<p><a href="http://stephenplusplus.github.io/me-but-you/">Stephen Sawchuk</a> has made require-ing modules less require-y, with his <a href="https://github.com/stephenplusplus/modmod">modmod</a> module!</p>
-
-<p>Installing it is like another other module: <code>npm install modmod</code></p>
-
-<p><strong>How does it help?</strong></p>
-
-<p>It helps you to reduce:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">util</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;util&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">wiredep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wiredep&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;modmod&#39;</span><span class="p">)(</span><span class="s1">&#39;fs&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;util&#39;</span><span class="p">,</span> <span class="s1">&#39;chalk&#39;</span><span class="p">,</span> <span class="s1">&#39;wiredep&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It's just eight lines of code that does the magic:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">builtinLibs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;repl&#39;</span><span class="p">).</span><span class="nx">_builtinLibs</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">).</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">builtinLibs</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">?</span> <span class="nx">key</span> <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">cwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/node_modules/&#39;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">;</span>
-</span><span class='line'>    <span class="nx">acc</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">},</span> <span class="p">{});</span>
-</span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>require('repl')._builtinLibs</code> will give a list of all node buitins, if not in the list, it will look for the <code>node_modules</code> dir in the current working dir and then <code>require</code> the required there by making it less require-y!</p>
-
-<p><strong>Why?</strong></p>
-
-<p>As said by the author:</p>
-
-<p>It's up to you. There's nothing wrong with the current system of multiple var declarations, and having too many isn't a node problem. Regardless, you may still consider it useful to namespace your dependencies under a name of your choosing, such as M or $, freeing up those "global" variables for use without conflicts.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/modmod/modmod.gif" alt="modmod" /></p>
-
-<p>Enjoy your less require-y week ;)</p>
-
-<p>P.S: This module is just six days old! Will need to evolve on things like <a href="https://github.com/stephenplusplus/modmod/issues/4">this.</a> do contribute your ideas to make it more awesome!</p>
 
 		
 		

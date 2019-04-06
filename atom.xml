@@ -4,13 +4,98 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-04-04T19:45:59+05:30</updated>
+  <updated>2019-04-06T16:19:32+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[osenv]]></title>
+    <link href="http://nmotw.in/osenv/"/>
+    <updated>2019-04-06T16:14:07+05:30</updated>
+    <id>http://nmotw.in/osenv</id>
+    <content type="html"><![CDATA[<h1><a href="https://">osenv</a></h1>
+
+<blockquote><p>Look up environment settings.</p></blockquote>
+
+<p><code>osenv</code> a tiny util that which has about <code>6,294,826</code> weekly downloads on npm, helps us in fetching the required <code>evn</code> setting from <code>process.env</code> acorss OS.</p>
+
+<p><strong>Get it:</strong> <code>npm installl osenv</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;osenv&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">prompt</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">hostname</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">tmpdir</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">home</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">path</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">editor</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
+</span><span class='line'>  <span class="nx">shell</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">osenv</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;osenv&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">path</span><span class="p">()</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">user</span><span class="p">()</span>
+</span><span class='line'><span class="c1">// etc.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Some things are not reliably in the env, and have a fallback command:</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">hostname</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">er</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">h</span> <span class="o">=</span> <span class="nx">hostname</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'><span class="c1">// This will still cause it to be memoized, so calling osenv.hostname()</span>
+</span><span class='line'><span class="c1">// is now an immediate operation.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// You can always send a cb, which will get called in the nextTick</span>
+</span><span class='line'><span class="c1">// if it&#39;s been memoized, or wait for the fallback data if it wasn&#39;t</span>
+</span><span class='line'><span class="c1">// found in the environment.</span>
+</span><span class='line'><span class="nx">osenv</span><span class="p">.</span><span class="nx">hostname</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">er</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">er</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;error looking up hostname&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;this machine calls itself %s&#39;</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/osenv/osenv.gif" alt="osenv" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[eshost-cli]]></title>
@@ -1495,86 +1580,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/progress-estimator/progress-estimator.gif" alt="progress-estimator" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[query-state]]></title>
-    <link href="http://nmotw.in/query-state/"/>
-    <updated>2018-11-22T16:09:44+05:30</updated>
-    <id>http://nmotw.in/query-state</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
-
-<blockquote><p>Application state in query string.</p></blockquote>
-
-<p><code>query-state</code> is a cheeky module that uses <code>history</code> API and <code>encodeURIComponent</code> magic to maintain the application state in the query string.</p>
-
-<p><strong>Get it:</strong> <code>npm install query-state</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">queryState</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;query-state&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// create a new query state instance</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">qs</span> <span class="o">=</span> <span class="nx">queryState</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// get current application state from the hash string:</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">appState</span> <span class="o">=</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// you can also monitor for changes in the query string:</span>
-</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">onChange</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">appState</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="c1">// prints new application state on each hash update</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;app state changed!&#39;</span><span class="p">,</span> <span class="nx">appState</span><span class="p">);</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// If you want to set a new value in the app state:</span>
-</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;answer&#39;</span><span class="p">,</span> <span class="mi">42</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Now the query string will have `answer=42` part in it.</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;answer=42&#39;</span><span class="p">))</span> <span class="c1">// prints value &gt; 0.</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// You can also set multiple values at once:</span>
-</span><span class='line'><span class="nx">qs</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Haddaway&#39;</span><span class="p">,</span>
-</span><span class='line'>  <span class="nx">song</span><span class="o">:</span> <span class="s1">&#39;What is love?&#39;</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// NOTE: The call above merges new properties. It appends two new properties to </span>
-</span><span class='line'><span class="c1">// the current query string</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/query-state/query-state.gif" alt="query-state" /></p>
 ]]></content>
   </entry>
   
