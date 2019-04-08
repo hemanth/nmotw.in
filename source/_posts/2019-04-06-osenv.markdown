@@ -1,0 +1,56 @@
+---
+layout: post
+title: "osenv"
+date: 2019-04-06 16:14:07 +0530
+comments: true
+categories: util
+---
+
+#[osenv](https://www.npmjs.com/package/osenv)
+> Look up environment settings.
+
+`osenv` a tiny util that which has about `6,294,826` weekly downloads on npm, helps us in fetching the required `evn` setting from `process.env` acorss OS.
+
+__Get it:__ `npm installl osenv`
+
+__Sample usage:__
+
+
+```js
+> require('osenv')
+{ user: [Function],
+  prompt: [Function],
+  hostname: [Function],
+  tmpdir: [Function],
+  home: [Function],
+  path: [Function],
+  editor: [Function],
+  shell: [Function] }
+```
+
+```js
+const osenv = require('osenv')
+const path = osenv.path()
+const user = osenv.user()
+// etc.
+ 
+// Some things are not reliably in the env, and have a fallback command:
+let h = osenv.hostname(function (er, hostname) {
+  h = hostname
+})
+// This will still cause it to be memoized, so calling osenv.hostname()
+// is now an immediate operation.
+ 
+// You can always send a cb, which will get called in the nextTick
+// if it's been memoized, or wait for the fallback data if it wasn't
+// found in the environment.
+osenv.hostname(function (er, hostname) {
+  if (er) console.error('error looking up hostname')
+  else console.log('this machine calls itself %s', hostname)
+})
+
+```
+
+__GIF FTW!__
+
+![osenv](/images/osenv/osenv.gif)
