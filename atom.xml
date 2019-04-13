@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-04-14T00:20:22+05:30</updated>
+  <updated>2019-04-14T00:26:20+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -21,7 +21,7 @@
 
 <blockquote><p><code>*-wildcard</code> style glob to R.E</p></blockquote>
 
-<p><code>glob-to-regexp</code> helps us in covering *-wildcard style glob to RE, as in <code>"*.min.js"</code> to <code>/^.*\.min\.js$/</code>.</p>
+<p><code>glob-to-regexp</code> helps us in converting *-wildcard style glob to RE, as in <code>"*.min.js"</code> to <code>/^.*\.min\.js$/</code>.</p>
 
 <p><strong>Get it:</strong> <code>npm install glob-to-regexp</code></p>
 
