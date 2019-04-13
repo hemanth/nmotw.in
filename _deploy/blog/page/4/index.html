@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="MapSCII The Whole World In Your Console! MapSCII make major use of @mapbox/vector-tile to bring the entire world map to your console. Get it: npm &hellip;">   
+    <meta name="description" content="please-upgrade-node 💁 show a message to your users to upgrade Node instead of a stacktrace please-upgrade-nodechecks if the users node version is &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="MapSCII The Whole World In Your Console! MapSCII make major use of @mapbox/vector-tile to bring the entire world map to your console. Get it: npm &hellip;">
+    <meta name="twitter:description" content="please-upgrade-node 💁 show a message to your users to upgrade Node instead of a stacktrace please-upgrade-nodechecks if the users node version is &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="MapSCII The Whole World In Your Console! MapSCII make major use of @mapbox/vector-tile to bring the entire world map to your console. Get it: npm &hellip;" />
+    <meta property="og:description" content="please-upgrade-node 💁 show a message to your users to upgrade Node instead of a stacktrace please-upgrade-nodechecks if the users node version is &hellip;" />
 
     
 
@@ -67,6 +67,93 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/please-upgrade-node/">
+			
+				Please-upgrade-node</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-23T15:42:17+05:30" pubdate data-updated="true">Sep 23<span>rd</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
+
+<blockquote><p>💁 show a message to your users to upgrade Node instead of a stacktrace</p></blockquote>
+
+<p><code>please-upgrade-node</code>checks if the users node version is statisfying the <code>engines</code> version in your <code>package.json</code> if not warns, uber useful for CLI apps relying on versions.</p>
+
+<p><strong>GET IT:</strong> <code>npm install please-upgrade-node</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">pkg</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./package.json&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;please-upgrade-node&#39;</span><span class="p">)(</span><span class="nx">pkg</span><span class="p">)</span> <span class="c1">// &lt;- Must run BEFORE requiring any other modules</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in <code>package.json</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="s2">&quot;engines&quot;</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;&gt;=6&quot;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: <code>&gt;=</code> is the only operator supported.</p>
+
+<p>You could also:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">pleaseUpgradeNode</span><span class="p">(</span><span class="nx">pkg</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">exitCode</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// Default: 1</span>
+</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">requiredVersion</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;Oops this program require Node &#39;</span> <span class="o">+</span>  <span class="nx">requiredVersion</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -995,94 +1082,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/time-stamp/time-stamp.gif" alt="time-stamp" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/proxymise/">
-			
-				Proxymise</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-07-15T15:52:27+05:30" pubdate data-updated="true">Jul 15<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
-
-<blockquote><p>Chainable Promise Proxy.</p></blockquote>
-
-<p><code>proxymise</code> makes cheeky use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a> API and provides a high dose of syntax sugar in chaining promises.</p>
-
-<p><strong>Get it:</strong> <code>npm install proxymise</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>const proxymise = require('proxymise');</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// Instead of thens
-</span><span class='line'>foo.then(value =&gt; value.bar())
-</span><span class='line'>  .then(value =&gt; value.baz())
-</span><span class='line'>  .then(value =&gt; value.qux)
-</span><span class='line'>  .then(value =&gt; console.log(value));</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// Instead of awaits
-</span><span class='line'>const value1 = await foo;
-</span><span class='line'>const value2 = await value1.bar();
-</span><span class='line'>const value3 = await value2.baz();
-</span><span class='line'>const value4 = await value3.qux;
-</span><span class='line'>console.log(value4);</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// Use proxymise
-</span><span class='line'>const value = await proxymise(foo).bar().baz().qux;
-</span><span class='line'>console.log(value);</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/proxymise/proxymise.gif" alt="proxymise" /></p>
 
 		
 		
