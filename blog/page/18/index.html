@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;">   
+    <meta name="description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;">
+    <meta name="twitter:description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="ineed Web scraping and HTML-reprocessing. The easy way. ineed allows you collect useful data from web pages using simple and nice API. It doesn't &hellip;" />
+    <meta property="og:description" content="fp-dom A collection of functions to favor functional programming in a DOM context. DOM operations in a functional way with fp-dom, it provides &hellip;" />
 
     
 
@@ -67,6 +67,88 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/fp-dom/">
+			
+				Fp-dom</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-14T22:22:27+05:30" pubdate data-updated="true">Jan 14<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
+
+<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
+
+<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
+
+<ul>
+<li>animate</li>
+<li>append</li>
+<li>addClass</li>
+<li>removeClass</li>
+<li>toggleClass</li>
+<li>hasClass</li>
+<li>contains</li>
+<li>elem</li>
+<li>insertAfter</li>
+<li>insertBefore</li>
+<li>interval</li>
+<li>isdom</li>
+<li>isvdom</li>
+<li>listen</li>
+<li>prepend</li>
+<li>replace</li>
+<li>select</li>
+<li>selectOne</li>
+<li>setattr</li>
+<li>timeout</li>
+<li>velem</li>
+</ul>
+
+
+<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">fpdom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fp-dom&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">appendtoBody</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">),</span>
+</span><span class='line'>  <span class="nx">h1</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">elem</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span><span class="s1">&#39;meow&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">appendtoBody</span><span class="p">(</span><span class="nx">h1</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -818,61 +900,6 @@ confirmation or alter the users in a more appealing manner.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/debounce/debounce.gif" alt="debounce.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/prettysize/">
-			
-				Prettysize</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-11-05T18:31:20+05:30" pubdate data-updated="true">Nov 5<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="https://www.npmjs.com/package/prettysize">prettysize</a></p>
-
-<blockquote><p>Convert bytes to other sizes for prettier logging.</p></blockquote>
-
-<p>In just 45 lines of code, this cheeky module by <a href="https://twitter.com/davglass">@davlgass</a> makes it easy to humanize file sizes.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save prettysize</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<div id="prettysize">
-var pretty = require('prettysize');
-var str = pretty(123456789);
-</div>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/prettysize/prettysize.gif" alt="prettysize" /></p>
-
-<script src="https://embed.tonicdev.com" data-element-id="prettysize"></script>
-
-
-
 
 		
 		
