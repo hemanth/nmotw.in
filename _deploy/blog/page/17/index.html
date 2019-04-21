@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">   
+    <meta name="description" content="phuzzy Perform a fuzzy filter on a collection of items. 8 lines of code with some help from lodash.escaperegexp this is a cheeky module that helps &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/17/">
-    <meta name="twitter:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">
+    <meta name="twitter:description" content="phuzzy Perform a fuzzy filter on a collection of items. 8 lines of code with some help from lodash.escaperegexp this is a cheeky module that helps &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/17/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;" />
+    <meta property="og:description" content="phuzzy Perform a fuzzy filter on a collection of items. 8 lines of code with some help from lodash.escaperegexp this is a cheeky module that helps &hellip;" />
 
     
 
@@ -67,6 +67,81 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/phuzzy/">
+			
+				Phuzzy</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-24T21:26:50+05:30" pubdate data-updated="true">Mar 24<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/phuzzy">phuzzy</a></h1>
+
+<blockquote><p>Perform a fuzzy filter on a collection of items.</p></blockquote>
+
+<p>8 lines of code with some help from <code>lodash.escaperegexp</code> this is a cheeky module that helps you with your fuzzy filtering!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save phuzzy</code></p>
+
+<p><strong>Function Signature:</strong> <code>phuzzy(collection, search[, pick])</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">phuzzy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;phuzzy&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">phuzzy</span><span class="p">([</span><span class="s1">&#39;addy&#39;</span><span class="p">,</span><span class="s1">&#39;passy&#39;</span><span class="p">,</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">],</span> <span class="s1">&#39;y&#39;</span><span class="p">);</span> <span class="c1">// [&#39;addy&#39;, &#39;passy&#39;];</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">documents</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Hello World&#39;</span> <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Hello Lucy&#39;</span> <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Hello Maria&#39;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">phuzzy</span><span class="p">(</span><span class="nx">documents</span><span class="p">,</span> <span class="s1">&#39;Lu&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">);</span> <span class="p">[</span> <span class="p">{</span> <span class="nx">text</span><span class="o">:</span> <span class="s1">&#39;Hello Lucy&#39;</span> <span class="p">}</span> <span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">phuzzy</span><span class="p">(</span><span class="nx">documents</span><span class="p">,</span> <span class="s1">&#39;maria&#39;</span><span class="p">,</span> <span class="nx">item</span> <span class="o">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">text</span><span class="p">)</span> <span class="c1">// [ { text: &#39;Hello Maria&#39; } ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/phuzzy/phuzzy.gif" alt="phuzzy" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -913,88 +988,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/iron-node/iron-node.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fp-dom/">
-			
-				Fp-dom</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-01-14T22:22:27+05:30" pubdate data-updated="true">Jan 14<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fp-dom">fp-dom</a></h1>
-
-<blockquote><p>A collection of functions to favor functional programming in a DOM context.</p></blockquote>
-
-<p>DOM operations in a functional way with <code>fp-dom</code>, it provides support for the below methods:</p>
-
-<ul>
-<li>animate</li>
-<li>append</li>
-<li>addClass</li>
-<li>removeClass</li>
-<li>toggleClass</li>
-<li>hasClass</li>
-<li>contains</li>
-<li>elem</li>
-<li>insertAfter</li>
-<li>insertBefore</li>
-<li>interval</li>
-<li>isdom</li>
-<li>isvdom</li>
-<li>listen</li>
-<li>prepend</li>
-<li>replace</li>
-<li>select</li>
-<li>selectOne</li>
-<li>setattr</li>
-<li>timeout</li>
-<li>velem</li>
-</ul>
-
-
-<p><strong>Get it</strong>: <code>npm install --save fp-dom</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">fpdom</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fp-dom&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">appendtoBody</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">),</span>
-</span><span class='line'>  <span class="nx">h1</span> <span class="o">=</span> <span class="nx">fpdom</span><span class="p">.</span><span class="nx">elem</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span><span class="s1">&#39;meow&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">appendtoBody</span><span class="p">(</span><span class="nx">h1</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fp-dom/fp-dom.gif" alt="fp-dom" /></p>
 
 		
 		
