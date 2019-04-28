@@ -4,13 +4,154 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-04-21T12:34:05+05:30</updated>
+  <updated>2019-04-28T15:54:20+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[heresy]]></title>
+    <link href="http://nmotw.in/heresy/"/>
+    <updated>2019-04-28T15:42:31+05:30</updated>
+    <id>http://nmotw.in/heresy</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/heresy">heresey</a></h1>
+
+<blockquote><p>React like Custom Elements.</p></blockquote>
+
+<p><code>heresey</code> makes good use of <code>domtagger</code>, <code>hyperHTML</code>, <code>smartDiff</code> and <code>lighterhtml</code> to provide React like feeling to Custom Elements.</p>
+
+<p>Mail gaols for <code>heresey</code> :</p>
+
+<ul>
+<li>declared elements are the instance you'd expect (no virtual, no facade)</li>
+<li>declared elements can be of any kind (table, tr, select, option, ...)</li>
+<li>any attribute change, or node lifecycle, can be tracked via VQ API (no componentDidMount and friends)</li>
+<li>no redundant dom nodes, no ghost fragments, a clean as possible output</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install heresey</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">define</span><span class="p">,</span> <span class="nx">html</span><span class="p">,</span> <span class="nx">render</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;heresy&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">class</span> <span class="nx">MyButton</span> <span class="kr">extends</span> <span class="nx">HTMLButtonElement</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// the only mandatory static field</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;button&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) intercepts some attribute (any value)</span>
+</span><span class='line'>  <span class="nx">set</span> <span class="nx">props</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">_props</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nx">get</span> <span class="nx">props</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_props</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) render once connected</span>
+</span><span class='line'>  <span class="nx">connectedCallback</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) populate this button content</span>
+</span><span class='line'>  <span class="c1">//            (kinda useless with void elements such img, input, ...)</span>
+</span><span class='line'>  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// this.html or this.svg are provided automatically</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">html</span><span class="err">`</span><span class="nx">Click</span> <span class="nx">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="err">`</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// define the custom element (class name mandatory too)</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="nx">MyButton</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// populate some node</span>
+</span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">html</span><span class="err">`</span><span class="o">&lt;</span><span class="nx">MyButton</span> <span class="nx">props</span><span class="o">=</span><span class="nx">$</span><span class="p"></span> <span class="o">/&gt;</span><span class="err">`</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">define</span><span class="p">,</span> <span class="nx">html</span><span class="p">,</span> <span class="nx">render</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;heresy&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a div</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">Div</span> <span class="kr">extends</span> <span class="nx">HTMLDivElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;div&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a paragraph</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">P</span> <span class="kr">extends</span> <span class="nx">HTMLParagraphElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;p&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a h1</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">H1</span> <span class="kr">extends</span> <span class="nx">HTMLHeadingElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;h1&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">html</span><span class="err">`</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">Div</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">H1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">there</span><span class="o">&lt;</span><span class="err">/H1&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">P</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">how</span> <span class="nx">custom</span> <span class="nx">elements</span> <span class="nx">look</span> <span class="nx">via</span> <span class="nx">heresy</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/P&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">P</span><span class="o">&gt;</span><span class="nx">Isn</span><span class="err">&#39;</span><span class="nx">t</span> <span class="k">this</span> <span class="nx">awesome</span><span class="o">?&lt;</span><span class="err">/P&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/Div&gt;</span>
+</span><span class='line'><span class="err">`</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/heresy/heresy.gif" alt="heresy.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[fetch-mock]]></title>
@@ -1479,74 +1620,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/intl-tel-input/intl-tel-input.gif" alt="intl-tel-input" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[@glorious/demo]]></title>
-    <link href="http://nmotw.in/glorious-demo/"/>
-    <updated>2018-12-14T23:37:14+05:30</updated>
-    <id>http://nmotw.in/glorious-demo</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/@glorious/demo">@glorious/demo</a></h1>
-
-<blockquote><p>The easiest way to demonstrate your code in action.</p></blockquote>
-
-<p><code>@glorious/demo</code> a uniq node module that helps in demonstrating your code in action!</p>
-
-<p><strong>Get it:</strong> <code>npm install @glorious/demo --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="s1">&#39;@glorious/demo/gdemo.min.css&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="kr">import</span> <span class="nx">GDemo</span> <span class="nx">from</span> <span class="s1">&#39;@glorious/demo&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">demo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GDemo</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="err">`</span>
-</span><span class='line'><span class="kd">function</span> <span class="nx">greet</span><span class="p">(){</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">greet</span><span class="p">();</span>
-</span><span class='line'><span class="err">`</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">demo</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;editor&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">windowTitle</span><span class="o">:</span> <span class="s1">&#39;demo.js&#39;</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">1500</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">openApp</span><span class="p">(</span><span class="s1">&#39;terminal&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">minHeight</span><span class="o">:</span> <span class="s1">&#39;350px&#39;</span><span class="p">,</span> <span class="nx">promptString</span><span class="o">:</span> <span class="s1">&#39;$&#39;</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;node ./demo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">onCompleteDelay</span><span class="o">:</span> <span class="mi">500</span><span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">respond</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">command</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: Don't miss to playaround with the <a href="https://glorious.codes/demo?demo=Y29uc3QgZ2RlbW8gPSBuZXcgR0RlbW8oJ1tkYXRhLWRlbW8tY29udGFpbmVyXScpOwoKY29uc3QgY29kZSA9ICdjb25zb2xlLmxvZygibm1vdHcuaW4hIik7JwoKY29uc3QgaGlnaGxpZ2h0ZWRDb2RlID0gUHJpc20uaGlnaGxpZ2h0KAogIGNvZGUsCiAgUHJpc20ubGFuZ3VhZ2VzLmphdmFzY3JpcHQsCiAgJ2phdmFzY3JpcHQnCik7CgpnZGVtbwogIC5vcGVuQXBwKCdlZGl0b3InLCB7IG1pbkhlaWdodDogJzQwMHB4Jywgd2luZG93VGl0bGU6ICdkZW1vLmpzJyB9KQogIC53cml0ZShoaWdobGlnaHRlZENvZGUsIHsgb25Db21wbGV0ZURlbGF5OiAyMDAwIH0pCiAgLm9wZW5BcHAoJ3Rlcm1pbmFsJywgeyBtaW5IZWlnaHQ6ICc0MDBweCcsIHByb21wdFN0cmluZzogJyQnIH0pCiAgLmNvbW1hbmQoJ25vZGUgLi9kZW1vJykKICAucmVzcG9uZCgnbm1vdHcuaW4hJykKICAuY29tbWFuZCgnJykKICAuZW5kKCk7Cg==">demo</a>.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/glorious-demo/glorious-demo.gif" alt="@glorious/demo" /></p>
 ]]></content>
   </entry>
   
