@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;">   
+    <meta name="description" content="heresey React like Custom Elements. heresey makes good use of domtagger, hyperHTML, smartDiff and lighterhtml to provide React like feeling to &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;">
+    <meta name="twitter:description" content="heresey React like Custom Elements. heresey makes good use of domtagger, hyperHTML, smartDiff and lighterhtml to provide React like feeling to &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;" />
+    <meta property="og:description" content="heresey React like Custom Elements. heresey makes good use of domtagger, hyperHTML, smartDiff and lighterhtml to provide React like feeling to &hellip;" />
 
     
 
@@ -67,6 +67,170 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/heresy/">
+			
+				Heresy</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-04-28T15:42:31+05:30" pubdate data-updated="true">Apr 28<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/heresy">heresey</a></h1>
+
+<blockquote><p>React like Custom Elements.</p></blockquote>
+
+<p><code>heresey</code> makes good use of <code>domtagger</code>, <code>hyperHTML</code>, <code>smartDiff</code> and <code>lighterhtml</code> to provide React like feeling to Custom Elements.</p>
+
+<p>Mail gaols for <code>heresey</code> :</p>
+
+<ul>
+<li>declared elements are the instance you'd expect (no virtual, no facade)</li>
+<li>declared elements can be of any kind (table, tr, select, option, ...)</li>
+<li>any attribute change, or node lifecycle, can be tracked via VQ API (no componentDidMount and friends)</li>
+<li>no redundant dom nodes, no ghost fragments, a clean as possible output</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install heresey</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">define</span><span class="p">,</span> <span class="nx">html</span><span class="p">,</span> <span class="nx">render</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;heresy&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">class</span> <span class="nx">MyButton</span> <span class="kr">extends</span> <span class="nx">HTMLButtonElement</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// the only mandatory static field</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;button&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) intercepts some attribute (any value)</span>
+</span><span class='line'>  <span class="nx">set</span> <span class="nx">props</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">_props</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>  <span class="nx">get</span> <span class="nx">props</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_props</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) render once connected</span>
+</span><span class='line'>  <span class="nx">connectedCallback</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// (optional) populate this button content</span>
+</span><span class='line'>  <span class="c1">//            (kinda useless with void elements such img, input, ...)</span>
+</span><span class='line'>  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// this.html or this.svg are provided automatically</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">html</span><span class="err">`</span><span class="nx">Click</span> <span class="nx">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">!</span><span class="err">`</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// define the custom element (class name mandatory too)</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="nx">MyButton</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// populate some node</span>
+</span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">html</span><span class="err">`</span><span class="o">&lt;</span><span class="nx">MyButton</span> <span class="nx">props</span><span class="o">=</span><span class="nx">$</span><span class="p"></span> <span class="o">/&gt;</span><span class="err">`</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">define</span><span class="p">,</span> <span class="nx">html</span><span class="p">,</span> <span class="nx">render</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;heresy&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a div</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">Div</span> <span class="kr">extends</span> <span class="nx">HTMLDivElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;div&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a paragraph</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">P</span> <span class="kr">extends</span> <span class="nx">HTMLParagraphElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;p&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// a h1</span>
+</span><span class='line'><span class="nx">define</span><span class="p">(</span><span class="kr">class</span> <span class="nx">H1</span> <span class="kr">extends</span> <span class="nx">HTMLHeadingElement</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kr">static</span> <span class="nx">get</span> <span class="nx">tagName</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;h1&#39;</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">html</span><span class="err">`</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">Div</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">H1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">there</span><span class="o">&lt;</span><span class="err">/H1&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">P</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">how</span> <span class="nx">custom</span> <span class="nx">elements</span> <span class="nx">look</span> <span class="nx">via</span> <span class="nx">heresy</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/P&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">P</span><span class="o">&gt;</span><span class="nx">Isn</span><span class="err">&#39;</span><span class="nx">t</span> <span class="k">this</span> <span class="nx">awesome</span><span class="o">?&lt;</span><span class="err">/P&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/Div&gt;</span>
+</span><span class='line'><span class="err">`</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/heresy/heresy.gif" alt="heresy.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1053,151 +1217,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/abort-controller/abort-controller.gif" alt="abort-controller" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/package-size/">
-			
-				Package-size</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-02-13T00:21:28+05:30" pubdate data-updated="true">Feb 13<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
-
-<blockquote><p>Get the bundle size of an npm packages.</p></blockquote>
-
-<p><code>package-size</code> is a sweet CLI util, that gives us info about the bundle size of npm packages.</p>
-
-<p><strong>What it does?</strong></p>
-
-<ul>
-<li>Install the packages to a temp directory.</li>
-<li>Bundle the packages with webpack and get the bundle size.</li>
-<li>Show you the bundle size and cache it by package version.</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g package-size</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># get the size of vue bundle</span>
-</span><span class='line'>package-size vue
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of react+react-dom bundle</span>
-</span><span class='line'>package-size react,react-dom
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of vue react+react-dom preact bundles</span>
-</span><span class='line'>package-size vue react,react-dom preact
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of react+react-dom without using the cache</span>
-</span><span class='line'>package-size react,react-dom --no-cache
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of file in current working directory</span>
-</span><span class='line'>package-size ./dist/index.js
-</span><span class='line'><span class="c"># or a package in current working directory, explictly using `--cwd` flag</span>
-</span><span class='line'>package-size vue --cwd
-</span><span class='line'>
-</span><span class='line'><span class="c"># or event multiple versions for the same package!</span>
-</span><span class='line'>package-size react@0.10 react@0.14 react@15
-</span><span class='line'>
-</span><span class='line'><span class="c"># save results to file system in JSON format</span>
-</span><span class='line'><span class="c"># defaults to ./package-size-output.json</span>
-</span><span class='line'>package-size cherow --output
-</span><span class='line'><span class="c"># or custom path</span>
-</span><span class='line'>package-size cherow --output stats.json
-</span><span class='line'>
-</span><span class='line'><span class="c"># analyze bundle with webpack-bundle-analyzer</span>
-</span><span class='line'>package-size cherow --analyze
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">getSizes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;package-size&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">getSizes</span><span class="p">(</span><span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-</span><span class='line'>    <span class="c1">//=&gt;</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">size</span><span class="o">:</span> <span class="mi">12023</span><span class="p">,</span> <span class="c1">// in bytes</span>
-</span><span class='line'>      <span class="nx">minified</span><span class="o">:</span> <span class="mi">2342</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">gzipped</span><span class="o">:</span> <span class="mi">534</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">versionedName</span><span class="o">:</span> <span class="s1">&#39;react@16.0.0,react-dom@16.0.0&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/package-size/package-size.gif" alt="" /></p>
 
 		
 		
