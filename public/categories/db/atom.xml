@@ -4,7 +4,7 @@
   <title><![CDATA[Category: db | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/db/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-04-28T15:54:20+05:30</updated>
+  <updated>2019-05-04T10:35:00+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sql.js]]></title>
+    <link href="http://nmotw.in//github/sql.js/"/>
+    <updated>2019-05-04T10:25:55+05:30</updated>
+    <id>http://nmotw.in//github/sql.js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
+
+<blockquote><p>SQLite compiled to javascript</p></blockquote>
+
+<p><code>sql.js</code> is a port of <code>SQLite</code> to <code>Webassembly</code>, by compiling the SQLite C code with Emscripten.</p>
+
+<p>There are no C bindings or node-gyp compilation here, sql.js is a simple javascript file, that can be used like any traditional javascript library!</p>
+
+<p><strong>Get it:</strong> <code>npm install sql.js</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+DROP TABLE IF EXISTS employees;
+CREATE TABLE employees( id          integer,  name    text,</p>
+
+<pre><code>                      designation text,     manager integer,
+                      hired_on    date,     salary  integer,
+                      commission  float,    dept    integer);
+</code></pre>
+
+<p>INSERT INTO employees VALUES (1,'JOHNSON','ADMIN',6,'1990-12-17',18000,NULL,4);
+INSERT INTO employees VALUES (2,'HARDING','MANAGER',9,'1998-02-02',52000,300,3);
+INSERT INTO employees VALUES (3,'TAFT','SALES I',2,'1996-01-02',25000,500,3);
+INSERT INTO employees VALUES (4,'HOOVER','SALES I',2,'1990-04-02',27000,NULL,3);</p>
+
+<p>SELECT name,hired_on FROM employees ORDER BY hired_on;</p>
+
+<p>```</p>
+
+<p>Would output something like:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>name</th>
+<th>hired_on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>HOOVER</td>
+<td>1990-04-02|</td>
+</tr>
+<tr>
+<td></td>
+<td>JOHNSON</td>
+<td>1990-12-17|</td>
+</tr>
+<tr>
+<td></td>
+<td>TAFT</td>
+<td>1996-01-02|</td>
+</tr>
+<tr>
+<td></td>
+<td>HARDING</td>
+<td>1998-02-02|</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/sql.js/sql.js.gif" alt="sql.js" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[lowdb]]></title>
