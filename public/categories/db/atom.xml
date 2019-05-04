@@ -4,7 +4,7 @@
   <title><![CDATA[Category: db | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/db/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-05-04T10:35:00+05:30</updated>
+  <updated>2019-05-04T10:39:52+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -32,11 +32,11 @@
 
 <p>```js
 DROP TABLE IF EXISTS employees;
-CREATE TABLE employees( id          integer,  name    text,</p>
+CREATE TABLE employees( id integer,  name text,</p>
 
-<pre><code>                      designation text,     manager integer,
-                      hired_on    date,     salary  integer,
-                      commission  float,    dept    integer);
+<pre><code>                    designation text,     manager integer,
+                    hired_on    date,     salary  integer,
+                    commission  float,    dept    integer);
 </code></pre>
 
 <p>INSERT INTO employees VALUES (1,'JOHNSON','ADMIN',6,'1990-12-17',18000,NULL,4);
