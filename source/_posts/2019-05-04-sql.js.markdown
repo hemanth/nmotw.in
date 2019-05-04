@@ -1,0 +1,49 @@
+---
+layout: post
+title: "sql.js"
+date: 2019-05-04 10:25:55 +0530
+comments: true
+categories: util db 
+alias: [/sql.js/index.html]
+---
+
+#[sql.js](https://www.npmjs.com/package/sql.js)
+>SQLite compiled to javascript
+
+`sql.js` is a port of `SQLite` to `Webassembly`, by compiling the SQLite C code with Emscripten. 
+
+There are no C bindings or node-gyp compilation here, sql.js is a simple javascript file, that can be used like any traditional javascript library!
+
+__Get it:__ `npm install sql.js`
+
+__Sample usage:__
+
+```js
+DROP TABLE IF EXISTS employees;
+CREATE TABLE employees( id integer,  name text,
+                        designation text,     manager integer,
+                        hired_on    date,     salary  integer,
+                        commission  float,    dept    integer);
+
+INSERT INTO employees VALUES (1,'JOHNSON','ADMIN',6,'1990-12-17',18000,NULL,4);
+INSERT INTO employees VALUES (2,'HARDING','MANAGER',9,'1998-02-02',52000,300,3);
+INSERT INTO employees VALUES (3,'TAFT','SALES I',2,'1996-01-02',25000,500,3);
+INSERT INTO employees VALUES (4,'HOOVER','SALES I',2,'1990-04-02',27000,NULL,3);
+
+
+SELECT name,hired_on FROM employees ORDER BY hired_on;
+
+```
+
+Would output something like:
+
+|name|hired_on|
+|--- |--- |
+|HOOVER|1990-04-02|
+|JOHNSON|1990-12-17|
+|TAFT|1996-01-02|
+|HARDING|1998-02-02|
+
+__GIT FTW!__
+
+![sql.js](/images/sql.js/sql.js.gif)

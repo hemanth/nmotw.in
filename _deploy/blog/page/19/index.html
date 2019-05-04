@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="debounce debounce a function. Creates and returns a new debounced version of the passed function that will postpone its execution until after wait &hellip;">   
+    <meta name="description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/19/">
-    <meta name="twitter:description" content="debounce debounce a function. Creates and returns a new debounced version of the passed function that will postpone its execution until after wait &hellip;">
+    <meta name="twitter:description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/19/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="debounce debounce a function. Creates and returns a new debounced version of the passed function that will postpone its execution until after wait &hellip;" />
+    <meta property="og:description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;" />
 
     
 
@@ -67,6 +67,83 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/notie/">
+			
+				Notie</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-19T15:26:38+05:30" pubdate data-updated="true">Nov 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/notie">notie</a></h1>
+
+<blockquote><p>A simple notification plugin.</p></blockquote>
+
+<p><code>notie</code> - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an input,
+confirmation or alter the users in a more appealing manner.</p>
+
+<p>It's uses material design, you can override or add styling in a separate <code>.css</code> file.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save notie</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">notie</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;notie);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.alert(style_number, &#39;</span><span class="nx">message</span><span class="s1">&#39;, time_in_seconds);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.confirm(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Yes</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">No</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, yes_callback);</span>
+</span><span class='line'>
+</span><span class='line'><span class="s1">notie.input(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Submit</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Cancel</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">type</span><span class="s1">&#39;, &#39;</span><span class="nx">placeholder</span><span class="s1">&#39;, submit_callback, &#39;</span><span class="nx">Optional</span> <span class="nx">pre</span><span class="o">-</span><span class="nx">filled</span> <span class="nx">value</span><span class="err">&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">notie</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="s1">&#39;What city do you live in?&#39;</span><span class="p">,</span> <span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="s1">&#39;Cancel&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;Enter your city:&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value_entered</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">notie</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;You entered: &#39;</span> <span class="o">+</span> <span class="nx">value_entered</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="s1">&#39;New York&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: <code>style_number</code> -> <code>{1,2,3,4}</code> &lt;=> <code>{Success, Warning, Error, Information}</code></p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/notie/notie.gif" alt="notie" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -869,104 +946,6 @@ you need to just <code>require('instapromise')</code> and then you could just us
 <h2>License</h2>
 
 <p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/npm-check/">
-			
-				Npm-check</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-10T19:58:00+05:30" pubdate data-updated="true">Sep 10<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/npm-check">npm-check</a></h1>
-
-<blockquote><p>Check for outdated, incorrect, and unused dependencies.</p></blockquote>
-
-<p><strong>Features:</strong></p>
-
-<ul>
-<li><em>Interactive Update</em> means less typing.</li>
-<li>Scoped packages support for the modern npm user.</li>
-<li>Works with public and private registries.</li>
-<li>Won't query npm registry for packages with <code>private: true</code>.</li>
-<li>Kindly informs you if a dependency is not being used.</li>
-<li>Emoji in a command-line app, because command-line apps can be fun too.</li>
-</ul>
-
-
-<p>Very much similar to <a href="http://nmotw.in/npm-check-updates/">npm-check-updates</a> but far more generic and interactive!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g npm-check</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm-check --help
-</span><span class='line'>
-</span><span class='line'>  Usage: npm-check <span class="o">[</span>options<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>  Options:
-</span><span class='line'>
-</span><span class='line'>    -h, --help         output usage information
-</span><span class='line'>    -V, --version      output the version number
-</span><span class='line'>    -u, --update       Interactive update.
-</span><span class='line'>    -g, --global       Look at global modules.
-</span><span class='line'>    -s, --skip-unused  Skip check <span class="k">for </span>unused packages.
-</span><span class='line'>    -p, --production   Ignore devDependencies.
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">npmCheck</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npm-check&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">npmCheck</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/npm-check/npm-check.gif" alt="npm-check" /></p>
-
-<p>Thanks to <a href="https://twitter.com/dylang">@dylang</a> for <code>npm-check</code>.</p>
 
 		
 		
