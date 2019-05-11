@@ -4,13 +4,67 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-05-04T10:39:52+05:30</updated>
+  <updated>2019-05-12T04:17:27+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fluture]]></title>
+    <link href="http://nmotw.in/fluture/"/>
+    <updated>2019-05-12T02:35:08+05:30</updated>
+    <id>http://nmotw.in/fluture</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
+
+<blockquote><p>🦋 Fantasy Land compliant (monadic) alternative to Promises.</p></blockquote>
+
+<p>Fluture offers a control structure similar to Promises, Tasks, Deferreds, and what-have-you, the lib just terms it <code>Futures</code>.</p>
+
+<p><code>Futures</code> represent the value arising from the success or failure of an asynchronous operation they are lazy and adhere to the monadic interface.</p>
+
+<p><strong>Feature comparsion of fluture like libs:</strong></p>
+
+<p><img src="http://nmotw.in/images/fluture/fluture-cmp.png" alt="" /></p>
+
+<p><strong>Get it:</strong> <code>npm install --save fluture</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">readFile</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fs&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">node</span><span class="p">,</span> <span class="nx">encase</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fluture&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">getPackageName</span> <span class="o">=</span> <span class="nx">file</span> <span class="o">=&gt;</span>
+</span><span class='line'>  <span class="nx">node</span><span class="p">(</span><span class="nx">done</span> <span class="o">=&gt;</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="nx">done</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="nx">encase</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">))</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">pkg</span> <span class="o">=&gt;</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">getPackageName</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">.</span><span class="nx">fork</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+</span><span class='line'><span class="c1">//&gt; &quot;fluture&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/fluture/fluture.gif" alt="fluture" /></p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[sql.js]]></title>
@@ -1575,97 +1629,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/gauge/gauge.gif" alt="gauge" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iron]]></title>
-    <link href="http://nmotw.in/iron/"/>
-    <updated>2018-12-28T15:29:33+05:30</updated>
-    <id>http://nmotw.in/iron</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/iron">iron</a></h1>
-
-<blockquote><p>Sealing a JSON object using symmetric key encryption.</p></blockquote>
-
-<p><code>iron</code> provide a neat way to seal a JSON object using symmetric key encryption with message integrity verification!</p>
-
-<p><strong>Get it:</strong> <code>npm install iron</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">//Encrypt </span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Iron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;iron&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">c</span><span class="o">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-</span><span class='line'>    <span class="nx">d</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">e</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="s1">&#39;some_not_random_password_that_is_at_least_32_characters&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kr">const</span> <span class="nx">sealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">seal</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sealed</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">})();</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Decrypt</span>
-</span><span class='line'><span class="k">try</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kr">const</span> <span class="nx">unsealed</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">unseal</span><span class="p">(</span><span class="nx">sealed</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">Iron</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">})();</span>
-</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/iron/iron.gif" alt="iron" /></p>
 ]]></content>
   </entry>
   

@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
-Scoped packages support for the &hellip;">   
+    <meta name="description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Scoped packages support for the &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/20/">
-    <meta name="twitter:description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
-Scoped packages support for the &hellip;">
+    <meta name="twitter:description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/20/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="npm-check Check for outdated, incorrect, and unused dependencies. Features: Interactive Update means less typing.
-Scoped packages support for the &hellip;" />
+    <meta property="og:description" content="ramda-repl Ramda + ramda-fantasy REPL ramda-repl extends node REPL to bring in Ramda and ramda-fantasy so that you can use all of uber cool feature &hellip;" />
 
     
 
@@ -70,6 +67,103 @@ Scoped packages support for the &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/ramda-repl/">
+			
+				Ramda-repl</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-17T22:09:50+05:30" pubdate data-updated="true">Sep 17<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
+
+<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
+
+<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
+
+<p><strong>Get it:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ npm install --save ramda-repl</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ramdaRepl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ramda-repl&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ramdaRepl</span><span class="p">();</span>
+</span><span class='line'><span class="c1">//=&gt; Will start a REPL</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>CLI</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install --global ramda-repl
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>$ ramda-repl</p>
+
+<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>Welcome to Ramda REPL!
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof R
+</span><span class='line'><span class="s1">&#39;object&#39;</span>
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof map
+</span><span class='line'><span class="s1">&#39;function&#39;</span>
+</span><span class='line'>
+</span><span class='line'>λ &gt; typeof zipWith
+</span><span class='line'><span class="s1">&#39;function&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>GIF FTW</h2>
+
+<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
+
+<h2>License</h2>
+
+<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -856,76 +950,6 @@ and second one being an config object.</p>
 <p><img src="/images/easydate/easydate.gif" alt="easydate" /></p>
 
 <p>Thanks to <a href="https://medium.com/@roryrjb">Rory Bradford</a> for this handy util.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ramjet/">
-			
-				Ramjet</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-07-09T22:30:40+05:30" pubdate data-updated="true">Jul 9<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<p><a href="http://npm.im/ramjet">ramjet</a></p>
-
-<blockquote><p>Transform DOM elements into each another with smooth transitions</p></blockquote>
-
-<p><code>ramjet</code> helps us to Morph DOM elements from one state to another with smooth transitions!</p>
-
-<p>All it does is:</p>
-
-<ul>
-<li><p>Clone the elements and all their children.</p></li>
-<li><p>Transform the second element so that it completely overlaps with the first.</p></li>
-<li><p>Animating the two elements together until the first element has exactly the same position and dimensions as the second element.</p></li>
-</ul>
-
-
-<p><strong>install it:</strong> <code>npm install --save ramjet</code></p>
-
-<p><strong>sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;a&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: red; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;b&#39;</span> <span class="na">style=</span><span class="s">&#39;background-color: blue; font-size: 4em; padding: 1em;&#39;</span><span class="nt">&gt;</span>b<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;script&gt;</span>
-</span><span class='line'>  <span class="nx">ramjet</span><span class="p">.</span><span class="nx">transform</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
-</span><span class='line'><span class="nt">&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
-
-<p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
 
 		
 		
