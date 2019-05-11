@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;">   
+    <meta name="description" content="wifi-password Get current wifi password. Do you remember your wifi password? Do you want share it with your guests? wifi-password is the util to use &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/17/">
-    <meta name="twitter:description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;">
+    <meta name="twitter:description" content="wifi-password Get current wifi password. Do you remember your wifi password? Do you want share it with your guests? wifi-password is the util to use &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/17/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="mathjs Extensive math library with expression parser, big numbers, complex numbers, units, and matrices. mathjs provides you with 200+ util function &hellip;" />
+    <meta property="og:description" content="wifi-password Get current wifi password. Do you remember your wifi password? Do you want share it with your guests? wifi-password is the util to use &hellip;" />
 
     
 
@@ -67,6 +67,99 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/wifi-password/">
+			
+				Wifi-password</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-14T21:45:12+05:30" pubdate data-updated="true">Apr 14<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/wifi-password">wifi-password</a></h1>
+
+<blockquote><p>Get current wifi password.</p></blockquote>
+
+<p>Do you remember your wifi password?</p>
+
+<p>Do you want share it with your guests?</p>
+
+<p><code>wifi-password</code> is the util to use works across OSs.</p>
+
+<p>Basically fires the below commands based on the OS for the given or connected <code>SSID</code>:</p>
+
+<ul>
+<li><p><code>GNU/Linux</code> -> <code>sudo cat /etc/NetworkManager/system-connections/${ssid}</code>;</p></li>
+<li><p><code>OSX</code> ->  <code>security find-generic-password -D AirPort network password -wa ssid</code></p></li>
+<li><p><code>Windows</code> -> <code>netsh wlan show profile $(name=${ssid}) $(key=clear)</code></p></li>
+</ul>
+
+
+<p><strong>GET IT</strong>:</p>
+
+<p><code>npm install --save wifi-password</code> for API</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">wifiPassword</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wifi-password&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">wifiPassword</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">password</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">password</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//=&gt; &#39;johndoesecretpassword&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>npm install --global wifi-password</code> for CLI.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">wifi</span><span class="o">-</span><span class="nx">password</span> <span class="o">--</span><span class="nx">help</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">Usage</span>
+</span><span class='line'>    <span class="nx">$</span> <span class="nx">wifi</span><span class="o">-</span><span class="nx">password</span>
+</span><span class='line'>    <span class="nx">johndoesecretpassword</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">$</span> <span class="nx">wifi</span><span class="o">-</span><span class="nx">password</span> <span class="nx">foo</span><span class="o">-</span><span class="nx">network</span>
+</span><span class='line'>    <span class="nx">foosecretpassword</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/wifi-password/wifi-password.gif" alt="wifi-password" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -895,91 +988,6 @@ Checkout the project's <code>readme.md</code> for <a href="https://github.com/wi
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="https://nmotw.in/images/why-is-node-running/why-is-node-running.gif" alt="why-is-node-running" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/data.task/">
-			
-				data.task</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-02-04T19:56:02+05:30" pubdate data-updated="true">Feb 4<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
-
-<blockquote><p>A structure for representing asynchronous actions with automatic resource handling.</p></blockquote>
-
-<p><code>data.task</code> monad which can be used to replace Continuation-Passing Style form of programming,
-in order to be able to compose and sequence time-dependent effects using the generic and powerful monadic operations.</p>
-
-<p><strong>GET IT:</strong> <code>npm install --save data.task</code></p>
-
-<p><strong>Sample Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Task</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;data.task&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="k">new</span> <span class="nx">Task</span><span class="p">((</span><span class="nx">reject</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{})</span>
-</span><span class='line'><span class="nx">Task</span> <span class="p">{</span> <span class="nx">fork</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span> <span class="nx">cleanup</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Task</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;data.task&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">read</span> <span class="o">=</span> <span class="nx">path</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'><span class="k">return</span> <span class="k">new</span> <span class="nx">Task</span><span class="p">((</span><span class="nx">reject</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span>  <span class="p">{</span>
-</span><span class='line'>          <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>          <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">});</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'><span class="nx">read</span><span class="p">(</span><span class="s1">&#39;/tmp/data.md&#39;</span><span class="p">).</span><span class="nx">fork</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/data.task/data.task.gif" alt="data.task" /></p>
 
 		
 		

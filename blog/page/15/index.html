@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="pwmetrics Progressive web metrics at your fingertipz. 💅 pwmetrics CLI tool and lib to gather performance metrics via Lighthouse. P.S: This module is &hellip;">   
+    <meta name="description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="pwmetrics Progressive web metrics at your fingertipz. 💅 pwmetrics CLI tool and lib to gather performance metrics via Lighthouse. P.S: This module is &hellip;">
+    <meta name="twitter:description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="pwmetrics Progressive web metrics at your fingertipz. 💅 pwmetrics CLI tool and lib to gather performance metrics via Lighthouse. P.S: This module is &hellip;" />
+    <meta property="og:description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;" />
 
     
 
@@ -67,6 +67,85 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/auto-install/">
+			
+				Auto-install</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-01T19:35:36+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
+
+<blockquote><p>Auto installs dependencies as you code on save.</p></blockquote>
+
+<p>Have you ever wished that need to having a tool that would just do an <code>npm install</code> of modules that you <code>import</code>?</p>
+
+<p>Well, here is <code>auto-install</code> that does exactly what you wished for!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g auto-install</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># In case you run it in a folder that doesn&#39;t have a `package.json`</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install --help
+</span><span class='line'>package.json does not exist
+</span><span class='line'>You can create one by using <span class="sb">`</span>npm init<span class="sb">`</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># With a package.json</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>auto-install
+</span><span class='line'>Watchers initialized
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>CLI Flags:</strong></p>
+
+<p><code>--secure</code>  Install popular modules only (> 10k downloads in the last month)</p>
+
+<p><code>--exact</code>   Install exact version similar to <code>npm install express --save-exact</code></p>
+
+<p><code>--dont-uninstall</code>   Do not uninstall unused modules</p>
+
+<p>P.S: <a href="https://github.com/siddharthkp/auto-install/issues/6">Does it protect against typosquatting?</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/auto-install/auto-install.gif" alt="auto-install" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -898,93 +977,6 @@ API</a>.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/node-nightly/node-nightly.gif" alt="node-nightly" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/esbox/">
-			
-				Esbox</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-06-23T19:16:09+05:30" pubdate data-updated="true">Jun 23<span>rd</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">📦 esbox</a></h1>
-
-<blockquote><p>Zero-config REPL for experimenting with next-generation JavaScript.</p></blockquote>
-
-<p><code>esbox</code> is ES2016 in a box!</p>
-
-<p><strong>Get it:</strong> <code>npm install -g esbox</code></p>
-
-<ul>
-<li><p>It automatically compiles and re-runs your script every time you save.</p></li>
-<li><p>JSBin-like setup for your local editor and terminal – with full access to Node APIs and modules.</p></li>
-<li><p>ECMAScript features that Babel supports (stage-0 and above).</p></li>
-<li><p>For a number of popular libraries, you can just import them without the need to install them first (Bascially all the dependecies of <code>esbox</code>).</p></li>
-</ul>
-
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; esbox
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>    📦  ES2016 in a box
-</span><span class='line'>       git.io/esbox
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  Usage
-</span><span class='line'>    &gt; esbox FILENAME
-</span><span class='line'>
-</span><span class='line'>  Options
-</span><span class='line'>    --cwd<span class="o">=</span>DIRECTORY   run in a different directory
-</span><span class='line'>    --no-watch        only run your script once
-</span><span class='line'>    --no-clear        disable clearing the display before each run
-</span><span class='line'>    --version         show esbox version
-</span><span class='line'>    --poll            poll file system when watching files
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/esbox/esbox.gif" alt="esbox" /></p>
 
 		
 		
