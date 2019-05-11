@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-05-12T02:35:45+05:30</updated>
+  <updated>2019-05-12T04:17:27+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -15,7 +15,7 @@
   <entry>
     <title type="html"><![CDATA[fluture]]></title>
     <link href="http://nmotw.in/fluture/"/>
-    <updated>2019-12-09T02:35:08+05:30</updated>
+    <updated>2019-05-12T02:35:08+05:30</updated>
     <id>http://nmotw.in/fluture</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
 
