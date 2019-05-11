@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;">   
+    <meta name="description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/19/">
-    <meta name="twitter:description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;">
+    <meta name="twitter:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/19/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="notie A simple notification plugin. notie - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an &hellip;" />
+    <meta property="og:description" content="npmlog logger for npm npmlog is a simple logger that npm uses to log it's messages, this module provides custom levels and colored output. By &hellip;" />
 
     
 
@@ -67,6 +67,110 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/npmlog/">
+			
+				Npmlog</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-26T19:37:54+05:30" pubdate data-updated="true">Nov 26<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/npmlog">npmlog</a></h1>
+
+<blockquote><p>logger for npm</p></blockquote>
+
+<p><code>npmlog</code> is a simple logger that <code>npm</code> uses to log it's messages, this module provides custom levels and colored output.</p>
+
+<p>By default, logs are written to <code>stderr</code>, to send log messages to outputs other than streams you can use <code>log.stream</code> member, or you can just listen to the events that it emits.</p>
+
+<p><strong>Get it:</strong> : <code>npm install --save npmlog</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;npmlog&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// additional stuff ---------------------------+</span>
+</span><span class='line'><span class="c1">// message ----------+                         |</span>
+</span><span class='line'><span class="c1">// prefix ----+      |                         |</span>
+</span><span class='line'><span class="c1">// level -+   |      |                         |</span>
+</span><span class='line'><span class="c1">//        v   v      v                         v</span>
+</span><span class='line'>    <span class="nx">log</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">&#39;fyi&#39;</span><span class="p">,</span> <span class="s1">&#39;I &lt;3 nmotw: %j&#39;</span><span class="p">,</span> <span class="nx">node_modules</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>levels:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">log</span><span class="p">.</span><span class="nx">levels</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">silly</span><span class="o">:</span> <span class="o">-</span><span class="kc">Infinity</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">verbose</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">info</span><span class="o">:</span> <span class="mi">2000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">http</span><span class="o">:</span> <span class="mi">3000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">warn</span><span class="o">:</span> <span class="mi">4000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="mi">5000</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">silent</span><span class="o">:</span> <span class="kc">Infinity</span> <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">log</span><span class="p">.</span><span class="nx">disp</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">silly</span><span class="o">:</span> <span class="s1">&#39;sill&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">verbose</span><span class="o">:</span> <span class="s1">&#39;verb&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">info</span><span class="o">:</span> <span class="s1">&#39;info&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">http</span><span class="o">:</span> <span class="s1">&#39;http&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">warn</span><span class="o">:</span> <span class="s1">&#39;WARN&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">error</span><span class="o">:</span> <span class="s1">&#39;ERR!&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">silent</span><span class="o">:</span> <span class="s1">&#39;silent&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npmlog/npmlog.gif" alt="npmlog" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -849,103 +953,6 @@ you need to just <code>require('instapromise')</code> and then you could just us
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/trianglify/trianglify.gif" alt="Trianglify" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/ramda-repl/">
-			
-				Ramda-repl</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-17T22:09:50+05:30" pubdate data-updated="true">Sep 17<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
-
-<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
-
-<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
-
-<p><strong>Get it:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ npm install --save ramda-repl</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ramdaRepl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ramda-repl&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ramdaRepl</span><span class="p">();</span>
-</span><span class='line'><span class="c1">//=&gt; Will start a REPL</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>CLI</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install --global ramda-repl
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>$ ramda-repl</p>
-
-<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Welcome to Ramda REPL!
-</span><span class='line'>
-</span><span class='line'>λ &gt; typeof R
-</span><span class='line'><span class="s1">&#39;object&#39;</span>
-</span><span class='line'>
-</span><span class='line'>λ &gt; typeof map
-</span><span class='line'><span class="s1">&#39;function&#39;</span>
-</span><span class='line'>
-</span><span class='line'>λ &gt; typeof zipWith
-</span><span class='line'><span class="s1">&#39;function&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>GIF FTW</h2>
-
-<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
-
-<h2>License</h2>
-
-<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
 
 		
 		
