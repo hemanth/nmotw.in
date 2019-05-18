@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-05-18T12:36:44+05:30</updated>
+  <updated>2019-05-18T12:38:30+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -21,7 +21,7 @@
 
 <blockquote><p>Query JS objects in GraphQL style!</p></blockquote>
 
-<p><code>dinoql</code> provides ♥️ GraphQL syntax for 🔫 Safe access of objects with ⚡️ Aliases support 🌟 Default resolvers 💥 Fragments 👂 Variables and 💾 Caching support and is highly 🔥 Customizable.</p>
+<p><code>dinoql</code> provides ❤️ GraphQL syntax for 🔫 Safe access of objects with ⚡️ Aliases support 🌟 Default resolvers 💥 Fragments 👂 Variables and 💾 Caching support and is highly 🔥 Customizable.</p>
 
 <p><strong>Get it:</strong> <code>npm install dinoql</code></p>
 
