@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;">   
+    <meta name="description" content="quill An API Driven Rich Text Editor. For the initial commit looks like quill has taken two long years to reach v1.x and indeed it's proven itself &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;">
+    <meta name="twitter:description" content="quill An API Driven Rich Text Editor. For the initial commit looks like quill has taken two long years to reach v1.x and indeed it's proven itself &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="auto-install Auto installs dependencies as you code on save. Have you ever wished that need to having a tool that would just do an npm install of &hellip;" />
+    <meta property="og:description" content="quill An API Driven Rich Text Editor. For the initial commit looks like quill has taken two long years to reach v1.x and indeed it's proven itself &hellip;" />
 
     
 
@@ -67,6 +67,110 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/quill/">
+			
+				Quill</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-08T18:38:58+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/quill">quill</a></h1>
+
+<blockquote><p>An API Driven Rich Text Editor.</p></blockquote>
+
+<p>For the initial commit looks like <code>quill</code> has taken two long years to reach <code>v1.x</code> and indeed it's proven itself to be a very tidy API driven rich text editor.</p>
+
+<p><strong>quill has <a href="http://quilljs.com/docs/api/">APIs</a> for:</strong></p>
+
+<ul>
+<li><p>Content handling.</p></li>
+<li><p>Formatting.</p></li>
+<li><p>Selection.</p></li>
+<li><p>Events</p></li>
+<li><p>Extensions.</p></li>
+</ul>
+
+
+<p><strong>quill also <a href="http://quilljs.com/docs/modules/">modules</a> for:</strong></p>
+
+<ul>
+<li><p>TOOLBAR</p></li>
+<li><p>KEYBOARD</p></li>
+<li><p>HISTORY</p></li>
+<li><p>CLIPBOARD</p></li>
+<li><p>FORMULA</p></li>
+<li><p>SYNTAX</p></li>
+</ul>
+
+
+<p><strong>Finally, it has theme(s)!:</strong></p>
+
+<ul>
+<li><p>Bubble</p></li>
+<li><p>Snow</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save quill</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Quill</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;quill&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">quill</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Quill</span><span class="p">(</span><span class="s1">&#39;#editor-container&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">modules</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">toolbar</span><span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>      <span class="p">[{</span> <span class="nx">header</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span><span class="p">]</span> <span class="p">}],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span> <span class="s1">&#39;underline&#39;</span><span class="p">],</span>
+</span><span class='line'>      <span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">,</span> <span class="s1">&#39;code-block&#39;</span><span class="p">]</span>
+</span><span class='line'>    <span class="p">]</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">placeholder</span><span class="o">:</span> <span class="s1">&#39;Compose an epic...&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">theme</span><span class="o">:</span> <span class="s1">&#39;snow&#39;</span> <span class="c1">// or &#39;bubble&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/quill/quill.gif" alt="quill" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -912,71 +1016,6 @@ API</a>.</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/listr/listr.gif" alt="listr" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/node-nightly/">
-			
-				Node-nightly</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-06-30T18:01:14+05:30" pubdate data-updated="true">Jun 30<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/node-nightly">node-nightly</a></h1>
-
-<blockquote><p>node-nightly at your finger tips!</p></blockquote>
-
-<p><code>node-nightly</code> as the name says it's the nightly version of <code>node</code>, basically:</p>
-
-<ul>
-<li><p>Check if nightly version of node is available if not install it. (For the first time.)</p></li>
-<li><p>If there is a new version available will notify the user saying there is a newer version available and can update using <code>node-nightly --update</code></p></li>
-</ul>
-
-
-<p><strong>Get it</strong> : <code>npm install -g node-nightly</code> # Preferred global</p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">node</span><span class="o">-</span><span class="nx">nightly</span> <span class="o">--</span><span class="nx">inspect</span> <span class="o">--</span><span class="nx">debug</span><span class="o">-</span><span class="nx">brk</span> <span class="nx">index</span><span class="p">.</span><span class="nx">js</span>
-</span><span class='line'><span class="nx">Debugger</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="mi">9229</span><span class="p">.</span>
-</span><span class='line'><span class="nx">To</span> <span class="nx">start</span> <span class="nx">debugging</span><span class="p">,</span> <span class="nx">open</span> <span class="nx">the</span> <span class="nx">following</span> <span class="nx">URL</span> <span class="k">in</span> <span class="nx">Chrome</span><span class="o">:</span>
-</span><span class='line'>    <span class="nx">chrome</span><span class="o">-</span><span class="nx">devtools</span><span class="o">:</span><span class="c1">//devtools/remote/serve_file/@521e5b7e2b7cc66b4006a8a54cb9c4e57494a5ef/inspector.html?experiments=true&amp;v8only=true&amp;ws=localhost:9229/node</span>
-</span><span class='line'><span class="nx">Debugger</span> <span class="nx">attached</span><span class="p">.</span>
-</span><span class='line'><span class="nx">Waiting</span> <span class="k">for</span> <span class="nx">the</span> <span class="kr">debugger</span> <span class="nx">to</span> <span class="nx">disconnect</span><span class="p">...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/node-nightly/node-nightly.gif" alt="node-nightly" /></p>
 
 		
 		
