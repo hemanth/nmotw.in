@@ -1,0 +1,44 @@
+---
+layout: post
+title: "fluture"
+date: 2019-05-12 02:35:08 +0530
+comments: true
+categories: 
+---
+
+#[fluture](https://www.npmjs.com/package/fluture)
+> 🦋 Fantasy Land compliant (monadic) alternative to Promises.
+
+Fluture offers a control structure similar to Promises, Tasks, Deferreds, and what-have-you, the lib just terms it `Futures`.
+
+`Futures` represent the value arising from the success or failure of an asynchronous operation they are lazy and adhere to the monadic interface.
+
+__Feature comparsion of fluture like libs:__
+
+![](/images/fluture/fluture-cmp.png)
+
+
+__Get it:__ `npm install --save fluture`
+
+__Sample usage:__
+
+```js
+import {readFile} from 'fs';
+import {node, encase} from 'fluture';
+ 
+const getPackageName = file =>
+  node(done => readFile(file, 'utf8', done))
+  .chain(encase(JSON.parse))
+  .map(pkg => pkg.name);
+ 
+getPackageName('package.json')
+.fork(console.error, console.log);
+//> "fluture"
+```
+
+__GIF FTW!__
+
+![fluture](/images/fluture/fluture.gif)
+
+```
+
