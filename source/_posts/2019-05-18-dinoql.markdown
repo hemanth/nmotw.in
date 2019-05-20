@@ -1,0 +1,45 @@
+---
+layout: post
+title: "dinoql"
+date: 2019-05-18 12:27:30 +0530
+comments: true
+categories: util
+---
+
+#[dinoql](https://www.npmjs.com/package/dinoql)
+> Query JS objects in GraphQL style!
+
+`dinoql` provides GraphQL syntax for safe access of objects with aliases support, default resolvers fragments, variables and caching support and is highly customizable.
+
+__Get it:__ `npm install dinoql`
+
+__Sample usage:__
+
+
+```js
+const dinoql = require('dinoql');
+
+const data = {
+  users: [{
+    name: 'Victor Igor',
+    id: "100",
+    age: 18
+  }, {
+    name: 'Paul Gilbert',
+    id: "200",
+    age: 35
+  }],	
+};
+
+dinoql(data)`
+users(id: "200") {
+    name
+  }
+`
+// ^^ {users: [{name: 'Paul Gilbert'}]}
+
+```
+
+__GIF FTW!__
+
+![dinoql-demo](/images/dinoql/dinoql.gif)
