@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="dinoql Query JS objects in GraphQL style! dinoql provides GraphQL syntax for safe access of objects with aliases support, default resolvers &hellip;">   
+    <meta name="description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
+Mouse cursor velocity &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="dinoql Query JS objects in GraphQL style! dinoql provides GraphQL syntax for safe access of objects with aliases support, default resolvers &hellip;">
+    <meta name="twitter:description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
+Mouse cursor velocity &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="dinoql Query JS objects in GraphQL style! dinoql provides GraphQL syntax for safe access of objects with aliases support, default resolvers &hellip;" />
+    <meta property="og:description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
+Mouse cursor velocity &hellip;" />
 
     
 
@@ -67,6 +70,193 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/tornis/">
+			
+				Tornis</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-05-25T21:08:12+05:30" pubdate data-updated="true">May 25<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://">tornis</a></h1>
+
+<blockquote><p>Store for your viewport.</p></blockquote>
+
+<p><code>tornis</code> a cheeky module with just 300 lines of code, enables us to track:</p>
+
+<ul>
+<li>Mouse position</li>
+<li>Mouse cursor velocity</li>
+<li>Viewport size</li>
+<li>Scroll position</li>
+<li>Scroll velocity</li>
+</ul>
+
+
+<p>Device orientation is under contruction, this can be thought as a store to your viewport, with state like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nx">scroll</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">changed</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">left</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">right</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">top</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">bottom</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">velocity</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">x</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">y</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">size</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">changed</span><span class="o">:</span> <span class="nb">Boolean</span>
+</span><span class='line'>    <span class="nx">x</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">y</span><span class="o">:</span> <span class="nx">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">docY</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">mouse</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">changed</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">x</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>    <span class="nx">y</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>    <span class="nx">velocity</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">x</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>      <span class="nx">y</span><span class="o">:</span> <span class="nx">Integer</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install tornis</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// From robb0wen/tornis</span>
+</span><span class='line'><span class="c1">// import the Tornis store functions</span>
+</span><span class='line'><span class="kr">import</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">watchViewport</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">unwatchViewport</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">getViewportState</span>
+</span><span class='line'><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;tornis&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// define a watched function, to be run on each update</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">updateValues</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">scroll</span><span class="p">,</span> <span class="nx">mouse</span><span class="p">,</span> <span class="nx">orientation</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">changed</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do something related to size</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">scroll</span><span class="p">.</span><span class="nx">changed</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do something related to scroll position or velocity</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">mouse</span><span class="p">.</span><span class="nx">changed</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do something related to mouse position or velocity</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// bind the watch function</span>
+</span><span class='line'><span class="c1">// By default this will run the function as it is added to the watch list</span>
+</span><span class='line'><span class="nx">watchViewport</span><span class="p">(</span><span class="nx">updateValues</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// to bind the watch function without calling it</span>
+</span><span class='line'><span class="nx">watchViewport</span><span class="p">(</span><span class="nx">updateValues</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// when you want to stop updating</span>
+</span><span class='line'><span class="nx">unwatchViewport</span><span class="p">(</span><span class="nx">updateValues</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// to get a snapshot of the current viewport state</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="nx">getViewportState</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/tornis/tornis.gif" alt="tornis" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1073,103 +1263,6 @@
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/carbon-now-cli/carbon-now-cli.gif" alt="carbon-now-cli" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/react-window/">
-			
-				React-window</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-03-16T15:14:26+05:30" pubdate data-updated="true">Mar 16<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
-
-<blockquote><p>React components for efficiently rendering large lists and tabular data.</p></blockquote>
-
-<p>From the horse's mouth, what is <code>react-window</code>?</p>
-
-<blockquote><p>react-window is a complete rewrite of react-virtualized. I didn't try to solve as many problems or support as many use cases. Instead I focused on making the package smaller1 and faster. I also put a lot of thought into making the API (and documentation) as beginner-friendly as possible (with the caveat that windowing is still kind of an advanced use case).</p></blockquote>
-
-<p>The compoents react-window provides:</p>
-
-<ul>
-<li>FixedSizeList</li>
-<li>VariableSizeList</li>
-<li>FixedSizeGrid</li>
-<li>VariableSizeGrid</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install react-window</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">FixedSizeList</span> <span class="nx">as</span> <span class="nx">List</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-window&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Column</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">style</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
-</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}</span><span class="o">&gt;</span><span class="err">عمود</span> <span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span><span class='line'><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">Example</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
-</span><span class='line'>  <span class="o">&lt;</span><span class="nx">List</span>
-</span><span class='line'>    <span class="nx">direction</span><span class="o">=</span><span class="s2">&quot;rtl&quot;</span>
-</span><span class='line'>    <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">75</span><span class="p">}</span>
-</span><span class='line'>    <span class="nx">itemCount</span><span class="o">=</span><span class="p">{</span><span class="mi">1000</span><span class="p">}</span>
-</span><span class='line'>    <span class="nx">itemSize</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span>
-</span><span class='line'>    <span class="nx">layout</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span>
-</span><span class='line'>    <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">300</span><span class="p">}</span>
-</span><span class='line'>  <span class="o">&gt;</span>
-</span><span class='line'>    <span class="p">{</span><span class="nx">Column</span><span class="p">}</span>
-</span><span class='line'>  <span class="o">&lt;</span><span class="err">/List&gt;</span>
-</span><span class='line'><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/react-window/react-window.gif" alt="react-window" /></p>
-
-<p>P.S: Don't miss to checkout the <a href="https://react-window.now.sh/">demos</a>.</p>
 
 		
 		
