@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-05-25T21:27:18+05:30</updated>
+  <updated>2019-05-25T21:34:34+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/tornis/"/>
     <updated>2019-05-25T21:08:12+05:30</updated>
     <id>http://nmotw.in/tornis</id>
-    <content type="html"><![CDATA[<h1><a href="https://">tornis</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/tornis">tornis</a></h1>
 
 <blockquote><p>Store for your viewport.</p></blockquote>
 
