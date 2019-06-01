@@ -13,7 +13,7 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
-  gem 'octopress-popular-posts'
+  gem 'octopress-popular-posts', '>= 0.1.0'
 end
 
 gem 'sinatra', '~> 1.4.2'
