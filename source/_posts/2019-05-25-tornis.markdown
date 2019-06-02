@@ -1,0 +1,98 @@
+---
+layout: post
+title: "tornis"
+date: 2019-05-25 21:08:12 +0530
+comments: true
+categories: util dom
+---
+
+#[tornis](https://npm.im/tornis)
+> Store for your viewport.
+
+`tornis` a cheeky module with just 300 lines of code, enables us to track:
+
+* Mouse position
+* Mouse cursor velocity
+* Viewport size
+* Scroll position
+* Scroll velocity
+
+Device orientation is under contruction, this can be thought as a store to your viewport, with state like:
+
+```js
+{
+  scroll: {
+    changed: Boolean,
+    left: Integer,
+    right: Integer,
+    top: Integer,
+    bottom: Integer,
+    velocity: {
+      x: Integer,
+      y: Integer
+    }
+  },
+  size: {
+    changed: Boolean
+    x: Integer,
+    y: Integer,
+    docY: Integer
+  },
+  mouse: {
+    changed: Boolean,
+    x: Integer
+    y: Integer
+    velocity: {
+      x: Integer
+      y: Integer
+    }
+  }
+}
+```
+
+__Get it:__ `npm install tornis`
+
+__Sample usage:__
+
+
+```js
+// From robb0wen/tornis
+// import the Tornis store functions
+import { 
+  watchViewport, 
+  unwatchViewport, 
+  getViewportState
+} from 'tornis';
+
+// define a watched function, to be run on each update
+const updateValues = ({ size, scroll, mouse, orientation }) => {
+  if (size.changed) {
+    // do something related to size
+  }
+  
+  if (scroll.changed) {
+    // do something related to scroll position or velocity
+  }
+
+  if (mouse.changed) {
+    // do something related to mouse position or velocity
+  }
+};
+
+// bind the watch function
+// By default this will run the function as it is added to the watch list
+watchViewport(updateValues);
+
+// to bind the watch function without calling it
+watchViewport(updateValues, false);
+
+// when you want to stop updating
+unwatchViewport(updateValues);
+
+// to get a snapshot of the current viewport state
+const state = getViewportState();
+```
+
+__GIF FTW!__
+
+![tornis](/images/tornis/tornis.gif)

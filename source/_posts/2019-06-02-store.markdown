@@ -1,0 +1,41 @@
+---
+layout: post
+title: "store"
+date: 2019-06-02 17:01:14 +0530
+comments: true
+categories: util 
+---
+
+#[store](https://www.npmjs.com/package/store)
+> Cross-browser storage for all use cases!
+
+`store` provides basic `key/value` storage functionality (`get/set/remove/each`) as well as a rich set of plug-in [storages](https://github.com/marcuswestin/store.js#user-content-storages) and extra functionality.
+
+__Get it:__ `npm install store`
+
+__Sample usage:__
+
+```js
+const store = require('store')
+store.set('site', { name:'nmotw.in' })
+store.get('user').name == 'nmotw.in'
+```
+
+```js
+// Example custom storage
+var storage = {
+	name: 'myStorage',
+	read: function(key) { ... },
+	write: function(key, value) { ... },
+	each: function(fn) { ... },
+	remove: function(key) { ... },
+	clearAll: function() { ... }
+}
+var store = require('store').createStore(storage)
+```
+
+One could use `memoryStorage` or `localStorage`.
+
+__GIF FTW!__
+
+![store](/images/store/store.gif)

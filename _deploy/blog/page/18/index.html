@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;">   
+    <meta name="description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/18/">
-    <meta name="twitter:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;">
+    <meta name="twitter:description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/18/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="ipt The missing shell interactive workflow. ipt (pronounced iPipeTo) introduces the missing cli interactive workflow. It takes any kind of list as &hellip;" />
+    <meta property="og:description" content="must Testing and assertion library with friendly BDD syntax! must provides a BDD syntax for all your assertions and it follows RFC 2119 with its use &hellip;" />
 
     
 
@@ -67,6 +67,81 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/must/">
+			
+				Must</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-02-25T19:29:29+05:30" pubdate data-updated="true">Feb 25<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/must">must</a></h1>
+
+<blockquote><p>Testing and assertion library with friendly BDD syntax!</p></blockquote>
+
+<p><code>must</code> provides a BDD syntax for all your assertions and it follows <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a> with its use of <strong>MUST</strong>. Good and well testsed stuff.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save must</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;must/register&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[].</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">empty</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">obj</span><span class="p">.</span><span class="nx">must</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">nonenumerable</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">above</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">42</span><span class="p">).</span><span class="nx">must</span><span class="p">.</span><span class="nx">then</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]).</span><span class="nx">must</span><span class="p">.</span><span class="nx">eventually</span><span class="p">.</span><span class="nx">not</span><span class="p">.</span><span class="nx">include</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Problemo&quot;</span><span class="p">)).</span><span class="nx">must</span><span class="p">.</span><span class="nx">reject</span><span class="p">.</span><span class="kd">with</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sr">/problem/i</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/must/must.gif" alt="must.gif" /></p>
+
+<p>We <code>must</code> thank <a href="https://twitter.com/theml">Andri Möll</a> for <code>must</code></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -833,95 +908,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><img src="/images/is-christmas/is-christmas.gif" alt="is-christmas" /></p>
 
 <p>Thanks to <a href="https://twitter.com/thejameskyle">James Kyle</a> for this fun module for this Christmas 😉</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/as/">
-			
-				As</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-12-17T22:04:55+05:30" pubdate data-updated="true">Dec 17<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/as">as</a></h1>
-
-<blockquote><p>Convert easily, back and forth between array and object.</p></blockquote>
-
-<p>A sweet and simple util that help you to convert array to object and vise versa, it also:</p>
-
-<ul>
-<li><p>Brings all functional goodness of arrays to objects.</p></li>
-<li><p>Brings the flexibility of objects to arrays.</p></li>
-<li><p>Works well with a functional programming library.</p></li>
-</ul>
-
-
-<p><strong>Get it</strong>: <code>npm install --save as</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">asArray</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;as/array&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">asArray</span><span class="p">(</span>
-</span><span class='line'>  <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
-</span><span class='line'>  <span class="p">);</span>
-</span><span class='line'><span class="c1">// [ {key: &quot;a&quot;, value: 1} </span>
-</span><span class='line'><span class="c1">// , {key: &quot;b&quot;, value: 2} </span>
-</span><span class='line'><span class="c1">// ] </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">asObject</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;as/object&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">asObject</span><span class="p">(</span>
-</span><span class='line'>  <span class="p">[</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">1</span><span class="p">}</span>
-</span><span class='line'>  <span class="p">,</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">2</span><span class="p">}</span>
-</span><span class='line'>  <span class="p">]);</span>
-</span><span class='line'><span class="c1">// {a: 1, b: 2} </span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/as/as.gif" alt="" /></p>
-
-<p>Thanks for</p>
 
 		
 		
