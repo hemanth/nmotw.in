@@ -4,13 +4,70 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-05-25T21:34:34+05:30</updated>
+  <updated>2019-06-02T17:08:14+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[store]]></title>
+    <link href="http://nmotw.in/store/"/>
+    <updated>2019-06-02T17:01:14+05:30</updated>
+    <id>http://nmotw.in/store</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/store">store</a></h1>
+
+<blockquote><p>Cross-browser storage for all use cases!</p></blockquote>
+
+<p><code>store</code> provides basic <code>key/value</code> storage functionality (<code>get/set/remove/each</code>) as well as a rich set of plug-in <a href="https://github.com/marcuswestin/store.js#user-content-storages">storages</a> and extra functionality.</p>
+
+<p><strong>Get it:</strong> <code>npm install store</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;nmotw.in&#39;</span> <span class="p">})</span>
+</span><span class='line'><span class="nx">store</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">).</span><span class="nx">name</span> <span class="o">==</span> <span class="s1">&#39;nmotw.in&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Example custom storage</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;myStorage&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">read</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">write</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">each</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">remove</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">clearAll</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">).</span><span class="nx">createStore</span><span class="p">(</span><span class="nx">storage</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One could use <code>memoryStorage</code> or <code>localStorage</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/store/store.gif" alt="store" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tornis]]></title>
@@ -1705,38 +1762,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/clockmoji/clockmoji.gif" alt="clockmoji" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[meant]]></title>
-    <link href="http://nmotw.in/meant/"/>
-    <updated>2019-01-12T02:44:43+05:30</updated>
-    <id>http://nmotw.in/meant</id>
-    <content type="html"><![CDATA[<h1><a href="https://npm.im/meant">meant</a></h1>
-
-<blockquote><p>Best Similarity, like "did you mean".</p></blockquote>
-
-<p><code>meant</code> uses <code>levenshteinD</code> and provides a <code>Did you mean?</code> like feature.</p>
-
-<p><strong>Get it:</strong> <code>npm install meant</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">meant</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;meant&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">meant</span><span class="p">(</span><span class="s1">&#39;lk&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="s1">&#39;ls&#39;</span><span class="p">,</span> <span class="s1">&#39;ts&#39;</span><span class="p">])</span>
-</span><span class='line'><span class="c1">// =&gt; [ &#39;ll&#39;, &#39;ls&#39; ]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/meant/meant.gif" alt="meant" /></p>
 ]]></content>
   </entry>
   

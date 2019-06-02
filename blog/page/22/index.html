@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;">   
+    <meta name="description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/22/">
-    <meta name="twitter:description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;">
+    <meta name="twitter:description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/22/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="json-server REST API with zero coding in less than 30 seconds. This module by typicode helps front-end developers who need a quick back-end for &hellip;" />
+    <meta property="og:description" content="function-plot A simple 2d function plotter powered by d3 function-plot helps to render functions with little configuration think of it like a util &hellip;" />
 
     
 
@@ -67,6 +67,64 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/function-plot/">
+			
+				Function-plot</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-05-21T19:21:06+05:30" pubdate data-updated="true">May 21<span>st</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="http://npm.im/function-plot/">function-plot</a></h1>
+
+<blockquote><p>A simple 2d function plotter powered by d3</p></blockquote>
+
+<p>function-plot helps to render functions with little configuration think of it like a util that would help you to render something like what Google does. <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;es_th=1&amp;ie=UTF-8#q=y+%3D+x+%5E+2">y = x * x</a></p>
+
+<p>The library currently supports interactive line charts and scatterplots, whenever the graph scale is modified the function is evaluated again with
+the new bounds, result: infinite graphs!</p>
+
+<p><strong>Get it</strong> : <code>npm install --save function-plot</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">d3</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">d3</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">functionPlot</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-plot&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">functionPlot</span><span class="p">({</span> <span class="cm">/*Pass in the options*/</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check out the <a href="https://github.com/maurizzzio/function-plot#instance--functionplotoptions">options</a>!</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/function-plot/function-plot.gif" alt="function-plot" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -908,75 +966,6 @@ the require calls in your code.</p>
 <p><img src="/images/did-you-mean/did-you-mean.gif" alt="did-you-mean" /></p>
 
 <p>Thanks to Boris Okunskiy for bringing <code>did-you-mean</code> to web and CLI.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/confirm-simple/">
-			
-				Confirm-simple</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
-
-<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
-
-<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
-
-<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
-
-<p><strong>API and simple usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">confirm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;confirm-simple&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Do you accept the EULA?&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span> <span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">yes</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Good for you!&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Sorry you wont get to use the software&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
-
-<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
 
 		
 		
