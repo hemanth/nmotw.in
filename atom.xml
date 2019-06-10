@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -13,9 +13,167 @@
 
   
   <entry>
+    <title type="html"><![CDATA[zxcvbn]]></title>
+    <link href="http://nmotw.in/zxcvbn/"/>
+    <updated>2019-06-09T21:57:44-07:00</updated>
+    <id>http://nmotw.in/zxcvbn</id>
+    <content type="html"><![CDATA[<h1><a href="">zxcvbn</a></h1>
+
+<blockquote><p>Password strength estimator!</p></blockquote>
+
+<p><code>zxcvbn</code> is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common passwords helps us to estimate various parameters related to the strength of the password and also gives us the suggestion to improve the password.</p>
+
+<p><strong>Get it:</strong> <code>npm install zxcvbn</code></p>
+
+<p>__Sample</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">zxcvbn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zxcvbn&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">zxcvbn</span><span class="p">(</span><span class="s1">&#39;Tr0ub4dour&amp;3&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ^ Would return an object like below:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">{</span>
+</span><span class='line'><span class="cm">  &quot;password&quot;: &quot;Tr0ub4dour&amp;3&quot;,</span>
+</span><span class='line'><span class="cm">  &quot;guesses&quot;: 19058000,</span>
+</span><span class='line'><span class="cm">  &quot;guesses_log10&quot;: 7.280077322611945,</span>
+</span><span class='line'><span class="cm">  &quot;sequence&quot;: [</span>
+</span><span class='line'><span class="cm">    {</span>
+</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;dictionary&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;i&quot;: 0,</span>
+</span><span class='line'><span class="cm">      &quot;j&quot;: 9,</span>
+</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;Tr0ub4dour&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;matched_word&quot;: &quot;troubadour&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;rank&quot;: 11905,</span>
+</span><span class='line'><span class="cm">      &quot;dictionary_name&quot;: &quot;us_tv_and_film&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;reversed&quot;: false,</span>
+</span><span class='line'><span class="cm">      &quot;l33t&quot;: true,</span>
+</span><span class='line'><span class="cm">      &quot;sub&quot;: {</span>
+</span><span class='line'><span class="cm">        &quot;0&quot;: &quot;o&quot;,</span>
+</span><span class='line'><span class="cm">        &quot;4&quot;: &quot;a&quot;</span>
+</span><span class='line'><span class="cm">      },</span>
+</span><span class='line'><span class="cm">      &quot;sub_display&quot;: &quot;0 -&gt; o, 4 -&gt; a&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;base_guesses&quot;: 11905,</span>
+</span><span class='line'><span class="cm">      &quot;uppercase_variations&quot;: 2,</span>
+</span><span class='line'><span class="cm">      &quot;l33t_variations&quot;: 4,</span>
+</span><span class='line'><span class="cm">      &quot;guesses&quot;: 95240,</span>
+</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 4.978819386732842</span>
+</span><span class='line'><span class="cm">    },</span>
+</span><span class='line'><span class="cm">    {</span>
+</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;bruteforce&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;&amp;3&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;i&quot;: 10,</span>
+</span><span class='line'><span class="cm">      &quot;j&quot;: 11,</span>
+</span><span class='line'><span class="cm">      &quot;guesses&quot;: 100,</span>
+</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 2</span>
+</span><span class='line'><span class="cm">    }</span>
+</span><span class='line'><span class="cm">  ],</span>
+</span><span class='line'><span class="cm">  &quot;calc_time&quot;: 2,</span>
+</span><span class='line'><span class="cm">  &quot;crack_times_seconds&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: 686088000,</span>
+</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: 1905800,</span>
+</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: 1905.8,</span>
+</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: 0.0019058</span>
+</span><span class='line'><span class="cm">  },</span>
+</span><span class='line'><span class="cm">  &quot;crack_times_display&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: &quot;21 years&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: &quot;22 days&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: &quot;32 minutes&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: &quot;less than a second&quot;</span>
+</span><span class='line'><span class="cm">  },</span>
+</span><span class='line'><span class="cm">  &quot;score&quot;: 2,</span>
+</span><span class='line'><span class="cm">  &quot;feedback&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;warning&quot;: &quot;&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;suggestions&quot;: [</span>
+</span><span class='line'><span class="cm">      &quot;Add another word or two. Uncommon words are better.&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;Capitalization doesn&#39;t help very much&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;Predictable substitutions like &#39;@&#39; instead of &#39;a&#39; don&#39;t help very much&quot;</span>
+</span><span class='line'><span class="cm">    ]</span>
+</span><span class='line'><span class="cm">  }</span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/zxcvbn/zxcvbn.gif" alt="zxcvbn" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[store]]></title>
     <link href="http://nmotw.in/store/"/>
-    <updated>2019-06-02T17:01:14+05:30</updated>
+    <updated>2019-06-02T04:31:14-07:00</updated>
     <id>http://nmotw.in/store</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/store">store</a></h1>
 
@@ -72,7 +230,7 @@
   <entry>
     <title type="html"><![CDATA[tornis]]></title>
     <link href="http://nmotw.in/tornis/"/>
-    <updated>2019-05-25T21:08:12+05:30</updated>
+    <updated>2019-05-25T08:38:12-07:00</updated>
     <id>http://nmotw.in/tornis</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/tornis">tornis</a></h1>
 
@@ -236,7 +394,7 @@
   <entry>
     <title type="html"><![CDATA[dinoql]]></title>
     <link href="http://nmotw.in/dinoql/"/>
-    <updated>2019-05-18T12:27:30+05:30</updated>
+    <updated>2019-05-17T23:57:30-07:00</updated>
     <id>http://nmotw.in/dinoql</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dinoql">dinoql</a></h1>
 
@@ -300,7 +458,7 @@
   <entry>
     <title type="html"><![CDATA[fluture]]></title>
     <link href="http://nmotw.in/fluture/"/>
-    <updated>2019-05-12T02:35:08+05:30</updated>
+    <updated>2019-05-11T14:05:08-07:00</updated>
     <id>http://nmotw.in/fluture</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
 
@@ -354,7 +512,7 @@
   <entry>
     <title type="html"><![CDATA[sql.js]]></title>
     <link href="http://nmotw.in/sql.js/"/>
-    <updated>2019-05-04T10:25:55+05:30</updated>
+    <updated>2019-05-03T21:55:55-07:00</updated>
     <id>http://nmotw.in/sql.js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
 
@@ -441,7 +599,7 @@
   <entry>
     <title type="html"><![CDATA[heresy]]></title>
     <link href="http://nmotw.in/heresy/"/>
-    <updated>2019-04-28T15:42:31+05:30</updated>
+    <updated>2019-04-28T03:12:31-07:00</updated>
     <id>http://nmotw.in/heresy</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/heresy">heresey</a></h1>
 
@@ -582,7 +740,7 @@
   <entry>
     <title type="html"><![CDATA[fetch-mock]]></title>
     <link href="http://nmotw.in/fetch-mock/"/>
-    <updated>2019-04-21T11:45:27+05:30</updated>
+    <updated>2019-04-20T23:15:27-07:00</updated>
     <id>http://nmotw.in/fetch-mock</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fetch-mock">fetch-mock</a></h1>
 
@@ -614,7 +772,7 @@
   <entry>
     <title type="html"><![CDATA[glob-to-regexp]]></title>
     <link href="http://nmotw.in/glob-to-regexp/"/>
-    <updated>2019-04-14T00:11:35+05:30</updated>
+    <updated>2019-04-13T11:41:35-07:00</updated>
     <id>http://nmotw.in/glob-to-regexp</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/glob-to-regexp">glob-to-regexp</a></h1>
 
@@ -688,7 +846,7 @@
   <entry>
     <title type="html"><![CDATA[osenv]]></title>
     <link href="http://nmotw.in/osenv/"/>
-    <updated>2019-04-06T16:14:07+05:30</updated>
+    <updated>2019-04-06T03:44:07-07:00</updated>
     <id>http://nmotw.in/osenv</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/osenv">osenv</a></h1>
 
@@ -773,7 +931,7 @@
   <entry>
     <title type="html"><![CDATA[eshost-cli]]></title>
     <link href="http://nmotw.in/eshost-cli/"/>
-    <updated>2019-03-30T11:37:02+05:30</updated>
+    <updated>2019-03-29T23:07:02-07:00</updated>
     <id>http://nmotw.in/eshost-cli</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
 
@@ -954,7 +1112,7 @@
   <entry>
     <title type="html"><![CDATA[carbon-now-cli]]></title>
     <link href="http://nmotw.in/carbon-now-cli/"/>
-    <updated>2019-03-22T22:28:38+05:30</updated>
+    <updated>2019-03-22T09:58:38-07:00</updated>
     <id>http://nmotw.in/carbon-now-cli</id>
     <content type="html"><![CDATA[<h1><a href="">carbon-now-cli</a></h1>
 
@@ -1041,7 +1199,7 @@
   <entry>
     <title type="html"><![CDATA[react-window]]></title>
     <link href="http://nmotw.in/react-window/"/>
-    <updated>2019-03-16T15:14:26+05:30</updated>
+    <updated>2019-03-16T02:44:26-07:00</updated>
     <id>http://nmotw.in/react-window</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
 
@@ -1115,7 +1273,7 @@
   <entry>
     <title type="html"><![CDATA[image-promise]]></title>
     <link href="http://nmotw.in/image-promise/"/>
-    <updated>2019-03-08T15:00:54+05:30</updated>
+    <updated>2019-03-08T01:30:54-08:00</updated>
     <id>http://nmotw.in/image-promise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
 
@@ -1231,7 +1389,7 @@
   <entry>
     <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
     <link href="http://nmotw.in/scroll-into-view-if-needed/"/>
-    <updated>2019-03-02T23:25:04+05:30</updated>
+    <updated>2019-03-02T09:55:04-08:00</updated>
     <id>http://nmotw.in/scroll-into-view-if-needed</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
 
@@ -1291,7 +1449,7 @@
   <entry>
     <title type="html"><![CDATA[abort-controller]]></title>
     <link href="http://nmotw.in/abort-controller/"/>
-    <updated>2019-02-23T11:10:52+05:30</updated>
+    <updated>2019-02-22T21:40:52-08:00</updated>
     <id>http://nmotw.in/abort-controller</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
 
@@ -1367,7 +1525,7 @@
   <entry>
     <title type="html"><![CDATA[package-size]]></title>
     <link href="http://nmotw.in/package-size/"/>
-    <updated>2019-02-13T00:21:28+05:30</updated>
+    <updated>2019-02-12T10:51:28-08:00</updated>
     <id>http://nmotw.in/package-size</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
 
@@ -1489,7 +1647,7 @@
   <entry>
     <title type="html"><![CDATA[soted-object]]></title>
     <link href="http://nmotw.in/soted-object/"/>
-    <updated>2019-02-09T11:55:29+05:30</updated>
+    <updated>2019-02-08T22:25:29-08:00</updated>
     <id>http://nmotw.in/soted-object</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
 
@@ -1523,7 +1681,7 @@
   <entry>
     <title type="html"><![CDATA[to-regex]]></title>
     <link href="http://nmotw.in/to-regex/"/>
-    <updated>2019-02-02T15:59:03+05:30</updated>
+    <updated>2019-02-02T02:29:03-08:00</updated>
     <id>http://nmotw.in/to-regex</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/to-regex">to-regex</a></h1>
 
@@ -1579,7 +1737,7 @@
   <entry>
     <title type="html"><![CDATA[lazy-property]]></title>
     <link href="http://nmotw.in/lazy-property/"/>
-    <updated>2019-01-26T14:08:16+05:30</updated>
+    <updated>2019-01-26T00:38:16-08:00</updated>
     <id>http://nmotw.in/lazy-property</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-property">lazy-property</a></h1>
 
@@ -1650,118 +1808,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/lazy-property/lazy-property.gif" alt="lazy-property" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[clockmoji]]></title>
-    <link href="http://nmotw.in/clockmoji/"/>
-    <updated>2019-01-20T20:00:13+05:30</updated>
-    <id>http://nmotw.in/clockmoji</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/clockmoji">clockmoji</a></h1>
-
-<blockquote><p>🕗 Get an emoji clock based on the time.</p></blockquote>
-
-<p><code>clockmoji</code> is fun little module for representation of the current time in emoji.</p>
-
-<p>It calculates the short hard, long hard for the clock and fetch the required emoji's unicode.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">date</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">*</span> <span class="mi">60000</span><span class="p">)</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">shortHand</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">%</span> <span class="mi">12</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">longHand</span> <span class="o">=</span> <span class="p">(</span><span class="nx">min</span> <span class="o">-</span> <span class="p">(</span><span class="nx">min</span> <span class="o">%</span> <span class="mi">30</span><span class="p">))</span> <span class="o">/</span> <span class="mi">30</span> <span class="o">?</span> <span class="s1">&#39;30&#39;</span> <span class="o">:</span> <span class="s1">&#39;00&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Get it:</strong> <code>npm install clockmoji</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">date</span>
-</span><span class='line'><span class="nx">Tue</span> <span class="nx">May</span> <span class="mi">26</span> <span class="mi">18</span><span class="o">:</span><span class="mi">19</span><span class="o">:</span><span class="mi">10</span> <span class="nx">CDT</span> <span class="mi">2015</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">no</span> <span class="nx">arguments</span> <span class="nx">will</span> <span class="k">return</span> <span class="nx">the</span> <span class="nx">current</span> <span class="nx">time</span>
-</span><span class='line'><span class="nx">clockmoji</span>
-</span><span class='line'><span class="err">🕡</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">Pass</span> <span class="nx">a</span> <span class="nx">time</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">format</span> <span class="nx">mm</span><span class="o">:</span><span class="nx">ss</span>
-</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">10</span><span class="o">:</span><span class="mi">00</span>
-</span><span class='line'><span class="err">🕙</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">Military</span> <span class="nx">time</span> <span class="nx">supported</span>
-</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">14</span><span class="o">:</span><span class="mi">00</span>
-</span><span class='line'><span class="err">🕑</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">any</span> <span class="nx">arbitrary</span> <span class="nx">time</span> <span class="nx">works</span> <span class="o">--</span> <span class="nx">rounds</span> <span class="nx">down</span> <span class="k">if</span> <span class="nx">its</span> <span class="nx">less</span> <span class="nx">than</span> <span class="o">:</span><span class="mi">15</span>
-</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">12</span><span class="o">:</span><span class="mi">04</span>
-</span><span class='line'><span class="err">🕛</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">rounds</span> <span class="nx">up</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">minutes</span> <span class="nx">are</span> <span class="o">:</span><span class="mi">15</span>
-</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">12</span><span class="o">:</span><span class="mi">24</span>
-</span><span class='line'><span class="err">🕧</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">supports</span> <span class="nx">piping</span>
-</span><span class='line'><span class="nx">echo</span> <span class="mi">6</span><span class="o">:</span><span class="mi">30</span> <span class="o">|</span> <span class="nx">clockmoji</span>
-</span><span class='line'><span class="err">🕡</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">invalid</span> <span class="nx">time</span> <span class="nx">returns</span> <span class="err">⚠</span>
-</span><span class='line'><span class="nx">clockmoji</span> <span class="mi">9999</span>
-</span><span class='line'><span class="err">⚠</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">clockmoji</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;clockmoji&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">())</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">(</span><span class="s1">&#39;12:00&#39;</span><span class="p">))</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">clockmoji</span><span class="p">(</span><span class="s1">&#39;18:30&#39;</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/clockmoji/clockmoji.gif" alt="clockmoji" /></p>
 ]]></content>
   </entry>
   

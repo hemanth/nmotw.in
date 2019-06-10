@@ -4,7 +4,7 @@
   <title><![CDATA[Category: crypto | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/crypto/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[technicalindicators]]></title>
     <link href="http://nmotw.in//github/technicalindicators/"/>
-    <updated>2018-01-21T23:43:42+05:30</updated>
+    <updated>2018-01-21T10:13:42-08:00</updated>
     <id>http://nmotw.in//github/technicalindicators</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/technicalindicators">technicalindicators</a></h1>
 
@@ -52,7 +52,7 @@ var twoDayBullishInput = {
   <entry>
     <title type="html"><![CDATA[ccxt]]></title>
     <link href="http://nmotw.in//github/ccxt/"/>
-    <updated>2018-01-14T17:37:05+05:30</updated>
+    <updated>2018-01-14T04:07:05-08:00</updated>
     <id>http://nmotw.in//github/ccxt</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ccxt">ccxt</a></h1>
 
@@ -100,7 +100,7 @@ console.log(balance);
   <entry>
     <title type="html"><![CDATA[secure-keys]]></title>
     <link href="http://nmotw.in//github/secure-keys/"/>
-    <updated>2017-04-14T16:11:06+05:30</updated>
+    <updated>2017-04-14T03:41:06-07:00</updated>
     <id>http://nmotw.in//github/secure-keys</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/secure-keys">secure-keys</a></h1>
 

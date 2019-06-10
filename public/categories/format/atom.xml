@@ -4,7 +4,7 @@
   <title><![CDATA[Category: format | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/format/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[s-ago]]></title>
     <link href="http://nmotw.in//github/s-ago/"/>
-    <updated>2016-10-20T19:43:46+05:30</updated>
+    <updated>2016-10-20T07:13:46-07:00</updated>
     <id>http://nmotw.in//github/s-ago</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
 
@@ -49,7 +49,7 @@ ago(hoursAgo); // '6 hours ago'
   <entry>
     <title type="html"><![CDATA[cleave.js]]></title>
     <link href="http://nmotw.in//github/cleave.js/"/>
-    <updated>2016-07-14T17:53:00+05:30</updated>
+    <updated>2016-07-14T05:23:00-07:00</updated>
     <id>http://nmotw.in//github/cleave.js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
 

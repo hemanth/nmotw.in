@@ -4,7 +4,7 @@
   <title><![CDATA[Category: db | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/db/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[sql.js]]></title>
     <link href="http://nmotw.in//github/sql.js/"/>
-    <updated>2019-05-04T10:25:55+05:30</updated>
+    <updated>2019-05-03T21:55:55-07:00</updated>
     <id>http://nmotw.in//github/sql.js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
 
@@ -92,7 +92,7 @@ INSERT INTO employees VALUES (4,'HOOVER','SALES I',2,'1990-04-02',27000,NULL,3);
   <entry>
     <title type="html"><![CDATA[lowdb]]></title>
     <link href="http://nmotw.in//github/lowdb/"/>
-    <updated>2014-09-18T18:21:06+05:30</updated>
+    <updated>2014-09-18T05:51:06-07:00</updated>
     <id>http://nmotw.in//github/lowdb</id>
     <content type="html"><![CDATA[<blockquote><p>Flat JSON file database for Node</p></blockquote>
 
@@ -309,7 +309,7 @@ db('modules')
   <entry>
     <title type="html"><![CDATA[mongoskin]]></title>
     <link href="http://nmotw.in//github/mongoskin/"/>
-    <updated>2014-07-10T20:09:46+05:30</updated>
+    <updated>2014-07-10T07:39:46-07:00</updated>
     <id>http://nmotw.in//github/mongoskin</id>
     <content type="html"><![CDATA[<h1>mongoskin</h1>
 

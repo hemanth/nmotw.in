@@ -4,7 +4,7 @@
   <title><![CDATA[Category: html | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/html/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[webtorrent-element]]></title>
     <link href="http://nmotw.in//github/webtorrent-element/"/>
-    <updated>2017-11-16T16:09:50+05:30</updated>
+    <updated>2017-11-16T02:39:50-08:00</updated>
     <id>http://nmotw.in//github/webtorrent-element</id>
     <content type="html"><![CDATA[<p><a href="https://npmjs.com/package/webtorrent-element">webtorrent-element</a></p>
 
@@ -49,7 +49,7 @@ document.body.appendChild(elem);
   <entry>
     <title type="html"><![CDATA[autosize-input]]></title>
     <link href="http://nmotw.in//github/autosize-input/"/>
-    <updated>2016-09-29T19:30:53+05:30</updated>
+    <updated>2016-09-29T07:00:53-07:00</updated>
     <id>http://nmotw.in//github/autosize-input</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
 
@@ -94,7 +94,7 @@ autosizeInput(document.querySelector('#foo'));</p>
   <entry>
     <title type="html"><![CDATA[cleave.js]]></title>
     <link href="http://nmotw.in//github/cleave.js/"/>
-    <updated>2016-07-14T17:53:00+05:30</updated>
+    <updated>2016-07-14T05:23:00-07:00</updated>
     <id>http://nmotw.in//github/cleave.js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
 
@@ -145,7 +145,7 @@ regionCode: '{country}'
   <entry>
     <title type="html"><![CDATA[ineed]]></title>
     <link href="http://nmotw.in//github/ineed/"/>
-    <updated>2016-01-07T22:02:52+05:30</updated>
+    <updated>2016-01-07T08:32:52-08:00</updated>
     <id>http://nmotw.in//github/ineed</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ineed">ineed</a></h1>
 
@@ -198,7 +198,7 @@ var ineed = require('ineed');</p>
   <entry>
     <title type="html"><![CDATA[clipboard.js]]></title>
     <link href="http://nmotw.in//github/clipboard.js/"/>
-    <updated>2015-10-01T18:20:14+05:30</updated>
+    <updated>2015-10-01T05:50:14-07:00</updated>
     <id>http://nmotw.in//github/clipboard.js</id>
     <content type="html"><![CDATA[<h1><a href="http://zenorocha.github.io/clipboard.js/">clipboard.js</a></h1>
 

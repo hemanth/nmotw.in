@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DOM | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/dom/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[image-promise]]></title>
     <link href="http://nmotw.in//github/image-promise/"/>
-    <updated>2019-03-08T15:00:54+05:30</updated>
+    <updated>2019-03-08T01:30:54-08:00</updated>
     <id>http://nmotw.in//github/image-promise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
 
@@ -103,7 +103,7 @@ canvas.toDataURL('image/png')
   <entry>
     <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
     <link href="http://nmotw.in//github/scroll-into-view-if-needed/"/>
-    <updated>2019-03-02T23:25:04+05:30</updated>
+    <updated>2019-03-02T09:55:04-08:00</updated>
     <id>http://nmotw.in//github/scroll-into-view-if-needed</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
 
@@ -147,7 +147,7 @@ scrollIntoView(node, { behavior: 'smooth', scrollMode: 'if-needed' });
   <entry>
     <title type="html"><![CDATA[abort-controller]]></title>
     <link href="http://nmotw.in//github/abort-controller/"/>
-    <updated>2019-02-23T11:10:52+05:30</updated>
+    <updated>2019-02-22T21:40:52-08:00</updated>
     <id>http://nmotw.in//github/abort-controller</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
 
@@ -208,7 +208,7 @@ const signal = controller.signal;</p>
   <entry>
     <title type="html"><![CDATA[intl-tel-input]]></title>
     <link href="http://nmotw.in//github/intl-tel-input/"/>
-    <updated>2018-12-23T11:37:47+05:30</updated>
+    <updated>2018-12-22T22:07:47-08:00</updated>
     <id>http://nmotw.in//github/intl-tel-input</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/intl-tel-input">intl-tel-input</a></h1>
 
@@ -242,7 +242,7 @@ intlTelInput(input);
   <entry>
     <title type="html"><![CDATA[query-state]]></title>
     <link href="http://nmotw.in//github/query-state/"/>
-    <updated>2018-11-22T16:09:44+05:30</updated>
+    <updated>2018-11-22T02:39:44-08:00</updated>
     <id>http://nmotw.in//github/query-state</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
 

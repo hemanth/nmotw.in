@@ -4,7 +4,7 @@
   <title><![CDATA[Category: npm | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/npm/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[emma]]></title>
     <link href="http://nmotw.in//github/emma/"/>
-    <updated>2018-09-27T12:13:16+05:30</updated>
+    <updated>2018-09-26T23:43:16-07:00</updated>
     <id>http://nmotw.in//github/emma</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
 
@@ -58,7 +58,7 @@ Search powered by Algolia.</p>
   <entry>
     <title type="html"><![CDATA[npx]]></title>
     <link href="http://nmotw.in//github/npx/"/>
-    <updated>2017-07-15T11:07:12+05:30</updated>
+    <updated>2017-07-14T22:37:12-07:00</updated>
     <id>http://nmotw.in//github/npx</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npx">npx</a></h1>
 
@@ -92,7 +92,7 @@ Search powered by Algolia.</p>
   <entry>
     <title type="html"><![CDATA[cost-of-modules]]></title>
     <link href="http://nmotw.in//github/cost-of-modules/"/>
-    <updated>2016-12-01T19:06:43+05:30</updated>
+    <updated>2016-12-01T05:36:43-08:00</updated>
     <id>http://nmotw.in//github/cost-of-modules</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
 
@@ -124,7 +124,7 @@ identify which dependency is slowing the module down.</p>
   <entry>
     <title type="html"><![CDATA[updtr]]></title>
     <link href="http://nmotw.in//github/updtr/"/>
-    <updated>2016-11-17T13:57:47+05:30</updated>
+    <updated>2016-11-17T00:27:47-08:00</updated>
     <id>http://nmotw.in//github/updtr</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/updtr">updtr</a></h1>
 
@@ -169,7 +169,7 @@ nmotw.in> updtr --help</p>
   <entry>
     <title type="html"><![CDATA[yarn]]></title>
     <link href="http://nmotw.in//github/yarn/"/>
-    <updated>2016-10-13T19:37:03+05:30</updated>
+    <updated>2016-10-13T07:07:03-07:00</updated>
     <id>http://nmotw.in//github/yarn</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
 

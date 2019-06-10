@@ -4,7 +4,7 @@
   <title><![CDATA[Category: admin | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/admin/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[address]]></title>
     <link href="http://nmotw.in//github/address/"/>
-    <updated>2014-07-31T16:58:37+05:30</updated>
+    <updated>2014-07-31T04:28:37-07:00</updated>
     <id>http://nmotw.in//github/address</id>
     <content type="html"><![CDATA[<p>How many times have you checked for the IP, MAC and DNS servers on the CLI?</p>
 

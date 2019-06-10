@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mock | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/mock/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[mockdate]]></title>
     <link href="http://nmotw.in//github/mockdate/"/>
-    <updated>2017-05-19T07:46:27+05:30</updated>
+    <updated>2017-05-18T19:16:27-07:00</updated>
     <id>http://nmotw.in//github/mockdate</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mockdate">mockdate</a></h1>
 
@@ -46,7 +46,7 @@ new Date()
   <entry>
     <title type="html"><![CDATA[json-schema-faker]]></title>
     <link href="http://nmotw.in//github/json-schema-faker/"/>
-    <updated>2017-03-10T17:49:12+05:30</updated>
+    <updated>2017-03-10T04:19:12-08:00</updated>
     <id>http://nmotw.in//github/json-schema-faker</id>
     <content type="html"><![CDATA[<h1><a href="">json-schema-faker</a></h1>
 

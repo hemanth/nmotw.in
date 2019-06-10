@@ -4,7 +4,7 @@
   <title><![CDATA[Category: svg | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/svg/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-02T17:08:14+05:30</updated>
+  <updated>2019-06-09T22:07:33-07:00</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[svg-captcha]]></title>
     <link href="http://nmotw.in//github/svg-captcha/"/>
-    <updated>2016-11-24T20:22:03+05:30</updated>
+    <updated>2016-11-24T06:52:03-08:00</updated>
     <id>http://nmotw.in//github/svg-captcha</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/svg-captcha">svg-captcha</a></h1>
 
@@ -55,7 +55,7 @@ var captcha = svgCaptcha.create();</p>
   <entry>
     <title type="html"><![CDATA[trianglify]]></title>
     <link href="http://nmotw.in//github/trianglify/"/>
-    <updated>2015-09-24T17:23:44+05:30</updated>
+    <updated>2015-09-24T04:53:44-07:00</updated>
     <id>http://nmotw.in//github/trianglify</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/trianglify">Trianglify</a></h1>
 
