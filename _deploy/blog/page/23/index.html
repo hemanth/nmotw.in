@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;">   
+    <meta name="description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/23/">
-    <meta name="twitter:description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;">
+    <meta name="twitter:description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/23/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="confirm-simple A simple command-line tool to confirm. If you have written CLI apps, you would have for sure come across a senario of taking an &hellip;" />
+    <meta property="og:description" content="did-you-mean Fuzzy match a command from a list (typo-safety) This module does a Fuzzy match a word from your list of commands or keywords from node. &hellip;" />
 
     
 
@@ -73,6 +73,93 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/did-you-mean/">
+			
+				Did-you-mean</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-19T05:11:21-07:00" pubdate data-updated="true">Mar 19<span>th</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/did-you-mean">did-you-mean</a></h1>
+
+<blockquote><p>Fuzzy match a command from a list (typo-safety)</p></blockquote>
+
+<p>This module does a Fuzzy match a word from your list of commands or keywords from node.js/io.js to provide a friendly typo-safe human prompt.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save did-you-mean</code></p>
+
+<p><strong>API:</strong></p>
+
+<ul>
+<li><p>get -> Get the closest match.</p></li>
+<li><p>setThreshold(3) -> Set the threshold (the maximum Levenshtein distance)</p></li>
+<li><p>list('key') -> List all matches.</p></li>
+<li><p>ignoreCase() -> Set ignore case.</p></li>
+<li><p>matchCase() -> Set match case.</p></li>
+<li><p>add('key1','key2',...); -> Add more values.</p></li>
+</ul>
+
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Matcher</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;did-you-mean&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Matcher</span><span class="p">(</span><span class="s1">&#39;init install update upgrade npm brew apt-get&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// &quot;upgrade&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;brwe&#39;</span><span class="p">);</span> <span class="c1">// &quot;brew&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;atp-get&#39;</span><span class="p">);</span> <span class="c1">// &quot;apt-get&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">values</span><span class="p">;</span> <span class="c1">// [&quot;npm&quot;, &quot;brew&quot;, &quot;upgrade&quot;, &quot;update&quot;, &quot;apt-get&quot;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">m</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span><span class="s1">&#39;upgarde&#39;</span><span class="p">);</span> <span class="c1">// {distance: 2, value: &quot;upgrade&quot;}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/did-you-mean/did-you-mean.gif" alt="did-you-mean" /></p>
+
+<p>Thanks to Boris Okunskiy for bringing <code>did-you-mean</code> to web and CLI.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/confirm-simple/">
 			
 				Confirm-simple</a>
@@ -89,7 +176,7 @@
   
 
 
-<time datetime="2015-03-12T20:54:10+05:30" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
+<time datetime="2015-03-12T08:24:10-07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
@@ -158,7 +245,7 @@
   
 
 
-<time datetime="2015-03-05T18:47:23+05:30" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
+<time datetime="2015-03-05T05:17:23-08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dompurify">dompurify</a></h1>
@@ -242,7 +329,7 @@
   
 
 
-<time datetime="2015-02-26T18:18:25+05:30" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
+<time datetime="2015-02-26T04:48:25-08:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dom-event">dom-event</a></h1>
@@ -337,7 +424,7 @@
   
 
 
-<time datetime="2015-02-19T19:15:03+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
+<time datetime="2015-02-19T05:45:03-08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/sentencer">sentencer</a></h1>
@@ -435,7 +522,7 @@
   
 
 
-<time datetime="2015-02-12T17:57:21+05:30" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
+<time datetime="2015-02-12T04:27:21-08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/dehumanize-date">dehumanize-date</a></h1>
@@ -585,7 +672,7 @@
   
 
 
-<time datetime="2015-02-05T19:33:17+05:30" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
+<time datetime="2015-02-05T06:03:17-08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
@@ -662,7 +749,7 @@
   
 
 
-<time datetime="2015-01-29T17:53:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
+<time datetime="2015-01-29T17:53:00-08:00" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
@@ -793,7 +880,7 @@
   
 
 
-<time datetime="2015-01-22T19:03:18+05:30" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
+<time datetime="2015-01-22T05:33:18-08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="http://npm.im/nsp/">nsp</a> aka: <a href="http://nodesecurity.io">Node Security Project</a></h1>
@@ -905,7 +992,7 @@
   
 
 
-<time datetime="2015-01-15T20:45:00+05:30" pubdate data-updated="true">Jan 15<span>th</span>, 2015</time></div>
+<time datetime="2015-01-15T20:45:00-08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2015</time></div>
 	</header>
 	<div class="entry-content">
 		<p><a href="https://www.npmjs.com/package/isomorphic-fetch">isomorphic-fetch</a></p>
@@ -961,86 +1048,6 @@
 <p><img src="/images/isomorphic-fetch/isomorphic-fetch.gif" alt="isomorphic-fetch" /></p>
 
 <p>Thanks to <a href="https://mattandre.ws/">Matt Andrews</a> for <code>isomorphic-fetch</code> (:</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/safe-json-parse/">
-			
-				Safe-json-parse</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-08T22:26:50+05:30" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/safe-json-parse">safe-json-parse</a></h1>
-
-<blockquote><p>Parse JSON safely without throwing.</p></blockquote>
-
-<p>Sweet, simple and effictive module for parsing JSON safely :)</p>
-
-<p><strong>Get it:</strong> <code>npm install safe-json-parse --save</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>With callback:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;safe-json-parse&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;{}&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">json</span><span class="p">);});</span>
-</span><span class='line'><span class="kc">null</span> <span class="p">{}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;meow&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">json</span><span class="p">);});</span>
-</span><span class='line'><span class="p">[</span><span class="nx">SyntaxError</span><span class="o">:</span> <span class="nx">Unexpected</span> <span class="nx">token</span> <span class="nx">m</span><span class="p">]</span> <span class="kc">undefined</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>As Tuples:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">sf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;safe-json-parse/tuple&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">({})</span>
-</span><span class='line'><span class="p">[</span> <span class="p">[</span><span class="nx">SyntaxError</span><span class="o">:</span> <span class="nx">Unexpected</span> <span class="nx">token</span> <span class="nx">o</span><span class="p">],</span> <span class="kc">undefined</span> <span class="p">]</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">sf</span><span class="p">(</span><span class="s2">&quot;{}&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span> <span class="kc">null</span><span class="p">,</span> <span class="p">{}</span> <span class="p">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/safe-json-parse/safe-json-parse.gif" alt="safe-json-parse" /></p>
-
-<p>Thanks to <a href="https://twitter.com/raynos">Raynos</a> for helping us with safely parsing JSONs ;)</p>
 
 		
 		

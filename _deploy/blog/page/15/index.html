@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;">   
+    <meta name="description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
+Can be &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;">
+    <meta name="twitter:description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
+Can be &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="asyncbox A collection of small async/await utilities. A simple collection of tiny useful async/await utilities, the below are the list of function &hellip;" />
+    <meta property="og:description" content="autosize-input Effortless, dynamic-width text boxes. Features: Dynamically adjusts the width of the text box to fit its current contents
+Can be &hellip;" />
 
     
 
@@ -73,6 +76,79 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/autosize-input/">
+			
+				Autosize-input</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-09-29T07:00:53-07:00" pubdate data-updated="true">Sep 29<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.org/package/autosize-input">autosize-input</a></h1>
+
+<blockquote><p>Effortless, dynamic-width text boxes.</p></blockquote>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Dynamically adjusts the width of the text box to fit its current contents</li>
+<li>Can be initialised to fit its <code>placeholder</code> attribute</li>
+<li>Optionally set a <code>min-width</code> based on the element&rsquo;s initial content</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g autosize-input</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#foo&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#bar&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">autosizeInput</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#baz&#39;</span><span class="p">),</span> <span class="p">{</span> <span class="nx">minWidth</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Implementation details:</strong></p>
+
+<ul>
+<li><p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> property of the given text box is set, inline, to <code>content-box</code>. Therefore, the width we assign to our text box <em>excludes</em> its <code>padding</code> and <code>border</code> properties.</p></li>
+<li><p>A hidden &ldquo;ghost&rdquo; <code>div</code> &mdash; given the same <code>font-size</code> and <code>font-family</code> as the text box &mdash; is used to compute the correct width to assign to the text box. This width is recomputed and assigned to the text box on every <a href="https://developer.mozilla.org/en-US/docs/Web/Events/input"><code>input</code></a> event.</p></li>
+<li><p>The single &ldquo;ghost&rdquo; element is shared amongst all the &ldquo;autosized&rdquo; text boxes on the page.</p></li>
+</ul>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/asyncbox/">
 			
 				Asyncbox</a>
@@ -89,7 +165,7 @@
   
 
 
-<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
+<time datetime="2016-09-22T10:07:26-07:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
@@ -168,7 +244,7 @@
   
 
 
-<time datetime="2016-09-15T05:25:40+05:30" pubdate data-updated="true">Sep 15<span>th</span>, 2016</time></div>
+<time datetime="2016-09-14T16:55:40-07:00" pubdate data-updated="true">Sep 14<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
@@ -254,7 +330,7 @@
   
 
 
-<time datetime="2016-09-08T18:38:58+05:30" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
+<time datetime="2016-09-08T06:08:58-07:00" pubdate data-updated="true">Sep 8<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/quill">quill</a></h1>
@@ -358,7 +434,7 @@
   
 
 
-<time datetime="2016-09-01T19:35:36+05:30" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
+<time datetime="2016-09-01T07:05:36-07:00" pubdate data-updated="true">Sep 1<span>st</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://nmp.im/auto-install">auto-install</a></h1>
@@ -437,7 +513,7 @@
   
 
 
-<time datetime="2016-08-25T19:03:31+05:30" pubdate data-updated="true">Aug 25<span>th</span>, 2016</time></div>
+<time datetime="2016-08-25T06:33:31-07:00" pubdate data-updated="true">Aug 25<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
@@ -593,7 +669,7 @@
   
 
 
-<time datetime="2016-08-18T17:03:58+05:30" pubdate data-updated="true">Aug 18<span>th</span>, 2016</time></div>
+<time datetime="2016-08-18T04:33:58-07:00" pubdate data-updated="true">Aug 18<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/node-wifi-scanner">node-wifi-scanner</a></h1>
@@ -697,7 +773,7 @@
   
 
 
-<time datetime="2016-08-11T19:10:05+05:30" pubdate data-updated="true">Aug 11<span>th</span>, 2016</time></div>
+<time datetime="2016-08-11T06:40:05-07:00" pubdate data-updated="true">Aug 11<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/next-update">next-update</a></h1>
@@ -822,7 +898,7 @@
   
 
 
-<time datetime="2016-08-04T17:22:51+05:30" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time></div>
+<time datetime="2016-08-04T04:52:51-07:00" pubdate data-updated="true">Aug 4<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/currency-symbol-map">currency-symbol-map</a></h1>
@@ -886,7 +962,7 @@
   
 
 
-<time datetime="2016-07-28T20:40:10+05:30" pubdate data-updated="true">Jul 28<span>th</span>, 2016</time></div>
+<time datetime="2016-07-28T08:10:10-07:00" pubdate data-updated="true">Jul 28<span>th</span>, 2016</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/reify">reify</a></h1>
@@ -946,65 +1022,6 @@ API</a>.</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/reify/reify.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/wifi-triangulate/">
-			
-				Wifi-triangulate</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-07-21T22:46:26+05:30" pubdate data-updated="true">Jul 21<span>st</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/wifi-triangulate">wifi-triangulate</a></h1>
-
-<blockquote><p>Finds your current position on planet earth using the wifi access points in your vicinity.</p></blockquote>
-
-<p>This module requires that the wifi card on your computer is active and that you have access to the internet in order to communicate with Google so that it can triangulate your position.</p>
-
-<p><strong>Get it:</strong> <code>npm install --global wifi-triangulate</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">triangulate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wifi-triangulate&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">triangulate</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">location</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span>
-</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">location</span><span class="p">)</span> <span class="c1">// =&gt; { lat: 38.0690894, lng: -122.8069356, accuracy: 42 } </span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!:</strong></p>
-
-<p><img src="/images/wifi-triangulate/wifi-triangulate.gif" alt="wifi-triangulate" /></p>
 
 		
 		

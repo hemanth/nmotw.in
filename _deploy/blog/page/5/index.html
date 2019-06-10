@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="npm-whoshiring npm who's hiring? npm-whoshiring shows a table on your CLI of currently open jobs listed by npm partners. Get it: npm i -g npm- &hellip;">   
+    <meta name="description" content="microjob worker threads into easy-to-use routines for CPU-bound. microjob is a tiny wrapper for threads (worker_threads) and is intended to perform &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/5/">
-    <meta name="twitter:description" content="npm-whoshiring npm who's hiring? npm-whoshiring shows a table on your CLI of currently open jobs listed by npm partners. Get it: npm i -g npm- &hellip;">
+    <meta name="twitter:description" content="microjob worker threads into easy-to-use routines for CPU-bound. microjob is a tiny wrapper for threads (worker_threads) and is intended to perform &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/5/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="npm-whoshiring npm who's hiring? npm-whoshiring shows a table on your CLI of currently open jobs listed by npm partners. Get it: npm i -g npm- &hellip;" />
+    <meta property="og:description" content="microjob worker threads into easy-to-use routines for CPU-bound. microjob is a tiny wrapper for threads (worker_threads) and is intended to perform &hellip;" />
 
     
 
@@ -73,6 +73,92 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/microjob/">
+			
+				Microjob</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-09-08T11:57:32-07:00" pubdate data-updated="true">Sep 8<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
+
+<blockquote><p>worker threads into easy-to-use routines for CPU-bound.</p></blockquote>
+
+<p><code>microjob</code> is a tiny wrapper for threads (<code>worker_threads</code>) and is intended to perform heavy CPU loads using anonymous functions.</p>
+
+<p><strong>GET IT:</strong> <code>npm install microjob</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(async () =&gt; {
+</span><span class='line'>  const { job } = require('microjob')
+</span><span class='line'>
+</span><span class='line'>  try {
+</span><span class='line'>    // this function will be executed in another thread
+</span><span class='line'>    const res = await job(() =&gt; {
+</span><span class='line'>      let i = 0
+</span><span class='line'>      for (i = 0; i &lt; 1000000; i++) {
+</span><span class='line'>        // heavy CPU load ...
+</span><span class='line'>      }
+</span><span class='line'>
+</span><span class='line'>      return i
+</span><span class='line'>    })
+</span><span class='line'>
+</span><span class='line'>    console.log(res) // 1000000
+</span><span class='line'>  } catch (err) {
+</span><span class='line'>    console.error(err)
+</span><span class='line'>  }
+</span><span class='line'>})();</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: To run this today, you we need node <code>v&gt;=10</code> and execute it via <code>--experimental-worker</code> flag.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/microjob/microjob.gif" alt="microjob" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/npm-whoshiring/">
 			
 				Npm-whoshiring</a>
@@ -89,7 +175,7 @@
   
 
 
-<time datetime="2018-09-02T09:36:09+05:30" pubdate data-updated="true">Sep 2<span>nd</span>, 2018</time></div>
+<time datetime="2018-09-01T21:06:09-07:00" pubdate data-updated="true">Sep 1<span>st</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
@@ -180,7 +266,7 @@
   
 
 
-<time datetime="2018-08-26T14:37:52+05:30" pubdate data-updated="true">Aug 26<span>th</span>, 2018</time></div>
+<time datetime="2018-08-26T02:07:52-07:00" pubdate data-updated="true">Aug 26<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
@@ -272,7 +358,7 @@
   
 
 
-<time datetime="2018-08-19T21:08:06+05:30" pubdate data-updated="true">Aug 19<span>th</span>, 2018</time></div>
+<time datetime="2018-08-19T08:38:06-07:00" pubdate data-updated="true">Aug 19<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://npm.im/tryor">tryor</a></h1>
@@ -365,7 +451,7 @@
   
 
 
-<time datetime="2018-08-12T15:04:36+05:30" pubdate data-updated="true">Aug 12<span>th</span>, 2018</time></div>
+<time datetime="2018-08-12T02:34:36-07:00" pubdate data-updated="true">Aug 12<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/aproba">aproba</a></h1>
@@ -504,7 +590,7 @@
   
 
 
-<time datetime="2018-08-05T13:37:39+05:30" pubdate data-updated="true">Aug 5<span>th</span>, 2018</time></div>
+<time datetime="2018-08-05T01:07:39-07:00" pubdate data-updated="true">Aug 5<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
@@ -576,7 +662,7 @@
   
 
 
-<time datetime="2018-07-28T15:08:33+05:30" pubdate data-updated="true">Jul 28<span>th</span>, 2018</time></div>
+<time datetime="2018-07-28T02:38:33-07:00" pubdate data-updated="true">Jul 28<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/hiper">hiper</a></h1>
@@ -720,7 +806,7 @@
   
 
 
-<time datetime="2018-07-22T13:12:10+05:30" pubdate data-updated="true">Jul 22<span>nd</span>, 2018</time></div>
+<time datetime="2018-07-22T00:42:10-07:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="">time-stamp</a></h1>
@@ -877,7 +963,7 @@
   
 
 
-<time datetime="2018-07-15T15:52:27+05:30" pubdate data-updated="true">Jul 15<span>th</span>, 2018</time></div>
+<time datetime="2018-07-15T03:22:27-07:00" pubdate data-updated="true">Jul 15<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
@@ -965,7 +1051,7 @@
   
 
 
-<time datetime="2018-07-07T21:59:37+05:30" pubdate data-updated="true">Jul 7<span>th</span>, 2018</time></div>
+<time datetime="2018-07-07T09:29:37-07:00" pubdate data-updated="true">Jul 7<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/auto-parse">auto-parse</a></h1>
@@ -1051,101 +1137,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/auto-parse/auto-parse.gif" alt="auto-parse" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/error-stack-parser/">
-			
-				Error-stack-parser</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-07-01T20:42:55+05:30" pubdate data-updated="true">Jul 1<span>st</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
-
-<blockquote><p>Simple, cross-browser Error parser.</p></blockquote>
-
-<p><code>error-stack-parser</code> library parses and extracts function names, URLs, line numbers, and column numbers from the given Error's stack as an Array of StackFrames.</p>
-
-<p><strong>Get it:</strong> <code>npm install error-stack-parser</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ErrorStackParser</span> <span class="o">=</span> <span class="nx">rquire</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">error</span><span class="o">-</span><span class="nx">stack</span><span class="o">-</span><span class="nx">parser</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">ErrorStackParser</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;BOOM&#39;</span><span class="p">));</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">=&gt; [</span>
-</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;foo&#39;, args: [], fileName: &#39;path/to/file.js&#39;, lineNumber: 35, columnNumber: 79, isNative: false, isEval: false}),</span>
-</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;Bar&#39;, fileName: &#39;https://cdn.somewherefast.com/utils.min.js&#39;, lineNumber: 1, columnNumber: 832, isNative: false, isEval: false, isConstructor: true}),</span>
-</span><span class='line'><span class="cm">        StackFrame(... and so on ...)</span>
-</span><span class='line'><span class="cm">   ]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">ErrorStackParer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">[ &#39;parse&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;extractLocation&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseV8OrIE&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseFFOrSafari&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera9&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera10&#39;,</span>
-</span><span class='line'><span class="cm">  &#39;parseOpera11&#39; ]</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/error-stack-parser/error-stack-parser.gif" alt="error-stack-parser" /></p>
 
 		
 		

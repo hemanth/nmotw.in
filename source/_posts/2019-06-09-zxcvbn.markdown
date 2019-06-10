@@ -1,0 +1,91 @@
+---
+layout: post
+title: "zxcvbn"
+date: 2019-06-09 21:57:44 -0700
+comments: true
+categories: util 
+---
+
+#[zxcvbn]()
+> Password strength estimator!
+
+`zxcvbn` is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common passwords helps us to estimate various parameters related to the strength of the password and also gives us the suggestion to improve the password.
+
+__Get it:__ `npm install zxcvbn`
+
+__Sample 
+
+```js
+
+const zxcvbn = require('zxcvbn');
+
+zxcvbn('Tr0ub4dour&3');
+
+// ^ Would return an object like below:
+
+/*
+
+{
+  "password": "Tr0ub4dour&3",
+  "guesses": 19058000,
+  "guesses_log10": 7.280077322611945,
+  "sequence": [
+    {
+      "pattern": "dictionary",
+      "i": 0,
+      "j": 9,
+      "token": "Tr0ub4dour",
+      "matched_word": "troubadour",
+      "rank": 11905,
+      "dictionary_name": "us_tv_and_film",
+      "reversed": false,
+      "l33t": true,
+      "sub": {
+        "0": "o",
+        "4": "a"
+      },
+      "sub_display": "0 -> o, 4 -> a",
+      "base_guesses": 11905,
+      "uppercase_variations": 2,
+      "l33t_variations": 4,
+      "guesses": 95240,
+      "guesses_log10": 4.978819386732842
+    },
+    {
+      "pattern": "bruteforce",
+      "token": "&3",
+      "i": 10,
+      "j": 11,
+      "guesses": 100,
+      "guesses_log10": 2
+    }
+  ],
+  "calc_time": 2,
+  "crack_times_seconds": {
+    "online_throttling_100_per_hour": 686088000,
+    "online_no_throttling_10_per_second": 1905800,
+    "offline_slow_hashing_1e4_per_second": 1905.8,
+    "offline_fast_hashing_1e10_per_second": 0.0019058
+  },
+  "crack_times_display": {
+    "online_throttling_100_per_hour": "21 years",
+    "online_no_throttling_10_per_second": "22 days",
+    "offline_slow_hashing_1e4_per_second": "32 minutes",
+    "offline_fast_hashing_1e10_per_second": "less than a second"
+  },
+  "score": 2,
+  "feedback": {
+    "warning": "",
+    "suggestions": [
+      "Add another word or two. Uncommon words are better.",
+      "Capitalization doesn't help very much",
+      "Predictable substitutions like '@' instead of 'a' don't help very much"
+    ]
+  }
+}
+*/
+```
+
+__GIF FTW!__
+
+![zxcvbn](/images/zxcvbn/zxcvbn.gif)
