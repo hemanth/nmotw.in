@@ -4,7 +4,7 @@
   <title><![CDATA[Category: async | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/async/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[async-retry]]></title>
     <link href="http://nmotw.in//github/async-retry/"/>
-    <updated>2017-09-14T10:20:23-07:00</updated>
+    <updated>2017-09-14T22:50:23+05:30</updated>
     <id>http://nmotw.in//github/async-retry</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-retry">async-retry</a></h1>
 
@@ -68,7 +68,7 @@ retry(retrier : Function, opts : Object) =&gt; Promise
   <entry>
     <title type="html"><![CDATA[base64-async]]></title>
     <link href="http://nmotw.in//github/base64-async/"/>
-    <updated>2017-06-29T01:27:23-07:00</updated>
+    <updated>2017-06-29T13:57:23+05:30</updated>
     <id>http://nmotw.in//github/base64-async</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/base64-async">base64-async</a></h1>
 
@@ -112,7 +112,7 @@ const originalFileBuffer = await b64(b64String);
   <entry>
     <title type="html"><![CDATA[asyncbox]]></title>
     <link href="http://nmotw.in//github/asyncbox/"/>
-    <updated>2016-09-22T10:07:26-07:00</updated>
+    <updated>2016-09-22T22:37:26+05:30</updated>
     <id>http://nmotw.in//github/asyncbox</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
 
@@ -162,7 +162,7 @@ await sleep(1000); // wait one second
   <entry>
     <title type="html"><![CDATA[ambi]]></title>
     <link href="http://nmotw.in//github/ambi/"/>
-    <updated>2015-12-03T07:21:30-08:00</updated>
+    <updated>2015-12-03T20:51:30+05:30</updated>
     <id>http://nmotw.in//github/ambi</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
 

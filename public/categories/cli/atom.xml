@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[eshost-cli]]></title>
     <link href="http://nmotw.in//github/eshost-cli/"/>
-    <updated>2019-03-29T23:07:02-07:00</updated>
+    <updated>2019-03-30T11:37:02+05:30</updated>
     <id>http://nmotw.in//github/eshost-cli</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
 
@@ -136,7 +136,7 @@ Usage: eshost [options] [input-file]</p>
   <entry>
     <title type="html"><![CDATA[jsvu]]></title>
     <link href="http://nmotw.in//github/jsvu/"/>
-    <updated>2017-12-07T08:49:37-08:00</updated>
+    <updated>2017-12-07T22:19:37+05:30</updated>
     <id>http://nmotw.in//github/jsvu</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/jsvu">jsvu</a></h1>
 
@@ -173,7 +173,7 @@ ey and V8 for you.</p>
   <entry>
     <title type="html"><![CDATA[ramda-repl]]></title>
     <link href="http://nmotw.in//github/ramda-repl/"/>
-    <updated>2015-09-17T09:39:50-07:00</updated>
+    <updated>2015-09-17T22:09:50+05:30</updated>
     <id>http://nmotw.in//github/ramda-repl</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
 
@@ -233,7 +233,7 @@ Welcome to Ramda REPL!</p>
   <entry>
     <title type="html"><![CDATA[confirm-simple]]></title>
     <link href="http://nmotw.in//github/confirm-simple/"/>
-    <updated>2015-03-12T08:24:10-07:00</updated>
+    <updated>2015-03-12T20:54:10+05:30</updated>
     <id>http://nmotw.in//github/confirm-simple</id>
     <content type="html"><![CDATA[<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
 
@@ -273,7 +273,7 @@ var confirm = require('confirm-simple')</p>
   <entry>
     <title type="html"><![CDATA[yosay]]></title>
     <link href="http://nmotw.in//github/yosay/"/>
-    <updated>2014-05-14T21:15:56-07:00</updated>
+    <updated>2014-05-15T09:45:56+05:30</updated>
     <id>http://nmotw.in//github/yosay</id>
     <content type="html"><![CDATA[<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
 

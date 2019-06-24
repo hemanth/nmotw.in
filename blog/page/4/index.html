@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="query-state Application state in query string. query-state is a cheeky module that uses history API and encodeURIComponent magic to maintain the &hellip;">   
+    <meta name="description" content="progress-estimator Progress bar and estimation for Promise compilation. progress-estimator logs a progress bar and estimation for how long a Promise &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/4/">
-    <meta name="twitter:description" content="query-state Application state in query string. query-state is a cheeky module that uses history API and encodeURIComponent magic to maintain the &hellip;">
+    <meta name="twitter:description" content="progress-estimator Progress bar and estimation for Promise compilation. progress-estimator logs a progress bar and estimation for how long a Promise &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/4/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="query-state Application state in query string. query-state is a cheeky module that uses history API and encodeURIComponent magic to maintain the &hellip;" />
+    <meta property="og:description" content="progress-estimator Progress bar and estimation for Promise compilation. progress-estimator logs a progress bar and estimation for how long a Promise &hellip;" />
 
     
 
@@ -73,6 +73,91 @@
 	<header>
 		<h2 class="title">
 			
+			<a href="/progress-estimator/">
+			
+				Progress-estimator</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-11-30T08:54:21+05:30" pubdate data-updated="true">Nov 30<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">progress-estimator</a></h1>
+
+<blockquote><p>Progress bar and estimation for Promise compilation.</p></blockquote>
+
+<p><code>progress-estimator</code> logs a progress bar and estimation for how long a Promise will take to complete.</p>
+
+<p>It tracks previous durations in order to provide more accurate estimates over time!</p>
+
+<p><strong>Get it:</strong> <code>npm install progress-estimator</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">createLogger</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;progress-estimator&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// All configuration keys are optional, but it&#39;s recommended to specify a storage location.</span>
+</span><span class='line'><span class="c1">// Learn more about configuration options below.</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">logger</span> <span class="o">=</span> <span class="nx">createLogger</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">storagePath</span><span class="o">:</span> <span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;.progress-estimator&#39;</span><span class="p">),</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">run</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">logger</span><span class="p">(</span><span class="nx">promiseOne</span><span class="p">,</span> <span class="s2">&quot;This is a promise&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">logger</span><span class="p">(</span>
+</span><span class='line'>    <span class="nx">promiseTwo</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;This is another promise. I think it will take about 1 second&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="nx">estimate</span><span class="o">:</span> <span class="mi">1000</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/progress-estimator/progress-estimator.gif" alt="progress-estimator" /></p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
 			<a href="/query-state/">
 			
 				Query-state</a>
@@ -89,7 +174,7 @@
   
 
 
-<time datetime="2018-11-22T02:39:44-08:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2018</time></div>
+<time datetime="2018-11-22T16:09:44+05:30" pubdate data-updated="true">Nov 22<span>nd</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
@@ -192,7 +277,7 @@
   
 
 
-<time datetime="2018-11-15T18:50:35-08:00" pubdate data-updated="true">Nov 15<span>th</span>, 2018</time></div>
+<time datetime="2018-11-16T08:20:35+05:30" pubdate data-updated="true">Nov 16<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
@@ -270,7 +355,7 @@
   
 
 
-<time datetime="2018-11-11T22:37:49-08:00" pubdate data-updated="true">Nov 11<span>th</span>, 2018</time></div>
+<time datetime="2018-11-12T12:07:49+05:30" pubdate data-updated="true">Nov 12<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
@@ -362,7 +447,7 @@
   
 
 
-<time datetime="2018-11-04T01:45:46-08:00" pubdate data-updated="true">Nov 4<span>th</span>, 2018</time></div>
+<time datetime="2018-11-04T15:15:46+05:30" pubdate data-updated="true">Nov 4<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/errno">errno</a></h1>
@@ -522,7 +607,7 @@
   
 
 
-<time datetime="2018-10-28T03:03:43-07:00" pubdate data-updated="true">Oct 28<span>th</span>, 2018</time></div>
+<time datetime="2018-10-28T15:33:43+05:30" pubdate data-updated="true">Oct 28<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
@@ -660,7 +745,7 @@
   
 
 
-<time datetime="2018-10-20T01:56:13-07:00" pubdate data-updated="true">Oct 20<span>th</span>, 2018</time></div>
+<time datetime="2018-10-20T14:26:13+05:30" pubdate data-updated="true">Oct 20<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://npm.im/compromise">compromise</a></h1>
@@ -743,7 +828,7 @@
   
 
 
-<time datetime="2018-10-13T02:17:06-07:00" pubdate data-updated="true">Oct 13<span>th</span>, 2018</time></div>
+<time datetime="2018-10-13T14:47:06+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/zet">zet</a></h1>
@@ -843,7 +928,7 @@
   
 
 
-<time datetime="2018-10-07T01:59:22-07:00" pubdate data-updated="true">Oct 7<span>th</span>, 2018</time></div>
+<time datetime="2018-10-07T14:29:22+05:30" pubdate data-updated="true">Oct 7<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/regex-not">regex-not</a></h1>
@@ -906,7 +991,7 @@
   
 
 
-<time datetime="2018-09-26T23:43:16-07:00" pubdate data-updated="true">Sep 26<span>th</span>, 2018</time></div>
+<time datetime="2018-09-27T12:13:16+05:30" pubdate data-updated="true">Sep 27<span>th</span>, 2018</time></div>
 	</header>
 	<div class="entry-content">
 		<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
@@ -960,93 +1045,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/emma/emma-cli.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/please-upgrade-node/">
-			
-				Please-upgrade-node</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-09-23T03:12:17-07:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/please-upgrade-node">please-upgrade-node</a></h1>
-
-<blockquote><p>💁 show a message to your users to upgrade Node instead of a stacktrace</p></blockquote>
-
-<p><code>please-upgrade-node</code>checks if the users node version is statisfying the <code>engines</code> version in your <code>package.json</code> if not warns, uber useful for CLI apps relying on versions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install please-upgrade-node</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">pkg</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./package.json&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;please-upgrade-node&#39;</span><span class="p">)(</span><span class="nx">pkg</span><span class="p">)</span> <span class="c1">// &lt;- Must run BEFORE requiring any other modules</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in <code>package.json</code>:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;engines&quot;</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s2">&quot;node&quot;</span><span class="o">:</span> <span class="s2">&quot;&gt;=6&quot;</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: <code>&gt;=</code> is the only operator supported.</p>
-
-<p>You could also:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">pleaseUpgradeNode</span><span class="p">(</span><span class="nx">pkg</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">exitCode</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// Default: 1</span>
-</span><span class='line'>  <span class="nx">message</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">requiredVersion</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s1">&#39;Oops this program require Node &#39;</span> <span class="o">+</span>  <span class="nx">requiredVersion</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/please-upgrade-node/please-upgrade-node.gif" alt="please-upgrade-node" /></p>
 
 		
 		

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: promise | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/promise/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[progress-estimator]]></title>
     <link href="http://nmotw.in//github/progress-estimator/"/>
-    <updated>2018-11-29T19:24:21-08:00</updated>
+    <updated>2018-11-30T08:54:21+05:30</updated>
     <id>http://nmotw.in//github/progress-estimator</id>
     <content type="html"><![CDATA[<h1><a href="">progress-estimator</a></h1>
 
@@ -63,7 +63,7 @@ const logger = createLogger({
   <entry>
     <title type="html"><![CDATA[proxymise]]></title>
     <link href="http://nmotw.in//github/proxymise/"/>
-    <updated>2018-07-15T03:22:27-07:00</updated>
+    <updated>2018-07-15T15:52:27+05:30</updated>
     <id>http://nmotw.in//github/proxymise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
 
@@ -111,7 +111,7 @@ console.log(value);
   <entry>
     <title type="html"><![CDATA[data.task]]></title>
     <link href="http://nmotw.in//github/data.task/"/>
-    <updated>2016-02-04T06:26:02-08:00</updated>
+    <updated>2016-02-04T19:56:02+05:30</updated>
     <id>http://nmotw.in//github/data.task</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
 
@@ -159,7 +159,7 @@ read('/tmp/data.md').fork(console.error, console.log);
   <entry>
     <title type="html"><![CDATA[git-promise]]></title>
     <link href="http://nmotw.in//github/git-promise/"/>
-    <updated>2014-08-14T05:21:17-07:00</updated>
+    <updated>2014-08-14T17:51:17+05:30</updated>
     <id>http://nmotw.in//github/git-promise</id>
     <content type="html"><![CDATA[<h2>git-promise</h2>
 
@@ -227,7 +227,7 @@ git("blame me", {</p>
   <entry>
     <title type="html"><![CDATA[lie-denodify]]></title>
     <link href="http://nmotw.in//github/lie-denodify/"/>
-    <updated>2014-04-10T05:08:55-07:00</updated>
+    <updated>2014-04-10T17:38:55+05:30</updated>
     <id>http://nmotw.in//github/lie-denodify</id>
     <content type="html"><![CDATA[<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify's</a> main focus is to turn a node style callback into a promise based one.</p>
 

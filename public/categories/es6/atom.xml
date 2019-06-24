@@ -4,7 +4,7 @@
   <title><![CDATA[Category: es6 | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/es6/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[common-tags]]></title>
     <link href="http://nmotw.in//github/common-tags/"/>
-    <updated>2017-02-10T06:24:05-08:00</updated>
+    <updated>2017-02-10T19:54:05+05:30</updated>
     <id>http://nmotw.in//github/common-tags</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
 
@@ -80,7 +80,7 @@ import {oneLine} from 'common-tags'</p>
   <entry>
     <title type="html"><![CDATA[enable]]></title>
     <link href="http://nmotw.in//github/enable/"/>
-    <updated>2015-05-28T09:05:04-07:00</updated>
+    <updated>2015-05-28T21:35:04+05:30</updated>
     <id>http://nmotw.in//github/enable</id>
     <content type="html"><![CDATA[<h1><a href="enable">https://www.npmjs.com/package/enable</a></h1>
 
@@ -113,7 +113,7 @@ if (enable.generator) {
   <entry>
     <title type="html"><![CDATA[objectmap]]></title>
     <link href="http://nmotw.in//github/objectmap/"/>
-    <updated>2015-02-05T06:03:17-08:00</updated>
+    <updated>2015-02-05T19:33:17+05:30</updated>
     <id>http://nmotw.in//github/objectmap</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
 
@@ -160,7 +160,7 @@ if (enable.generator) {
   <entry>
     <title type="html"><![CDATA[degenerator]]></title>
     <link href="http://nmotw.in//github/degenerator/"/>
-    <updated>2014-05-29T07:52:17-07:00</updated>
+    <updated>2014-05-29T20:22:17+05:30</updated>
     <id>http://nmotw.in//github/degenerator</id>
     <content type="html"><![CDATA[<p>Turns sync functions into ES6's async generator functions with <a href="http://n8.io/">Nathan Rajlich's</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
 

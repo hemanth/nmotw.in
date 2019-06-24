@@ -4,7 +4,7 @@
   <title><![CDATA[Category: performance | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/performance/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[pwmetrics]]></title>
     <link href="http://nmotw.in//github/pwmetrics/"/>
-    <updated>2016-08-25T06:33:31-07:00</updated>
+    <updated>2016-08-25T19:03:31+05:30</updated>
     <id>http://nmotw.in//github/pwmetrics</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pwmetrics">pwmetrics</a></h1>
 
@@ -109,7 +109,7 @@ const PWMetrics = require('pwmetrics');</p>
   <entry>
     <title type="html"><![CDATA[speedline]]></title>
     <link href="http://nmotw.in//github/speedline/"/>
-    <updated>2016-05-19T22:01:00-07:00</updated>
+    <updated>2016-05-20T10:31:00+05:30</updated>
     <id>http://nmotw.in//github/speedline</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/speedline">speedline</a></h1>
 
@@ -162,7 +162,7 @@ $ speedline --help</p>
   <entry>
     <title type="html"><![CDATA[PSI]]></title>
     <link href="http://nmotw.in//github/psi/"/>
-    <updated>2014-06-19T06:52:39-07:00</updated>
+    <updated>2014-06-19T19:22:39+05:30</updated>
     <id>http://nmotw.in//github/psi</id>
     <content type="html"><![CDATA[<p>If you are into web development at one point or the other you would have used Google's pagespeed <a href="http://developers.google.com/speed/pagespeed/insights/">insights</a> to improve the performance of your site.</p>
 
@@ -258,7 +258,7 @@ cat links | xargs -L1 psi &gt; analysis.report
   <entry>
     <title type="html"><![CDATA[time-require]]></title>
     <link href="http://nmotw.in//github/time-require/"/>
-    <updated>2014-05-22T09:56:56-07:00</updated>
+    <updated>2014-05-22T22:26:56+05:30</updated>
     <id>http://nmotw.in//github/time-require</id>
     <content type="html"><![CDATA[<p>Were you looking for the stats of how long the require statements took in your scripts?</p>
 

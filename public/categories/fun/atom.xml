@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fun | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/fun/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -14,9 +14,58 @@
 
   
   <entry>
+    <title type="html"><![CDATA[emoji-flags]]></title>
+    <link href="http://nmotw.in//github/emoji-flags/"/>
+    <updated>2019-06-23T09:52:10+05:30</updated>
+    <id>http://nmotw.in//github/emoji-flags</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/emoji-flags">emoji-flags</a></h1>
+
+<blockquote><p>emoji flag symbol for a given country code.</p></blockquote>
+
+<p><code>emoji-flags</code> is a sweet module that returns the emjoi flag for a given country code.</p>
+
+<p><strong>Get it:</strong> <code>npm install emoji-flags</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const emojiFlags = require('emoji-flags');</p>
+
+<p>// single country lookup by code
+emojiFlags.countryCode('DK');
+// => { "code": "DK", "emoji": "🇩🇰", ... }</p>
+
+<p>// entire dataset
+emojiFlags.data;
+```</p>
+
+<p>```sh
+$ emoji-flags --help</p>
+
+<p>  return emoji flag symbol for country code</p>
+
+<p>  Example</p>
+
+<pre><code>emoji-flags gb
+
+emoji-flags dk --verbose
+
+emoji-flags
+=&gt; returns the entire dataset
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/emoji-flags/emoji-flags.gif" alt="emoji-flags" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[clockmoji]]></title>
     <link href="http://nmotw.in//github/clockmoji/"/>
-    <updated>2019-01-20T06:30:13-08:00</updated>
+    <updated>2019-01-20T20:00:13+05:30</updated>
     <id>http://nmotw.in//github/clockmoji</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/clockmoji">clockmoji</a></h1>
 
@@ -94,7 +143,7 @@ console.log(clockmoji('18:30'))
   <entry>
     <title type="html"><![CDATA[is-vegan]]></title>
     <link href="http://nmotw.in//github/is-vegan/"/>
-    <updated>2018-11-11T22:37:49-08:00</updated>
+    <updated>2018-11-12T12:07:49+05:30</updated>
     <id>http://nmotw.in//github/is-vegan</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
 
@@ -146,7 +195,7 @@ isVegan.checkIngredients(['soy', 'cacao butter', 'pork', 'glycine']);
   <entry>
     <title type="html"><![CDATA[mapscii]]></title>
     <link href="http://nmotw.in//github/mapscii/"/>
-    <updated>2018-09-16T06:12:56-07:00</updated>
+    <updated>2018-09-16T18:42:56+05:30</updated>
     <id>http://nmotw.in//github/mapscii</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
 
@@ -183,7 +232,7 @@ $ mapscii</p>
   <entry>
     <title type="html"><![CDATA[npm-whoshiring]]></title>
     <link href="http://nmotw.in//github/npm-whoshiring/"/>
-    <updated>2018-09-01T21:06:09-07:00</updated>
+    <updated>2018-09-02T09:36:09+05:30</updated>
     <id>http://nmotw.in//github/npm-whoshiring</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npm-whoshiring">npm-whoshiring</a></h1>
 
@@ -225,58 +274,6 @@ Voxer                http://www.voxer.com/careers/                              
 <p><strong>GIF FTW</strong></p>
 
 <p><img src="/images/npm-whoshiring/npm-whoshiring.gif" alt="npm-whoshiring" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[april-fools]]></title>
-    <link href="http://nmotw.in//github/april-fools/"/>
-    <updated>2018-03-31T17:07:51-07:00</updated>
-    <id>http://nmotw.in//github/april-fools</id>
-    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/april-fools">april-fools</a></p>
-
-<blockquote><p>Randomly fool with an <code>Error</code> on April 1st.</p></blockquote>
-
-<p>⚠️ This is a foolproof way to lose friends and alienate people. Will likely get you fired!</p>
-
-<p>Few lines of code to have fun on April fools day:</p>
-
-<p>```
-'use strict'</p>
-
-<p>const date = new Date()</p>
-
-<p>if (date.getMonth() === 3 &amp;&amp; date.getDate() === 1 &amp;&amp; Math.floor(Math.random() * 6) + 1 === 1) {
-  const message = require('sentencer').make("Unexpected  with  ")</p>
-
-<p>  throw new Error(message)
-}
-```</p>
-
-<p>Related module -> <a href="http://nmotw.in/sentencer/">sentencer</a>.</p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>```js
-require('april-fools'); // That's it! And it would randomly throw an error like below.</p>
-
-<p>Error: Unexpected lunch with a brindle ravioli</p>
-
-<pre><code>at Object.&lt;anonymous&gt; (/private/tmp/node_modules/april-fools/index.js:8:9)
-at Module._compile (module.js:652:30)
-at Object.Module._extensions..js (module.js:663:10)
-at Module.load (module.js:565:32)
-at tryModuleLoad (module.js:505:12)
-at Function.Module._load (module.js:497:3)
-at Module.require (module.js:596:17)
-at require (internal/module.js:11:18)
-</code></pre>
-
-<p>```</p>
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/april-fools/april-fools.gif" alt="april-fools" /></p>
 ]]></content>
   </entry>
   

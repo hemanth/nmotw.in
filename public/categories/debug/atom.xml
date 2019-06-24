@@ -4,7 +4,7 @@
   <title><![CDATA[Category: debug | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/debug/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[nif]]></title>
     <link href="http://nmotw.in//github/nif/"/>
-    <updated>2017-05-26T16:04:09-07:00</updated>
+    <updated>2017-05-27T04:34:09+05:30</updated>
     <id>http://nmotw.in//github/nif</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/nif">nif</a></h1>
 
@@ -43,7 +43,7 @@ nif ./to-debug.js
   <entry>
     <title type="html"><![CDATA[why-is-node-running]]></title>
     <link href="http://nmotw.in//github/why-is-node-running/"/>
-    <updated>2016-02-11T07:04:17-08:00</updated>
+    <updated>2016-02-11T20:34:17+05:30</updated>
     <id>http://nmotw.in//github/why-is-node-running</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/why-is-node-running">why-is-node-running</a></h1>
 
@@ -108,7 +108,7 @@ Known handles:</p>
   <entry>
     <title type="html"><![CDATA[iron-node]]></title>
     <link href="http://nmotw.in//github/iron-node/"/>
-    <updated>2016-01-21T08:20:46-08:00</updated>
+    <updated>2016-01-21T21:50:46+05:30</updated>
     <id>http://nmotw.in//github/iron-node</id>
     <content type="html"><![CDATA[<h1><a href="http://s-a.github.io/iron-node/">iron-node</a></h1>
 
@@ -157,7 +157,7 @@ iron-node PATH_TO_NODE_JS_FILE [--customparm1=foo --customparm2=bar];
   <entry>
     <title type="html"><![CDATA[stack-trace]]></title>
     <link href="http://nmotw.in//github/stack-trace/"/>
-    <updated>2015-12-31T09:47:09-08:00</updated>
+    <updated>2015-12-31T23:17:09+05:30</updated>
     <id>http://nmotw.in//github/stack-trace</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stack-trace">stack-trace</a></h1>
 
@@ -206,7 +206,7 @@ var trace = stackTrace.parse(err);
   <entry>
     <title type="html"><![CDATA[require-times]]></title>
     <link href="http://nmotw.in//github/require-times/"/>
-    <updated>2015-04-09T07:40:22-07:00</updated>
+    <updated>2015-04-09T20:10:22+05:30</updated>
     <id>http://nmotw.in//github/require-times</id>
     <content type="html"><![CDATA[<h1><a href="http://npm.im/require-times">require-times</a></h1>
 

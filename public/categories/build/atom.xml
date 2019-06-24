@@ -4,7 +4,7 @@
   <title><![CDATA[Category: build | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/build/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[build.sh]]></title>
     <link href="http://nmotw.in//github/build.sh/"/>
-    <updated>2017-09-07T21:33:31-07:00</updated>
+    <updated>2017-09-08T10:03:31+05:30</updated>
     <id>http://nmotw.in//github/build.sh</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/build.sh">build.sh</a></h1>
 
