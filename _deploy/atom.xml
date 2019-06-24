@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-06-14T10:17:13-07:00</updated>
+  <updated>2019-06-24T10:06:37+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -13,9 +13,76 @@
 
   
   <entry>
+    <title type="html"><![CDATA[emoji-flags]]></title>
+    <link href="http://nmotw.in/emoji-flags/"/>
+    <updated>2019-06-23T09:52:10+05:30</updated>
+    <id>http://nmotw.in/emoji-flags</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/emoji-flags">emoji-flags</a></h1>
+
+<blockquote><p>emoji flag symbol for a given country code.</p></blockquote>
+
+<p><code>emoji-flags</code> is a sweet module that returns the emjoi flag for a given country code.</p>
+
+<p><strong>Get it:</strong> <code>npm install emoji-flags</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">emojiFlags</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;emoji-flags&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// single country lookup by code</span>
+</span><span class='line'><span class="nx">emojiFlags</span><span class="p">.</span><span class="nx">countryCode</span><span class="p">(</span><span class="s1">&#39;DK&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// =&gt; { &quot;code&quot;: &quot;DK&quot;, &quot;emoji&quot;: &quot;🇩🇰&quot;, ... }</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// entire dataset</span>
+</span><span class='line'><span class="nx">emojiFlags</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>emoji-flags --help
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return </span>emoji flag symbol <span class="k">for </span>country code
+</span><span class='line'>
+</span><span class='line'>  Example
+</span><span class='line'>    emoji-flags gb
+</span><span class='line'>
+</span><span class='line'>    emoji-flags dk --verbose
+</span><span class='line'>
+</span><span class='line'>    emoji-flags
+</span><span class='line'>    <span class="o">=</span>&gt; returns the entire dataset
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/emoji-flags/emoji-flags.gif" alt="emoji-flags" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[wait-on]]></title>
     <link href="http://nmotw.in/wait-on/"/>
-    <updated>2019-06-13T21:41:12-07:00</updated>
+    <updated>2019-06-14T10:11:12+05:30</updated>
     <id>http://nmotw.in/wait-on</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/wait-on">wait-on</a></h1>
 
@@ -94,7 +161,7 @@
   <entry>
     <title type="html"><![CDATA[zxcvbn]]></title>
     <link href="http://nmotw.in/zxcvbn/"/>
-    <updated>2019-06-09T21:57:44-07:00</updated>
+    <updated>2019-06-10T10:27:44+05:30</updated>
     <id>http://nmotw.in/zxcvbn</id>
     <content type="html"><![CDATA[<h1><a href="">zxcvbn</a></h1>
 
@@ -252,7 +319,7 @@
   <entry>
     <title type="html"><![CDATA[store]]></title>
     <link href="http://nmotw.in/store/"/>
-    <updated>2019-06-02T04:31:14-07:00</updated>
+    <updated>2019-06-02T17:01:14+05:30</updated>
     <id>http://nmotw.in/store</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/store">store</a></h1>
 
@@ -309,7 +376,7 @@
   <entry>
     <title type="html"><![CDATA[tornis]]></title>
     <link href="http://nmotw.in/tornis/"/>
-    <updated>2019-05-25T08:38:12-07:00</updated>
+    <updated>2019-05-25T21:08:12+05:30</updated>
     <id>http://nmotw.in/tornis</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/tornis">tornis</a></h1>
 
@@ -473,7 +540,7 @@
   <entry>
     <title type="html"><![CDATA[dinoql]]></title>
     <link href="http://nmotw.in/dinoql/"/>
-    <updated>2019-05-17T23:57:30-07:00</updated>
+    <updated>2019-05-18T12:27:30+05:30</updated>
     <id>http://nmotw.in/dinoql</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dinoql">dinoql</a></h1>
 
@@ -537,7 +604,7 @@
   <entry>
     <title type="html"><![CDATA[fluture]]></title>
     <link href="http://nmotw.in/fluture/"/>
-    <updated>2019-05-11T14:05:08-07:00</updated>
+    <updated>2019-05-12T02:35:08+05:30</updated>
     <id>http://nmotw.in/fluture</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
 
@@ -591,7 +658,7 @@
   <entry>
     <title type="html"><![CDATA[sql.js]]></title>
     <link href="http://nmotw.in/sql.js/"/>
-    <updated>2019-05-03T21:55:55-07:00</updated>
+    <updated>2019-05-04T10:25:55+05:30</updated>
     <id>http://nmotw.in/sql.js</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
 
@@ -678,7 +745,7 @@
   <entry>
     <title type="html"><![CDATA[heresy]]></title>
     <link href="http://nmotw.in/heresy/"/>
-    <updated>2019-04-28T03:12:31-07:00</updated>
+    <updated>2019-04-28T15:42:31+05:30</updated>
     <id>http://nmotw.in/heresy</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/heresy">heresey</a></h1>
 
@@ -819,7 +886,7 @@
   <entry>
     <title type="html"><![CDATA[fetch-mock]]></title>
     <link href="http://nmotw.in/fetch-mock/"/>
-    <updated>2019-04-20T23:15:27-07:00</updated>
+    <updated>2019-04-21T11:45:27+05:30</updated>
     <id>http://nmotw.in/fetch-mock</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fetch-mock">fetch-mock</a></h1>
 
@@ -851,7 +918,7 @@
   <entry>
     <title type="html"><![CDATA[glob-to-regexp]]></title>
     <link href="http://nmotw.in/glob-to-regexp/"/>
-    <updated>2019-04-13T11:41:35-07:00</updated>
+    <updated>2019-04-14T00:11:35+05:30</updated>
     <id>http://nmotw.in/glob-to-regexp</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/glob-to-regexp">glob-to-regexp</a></h1>
 
@@ -925,7 +992,7 @@
   <entry>
     <title type="html"><![CDATA[osenv]]></title>
     <link href="http://nmotw.in/osenv/"/>
-    <updated>2019-04-06T03:44:07-07:00</updated>
+    <updated>2019-04-06T16:14:07+05:30</updated>
     <id>http://nmotw.in/osenv</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/osenv">osenv</a></h1>
 
@@ -1010,7 +1077,7 @@
   <entry>
     <title type="html"><![CDATA[eshost-cli]]></title>
     <link href="http://nmotw.in/eshost-cli/"/>
-    <updated>2019-03-29T23:07:02-07:00</updated>
+    <updated>2019-03-30T11:37:02+05:30</updated>
     <id>http://nmotw.in/eshost-cli</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
 
@@ -1191,7 +1258,7 @@
   <entry>
     <title type="html"><![CDATA[carbon-now-cli]]></title>
     <link href="http://nmotw.in/carbon-now-cli/"/>
-    <updated>2019-03-22T09:58:38-07:00</updated>
+    <updated>2019-03-22T22:28:38+05:30</updated>
     <id>http://nmotw.in/carbon-now-cli</id>
     <content type="html"><![CDATA[<h1><a href="">carbon-now-cli</a></h1>
 
@@ -1278,7 +1345,7 @@
   <entry>
     <title type="html"><![CDATA[react-window]]></title>
     <link href="http://nmotw.in/react-window/"/>
-    <updated>2019-03-16T02:44:26-07:00</updated>
+    <updated>2019-03-16T15:14:26+05:30</updated>
     <id>http://nmotw.in/react-window</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
 
@@ -1352,7 +1419,7 @@
   <entry>
     <title type="html"><![CDATA[image-promise]]></title>
     <link href="http://nmotw.in/image-promise/"/>
-    <updated>2019-03-08T01:30:54-08:00</updated>
+    <updated>2019-03-08T15:00:54+05:30</updated>
     <id>http://nmotw.in/image-promise</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
 
@@ -1468,7 +1535,7 @@
   <entry>
     <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
     <link href="http://nmotw.in/scroll-into-view-if-needed/"/>
-    <updated>2019-03-02T09:55:04-08:00</updated>
+    <updated>2019-03-02T23:25:04+05:30</updated>
     <id>http://nmotw.in/scroll-into-view-if-needed</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
 
@@ -1528,7 +1595,7 @@
   <entry>
     <title type="html"><![CDATA[abort-controller]]></title>
     <link href="http://nmotw.in/abort-controller/"/>
-    <updated>2019-02-22T21:40:52-08:00</updated>
+    <updated>2019-02-23T11:10:52+05:30</updated>
     <id>http://nmotw.in/abort-controller</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
 
@@ -1604,7 +1671,7 @@
   <entry>
     <title type="html"><![CDATA[package-size]]></title>
     <link href="http://nmotw.in/package-size/"/>
-    <updated>2019-02-12T10:51:28-08:00</updated>
+    <updated>2019-02-13T00:21:28+05:30</updated>
     <id>http://nmotw.in/package-size</id>
     <content type="html"><![CDATA[<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
 
@@ -1726,7 +1793,7 @@
   <entry>
     <title type="html"><![CDATA[soted-object]]></title>
     <link href="http://nmotw.in/soted-object/"/>
-    <updated>2019-02-08T22:25:29-08:00</updated>
+    <updated>2019-02-09T11:55:29+05:30</updated>
     <id>http://nmotw.in/soted-object</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
 
@@ -1754,62 +1821,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/sorted-object/sorted-object.gif" alt="sorted-object" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[to-regex]]></title>
-    <link href="http://nmotw.in/to-regex/"/>
-    <updated>2019-02-02T02:29:03-08:00</updated>
-    <id>http://nmotw.in/to-regex</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/to-regex">to-regex</a></h1>
-
-<blockquote><p>Generate a regex from a string or array of strings.</p></blockquote>
-
-<p><code>to-regex</code> is tiny module that helps us to easily create R.E from a <code>string</code> or an <code>array</code> of strings.</p>
-
-<p><strong>Get it:</strong> <code>npm install to-regex</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">toRegex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;to-regex&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">));</span>
-</span><span class='line'><span class="c1">//=&gt; /^(?:foo)$/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
-</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!^(?:foo)$).)*)$/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">contains</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
-</span><span class='line'><span class="c1">//=&gt; /(?:foo)/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
-</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!^(?:(?:foo)|(?:bar))$).)*)$/</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">toRegex</span><span class="p">([</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">],</span> <span class="p">{</span><span class="nx">negate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">contains</span><span class="o">:</span> <span class="kc">true</span><span class="p">}));</span>
-</span><span class='line'><span class="c1">//=&gt; /^(?:(?:(?!(?:(?:foo)|(?:bar))).)*)$/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/to-regex/to-regex.gif" alt="to-regex" /></p>
 ]]></content>
   </entry>
   
