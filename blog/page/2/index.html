@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="glob-to-regexp *-wildcard style glob to R.E glob-to-regexp helps us in converting *-wildcard style glob to RE, as in "*.min.js" to /^.*\.min\.js$/. &hellip;">   
+    <meta name="description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="glob-to-regexp *-wildcard style glob to R.E glob-to-regexp helps us in converting *-wildcard style glob to RE, as in "*.min.js" to /^.*\.min\.js$/. &hellip;">
+    <meta name="twitter:description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="glob-to-regexp *-wildcard style glob to R.E glob-to-regexp helps us in converting *-wildcard style glob to RE, as in "*.min.js" to /^.*\.min\.js$/. &hellip;" />
+    <meta property="og:description" content="fetch-mock Mock HTTP requests with fetch. fetch-mock allows mocking HTTP requests made using fetch or a library imitating its api, such as node- &hellip;" />
 
     
 
@@ -67,6 +67,61 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/fetch-mock/">
+			
+				Fetch-mock</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-04-21T11:45:27+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/fetch-mock">fetch-mock</a></h1>
+
+<blockquote><p>Mock HTTP requests with fetch.</p></blockquote>
+
+<p><code>fetch-mock</code> allows mocking HTTP requests made using <code>fetch</code> or a library imitating its api, such as <code>node-fetch</code> or <code>fetch-ponyfill</code>, works across, browser and node.</p>
+
+<p><strong>Get it:</strong> <code>npm install fetch-mock</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">fetchMock</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fetch-mock&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">fetchMock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">);</span> <span class="c1">// true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/fetch-mock/fetch-mock.gif" alt="fetch-mock" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1143,63 +1198,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/package-size/package-size.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/soted-object/">
-			
-				Soted-object</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-02-09T11:55:29+05:30" pubdate data-updated="true">Feb 9<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
-
-<blockquote><p>sort object by keys.</p></blockquote>
-
-<p><code>sorted-object</code> is an uber tiny module that helps us sort an object by it's keys.</p>
-
-<p>P.S: It got a <code>232,037</code> downloads last week ;)</p>
-
-<p><strong>Get it:</strong> <code>npm install sorted-object</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">sortedObject</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sorted-object&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">sortedObject</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">c</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="nx">a</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="o">:</span><span class="mi">0</span><span class="p">})</span>
-</span><span class='line'><span class="c1">// =&gt; { &#39;0&#39;: 0, a: 3, b: 1, c: 2 }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/sorted-object/sorted-object.gif" alt="sorted-object" /></p>
 
 		
 		

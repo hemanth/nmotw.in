@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="emoji-flags emoji flag symbol for a given country code. emoji-flags is a sweet module that returns the emjoi flag for a given country code. Get it: &hellip;">   
+    <meta name="description" content="toposort Sort directed acyclic graphs toposort does the topological sort or topological ordering of a directed graph. Get it: npm install toposort &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="emoji-flags emoji flag symbol for a given country code. emoji-flags is a sweet module that returns the emjoi flag for a given country code. Get it: &hellip;">
+    <meta name="twitter:description" content="toposort Sort directed acyclic graphs toposort does the topological sort or topological ordering of a directed graph. Get it: npm install toposort &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="emoji-flags emoji flag symbol for a given country code. emoji-flags is a sweet module that returns the emjoi flag for a given country code. Get it: &hellip;" />
+    <meta property="og:description" content="toposort Sort directed acyclic graphs toposort does the topological sort or topological ordering of a directed graph. Get it: npm install toposort &hellip;" />
 
     
 
@@ -67,6 +67,134 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/toposort/">
+			
+				Toposort</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-06-29T17:54:08+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/toposort">toposort</a></h1>
+
+<blockquote><p>Sort directed acyclic graphs</p></blockquote>
+
+<p><code>toposort</code> does the topological sort or topological ordering of a directed graph.</p>
+
+<p><strong>Get it:</strong> <code>npm install toposort</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// First, we define our edges.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;tie your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shirt&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now, sort the vertices topologically, to reveal a legal execution order.</span>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// [ &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sorting dependencies:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// This time, edges represent dependencies.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;tie your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shirt&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// [ &#39;tie your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39; ]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now, reversing the list will reveal a legal execution order.</span>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">).</span><span class="nx">reverse</span><span class="p">()</span>
+</span><span class='line'><span class="c1">// [ &#39;put on your shorts&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/topsort/topsort.gif" alt="topsort" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1139,61 +1267,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/heresy/heresy.gif" alt="heresy.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fetch-mock/">
-			
-				Fetch-mock</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-04-21T11:45:27+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fetch-mock">fetch-mock</a></h1>
-
-<blockquote><p>Mock HTTP requests with fetch.</p></blockquote>
-
-<p><code>fetch-mock</code> allows mocking HTTP requests made using <code>fetch</code> or a library imitating its api, such as <code>node-fetch</code> or <code>fetch-ponyfill</code>, works across, browser and node.</p>
-
-<p><strong>Get it:</strong> <code>npm install fetch-mock</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">fetchMock</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fetch-mock&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">fetchMock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">);</span> <span class="c1">// true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/fetch-mock/fetch-mock.gif" alt="fetch-mock" /></p>
 
 		
 		
