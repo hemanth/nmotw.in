@@ -4,13 +4,235 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-06-24T10:06:37+05:30</updated>
+  <updated>2019-07-06T14:44:33+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[fetch-retry]]></title>
+    <link href="http://nmotw.in/fetch-retry/"/>
+    <updated>2019-07-06T14:23:46+05:30</updated>
+    <id>http://nmotw.in/fetch-retry</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fetch-retry">fetch-retry</a></h1>
+
+<blockquote><p>Adds retry functionality to the Fetch API.</p></blockquote>
+
+<p><code>fetch-retry</code> in about 88 lines of code provides an extension to the <code>fetch</code> API to accept <code>retries</code>, <code>retryDelay</code>, and <code>retryOn</code> on the options object, when omitted will default to 3 retries, a 1000ms retry delay, and to retry only on network errors.</p>
+
+<p><strong>Get it:</strong> <code>npm install fetch-retry</code></p>
+
+<p><strong>Smaple usages:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>  <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fetch-retry&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">retries</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">retryDelay</span><span class="o">:</span> <span class="mi">1000</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do something with the result</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Retry on 503</span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">retryOn</span><span class="o">:</span> <span class="p">[</span><span class="mi">503</span><span class="p">]</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">})</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// do something with the result</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Custorm retry</span>
+</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">retryOn</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attempt</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// retry on any network error, or 4xx or 5xx status codes</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">retrying</span><span class="p">,</span> <span class="nx">attempt</span> <span class="nx">number</span> <span class="nx">$</span><span class="p">{</span><span class="nx">attempt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// do something with the result</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/fetch-retry/fetch-retry.gif" alt="fetch-retry" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[toposort]]></title>
+    <link href="http://nmotw.in/toposort/"/>
+    <updated>2019-06-29T17:54:08+05:30</updated>
+    <id>http://nmotw.in/toposort</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/toposort">toposort</a></h1>
+
+<blockquote><p>Sort directed acyclic graphs</p></blockquote>
+
+<p><code>toposort</code> does the topological sort or topological ordering of a directed graph.</p>
+
+<p><strong>Get it:</strong> <code>npm install toposort</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// First, we define our edges.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;tie your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shirt&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now, sort the vertices topologically, to reveal a legal execution order.</span>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// [ &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sorting dependencies:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// This time, edges represent dependencies.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;tie your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shirt&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
+</span><span class='line'><span class="c1">// [ &#39;tie your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39; ]</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Now, reversing the list will reveal a legal execution order.</span>
+</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">).</span><span class="nx">reverse</span><span class="p">()</span>
+</span><span class='line'><span class="c1">// [ &#39;put on your shorts&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
+</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/toposort/toposort.gif" alt="topsort" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[emoji-flags]]></title>
@@ -1665,162 +1887,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/abort-controller/abort-controller.gif" alt="abort-controller" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[package-size]]></title>
-    <link href="http://nmotw.in/package-size/"/>
-    <updated>2019-02-13T00:21:28+05:30</updated>
-    <id>http://nmotw.in/package-size</id>
-    <content type="html"><![CDATA[<h1><a href="https://github.com/egoist/package-size">package-size</a></h1>
-
-<blockquote><p>Get the bundle size of an npm packages.</p></blockquote>
-
-<p><code>package-size</code> is a sweet CLI util, that gives us info about the bundle size of npm packages.</p>
-
-<p><strong>What it does?</strong></p>
-
-<ul>
-<li>Install the packages to a temp directory.</li>
-<li>Bundle the packages with webpack and get the bundle size.</li>
-<li>Show you the bundle size and cache it by package version.</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install -g package-size</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># get the size of vue bundle</span>
-</span><span class='line'>package-size vue
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of react+react-dom bundle</span>
-</span><span class='line'>package-size react,react-dom
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of vue react+react-dom preact bundles</span>
-</span><span class='line'>package-size vue react,react-dom preact
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of react+react-dom without using the cache</span>
-</span><span class='line'>package-size react,react-dom --no-cache
-</span><span class='line'>
-</span><span class='line'><span class="c"># get the size of file in current working directory</span>
-</span><span class='line'>package-size ./dist/index.js
-</span><span class='line'><span class="c"># or a package in current working directory, explictly using `--cwd` flag</span>
-</span><span class='line'>package-size vue --cwd
-</span><span class='line'>
-</span><span class='line'><span class="c"># or event multiple versions for the same package!</span>
-</span><span class='line'>package-size react@0.10 react@0.14 react@15
-</span><span class='line'>
-</span><span class='line'><span class="c"># save results to file system in JSON format</span>
-</span><span class='line'><span class="c"># defaults to ./package-size-output.json</span>
-</span><span class='line'>package-size cherow --output
-</span><span class='line'><span class="c"># or custom path</span>
-</span><span class='line'>package-size cherow --output stats.json
-</span><span class='line'>
-</span><span class='line'><span class="c"># analyze bundle with webpack-bundle-analyzer</span>
-</span><span class='line'>package-size cherow --analyze
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">getSizes</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;package-size&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">getSizes</span><span class="p">(</span><span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-</span><span class='line'>    <span class="c1">//=&gt;</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;react,react-dom&#39;</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">size</span><span class="o">:</span> <span class="mi">12023</span><span class="p">,</span> <span class="c1">// in bytes</span>
-</span><span class='line'>      <span class="nx">minified</span><span class="o">:</span> <span class="mi">2342</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">gzipped</span><span class="o">:</span> <span class="mi">534</span><span class="p">,</span>
-</span><span class='line'>      <span class="nx">versionedName</span><span class="o">:</span> <span class="s1">&#39;react@16.0.0,react-dom@16.0.0&#39;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/package-size/package-size.gif" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[soted-object]]></title>
-    <link href="http://nmotw.in/soted-object/"/>
-    <updated>2019-02-09T11:55:29+05:30</updated>
-    <id>http://nmotw.in/soted-object</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sorted-object">sorted-object</a></h1>
-
-<blockquote><p>sort object by keys.</p></blockquote>
-
-<p><code>sorted-object</code> is an uber tiny module that helps us sort an object by it's keys.</p>
-
-<p>P.S: It got a <code>232,037</code> downloads last week ;)</p>
-
-<p><strong>Get it:</strong> <code>npm install sorted-object</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">sortedObject</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sorted-object&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">sortedObject</span><span class="p">({</span><span class="nx">b</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="nx">c</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span><span class="nx">a</span><span class="o">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="o">:</span><span class="mi">0</span><span class="p">})</span>
-</span><span class='line'><span class="c1">// =&gt; { &#39;0&#39;: 0, a: 3, b: 1, c: 2 }</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/sorted-object/sorted-object.gif" alt="sorted-object" /></p>
 ]]></content>
   </entry>
   

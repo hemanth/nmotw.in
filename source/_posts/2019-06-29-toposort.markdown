@@ -1,0 +1,67 @@
+---
+layout: post
+title: "toposort"
+date: 2019-06-29 17:54:08 +0530
+comments: true
+categories: util 
+---
+
+#[toposort](https://npm.im/toposort)
+> Sort directed acyclic graphs
+
+`toposort` does the topological sort or topological ordering of a directed graph.
+
+__Get it:__ `npm install toposort`
+
+__Sample usage:__
+
+```js
+// First, we define our edges.
+var graph = [
+  ['put on your shoes', 'tie your shoes']
+, ['put on your shirt', 'put on your jacket']
+, ['put on your shorts', 'put on your jacket']
+, ['put on your shorts', 'put on your shoes']
+]
+ 
+ 
+// Now, sort the vertices topologically, to reveal a legal execution order.
+toposort(graph)
+// [ 'put on your shirt'
+// , 'put on your shorts'
+// , 'put on your jacket'
+// , 'put on your shoes'
+// , 'tie your shoes' ]
+
+```
+
+__Sorting dependencies:__
+
+```js
+// This time, edges represent dependencies.
+var graph = [
+  ['tie your shoes', 'put on your shoes']
+, ['put on your jacket', 'put on your shirt']
+, ['put on your shoes', 'put on your shorts']
+, ['put on your jacket', 'put on your shorts']
+]
+ 
+toposort(graph) 
+// [ 'tie your shoes'
+// , 'put on your shoes'
+// , 'put on your jacket'
+// , 'put on your shirt'
+// , 'put on your shorts' ]
+ 
+// Now, reversing the list will reveal a legal execution order.
+toposort(graph).reverse() 
+// [ 'put on your shorts'
+// , 'put on your shirt'
+// , 'put on your jacket'
+// , 'put on your shoes'
+// , 'tie your shoes' ]
+```
+
+__GIF FTW!__
+
+![topsort](/images/toposort/toposort.gif)
