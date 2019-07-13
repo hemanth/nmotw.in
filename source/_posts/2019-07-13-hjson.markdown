@@ -1,0 +1,74 @@
+---
+layout: post
+title: "hjson"
+date: 2019-07-13 21:22:19 +0530
+comments: true
+categories: util
+---
+
+#[hjson](https://npm.im/hsjon)
+> A user interface for JSON.
+
+`hjson`, human JSON if you may is a syntax extension to `JSON`, that allows us to create JSON with human friendly syntax with it's `prase` and `strigify` methods, like below:
+
+```js
+{
+  # specify rate in requests/second (because comments are helpful!)
+  rate: 1000
+
+  // prefer c-style comments?
+  /* feeling old fashioned? */
+
+  # did you notice that rate doesn't need quotes?
+  hey: look ma, no quotes for strings either!
+
+  # best of all
+  notice: []
+  anything: ?
+
+  # yes, commas are optional!
+}
+```
+
+__GET IT:__ `npm install hjson`
+
+__Sample usage:__
+
+```js
+var Hjson = require('hjson');
+
+var obj = Hjson.parse(hjsonText);
+var text2 = Hjson.stringify(obj);
+```
+
+```sh
+Usage:
+  hjson [OPTIONS]
+  hjson [OPTIONS] INPUT
+  hjson (-h | --help | -?)
+  hjson (-V | --version)
+
+INPUT can be in JSON or Hjson format. If no file is given it will read from stdin.
+The default is to output as Hjson.
+
+Options:
+  (-j | -json)  output as formatted JSON.
+  (-c | -json=compact)  output as JSON.
+Options for Hjson output:
+  -sl         output the opening brace on the same line
+  -quote      quote all strings
+  -quote=all  quote keys as well
+  -js         output in JavaScript/JSON compatible format
+              can be used with -rt and // comments
+  -rt         round trip comments
+  -nocol      disable colors
+  -cond=n     set condense option (default 60, 0 to disable)
+
+Domain specific formats are optional extensions to Hjson and can be enabled with the following options:
+  +math: support for Inf/inf, -Inf/-inf, Nan/naN and -0
+  +hex: parse hexadecimal numbers prefixed with 0x
+  +date: support ISO dates
+```
+
+![](/images/hjson/hjson.gif)
+
