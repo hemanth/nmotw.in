@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fetch-retry Adds retry functionality to the Fetch API. fetch-retry in about 88 lines of code provides an extension to the fetch API to accept &hellip;">   
+    <meta name="description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="fetch-retry Adds retry functionality to the Fetch API. fetch-retry in about 88 lines of code provides an extension to the fetch API to accept &hellip;">
+    <meta name="twitter:description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fetch-retry Adds retry functionality to the Fetch API. fetch-retry in about 88 lines of code provides an extension to the fetch API to accept &hellip;" />
+    <meta property="og:description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;" />
 
     
 
@@ -67,6 +67,151 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/hjson/">
+			
+				Hjson</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-07-13T21:22:19+05:30" pubdate data-updated="true">Jul 13<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/hsjon">hjson</a></h1>
+
+<blockquote><p>A user interface for JSON.</p></blockquote>
+
+<p><code>hjson</code>, human JSON if you may is a syntax extension to <code>JSON</code>, that allows us to create JSON with human friendly syntax with it's <code>prase</code> and <code>strigify</code> methods, like below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="err">#</span> <span class="nx">specify</span> <span class="nx">rate</span> <span class="k">in</span> <span class="nx">requests</span><span class="o">/</span><span class="nx">second</span> <span class="p">(</span><span class="nx">because</span> <span class="nx">comments</span> <span class="nx">are</span> <span class="nx">helpful</span><span class="o">!</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">rate</span><span class="o">:</span> <span class="mi">1000</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// prefer c-style comments?</span>
+</span><span class='line'>  <span class="cm">/* feeling old fashioned? */</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="err">#</span> <span class="nx">did</span> <span class="nx">you</span> <span class="nx">notice</span> <span class="nx">that</span> <span class="nx">rate</span> <span class="nx">doesn</span><span class="err">&#39;</span><span class="nx">t</span> <span class="nx">need</span> <span class="nx">quotes</span><span class="o">?</span>
+</span><span class='line'>  <span class="nx">hey</span><span class="o">:</span> <span class="nx">look</span> <span class="nx">ma</span><span class="p">,</span> <span class="nx">no</span> <span class="nx">quotes</span> <span class="k">for</span> <span class="nx">strings</span> <span class="nx">either</span><span class="o">!</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="err">#</span> <span class="nx">best</span> <span class="nx">of</span> <span class="nx">all</span>
+</span><span class='line'>  <span class="nx">notice</span><span class="o">:</span> <span class="p">[]</span>
+</span><span class='line'>  <span class="nx">anything</span><span class="o">:</span> <span class="o">?</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="err">#</span> <span class="nx">yes</span><span class="p">,</span> <span class="nx">commas</span> <span class="nx">are</span> <span class="nx">optional</span><span class="o">!</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GET IT:</strong> <code>npm install hjson</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Hjson</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;hjson&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">Hjson</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">hjsonText</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">text2</span> <span class="o">=</span> <span class="nx">Hjson</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>Usage:
+</span><span class='line'>  hjson <span class="o">[</span>OPTIONS<span class="o">]</span>
+</span><span class='line'>  hjson <span class="o">[</span>OPTIONS<span class="o">]</span> INPUT
+</span><span class='line'>  hjson <span class="o">(</span>-h | --help | -?<span class="o">)</span>
+</span><span class='line'>  hjson <span class="o">(</span>-V | --version<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>INPUT can be in JSON or Hjson format. If no file is given it will <span class="nb">read </span>from stdin.
+</span><span class='line'>The default is to output as Hjson.
+</span><span class='line'>
+</span><span class='line'>Options:
+</span><span class='line'>  <span class="o">(</span>-j | -json<span class="o">)</span>  output as formatted JSON.
+</span><span class='line'>  <span class="o">(</span>-c | -json<span class="o">=</span>compact<span class="o">)</span>  output as JSON.
+</span><span class='line'>Options <span class="k">for </span>Hjson output:
+</span><span class='line'>  -sl         output the opening brace on the same line
+</span><span class='line'>  -quote      quote all strings
+</span><span class='line'>  -quote<span class="o">=</span>all  quote keys as well
+</span><span class='line'>  -js         output in JavaScript/JSON compatible format
+</span><span class='line'>              can be used with -rt and // comments
+</span><span class='line'>  -rt         round trip comments
+</span><span class='line'>  -nocol      disable colors
+</span><span class='line'>  -cond<span class="o">=</span>n     <span class="nb">set </span>condense option <span class="o">(</span>default 60, 0 to disable<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>Domain specific formats are optional extensions to Hjson and can be enabled with the following options:
+</span><span class='line'>  +math: support <span class="k">for </span>Inf/inf, -Inf/-inf, Nan/naN and -0
+</span><span class='line'>  +hex: parse hexadecimal numbers prefixed with 0x
+</span><span class='line'>  +date: support ISO dates
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/hjson/hjson.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1133,116 +1278,6 @@
 <p><img src="/images/fluture/fluture.gif" alt="fluture" /></p>
 
 <p>```</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/sql.js/">
-			
-				sql.js</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-05-04T10:25:55+05:30" pubdate data-updated="true">May 4<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
-
-<blockquote><p>SQLite compiled to javascript</p></blockquote>
-
-<p><code>sql.js</code> is a port of <code>SQLite</code> to <code>Webassembly</code>, by compiling the SQLite C code with Emscripten.</p>
-
-<p>There are no C bindings or node-gyp compilation here, sql.js is a simple javascript file, that can be used like any traditional javascript library!</p>
-
-<p><strong>Get it:</strong> <code>npm install sql.js</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DROP</span> <span class="nx">TABLE</span> <span class="nx">IF</span> <span class="nx">EXISTS</span> <span class="nx">employees</span><span class="p">;</span>
-</span><span class='line'><span class="nx">CREATE</span> <span class="nx">TABLE</span> <span class="nx">employees</span><span class="p">(</span> <span class="nx">id</span> <span class="nx">integer</span><span class="p">,</span>  <span class="nx">name</span> <span class="nx">text</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">designation</span> <span class="nx">text</span><span class="p">,</span>     <span class="nx">manager</span> <span class="nx">integer</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">hired_on</span>    <span class="nx">date</span><span class="p">,</span>     <span class="nx">salary</span>  <span class="nx">integer</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">commission</span>  <span class="kr">float</span><span class="p">,</span>    <span class="nx">dept</span>    <span class="nx">integer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;JOHNSON&#39;</span><span class="p">,</span><span class="s1">&#39;ADMIN&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;1990-12-17&#39;</span><span class="p">,</span><span class="mi">18000</span><span class="p">,</span><span class="nx">NULL</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;HARDING&#39;</span><span class="p">,</span><span class="s1">&#39;MANAGER&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;1998-02-02&#39;</span><span class="p">,</span><span class="mi">52000</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;TAFT&#39;</span><span class="p">,</span><span class="s1">&#39;SALES I&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;1996-01-02&#39;</span><span class="p">,</span><span class="mi">25000</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;HOOVER&#39;</span><span class="p">,</span><span class="s1">&#39;SALES I&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;1990-04-02&#39;</span><span class="p">,</span><span class="mi">27000</span><span class="p">,</span><span class="nx">NULL</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nx">SELECT</span> <span class="nx">name</span><span class="p">,</span><span class="nx">hired_on</span> <span class="nx">FROM</span> <span class="nx">employees</span> <span class="nx">ORDER</span> <span class="nx">BY</span> <span class="nx">hired_on</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Would output something like:</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>name</th>
-<th>hired_on</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>HOOVER</td>
-<td>1990-04-02|</td>
-</tr>
-<tr>
-<td></td>
-<td>JOHNSON</td>
-<td>1990-12-17|</td>
-</tr>
-<tr>
-<td></td>
-<td>TAFT</td>
-<td>1996-01-02|</td>
-</tr>
-<tr>
-<td></td>
-<td>HARDING</td>
-<td>1998-02-02|</td>
-</tr>
-</tbody>
-</table>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/sql.js/sql.js.gif" alt="sql.js" /></p>
 
 		
 		
