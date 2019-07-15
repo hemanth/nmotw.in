@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-07-13T21:34:11+05:30</updated>
+  <updated>2019-07-13T21:59:37+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -129,6 +129,8 @@
 </span><span class='line'>  +date: support ISO dates
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/hjson/hjson.gif" alt="" /></p>
 ]]></content>

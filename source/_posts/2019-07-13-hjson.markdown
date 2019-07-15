@@ -70,5 +70,7 @@ Domain specific formats are optional extensions to Hjson and can be enabled with
   +date: support ISO dates
 ```
 
+__GIF FTW!__
+
 ![](/images/hjson/hjson.gif)
 
