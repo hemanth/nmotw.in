@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;">   
+    <meta name="description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;">
+    <meta name="twitter:description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="hjson A user interface for JSON. hjson, human JSON if you may is a syntax extension to JSON, that allows us to create JSON with human friendly &hellip;" />
+    <meta property="og:description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;" />
 
     
 
@@ -67,6 +67,111 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/get-port/">
+			
+				Get-port</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-07-19T15:31:34+05:30" pubdate data-updated="true">Jul 19<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/get-port">get-port</a></h1>
+
+<blockquote><p>Get an available TCP port</p></blockquote>
+
+<p><code>get-port</code> helps us to find a free TCP port from a list of ports or the entire port pool!</p>
+
+<p>The crux of this module is in the below function:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>const getAvailablePort = options =&gt; new Promise((resolve, reject) =&gt; {
+</span><span class='line'>  const server = net.createServer();
+</span><span class='line'>  server.unref();
+</span><span class='line'>  server.on('error', reject);
+</span><span class='line'>  server.listen(options, () =&gt; {
+</span><span class='line'>      const {port} = server.address();
+</span><span class='line'>      server.close(() =&gt; {
+</span><span class='line'>          resolve(port);
+</span><span class='line'>      });
+</span><span class='line'>  });
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Get it:</strong> <code>npm install get-port</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">getPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;get-port&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">getPort</span><span class="p">());</span>
+</span><span class='line'>    <span class="c1">//=&gt; 51402</span>
+</span><span class='line'><span class="p">})();</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">getPort</span><span class="p">({</span><span class="nx">port</span><span class="o">:</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3001</span><span class="p">,</span> <span class="mi">3002</span><span class="p">]}));</span>
+</span><span class='line'>    <span class="c1">// Will use any element in the preferred ports array if available, otherwise fall back to a random port</span>
+</span><span class='line'><span class="p">})();</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">getPort</span><span class="p">({</span><span class="nx">port</span><span class="o">:</span> <span class="nx">getPort</span><span class="p">.</span><span class="nx">makeRange</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3100</span><span class="p">)}));</span>
+</span><span class='line'>    <span class="c1">// Will use any port from 3000 to 3100, otherwise fall back to a random port</span>
+</span><span class='line'><span class="p">})();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/get-port/get-port.gif" alt="get-port" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1203,83 +1308,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/dinoql/dinoql.gif" alt="dinoql-demo" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fluture/">
-			
-				Fluture</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-05-12T02:35:08+05:30" pubdate data-updated="true">May 12<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
-
-<blockquote><p>🦋 Fantasy Land compliant (monadic) alternative to Promises.</p></blockquote>
-
-<p>Fluture offers a control structure similar to Promises, Tasks, Deferreds, and what-have-you, the lib just terms it <code>Futures</code>.</p>
-
-<p><code>Futures</code> represent the value arising from the success or failure of an asynchronous operation they are lazy and adhere to the monadic interface.</p>
-
-<p><strong>Feature comparsion of fluture like libs:</strong></p>
-
-<p><img src="/images/fluture/fluture-cmp.png" alt="" /></p>
-
-<p><strong>Get it:</strong> <code>npm install --save fluture</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">readFile</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fs&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">node</span><span class="p">,</span> <span class="nx">encase</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fluture&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">getPackageName</span> <span class="o">=</span> <span class="nx">file</span> <span class="o">=&gt;</span>
-</span><span class='line'>  <span class="nx">node</span><span class="p">(</span><span class="nx">done</span> <span class="o">=&gt;</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="nx">done</span><span class="p">))</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="nx">encase</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">))</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">pkg</span> <span class="o">=&gt;</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">getPackageName</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">fork</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//&gt; &quot;fluture&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fluture/fluture.gif" alt="fluture" /></p>
-
-<p>```</p>
 
 		
 		
