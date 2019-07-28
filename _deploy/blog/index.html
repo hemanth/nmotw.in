@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;">   
+    <meta name="description" content="responselike response-like object for mocking HTTP response stream. responselike returns a streamable response object similar to a HTTP response &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;">
+    <meta name="twitter:description" content="responselike response-like object for mocking HTTP response stream. responselike returns a streamable response object similar to a HTTP response &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="get-port Get an available TCP port get-port helps us to find a free TCP port from a list of ports or the entire port pool! The crux of this module &hellip;" />
+    <meta property="og:description" content="responselike response-like object for mocking HTTP response stream. responselike returns a streamable response object similar to a HTTP response &hellip;" />
 
     
 
@@ -67,6 +67,83 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/responselike/">
+			
+				Responselike</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-07-28T14:12:19+05:30" pubdate data-updated="true">Jul 28<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/responselike">responselike</a></h1>
+
+<blockquote><p>response-like object for mocking HTTP response stream.</p></blockquote>
+
+<p><code>responselike</code> returns a streamable response object similar to a HTTP response stream. Useful for formatting cached responses so they can be consumed by code expecting a real response.</p>
+
+<p><strong>Get it:</strong> <code>npm install responselike</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Response</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;responselike&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span> <span class="s1">&#39;bar&#39;</span> <span class="p">},</span> <span class="nx">Buffer</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s1">&#39;Hi!&#39;</span><span class="p">),</span> <span class="s1">&#39;https://example.com&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// 200</span>
+</span><span class='line'><span class="nx">response</span><span class="p">.</span><span class="nx">headers</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// { foo: &#39;bar&#39; }</span>
+</span><span class='line'><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// &lt;Buffer 48 69 21&gt;</span>
+</span><span class='line'><span class="nx">response</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// &#39;https://example.com&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">response</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// Hi!</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/responselike/responselike.gif" alt="responselike" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1221,93 +1298,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/tornis/tornis.gif" alt="tornis" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/dinoql/">
-			
-				Dinoql</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-05-18T12:27:30+05:30" pubdate data-updated="true">May 18<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/dinoql">dinoql</a></h1>
-
-<blockquote><p>Query JS objects in GraphQL style!</p></blockquote>
-
-<p><code>dinoql</code> provides GraphQL syntax for safe access of objects with aliases support, default resolvers fragments, variables and caching support and is highly customizable.</p>
-
-<p><strong>Get it:</strong> <code>npm install dinoql</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">dinoql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dinoql&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">users</span><span class="o">:</span> <span class="p">[{</span>
-</span><span class='line'>    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Victor Igor&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span>
-</span><span class='line'>  <span class="p">},</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Paul Gilbert&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">age</span><span class="o">:</span> <span class="mi">35</span>
-</span><span class='line'>  <span class="p">}],</span>  
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">dinoql</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="err">`</span>
-</span><span class='line'><span class="nx">users</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;200&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">name</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="err">`</span>
-</span><span class='line'><span class="c1">// ^^ {users: [{name: &#39;Paul Gilbert&#39;}]}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/dinoql/dinoql.gif" alt="dinoql-demo" /></p>
 
 		
 		
