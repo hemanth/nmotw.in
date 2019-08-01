@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="image-promise Promisfied image loading! Load one or more images, return a promise that resolves if the image loads or rejects in case of an error. &hellip;">   
+    <meta name="description" content="react-window React components for efficiently rendering large lists and tabular data. From the horse's mouth, what is react-window? react-window is &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/3/">
-    <meta name="twitter:description" content="image-promise Promisfied image loading! Load one or more images, return a promise that resolves if the image loads or rejects in case of an error. &hellip;">
+    <meta name="twitter:description" content="react-window React components for efficiently rendering large lists and tabular data. From the horse's mouth, what is react-window? react-window is &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/3/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="image-promise Promisfied image loading! Load one or more images, return a promise that resolves if the image loads or rejects in case of an error. &hellip;" />
+    <meta property="og:description" content="react-window React components for efficiently rendering large lists and tabular data. From the horse's mouth, what is react-window? react-window is &hellip;" />
 
     
 
@@ -67,6 +67,103 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/react-window/">
+			
+				React-window</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-03-16T15:14:26+05:30" pubdate data-updated="true">Mar 16<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
+
+<blockquote><p>React components for efficiently rendering large lists and tabular data.</p></blockquote>
+
+<p>From the horse's mouth, what is <code>react-window</code>?</p>
+
+<blockquote><p>react-window is a complete rewrite of react-virtualized. I didn't try to solve as many problems or support as many use cases. Instead I focused on making the package smaller1 and faster. I also put a lot of thought into making the API (and documentation) as beginner-friendly as possible (with the caveat that windowing is still kind of an advanced use case).</p></blockquote>
+
+<p>The compoents react-window provides:</p>
+
+<ul>
+<li>FixedSizeList</li>
+<li>VariableSizeList</li>
+<li>FixedSizeGrid</li>
+<li>VariableSizeGrid</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install react-window</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">FixedSizeList</span> <span class="nx">as</span> <span class="nx">List</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-window&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Column</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">style</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}</span><span class="o">&gt;</span><span class="err">عمود</span> <span class="p">{</span><span class="nx">index</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">Example</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">List</span>
+</span><span class='line'>    <span class="nx">direction</span><span class="o">=</span><span class="s2">&quot;rtl&quot;</span>
+</span><span class='line'>    <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">75</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">itemCount</span><span class="o">=</span><span class="p">{</span><span class="mi">1000</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">itemSize</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span>
+</span><span class='line'>    <span class="nx">layout</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span>
+</span><span class='line'>    <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">300</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&gt;</span>
+</span><span class='line'>    <span class="p">{</span><span class="nx">Column</span><span class="p">}</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/List&gt;</span>
+</span><span class='line'><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/react-window/react-window.gif" alt="react-window" /></p>
+
+<p>P.S: Don't miss to checkout the <a href="https://react-window.now.sh/">demos</a>.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -953,109 +1050,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/meant/meant.gif" alt="meant" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/caseless/">
-			
-				Caseless</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-01-05T14:22:02+05:30" pubdate data-updated="true">Jan 5<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/caseless">caseless</a></h1>
-
-<blockquote><p>caseless semantic <code>get/set/check</code> for headers.</p></blockquote>
-
-<p><code>caseless</code> helps to <code>get/set/check</code> specially for headers in a caseless manner while also preserving the caseing of headers the first time they are set.</p>
-
-<p><strong>Get it:</strong> <code>npm install caseless</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;caseless&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s1">&#39;a-header&#39;</span><span class="o">:</span> <span class="s1">&#39;asdf&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="s1">&#39;Content-Length&#39;</span><span class="o">:</span> <span class="mi">1000</span>
-</span><span class='line'>   <span class="p">}</span>
-</span><span class='line'>  <span class="p">,</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">caseless</span><span class="p">(</span><span class="nx">headers</span><span class="p">)</span>
-</span><span class='line'>  <span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Get set</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;asdf&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;asdf&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// has check</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;a-Header&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// set values</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;fdas&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-HEADER&#39;</span><span class="p">,</span> <span class="s1">&#39;more&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;fdsa,more&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// del</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">del</span><span class="p">(</span><span class="s1">&#39;Content-length&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// swap</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;a-Header&#39;</span><span class="p">,</span> <span class="s1">&#39;fdas&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">swap</span><span class="p">(</span><span class="s1">&#39;a-HEADER&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nx">c</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="s1">&#39;a-header&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;a-HEADER&#39;</span>
-</span><span class='line'><span class="c1">// headers === {&#39;a-HEADER&#39;: &#39;fdas&#39;}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/caseless/caseless.gif" alt="caseless" /></p>
 
 		
 		

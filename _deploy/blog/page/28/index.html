@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;">   
+    <meta name="description" content="Were you looking for the stats of how long the require statements took in your scripts? It's time to use (time-require)[https://www.npmjs.org/ &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/28/">
-    <meta name="twitter:description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;">
+    <meta name="twitter:description" content="Were you looking for the stats of how long the require statements took in your scripts? It's time to use (time-require)[https://www.npmjs.org/ &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/28/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="Many of us wanted to greet like Yeoman in the CLI, now it's very easy to do that! Here is yosay just like cowsay, but less cow. Tell yeoman what to &hellip;" />
+    <meta property="og:description" content="Were you looking for the stats of how long the require statements took in your scripts? It's time to use (time-require)[https://www.npmjs.org/ &hellip;" />
 
     
 
@@ -67,6 +67,91 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/time-require/">
+			
+				Time-require</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-22T22:26:56+05:30" pubdate data-updated="true">May 22<span>nd</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p>Were you looking for the stats of how long the require statements took in your scripts?</p>
+
+<p>It's time to use (time-require)[https://www.npmjs.org/package/time-require] a node module that displays the execution time for Node.js modules loading by hooking and tracing all require() calls.</p>
+
+<p><strong>Example Usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>cat &gt; <span class="nb">time</span>-require
+</span><span class='line'>require<span class="o">(</span><span class="s2">&quot;time-require&quot;</span><span class="o">)</span>;
+</span><span class='line'>^C
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>node <span class="nb">time</span>-require
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Start <span class="nb">time</span>: <span class="o">(</span>2014-05-22 16:56:02 UTC<span class="o">)</span> <span class="o">[</span><span class="nv">treshold</span><span class="o">=</span>1%<span class="o">]</span>
+</span><span class='line'><span class="c">#  module                          time  %</span>
+</span><span class='line'>1  text-table <span class="o">(</span>.....ble/index.js<span class="o">)</span>  40ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 51%
+</span><span class='line'>2  date-time <span class="o">(</span>../...ime/index.js<span class="o">)</span>   5ms  ▇▇ 6%
+</span><span class='line'>3  parse-ms <span class="o">(</span>../n...-ms/index.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
+</span><span class='line'>4  pretty-ms <span class="o">(</span>../...-ms/index.js<span class="o">)</span>  12ms  ▇▇▇▇▇ 15%
+</span><span class='line'>5  ansi-styles <span class="o">(</span>....si-styles.js<span class="o">)</span>  10ms  ▇▇▇▇ 13%
+</span><span class='line'>6  strip-ansi <span class="o">(</span>.....nsi/index.js<span class="o">)</span>   5ms  ▇▇ 6%
+</span><span class='line'>7  has-color <span class="o">(</span>../...lor/index.js<span class="o">)</span>   1ms  ▇ 1%
+</span><span class='line'>8  chalk <span class="o">(</span>../node...alk/index.js<span class="o">)</span>  20ms  ▇▇▇▇▇▇▇▇ 26%
+</span><span class='line'>Total require<span class="o">()</span>: 8
+</span><span class='line'>Total <span class="nb">time</span>: 78ms
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This module makes use of a require (hook)[https://github.com/jaguard/time-require/blob/master/src/requireHook.js#L71] which is loaded as the first module so all the other requires gets counted, unhooks and then prints out a neat table with the <code>totalTime = Date.now() - startTime.getTime();</code> and the number of modules that were required.</p>
+
+<p>Thanks to the module author <a href="http://jaguard.com">Ciprian Popa</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/time-require/time-require.gif" alt="time-require" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1288,90 +1373,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/configstore/configstore.gif" alt="configstore" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/chalk/">
-			
-				Chalk</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-13T18:33:53+05:30" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time></div>
-	</header>
-	<div class="entry-content">
-		<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
-
-<blockquote><p>"Write programs that do one thing and do it well."</p></blockquote>
-
-<p>Out of many such one such elegant module is <a href="https://www.npmjs.org/package/chalk">chalk</a> thanks to <a href="http://sindresorhus.com/hi/">Sindre Sorhus</a> for that.</p>
-
-<p>Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is <a href="https://github.com/Marak/colors.js">colors.js</a> but one of the major drawbacks with that being it extending <code>String.portotye</code> or be <a href="https://github.com/yeoman/yo/issues/68">these</a> problems.</p>
-
-<p>Installing chalk is like any other module: <code>npm install --save chalk</code></p>
-
-<p>Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.</p>
-
-<p><strong>For example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">blue</span><span class="p">.</span><span class="nx">bgRed</span><span class="p">.</span><span class="nx">bold</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>  <span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">red</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="nx">chalk</span><span class="p">.</span><span class="nx">underline</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>  <span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is a simple snippet for printing all of the styles it provides:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">styles</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">style</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">style</span> <span class="o">!==</span> <span class="s2">&quot;reset&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chalk</span><span class="p">[</span><span class="nx">style</span><span class="p">](</span><span class="nx">style</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>gif FTW!?</strong></p>
-
-<p><img src="http://nmotw.in/images/chalk/chalk.gif" alt="chalk" /></p>
-
-<p>Until next week, happy coloring!</p>
-
-<p><img src="http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
 
 		
 		

@@ -1,0 +1,48 @@
+---
+layout: post
+title: "jay"
+date: 2019-08-01 16:16:11 +0530
+comments: true
+categories: CLI 
+---
+
+#[jay](http://npm.im/jay-repl)
+> Supercharged JavaScript REPL 😎
+
+Jay is a terminal-based JavaScript REPL focused on increasing prototyping speed and productivity, it provides:
+
+* require modules directly from the registry
+* Eager eval (requires node >= 12.3.0)
+* Top level await
+* Typeahead + dropdown menu-style completion
+* Colored input
+* Bracket/quote pair completion
+* Fresh require
+* Full readline keybindings support
+* Lazy loaded built-in modules
+* _ variable
+
+__Get it:__
+
+```
+npm install -g jay-repl
+```
+
+```
+npx -p jay-repl jay
+```
+
+__Sample usage:__
+
+```
+$ jay --help
+node v12.0.3 npm@6.9.0 jay-repl@0.2.1
+Type `> jay.help()` in the prompt for more information.
+>
+```
+
+__GIF FTW!__
+
+![jay](/images/jay/jay.gif)
+
+
