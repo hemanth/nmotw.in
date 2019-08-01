@@ -7,7 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="easydate get date and/or time by pattern. A simple date and time util that returns the date according to a pattern, easydate takes two arguments, &hellip;">   
+    <meta name="description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
+Doesn' &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +16,16 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/22/">
-    <meta name="twitter:description" content="easydate get date and/or time by pattern. A simple date and time util that returns the date according to a pattern, easydate takes two arguments, &hellip;">
+    <meta name="twitter:description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
+Doesn' &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/22/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="easydate get date and/or time by pattern. A simple date and time util that returns the date according to a pattern, easydate takes two arguments, &hellip;" />
+    <meta property="og:description" content="combokeys Handles keyboard shortcuts in the browser. combokeys is a fork of ccampbell/mousetrap with two main changes: Refactored as CommonJS
+Doesn' &hellip;" />
 
     
 
@@ -67,6 +70,75 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/combokeys/">
+			
+				Combokeys</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-23T20:02:46+05:30" pubdate data-updated="true">Jul 23<span>rd</span>, 2015</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.com/package/combokeys">combokeys</a></p>
+
+<blockquote><p>Handles keyboard shortcuts in the browser.</p></blockquote>
+
+<p><code>combokeys</code> is a fork of <a href="https://github.com/ccampbell/mousetrap">ccampbell/mousetrap</a> with two main changes:</p>
+
+<ul>
+<li>Refactored as CommonJS</li>
+<li>Doesn't automatically listen on the document. Instead, it is now a constructor and the element on which to listen must be provided on instantiation.</li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save combokeys</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">Combokeys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;combokeys&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">Mousetrap</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// Or, instantiate it for one or more specific elements:</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">firstCombokeys</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Combokeys</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">);</span> <span class="p">});</span>
+</span><span class='line'><span class="nx">firstCombokeys</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;show shortcuts!&#39;</span><span class="p">);</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/combokeys/combokeys.gif" alt="combokeys" /></p>
+
+<p>Thanks to <a href="https://github.com/mightyiam">Shahar Or</a> for porting <code>mousetrap</code> to <code>combokeys</code>.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -836,168 +908,6 @@ the new bounds, result: infinite graphs!</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/function-plot/function-plot.gif" alt="function-plot" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/json-server/">
-			
-				Json-server</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-05-14T18:23:06+05:30" pubdate data-updated="true">May 14<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/json-server">json-server</a></h1>
-
-<blockquote><p>REST API with zero coding in less than 30 seconds.</p></blockquote>
-
-<p>This module by <a href="https://github.com/typicode">typicode</a> helps front-end developers who need a quick back-end for prototyping and mocking!</p>
-
-<p><strong>Get it:</strong></p>
-
-<p>Either as a CLI app: <code>npm install -g json-server</code></p>
-
-<p>or as a dep for your script: <code>npm install --save json-server</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<p>Assume you have a <code>json.db</code> like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="s2">&quot;posts&quot;</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;json-server&quot;</span><span class="p">,</span> <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;typicode&quot;</span> <span class="p">}</span>
-</span><span class='line'>  <span class="p">],</span>
-</span><span class='line'>  <span class="s2">&quot;comments&quot;</span><span class="o">:</span> <span class="p">[</span>
-</span><span class='line'>    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;body&quot;</span><span class="o">:</span> <span class="s2">&quot;some comment&quot;</span><span class="p">,</span> <span class="s2">&quot;postId&quot;</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span>
-</span><span class='line'>  <span class="p">]</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you are installed module globally, then do a :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>json-server json.db
-</span><span class='line'>
-</span><span class='line'><span class="c"># or</span>
-</span><span class='line'>
-</span><span class='line'><span class="nv">$ </span>json-server http://example.com/file.json
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>if not, include it in your script</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">jsonServer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-server&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span> <span class="c1">// Returns an Express server</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">jsonServer</span><span class="p">.</span><span class="nx">router</span><span class="p">(</span><span class="s1">&#39;db.json&#39;</span><span class="p">);</span> <span class="c1">// Returns an Express router</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">jsonServer</span><span class="p">.</span><span class="nx">defaults</span><span class="p">);</span> <span class="c1">// logger, static and cors middlewares</span>
-</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">);</span> <span class="c1">// Mount router on &#39;/&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After which the server must be up and running at: <code>http://localhost:3000</code></p>
-
-<p><strong>Avaliable routes:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span>
-</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
-</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span>
-</span><span class='line'><span class="nx">GET</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">title</span><span class="o">=</span><span class="nx">json</span><span class="o">-</span><span class="nx">server</span><span class="o">&amp;</span><span class="nx">author</span><span class="o">=</span><span class="nx">typicode</span>
-</span><span class='line'><span class="nx">POST</span>   <span class="o">/</span><span class="nx">posts</span>
-</span><span class='line'><span class="nx">PUT</span>    <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
-</span><span class='line'><span class="nx">PATCH</span>  <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
-</span><span class='line'><span class="nx">DELETE</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">SLICE</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_start</span><span class="o">=</span><span class="mi">20</span><span class="o">&amp;</span><span class="nx">_end</span><span class="o">=</span><span class="mi">30</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">SORT</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">views</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">DESC</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="nx">comments</span><span class="o">?</span><span class="nx">_sort</span><span class="o">=</span><span class="nx">votes</span><span class="o">&amp;</span><span class="nx">_order</span><span class="o">=</span><span class="nx">ASC</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">Query</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">posts</span><span class="o">?</span><span class="nx">q</span><span class="o">=</span><span class="nx">internet</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">#</span> <span class="nx">Get</span> <span class="nx">the</span> <span class="nx">entire</span> <span class="nx">DB</span><span class="o">!</span>
-</span><span class='line'><span class="nx">GET</span> <span class="o">/</span><span class="nx">db</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>GET on <code>/</code> would look like:</p>
-
-<p><img src="/images/json-server/json-server.png" alt="json-server-screenshot" /></p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/json-server/json-server.gif" alt="json-server" /></p>
 
 		
 		

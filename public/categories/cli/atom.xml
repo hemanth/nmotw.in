@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-07-28T14:18:02+05:30</updated>
+  <updated>2019-08-01T16:20:56+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[jay]]></title>
+    <link href="http://nmotw.in//github/jay/"/>
+    <updated>2019-08-01T16:16:11+05:30</updated>
+    <id>http://nmotw.in//github/jay</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/jay-repl">jay</a></h1>
+
+<blockquote><p>Supercharged JavaScript REPL 😎</p></blockquote>
+
+<p>Jay is a terminal-based JavaScript REPL focused on increasing prototyping speed and productivity, it provides:</p>
+
+<ul>
+<li>require modules directly from the registry</li>
+<li>Eager eval (requires node >= 12.3.0)</li>
+<li>Top level await</li>
+<li>Typeahead + dropdown menu-style completion</li>
+<li>Colored input</li>
+<li>Bracket/quote pair completion</li>
+<li>Fresh require</li>
+<li>Full readline keybindings support</li>
+<li>Lazy loaded built-in modules</li>
+<li>_ variable</li>
+</ul>
+
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+npm install -g jay-repl
+</code></p>
+
+<p><code>
+npx -p jay-repl jay
+</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>``
+$ jay --help
+node v12.0.3 npm@6.9.0 jay-repl@0.2.1
+Type</code>> jay.help()` in the prompt for more information.</p>
+
+<blockquote><p>```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jay/jay.gif" alt="jay" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[eshost-cli]]></title>
@@ -267,111 +317,6 @@ var confirm = require('confirm-simple')</p>
 <p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
 
 <p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[yosay]]></title>
-    <link href="http://nmotw.in//github/yosay/"/>
-    <updated>2014-05-15T09:45:56+05:30</updated>
-    <id>http://nmotw.in//github/yosay</id>
-    <content type="html"><![CDATA[<p>Many of us wanted to greet like <a href="http://yeoman.io">Yeoman</a> in the CLI, now it's very easy to do that!</p>
-
-<p>Here is <a href="https://github.com/yeoman/yosay">yosay</a> just like <a href="http://en.wikipedia.org/wiki/Cowsay">cowsay</a>, but less cow. Tell yeoman what to say or talk like yeoman!</p>
-
-<p>Get <code>yosay</code> like an other node module: <code>npm install -g yosay</code></p>
-
-<p><strong>Example usage:</strong></p>
-
-<p>```</p>
-
-<p>$ echo "Yo! Mama. You can pipe." | yosay</p>
-
-<pre><code> _-----_
-|       |    .--------------------------.
-|--(o)--|    |  Yo! Mama. You can pipe. |
-</code></pre>
-
-<p>   `---------´   '--------------------------'</p>
-
-<pre><code>( _´U`_ )    
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p>```sh</p>
-
-<p>$ yosay "Node module of the week"</p>
-
-<pre><code> _-----_
-|       |    .--------------------------.
-|--(o)--|    |  Node module of the week |
-</code></pre>
-
-<p>   `---------´   '--------------------------'</p>
-
-<pre><code>( _´U`_ )    
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p>```sh
-$ yosay "Yo! How's it going" --maxLength 4</p>
-
-<pre><code> _-----_
-|       |    .------.
-|--(o)--|    |  Yo! |
-</code></pre>
-
-<p>   `---------´   | How's |</p>
-
-<pre><code>( _´U`_ )    |  it  |
-/___A___\    | going |
- |  ~  |     '------'
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code>
-```</p>
-
-<p> If you want to use it in you node script, you could do:</p>
-
-<p>```</p>
-
-<p> var yosay = require('yosay');</p>
-
-<p> console.log( yosay("Hope you enjoyed the session :)") );</p>
-
-<pre><code>  _-----_
-|       |    .--------------------------.
-|--(o)--|    |   Hope you enjoyed the   |
-</code></pre>
-
-<p>   `---------´   |        session :)        |</p>
-
-<pre><code>( _´U`_ )    '--------------------------'
-/___A___\    
- |  ~  |     
-</code></pre>
-
-<p>   <strong>'.</strong>_.'__ <br/>
- ´   <code> |° ´ Y</code></p>
-
-<p>```</p>
-
-<p><strong>GIF FTW!:</strong></p>
-
-<p><img src="/images/yosay/yosay.gif" alt="yosay" /></p>
-
-<p><strong>Enjoy talking like the Yeoman! :)</strong></p>
 ]]></content>
   </entry>
   
