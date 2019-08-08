@@ -32,4 +32,4 @@ humanInterval('3 days, 4 hours and 36 seconds');
 
 __GIF FTW!__
 
-![human-interval](/images/human-interval.gif)
+![human-interval](/images/human-interval/human-interval.gif)
