@@ -7,8 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
-Mouse cursor velocity &hellip;">   
+    <meta name="description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -16,16 +15,14 @@ Mouse cursor velocity &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
-Mouse cursor velocity &hellip;">
+    <meta name="twitter:description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="tornis Store for your viewport. tornis a cheeky module with just 300 lines of code, enables us to track: Mouse position
-Mouse cursor velocity &hellip;" />
+    <meta property="og:description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;" />
 
     
 
@@ -70,6 +67,86 @@ Mouse cursor velocity &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/store/">
+			
+				Store</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-06-02T17:01:14+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/store">store</a></h1>
+
+<blockquote><p>Cross-browser storage for all use cases!</p></blockquote>
+
+<p><code>store</code> provides basic <code>key/value</code> storage functionality (<code>get/set/remove/each</code>) as well as a rich set of plug-in <a href="https://github.com/marcuswestin/store.js#user-content-storages">storages</a> and extra functionality.</p>
+
+<p><strong>Get it:</strong> <code>npm install store</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;site&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;nmotw.in&#39;</span> <span class="p">})</span>
+</span><span class='line'><span class="nx">store</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">).</span><span class="nx">name</span> <span class="o">==</span> <span class="s1">&#39;nmotw.in&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Example custom storage</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;myStorage&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">read</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">write</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">each</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">remove</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+</span><span class='line'>  <span class="nx">clearAll</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">).</span><span class="nx">createStore</span><span class="p">(</span><span class="nx">storage</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>One could use <code>memoryStorage</code> or <code>localStorage</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/store/store.gif" alt="store" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1153,116 +1230,6 @@ Mouse cursor velocity &hellip;" />
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/carbon-now-cli/">
-			
-				Carbon-now-cli</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-03-22T22:28:38+05:30" pubdate data-updated="true">Mar 22<span>nd</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">carbon-now-cli</a></h1>
-
-<blockquote><p>carbon code images from CLI.</p></blockquote>
-
-<p><code>carbon-now-cli</code> is a CLI interface for 🎨 Beautiful images of your code — from right inside your terminal!</p>
-
-<p><strong>It also porivdes the below functionality:</strong></p>
-
-<ul>
-<li>🖼 Downloads the <strong>real</strong>, <strong>high-quality</strong> image (<em>no DOM screenshots</em>)</li>
-<li>✨ Detects file type <strong>automatically</strong></li>
-<li>🗂 Supports <strong>all</strong> file extensions supported by <a href="https://carbon.now.sh">carbon.now.sh</a> and <a href="https://github.com/mixn/carbon-now-cli/blob/master/src/helpers/language-map.json">more</a></li>
-<li>⚡️ Interactive mode via <code>--interactive</code></li>
-<li>🎒 Presets : save and reuse your favorite settings</li>
-<li>🖱 Selective highlighting <code>--start</code> and <code>--end</code></li>
-<li>📎 Copies image to clipboard via <code>--copy</code> (<strong>cross-OS</strong> 😱)</li>
-<li>📚 Accepts file, <code>stdin</code> or clipboard content as input.</li>
-<li>🐶 Displays image directly in supported terminals</li>
-<li>⏱ Reports each step and therefore <em>shortens the wait</em></li>
-<li>👀 Saves to given location or only opens in browser for manual finish.</li>
-<li>🌈 Supports saving as <code>.png</code> or <code>.svg</code> — just like Carbon</li>
-<li>📏 Supports <code>2x</code>, <code>4x</code> or <code>1x</code> resolutions — just like Carbon</li>
-<li>✅ Tested</li>
-<li>⛏ Maintained</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm i -g carbon-now-cli</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>carbon-now --help
-</span><span class='line'>
-</span><span class='line'>Beautiful images of your code — from right inside your terminal.
-</span><span class='line'>
-</span><span class='line'>Usage
-</span><span class='line'>  <span class="nv">$ </span>carbon-now &lt;file&gt;
-</span><span class='line'>  <span class="nv">$ </span>pbpaste | carbon-now
-</span><span class='line'>  <span class="nv">$ </span>carbon-now --from-clipboard
-</span><span class='line'>
-</span><span class='line'>Options
-</span><span class='line'>  -s, --start          Starting line of &lt;file&gt;
-</span><span class='line'>  -e, --end            Ending line of &lt;file&gt;
-</span><span class='line'>  -i, --interactive    Interactive mode
-</span><span class='line'>  -l, --location       Image save location, default: cwd
-</span><span class='line'>  -t, --target         Image name, default: original-hash.<span class="o">{</span>png|svg<span class="o">}</span>
-</span><span class='line'>  -o, --open           Open in browser instead of saving
-</span><span class='line'>  -c, --copy           Copy image to clipboard
-</span><span class='line'>  -p, --preset         Use a saved preset
-</span><span class='line'>  -h, --headless       Use only non-experimental Puppeteer features
-</span><span class='line'>  --config             Use a different, <span class="nb">local </span>config <span class="o">(</span><span class="nb">read</span>-only<span class="o">)</span>
-</span><span class='line'>  --from-clipboard     Read input from clipboard instead of file
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW</strong></p>
-
-<p><img src="/images/carbon-now-cli/carbon-now-cli.gif" alt="carbon-now-cli" /></p>
 
 		
 		

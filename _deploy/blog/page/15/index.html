@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;">   
+    <meta name="description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;">
+    <meta name="twitter:description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="svg-captcha Generate svg captcha. svg-captcha uses OpenType font parser and text skewing martix logic to generate random SVG captchas. It returns an &hellip;" />
+    <meta property="og:description" content="cost-of-modules Find out which of your dependencies is slowing you down 🐢 cost-of-modules is a cheeky module that generates a neat table of &hellip;" />
 
     
 
@@ -67,6 +67,61 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/cost-of-modules/">
+			
+				Cost-of-modules</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-01T19:06:43+05:30" pubdate data-updated="true">Dec 1<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
+
+<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
+
+<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
+identify which dependency is slowing the module down.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
+
+<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--less</code>  Show the biggest 10 modules</p>
+
+<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
+
+<p><code>--no-install</code>  Skip installation</p>
+
+<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -792,85 +847,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIF FTW:</strong></p>
 
 <p><img src="/images/autoinput-size/autosize-input.gif" alt="autoinput-size" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/asyncbox/">
-			
-				Asyncbox</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-09-22T22:37:26+05:30" pubdate data-updated="true">Sep 22<span>nd</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
-
-<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
-
-<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
-
-<ul>
-<li>sleep</li>
-<li>retry</li>
-<li>nodeify</li>
-<li>nodeifyAll</li>
-<li>retryInterval</li>
-<li>asyncify</li>
-<li>parallel</li>
-<li>asyncmap</li>
-<li>asyncfilter</li>
-<li>waitForCondition</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
-
-<p><strong>Usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">sleep</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;asyncbox&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">async</span> <span class="kd">function</span> <span class="nx">myFn</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// do some stuff </span>
-</span><span class='line'>    <span class="nx">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// wait one second </span>
-</span><span class='line'>    <span class="c1">// do some other stuff </span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">myFn</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
 
 		
 		
