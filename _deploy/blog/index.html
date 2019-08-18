@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="human-interval Human readable interval parser. human-interval with 60 lines of code and some smart use of regexps provides a easy way to parser &hellip;">   
+    <meta name="description" content="console-badge 🎨 Create simple badges in the browser console console-badge fun little less than 1kB util that helps us to console log badges that can &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="human-interval Human readable interval parser. human-interval with 60 lines of code and some smart use of regexps provides a easy way to parser &hellip;">
+    <meta name="twitter:description" content="console-badge 🎨 Create simple badges in the browser console console-badge fun little less than 1kB util that helps us to console log badges that can &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="human-interval Human readable interval parser. human-interval with 60 lines of code and some smart use of regexps provides a easy way to parser &hellip;" />
+    <meta property="og:description" content="console-badge 🎨 Create simple badges in the browser console console-badge fun little less than 1kB util that helps us to console log badges that can &hellip;" />
 
     
 
@@ -67,6 +67,87 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/console-badge/">
+			
+				Console-badge</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-08-18T15:03:48+05:30" pubdate data-updated="true">Aug 18<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/console-badge">console-badge</a></h1>
+
+<blockquote><p>🎨 Create simple badges in the browser console</p></blockquote>
+
+<p><code>console-badge</code> fun little less than 1kB util that helps us to console log badges that can be customized and also provides  popular shields.io badge style as the default style.</p>
+
+<p><strong>Get it:</strong> <code>npm install console-badge</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">consoleBadge</span> <span class="nx">from</span> <span class="s1">&#39;console-badge&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">consoleBadge</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">mode</span><span class="o">:</span> <span class="s1">&#39;shields.io&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">leftText</span><span class="o">:</span> <span class="s1">&#39;console-badge&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">rightText</span><span class="o">:</span> <span class="s1">&#39;hello world 🚀&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">rightBgColor</span><span class="o">:</span> <span class="s1">&#39;#ffc107&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">rightTextColor</span><span class="o">:</span> <span class="s1">&#39;#1a1a1a&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">consoleBadge</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">leftText</span><span class="o">:</span> <span class="s1">&#39;😎 Check out our code here:&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">leftTextColor</span><span class="o">:</span> <span class="s1">&#39;#000&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">leftBgColor</span><span class="o">:</span> <span class="s1">&#39;#ddd&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">rightText</span><span class="o">:</span> <span class="s1">&#39;https://nmotw.in&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">rightBgColor</span><span class="o">:</span> <span class="s1">&#39;#000&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/console-badge/console-badge.gif" alt="console-badge" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -998,187 +1079,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/wait-on/wait-on.gif" alt="wait-on" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/zxcvbn/">
-			
-				Zxcvbn</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-06-10T10:27:44+05:30" pubdate data-updated="true">Jun 10<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">zxcvbn</a></h1>
-
-<blockquote><p>Password strength estimator!</p></blockquote>
-
-<p><code>zxcvbn</code> is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common passwords helps us to estimate various parameters related to the strength of the password and also gives us the suggestion to improve the password.</p>
-
-<p><strong>Get it:</strong> <code>npm install zxcvbn</code></p>
-
-<p>__Sample</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">zxcvbn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zxcvbn&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">zxcvbn</span><span class="p">(</span><span class="s1">&#39;Tr0ub4dour&amp;3&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ Would return an object like below:</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">{</span>
-</span><span class='line'><span class="cm">  &quot;password&quot;: &quot;Tr0ub4dour&amp;3&quot;,</span>
-</span><span class='line'><span class="cm">  &quot;guesses&quot;: 19058000,</span>
-</span><span class='line'><span class="cm">  &quot;guesses_log10&quot;: 7.280077322611945,</span>
-</span><span class='line'><span class="cm">  &quot;sequence&quot;: [</span>
-</span><span class='line'><span class="cm">    {</span>
-</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;dictionary&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;i&quot;: 0,</span>
-</span><span class='line'><span class="cm">      &quot;j&quot;: 9,</span>
-</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;Tr0ub4dour&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;matched_word&quot;: &quot;troubadour&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;rank&quot;: 11905,</span>
-</span><span class='line'><span class="cm">      &quot;dictionary_name&quot;: &quot;us_tv_and_film&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;reversed&quot;: false,</span>
-</span><span class='line'><span class="cm">      &quot;l33t&quot;: true,</span>
-</span><span class='line'><span class="cm">      &quot;sub&quot;: {</span>
-</span><span class='line'><span class="cm">        &quot;0&quot;: &quot;o&quot;,</span>
-</span><span class='line'><span class="cm">        &quot;4&quot;: &quot;a&quot;</span>
-</span><span class='line'><span class="cm">      },</span>
-</span><span class='line'><span class="cm">      &quot;sub_display&quot;: &quot;0 -&gt; o, 4 -&gt; a&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;base_guesses&quot;: 11905,</span>
-</span><span class='line'><span class="cm">      &quot;uppercase_variations&quot;: 2,</span>
-</span><span class='line'><span class="cm">      &quot;l33t_variations&quot;: 4,</span>
-</span><span class='line'><span class="cm">      &quot;guesses&quot;: 95240,</span>
-</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 4.978819386732842</span>
-</span><span class='line'><span class="cm">    },</span>
-</span><span class='line'><span class="cm">    {</span>
-</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;bruteforce&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;&amp;3&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;i&quot;: 10,</span>
-</span><span class='line'><span class="cm">      &quot;j&quot;: 11,</span>
-</span><span class='line'><span class="cm">      &quot;guesses&quot;: 100,</span>
-</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 2</span>
-</span><span class='line'><span class="cm">    }</span>
-</span><span class='line'><span class="cm">  ],</span>
-</span><span class='line'><span class="cm">  &quot;calc_time&quot;: 2,</span>
-</span><span class='line'><span class="cm">  &quot;crack_times_seconds&quot;: {</span>
-</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: 686088000,</span>
-</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: 1905800,</span>
-</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: 1905.8,</span>
-</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: 0.0019058</span>
-</span><span class='line'><span class="cm">  },</span>
-</span><span class='line'><span class="cm">  &quot;crack_times_display&quot;: {</span>
-</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: &quot;21 years&quot;,</span>
-</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: &quot;22 days&quot;,</span>
-</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: &quot;32 minutes&quot;,</span>
-</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: &quot;less than a second&quot;</span>
-</span><span class='line'><span class="cm">  },</span>
-</span><span class='line'><span class="cm">  &quot;score&quot;: 2,</span>
-</span><span class='line'><span class="cm">  &quot;feedback&quot;: {</span>
-</span><span class='line'><span class="cm">    &quot;warning&quot;: &quot;&quot;,</span>
-</span><span class='line'><span class="cm">    &quot;suggestions&quot;: [</span>
-</span><span class='line'><span class="cm">      &quot;Add another word or two. Uncommon words are better.&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;Capitalization doesn&#39;t help very much&quot;,</span>
-</span><span class='line'><span class="cm">      &quot;Predictable substitutions like &#39;@&#39; instead of &#39;a&#39; don&#39;t help very much&quot;</span>
-</span><span class='line'><span class="cm">    ]</span>
-</span><span class='line'><span class="cm">  }</span>
-</span><span class='line'><span class="cm">}</span>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/zxcvbn/zxcvbn.gif" alt="zxcvbn" /></p>
 
 		
 		

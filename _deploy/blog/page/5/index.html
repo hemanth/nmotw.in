@@ -7,7 +7,9 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="is-vegan Find out which food ingredients are vegan / non-vegan. If you are vegan you would understand the challenge of staying a vegan, this module &hellip;">   
+    <meta name="description" content="fx CLI JSON processing tool fx is one of a kind JSON processing tool, that provides: Don't need to learn new syntax
+Plain JavaScript
+Formatting and &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +17,18 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/5/">
-    <meta name="twitter:description" content="is-vegan Find out which food ingredients are vegan / non-vegan. If you are vegan you would understand the challenge of staying a vegan, this module &hellip;">
+    <meta name="twitter:description" content="fx CLI JSON processing tool fx is one of a kind JSON processing tool, that provides: Don't need to learn new syntax
+Plain JavaScript
+Formatting and &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/5/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="is-vegan Find out which food ingredients are vegan / non-vegan. If you are vegan you would understand the challenge of staying a vegan, this module &hellip;" />
+    <meta property="og:description" content="fx CLI JSON processing tool fx is one of a kind JSON processing tool, that provides: Don't need to learn new syntax
+Plain JavaScript
+Formatting and &hellip;" />
 
     
 
@@ -67,6 +73,84 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/fx/">
+			
+				Fx</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-11-16T08:20:35+05:30" pubdate data-updated="true">Nov 16<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/fx">fx</a></h1>
+
+<blockquote><p>CLI JSON processing tool</p></blockquote>
+
+<p><code>fx</code> is one of a kind JSON processing tool, that provides:</p>
+
+<ul>
+<li>Don't need to learn new syntax</li>
+<li>Plain JavaScript</li>
+<li>Formatting and highlighting</li>
+<li>Standalone binary</li>
+<li>Interactive mode 🎉</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install -g fx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{...}&#39;</span> | fx <span class="o">[</span>code ...<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;{&quot;foo&quot;: [{&quot;bar&quot;: &quot;value&quot;}]}&#39;</span> | fx <span class="s1">&#39;x =&gt; x.foo[0].bar&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;count&quot;: 0}&#39;</span> | fx <span class="s1">&#39;{...this, count: 1}&#39;</span>
+</span><span class='line'><span class="o">{</span>
+</span><span class='line'>  <span class="s2">&quot;count&quot;</span>: 1
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fx/fx.gif" alt="fx" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -926,92 +1010,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/mapscii/mapscii.gif" alt="mapscii" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/microjob/">
-			
-				Microjob</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-09-09T00:27:32+05:30" pubdate data-updated="true">Sep 9<span>th</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
-
-<blockquote><p>worker threads into easy-to-use routines for CPU-bound.</p></blockquote>
-
-<p><code>microjob</code> is a tiny wrapper for threads (<code>worker_threads</code>) and is intended to perform heavy CPU loads using anonymous functions.</p>
-
-<p><strong>GET IT:</strong> <code>npm install microjob</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>(async () =&gt; {
-</span><span class='line'>  const { job } = require('microjob')
-</span><span class='line'>
-</span><span class='line'>  try {
-</span><span class='line'>    // this function will be executed in another thread
-</span><span class='line'>    const res = await job(() =&gt; {
-</span><span class='line'>      let i = 0
-</span><span class='line'>      for (i = 0; i &lt; 1000000; i++) {
-</span><span class='line'>        // heavy CPU load ...
-</span><span class='line'>      }
-</span><span class='line'>
-</span><span class='line'>      return i
-</span><span class='line'>    })
-</span><span class='line'>
-</span><span class='line'>    console.log(res) // 1000000
-</span><span class='line'>  } catch (err) {
-</span><span class='line'>    console.error(err)
-</span><span class='line'>  }
-</span><span class='line'>})();</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: To run this today, you we need node <code>v&gt;=10</code> and execute it via <code>--experimental-worker</code> flag.</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/microjob/microjob.gif" alt="microjob" /></p>
 
 		
 		

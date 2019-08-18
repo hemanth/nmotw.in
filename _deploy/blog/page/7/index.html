@@ -7,10 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="ent Encode and decode HTML entities. ent helps in encoding and ecoding HTML entities. Get it: npm install ent Sample usage: 1
-2
-3
-const ent = &hellip;">   
+    <meta name="description" content="error-stack-parser Simple, cross-browser Error parser. error-stack-parser library parses and extracts function names, URLs, line numbers, and column &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -18,20 +15,14 @@ const ent = &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/7/">
-    <meta name="twitter:description" content="ent Encode and decode HTML entities. ent helps in encoding and ecoding HTML entities. Get it: npm install ent Sample usage: 1
-2
-3
-const ent = &hellip;">
+    <meta name="twitter:description" content="error-stack-parser Simple, cross-browser Error parser. error-stack-parser library parses and extracts function names, URLs, line numbers, and column &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/7/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="ent Encode and decode HTML entities. ent helps in encoding and ecoding HTML entities. Get it: npm install ent Sample usage: 1
-2
-3
-const ent = &hellip;" />
+    <meta property="og:description" content="error-stack-parser Simple, cross-browser Error parser. error-stack-parser library parses and extracts function names, URLs, line numbers, and column &hellip;" />
 
     
 
@@ -76,6 +67,101 @@ const ent = &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/error-stack-parser/">
+			
+				Error-stack-parser</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-07-01T20:42:55+05:30" pubdate data-updated="true">Jul 1<span>st</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/error-stack-parser">error-stack-parser</a></h1>
+
+<blockquote><p>Simple, cross-browser Error parser.</p></blockquote>
+
+<p><code>error-stack-parser</code> library parses and extracts function names, URLs, line numbers, and column numbers from the given Error's stack as an Array of StackFrames.</p>
+
+<p><strong>Get it:</strong> <code>npm install error-stack-parser</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">ErrorStackParser</span> <span class="o">=</span> <span class="nx">rquire</span><span class="p">(</span><span class="err">&quot;</span><span class="nx">error</span><span class="o">-</span><span class="nx">stack</span><span class="o">-</span><span class="nx">parser</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ErrorStackParser</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;BOOM&#39;</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">=&gt; [</span>
+</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;foo&#39;, args: [], fileName: &#39;path/to/file.js&#39;, lineNumber: 35, columnNumber: 79, isNative: false, isEval: false}),</span>
+</span><span class='line'><span class="cm">        StackFrame({functionName: &#39;Bar&#39;, fileName: &#39;https://cdn.somewherefast.com/utils.min.js&#39;, lineNumber: 1, columnNumber: 832, isNative: false, isEval: false, isConstructor: true}),</span>
+</span><span class='line'><span class="cm">        StackFrame(... and so on ...)</span>
+</span><span class='line'><span class="cm">   ]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">ErrorStackParer</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">[ &#39;parse&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;extractLocation&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseV8OrIE&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseFFOrSafari&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera9&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera10&#39;,</span>
+</span><span class='line'><span class="cm">  &#39;parseOpera11&#39; ]</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/error-stack-parser/error-stack-parser.gif" alt="error-stack-parser" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -742,96 +828,6 @@ const ent = &hellip;" />
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/dayjs/dayjs.gif" alt="dayjs" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/tiny-glob/">
-			
-				Tiny-glob</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-04-21T11:56:24+05:30" pubdate data-updated="true">Apr 21<span>st</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="">tiny-glob</a></h1>
-
-<blockquote><p>Match files and dirs using glob patterns.</p></blockquote>
-
-<p><code>tiny-glob</code> is 🔥 extremely fast, 💪 powerful, 📦 tiny util to match files and folders using glob patterns.</p>
-
-<p><strong>Get it:</strong> <code>npm install tiny-glob</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">glob</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;tiny-glob&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">(</span><span class="nx">async</span> <span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>    <span class="kd">let</span> <span class="nx">files</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">glob</span><span class="p">(</span><span class="s1">&#39;src/*/*.{js,md}&#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="c1">// =&gt; [ ... ] array of matching files</span>
-</span><span class='line'><span class="p">})();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Benchmark results:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">glob</span> <span class="nx">x</span> <span class="mi">13</span><span class="p">,</span><span class="mi">405</span> <span class="nx">ops</span><span class="o">/</span><span class="nx">sec</span> <span class="err">±</span><span class="mf">1.80</span><span class="o">%</span> <span class="p">(</span><span class="mi">85</span> <span class="nx">runs</span> <span class="nx">sampled</span><span class="p">)</span>
-</span><span class='line'><span class="nx">fast</span><span class="o">-</span><span class="nx">glob</span> <span class="nx">x</span> <span class="mi">25</span><span class="p">,</span><span class="mi">745</span> <span class="nx">ops</span><span class="o">/</span><span class="nx">sec</span> <span class="err">±</span><span class="mf">2.76</span><span class="o">%</span> <span class="p">(</span><span class="mi">59</span> <span class="nx">runs</span> <span class="nx">sampled</span><span class="p">)</span>
-</span><span class='line'><span class="nx">tiny</span><span class="o">-</span><span class="nx">glob</span> <span class="nx">x</span> <span class="mi">102</span><span class="p">,</span><span class="mi">658</span> <span class="nx">ops</span><span class="o">/</span><span class="nx">sec</span> <span class="err">±</span><span class="mf">0.79</span><span class="o">%</span> <span class="p">(</span><span class="mi">91</span> <span class="nx">runs</span> <span class="nx">sampled</span><span class="p">)</span>
-</span><span class='line'><span class="nx">Fastest</span> <span class="nx">is</span> <span class="nx">tiny</span><span class="o">-</span><span class="nx">glob</span>
-</span><span class='line'><span class="err">┌───────────┬─────────────────────────┬─────────────┬────────────────┐</span>
-</span><span class='line'><span class="err">│</span> <span class="nx">Name</span>      <span class="err">│</span> <span class="nx">Mean</span> <span class="nx">time</span>               <span class="err">│</span> <span class="nx">Ops</span><span class="o">/</span><span class="nx">sec</span>     <span class="err">│</span> <span class="nx">Diff</span>           <span class="err">│</span>
-</span><span class='line'><span class="err">├───────────┼─────────────────────────┼─────────────┼────────────────┤</span>
-</span><span class='line'><span class="err">│</span> <span class="nx">glob</span>      <span class="err">│</span> <span class="mf">0.00007459990597268128</span>  <span class="err">│</span> <span class="mi">13</span><span class="p">,</span><span class="mf">404.843</span>  <span class="err">│</span> <span class="nx">N</span><span class="o">/</span><span class="nx">A</span>            <span class="err">│</span>
-</span><span class='line'><span class="err">├───────────┼─────────────────────────┼─────────────┼────────────────┤</span>
-</span><span class='line'><span class="err">│</span> <span class="nx">fast</span><span class="o">-</span><span class="nx">glob</span> <span class="err">│</span> <span class="mf">0.000038842529587611705</span> <span class="err">│</span> <span class="mi">25</span><span class="p">,</span><span class="mf">744.976</span>  <span class="err">│</span> <span class="mf">92.06</span><span class="o">%</span> <span class="nx">faster</span>  <span class="err">│</span>
-</span><span class='line'><span class="err">├───────────┼─────────────────────────┼─────────────┼────────────────┤</span>
-</span><span class='line'><span class="err">│</span> <span class="nx">tiny</span><span class="o">-</span><span class="nx">glob</span> <span class="err">│</span> <span class="mf">0.00000974110141018254</span>  <span class="err">│</span> <span class="mi">102</span><span class="p">,</span><span class="mf">657.796</span> <span class="err">│</span> <span class="mf">298.75</span><span class="o">%</span> <span class="nx">faster</span> <span class="err">│</span>
-</span><span class='line'><span class="err">└───────────┴─────────────────────────┴─────────────┴────────────────┘</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/tiny-glob/tiny-glob.gif" alt="tiny-glob" /></p>
 
 		
 		
