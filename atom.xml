@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-08-18T15:07:25+05:30</updated>
+  <updated>2019-08-18T15:09:28+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,7 +17,7 @@
     <link href="http://nmotw.in/console-badge/"/>
     <updated>2019-08-18T15:03:48+05:30</updated>
     <id>http://nmotw.in/console-badge</id>
-    <content type="html"><![CDATA[<p><img src="https://www.npmjs.com/package/console-badge" alt="console-badge" /></p>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/console-badge">console-badge</a></h1>
 
 <blockquote><p>🎨 Create simple badges in the browser console</p></blockquote>
 
