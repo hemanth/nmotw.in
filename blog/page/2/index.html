@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;">   
+    <meta name="description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;">
+    <meta name="twitter:description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="store Cross-browser storage for all use cases! store provides basic key/value storage functionality (get/set/remove/each) as well as a rich set of &hellip;" />
+    <meta property="og:description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;" />
 
     
 
@@ -67,6 +67,187 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/zxcvbn/">
+			
+				Zxcvbn</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-06-10T10:27:44+05:30" pubdate data-updated="true">Jun 10<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="">zxcvbn</a></h1>
+
+<blockquote><p>Password strength estimator!</p></blockquote>
+
+<p><code>zxcvbn</code> is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common passwords helps us to estimate various parameters related to the strength of the password and also gives us the suggestion to improve the password.</p>
+
+<p><strong>Get it:</strong> <code>npm install zxcvbn</code></p>
+
+<p>__Sample</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">zxcvbn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;zxcvbn&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">zxcvbn</span><span class="p">(</span><span class="s1">&#39;Tr0ub4dour&amp;3&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ^ Would return an object like below:</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">{</span>
+</span><span class='line'><span class="cm">  &quot;password&quot;: &quot;Tr0ub4dour&amp;3&quot;,</span>
+</span><span class='line'><span class="cm">  &quot;guesses&quot;: 19058000,</span>
+</span><span class='line'><span class="cm">  &quot;guesses_log10&quot;: 7.280077322611945,</span>
+</span><span class='line'><span class="cm">  &quot;sequence&quot;: [</span>
+</span><span class='line'><span class="cm">    {</span>
+</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;dictionary&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;i&quot;: 0,</span>
+</span><span class='line'><span class="cm">      &quot;j&quot;: 9,</span>
+</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;Tr0ub4dour&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;matched_word&quot;: &quot;troubadour&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;rank&quot;: 11905,</span>
+</span><span class='line'><span class="cm">      &quot;dictionary_name&quot;: &quot;us_tv_and_film&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;reversed&quot;: false,</span>
+</span><span class='line'><span class="cm">      &quot;l33t&quot;: true,</span>
+</span><span class='line'><span class="cm">      &quot;sub&quot;: {</span>
+</span><span class='line'><span class="cm">        &quot;0&quot;: &quot;o&quot;,</span>
+</span><span class='line'><span class="cm">        &quot;4&quot;: &quot;a&quot;</span>
+</span><span class='line'><span class="cm">      },</span>
+</span><span class='line'><span class="cm">      &quot;sub_display&quot;: &quot;0 -&gt; o, 4 -&gt; a&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;base_guesses&quot;: 11905,</span>
+</span><span class='line'><span class="cm">      &quot;uppercase_variations&quot;: 2,</span>
+</span><span class='line'><span class="cm">      &quot;l33t_variations&quot;: 4,</span>
+</span><span class='line'><span class="cm">      &quot;guesses&quot;: 95240,</span>
+</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 4.978819386732842</span>
+</span><span class='line'><span class="cm">    },</span>
+</span><span class='line'><span class="cm">    {</span>
+</span><span class='line'><span class="cm">      &quot;pattern&quot;: &quot;bruteforce&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;token&quot;: &quot;&amp;3&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;i&quot;: 10,</span>
+</span><span class='line'><span class="cm">      &quot;j&quot;: 11,</span>
+</span><span class='line'><span class="cm">      &quot;guesses&quot;: 100,</span>
+</span><span class='line'><span class="cm">      &quot;guesses_log10&quot;: 2</span>
+</span><span class='line'><span class="cm">    }</span>
+</span><span class='line'><span class="cm">  ],</span>
+</span><span class='line'><span class="cm">  &quot;calc_time&quot;: 2,</span>
+</span><span class='line'><span class="cm">  &quot;crack_times_seconds&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: 686088000,</span>
+</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: 1905800,</span>
+</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: 1905.8,</span>
+</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: 0.0019058</span>
+</span><span class='line'><span class="cm">  },</span>
+</span><span class='line'><span class="cm">  &quot;crack_times_display&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;online_throttling_100_per_hour&quot;: &quot;21 years&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;online_no_throttling_10_per_second&quot;: &quot;22 days&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;offline_slow_hashing_1e4_per_second&quot;: &quot;32 minutes&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;offline_fast_hashing_1e10_per_second&quot;: &quot;less than a second&quot;</span>
+</span><span class='line'><span class="cm">  },</span>
+</span><span class='line'><span class="cm">  &quot;score&quot;: 2,</span>
+</span><span class='line'><span class="cm">  &quot;feedback&quot;: {</span>
+</span><span class='line'><span class="cm">    &quot;warning&quot;: &quot;&quot;,</span>
+</span><span class='line'><span class="cm">    &quot;suggestions&quot;: [</span>
+</span><span class='line'><span class="cm">      &quot;Add another word or two. Uncommon words are better.&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;Capitalization doesn&#39;t help very much&quot;,</span>
+</span><span class='line'><span class="cm">      &quot;Predictable substitutions like &#39;@&#39; instead of &#39;a&#39; don&#39;t help very much&quot;</span>
+</span><span class='line'><span class="cm">    ]</span>
+</span><span class='line'><span class="cm">  }</span>
+</span><span class='line'><span class="cm">}</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/zxcvbn/zxcvbn.gif" alt="zxcvbn" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1026,210 +1207,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/osenv/osenv.gif" alt="osenv" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/eshost-cli/">
-			
-				Eshost-cli</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-03-30T11:37:02+05:30" pubdate data-updated="true">Mar 30<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
-
-<blockquote><p>Run ECMAScript code uniformly across any ECMAScript host.</p></blockquote>
-
-<p><code>eshost-cli</code> makes it easy to run and compare <code>ECMAScript</code> code uniformly across a number of runtimes. Support for runtimes is provided by the library <code>eshost</code>.</p>
-
-<p><strong>Get it:</strong> <code>npm install -g eshost-cli</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost -e <span class="s1">&#39;Date.parse(&quot;1 Octopus 2018&quot;)&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c">#### Chakra</span>
-</span><span class='line'>NaN
-</span><span class='line'>
-</span><span class='line'><span class="c">#### JavaScriptCore</span>
-</span><span class='line'>1538332200000
-</span><span class='line'>
-</span><span class='line'><span class="c">#### SpiderMonkey</span>
-</span><span class='line'>NaN
-</span><span class='line'>
-</span><span class='line'><span class="c">#### V8</span>
-</span><span class='line'>1538332200000
-</span><span class='line'>
-</span><span class='line'><span class="c">#### V8 --harmony</span>
-</span><span class='line'>1538332200000
-</span><span class='line'>
-</span><span class='line'><span class="c">#### XS</span>
-</span><span class='line'>NaN
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; eshost --help
-</span><span class='line'>Usage: eshost <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>input-file<span class="o">]</span>
-</span><span class='line'>       eshost <span class="o">[</span>options<span class="o">]</span> -e <span class="s2">&quot;input-script&quot;</span>
-</span><span class='line'>       eshost --list
-</span><span class='line'>       eshost --add <span class="o">[</span>host name<span class="o">]</span> <span class="o">[</span>host <span class="nb">type</span><span class="o">]</span> &lt;host path&gt; --args &lt;host arguments&gt;
-</span><span class='line'>       eshost --delete <span class="o">[</span>host name<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>Options:
-</span><span class='line'>  -e, --eval        <span class="nb">eval </span>an expression and print the result
-</span><span class='line'>  -x, --execute     execute a multi-statement program
-</span><span class='line'>  -h, --host        <span class="k">select </span>hosts by name <span class="o">(</span>glob syntax is supported as well<span class="o">)</span>
-</span><span class='line'>  -g, --hostGroup   <span class="k">select </span>host groups by host <span class="nb">type</span>
-</span><span class='line'>  --tags            <span class="k">select </span>hosts by tag
-</span><span class='line'>  -c, --config      <span class="k">select </span>a config file
-</span><span class='line'>  --table, -t       output in a table                                  <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  --coalesce, -s    coalesce like output into a single entry           <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  --showSource, -i  show input <span class="nb">source</span>                                  <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  --unanimous, -u   If all engines agree, <span class="nb">exit</span><span class="o">(</span>0<span class="o">)</span> with no output, otherwise
-</span><span class='line'>                    print and <span class="nb">exit</span><span class="o">(</span>1<span class="o">)</span>; implies --coalesce              <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  --add             add a host
-</span><span class='line'>  --edit            edit a host
-</span><span class='line'>  --delete          delete a host
-</span><span class='line'>  --args            <span class="nb">set </span>arguments <span class="k">for </span>a host entry <span class="o">(</span>use with --add<span class="o">)</span>
-</span><span class='line'>  --configure-jsvu  Configure jsvu hosts in the config                 <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  --jsvu-prefix     <span class="o">[</span>OPTIONAL<span class="o">]</span> Set the prefix of the configured hosts. If prefix
-</span><span class='line'>                    is <span class="s2">&quot;jsvu&quot;</span> <span class="k">then </span>hosts will be configured as, e.g., <span class="s2">&quot;jsvu-sm&quot;</span>.
-</span><span class='line'>                    By default, no prefix <span class="o">(</span>e.g. <span class="s2">&quot;sm&quot;</span><span class="o">)</span>. Use this flag with
-</span><span class='line'>                    --configure-jsvu.
-</span><span class='line'>  --jsvu-root       <span class="o">[</span>OPTIONAL<span class="o">]</span> Use this path containing the .jsvu folder <span class="o">(</span>use
-</span><span class='line'>                    this option <span class="k">if</span> .jsvu is located somewhere other than the
-</span><span class='line'>                    home directory<span class="o">)</span>. Use this flag with --configure-jsvu.
-</span><span class='line'>  --help            Show <span class="nb">help</span>                                          <span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>  -a, --async       <span class="nb">wait </span><span class="k">for </span>realm destruction before reporting results<span class="o">[</span>boolean<span class="o">]</span>
-</span><span class='line'>
-</span><span class='line'>Examples:
-</span><span class='line'>  eshost --list
-</span><span class='line'>  eshost --add d8 d8 path/to/d8 --args
-</span><span class='line'>  <span class="s2">&quot;--harmony&quot;</span>
-</span><span class='line'>  eshost --add ch ch path/to/ch --tags
-</span><span class='line'>  latest
-</span><span class='line'>  eshost --add ch ch path/to/ch --tags
-</span><span class='line'>  latest,greatest
-</span><span class='line'>  eshost --configure-jsvu
-</span><span class='line'>  eshost --configure-jsvu --jsvu-prefix
-</span><span class='line'>  jsvu
-</span><span class='line'>  eshost test.js
-</span><span class='line'>  eshost -e <span class="s2">&quot;1+1&quot;</span>
-</span><span class='line'>  eshost -its -x <span class="s2">&quot;for (let i=0; i&lt;10; ++i)</span>
-</span><span class='line'><span class="s2">  { print(i) }&quot;</span>
-</span><span class='line'>  eshost -h d8 -h chakra test.js
-</span><span class='line'>  eshost -h d8,sm test.js
-</span><span class='line'>  eshost -g node,ch test.js
-</span><span class='line'>  eshost -h d8 -g node test.js
-</span><span class='line'>  eshost -h ch-*,node test.js
-</span><span class='line'>  eshost -h ch-1.?.? test.js
-</span><span class='line'>  eshost --tags latest test.js
-</span><span class='line'>  eshost --unanimous test.js
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
 
 		
 		
