@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CLI | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/cli/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-08-18T15:09:28+05:30</updated>
+  <updated>2019-08-23T17:31:02+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[npkill]]></title>
+    <link href="http://nmotw.in//github/npkill/"/>
+    <updated>2019-08-23T17:25:10+05:30</updated>
+    <id>http://nmotw.in//github/npkill</id>
+    <content type="html"><![CDATA[<h1><a href="https://npkill.js.org/">npkill</a></h1>
+
+<blockquote><p>Easily find and remove old and heavy node_modules folders</p></blockquote>
+
+<p><code>npkill</code> is a cheeky CLI tool that helps us to clean up <code>node_modules</code> with a uber cool CLI experience.</p>
+
+<p><strong>Get it:</strong> <code>npx npkill</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<p>$ npkill --help</p>
+
+<p>   -c, --bg-color          Change row highlight color. Available colors are: blue, cyan, magenta, red, white and yellow. Default</p>
+
+<pre><code>                       is blue.
+</code></pre>
+
+<p>   -d, --directory         Set directory from which to start searching. By default, starting-point is .</p>
+
+<p>   -D, --delete-all        CURRENTLY DISABLED. Automatically delete all node_modules folders that are found.</p>
+
+<p>   -e, --show-errors       Show error messages if any.</p>
+
+<p>   -f, --full              Start searching from the home of the user (example: "/home/user" in linux).</p>
+
+<p>   -gb                     Show folder size in Gigabytes</p>
+
+<p>   -h, --help, ?           Show this help page, with all options.</p>
+
+<p>   -nu, --no-check-update  Dont check for updates on startup.</p>
+
+<p>   -v, --version           Show version.
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npkill/npkill.gif" alt="npkill" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[jay]]></title>
@@ -277,46 +324,6 @@ Welcome to Ramda REPL!</p>
 <h2>License</h2>
 
 <p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[confirm-simple]]></title>
-    <link href="http://nmotw.in//github/confirm-simple/"/>
-    <updated>2015-03-12T20:54:10+05:30</updated>
-    <id>http://nmotw.in//github/confirm-simple</id>
-    <content type="html"><![CDATA[<h1><a href="http://npm.im/confirm-simple">confirm-simple</a></h1>
-
-<blockquote><p>A simple command-line tool to confirm.</p></blockquote>
-
-<p>If you have written CLI apps, you would have for sure come across a senario of taking an action based on the users choice.</p>
-
-<p><code>confirm-simple</code> as the name says it's a simple to use util that would help you to confirm users choice with ease.</p>
-
-<p><strong>Install it:</strong> <code>npm install --save confirm-simple</code></p>
-
-<p><strong>API and simple usage:</strong></p>
-
-<p>```js
-var confirm = require('confirm-simple')</p>
-
-<p>confirm('Do you accept the EULA?', ['yes', 'no'] ,function (yes) {</p>
-
-<pre><code>if (yes) { 
-  console.log('Good for you!');
-} else {
-  console.log('Sorry you wont get to use the software');
-}
-</code></pre>
-
-<p>});
-```</p>
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/confirm-simple/confirm-simple.gif" alt="" /></p>
-
-<p>Thanks to YouBao Nong for <code>confirm-simple</code>.</p>
 ]]></content>
   </entry>
   

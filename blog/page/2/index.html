@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;">   
+    <meta name="description" content="wait-on wait for files, ports, sockets, http(s) resources. wait-on is a cross-platform command line and API utility which will wait for files, ports &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/2/">
-    <meta name="twitter:description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;">
+    <meta name="twitter:description" content="wait-on wait for files, ports, sockets, http(s) resources. wait-on is a cross-platform command line and API utility which will wait for files, ports &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/2/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="zxcvbn Password strength estimator! zxcvbn is a uniq module through pattern matching and conservative estimation recognizes and weighs 30k common &hellip;" />
+    <meta property="og:description" content="wait-on wait for files, ports, sockets, http(s) resources. wait-on is a cross-platform command line and API utility which will wait for files, ports &hellip;" />
 
     
 
@@ -67,6 +67,108 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/wait-on/">
+			
+				Wait-on</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-06-14T10:11:12+05:30" pubdate data-updated="true">Jun 14<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://npm.im/wait-on">wait-on</a></h1>
+
+<blockquote><p>wait for files, ports, sockets, http(s) resources.</p></blockquote>
+
+<p><code>wait-on</code> is a cross-platform command line and API utility which will wait for files, ports, sockets, and http(s) resources to become available (or not available using reverse mode).</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] wait-on</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">wait</span>-on file1 <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for file1, then exec NEXT_CMD </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on f1 f2 <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for both f1 and f2, the exec NEXT_CMD </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on http://localhost:8000/foo <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for http 2XX HEAD </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on https://myserver/foo <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for https 2XX HEAD </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on http-get://localhost:8000/foo <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for http 2XX GET </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on https-get://myserver/foo <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for https 2XX GET </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on tcp:4000 <span class="o">&amp;&amp;</span> NEXT_CMD <span class="c"># wait for service to listen on a TCP port</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on socket:/path/mysock <span class="c"># wait for service to listen on domain socket </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on http://unix:/var/SOCKPATH:/a/foo <span class="c"># wait for http HEAD on domain socket </span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">wait</span>-on http-get://unix:/var/SOCKPATH:/a/foo <span class="c"># wait for http GET on domain socket </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="k">try</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">await</span> <span class="nx">waitOn</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// once here, all resources are available</span>
+</span><span class='line'><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">handleError</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/wait-on/wait-on.gif" alt="wait-on" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -1099,114 +1201,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/glob-to-regexp/glob-to-regexp.gif" alt="glob-to-regexp" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/osenv/">
-			
-				Osenv</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-04-06T16:14:07+05:30" pubdate data-updated="true">Apr 6<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/osenv">osenv</a></h1>
-
-<blockquote><p>Look up environment settings.</p></blockquote>
-
-<p><code>osenv</code> a tiny util that which has about <code>6,294,826</code> weekly downloads on npm, helps us in fetching the required <code>evn</code> setting from <code>process.env</code> acorss OS.</p>
-
-<p><strong>Get it:</strong> <code>npm installl osenv</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;osenv&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">user</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">prompt</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">hostname</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">tmpdir</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">home</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">path</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">editor</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">],</span>
-</span><span class='line'>  <span class="nx">shell</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">osenv</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;osenv&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">path</span><span class="p">()</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">user</span><span class="p">()</span>
-</span><span class='line'><span class="c1">// etc.</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Some things are not reliably in the env, and have a fallback command:</span>
-</span><span class='line'><span class="kd">let</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">osenv</span><span class="p">.</span><span class="nx">hostname</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">er</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">h</span> <span class="o">=</span> <span class="nx">hostname</span>
-</span><span class='line'><span class="p">})</span>
-</span><span class='line'><span class="c1">// This will still cause it to be memoized, so calling osenv.hostname()</span>
-</span><span class='line'><span class="c1">// is now an immediate operation.</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// You can always send a cb, which will get called in the nextTick</span>
-</span><span class='line'><span class="c1">// if it&#39;s been memoized, or wait for the fallback data if it wasn&#39;t</span>
-</span><span class='line'><span class="c1">// found in the environment.</span>
-</span><span class='line'><span class="nx">osenv</span><span class="p">.</span><span class="nx">hostname</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">er</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">er</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;error looking up hostname&#39;</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;this machine calls itself %s&#39;</span><span class="p">,</span> <span class="nx">hostname</span><span class="p">)</span>
-</span><span class='line'><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/osenv/osenv.gif" alt="osenv" /></p>
 
 		
 		
