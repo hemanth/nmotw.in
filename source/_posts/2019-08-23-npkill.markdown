@@ -1,0 +1,45 @@
+---
+layout: post
+title: "npkill"
+date: 2019-08-23 17:25:10 +0530
+comments: true
+categories: CLI
+---
+
+#[npkill](https://npkill.js.org/)
+> Easily find and remove old and heavy node_modules folders
+
+`npkill` is a cheeky CLI tool that helps us to clean up `node_modules` with a uber cool CLI experience.
+
+__Get it:__ `npx npkill`
+
+__Sample usage:__
+
+```sh
+
+$ npkill --help
+
+   -c, --bg-color          Change row highlight color. Available colors are: blue, cyan, magenta, red, white and yellow. Default
+                           is blue.
+
+   -d, --directory         Set directory from which to start searching. By default, starting-point is .
+
+   -D, --delete-all        CURRENTLY DISABLED. Automatically delete all node_modules folders that are found.
+
+   -e, --show-errors       Show error messages if any.
+
+   -f, --full              Start searching from the home of the user (example: "/home/user" in linux).
+
+   -gb                     Show folder size in Gigabytes
+
+   -h, --help, ?           Show this help page, with all options.
+
+   -nu, --no-check-update  Dont check for updates on startup.
+
+   -v, --version           Show version.
+```
+
+__GIF FTW!__
+
+![npkill](/images/npkill/npkill.gif)
+
