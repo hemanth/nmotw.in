@@ -7,7 +7,16 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;">   
+    <meta name="description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +24,32 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/15/">
-    <meta name="twitter:description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;">
+    <meta name="twitter:description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/15/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="image-size get dimensions of any image file image-size maybe call it image-dimensions? Anyway it's a sweet module that does one thing and does it &hellip;" />
+    <meta property="og:description" content="regexgen Generates regular expressions that match a set of strings. Get it: npm install --save regexgen Sample usage in code: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 &hellip;" />
 
     
 
@@ -67,6 +94,86 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/regexgen/">
+			
+				Regexgen</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-12-22T19:29:30+05:30" pubdate data-updated="true">Dec 22<span>nd</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/regexgen">regexgen</a></h1>
+
+<blockquote><p>Generates regular expressions that match a set of strings.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save regexgen</code></p>
+
+<p><strong>Sample usage in code:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kr">const</span> <span class="nx">regexgen</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;regexgen&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">regexgen</span><span class="p">([</span><span class="s1">&#39;foobar&#39;</span><span class="p">,</span> <span class="s1">&#39;foobaz&#39;</span><span class="p">,</span> <span class="s1">&#39;foozap&#39;</span><span class="p">,</span> <span class="s1">&#39;fooza&#39;</span><span class="p">]);</span> <span class="c1">// =&gt; /foo(?:zap?|ba[rz])/</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//You can also use the `Trie` class directly:</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="p">{</span><span class="nx">Trie</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;regexgen&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">let</span> <span class="nx">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Trie</span><span class="p">;</span>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;foobar&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;foobaz&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">t</span><span class="p">.</span><span class="nx">toRegExp</span><span class="p">();</span> <span class="c1">// =&gt; /fooba[rz]/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Sample usage on CLI:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">$</span> <span class="nx">regexgen</span>
+</span><span class='line'><span class="nx">Usage</span><span class="o">:</span> <span class="nx">regexgen</span> <span class="p">[</span><span class="o">-</span><span class="nx">gimuy</span><span class="p">]</span> <span class="nx">string1</span> <span class="nx">string2</span> <span class="nx">string3</span><span class="p">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/regexgen/regexgen.gif" alt="regexgen" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -806,124 +913,6 @@ If the test fails, however, <code>updtr</code> rolls back its changes.</p>
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/yarn/">
-			
-				Yarn</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2016-10-13T19:37:03+05:30" pubdate data-updated="true">Oct 13<span>th</span>, 2016</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
-
-<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
-
-<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
-
-<ul>
-<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
-<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
-<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
-<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
-<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
-<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
-<li>More emojis. 🐈</li>
-</ul>
-
-
-<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
-
-<p><strong>CLI usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>yarn add
-</span><span class='line'>yarn bin
-</span><span class='line'>yarn cache
-</span><span class='line'>yarn check
-</span><span class='line'>yarn clean
-</span><span class='line'>yarn config
-</span><span class='line'>yarn generate-lock-entry
-</span><span class='line'>yarn global
-</span><span class='line'>yarn info
-</span><span class='line'>yarn init
-</span><span class='line'>yarn install
-</span><span class='line'>yarn licenses
-</span><span class='line'>yarn link
-</span><span class='line'>yarn login
-</span><span class='line'>yarn <span class="nb">logout</span>
-</span><span class='line'>yarn ls
-</span><span class='line'>yarn outdated
-</span><span class='line'>yarn owner
-</span><span class='line'>yarn pack
-</span><span class='line'>yarn publish
-</span><span class='line'>yarn remove
-</span><span class='line'>yarn run
-</span><span class='line'>yarn self-update
-</span><span class='line'>yarn tag
-</span><span class='line'>yarn team
-</span><span class='line'>yarn <span class="nb">test</span>
-</span><span class='line'>yarn unlink
-</span><span class='line'>yarn upgrade
-</span><span class='line'>yarn version
-</span><span class='line'>yarn why
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
 
 		
 		
