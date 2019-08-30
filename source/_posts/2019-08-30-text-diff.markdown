@@ -1,0 +1,28 @@
+---
+layout: post
+title: "text-diff"
+date: 2019-08-30 18:58:57 +0530
+comments: true
+categories: util
+---
+
+#[text-diff](https://www.npmjs.com/package/text-diff)
+> HTML formatted text diff!
+
+`text-diff` is an implementation of [diff-match-patch](https://github.com/google/diff-match-patch) which is a high-performance library in multiple languages that manipulates plain text.
+
+__Get it:__ `npm install text-diff`
+
+__Sample usage:__
+
+```js
+const Diff = require('text-diff');
+ 
+const diff = new Diff(); // options may be passed to constructor; see below
+const textDiff = diff.main('text1', 'text2'); // produces diff array
+diff.prettyHtml(textDiff); // produces a formatted HTML string
+```
+
+__GIF FTW!__
+
+![text-diff](/images/text-diff/text-diff.gif)
