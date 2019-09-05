@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-09-05T16:17:35+05:30</updated>
+  <updated>2019-09-05T16:21:34+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -17,11 +17,27 @@
     <link href="http://nmotw.in/lolex/"/>
     <updated>2019-09-05T16:14:51+05:30</updated>
     <id>http://nmotw.in/lolex</id>
-    <content type="html"><![CDATA[<h1><a href="">lolex</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://nmp.im/lolex">lolex</a></h1>
 
 <blockquote><p>Fake "timers"</p></blockquote>
 
-<p><code>lolex</code> useful for testing, extract from <code>Sinon.JS</code> helps to fake <code>setTimeout</code>, <code>clearTimeout</code>, <code>setImmediate</code>, <code>clearImmediate</code>, <code>setInterval</code>, <code>clearInterval</code>, <code>requestAnimationFrame</code>, <code>cancelAnimationFrame</code>, <code>requestIdleCallback</code>, and <code>cancelIdleCallback</code>, along with a clock instance that controls the flow of time. Lolex also provides a <code>Date</code> implementation that gets its time from the clock.</p>
+<p><code>lolex</code> useful for testing, extract from <code>Sinon.JS</code> helps to fake timer:</p>
+
+<ul>
+<li><code>setTimeout</code></li>
+<li><code>clearTimeout</code></li>
+<li><code>setImmediate</code></li>
+<li><code>clearImmediate</code></li>
+<li><code>setInterval</code></li>
+<li><code>clearInterval</code></li>
+<li><code>requestAnimationFrame</code></li>
+<li><code>cancelAnimationFrame</code></li>
+<li><code>requestIdleCallback</code></li>
+<li><code>cancelIdleCallback</code></li>
+</ul>
+
+
+<p>Along with a clock instance that controls the flow of time. Lolex also provides a <code>Date</code> implementation that gets its time from the clock.</p>
 
 <p>In addition in browser environment lolex provides a <code>performance</code> implementation that gets its time from the clock. In Node environments lolex provides a <code>nextTick</code> implementation that is synchronized with the clock - and a <code>process.hrtime</code> shim that works with the clock.</p>
 
