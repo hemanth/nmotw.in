@@ -7,7 +7,10 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="text-diff HTML formatted text diff! text-diff is an implementation of diff-match-patch which is a high-performance library in multiple languages &hellip;">   
+    <meta name="description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
+clearTimeout
+setImmediate
+clearImmediate &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +18,20 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="text-diff HTML formatted text diff! text-diff is an implementation of diff-match-patch which is a high-performance library in multiple languages &hellip;">
+    <meta name="twitter:description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
+clearTimeout
+setImmediate
+clearImmediate &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="text-diff HTML formatted text diff! text-diff is an implementation of diff-match-patch which is a high-performance library in multiple languages &hellip;" />
+    <meta property="og:description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
+clearTimeout
+setImmediate
+clearImmediate &hellip;" />
 
     
 
@@ -67,6 +76,91 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/lolex/">
+			
+				Lolex</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-09-05T16:14:51+05:30" pubdate data-updated="true">Sep 5<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://nmp.im/lolex">lolex</a></h1>
+
+<blockquote><p>Fake "timers"</p></blockquote>
+
+<p><code>lolex</code> useful for testing, extract from <code>Sinon.JS</code> helps to fake timer:</p>
+
+<ul>
+<li><code>setTimeout</code></li>
+<li><code>clearTimeout</code></li>
+<li><code>setImmediate</code></li>
+<li><code>clearImmediate</code></li>
+<li><code>setInterval</code></li>
+<li><code>clearInterval</code></li>
+<li><code>requestAnimationFrame</code></li>
+<li><code>cancelAnimationFrame</code></li>
+<li><code>requestIdleCallback</code></li>
+<li><code>cancelIdleCallback</code></li>
+</ul>
+
+
+<p>Along with a clock instance that controls the flow of time. Lolex also provides a <code>Date</code> implementation that gets its time from the clock.</p>
+
+<p>In addition in browser environment lolex provides a <code>performance</code> implementation that gets its time from the clock. In Node environments lolex provides a <code>nextTick</code> implementation that is synchronized with the clock - and a <code>process.hrtime</code> shim that works with the clock.</p>
+
+<p><strong>Get it:</strong> <code>npm install lolex</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">lolex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;lolex&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">clock</span> <span class="o">=</span> <span class="nx">lolex</span><span class="p">.</span><span class="nx">createClock</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clock</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;nmotw.in&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="mi">15</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ...</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clock</span><span class="p">.</span><span class="nx">tick</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span> <span class="c1">// nmotw.in</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lolex/lolex.gif" alt="lolex" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -903,134 +997,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/fetch-retry/fetch-retry.gif" alt="fetch-retry" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/toposort/">
-			
-				Toposort</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-06-29T17:54:08+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://npm.im/toposort">toposort</a></h1>
-
-<blockquote><p>Sort directed acyclic graphs</p></blockquote>
-
-<p><code>toposort</code> does the topological sort or topological ordering of a directed graph.</p>
-
-<p><strong>Get it:</strong> <code>npm install toposort</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// First, we define our edges.</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;tie your shoes&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shirt&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your jacket&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shorts&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">]</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Now, sort the vertices topologically, to reveal a legal execution order.</span>
-</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
-</span><span class='line'><span class="c1">// [ &#39;put on your shirt&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Sorting dependencies:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// This time, edges represent dependencies.</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">graph</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class='line'>  <span class="p">[</span><span class="s1">&#39;tie your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shoes&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shirt&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;put on your jacket&#39;</span><span class="p">,</span> <span class="s1">&#39;put on your shorts&#39;</span><span class="p">]</span>
-</span><span class='line'><span class="p">]</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">)</span>
-</span><span class='line'><span class="c1">// [ &#39;tie your shoes&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shorts&#39; ]</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// Now, reversing the list will reveal a legal execution order.</span>
-</span><span class='line'><span class="nx">toposort</span><span class="p">(</span><span class="nx">graph</span><span class="p">).</span><span class="nx">reverse</span><span class="p">()</span>
-</span><span class='line'><span class="c1">// [ &#39;put on your shorts&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shirt&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your jacket&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;put on your shoes&#39;</span>
-</span><span class='line'><span class="c1">// , &#39;tie your shoes&#39; ]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/toposort/toposort.gif" alt="topsort" /></p>
 
 		
 		

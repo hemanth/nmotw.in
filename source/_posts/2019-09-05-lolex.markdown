@@ -1,0 +1,49 @@
+---
+layout: post
+title: "lolex"
+date: 2019-09-05 16:14:51 +0530
+comments: true
+categories: util
+---
+
+#[lolex](https://nmp.im/lolex)
+> Fake "timers"
+
+`lolex` useful for testing, extract from `Sinon.JS` helps to fake timer: 
+
+* `setTimeout`
+* `clearTimeout`
+* `setImmediate`
+* `clearImmediate`
+* `setInterval`
+* `clearInterval`
+* `requestAnimationFrame`
+* `cancelAnimationFrame`
+* `requestIdleCallback`
+* `cancelIdleCallback`
+
+Along with a clock instance that controls the flow of time. Lolex also provides a `Date` implementation that gets its time from the clock.
+
+In addition in browser environment lolex provides a `performance` implementation that gets its time from the clock. In Node environments lolex provides a `nextTick` implementation that is synchronized with the clock - and a `process.hrtime` shim that works with the clock.
+
+
+__Get it:__ `npm install lolex`
+
+__Sample usage:__
+
+```js
+let lolex = require("lolex");
+let clock = lolex.createClock();
+ 
+clock.setTimeout(function () {
+    console.log("nmotw.in");
+}, 15);
+ 
+// ...
+ 
+clock.tick(15); // nmotw.in
+```
+
+__GIF FTW!__
+
+![lolex](/images/lolex/lolex.gif)

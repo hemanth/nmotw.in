@@ -4,13 +4,75 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-08-30T19:09:57+05:30</updated>
+  <updated>2019-09-05T16:21:34+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[lolex]]></title>
+    <link href="http://nmotw.in/lolex/"/>
+    <updated>2019-09-05T16:14:51+05:30</updated>
+    <id>http://nmotw.in/lolex</id>
+    <content type="html"><![CDATA[<h1><a href="https://nmp.im/lolex">lolex</a></h1>
+
+<blockquote><p>Fake "timers"</p></blockquote>
+
+<p><code>lolex</code> useful for testing, extract from <code>Sinon.JS</code> helps to fake timer:</p>
+
+<ul>
+<li><code>setTimeout</code></li>
+<li><code>clearTimeout</code></li>
+<li><code>setImmediate</code></li>
+<li><code>clearImmediate</code></li>
+<li><code>setInterval</code></li>
+<li><code>clearInterval</code></li>
+<li><code>requestAnimationFrame</code></li>
+<li><code>cancelAnimationFrame</code></li>
+<li><code>requestIdleCallback</code></li>
+<li><code>cancelIdleCallback</code></li>
+</ul>
+
+
+<p>Along with a clock instance that controls the flow of time. Lolex also provides a <code>Date</code> implementation that gets its time from the clock.</p>
+
+<p>In addition in browser environment lolex provides a <code>performance</code> implementation that gets its time from the clock. In Node environments lolex provides a <code>nextTick</code> implementation that is synchronized with the clock - and a <code>process.hrtime</code> shim that works with the clock.</p>
+
+<p><strong>Get it:</strong> <code>npm install lolex</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">lolex</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;lolex&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">let</span> <span class="nx">clock</span> <span class="o">=</span> <span class="nx">lolex</span><span class="p">.</span><span class="nx">createClock</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clock</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;nmotw.in&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">},</span> <span class="mi">15</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// ...</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">clock</span><span class="p">.</span><span class="nx">tick</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span> <span class="c1">// nmotw.in</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/lolex/lolex.gif" alt="lolex" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[text-diff]]></title>
@@ -1620,38 +1682,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/heresy/heresy.gif" alt="heresy.gif" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fetch-mock]]></title>
-    <link href="http://nmotw.in/fetch-mock/"/>
-    <updated>2019-04-21T11:45:27+05:30</updated>
-    <id>http://nmotw.in/fetch-mock</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fetch-mock">fetch-mock</a></h1>
-
-<blockquote><p>Mock HTTP requests with fetch.</p></blockquote>
-
-<p><code>fetch-mock</code> allows mocking HTTP requests made using <code>fetch</code> or a library imitating its api, such as <code>node-fetch</code> or <code>fetch-ponyfill</code>, works across, browser and node.</p>
-
-<p><strong>Get it:</strong> <code>npm install fetch-mock</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">fetchMock</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fetch-mock&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">fetchMock</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
-</span><span class='line'><span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">ok</span><span class="p">);</span> <span class="c1">// true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fetch-mock/fetch-mock.gif" alt="fetch-mock" /></p>
 ]]></content>
   </entry>
   
