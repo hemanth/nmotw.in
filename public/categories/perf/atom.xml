@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-09-14T13:36:06+05:30</updated>
+  <updated>2019-09-14T13:44:01+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -18,9 +18,9 @@
     <link href="http://nmotw.in//github/uxm/"/>
     <updated>2019-09-14T13:04:28+05:30</updated>
     <id>http://nmotw.in//github/uxm</id>
-    <content type="html"><![CDATA[<h1><a href="">uxm</a></h1>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/uxm">uxm</a></h1>
 
-<blockquote></blockquote>
+<blockquote><p>User Experience Metric</p></blockquote>
 
 <p>User Experience Metric aka <code>uxm</code> a tiny (1kb gzip) utility library for collecting web performance metrics
 that affect user experience. Graceful support of latest browser APIs like Performance Paint Timing, Network Information, or Device Memory,  User Timing API and experimental Long Tasks support for interactivity metrics.</p>
