@@ -1,0 +1,57 @@
+---
+layout: post
+title: "uxm"
+date: 2019-09-14 13:04:28 +0530
+comments: true
+categories: perf 
+---
+
+#[uxm](https://www.npmjs.com/package/uxm)
+> User Experience Metric
+
+User Experience Metric aka `uxm` a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user experience. Graceful support of latest browser APIs like Performance Paint Timing, Network Information, or Device Memory,  User Timing API and experimental Long Tasks support for interactivity metrics.
+
+__Get it:__ `npm install uxm`
+
+__Sample usage:__
+
+```js
+import { uxm } from 'uxm'
+ 
+uxm().then(metrics => {
+  console.log(metrics) // ->
+  {
+    "deviceType": "desktop",
+    "effectiveConnectionType": "4g",
+    "firstPaint": 1646,
+    "firstContentfulPaint": 1646,
+    "domContentLoaded": 1698,
+    "onLoad": 2508
+  }
+})
+```
+
+```js
+import { getUrl, getFirstContentfulPaint, getDomContentLoaded } from 'uxm'
+ 
+const metrics = {
+  url: getUrl(),
+  fcp: getFirstContentfulPaint(),
+  dcl: getDomContentLoaded()
+}
+```
+
+```js
+import { getDeviceType, getDeviceMemory, getEffectiveConnectionType } from 'uxm'
+ 
+const device = {
+  type: getDeviceType(),
+  memory: getDeviceMemory(),
+  connection: getEffectiveConnectionType()
+}
+```
+
+__GIF FTW!__
+
+![umx](/images/uxm/uxm.gif)

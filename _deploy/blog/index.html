@@ -7,10 +7,8 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
-clearTimeout
-setImmediate
-clearImmediate &hellip;">   
+    <meta name="description" content="uxm User Experience Metric User Experience Metric aka uxm a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -18,20 +16,16 @@ clearImmediate &hellip;">
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/">
-    <meta name="twitter:description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
-clearTimeout
-setImmediate
-clearImmediate &hellip;">
+    <meta name="twitter:description" content="uxm User Experience Metric User Experience Metric aka uxm a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="lolex Fake "timers" lolex useful for testing, extract from Sinon.JS helps to fake timer: setTimeout
-clearTimeout
-setImmediate
-clearImmediate &hellip;" />
+    <meta property="og:description" content="uxm User Experience Metric User Experience Metric aka uxm a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user &hellip;" />
 
     
 
@@ -76,6 +70,118 @@ clearImmediate &hellip;" />
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/uxm/">
+			
+				Uxm</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2019-09-14T13:04:28+05:30" pubdate data-updated="true">Sep 14<span>th</span>, 2019</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/uxm">uxm</a></h1>
+
+<blockquote><p>User Experience Metric</p></blockquote>
+
+<p>User Experience Metric aka <code>uxm</code> a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user experience. Graceful support of latest browser APIs like Performance Paint Timing, Network Information, or Device Memory,  User Timing API and experimental Long Tasks support for interactivity metrics.</p>
+
+<p><strong>Get it:</strong> <code>npm install uxm</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">uxm</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;uxm&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">uxm</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">metrics</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">metrics</span><span class="p">)</span> <span class="c1">// -&gt;</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="s2">&quot;deviceType&quot;</span><span class="o">:</span> <span class="s2">&quot;desktop&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;effectiveConnectionType&quot;</span><span class="o">:</span> <span class="s2">&quot;4g&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;firstPaint&quot;</span><span class="o">:</span> <span class="mi">1646</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;firstContentfulPaint&quot;</span><span class="o">:</span> <span class="mi">1646</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;domContentLoaded&quot;</span><span class="o">:</span> <span class="mi">1698</span><span class="p">,</span>
+</span><span class='line'>    <span class="s2">&quot;onLoad&quot;</span><span class="o">:</span> <span class="mi">2508</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">getUrl</span><span class="p">,</span> <span class="nx">getFirstContentfulPaint</span><span class="p">,</span> <span class="nx">getDomContentLoaded</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;uxm&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">metrics</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">url</span><span class="o">:</span> <span class="nx">getUrl</span><span class="p">(),</span>
+</span><span class='line'>  <span class="nx">fcp</span><span class="o">:</span> <span class="nx">getFirstContentfulPaint</span><span class="p">(),</span>
+</span><span class='line'>  <span class="nx">dcl</span><span class="o">:</span> <span class="nx">getDomContentLoaded</span><span class="p">()</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">getDeviceType</span><span class="p">,</span> <span class="nx">getDeviceMemory</span><span class="p">,</span> <span class="nx">getEffectiveConnectionType</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;uxm&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">device</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">type</span><span class="o">:</span> <span class="nx">getDeviceType</span><span class="p">(),</span>
+</span><span class='line'>  <span class="nx">memory</span><span class="o">:</span> <span class="nx">getDeviceMemory</span><span class="p">(),</span>
+</span><span class='line'>  <span class="nx">connection</span><span class="o">:</span> <span class="nx">getEffectiveConnectionType</span><span class="p">()</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/uxm/uxm.gif" alt="umx" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -857,146 +963,6 @@ clearImmediate &hellip;" />
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/hjson/hjson.gif" alt="" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/fetch-retry/">
-			
-				Fetch-retry</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2019-07-06T14:23:46+05:30" pubdate data-updated="true">Jul 6<span>th</span>, 2019</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/fetch-retry">fetch-retry</a></h1>
-
-<blockquote><p>Adds retry functionality to the Fetch API.</p></blockquote>
-
-<p><code>fetch-retry</code> in about 88 lines of code provides an extension to the <code>fetch</code> API to accept <code>retries</code>, <code>retryDelay</code>, and <code>retryOn</code> on the options object, when omitted will default to 3 retries, a 1000ms retry delay, and to retry only on network errors.</p>
-
-<p><strong>Get it:</strong> <code>npm install fetch-retry</code></p>
-
-<p><strong>Smaple usages:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>  <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fetch-retry&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">retries</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">retryDelay</span><span class="o">:</span> <span class="mi">1000</span>
-</span><span class='line'>  <span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// do something with the result</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Retry on 503</span>
-</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">retryOn</span><span class="o">:</span> <span class="p">[</span><span class="mi">503</span><span class="p">]</span>
-</span><span class='line'>  <span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">})</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// do something with the result</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Custorm retry</span>
-</span><span class='line'><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">retryOn</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">attempt</span><span class="p">,</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="c1">// retry on any network error, or 4xx or 5xx status codes</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">||</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">retrying</span><span class="p">,</span> <span class="nx">attempt</span> <span class="nx">number</span> <span class="nx">$</span><span class="p">{</span><span class="nx">attempt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
-</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>    <span class="p">})</span>
-</span><span class='line'>    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-</span><span class='line'>    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="c1">// do something with the result</span>
-</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/fetch-retry/fetch-retry.gif" alt="fetch-retry" /></p>
 
 		
 		

@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="fitty Makes text fit perfectly. Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container. The crux is of &hellip;">   
+    <meta name="description" content="csrf Logic behind CSRF token creation and verification. Tiny and effective module that helps you to create and verify csrf tokens. Get it: npm &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/12/">
-    <meta name="twitter:description" content="fitty Makes text fit perfectly. Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container. The crux is of &hellip;">
+    <meta name="twitter:description" content="csrf Logic behind CSRF token creation and verification. Tiny and effective module that helps you to create and verify csrf tokens. Get it: npm &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/12/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="fitty Makes text fit perfectly. Fitty, Snugly text resizing: Scales up (or down) text so it fits perfectly to its parent container. The crux is of &hellip;" />
+    <meta property="og:description" content="csrf Logic behind CSRF token creation and verification. Tiny and effective module that helps you to create and verify csrf tokens. Get it: npm &hellip;" />
 
     
 
@@ -67,6 +67,103 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/csrf/">
+			
+				Csrf</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-08-11T15:14:21+05:30" pubdate data-updated="true">Aug 11<span>th</span>, 2017</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/csrf">csrf</a></h1>
+
+<blockquote><p>Logic behind CSRF token creation and verification.</p></blockquote>
+
+<p>Tiny and effective module that helps you to create and verify <code>csrf</code> tokens.</p>
+
+<p><strong>Get it:</strong> <code>npm install csrf</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">Tokens</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;csrf&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">function Tokens() =&gt;</span>
+</span><span class='line'><span class="cm">    name: &quot;Tokens&quot;</span>
+</span><span class='line'><span class="cm">    prototype: Tokens</span>
+</span><span class='line'><span class="cm">    _tokenize: function()</span>
+</span><span class='line'><span class="cm">    create: function()</span>
+</span><span class='line'><span class="cm">    secret: function()</span>
+</span><span class='line'><span class="cm">    secretSync: function()</span>
+</span><span class='line'><span class="cm">    verify: function()</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">tokens</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tokens</span><span class="p">();</span>
+</span><span class='line'><span class="nx">await</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">secret</span><span class="p">()</span>
+</span><span class='line'><span class="c1">//^ Something like &quot;8SOJmA_ewWfI0g9qKbcuSvhC&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// also</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">secret</span> <span class="o">=</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">secretSync</span><span class="p">()</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">tokens</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">secret</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// verify</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tokens</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">secret</span><span class="p">,</span> <span class="nx">token</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;invalid token!&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/csrf/csrf.gif" alt="csrf.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -723,57 +820,6 @@ conf = `</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/covfefe/covfefe.gif" alt="covfefe.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/nif/">
-			
-				Nif</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2017-05-27T04:34:09+05:30" pubdate data-updated="true">May 27<span>th</span>, 2017</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/nif">nif</a></h1>
-
-<blockquote><p><code>node --inspect</code> a file and open devtool URL.</p></blockquote>
-
-<p><code>nif</code> is for all the lazy folks trying to debug their node script, it runs the <code>node --inspect</code> on the provided file and open the devtool URL <code>chrome-devtools://</code>.</p>
-
-<p>Make sure you have the <a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> installed on your machine,before using this moddule.</p>
-
-<p><strong>Get it:</strong> <code>npm i -g nif</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>nif ./to-debug.js
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/nif/nif.gif" alt="nif" /></p>
 
 		
 		
