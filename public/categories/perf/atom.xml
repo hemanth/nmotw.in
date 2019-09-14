@@ -4,7 +4,7 @@
   <title><![CDATA[Category: perf | NMOTW]]></title>
   <link href="http://nmotw.in//github/public/categories/perf/atom.xml" rel="self"/>
   <link href="http://nmotw.in//github/"/>
-  <updated>2019-09-05T16:21:34+05:30</updated>
+  <updated>2019-09-14T13:36:06+05:30</updated>
   <id>http://nmotw.in//github/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[uxm]]></title>
+    <link href="http://nmotw.in//github/uxm/"/>
+    <updated>2019-09-14T13:04:28+05:30</updated>
+    <id>http://nmotw.in//github/uxm</id>
+    <content type="html"><![CDATA[<h1><a href="">uxm</a></h1>
+
+<blockquote></blockquote>
+
+<p>User Experience Metric aka <code>uxm</code> a tiny (1kb gzip) utility library for collecting web performance metrics
+that affect user experience. Graceful support of latest browser APIs like Performance Paint Timing, Network Information, or Device Memory,  User Timing API and experimental Long Tasks support for interactivity metrics.</p>
+
+<p><strong>Get it:</strong> <code>npm install uxm</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { uxm } from 'uxm'</p>
+
+<p>uxm().then(metrics => {
+  console.log(metrics) // ->
+  {</p>
+
+<pre><code>"deviceType": "desktop",
+"effectiveConnectionType": "4g",
+"firstPaint": 1646,
+"firstContentfulPaint": 1646,
+"domContentLoaded": 1698,
+"onLoad": 2508
+</code></pre>
+
+<p>  }
+})
+```</p>
+
+<p>```js
+import { getUrl, getFirstContentfulPaint, getDomContentLoaded } from 'uxm'</p>
+
+<p>const metrics = {
+  url: getUrl(),
+  fcp: getFirstContentfulPaint(),
+  dcl: getDomContentLoaded()
+}
+```</p>
+
+<p>```js
+import { getDeviceType, getDeviceMemory, getEffectiveConnectionType } from 'uxm'</p>
+
+<p>const device = {
+  type: getDeviceType(),
+  memory: getDeviceMemory(),
+  connection: getEffectiveConnectionType()
+}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/uxm/uxm.gif" alt="umx" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[package-size]]></title>
