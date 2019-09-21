@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;">   
+    <meta name="description" content="platform A platform detection library that works on nearly all JavaScript platforms. This module provides the below platfrom based information: &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/20/">
-    <meta name="twitter:description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;">
+    <meta name="twitter:description" content="platform A platform detection library that works on nearly all JavaScript platforms. This module provides the below platfrom based information: &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/20/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="iron-node Debug Node.js code with Chrome Developer Tools. Yes you read it right iron-node helps you to debug your node code using chrome devtools, &hellip;" />
+    <meta property="og:description" content="platform A platform detection library that works on nearly all JavaScript platforms. This module provides the below platfrom based information: &hellip;" />
 
     
 
@@ -67,6 +67,107 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/platform/">
+			
+				Platform</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-28T18:42:21+05:30" pubdate data-updated="true">Jan 28<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/platform">platform</a></h1>
+
+<blockquote><p>A platform detection library that works on nearly all JavaScript platforms.</p></blockquote>
+
+<p>This module provides the below platfrom based information:</p>
+
+<ul>
+<li>description</li>
+<li>layout</li>
+<li>manufacturer</li>
+<li>name</li>
+<li>prerelease</li>
+<li>product</li>
+<li>ua</li>
+<li>version</li>
+<li>os</li>
+</ul>
+
+
+<p>It can also <code>parse</code> an <code>User-Agent</code> and give the same information.</p>
+
+<p>P.S:<code>platform</code> is for informational purposes only &amp; not intended as a substitution for feature detection/inference checks.</p>
+
+<p><strong>GET IT</strong> : <code>npm install --save platform</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">platform</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;platform&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// on an iPad</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Safari&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;5.1&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">product</span><span class="p">;</span> <span class="c1">// &#39;iPad&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">manufacturer</span><span class="p">;</span> <span class="c1">// &#39;Apple&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;WebKit&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;iOS 5.0&#39;</span>
+</span><span class='line'><span class="nx">platform</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Safari 5.1 on Apple iPad (iOS 5.0)&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">platform</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7.2; en; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 11.52&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// &#39;Opera&#39;</span>
+</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span> <span class="c1">// &#39;11.52&#39;</span>
+</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">layout</span><span class="p">;</span> <span class="c1">// &#39;Presto&#39;</span>
+</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">os</span><span class="p">;</span> <span class="c1">// &#39;Mac OS X 10.7.2&#39;</span>
+</span><span class='line'><span class="nx">info</span><span class="p">.</span><span class="nx">description</span><span class="p">;</span> <span class="c1">// &#39;Opera 11.52 (identifying as Firefox 4.0) on Mac OS X 10.7.2&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/platform/platform.gif" alt="" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -837,83 +938,6 @@ opens the dev-tool re-compile native modules against electron!</p>
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="/images/npmlog/npmlog.gif" alt="npmlog" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/notie/">
-			
-				Notie</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-11-19T15:26:38+05:30" pubdate data-updated="true">Nov 19<span>th</span>, 2015</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/notie">notie</a></h1>
-
-<blockquote><p>A simple notification plugin.</p></blockquote>
-
-<p><code>notie</code> - A clean and simple notification plugin with alert/growl style, has no dependencies, help us to take an input,
-confirmation or alter the users in a more appealing manner.</p>
-
-<p>It's uses material design, you can override or add styling in a separate <code>.css</code> file.</p>
-
-<p><strong>Get it:</strong> <code>npm install --save notie</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">notie</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;notie);</span>
-</span><span class='line'>
-</span><span class='line'><span class="s1">notie.alert(style_number, &#39;</span><span class="nx">message</span><span class="s1">&#39;, time_in_seconds);</span>
-</span><span class='line'>
-</span><span class='line'><span class="s1">notie.confirm(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Yes</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">No</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, yes_callback);</span>
-</span><span class='line'>
-</span><span class='line'><span class="s1">notie.input(&#39;</span><span class="nx">Title</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Submit</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">Cancel</span> <span class="nx">button</span> <span class="nx">text</span><span class="s1">&#39;, &#39;</span><span class="nx">type</span><span class="s1">&#39;, &#39;</span><span class="nx">placeholder</span><span class="s1">&#39;, submit_callback, &#39;</span><span class="nx">Optional</span> <span class="nx">pre</span><span class="o">-</span><span class="nx">filled</span> <span class="nx">value</span><span class="err">&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">notie</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="s1">&#39;What city do you live in?&#39;</span><span class="p">,</span> <span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="s1">&#39;Cancel&#39;</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;Enter your city:&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value_entered</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">notie</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;You entered: &#39;</span> <span class="o">+</span> <span class="nx">value_entered</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-</span><span class='line'><span class="p">},</span> <span class="s1">&#39;New York&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>P.S: <code>style_number</code> -> <code>{1,2,3,4}</code> &lt;=> <code>{Success, Warning, Error, Information}</code></p>
-
-<p><strong>GIF FTW:</strong></p>
-
-<p><img src="/images/notie/notie.gif" alt="notie" /></p>
 
 		
 		
