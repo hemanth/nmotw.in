@@ -1,0 +1,46 @@
+---
+layout: post
+title: "vfile"
+date: 2019-09-21 17:04:56 +0530
+comments: true
+categories: util
+---
+
+#[vfile](https://npm.im/vfile)
+> Virtual file format for text processing.
+
+`vfile` can be used anywhere where files need a lightweight representation, is a part of `unified`, a text processing umbrella.
+Each processors that parse, transform, and compile text, and need a virtual representation of files and a place to store messages about them.
+
+__Get it:__ `npm install vfile`
+
+__Sample usage:__
+
+```js
+var vfile = require('vfile')
+
+var file = vfile({path: '~/example.txt', contents: 'Alpha *braavo* charlie.'})
+
+file.path // => '~/example.txt'
+file.dirname // => '~'
+
+file.extname = '.md'
+
+file.basename // => 'example.md'
+
+file.basename = 'index.text'
+
+file.history // => ['~/example.txt', '~/example.md', '~/index.text']
+
+file.message('`braavo` is misspelt; did you mean `bravo`?', {
+  line: 1,
+  column: 8
+})
+
+console.log(file.messages)
+
+```
+
+__GIF FTW!__
+
+![vfile.gif](/images/vfile/vfile.gif)

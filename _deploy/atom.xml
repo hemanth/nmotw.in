@@ -4,13 +4,80 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-09-14T13:44:01+05:30</updated>
+  <updated>2019-09-21T17:10:22+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vfile]]></title>
+    <link href="http://nmotw.in/vfile/"/>
+    <updated>2019-09-21T17:04:56+05:30</updated>
+    <id>http://nmotw.in/vfile</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/vfile">vfile</a></h1>
+
+<blockquote><p>Virtual file format for text processing.</p></blockquote>
+
+<p><code>vfile</code> can be used anywhere where files need a lightweight representation, is a part of <code>unified</code>, a text processing umbrella.
+Each processors that parse, transform, and compile text, and need a virtual representation of files and a place to store messages about them.</p>
+
+<p><strong>Get it:</strong> <code>npm install vfile</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">vfile</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;vfile&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">vfile</span><span class="p">({</span><span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;~/example.txt&#39;</span><span class="p">,</span> <span class="nx">contents</span><span class="o">:</span> <span class="s1">&#39;Alpha *braavo* charlie.&#39;</span><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">path</span> <span class="c1">// =&gt; &#39;~/example.txt&#39;</span>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">dirname</span> <span class="c1">// =&gt; &#39;~&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">extname</span> <span class="o">=</span> <span class="s1">&#39;.md&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">basename</span> <span class="c1">// =&gt; &#39;example.md&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">basename</span> <span class="o">=</span> <span class="s1">&#39;index.text&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">history</span> <span class="c1">// =&gt; [&#39;~/example.txt&#39;, &#39;~/example.md&#39;, &#39;~/index.text&#39;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">file</span><span class="p">.</span><span class="nx">message</span><span class="p">(</span><span class="s1">&#39;`braavo` is misspelt; did you mean `bravo`?&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">line</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">column</span><span class="o">:</span> <span class="mi">8</span>
+</span><span class='line'><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">messages</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://nmotw.in/images/vfile/vfile.gif" alt="vfile.gif" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[uxm]]></title>
@@ -1543,93 +1610,6 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 <p><img src="http://nmotw.in/images/fluture/fluture.gif" alt="fluture" /></p>
 
 <p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[sql.js]]></title>
-    <link href="http://nmotw.in/sql.js/"/>
-    <updated>2019-05-04T10:25:55+05:30</updated>
-    <id>http://nmotw.in/sql.js</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sql.js">sql.js</a></h1>
-
-<blockquote><p>SQLite compiled to javascript</p></blockquote>
-
-<p><code>sql.js</code> is a port of <code>SQLite</code> to <code>Webassembly</code>, by compiling the SQLite C code with Emscripten.</p>
-
-<p>There are no C bindings or node-gyp compilation here, sql.js is a simple javascript file, that can be used like any traditional javascript library!</p>
-
-<p><strong>Get it:</strong> <code>npm install sql.js</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DROP</span> <span class="nx">TABLE</span> <span class="nx">IF</span> <span class="nx">EXISTS</span> <span class="nx">employees</span><span class="p">;</span>
-</span><span class='line'><span class="nx">CREATE</span> <span class="nx">TABLE</span> <span class="nx">employees</span><span class="p">(</span> <span class="nx">id</span> <span class="nx">integer</span><span class="p">,</span>  <span class="nx">name</span> <span class="nx">text</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">designation</span> <span class="nx">text</span><span class="p">,</span>     <span class="nx">manager</span> <span class="nx">integer</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">hired_on</span>    <span class="nx">date</span><span class="p">,</span>     <span class="nx">salary</span>  <span class="nx">integer</span><span class="p">,</span>
-</span><span class='line'>                        <span class="nx">commission</span>  <span class="kr">float</span><span class="p">,</span>    <span class="nx">dept</span>    <span class="nx">integer</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;JOHNSON&#39;</span><span class="p">,</span><span class="s1">&#39;ADMIN&#39;</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;1990-12-17&#39;</span><span class="p">,</span><span class="mi">18000</span><span class="p">,</span><span class="nx">NULL</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;HARDING&#39;</span><span class="p">,</span><span class="s1">&#39;MANAGER&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;1998-02-02&#39;</span><span class="p">,</span><span class="mi">52000</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;TAFT&#39;</span><span class="p">,</span><span class="s1">&#39;SALES I&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;1996-01-02&#39;</span><span class="p">,</span><span class="mi">25000</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">employees</span> <span class="nx">VALUES</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;HOOVER&#39;</span><span class="p">,</span><span class="s1">&#39;SALES I&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;1990-04-02&#39;</span><span class="p">,</span><span class="mi">27000</span><span class="p">,</span><span class="nx">NULL</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nx">SELECT</span> <span class="nx">name</span><span class="p">,</span><span class="nx">hired_on</span> <span class="nx">FROM</span> <span class="nx">employees</span> <span class="nx">ORDER</span> <span class="nx">BY</span> <span class="nx">hired_on</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Would output something like:</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>name</th>
-<th>hired_on</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>HOOVER</td>
-<td>1990-04-02|</td>
-</tr>
-<tr>
-<td></td>
-<td>JOHNSON</td>
-<td>1990-12-17|</td>
-</tr>
-<tr>
-<td></td>
-<td>TAFT</td>
-<td>1996-01-02|</td>
-</tr>
-<tr>
-<td></td>
-<td>HARDING</td>
-<td>1998-02-02|</td>
-</tr>
-</tbody>
-</table>
-
-
-<p><strong>GIT FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/sql.js/sql.js.gif" alt="sql.js" /></p>
 ]]></content>
   </entry>
   
