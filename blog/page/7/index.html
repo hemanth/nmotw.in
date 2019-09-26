@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;">   
+    <meta name="description" content="aproba A ridiculously light-weight function argument validator aproba is of a kind an argument validator, that is concise and easier to use than &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/7/">
-    <meta name="twitter:description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;">
+    <meta name="twitter:description" content="aproba A ridiculously light-weight function argument validator aproba is of a kind an argument validator, that is concise and easier to use than &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/7/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="pretty-errror errors with less clutter pretty-error turns error objects into something similar to an html document, and then uses RenderKid to &hellip;" />
+    <meta property="og:description" content="aproba A ridiculously light-weight function argument validator aproba is of a kind an argument validator, that is concise and easier to use than &hellip;" />
 
     
 
@@ -67,6 +67,145 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/aproba/">
+			
+				Aproba</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-08-12T15:04:36+05:30" pubdate data-updated="true">Aug 12<span>th</span>, 2018</time></div>
+	</header>
+	<div class="entry-content">
+		<h1><a href="https://www.npmjs.com/package/aproba">aproba</a></h1>
+
+<blockquote><p>A ridiculously light-weight function argument validator</p></blockquote>
+
+<p><code>aproba</code> is of a kind an argument validator, that is concise and easier to use than assertions and doesn't encourage an infinite bikeshed of DSLs.</p>
+
+<p><strong>Get it:</strong> <code>npm install aproba</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span> <span class="nx">validate</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;aproba&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="kr">const</span> <span class="nx">myfunc</span> <span class="o">=</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">validate</span><span class="p">(</span><span class="s1">&#39;SNF&#39;</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">myfunc</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{})</span> <span class="c1">// ok</span>
+</span><span class='line'><span class="nx">myfunc</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{})</span> <span class="c1">// type error</span>
+</span><span class='line'><span class="nx">myfunc</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span> <span class="c1">// missing arg error</span>
+</span><span class='line'><span class="nx">myfunc</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{},</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// too many args error</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Valid types are:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center"> type </th>
+<th align="left"> description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="center"> *    </td>
+<td align="left"> matches any type</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> A    </td>
+<td align="left"> <code>Array.isArray</code> OR an <code>arguments</code> object</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> S    </td>
+<td align="left"> typeof == string</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> N    </td>
+<td align="left"> typeof == number</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> F    </td>
+<td align="left"> typeof == function</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> O    </td>
+<td align="left"> typeof == object and not type A and not type E</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> B    </td>
+<td align="left"> typeof == boolean</td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> E    </td>
+<td align="left"> <code>instanceof Error</code> OR <code>null</code> <strong>(special: see below)</strong></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"> Z    </td>
+<td align="left"> == <code>null</code></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Validation failures throw one of the following <code>code</code> errors:</p>
+
+<ul>
+<li><code>EMISSINGARG</code></li>
+<li><code>EINVALIDTYPE</code></li>
+<li><code>ETOOMANYARGS</code></li>
+<li><code>EUNKNOWNTYPE</code> (for an invalid type)</li>
+</ul>
+
+
+<p>P.S: For optinal args one can use a <code>|</code> ex: <code>SO|S</code>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/aproba/aproba.gif" alt="aproba.gif" /></p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
@@ -977,63 +1116,6 @@
 <p><strong>GIT FTW!</strong></p>
 
 <p><img src="/images/qw/qw.gif" alt="qw.gif" /></p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post">
-	<header>
-		<h2 class="title">
-			
-			<a href="/franc/">
-			
-				Franc</a>
-		</h2>
-		<div class="meta date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2018-05-31T15:52:58+05:30" pubdate data-updated="true">May 31<span>st</span>, 2018</time></div>
-	</header>
-	<div class="entry-content">
-		<h1><a href="https://www.npmjs.com/package/franc">franc</a></h1>
-
-<blockquote><p>Detect the language of text.</p></blockquote>
-
-<p><code>franc</code> is a natural language detection lib that supports <code>188</code> languages (1M or more speakers).</p>
-
-<p><strong>Get it:</strong> <code>npm install franc</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">franc</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;franc&quot;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">franc</span><span class="p">(</span><span class="s2">&quot;ಮಾನವ ಕುಟುಂಬದ ಸಮಸ್ತ ಸದಸ್ಯರ ಸಹಜ ಗೌರವವನ್ನೂ ಸಮಾನವೂ ಅನನ್ಯಹಾರ್ಯವೂ ಆದ ಹಕ್ಕುಗಳನ್ನು ಅಂಗೀಕರಿಸುವುದು ಪ್ರಪಂಚದಲ್ಲಿ&quot;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// ^ would return &quot;kan&quot; indicating that it&#39;s Kannada</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="/images/franc/franc.gif" alt="franc.gif" /></p>
 
 		
 		

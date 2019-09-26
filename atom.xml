@@ -4,13 +4,54 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://nmotw.in/atom.xml" rel="self"/>
   <link href="http://nmotw.in/"/>
-  <updated>2019-09-26T08:40:27+05:30</updated>
+  <updated>2019-09-26T15:11:59+05:30</updated>
   <id>http://nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[zero]]></title>
+    <link href="http://nmotw.in/zero/"/>
+    <updated>2019-09-26T16:45:10+05:30</updated>
+    <id>http://nmotw.in/zero</id>
+    <content type="html"><![CDATA[<h1><a href="https://zeroserver.io/">zero</a></h1>
+
+<blockquote><p>Zero configuration web framework.</p></blockquote>
+
+<p><code>Zero</code> abstracts the usual project configuration for routing, bundling, and transpiling to make it easier to get started.Inbuild support for <code>Node.js</code>, <code>React</code>, <code>HTML</code>, <code>MDX</code>, and <code>static files</code> and put them all in a folder.
+Auto configuration, File-system Based Routing and Auto Dependency Resolution are the major features of <code>zero</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install zero</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// time.js</span>
+</span><span class='line'><span class="kr">const</span> <span class="nx">moment</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;moment&quot;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">time</span> <span class="o">=</span> <span class="nx">moment</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;LT&#39;</span><span class="p">);</span>   <span class="c1">// 11:51 AM</span>
+</span><span class='line'>  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span><span class="nx">time</span><span class="o">:</span> <span class="nx">time</span> <span class="p">})</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>zero</code> should serve <code>http://localhost:3000/time</code></p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="http://nmotw.in/images/zero/zero.gif" alt="zero" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[vfile]]></title>
@@ -1556,60 +1597,6 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/dinoql/dinoql.gif" alt="dinoql-demo" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fluture]]></title>
-    <link href="http://nmotw.in/fluture/"/>
-    <updated>2019-05-12T02:35:08+05:30</updated>
-    <id>http://nmotw.in/fluture</id>
-    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fluture">fluture</a></h1>
-
-<blockquote><p>🦋 Fantasy Land compliant (monadic) alternative to Promises.</p></blockquote>
-
-<p>Fluture offers a control structure similar to Promises, Tasks, Deferreds, and what-have-you, the lib just terms it <code>Futures</code>.</p>
-
-<p><code>Futures</code> represent the value arising from the success or failure of an asynchronous operation they are lazy and adhere to the monadic interface.</p>
-
-<p><strong>Feature comparsion of fluture like libs:</strong></p>
-
-<p><img src="http://nmotw.in/images/fluture/fluture-cmp.png" alt="" /></p>
-
-<p><strong>Get it:</strong> <code>npm install --save fluture</code></p>
-
-<p><strong>Sample usage:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">readFile</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fs&#39;</span><span class="p">;</span>
-</span><span class='line'><span class="kr">import</span> <span class="p">{</span><span class="nx">node</span><span class="p">,</span> <span class="nx">encase</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;fluture&#39;</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="kr">const</span> <span class="nx">getPackageName</span> <span class="o">=</span> <span class="nx">file</span> <span class="o">=&gt;</span>
-</span><span class='line'>  <span class="nx">node</span><span class="p">(</span><span class="nx">done</span> <span class="o">=&gt;</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="nx">done</span><span class="p">))</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">chain</span><span class="p">(</span><span class="nx">encase</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">))</span>
-</span><span class='line'>  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">pkg</span> <span class="o">=&gt;</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">getPackageName</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">.</span><span class="nx">fork</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
-</span><span class='line'><span class="c1">//&gt; &quot;fluture&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://nmotw.in/images/fluture/fluture.gif" alt="fluture" /></p>
-
-<p>```</p>
 ]]></content>
   </entry>
   

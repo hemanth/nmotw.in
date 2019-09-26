@@ -7,7 +7,7 @@
     <title>NMOTW</title>
     <meta name="author" content="Hemanth.HM"> 
 
-    <meta name="description" content="Out of all the awesome module that James Halliday A.K.A substack has authored a module named rhyme a rhyming dictionary! This made it to the nmotw &hellip;">   
+    <meta name="description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;">   
 
     <!-- twitter card -->
     <meta name="twitter:card" content="Node module of the week.">
@@ -15,14 +15,14 @@
     <meta name="twitter:creator" content="@nmotw">
     <meta name="twitter:title" content="NMOTW">
     <meta name="twitter:url" content="http://nmotw.in//github/blog/page/29/">
-    <meta name="twitter:description" content="Out of all the awesome module that James Halliday A.K.A substack has authored a module named rhyme a rhyming dictionary! This made it to the nmotw &hellip;">
+    <meta name="twitter:description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;">
 
     <!-- open graph -->
     <meta property="og:title" content="NMOTW" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="http://nmotw.in//github/blog/page/29/" />
     <meta property="og:site_name" content="Node module of the week." />
-    <meta property="og:description" content="Out of all the awesome module that James Halliday A.K.A substack has authored a module named rhyme a rhyming dictionary! This made it to the nmotw &hellip;" />
+    <meta property="og:description" content="Omelette.js a simple autocompletion helper for node, published by Fatih. It's a beautifuly crafted coffee code, that takes care of tab completions &hellip;" />
 
     
 
@@ -67,6 +67,163 @@
 </header>
 
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<header>
+		<h2 class="title">
+			
+			<a href="/omelette/">
+			
+				Omelette</a>
+		</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-08T18:08:15+05:30" pubdate data-updated="true">May 8<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content">
+		<p><a href="https://www.npmjs.org/package/omelette">Omelette.js</a> a simple autocompletion helper for node, published by <a href="http://fatihak.in/">Fatih</a>.</p>
+
+<p>It's a beautifuly crafted coffee code, that takes care of tab completions for your CLI tools.</p>
+
+<p>It's takes care of <code>--compgen</code>, <code>--completion</code> and <code>--compzsh</code> for variations of SHELLs.</p>
+
+<p>Say you need a simple CLI tool to greet user:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">comp</span><span class="p">,</span> <span class="nx">omelette</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">omelette</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;omelette&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span> <span class="o">=</span> <span class="nx">omelette</span><span class="p">(</span><span class="s2">&quot;greeter &lt;user&gt;&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;cruel&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">comp</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Which on <code>user</code> completes "hello", "cruel", "world".</p>
+
+<p>Say you saved the file as <code>greeter</code> all you have do to generator the completion is :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>./greeter --completion
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That would result in the bleow for <code>bash</code> shell:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">### greet completion - begin. generated by omelette ###</span>
+</span><span class='line'><span class="k">if </span><span class="nb">type </span>compdef &amp;&gt;/dev/null; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    compadd -- <span class="sb">`</span>greet --compzsh --compgen <span class="s2">&quot;${CURRENT}&quot;</span> <span class="s2">&quot;${words[CURRENT-1]}&quot;</span> <span class="s2">&quot;${BUFFER}&quot;</span><span class="sb">`</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  compdef _greet_complette greet
+</span><span class='line'><span class="k">elif </span><span class="nb">type complete</span> &amp;&gt;/dev/null; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span>_greet_complette<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="nv">COMPREPLY</span><span class="o">=(</span> <span class="k">$(</span><span class="nb">compgen</span> -W <span class="s1">&#39;$(greet --compbash --compgen &quot;${COMP_CWORD}&quot; &quot;${COMP_WORDS[COMP_CWORD-1]}&quot; &quot;${COMP_LINE}&quot;)&#39;</span> -- <span class="s2">&quot;${COMP_WORDS[COMP_CWORD]}&quot;</span><span class="k">)</span> <span class="o">)</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="nb">complete</span> -F _greet_complette greet
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'><span class="c">### greet completion - end ###</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In zsh, you can write these:</p>
+
+<p><code>echo '. &lt;(./greeter --completion)' &gt;&gt; .zshrc</code></p>
+
+<p>In bash, you should write:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>./greeter --completion &gt;&gt; ~/greeter.completion.sh
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;source ~/greeter.completion.sh&#39;</span> &gt;&gt; .bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you must see tab completion for greeter!</p>
+
+<p>You can also use:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// Listen all fragments by &quot;complete&quot; event</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fragment</span><span class="p">,</span> <span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Listen events by its order.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">complete</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;$1&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">word</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">reply</span><span class="p">([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>A wonderful GIF by the author:</strong></p>
+
+<p><img src="/images/omelette/omelette.gif" alt="omelette.gif" /></p>
+
+<p>Enjoy your tab completions!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post">
