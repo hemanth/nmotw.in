@@ -1,0 +1,34 @@
+---
+layout: post
+title: "zero"
+date: 2019-09-26 11:15:10 +0000
+comments: true
+categories: server
+---
+
+#[zero](https://zeroserver.io/)
+> Zero configuration web framework.
+
+`Zero` abstracts the usual project configuration for routing, bundling, and transpiling to make it easier to get started.Inbuild support for `Node.js`, `React`, `HTML`, `MDX`, and `static files` and put them all in a folder.
+Auto configuration, File-system Based Routing and Auto Dependency Resolution are the major features of `zero`.
+
+__Get it:__ `npm install zero`
+
+__Sample usage:__
+
+```js
+// time.js
+const moment = require("moment")
+
+module.exports = (req, res) => {
+  var time = moment().format('LT');   // 11:51 AM
+  res.send({time: time })
+}
+```
+
+`zero` should serve `http://localhost:3000/time`
+
+__GIF FTW__
+
+![zero](/images/zero/zero.gif)
+
