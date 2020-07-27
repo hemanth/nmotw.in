@@ -30,7 +30,7 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
-    json (2.0.3)
+    json (2.3.1)
     jsonpath (0.5.8)
       multi_json
     kramdown (0.14.2)
