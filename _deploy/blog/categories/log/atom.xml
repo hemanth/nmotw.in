@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: log | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/log/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pino]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/pino/"/>
+    <updated>2016-11-03T06:11:34-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/pino</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pino">pino</a></h1>
+
+<blockquote><p>super fast, all natural json logger.</p></blockquote>
+
+<p><code>pino</code> is an uber <a href="https://www.npmjs.com/package/pino#benchmarks">fast</a> logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save pino</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var pino = require('pino');
+var logger = pino({
+  name: 'myapp',
+  safe: true,
+  serializers: {</p>
+
+<pre><code>req: pino.stdSerializers.req,
+res: pino.stdSerializers.res
+</code></pre>
+
+<p>  }
+});</p>
+
+<p>//logger will have: trace, debug, info, warn, error and fatal level to log.
+```</p>
+
+<p><code>js
+var log = pino({level: 'debug'})
+log.debug('interesting object: %j', {foo: 'bar', pino: 'is a way of life'})   
+</code></p>
+
+<p><code>pino</code> is available for: <code>koa</code>, <code>express</code>, <code>hapi</code> and <code>restify</code> as well.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/pino/pino.gif" alt="pino.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>

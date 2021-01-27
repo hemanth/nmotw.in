@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[commitizen]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/commitizen/"/>
+    <updated>2018-08-26T02:07:52-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/commitizen</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/commitizen">commitizen</a></h1>
+
+<blockquote><p>Organized, detailed commits to git.</p></blockquote>
+
+<p><code>commitizen</code> prompts to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit or reading the <code>contribution.md</code> for the commit format!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g commitizen</code></p>
+
+<p><strong>Set up:</strong></p>
+
+<p>```sh
+$ npm install -g cz-conventional-changelog</p>
+
+<p>$ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+```</p>
+
+<p>or</p>
+
+<p><code>sh
+$ commitizen init cz-conventional-changelog --save-dev --save-exact
+</code></p>
+
+<p>^ this results in modification of your <code>package.json</code> to:</p>
+
+<p>```js
+  "config": {</p>
+
+<pre><code>"commitizen": {
+  "path": "cz-conventional-changelog"
+}
+</code></pre>
+
+<p>  }
+```</p>
+
+<p>Now one can just do <code>git cz</code> instead of <code>git commit</code> and enjoy the benifits!</p>
+
+<p>Also, one could add it to <code>npm-scripts</code></p>
+
+<p>```js
+"scripts": {</p>
+
+<pre><code>"commit": "git-cz"
+</code></pre>
+
+<p>  }
+```</p>
+
+<p>And then execute: <code>npm run commit</code>.</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/commitizen/commitizen.gif" alt="commitizen" /></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git-promise]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/git-promise/"/>
+    <updated>2014-08-14T05:21:17-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/git-promise</id>
+    <content type="html"><![CDATA[<h2>git-promise</h2>
+
+<blockquote><p>Simple wrapper that allows you to run any <code>git</code> command using a more intuitive syntax.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/git-promise">git-promise</a> is a product of a very good combination of <code>Q</code> and <code>ShellJS</code> and returns a promise for us, it also handles exit code automatically. Parsing the output or dealing with non 0 exit code is also very clean and easy with this.</p>
+
+<p>We can also chain commands, execute the <code>git</code> command in a specific dir. If those are not enough it also provides a copule of <code>util</code> methods.</p>
+
+<p>Installing it: <code>$ npm install git-promise</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript
+var git = require('git-promise');</p>
+
+<p>git("init")
+.then(console.log)
+.fail(console.error);
+```</p>
+
+<p>That would output something like: <code>Initialized empty Git repository in ...</code></p>
+
+<p><strong>More complex example:</strong></p>
+
+<p>Say we have a <code>test</code> dir that has a file named <code>me</code> with the content <code>blame me</code> and we run <code>git blame</code> on it.</p>
+
+<p>```javascript
+git("blame me", {</p>
+
+<pre><code>cwd: "blame"
+</code></pre>
+
+<p>}, function(output, code) {</p>
+
+<pre><code>// output and cwd will be as specified.
+</code></pre>
+
+<p>}).then(function(what) {</p>
+
+<pre><code>// you would have switched back to current dir.
+</code></pre>
+
+<p>}).fail(function(err) {</p>
+
+<pre><code>// If there are any errors
+</code></pre>
+
+<p>}).fin(function() {</p>
+
+<pre><code>// Finally reach here.
+</code></pre>
+
+<p>});
+```</p>
+
+<p>All in all <code>git-promise</code> is a very well composed module and has a lot of potential to get more better, a huge thanks to <a href="https://twitter.com/piuccio">Fabio Crisci</a> for authoring this module.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/git-promise/git-promise.gif" alt="git-promise" /></p>
+]]></content>
+  </entry>
+  
+</feed>

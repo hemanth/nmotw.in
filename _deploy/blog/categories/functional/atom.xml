@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: functional | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/functional/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[lazy-property]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/lazy-property/"/>
+    <updated>2019-01-26T00:38:16-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/lazy-property</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-property">lazy-property</a></h1>
+
+<blockquote><p>Add a lazily initialized property to an object.</p></blockquote>
+
+<p><code>lazy-propert</code> play well with <code>Object.defineProperty</code> to provide laziness over object's properties.</p>
+
+<p><strong>Get it:</strong> <code>npm install lazy-property</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+require("lazy-property")(obj, name, init[, enumerable])
+</code></p>
+
+<p>^ Adds a lazily initialized property to the object.</p>
+
+<ul>
+<li><code>obj</code> is the object to add the property to</li>
+<li><code>name</code> is the name of the property</li>
+<li><code>init</code> is a function that computes the value of the property</li>
+<li><code>enumerable</code> if the property is enumerable (default false)</li>
+</ul>
+
+
+<p>```js
+var addLazyProperty = require("lazy-property")</p>
+
+<p>var obj = {}</p>
+
+<p>addLazyProperty(obj, "foo", function() {
+  console.log("initialized!")
+  return "bar"
+})</p>
+
+<p>//Access the property
+console.log(obj.foo)
+console.log(obj.foo)</p>
+
+<p>//Prints out:
+//
+//    initialized!
+//    bar
+//    bar
+//
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lazy-property/lazy-property.gif" alt="lazy-property" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[most]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/most/"/>
+    <updated>2017-02-17T17:37:22-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/most</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/most">most</a></h1>
+
+<blockquote><p>Monadic streams</p></blockquote>
+
+<p><code>Most.js</code> is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e.g. WebSocket messages, DOM events, etc, and on time-varying values, e.g. the "current value" of an <code>&lt;input&gt;</code>, without many of the hazards of side effects and mutable shared state.</p>
+
+<p>It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.</p>
+
+<p>P.S: Have a look at the <a href="https://github.com/cujojs/most/tree/master/test/perf">perf test results</a>.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save most</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { from } from 'most'
+// After 1 second, logs 10
+from([1, 2, 3, 4])</p>
+
+<pre><code>.delay(1000)
+.reduce((result, y) =&gt; result + y, 0)
+.then(result =&gt; console.log(result))
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+import { fromPromise } from 'most'
+// Logs "hello"
+fromPromise(Promise.resolve('hello'))</p>
+
+<pre><code>.observe(message =&gt; console.log(message))
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+import { generate } from 'most'</p>
+
+<p>function* allTheIntegers(interval) {</p>
+
+<pre><code>let i=0
+while(true) {
+    yield delayPromise(interval, i++)
+}
+</code></pre>
+
+<p>}</p>
+
+<p>const delayPromise = (ms, value) =></p>
+
+<pre><code>new Promise(resolve =&gt; setTimeout(() =&gt; resolve(value), ms))
+</code></pre>
+
+<p>// Log the first 100 integers, at 1 second intervals
+generate(allTheIntegers, 1000)</p>
+
+<pre><code>.take(100)
+.observe(x =&gt; console.log(x))
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/most/most.js.gif" alt="most.js" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[data.task]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/data.task/"/>
+    <updated>2016-02-04T06:26:02-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/data.task</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
+
+<blockquote><p>A structure for representing asynchronous actions with automatic resource handling.</p></blockquote>
+
+<p><code>data.task</code> monad which can be used to replace Continuation-Passing Style form of programming,
+in order to be able to compose and sequence time-dependent effects using the generic and powerful monadic operations.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save data.task</code></p>
+
+<p><strong>Sample Usage:</strong></p>
+
+<p>```js
+var Task = require('data.task');</p>
+
+<blockquote><p>new Task((reject, resolve) => {})
+Task { fork: [Function], cleanup: [Function] }
+```</p></blockquote>
+
+<p>```js
+var Task = require('data.task');
+var read = path => {
+return new Task((reject, resolve) => {
+  fs.readFile(path, (err, data) => {</p>
+
+<pre><code>    if (err)  {
+      reject(err)
+    } else {
+      resolve(data) 
+    }
+});
+</code></pre>
+
+<p>  });
+};
+read('/tmp/data.md').fork(console.error, console.log);
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/data.task/data.task.gif" alt="data.task" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[as]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/as/"/>
+    <updated>2015-12-17T08:34:55-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/as</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/as">as</a></h1>
+
+<blockquote><p>Convert easily, back and forth between array and object.</p></blockquote>
+
+<p>A sweet and simple util that help you to convert array to object and vise versa, it also:</p>
+
+<ul>
+<li><p>Brings all functional goodness of arrays to objects.</p></li>
+<li><p>Brings the flexibility of objects to arrays.</p></li>
+<li><p>Works well with a functional programming library.</p></li>
+</ul>
+
+
+<p><strong>Get it</strong>: <code>npm install --save as</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+var asArray = require("as/array");</p>
+
+<p>asArray(
+  {a: 1, b: 2}
+  );
+// [ {key: "a", value: 1}
+// , {key: "b", value: 2}
+// ]
+```</p>
+
+<p><code>js
+var asObject = require("as/object");
+asObject(
+  [ {key: "a", value: 1}
+  , {key: "b", value: 2}
+  ]);
+// {a: 1, b: 2}
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/as/as.gif" alt="" /></p>
+
+<p>Thanks for</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ramda-repl]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/ramda-repl/"/>
+    <updated>2015-09-17T09:39:50-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/ramda-repl</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
+
+<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
+
+<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+$ npm install --save ramda-repl
+</code></p>
+
+<p><strong>usage:</strong></p>
+
+<p>```js
+var ramdaRepl = require('ramda-repl');</p>
+
+<p>ramdaRepl();
+//=> Will start a REPL
+```</p>
+
+<h2>CLI</h2>
+
+<p><code>sh
+$ npm install --global ramda-repl
+</code></p>
+
+<p>$ ramda-repl</p>
+
+<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
+
+<p>```
+Welcome to Ramda REPL!</p>
+
+<p>λ > typeof R
+'object'</p>
+
+<p>λ > typeof map
+'function'</p>
+
+<p>λ > typeof zipWith
+'function'</p>
+
+<p>```</p>
+
+<h2>GIF FTW</h2>
+
+<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
+
+<h2>License</h2>
+
+<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
+]]></content>
+  </entry>
+  
+</feed>

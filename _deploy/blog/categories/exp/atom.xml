@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: exp | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/exp/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[microjob]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/microjob/"/>
+    <updated>2018-09-08T11:57:32-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/microjob</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/microjob">microjob</a></h1>
+
+<blockquote><p>worker threads into easy-to-use routines for CPU-bound.</p></blockquote>
+
+<p><code>microjob</code> is a tiny wrapper for threads (<code>worker_threads</code>) and is intended to perform heavy CPU loads using anonymous functions.</p>
+
+<p><strong>GET IT:</strong> <code>npm install microjob</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```
+(async () => {
+  const { job } = require('microjob')</p>
+
+<p>  try {</p>
+
+<pre><code>// this function will be executed in another thread
+const res = await job(() =&gt; {
+  let i = 0
+  for (i = 0; i &lt; 1000000; i++) {
+    // heavy CPU load ...
+  }
+
+  return i
+})
+
+console.log(res) // 1000000
+</code></pre>
+
+<p>  } catch (err) {</p>
+
+<pre><code>console.error(err)
+</code></pre>
+
+<p>  }
+})();
+```</p>
+
+<p>P.S: To run this today, you we need node <code>v&gt;=10</code> and execute it via <code>--experimental-worker</code> flag.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/microjob/microjob.gif" alt="microjob" /></p>
+]]></content>
+  </entry>
+  
+</feed>

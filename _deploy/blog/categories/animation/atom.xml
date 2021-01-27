@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: animation | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/animation/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[granim]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/granim/"/>
+    <updated>2016-09-14T16:55:40-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/granim</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/granim">granim</a></h1>
+
+<blockquote><p>Create fluid and interactive gradients animations.</p></blockquote>
+
+<p>Zero dependencies,<code>&lt; 10 kB</code> fun module that helps us to do some cool gradient animations!</p>
+
+<p><strong>Get it:</strong> <code>npm install granim --save</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```html</p>
+
+<!-- Create a <canvas> element -->
+
+
+<p><canvas id="granim-canvas"></canvas>
+```</p>
+
+<p>```js
+var granimInstance = new Granim({
+   element: '#granim-canvas',
+   name: 'granim',
+   opacity: [1, 1],
+   states : {</p>
+
+<pre><code>   "default-state": {
+       gradients: [
+           ['#834D9B', '#D04ED6'],
+           ['#1CD8D2', '#93EDC7']
+       ]
+   }
+</code></pre>
+
+<p>   }
+});
+</script>
+```</p>
+
+<p>P.S: Don't miss to read their extensive <a href="https://sarcadass.github.io/granim.js/api.html">API</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/granim/granim.gif" alt="granim" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ramjet]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/ramjet/"/>
+    <updated>2015-07-09T10:00:40-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/ramjet</id>
+    <content type="html"><![CDATA[<p><a href="http://npm.im/ramjet">ramjet</a></p>
+
+<blockquote><p>Transform DOM elements into each another with smooth transitions</p></blockquote>
+
+<p><code>ramjet</code> helps us to Morph DOM elements from one state to another with smooth transitions!</p>
+
+<p>All it does is:</p>
+
+<ul>
+<li><p>Clone the elements and all their children.</p></li>
+<li><p>Transform the second element so that it completely overlaps with the first.</p></li>
+<li><p>Animating the two elements together until the first element has exactly the same position and dimensions as the second element.</p></li>
+</ul>
+
+
+<p><strong>install it:</strong> <code>npm install --save ramjet</code></p>
+
+<p><strong>sample usage:</strong></p>
+
+<p>```html</p>
+
+<div id='a' style='background-color: red; font-size: 4em; padding: 1em;'>a</div>
+
+
+<div id='b' style='background-color: blue; font-size: 4em; padding: 1em;'>b</div>
+
+
+
+
+<script>
+  ramjet.transform( a, b );
+</script>
+
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/ramjet/ramjet.gif" alt="ramjet.js" /></p>
+
+<p>Thanks to <a href="http://www.rich-harris.co.uk/">Rich Harris</a> for <code>ramjet</code> (:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[fade]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/fade/"/>
+    <updated>2015-07-02T09:54:12-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/fade</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/fade">fade</a></h1>
+
+<blockquote><p>Fade a HTML element using CSS transitions.</p></blockquote>
+
+<p>Yes, you read it right, this module helps you to fade a HTML element. "Do one thing and do it right!", looks like the moto
+behind this module, that lets us to <code>fade.in</code>, <code>fade.out</code> and fade an element to a specifie opacity, which also takes a
+callback as one of it's params and execute it after animation ends and works across browsers with vendor prefixes.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save fade</code> # browserify it!</p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+var fade = require('fade');</p>
+
+<p>var el = document.querySelector('#el');</p>
+
+<p>fade.out(el); // fade el out in 1s
+fade.in(el, 1500); // fade el in in 1.5s
+fade(el, 0.3, 3000); // fade el to opacity 0.3 in 3s
+fade.out(el, function() {
+  el.style.display = 'none'; // set display to none after fade out
+});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/fade/fade.gif" alt="fade.gif" /></p>
+
+<p>Thanks to <a href="http://juliangruber.com/">Julian Gruber</a> for this sweet little module.</p>
+]]></content>
+  </entry>
+  
+</feed>

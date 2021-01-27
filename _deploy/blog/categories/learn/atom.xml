@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: learn | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/learn/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[lightcards]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/lightcards/"/>
+    <updated>2015-08-13T07:06:54-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/lightcards</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lightcards">lightcard</a></h1>
+
+<blockquote><p>Lightweight Chinese flashcards.</p></blockquote>
+
+<p><code>lightcards</code> is one of those lightweight, single purpose, fun modules! This helps you to make flash cards that would help you to learn Chinese characters!
+By default, lightcards uses vocabulary.txt from the current working directory. If no <code>vocabulary.txt</code> can be found, lightcards will create it create it for you,
+after which it will start a minimalistic server with a cute interface to go through the  list of word that was provided from a file or stdin.</p>
+
+<p><strong>Get it</strong>: <code>npm install -g lightcards</code></p>
+
+<p><strong>Simple usage:</strong></p>
+
+<p>```sh
+$ lightcards init &amp;&amp; lightcards</p>
+
+<p>Reading vocabulary from vocabulary.txt... OK!
+Generating flashcards... OK!
+Compiling scripts... OK!
+Starting local web server... OK!</p>
+
+<p>Start learning on http://localhost:3000
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lightcards/lightcards.gif" alt="lightcards" /></p>
+
+<p>Thanks to <a href="https://github.com/odsod">Oscar Söderlund</a> for <code>lightcards</code>!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[css-explain]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/css-explain/"/>
+    <updated>2015-01-01T05:23:53-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/css-explain</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/css-explain">css-explain</a></h1>
+
+<blockquote><p>Think of it like SQL EXPLAIN, but for CSS selectors.</p></blockquote>
+
+<p><code>css-explain</code> is one of such rare modules that helps us to learn or explain CSS selectors with ease.</p>
+
+<p><strong>Get it:</strong> <code>npm install css-explain</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript</p>
+
+<blockquote><p>var cssExplain = require('css-explain').cssExplain</p>
+
+<p>cssExplain("div .info")
+{ selector: 'div .info',
+  parts: [ 'div', '.info' ],
+  category: 'class',
+  key: 'info',
+  specificity: [ 0, 1, 1 ],
+  score: 6,
+  messages: [ 'Uses a descendant selector with a rightmost class selector' ] }</p>
+
+<p>cssExplain("div#info")
+{ selector: 'div#info',
+  parts: [ 'div#info' ],
+  category: 'id',
+  key: 'info',
+  specificity: [ 1, 0, 1 ],
+  score: 2,
+  messages: [ 'ID is overly qualified by a tag name' ] }</p>
+
+<p>cssExplain("div > p#info")
+{ selector: 'div > p#info',
+  parts: [ 'div', '>', 'p#info' ],
+  category: 'id',
+  key: 'info',
+  specificity: [ 1, 0, 2 ],
+  score: 3,
+  messages:
+   [ 'ID is overly qualified by a tag name',</p>
+
+<pre><code> 'ID is overly qualified by a child selector' ] }
+</code></pre></blockquote>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/css-explain/css-explain.gif" alt="css-explain" /></p>
+
+<p>Thanks to <a href="https://twitter.com/joshpeek">Joshua Peek</a> for css-explain, do <a href="http://josh.github.io/css-explain/">checkout</a> the webbased app of the same.</p>
+]]></content>
+  </entry>
+  
+</feed>

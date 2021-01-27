@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ES7 | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/es7/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[await-to-js]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/await-to-js/"/>
+    <updated>2017-05-04T20:00:13-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/await-to-js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/await-to-js">await-to-js</a></h1>
+
+<blockquote><p>Async await wrapper for easy error handling!</p></blockquote>
+
+<p>Uber tiny module (10LOC) for making life easier while handling error while async-await.</p>
+
+<p>This module is influenced by GoLang style of handling errors:</p>
+
+<p><code>
+data, err := db.Query("SELECT ...")  
+if err != nil { return err }  
+</code></p>
+
+<p>We would basically covert the below code:</p>
+
+<p>```js
+const asyncTask = async () => {
+  try {</p>
+
+<pre><code>const answer = await Promise.resolve(42);
+// any async task.
+</code></pre>
+
+<p>  } catch(err) {</p>
+
+<pre><code>// Handle error.
+</code></pre>
+
+<p>  }
+  return answer;
+}
+```</p>
+
+<p>to:</p>
+
+<p>```js
+const to = require("await-to-js").default;</p>
+
+<p>const asyncTask = async () => {
+  [ err, result ] = await to(Promise.resolve(42));
+  if (!err) retrun result;
+}</p>
+
+<p>const answer = await asyncTask();
+```</p>
+
+<p><strong>Get it:</strong> <code>npm install --save await-to-js</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/await-to-js/await-to-js.gif" alt="await-to-js" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[asyncbox]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/asyncbox/"/>
+    <updated>2016-09-22T10:07:26-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/asyncbox</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
+
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
+
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
+
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+import { sleep } from 'asyncbox';</p>
+
+<p>async function myFn () {</p>
+
+<pre><code>// do some stuff 
+await sleep(1000); // wait one second 
+// do some other stuff 
+</code></pre>
+
+<p>};</p>
+
+<p>myFn();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[curry-this]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/curry-this/"/>
+    <updated>2015-08-06T08:16:13-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/curry-this</id>
+    <content type="html"><![CDATA[<h1>Curry-this</h1>
+
+<p><code>Curry-this</code> makes creating curryied function simple and expresive by invoking <code>curry</code> with the <a href="https://github.com/zenparsing/es-function-bind">function bind syntax <code>::</code></a>.
+Apart from the expresive way of creating a curried function, the main feature are placeholders.
+A placeholder (<code>_</code>) is a <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a> which allows to curry specific arguments of a function.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save curry-this</code></p>
+
+<h2>Basic usage</h2>
+
+<p>```js
+const {curry, _} = require('curry-this')();</p>
+
+<p>// Got a simple function?</p>
+
+<p>const plus = (</p>
+
+<pre><code>(a, b, c) =&gt; a + b + c
+</code></pre>
+
+<p>)::curry();</p>
+
+<p>plus(1, 2, 3);  //» 6
+plus(1)(2, 3);  //» 6
+plus(1, 2)(3);  //» 6
+plus(1)(2)(3);  //» 6
+```</p>
+
+<h2>Placeholders</h2>
+
+<p>```js
+// Got a monster function?</p>
+
+<p>const {open} = require('fs');
+const newScript = open::curry(<em>, 'w', 0755, </em>);</p>
+
+<p>newScript('do-wonders.sh', (error, file) => {
+  // The <code>file</code> is ready.
+});
+```</p>
+
+<p>You can try this with <code>babel-node</code>. Make sure that you use the <code>--stage=0</code> option.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/curry-this/curry-this.gif" alt="curry-this" /></p>
+
+<p>Thanks to <a href="http://stoeffel.github.io/">Christoph Hermann</a> and <a href="https://github.com/tomekwi">tomekwi</a> for making cury more fun!</p>
+]]></content>
+  </entry>
+  
+</feed>

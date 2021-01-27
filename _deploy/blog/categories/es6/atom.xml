@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: es6 | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/es6/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[common-tags]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/common-tags/"/>
+    <updated>2017-02-10T06:24:05-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/common-tags</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
+
+<blockquote><p>Common utility template tags for ES2015</p></blockquote>
+
+<p>🔖 A set of well-tested, commonly used template literal tag functions for use in ES2015+.</p>
+
+<p>🌟 Plus some extra goodies for easily making your own tags.</p>
+
+<p>Provides the below almost self explanatory functions:</p>
+
+<ul>
+<li>TemplateTag</li>
+<li>codeBlock</li>
+<li>commaLists</li>
+<li>commaListsAnd</li>
+<li>commaListsOr</li>
+<li>html</li>
+<li>inlineArrayTransformer</li>
+<li>inlineLists</li>
+<li>oneLine</li>
+<li>oneLineCommaLists</li>
+<li>oneLineCommaListsAnd</li>
+<li>oneLineCommaListsOr</li>
+<li>oneLineInlineLists</li>
+<li>oneLineTrim</li>
+<li>removeNonPrintingValuesTransformer</li>
+<li>replaceResultTransformer</li>
+<li>replaceSubstitutionTransformer</li>
+<li>safeHtml</li>
+<li>source</li>
+<li>splitStringTransformer</li>
+<li>stripIndent</li>
+<li>stripIndentTransformer</li>
+<li>stripIndents</li>
+<li>trimResultTransformer</li>
+</ul>
+
+
+<p><strong>GET IT:</strong> <code>npm install --save common-tags</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import {oneLine} from 'common-tags'</p>
+
+<p>oneLine<code>
+  foo
+  bar
+  baz
+</code>)
+// "foo bar baz"
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/common-tags/common-tags.gif" alt="common-tags" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[enable]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/enable/"/>
+    <updated>2015-05-28T09:05:04-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/enable</id>
+    <content type="html"><![CDATA[<h1><a href="enable">https://www.npmjs.com/package/enable</a></h1>
+
+<blockquote><p>ES6 and ES7 feature detection.</p></blockquote>
+
+<p>A simple util that would help you to check if the a required ES6 or ES7 is enabled, both in the browser and in CLI.</p>
+
+<p><strong>Get it</strong>: <code>npm install --save enable</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var enable = require('enable');</p>
+
+<p>if (enable.<feature>) {
+  console.log(<feature> is supported);
+}</p>
+
+<p>/<em> Example:
+if (enable.generator) {
+  console.log('supports generator: <code>function* a() {}</code>');
+}
+</em>/
+```</p>
+
+<p>_</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[objectmap]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/objectmap/"/>
+    <updated>2015-02-05T06:03:17-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/objectmap</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapobject">mapobject</a></h1>
+
+<blockquote><p>Use a ES6 map, like an object.</p></blockquote>
+
+<p>This module is one of those rare hidden gems in npm, it's already a year old, it makes uses of ES6 reflect API with proxy to make give us a convience method so that maps can be used like an Object.</p>
+
+<p>What other advantages apart from syntax sugar?</p>
+
+<ul>
+<li><p>Iterate it like a regular object with <code>(for in)</code> without worrying about <code>hasOwnProperty</code> checks.</p></li>
+<li><p>Iterate it <code>(for of)</code> you will get arrays of length 2 of both keys and values.</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save objectmap</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>var oMap = require('objectmap');</p>
+
+<p>var map = oMap();</p>
+
+<p>map.answer = 42; // Same as <code>map.set('answer',42);</code></p>
+
+<p>map.answer; // Same as <code>map.get('abc');</code></p>
+
+<p>delete map.abc; // Same as <code>map.delete('abc');</code></p>
+
+<p>```</p>
+
+<p>Caveat: <code>map[3]</code> implies <code>map.set('3')</code> not <code>map.set(3)</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/objectmap/objectmap.gif" alt="" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com">Calvin</a> for this useful util :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[degenerator]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/degenerator/"/>
+    <updated>2014-05-29T07:52:17-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/degenerator</id>
+    <content type="html"><![CDATA[<p>Turns sync functions into ES6's async generator functions with <a href="http://n8.io/">Nathan Rajlich's</a> (A.K.A TooTallNate) <a href="https://www.npmjs.org/package/degenerator">degenerator</a></p>
+
+<p>Get it: <code>$ npm install degenerator</code></p>
+
+<p><strong>Example Usage:</strong></p>
+
+<p>Say we have few sync function like:</p>
+
+<p>```javascript
+function foo () {
+  return baz();
+}</p>
+
+<p>function bar () {
+  return foo(baz);
+}</p>
+
+<p>function baz () {
+  return bar();
+}
+```</p>
+
+<p>Some degenerator magic!</p>
+
+<p><code>javascript
+var degenerator = require('degenerator')
+var js = fs.readFileSync(sourceName, 'utf8');
+var compiled = (js, ['foo','bar','baz']);
+</code></p>
+
+<p>The complied source would be:</p>
+
+<p>```javascript
+function* foo() {</p>
+
+<pre><code>return yield baz();
+</code></pre>
+
+<p>}
+function* bar() {</p>
+
+<pre><code>return yield foo(baz);
+</code></pre>
+
+<p>}
+function* baz() {</p>
+
+<pre><code>return yield bar();
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/degenerator/degenerator.gif" alt="degnerator" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: human | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/human/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pretty-error]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/pretty-error/"/>
+    <updated>2018-08-05T01:07:39-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/pretty-error</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pretty-error">pretty-errror</a></h1>
+
+<blockquote><p>errors with less clutter</p></blockquote>
+
+<p><code>pretty-error</code> turns error objects into something similar to an html document, and then uses <code>RenderKid</code> to render the document using simple html/css-like commands.</p>
+
+<p><strong>Get it:</strong> <code>npm install pretty-error</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const PrettyError = require('pretty-error');
+const pe = new PrettyError();</p>
+
+<p>const renderedError = pe.render(new Error('Some error message'));
+console.log(renderedError);
+```</p>
+
+<p><code>js
+try {
+   doSomethingThatThrowsAnError();
+} catch (error) {
+   console.log(pe.render(error));
+}
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/pretty-error/pretty-error.gif" alt="pretty-error" /></p>
+]]></content>
+  </entry>
+  
+</feed>

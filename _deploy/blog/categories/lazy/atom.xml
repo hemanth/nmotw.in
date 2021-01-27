@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lazy | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/lazy/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[lazy-cache]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/lazy-cache/"/>
+    <updated>2018-03-11T09:29:26-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/lazy-cache</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/lazy-cache">lazy-cache</a></h1>
+
+<blockquote><p>Cache requires to be lazy-loaded when needed.</p></blockquote>
+
+<p><code>lazy-cache</code> uses native, plain-vanilla, tried and true javascript getters to call node's <code>require()</code> system for faster and safer code. (~1second to 50milliseconds)</p>
+
+<p><strong>Get it:</strong> <code>npm install lazy-cache</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+const lazyOS = require("lazy-cache")(require)('os');
+console.log(typeof lazyOS)
+console.log(lazyOS().arch())
+</code>
+<strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lazy-cache/lazy-cache.gif" alt="lazy-cache.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>

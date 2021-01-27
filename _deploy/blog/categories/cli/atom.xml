@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CLI | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/cli/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[npkill]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/npkill/"/>
+    <updated>2019-08-23T04:55:10-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/npkill</id>
+    <content type="html"><![CDATA[<h1><a href="https://npkill.js.org/">npkill</a></h1>
+
+<blockquote><p>Easily find and remove old and heavy node_modules folders</p></blockquote>
+
+<p><code>npkill</code> is a cheeky CLI tool that helps us to clean up <code>node_modules</code> with a uber cool CLI experience.</p>
+
+<p><strong>Get it:</strong> <code>npx npkill</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<p>$ npkill --help</p>
+
+<p>   -c, --bg-color          Change row highlight color. Available colors are: blue, cyan, magenta, red, white and yellow. Default</p>
+
+<pre><code>                       is blue.
+</code></pre>
+
+<p>   -d, --directory         Set directory from which to start searching. By default, starting-point is .</p>
+
+<p>   -D, --delete-all        CURRENTLY DISABLED. Automatically delete all node_modules folders that are found.</p>
+
+<p>   -e, --show-errors       Show error messages if any.</p>
+
+<p>   -f, --full              Start searching from the home of the user (example: "/home/user" in linux).</p>
+
+<p>   -gb                     Show folder size in Gigabytes</p>
+
+<p>   -h, --help, ?           Show this help page, with all options.</p>
+
+<p>   -nu, --no-check-update  Dont check for updates on startup.</p>
+
+<p>   -v, --version           Show version.
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npkill/npkill.gif" alt="npkill" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[jay]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/jay/"/>
+    <updated>2019-08-01T03:46:11-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/jay</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/jay-repl">jay</a></h1>
+
+<blockquote><p>Supercharged JavaScript REPL 😎</p></blockquote>
+
+<p>Jay is a terminal-based JavaScript REPL focused on increasing prototyping speed and productivity, it provides:</p>
+
+<ul>
+<li>require modules directly from the registry</li>
+<li>Eager eval (requires node >= 12.3.0)</li>
+<li>Top level await</li>
+<li>Typeahead + dropdown menu-style completion</li>
+<li>Colored input</li>
+<li>Bracket/quote pair completion</li>
+<li>Fresh require</li>
+<li>Full readline keybindings support</li>
+<li>Lazy loaded built-in modules</li>
+<li>_ variable</li>
+</ul>
+
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+npm install -g jay-repl
+</code></p>
+
+<p><code>
+npx -p jay-repl jay
+</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>``
+$ jay --help
+node v12.0.3 npm@6.9.0 jay-repl@0.2.1
+Type</code>> jay.help()` in the prompt for more information.</p>
+
+<blockquote><p>```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jay/jay.gif" alt="jay" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[eshost-cli]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/eshost-cli/"/>
+    <updated>2019-03-29T23:07:02-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/eshost-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/bterlson/eshost-cli">eshost-cli</a></h1>
+
+<blockquote><p>Run ECMAScript code uniformly across any ECMAScript host.</p></blockquote>
+
+<p><code>eshost-cli</code> makes it easy to run and compare <code>ECMAScript</code> code uniformly across a number of runtimes. Support for runtimes is provided by the library <code>eshost</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g eshost-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> eshost -e 'Date.parse("1 Octopus 2018")'</p>
+
+<h4>Chakra</h4>
+
+<p>NaN</p>
+
+<h4>JavaScriptCore</h4>
+
+<p>1538332200000</p>
+
+<h4>SpiderMonkey</h4>
+
+<p>NaN</p>
+
+<h4>V8</h4>
+
+<p>1538332200000</p>
+
+<h4>V8 --harmony</h4>
+
+<p>1538332200000</p>
+
+<h4>XS</h4>
+
+<p>NaN
+```</p>
+
+<p>```sh
+nmotw.in> eshost --help
+Usage: eshost [options] [input-file]</p>
+
+<pre><code>   eshost [options] -e "input-script"
+   eshost --list
+   eshost --add [host name] [host type] &lt;host path&gt; --args &lt;host arguments&gt;
+   eshost --delete [host name]
+</code></pre>
+
+<p>Options:
+  -e, --eval        eval an expression and print the result
+  -x, --execute     execute a multi-statement program
+  -h, --host        select hosts by name (glob syntax is supported as well)
+  -g, --hostGroup   select host groups by host type
+  --tags            select hosts by tag
+  -c, --config      select a config file
+  --table, -t       output in a table                                  [boolean]
+  --coalesce, -s    coalesce like output into a single entry           [boolean]
+  --showSource, -i  show input source                                  [boolean]
+  --unanimous, -u   If all engines agree, exit(0) with no output, otherwise</p>
+
+<pre><code>                print and exit(1); implies --coalesce              [boolean]
+</code></pre>
+
+<p>  --add             add a host
+  --edit            edit a host
+  --delete          delete a host
+  --args            set arguments for a host entry (use with --add)
+  --configure-jsvu  Configure jsvu hosts in the config                 [boolean]
+  --jsvu-prefix     [OPTIONAL] Set the prefix of the configured hosts. If prefix</p>
+
+<pre><code>                is "jsvu" then hosts will be configured as, e.g., "jsvu-sm".
+                By default, no prefix (e.g. "sm"). Use this flag with
+                --configure-jsvu.
+</code></pre>
+
+<p>  --jsvu-root       [OPTIONAL] Use this path containing the .jsvu folder (use</p>
+
+<pre><code>                this option if .jsvu is located somewhere other than the
+                home directory). Use this flag with --configure-jsvu.
+</code></pre>
+
+<p>  --help            Show help                                          [boolean]
+  -a, --async       wait for realm destruction before reporting results[boolean]</p>
+
+<p>Examples:
+  eshost --list
+  eshost --add d8 d8 path/to/d8 --args
+  "--harmony"
+  eshost --add ch ch path/to/ch --tags
+  latest
+  eshost --add ch ch path/to/ch --tags
+  latest,greatest
+  eshost --configure-jsvu
+  eshost --configure-jsvu --jsvu-prefix
+  jsvu
+  eshost test.js
+  eshost -e "1+1"
+  eshost -its -x "for (let i=0; i&lt;10; ++i)
+  { print(i) }"
+  eshost -h d8 -h chakra test.js
+  eshost -h d8,sm test.js
+  eshost -g node,ch test.js
+  eshost -h d8 -g node test.js
+  eshost -h ch-*,node test.js
+  eshost -h ch-1.?.? test.js
+  eshost --tags latest test.js
+  eshost --unanimous test.js
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/eshost-cli/eshost-cli.gif" alt="eshost-cli" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[jsvu]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/jsvu/"/>
+    <updated>2017-12-07T08:49:37-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/jsvu</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/jsvu">jsvu</a></h1>
+
+<blockquote><p>JavaScript (engine) Version Updater.</p></blockquote>
+
+<p><code>jsvu</code> makes it easy to fetch the latest versions of JavaScript engines for a specific OS, without the hassels of compiling them!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+npm install -g jsvu
+</code></p>
+
+<p>```sh</p>
+
+<h1>in your ~/*.rc</h1>
+
+<p>export PATH="${HOME}/.jsvu:${PATH}"
+```</p>
+
+<p><code>sh
+jsvu
+</code></p>
+
+<p>It's prompts for the OS and the engine and install them based on your choice, it can install Chakra/ChakraCore, JavaScriptCore, SpiderMonk
+ey and V8 for you.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/jsvu/jsvu.gif" alt="jsvu.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ramda-repl]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/ramda-repl/"/>
+    <updated>2015-09-17T09:39:50-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/ramda-repl</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ramda-repl">ramda-repl</a></h1>
+
+<blockquote><p><a href="http://ramdajs.com/">Ramda</a> + <a href="https://www.npmjs.com/package/ramda-fantasy">ramda-fantasy</a> REPL</p></blockquote>
+
+<p><code>ramda-repl</code> extends node REPL to bring in <code>Ramda</code> and <code>ramda-fantasy</code> so that you can use all of uber cool feature of ramda!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p><code>
+$ npm install --save ramda-repl
+</code></p>
+
+<p><strong>usage:</strong></p>
+
+<p>```js
+var ramdaRepl = require('ramda-repl');</p>
+
+<p>ramdaRepl();
+//=> Will start a REPL
+```</p>
+
+<h2>CLI</h2>
+
+<p><code>sh
+$ npm install --global ramda-repl
+</code></p>
+
+<p>$ ramda-repl</p>
+
+<p><strong>Will start a REPL as below with <code>R</code> as well as current context is extended with ramda</strong></p>
+
+<p>```
+Welcome to Ramda REPL!</p>
+
+<p>λ > typeof R
+'object'</p>
+
+<p>λ > typeof map
+'function'</p>
+
+<p>λ > typeof zipWith
+'function'</p>
+
+<p>```</p>
+
+<h2>GIF FTW</h2>
+
+<p><img src="/images/ramda-repl/ramda-repl.gif" alt="ramda-repl" /></p>
+
+<h2>License</h2>
+
+<p>MIT © <a href="http://h3manth.com">Hemanth.HM</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: date | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/date/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mockdate]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/mockdate/"/>
+    <updated>2017-05-18T19:16:27-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/mockdate</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mockdate">mockdate</a></h1>
+
+<blockquote><p>Mock Date object that can be used to change when "now" is.</p></blockquote>
+
+<p><code>mockdate</code> the names says it all!</p>
+
+<p>This module save the current date context to <code>_date</code> and <code>_getTimezoneOffset = Date.prototype.getTimezoneOffset</code> internally and overwrites them with simpler custom implementation which would useful for unit tests et.al</p>
+
+<p><strong>Get it:</strong> <code>npm install --save mockdate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+const mockDate = require('mockdate');
+mockDate.set('2/1/1988',120);
+new Date()
+1988-01-31T18:30:00.000Z
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mockdate/mockdate.gif" alt="mockdate" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[easydate]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/easydate/"/>
+    <updated>2015-07-16T07:42:07-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/easydate</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/easydate">easydate</a></p>
+
+<blockquote><p>get date and/or time by pattern.</p></blockquote>
+
+<p>A simple date and time util that returns the date according to a pattern, <code>easydate</code> takes two arguments, first one being a pattern string
+and second one being an config object.</p>
+
+<p><strong>Pattern Options:</strong></p>
+
+<ul>
+<li><code>Y</code> Full year (number - e.g. <code>2012</code>)</li>
+<li><code>y</code> Year (number - e.g. <code>12</code>)</li>
+<li><code>M</code> Month (number - e.g. <code>11</code>)</li>
+<li><code>d</code> Day (number - e.g. <code>28</code>)</li>
+<li><code>h</code> Hour (number - e.g. <code>02</code>)</li>
+<li><code>m</code> Minute (number - e.g. <code>01</code>)</li>
+<li><code>s</code> Second (number - e.g. <code>33</code>)</li>
+<li><code>l</code> Millisecond (number - e.g. <code>001</code>)</li>
+<li><code>z</code> Timezone (string - e.g. <code>UTC</code>, <code>UTC+1</code>, <code>UTC-11</code>)</li>
+<li><code>x</code> DST (string - either <code>'DST'</code> or <code>''</code>)</li>
+</ul>
+
+
+<p><strong>Config options:</strong></p>
+
+<p>```js
+{</p>
+
+<pre><code>setDate: 'Date', 
+timeZone: 'utc/local',
+adjust: 'Whether or not to adjust DST'
+</code></pre>
+
+<p>}
+```</p>
+
+<p><strong>Install it:</strong> <code>npm install --save easydate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var easydate = require('easydate')</p>
+
+<p>easydate('d-M-y');</p>
+
+<p>easydate('h:m:s.l', '2015-11-03T16:06:08.123Z') // "16:06:08.123"</p>
+
+<p>easydate('z', {timeZone: 'utc'}) // => "UTC"</p>
+
+<p>easydate('h:m:s z x', {setDate: '2016-08-01T00:00:00.000Z', adjust: true})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/easydate/easydate.gif" alt="easydate" /></p>
+
+<p>Thanks to <a href="https://medium.com/@roryrjb">Rory Bradford</a> for this handy util.</p>
+]]></content>
+  </entry>
+  
+</feed>

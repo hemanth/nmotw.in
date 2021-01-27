@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: admin | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/admin/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[address]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/address/"/>
+    <updated>2014-07-31T04:28:37-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/address</id>
+    <content type="html"><![CDATA[<p>How many times have you checked for the IP, MAC and DNS servers on the CLI?</p>
+
+<p>Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named <code>address</code> that will help you it's sweeter APIs.</p>
+
+<p><img src="/images/address/address.png" alt="" /></p>
+
+<p>Installing it: <code>npm install address</code></p>
+
+<p><strong>Peep in:</strong></p>
+
+<p>```javascript</p>
+
+<blockquote><p>var address = require('address')</p>
+
+<p>address.MAC_RE
+/(?:ether|HWaddr)\s+((?:[a-z0-9]{2}\:){5}[a-z0-9]{2})/i</p>
+
+<p>address.MAC_IP_RE
+/inet\s(?:addr\:)?(\d+.\d+.\d+.\d+)/</p></blockquote>
+
+<p>```</p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>```javascript</p>
+
+<p>var address = require('address');</p>
+
+<p>// default interface 'eth' on linux, 'en' on osx.
+address.ip();   // '192.168.0.2'
+address.ipv6(); // 'fe80::7aca:39ff:feb0:e67d'
+address.mac(function (err, addr) {
+  console.log(addr); // '78:ca:39:b0:e6:7d'
+});</p>
+
+<p>// local loopback
+address.ip('lo'); // '127.0.0.1'</p>
+
+<p>address.dns(function (err, addrs) {
+  console.log(addrs);
+  // ['10.13.2.1', '10.13.2.6']
+});</p>
+
+<p>```</p>
+
+<h2>Get them all!</h2>
+
+<p><code>javascript
+address(function (err, addrs) {
+  console.log(addrs.ip, addrs.ipv6, addrs.mac);
+  // '192.168.0.2', 'fe80::7aca:39ff:feb0:e67d', '78:ca:39:b0:e6:7d'
+});
+</code></p>
+
+<p><strong>GIF FTW?!</strong></p>
+
+<p><img src="/images/address/address.gif" alt="address" /></p>
+
+<p>Thanks to <a href="http://fengmk2.cnpmjs.org/">fengmk2</a> for helping us to find addresses in ease.</p>
+]]></content>
+  </entry>
+  
+</feed>

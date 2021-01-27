@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: crypto | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/crypto/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[technicalindicators]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/technicalindicators/"/>
+    <updated>2018-01-21T10:13:42-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/technicalindicators</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/technicalindicators">technicalindicators</a></h1>
+
+<blockquote><p>Techincal Indicators!</p></blockquote>
+
+<p>Techincal Indicators: "Any class of metrics whose value is derived from generic price activity in a stock or asset."</p>
+
+<p>With this module we would get around 20 indicators, 2 charts, 23 candle stick patterns!</p>
+
+<p><strong>Get it:</strong> <code>npm install technicalindicators</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var twoDayBullishInput = {
+  open: [23.25,15.36],
+  high: [25.10,30.87],
+  close: [21.44,27.89],
+  low: [20.82,14.93],
+}</p>
+
+<p>var bullish = require('technicalindicators').bullish;</p>
+
+<p>bullish(twoDayBullishInput) //true
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/technicalindicators/technicalindicators.gif" alt="technicalindicators.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ccxt]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/ccxt/"/>
+    <updated>2018-01-14T04:07:05-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/ccxt</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ccxt">ccxt</a></h1>
+
+<blockquote><p>Connect and trade with cryptocurrency.</p></blockquote>
+
+<p><code>ccxt</code> is library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.</p>
+
+<p><strong>Get it:</strong> <code>npm install ccxt</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+let ccxt = require('ccxt')</p>
+
+<p>let exchange = new ccxt.bitfinex({</p>
+
+<pre><code>apiKey: '4FlEDtxDl35gdEiobnfZ72vJeZteE4Bb7JdvqzjIjHq',
+secret: 'D4DXM8DZdHuAq9YptUsb42aWT1XBnGlIJgLi8a7tzFH',
+</code></pre>
+
+<p>})</p>
+
+<p>await exchange.loadMarkets()
+console.log(exchange.symbols)</p>
+
+<p>let symbol = exchange.symbols[0]
+console.log(symbol)</p>
+
+<p>let ticker = await exchange.fetchTicker(symbol)
+console.log(ticker)</p>
+
+<p>let orderbook = await exchange.fetchOrderBook(symbol)
+console.log(orderbook)</p>
+
+<p>let balance = await exchange.fetchBalance()
+console.log(balance);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ccxt/ccxt.gif" alt="ccxt" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[secure-keys]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/secure-keys/"/>
+    <updated>2017-04-14T03:41:06-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/secure-keys</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/secure-keys">secure-keys</a></h1>
+
+<blockquote><p>Encrypts and Decrypts object keys.</p></blockquote>
+
+<p>This module uses node's inbuilt <code>crypto</code> to encrypt and decrypt object keys and the code was yanked out of work by
+<a href="https://github.com/indexzero">@indexzero</a> for <a href="https://github.com/indexzero/nconf"><code>nconf</code></a></p>
+
+<p><strong>Get it:</strong> <code>npm install --save secure-keys</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const secureKeys = require("secure-keys")</p>
+
+<p>const sk = new secureKeys({secret: 'NOTW'});
+const enCat = sk.encrypt({cat: 'meow'})
+const deCat = sk.decrypt(enCat);</p>
+
+<p>console.log('encrypted object:', enCat);</p>
+
+<p>console.log('decrypted object:', deCat);</p>
+
+<p>/*
+encrypted object: { cat: { alg: 'aes-256-ctr', value: '3f1ead878c36' } }</p>
+
+<p>decrypted object: { cat: 'meow' }
+*/
+```</p>
+
+<p><code>js
+var sec = new SecK({
+  secret: 'BEGIN RSA', // Text of key used for encrypting/decrypting
+  format: JSON, // optional (defaults to JSON): An object with `stringify` and `parse` methods
+  alg: 'aes-256-ctr' //optional (this is default) Algorithm to use for encrypt/decrypt
+});
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/secure-keys/secure-keys.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

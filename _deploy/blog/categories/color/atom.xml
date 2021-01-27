@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: color | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/color/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[color-string]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/color-string/"/>
+    <updated>2015-04-30T06:33:09-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/color-string</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/color-string">color-string</a></p>
+
+<blockquote><p>Parser and generator for CSS color strings!</p></blockquote>
+
+<p>A module by <a href="https://github.com/harthur">Heather Arthur</a> helps us to generator and parser CSS color strings.</p>
+
+<p>The API names are pretty self explainatory, the module has the below methods:</p>
+
+<p><strong>Methods for parsing:</strong></p>
+
+<ul>
+<li><p>getRgba</p></li>
+<li><p>getHsla</p></li>
+<li><p>getRgb</p></li>
+<li><p>getHsl</p></li>
+<li><p>getHwb</p></li>
+<li><p>getAlpha</p></li>
+</ul>
+
+
+<p><strong>Methods for generating:</strong></p>
+
+<ul>
+<li><p>hexString</p></li>
+<li><p>rgbString</p></li>
+<li><p>rgbaString</p></li>
+<li><p>percentString</p></li>
+<li><p>percentaString</p></li>
+<li><p>hslString</p></li>
+<li><p>hslaString</p></li>
+<li><p>hwbString</p></li>
+<li><p>keyword</p></li>
+</ul>
+
+
+<p><strong>Install it:</strong> <code>npm install --save color-string</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var colorString = require('color-string');</p>
+
+<p>colorString.getRgb("#FFF")  // [255, 255, 255]</p>
+
+<p>colorString.keyword([255, 255, 0])       // "yellow"
+```
+<strong>GIF FTW!</strong></p>
+
+<p><img src="/images/color-string/color-string.gif" alt="color-string" /></p>
+]]></content>
+  </entry>
+  
+</feed>

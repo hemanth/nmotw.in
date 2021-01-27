@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: npm | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/npm/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[emma]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/emma/"/>
+    <updated>2018-09-26T23:43:16-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/emma</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/emma-cli">emma</a></h1>
+
+<blockquote><p>Install the package you are looking for. 📦</p></blockquote>
+
+<p>Search and install packages more efficiently with <code>emma</code> which makes use of <a href="https://www.algolia.com/">Algolia search API</a>, <a href="https://github.com/JureSotosek/npm-suggestions">npm-suggestions</a> and the <a href="http://yarnpkg.com/">Yarn</a> package manager.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g emma-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```
+❯ nmotw.in ~ emma
+Search packages 📦  : grap
+Search results:
+  11   grap           loopingrage     Utility that GReps for gAPs and out of sequence line in log
+  8.4m sass-graph     xzyfer          Parse sass files and extract a graph of imports
+  3.7m @types/graphql DefinitelyTyped TypeScript definitions for graphql
+❯ 2.9m graphql        graphql         A Query Language and Runtime which can target any service.
+  1.8m graphlib       dagrejs         A directed and undirected multi-graph library
+Suggestions results: Press Tab to select suggestions
+  10.2m react-dom  facebook  React package for working with the DOM.
+  14.6m prop-types facebook  Runtime type checking for React props and similar objects.
+  7m    classnames JedWatson A simple utility for conditionally joining classNames toget
+  65.3m lodash     lodash    Lodash modular utilities.
+  7.2m  redux      reactjs   Predictable state container for JavaScript apps
+Search powered by Algolia.</p>
+
+<p>Picked: Press Space to install packages...
+› react  16.5.1
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/emma/emma-cli.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[npx]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/npx/"/>
+    <updated>2017-07-14T22:37:12-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/npx</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/npx">npx</a></h1>
+
+<blockquote><p>an npm package runner.</p></blockquote>
+
+<p>Executes <command> either from a local node_modules/.bin, or from a central cache, installing any packages needed in order for <command> to run.</p>
+
+<p>P.S: <code>npm@5.2.0</code> is shipped with <code>npx</code>!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g npx</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh</p>
+
+<p>$ npm i -D cowsay</p>
+
+<p>$ npx cowsay "HolyCow!"</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/npx/npx.gif" alt="npx.gif" /></p>
+
+<p>P.S: In case you have missed reading <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b">Introducing npx: an npm package runner
+</a>, do read it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cost-of-modules]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/cost-of-modules/"/>
+    <updated>2016-12-01T05:36:43-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/cost-of-modules</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cost-of-modules">cost-of-modules</a></h1>
+
+<blockquote><p>Find out which of your dependencies is slowing you down 🐢</p></blockquote>
+
+<p><code>cost-of-modules</code> is a cheeky module that generates a neat table of dependencies with children and size, which would help us to easily
+identify which dependency is slowing the module down.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g cost-of-modules</code></p>
+
+<p>_Usage:__ Run <code>cost-of-modules</code> in the directory you are working in.</p>
+
+<p><strong>Options</strong></p>
+
+<p><code>--less</code>  Show the biggest 10 modules</p>
+
+<p><code>--yarn</code>  Use yarn instead of npm to install dependencies</p>
+
+<p><code>--no-install</code>  Skip installation</p>
+
+<p><code>--include-dev</code>  Include devDependencies as well - for 🚀 collaborator experience</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cost-of-modules/cost-of-modules.gif" alt="cost-of-modules" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[updtr]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/updtr/"/>
+    <updated>2016-11-17T00:27:47-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/updtr</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/updtr">updtr</a></h1>
+
+<blockquote><p>Update outdated npm modules with zero pain™</p></blockquote>
+
+<p><code>updtr</code> installs the latest versions of each <code>npm outdated</code> dependency.
+Runs <code>test</code> on each update and if the test succeeds, <code>updtr</code> saves the new version number to your <code>package.json</code>.
+If the test fails, however, <code>updtr</code> rolls back its changes.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global updtr</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> updtr --help</p>
+
+<p>  Usage: updtr [options]</p>
+
+<p>  Update outdated npm modules with zero pain™</p>
+
+<p>  Options:</p>
+
+<pre><code>-h, --help                 output usage information
+-V, --version              output the version number
+-R, --reporter &lt;reporter&gt;  choose reporter: default, shy
+-w, --wanted               updates to wanted version specified in package.json instead of the modules latest version
+-t, --test &lt;test&gt;          change the command for the tests
+-e, --exclude &lt;exclude&gt;    exclude modules comma seperated, e.g. updtr --exclude module1,module2
+--test-stdout              shows stdout if your test command fails
+--save-exact               save exact module version
+--registry                 change registry
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/updtr/updtr.gif" alt="updtr" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[yarn]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/yarn/"/>
+    <updated>2016-10-13T07:07:03-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/yarn</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/yarn">yarn</a></h1>
+
+<blockquote><p>FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT.</p></blockquote>
+
+<p><code>yarn</code> let use call it a faster <code>npm</code>? Open sourced by facebook, has the below features:</p>
+
+<ul>
+<li>Offline Mode: If you've installed a package before, you can install it again without any internet connection.</li>
+<li>Deterministic: The same dependencies will be installed the same exact way across every machine regardless of install order.</li>
+<li>Network Performance: Yarn efficiently queues up requests and avoids request waterfalls in order to maximize network utilization.</li>
+<li>Multiple Registries: Install any package from either npm or Bower and keep your package workflow the same.</li>
+<li>Network Resilience: A single request failing won't cause an install to fail. Requests are retried upon failure.</li>
+<li>Flat Mode: Resolve mismatching versions of dependencies to a single version to avoid creating duplicates.</li>
+<li>More emojis. 🐈</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --global yarn</code></p>
+
+<p><strong>CLI usage:</strong></p>
+
+<p><code>sh
+yarn add
+yarn bin
+yarn cache
+yarn check
+yarn clean
+yarn config
+yarn generate-lock-entry
+yarn global
+yarn info
+yarn init
+yarn install
+yarn licenses
+yarn link
+yarn login
+yarn logout
+yarn ls
+yarn outdated
+yarn owner
+yarn pack
+yarn publish
+yarn remove
+yarn run
+yarn self-update
+yarn tag
+yarn team
+yarn test
+yarn unlink
+yarn upgrade
+yarn version
+yarn why
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/yarn/yarn.gif" alt="yarn" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fetch | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/fetch/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[unfetch]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/unfetch/"/>
+    <updated>2017-02-24T19:41:13-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/unfetch</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/unfetch">unfetch</a></h1>
+
+<blockquote><p>Tiny 500b fetch "barely-polyfill"</p></blockquote>
+
+<ul>
+<li><strong>Tiny:</strong> under <strong>500 bytes</strong> of <a href="https://unpkg.com/unfetch">ES3</a> gzipped</li>
+<li><strong>Minimal:</strong> just <code>fetch()</code> with headers and text/json/xml responses</li>
+<li><strong>Familiar:</strong> a subset of the full API</li>
+<li><strong>Supported:</strong> supports IE8+ (<abbr title="Bring Your Own Promises">BYOP</abbr>)</li>
+<li><strong>Standalone:</strong> one function, no dependencies</li>
+<li><strong>Modern:</strong> written in ES2015, transpiled to 500b of old-school JS</li>
+</ul>
+
+
+<blockquote><p>🤔 <strong>What's Missing?</strong></p>
+
+<ul>
+<li>Uses simple Arrays instead of Iterables, since Arrays <em>are</em> iterables</li>
+<li>No streaming, just Promisifies existing XMLHttpRequest response bodies</li>
+</ul>
+</blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save unfetch</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// simple GET request:
+fetch('/foo')
+  .then( r => r.text() )
+  .then( txt => console.log(txt) )</p>
+
+<p>// complex POST request with JSON, headers:
+fetch('/bear', {
+  method: 'POST',
+  headers: {</p>
+
+<pre><code>'Content-Type': 'application/json'
+</code></pre>
+
+<p>  },
+  body: JSON.stringify({ hungry: true })
+}).then( r => {
+  open(r.headers.get('location'));
+  return r.json();
+})
+```</p>
+
+<p>P.S: I you are looking for all the functionalities of <code>fetch</code> API, <a href="https://nmotw.in/isomorphic-fetch/">isomorphic-fetch</a> would be an apt choice.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/unfetch/unfetch.gif" alt="unfetch" /></p>
+]]></content>
+  </entry>
+  
+</feed>

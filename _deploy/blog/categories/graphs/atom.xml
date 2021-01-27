@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: graphs, | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/graphs/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[function-plot]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/function-plot/"/>
+    <updated>2015-05-21T06:51:06-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/function-plot</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/function-plot/">function-plot</a></h1>
+
+<blockquote><p>A simple 2d function plotter powered by d3</p></blockquote>
+
+<p>function-plot helps to render functions with little configuration think of it like a util that would help you to render something like what Google does. <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;es_th=1&amp;ie=UTF-8#q=y+%3D+x+%5E+2">y = x * x</a></p>
+
+<p>The library currently supports interactive line charts and scatterplots, whenever the graph scale is modified the function is evaluated again with
+the new bounds, result: infinite graphs!</p>
+
+<p><strong>Get it</strong> : <code>npm install --save function-plot</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var d3 = window.d3
+var functionPlot = require('function-plot');
+functionPlot({ /*Pass in the options*/ });
+</code></p>
+
+<p>Check out the <a href="https://github.com/maurizzzio/function-plot#instance--functionplotoptions">options</a>!</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/function-plot/function-plot.gif" alt="function-plot" /></p>
+]]></content>
+  </entry>
+  
+</feed>

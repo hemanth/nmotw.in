@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: trace | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/trace/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[stack-trace]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/stack-trace/"/>
+    <updated>2015-12-31T09:47:09-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/stack-trace</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/stack-trace">stack-trace</a></h1>
+
+<blockquote><p>Get v8 stack traces as an array of CallSite objects.</p></blockquote>
+
+<p><strong>Get it:</strong> <code>npm install --save stack-trace</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>js
+var stackTrace = require('stack-trace');
+var trace = stackTrace.get();
+</code></p>
+
+<p><code>js
+var stackTrace = require('stack-trace');
+var err = new Error('something went wrong');
+var trace = stackTrace.parse(err);
+</code></p>
+
+<p>And <code>trace</code> would have CallSite objects and each object will have the below methods:</p>
+
+<ul>
+<li><strong>getThis</strong>: returns the value of this</li>
+<li><strong>getTypeName</strong>: returns the type of this as a string. This is the name of the function stored in the constructor field of this, if available, otherwise the object's [[Class]] internal property.</li>
+<li><strong>getFunction</strong>: returns the current function</li>
+<li><strong>getFunctionName</strong>: returns the name of the current function, typically its name property. If a name property is not available an attempt will be made to try to infer a name from the function's context.</li>
+<li><strong>getMethodName</strong>: returns the name of the property of this or one of its prototypes that holds the current function</li>
+<li><strong>getFileName</strong>: if this function was defined in a script returns the name of the script</li>
+<li><strong>getLineNumber</strong>: if this function was defined in a script returns the current line number</li>
+<li><strong>getColumnNumber</strong>: if this function was defined in a script returns the current column number</li>
+<li><strong>getEvalOrigin</strong>: if this function was created using a call to eval returns a CallSite object representing the location where eval was called</li>
+<li><strong>isToplevel</strong>: is this a toplevel invocation, that is, is this the global object?</li>
+<li><strong>isEval</strong>: does this call take place in code defined by a call to eval?</li>
+<li><strong>isNative</strong>: is this call in native V8 code?</li>
+<li><strong>isConstructor</strong>: is this a constructor call?</li>
+</ul>
+
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/stack-trace/stack-trace.gif" alt="stack-trace" /></p>
+]]></content>
+  </entry>
+  
+</feed>

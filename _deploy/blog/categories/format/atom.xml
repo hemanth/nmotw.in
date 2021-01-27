@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: format | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/format/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[s-ago]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/s-ago/"/>
+    <updated>2016-10-20T07:13:46-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/s-ago</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/s-ago">s-ago</a></h1>
+
+<blockquote><p>Human readable relative times.</p></blockquote>
+
+<p><code>26 SLOC</code> to convert <code>Date</code> objects into human readable relative timestamps, such as <code>7 minutes ago</code> or <code>yesterday</code> or <code>2 days ago</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save s-ago</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const ago = require('s-ago');</p>
+
+<p>const now = new Date();
+const yesterday = new Date(now - (24 * 60 * 60 * 1000));
+const hoursAgo = new Date(now - (6 * 60 * 60 * 1000));</p>
+
+<p>ago(now); // 'just now'
+ago(yesterday); // 'yesterday'
+ago(hoursAgo); // '6 hours ago'
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/s-ago/s-ago.gif" alt="s-ago" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cleave.js]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/cleave.js/"/>
+    <updated>2016-07-14T05:23:00-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/cleave.js</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/cleave.js#why">cleave.js</a></h1>
+
+<blockquote><p>Input text content formatter.</p></blockquote>
+
+<p><code>Cleave.js</code> has a simple purpose: to help you format input text content automatically.</p>
+
+<p>Provides these features:</p>
+
+<ul>
+<li><p>Credit card number formatting</p></li>
+<li><p>Phone number formatting (i18n js lib separated for each country to reduce size)</p></li>
+<li><p>Date formatting</p></li>
+<li><p>Numeral formatting</p></li>
+<li><p>Custom delimiter, prefix and blocks pattern</p></li>
+<li><p>CommonJS / AMD mode</p></li>
+<li><p>ReactJS component port</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save cleave.js</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```html
+<input class="input-phone" type="text"/>
+````</p>
+
+<p>```js
+var Cleave = require('cleave.js');
+require('cleave.js/dist/addons/cleave-phone.{country}');</p>
+
+<p>var cleave = new Cleave('.input-phone', {</p>
+
+<pre><code>phone:      true,
+regionCode: '{country}'
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/cleave.js/cleave.js.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[modmod]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/modmod/"/>
+    <updated>2014-04-03T05:02:31-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/modmod</id>
+    <content type="html"><![CDATA[<blockquote><p>"Simplicity is the ultimate sophistication." ― Leonardo da Vinci</p></blockquote>
+
+<p>Just dig into some node-modules you use or the one you released, how many require statements do you have?</p>
+
+<p><a href="http://stephenplusplus.github.io/me-but-you/">Stephen Sawchuk</a> has made require-ing modules less require-y, with his <a href="https://github.com/stephenplusplus/modmod">modmod</a> module!</p>
+
+<p>Installing it is like another other module: <code>npm install modmod</code></p>
+
+<p><strong>How does it help?</strong></p>
+
+<p>It helps you to reduce:</p>
+
+<p><code>javascript
+var fs = require('fs');
+var path = require('path');
+var util = require('util');
+var chalk = require('chalk');
+var wiredep = require('wiredep');
+</code>
+To:</p>
+
+<p><code>javascript
+var $ = require('modmod')('fs', 'path', 'util', 'chalk', 'wiredep');
+</code></p>
+
+<p>It's just eight lines of code that does the magic:</p>
+
+<p>```javascript</p>
+
+<p>module.exports = function () {
+  var builtinLibs = require('repl')._builtinLibs;
+  return [].slice.call(arguments).reduce(function (acc, key) {</p>
+
+<pre><code>var path = builtinLibs.indexOf(key) &gt; -1 ? key : process.cwd() + '/node_modules/' + key;
+acc[key] = require(path);
+return acc;
+</code></pre>
+
+<p>  }, {});
+};</p>
+
+<p>```</p>
+
+<p><code>require('repl')._builtinLibs</code> will give a list of all node buitins, if not in the list, it will look for the <code>node_modules</code> dir in the current working dir and then <code>require</code> the required there by making it less require-y!</p>
+
+<p><strong>Why?</strong></p>
+
+<p>As said by the author:</p>
+
+<p>It's up to you. There's nothing wrong with the current system of multiple var declarations, and having too many isn't a node problem. Regardless, you may still consider it useful to namespace your dependencies under a name of your choosing, such as M or $, freeing up those "global" variables for use without conflicts.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/modmod/modmod.gif" alt="modmod" /></p>
+
+<p>Enjoy your less require-y week ;)</p>
+
+<p>P.S: This module is just six days old! Will need to evolve on things like <a href="https://github.com/stephenplusplus/modmod/issues/4">this.</a> do contribute your ideas to make it more awesome!</p>
+]]></content>
+  </entry>
+  
+</feed>

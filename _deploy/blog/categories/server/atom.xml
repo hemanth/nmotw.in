@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: server | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/server/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[zero]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/zero/"/>
+    <updated>2019-09-26T04:15:10-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/zero</id>
+    <content type="html"><![CDATA[<h1><a href="https://zeroserver.io/">zero</a></h1>
+
+<blockquote><p>Zero configuration web framework.</p></blockquote>
+
+<p><code>Zero</code> abstracts the usual project configuration for routing, bundling, and transpiling to make it easier to get started.Inbuild support for <code>Node.js</code>, <code>React</code>, <code>HTML</code>, <code>MDX</code>, and <code>static files</code> and put them all in a folder.
+Auto configuration, File-system Based Routing and Auto Dependency Resolution are the major features of <code>zero</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install zero</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// time.js
+const moment = require("moment")</p>
+
+<p>module.exports = (req, res) => {
+  var time = moment().format('LT');   // 11:51 AM
+  res.send({time: time })
+}
+```</p>
+
+<p><code>zero</code> should serve <code>http://localhost:3000/time</code></p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/zero/zero.gif" alt="zero" /></p>
+]]></content>
+  </entry>
+  
+</feed>

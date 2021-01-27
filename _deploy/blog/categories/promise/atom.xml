@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: promise | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/promise/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[progress-estimator]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/progress-estimator/"/>
+    <updated>2018-11-29T19:24:21-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/progress-estimator</id>
+    <content type="html"><![CDATA[<h1><a href="">progress-estimator</a></h1>
+
+<blockquote><p>Progress bar and estimation for Promise compilation.</p></blockquote>
+
+<p><code>progress-estimator</code> logs a progress bar and estimation for how long a Promise will take to complete.</p>
+
+<p>It tracks previous durations in order to provide more accurate estimates over time!</p>
+
+<p><strong>Get it:</strong> <code>npm install progress-estimator</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const createLogger = require('progress-estimator');</p>
+
+<p>// All configuration keys are optional, but it's recommended to specify a storage location.
+// Learn more about configuration options below.
+const logger = createLogger({
+  storagePath: join(__dirname, '.progress-estimator'),
+});</p>
+
+<p>async function run() {
+  await logger(promiseOne, "This is a promise");
+  await logger(</p>
+
+<pre><code>promiseTwo,
+"This is another promise. I think it will take about 1 second",
+{
+  estimate: 1000
+}
+</code></pre>
+
+<p>  );
+}
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/progress-estimator/progress-estimator.gif" alt="progress-estimator" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[proxymise]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/proxymise/"/>
+    <updated>2018-07-15T03:22:27-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/proxymise</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/proxymise">proxymise</a></h1>
+
+<blockquote><p>Chainable Promise Proxy.</p></blockquote>
+
+<p><code>proxymise</code> makes cheeky use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a> API and provides a high dose of syntax sugar in chaining promises.</p>
+
+<p><strong>Get it:</strong> <code>npm install proxymise</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>
+const proxymise = require('proxymise');
+</code></p>
+
+<p><code>
+// Instead of thens
+foo.then(value =&gt; value.bar())
+  .then(value =&gt; value.baz())
+  .then(value =&gt; value.qux)
+  .then(value =&gt; console.log(value));
+</code></p>
+
+<p><code>
+// Instead of awaits
+const value1 = await foo;
+const value2 = await value1.bar();
+const value3 = await value2.baz();
+const value4 = await value3.qux;
+console.log(value4);
+</code></p>
+
+<p><code>
+// Use proxymise
+const value = await proxymise(foo).bar().baz().qux;
+console.log(value);
+</code></p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/proxymise/proxymise.gif" alt="proxymise" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[data.task]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/data.task/"/>
+    <updated>2016-02-04T06:26:02-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/data.task</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/data.task">data.task</a></h1>
+
+<blockquote><p>A structure for representing asynchronous actions with automatic resource handling.</p></blockquote>
+
+<p><code>data.task</code> monad which can be used to replace Continuation-Passing Style form of programming,
+in order to be able to compose and sequence time-dependent effects using the generic and powerful monadic operations.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save data.task</code></p>
+
+<p><strong>Sample Usage:</strong></p>
+
+<p>```js
+var Task = require('data.task');</p>
+
+<blockquote><p>new Task((reject, resolve) => {})
+Task { fork: [Function], cleanup: [Function] }
+```</p></blockquote>
+
+<p>```js
+var Task = require('data.task');
+var read = path => {
+return new Task((reject, resolve) => {
+  fs.readFile(path, (err, data) => {</p>
+
+<pre><code>    if (err)  {
+      reject(err)
+    } else {
+      resolve(data) 
+    }
+});
+</code></pre>
+
+<p>  });
+};
+read('/tmp/data.md').fork(console.error, console.log);
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/data.task/data.task.gif" alt="data.task" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git-promise]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/git-promise/"/>
+    <updated>2014-08-14T05:21:17-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/git-promise</id>
+    <content type="html"><![CDATA[<h2>git-promise</h2>
+
+<blockquote><p>Simple wrapper that allows you to run any <code>git</code> command using a more intuitive syntax.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/git-promise">git-promise</a> is a product of a very good combination of <code>Q</code> and <code>ShellJS</code> and returns a promise for us, it also handles exit code automatically. Parsing the output or dealing with non 0 exit code is also very clean and easy with this.</p>
+
+<p>We can also chain commands, execute the <code>git</code> command in a specific dir. If those are not enough it also provides a copule of <code>util</code> methods.</p>
+
+<p>Installing it: <code>$ npm install git-promise</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript
+var git = require('git-promise');</p>
+
+<p>git("init")
+.then(console.log)
+.fail(console.error);
+```</p>
+
+<p>That would output something like: <code>Initialized empty Git repository in ...</code></p>
+
+<p><strong>More complex example:</strong></p>
+
+<p>Say we have a <code>test</code> dir that has a file named <code>me</code> with the content <code>blame me</code> and we run <code>git blame</code> on it.</p>
+
+<p>```javascript
+git("blame me", {</p>
+
+<pre><code>cwd: "blame"
+</code></pre>
+
+<p>}, function(output, code) {</p>
+
+<pre><code>// output and cwd will be as specified.
+</code></pre>
+
+<p>}).then(function(what) {</p>
+
+<pre><code>// you would have switched back to current dir.
+</code></pre>
+
+<p>}).fail(function(err) {</p>
+
+<pre><code>// If there are any errors
+</code></pre>
+
+<p>}).fin(function() {</p>
+
+<pre><code>// Finally reach here.
+</code></pre>
+
+<p>});
+```</p>
+
+<p>All in all <code>git-promise</code> is a very well composed module and has a lot of potential to get more better, a huge thanks to <a href="https://twitter.com/piuccio">Fabio Crisci</a> for authoring this module.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/git-promise/git-promise.gif" alt="git-promise" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[lie-denodify]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/lie-denodify/"/>
+    <updated>2014-04-10T05:08:55-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/lie-denodify</id>
+    <content type="html"><![CDATA[<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify's</a> main focus is to turn a node style callback into a promise based one.</p>
+
+<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
+
+<p>All it does to convert an async function to a promise based one is to return a promise with the help of lie:</p>
+
+<p>```javascript
+var promise = require('lie');
+function denodify(func) {</p>
+
+<pre><code>return function() {
+    var args = Array.prototype.concat.apply([], arguments);
+    return promise(function(resolve, reject) {
+        args.push(function(err, success) {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve(success);
+            }
+        });
+        func.apply(undefined, args);
+    });
+};
+</code></pre>
+
+<p>}
+module.exports = denodify;
+```</p>
+
+<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<p>Let's try and covert <code>fs.stat</code> function to a promise!</p>
+
+<p>First of all let's have a look at how <code>fs.stat</code> works before conversion.</p>
+
+<p>```js
+var fstat = require('fs').stat;</p>
+
+<p>fstat('/tmp',function(err,res){</p>
+
+<pre><code>if(!err){
+  console.log(res);
+} else {
+    throw new Error(err);
+}
+</code></pre>
+
+<p>});</p>
+
+<p>/*
+Would log something like:
+{ dev: 16777217,
+  mode: 17407,
+  nlink: 14,
+  uid: 0,
+  gid: 0,
+  rdev: 0,
+  blksize: 4096,
+  ino: 144575596,
+  size: 476,
+  blocks: 0,
+  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),
+  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),
+  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</p>
+
+<p> And in case of an Error it would throw an error</p>
+
+<p>*/
+```</p>
+
+<p>Now, let's convert it into a promise:</p>
+
+<p>```js</p>
+
+<p>var lieDndfy = require('lie-denodify');</p>
+
+<p>var statp = lieDndfy ( require('fs').stat );</p>
+
+<p>statp('/tmp').then(console.log,console.error);</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
+
+<p>Learn to lie this week ;)!</p>
+]]></content>
+  </entry>
+  
+</feed>

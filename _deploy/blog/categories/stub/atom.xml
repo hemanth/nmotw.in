@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: stub | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/stub/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[proxyquire]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/proxyquire/"/>
+    <updated>2014-06-12T09:21:00-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/proxyquire</id>
+    <content type="html"><![CDATA[<p>Test cases always involves mocks and stub, sometimes there will be a need to mock <code>require</code> itself, that where proxyquire comes for our rescue.</p>
+
+<p><a href="http://npmjs.org/package/proxyquire">Proxyquire</a>: Proxies nodejs require in order to allow overriding dependencies during testing.</p>
+
+<p>Installing proxyquire: <code>npm install -D proxyquire</code></p>
+
+<p><strong>Example:</strong></p>
+
+<p>Say we a file <code>baz.js</code> under test and it looks like:</p>
+
+<p>```js</p>
+
+<p>var os = require('os');</p>
+
+<p>module.exports = function() {</p>
+
+<pre><code>return os.freemem();
+</code></pre>
+
+<p>}</p>
+
+<p>```</p>
+
+<p>It's evident that the return value of this function will never be a constant value.</p>
+
+<p>How do we test it then?</p>
+
+<p>Have a look at the test case:</p>
+
+<p>```
+// Get some assertion helper.
+var assert = require('assert');</p>
+
+<p>// First up we require proxyquire
+var proxyquire = require('proxyquire');</p>
+
+<p>// We make a mock of what we need.
+var osStub = {</p>
+
+<pre><code>freemem: function() { return 617619456; }
+</code></pre>
+
+<p>}</p>
+
+<p>// Now some magic ;)
+var freemem = proxyquire("./baz",{'os':osStub});</p>
+
+<p>it("should return the amount of free memory", function(){</p>
+
+<pre><code>assert.equal(freemem(),6176197456);
+</code></pre>
+
+<p>});
+```</p>
+
+<p>That's it! The test case will be green now :)</p>
+
+<p>Proxyquire basically, <a href="https://github.com/thlorenz/proxyquire/blob/master/lib/proxyquire.js#L135">replaces</a> a module's require function.</p>
+
+<p>There are many other features like:</p>
+
+<ul>
+<li>'noCallThru',</li>
+<li>'callThru',</li>
+<li>'noPreserveCache',</li>
+<li>'preserveCache',</li>
+<li>'load'</li>
+</ul>
+
+
+<p>Please feel free to go through their extensive API <a href="https://github.com/thlorenz/proxyquire#api">DOC</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/proxyquire/proxyquire.gif" alt="/images/proxyquire" /></p>
+
+<p>Kudos to <a href="http://thlorenz.com/about/me">Thorsten Lorenz</a> for the wonderful module.</p>
+]]></content>
+  </entry>
+  
+</feed>

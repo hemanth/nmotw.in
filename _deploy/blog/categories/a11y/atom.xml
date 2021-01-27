@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: a11y | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/a11y/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[a11y]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/a11y/"/>
+    <updated>2018-04-14T18:31:25-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/a11y</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/a11y">a11y</a></h1>
+
+<blockquote><p>Easy accessibility audits powered by the Chrome Accessibility Tools</p></blockquote>
+
+<p><code>a11y</code> conducts audits using the Chrome Accessibility Tools and PhantomJS and lists out the issues for a given URL.</p>
+
+<p><strong>Get it:</strong> <code>npm install [-g] a11y</code></p>
+
+<p><strong>Sample CLI usage:</strong></p>
+
+<p>```sh</p>
+
+<p>  Runs an accessibility audit against a URL</p>
+
+<p>  Usage</p>
+
+<pre><code>$ a11y &lt;url&gt;
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>--viewport-size=&lt;size&gt;  Set the viewport size
+--delay                 Set the delay capturing the page
+--verbose               Display more information
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ a11y todomvc.com
+$ a11y http://todomvc.com https://google.com
+$ a11y index.html -=viewport-size=1024x768
+</code></pre>
+
+<p>```</p>
+
+<p><strong>Sample API usage:</strong></p>
+
+<p>```
+const a11y = require('a11y');</p>
+
+<p>a11y('nmotw.in', (err, reports) => {</p>
+
+<pre><code>const audit = reports.audit; // `a11y` Formatted report
+const report = reports.report; // DevTools Accessibility Audit formatted report
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/a11y/a11y.gif" alt="a11y.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[accessibilityjs]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/accessibilityjs/"/>
+    <updated>2017-10-20T00:43:03-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/accessibilityjs</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/accessibilityjs">accessibilityjs</a></h1>
+
+<blockquote><p>Client side accessibility error scanner.</p></blockquote>
+
+<p><code>accessibilityjs</code> with <code>0</code> dependenices does an wonderful job in scaning and reproting accessibility issues for a given page.</p>
+
+<p>It currently can scan and report the bleow problems:</p>
+
+<ul>
+<li><code>ImageWithoutAltAttributeError</code></li>
+<li><code>ElementWithoutLabelError</code></li>
+<li><code>LinkWithoutLabelOrRoleError</code></li>
+<li><code>LabelMissingControlError</code></li>
+<li><code>InputMissingLabelError</code></li>
+<li><code>ButtonWithoutLabelError</code></li>
+<li><code>ARIAAttributeMissingError</code></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install accessibilityjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import {scanForProblems} from 'accessibilityjs'</p>
+
+<p>function logError(error) {
+  error.element.classList.add('accessibility-error')
+  error.element.addEventListener('click', function () {</p>
+
+<pre><code>alert(`${error.name}\n\n${error.message}`)
+</code></pre>
+
+<p>  }, {once: true})
+}</p>
+
+<p>document.addEventListener('DOMContentLoaded', function() {
+  scanForProblems(document, logError)
+})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/accessibilityjs/accessibilityjs.gif" alt="accessibilityjs" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[axe-cli]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/axe-cli/"/>
+    <updated>2017-07-27T04:29:41-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/axe-cli</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/axe-cli">axe-cli</a></h1>
+
+<blockquote><p>A CLI for accessibility testing using axe-core</p></blockquote>
+
+<p>Provides a command line interface for <code>aXe</code> to run quick accessibility tests.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g axe-cli</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>
+$ axe www.google.com, github.com
+</code></p>
+
+<p>```</p>
+
+<h1>--rules flag to set which rules you wish to run</h1>
+
+<p>$ axe www.google.com --rules color-contrast,html-has-lang
+```</p>
+
+<p>```</p>
+
+<h1>--tags to tell axe to run all rules that have that specific tag.</h1>
+
+<p>axe www.google.com --tags wcag2a
+```</p>
+
+<p>```</p>
+
+<h1>Saving the results</h1>
+
+<p>$ axe www.google.com --save google-site.json
+$ axe www.google.com --dir ./google-results/
+```</p>
+
+<p>```</p>
+
+<h1>Defining the scope</h1>
+
+<p>axe www.google.com --include #main --exclude #aside
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/axe-cli/axe-cli.gif" alt="axe-cli.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: build | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/build/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[build.sh]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/build.sh/"/>
+    <updated>2017-09-07T21:33:31-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/build.sh</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/build.sh">build.sh</a></h1>
+
+<blockquote><p>🔨 run and visualize the build process.</p></blockquote>
+
+<p><code>build.sh</code> is one of those unquie node module which likes to take an atypical route in solving problems, this module helps in running and visualize the build process, makes use of <code>build.yml</code> at the root of your project for the build pipleline meta-data.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g build.sh</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ build [options]</p>
+
+<p>Options:</p>
+
+<p>  -V, --version        output the version number
+  -c, --config [file]  the input file for the build pipeline to run
+  -d, --debug          outputs a debug file of the build process and data captured
+  -h, --help           output usage information
+```</p>
+
+<p>To invoke about the pipeline simply run <code>build</code> at the project root. The terminal output will show the pipeline being run and eventually will open the browser to the location of the final report.</p>
+
+<p>```sh</p>
+
+<h1>cat .build.yml</h1>
+
+<p>pipeline:
+  {key}:</p>
+
+<pre><code>- {command}
+- {command}
+</code></pre>
+
+<p>```</p>
+
+<p><strong>Sample <code>.build.yml</code>:</strong></p>
+
+<p>```yaml
+output: ./docs
+pipeline:
+  install:</p>
+
+<pre><code>- npm --version
+- node --version
+- npm:
+  - npm install
+  - ls -lh node_modules
+</code></pre>
+
+<p>  lint:</p>
+
+<pre><code>- npm run lint
+</code></pre>
+
+<p>  coverage:</p>
+
+<pre><code>- npm run coverage
+</code></pre>
+
+<p>  test:</p>
+
+<pre><code>- npm test
+</code></pre>
+
+<p>  docs:</p>
+
+<pre><code>- npm run generate-docs
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/build.sh/build.sh.gif" alt="build.sh" /></p>
+]]></content>
+  </entry>
+  
+</feed>

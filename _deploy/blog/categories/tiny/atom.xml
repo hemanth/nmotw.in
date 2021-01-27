@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tiny | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/tiny/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[has]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/has/"/>
+    <updated>2016-11-10T22:14:31-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/has</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/has">has</a></h1>
+
+<blockquote><p>Object.prototype.hasOwnProperty.call shortcut.</p></blockquote>
+
+<p>This module is one of those live examle where a tiny module can make a lot of impact in the node community.</p>
+
+<p>All that this module does is helps in making a shorting function name to <code>Object.prototype.hasOwnProperty.call</code> as <code>has</code>, the code in the module is as below:</p>
+
+<p>```js
+var bind = require('function-bind');</p>
+
+<p>module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
+```</p>
+
+<p>The impact it has made with <code>110</code> dependencies:</p>
+
+<p><code>
+151,565 downloads in the last day
+823,500 downloads in the last week
+3,552,078 downloads in the last month
+</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save has</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+has({}, 'hasOwnProperty'); // false;</p>
+
+<p>has(Object.prototype, 'hasOwnProperty'); // true;
+```</p>
+
+<p><img src="/images/has/has.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

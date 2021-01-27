@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: search | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/search/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[phuzzy]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/phuzzy/"/>
+    <updated>2016-03-24T08:56:50-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/phuzzy</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/phuzzy">phuzzy</a></h1>
+
+<blockquote><p>Perform a fuzzy filter on a collection of items.</p></blockquote>
+
+<p>8 lines of code with some help from <code>lodash.escaperegexp</code> this is a cheeky module that helps you with your fuzzy filtering!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save phuzzy</code></p>
+
+<p><strong>Function Signature:</strong> <code>phuzzy(collection, search[, pick])</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var phuzzy = require('phuzzy');</p>
+
+<p>phuzzy(['addy','passy', 'hemanth'], 'y'); // ['addy', 'passy'];</p>
+
+<p>var documents = [</p>
+
+<pre><code>{ text: 'Hello World' },
+{ text: 'Hello Lucy' },
+{ text: 'Hello Maria' }
+</code></pre>
+
+<p>];</p>
+
+<p>phuzzy(documents, 'Lu', 'text'); [ { text: 'Hello Lucy' } ]</p>
+
+<p>phuzzy(documents, 'maria', item => item.text) // [ { text: 'Hello Maria' } ]
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/phuzzy/phuzzy.gif" alt="phuzzy" /></p>
+]]></content>
+  </entry>
+  
+</feed>

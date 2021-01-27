@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dev | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/dev/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[dev-time]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/dev-time/"/>
+    <updated>2015-12-10T07:40:13-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/dev-time</id>
+    <content type="html"><![CDATA[<h1><a href="https://github.com/SamVerschueren/dev-time">dev-time</a></h1>
+
+<blockquote><p>Get the current local time of a GitHub user.</p></blockquote>
+
+<p>Ever wanted to ping someone on github and were wondering what time zone does the dev is on?</p>
+
+<p><code>dev-time</code> helps you with getting the local time of GitHub user.</p>
+
+<p>How does it do that? Well, it gets the latest commit of the user and get the time stamp from there and then find the time.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save dev-time</code></p>
+
+<p><strong>For CLI:</strong> <code>npm install --global dev-time-cli</code></p>
+
+<p><strong>Sample usage API:</strong></p>
+
+<p>```js
+const devTime = require('dev-time');</p>
+
+<p>devTime('SamVerschueren').then(time => {</p>
+
+<pre><code>console.log(time);
+//=&gt; '2015-12-10T21:18:34+05:30'
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>On CLI:</strong></p>
+
+<p>```sh
+$ dev-time --help</p>
+
+<p>  Usage</p>
+
+<pre><code>$ dev-time &lt;user&gt; &lt;user2&gt; ...
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>-v, --verbose  Show UTC offset.
+--format       The moment format of the output. [Default: HH:mm - D MMM. YYYY]
+--token        The GitHub authentication token.
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ dev-time SamVerschueren
+19:47 - 8 Dec. 2015
+
+$ dev-time SamVerschueren sindresorhus
+SamVerschueren
+  19:47 - 8 Dec. 2015
+sindresorhus
+  18:47 - 8 Dec. 2015
+
+$ dev-time SamVerschueren -v
+19:47 - 8 Dec. 2015 - UTC+1
+
+$ dev-time SamVerschueren --format DD-MM-YYYY
+07-12-2015
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/dev-time/dev-time.gif" alt="dev-time" /></p>
+]]></content>
+  </entry>
+  
+</feed>

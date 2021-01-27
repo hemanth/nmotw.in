@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: fun | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/fun/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[console-badge]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/console-badge/"/>
+    <updated>2019-08-18T02:33:48-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/console-badge</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/console-badge">console-badge</a></h1>
+
+<blockquote><p>🎨 Create simple badges in the browser console</p></blockquote>
+
+<p><code>console-badge</code> fun little less than 1kB util that helps us to console log badges that can be customized and also provides  popular shields.io badge style as the default style.</p>
+
+<p><strong>Get it:</strong> <code>npm install console-badge</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import * as consoleBadge from 'console-badge';</p>
+
+<p>consoleBadge.log({
+  mode: 'shields.io',
+  leftText: 'console-badge',
+  rightText: 'hello world 🚀',
+  rightBgColor: '#ffc107',
+  rightTextColor: '#1a1a1a'
+});</p>
+
+<p>consoleBadge.log({
+  leftText: '😎 Check out our code here:',
+  leftTextColor: '#000',
+  leftBgColor: '#ddd',
+  rightText: 'https://nmotw.in',
+  rightBgColor: '#000'
+});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/console-badge/console-badge.gif" alt="console-badge" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[emoji-flags]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/emoji-flags/"/>
+    <updated>2019-06-22T21:22:10-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/emoji-flags</id>
+    <content type="html"><![CDATA[<h1><a href="https://npm.im/emoji-flags">emoji-flags</a></h1>
+
+<blockquote><p>emoji flag symbol for a given country code.</p></blockquote>
+
+<p><code>emoji-flags</code> is a sweet module that returns the emjoi flag for a given country code.</p>
+
+<p><strong>Get it:</strong> <code>npm install emoji-flags</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const emojiFlags = require('emoji-flags');</p>
+
+<p>// single country lookup by code
+emojiFlags.countryCode('DK');
+// => { "code": "DK", "emoji": "🇩🇰", ... }</p>
+
+<p>// entire dataset
+emojiFlags.data;
+```</p>
+
+<p>```sh
+$ emoji-flags --help</p>
+
+<p>  return emoji flag symbol for country code</p>
+
+<p>  Example</p>
+
+<pre><code>emoji-flags gb
+
+emoji-flags dk --verbose
+
+emoji-flags
+=&gt; returns the entire dataset
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/emoji-flags/emoji-flags.gif" alt="emoji-flags" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[clockmoji]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/clockmoji/"/>
+    <updated>2019-01-20T06:30:13-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/clockmoji</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/clockmoji">clockmoji</a></h1>
+
+<blockquote><p>🕗 Get an emoji clock based on the time.</p></blockquote>
+
+<p><code>clockmoji</code> is fun little module for representation of the current time in emoji.</p>
+
+<p>It calculates the short hard, long hard for the clock and fetch the required emoji's unicode.</p>
+
+<p><code>js
+  var date = new Date(date.getTime() + 15 * 60000)
+  var shortHand = date.getHours() % 12
+  var min = date.getMinutes()
+  var longHand = (min - (min % 30)) / 30 ? '30' : '00'
+</code></p>
+
+<p><strong>Get it:</strong> <code>npm install clockmoji</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+date
+Tue May 26 18:19:10 CDT 2015</p>
+
+<h1>no arguments will return the current time</h1>
+
+<p>clockmoji
+🕡</p>
+
+<h1>Pass a time in the format mm:ss</h1>
+
+<p>clockmoji 10:00
+🕙</p>
+
+<h1>Military time supported</h1>
+
+<p>clockmoji 14:00
+🕑</p>
+
+<h1>any arbitrary time works -- rounds down if its less than :15</h1>
+
+<p>clockmoji 12:04
+🕛</p>
+
+<h1>rounds up if the minutes are :15</h1>
+
+<p>clockmoji 12:24
+🕧</p>
+
+<h1>supports piping</h1>
+
+<p>echo 6:30 | clockmoji
+🕡</p>
+
+<h1>invalid time returns ⚠</h1>
+
+<p>clockmoji 9999
+⚠
+```</p>
+
+<p>```js
+const clockmoji = require('clockmoji')</p>
+
+<p>console.log(clockmoji())
+console.log(clockmoji('12:00'))
+console.log(clockmoji('18:30'))
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/clockmoji/clockmoji.gif" alt="clockmoji" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[is-vegan]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/is-vegan/"/>
+    <updated>2018-11-11T22:37:49-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/is-vegan</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-vegan">is-vegan</a></h1>
+
+<blockquote><p>Find out which food ingredients are vegan / non-vegan.</p></blockquote>
+
+<p>If you are vegan you would understand the challenge of staying a vegan, this module helps you to find out which food ingredients are vegan / non-vegan. It can answer that on 1 ingredient or on a list of ingredients. It uses a 850+ entries list of non-vegan ingredients.</p>
+
+<p>It basically had parsed the information from the below sites into a JSON file.</p>
+
+<ul>
+<li>veganpeace</li>
+<li>peta</li>
+<li>veganwolf</li>
+</ul>
+
+
+<p><strong>P.S:</strong> I can be cool to use this as a API and build an app, that would scan the ingeratients and let one know if it's vegan or not!</p>
+
+<p><strong>Get it:</strong> <code>npm install is-vegan</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const isVegan = require('is-vegan');</p>
+
+<p>// example for single ingredient
+isVegan.isVeganIngredient('soy'); // true
+isVegan.isVeganIngredient('milk'); // false</p>
+
+<p>// example for list of ingredients
+isVegan.isVeganIngredientList(['aspic', 'albumin']); // false
+isVegan.isVeganIngredientList(['soy', 'cacao butter']); // true</p>
+
+<p>// example for list of ingredients wich contain flagged and non-vegan ingredients
+isVegan.checkIngredients(['soy', 'cacao butter', 'pork', 'glycine']);
+// returns
+// {
+//   nonvegan: ['pork', 'beef'],
+//   flagged: ['glycine']
+// }
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/is-vegan/is-vegan.gif" alt="is-vegan" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[mapscii]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/mapscii/"/>
+    <updated>2018-09-16T06:12:56-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/mapscii</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mapscii">MapSCII</a></h1>
+
+<blockquote><p>The Whole World In Your Console!</p></blockquote>
+
+<p><code>MapSCII</code> make major use of <code>@mapbox/vector-tile</code> to bring the entire world map to your console.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g mapscii</code></p>
+
+<p><strong>Navigation:</strong></p>
+
+<ul>
+<li>Arrows up, down, left, right to scroll around</li>
+<li>Press a or z to zoom in and out</li>
+<li>Press q to quit</li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+$ mapscii</p>
+
+<h1>you should see the entire map on the CLI</h1>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/mapscii/mapscii.gif" alt="mapscii" /></p>
+]]></content>
+  </entry>
+  
+</feed>

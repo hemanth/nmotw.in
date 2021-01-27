@@ -1,0 +1,319 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>lie-denodify - Hemanth.HM</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="Even though RSVP provides a denodeify API, lie-denodify's main focus is to turn a node style callback into a promise based one. lie-denofiy &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="lie-denodify - Hemanth.HM">
+    <meta name="twitter:url" content="http://h3manth.com/nmotw/blog/2014/lie-denodify/">
+    <meta name="twitter:description" content="Even though RSVP provides a denodeify API, lie-denodify's main focus is to turn a node style callback into a promise based one. lie-denofiy &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="lie-denodify - Hemanth.HM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://h3manth.com/nmotw/blog/2014/lie-denodify/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="Even though RSVP provides a denodeify API, lie-denodify's main focus is to turn a node style callback into a promise based one. lie-denofiy &hellip;" />
+
+    
+    <meta property="og:image" content="http://nmotw.in/images/lie-denodify/lie-denodify.gif" />
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/nmotw/atom.xml" rel="alternate" title="Hemanth.HM" type="application/atom+xml">
+    <link rel="canonical" href="http://h3manth.com/nmotw/blog/2014/lie-denodify/">
+    <link href="/nmotw/favicon.png" rel="shortcut icon">
+    <link href="/nmotw/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/nmotw/">Hemanth.HM</a></h1>
+<span class="tagline">A Computer Polyglot, CLI + WEB ♥'r.</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Lie-denodify</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-10T05:08:55-07:00" pubdate data-updated="true">Apr 10<span>th</span>, 2014</time></div>
+	</header>
+	<div class="entry-content"><p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify's</a> main focus is to turn a node style callback into a promise based one.</p>
+
+<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
+
+<p>All it does to convert an async function to a promise based one is to return a promise with the help of lie:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">denodify</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">concat</span><span class="p">.</span><span class="nx">apply</span><span class="p">([],</span> <span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">args</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>                <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">resolve</span><span class="p">(</span><span class="nx">success</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>            <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">denodify</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
+
+<p><strong>Usage example:</strong></p>
+
+<p>Let's try and covert <code>fs.stat</code> function to a promise!</p>
+
+<p>First of all let's have a look at how <code>fs.stat</code> works before conversion.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fstat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">fstat</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">Would log something like:</span>
+</span><span class='line'><span class="cm">{ dev: 16777217,</span>
+</span><span class='line'><span class="cm">  mode: 17407,</span>
+</span><span class='line'><span class="cm">  nlink: 14,</span>
+</span><span class='line'><span class="cm">  uid: 0,</span>
+</span><span class='line'><span class="cm">  gid: 0,</span>
+</span><span class='line'><span class="cm">  rdev: 0,</span>
+</span><span class='line'><span class="cm">  blksize: 4096,</span>
+</span><span class='line'><span class="cm">  ino: 144575596,</span>
+</span><span class='line'><span class="cm">  size: 476,</span>
+</span><span class='line'><span class="cm">  blocks: 0,</span>
+</span><span class='line'><span class="cm">  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),</span>
+</span><span class='line'><span class="cm">  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</span>
+</span><span class='line'><span class="cm"> </span>
+</span><span class='line'><span class="cm"> And in case of an Error it would throw an error</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, let's convert it into a promise:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lieDndfy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie-denodify&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">statp</span> <span class="o">=</span> <span class="nx">lieDndfy</span> <span class="p">(</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">statp</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/nmotw/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
+
+<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
+
+<p>Learn to lie this week ;)!</p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=lie-denodify by @gnumanth&url=http://nmotw.in/blog/2014/lie-denodify/" title="Share lie-denodify on Twitter">
+    <img src="/nmotw/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/blog/2014/lie-denodify/" title="Share lie-denodify on Facebook">
+    <img src="/nmotw/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/blog/2014/lie-denodify/" title="Share lie-denodify on Google Plus">
+    <img src="/nmotw/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2021
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/nmotw/javascripts/slash.js"></script>
+<script src="/nmotw/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gnulinux';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://h3manth.com/nmotw/blog/2014/lie-denodify/';
+        var disqus_url = 'http://h3manth.com/nmotw/blog/2014/lie-denodify/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

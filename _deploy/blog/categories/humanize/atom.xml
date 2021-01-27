@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: humanize | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/humanize/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[prettysize]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/prettysize/"/>
+    <updated>2015-11-05T05:01:20-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/prettysize</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/prettysize">prettysize</a></p>
+
+<blockquote><p>Convert bytes to other sizes for prettier logging.</p></blockquote>
+
+<p>In just 45 lines of code, this cheeky module by <a href="https://twitter.com/davglass">@davlgass</a> makes it easy to humanize file sizes.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save prettysize</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<div id="prettysize">
+var pretty = require('prettysize');
+var str = pretty(123456789);
+</div>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/prettysize/prettysize.gif" alt="prettysize" /></p>
+
+<script src="https://embed.tonicdev.com" data-element-id="prettysize"></script>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: async | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/async/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[async-retry]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/async-retry/"/>
+    <updated>2017-09-14T10:20:23-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/async-retry</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/async-retry">async-retry</a></h1>
+
+<blockquote><p>Retrying made simple, easy, async.</p></blockquote>
+
+<p><code>async-retry</code> is a promisified version of <a href="https://www.npmjs.com/package/retry">retry</a> which makes things easier with the <code>async-await</code> syntax.</p>
+
+<p><strong>Get it:</strong> <code>npm install async-retry</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// Packages
+const retry = require('async-retry')
+const fetch = require('node-fetch')</p>
+
+<p>await retry(async bail => {
+  // if anything throws, we retry
+  const res = await fetch('https://google.com')</p>
+
+<p>  if (403 === res.status) {</p>
+
+<pre><code>// don't retry upon 403 
+bail(new Error('Unauthorized'))
+return
+</code></pre>
+
+<p>  }</p>
+
+<p>  const data = await res.text()
+  return data.substr(0, 500)
+}, {
+  retries: 500
+})
+```</p>
+
+<p><strong>Method signature:</strong></p>
+
+<p><code>
+retry(retrier : Function, opts : Object) =&gt; Promise
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/async-retry/async-retry.gif" alt="async-retry" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[base64-async]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/base64-async/"/>
+    <updated>2017-06-29T01:27:23-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/base64-async</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/base64-async">base64-async</a></h1>
+
+<blockquote><p>Non-blocking chunked Base64 encoding.</p></blockquote>
+
+<p><code>base64-async</code> helps us in processing large <code>Base64</code> documents without blocking the event loop, one can configure chunk size option to optimise for your use case.</p>
+
+<p>This module exposes: <code>b64</code>, <code>encode</code> and <code>decode</code> methods which accepts <code>(input, [options])</code> and returns a promise on innvocation.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save base64-async</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const b64 = require('base64-async');
+const fs = require('fs');
+const buffer = fs.readFileSync('somehugefile.jpg');</p>
+
+<p>b64.encode(fileBuffer).then(b64String => console.log(b64String));
+// aGkgbXVt...</p>
+
+<p>b64.decode(b64String).then(buffer => console.log(buffer));
+// <Buffer 68 69 20 6d 75 6d ... ></p>
+
+<p>// or, for the cool kids
+const b64String = await b64.encode(fileBuffer);
+const originalFileBuffer = await b64.decode(b64String);</p>
+
+<p>// which is equivalent to this
+const b64String = await b64(fileBuffer);
+const originalFileBuffer = await b64(b64String);
+// If no method is specified, buffers are encoded, strings are decoded
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/base64-async/base64-async.gif" alt="base64-async.gif" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[asyncbox]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/asyncbox/"/>
+    <updated>2016-09-22T10:07:26-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/asyncbox</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/asyncbox">asyncbox</a></h1>
+
+<blockquote><p>A collection of small <code>async/await</code> utilities.</p></blockquote>
+
+<p>A simple collection of tiny useful <code>async/await</code> utilities, the below are the list of function that <code>asyncbox</code> gives:</p>
+
+<ul>
+<li>sleep</li>
+<li>retry</li>
+<li>nodeify</li>
+<li>nodeifyAll</li>
+<li>retryInterval</li>
+<li>asyncify</li>
+<li>parallel</li>
+<li>asyncmap</li>
+<li>asyncfilter</li>
+<li>waitForCondition</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save asyncbox</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+import { sleep } from 'asyncbox';</p>
+
+<p>async function myFn () {</p>
+
+<pre><code>// do some stuff 
+await sleep(1000); // wait one second 
+// do some other stuff 
+</code></pre>
+
+<p>};</p>
+
+<p>myFn();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/asyncbox/asyncbox.gif" alt="asyncbox" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ambi]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/ambi/"/>
+    <updated>2015-12-03T07:21:30-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/ambi</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/ambi">ambi</a></h1>
+
+<blockquote><p>Execute a function ambidextrously.</p></blockquote>
+
+<p><code>ambi</code> normalizes the differences between synchronous and asynchronous functions! That is treating synchronous functions as asynchronous functions.</p>
+
+<p><strong>Get it:</strong> <code>$ npm install --save ambi</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var ambi = require('ambi');
+var child_process = require('child_process');</p>
+
+<p>ambi(child_process.execSync, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Async</p>
+
+<p>ambi(child_process.exec, 'pwd', {encoding: 'utf-8'}, (err, res) => console.log(res)); // Sync
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/ambi/ambi.gif" alt="ambi" /></p>
+
+<p>Thanks to <a href="http://balupton.com/">Benjamin Lupton</a> for this module.</p>
+]]></content>
+  </entry>
+  
+</feed>

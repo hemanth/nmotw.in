@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reactive | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/reactive/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[most]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/most/"/>
+    <updated>2017-02-17T17:37:22-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/most</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/most">most</a></h1>
+
+<blockquote><p>Monadic streams</p></blockquote>
+
+<p><code>Most.js</code> is a toolkit for reactive programming. It helps you compose asynchronous operations on streams of values and events, e.g. WebSocket messages, DOM events, etc, and on time-varying values, e.g. the "current value" of an <code>&lt;input&gt;</code>, without many of the hazards of side effects and mutable shared state.</p>
+
+<p>It features an ultra-high performance, low overhead architecture, APIs for easily creating event streams from existing sources, like DOM events, and a small but powerful set of operations for merging, filtering, transforming, and reducing event streams and time-varying values.</p>
+
+<p>P.S: Have a look at the <a href="https://github.com/cujojs/most/tree/master/test/perf">perf test results</a>.</p>
+
+<p><strong>GET IT:</strong> <code>npm install --save most</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { from } from 'most'
+// After 1 second, logs 10
+from([1, 2, 3, 4])</p>
+
+<pre><code>.delay(1000)
+.reduce((result, y) =&gt; result + y, 0)
+.then(result =&gt; console.log(result))
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+import { fromPromise } from 'most'
+// Logs "hello"
+fromPromise(Promise.resolve('hello'))</p>
+
+<pre><code>.observe(message =&gt; console.log(message))
+</code></pre>
+
+<p>```</p>
+
+<p>```js
+import { generate } from 'most'</p>
+
+<p>function* allTheIntegers(interval) {</p>
+
+<pre><code>let i=0
+while(true) {
+    yield delayPromise(interval, i++)
+}
+</code></pre>
+
+<p>}</p>
+
+<p>const delayPromise = (ms, value) =></p>
+
+<pre><code>new Promise(resolve =&gt; setTimeout(() =&gt; resolve(value), ms))
+</code></pre>
+
+<p>// Log the first 100 integers, at 1 second intervals
+generate(allTheIntegers, 1000)</p>
+
+<pre><code>.take(100)
+.observe(x =&gt; console.log(x))
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/most/most.js.gif" alt="most.js" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: analysis | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/analysis/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[sentiment]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/sentiment/"/>
+    <updated>2015-10-29T06:17:29-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/sentiment</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/sentiment">sentiment</a></h1>
+
+<blockquote><p>AFINN-based sentiment analysis.</p></blockquote>
+
+<p><code>Sentiment</code> uses <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">AFINN-111</a> wordlist to perform <a href="http://en.wikipedia.org/wiki/Sentiment_analysis">sentiment analysis</a> on arbitrary blocks of input text.</p>
+
+<p>Sentiment provides serveral things:</p>
+
+<ul>
+<li>Performance.</li>
+<li>The ability to append and overwrite word / value pairs from the AFINN wordlist.</li>
+<li>A build process that makes updating sentiment to future versions of the AFINN word list trivial.</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save sentiment</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<blockquote><p>var sentiment = require('sentiment');</p>
+
+<p>sentiment('Cats are stupid');
+{ score: -2,
+  comparative: -0.6666666666666666,
+  tokens: [ 'cats', 'are', 'stupid' ],
+  words: [ 'stupid' ],
+  positive: [],
+  negative: [ 'stupid' ] }</p>
+
+<p>sentiment('Cats are cool');
+{ score: 1,
+  comparative: 0.3333333333333333,
+  tokens: [ 'cats', 'are', 'cool' ],
+  words: [ 'cool' ],
+  positive: [ 'cool' ],
+  negative: [] }</p>
+
+<p>sentiment('Cats are cool',{'cats':5,'cool':10});
+{ score: 15,
+  comparative: 5,
+  tokens: [ 'cats', 'are', 'cool' ],
+  words: [ 'cool', 'cats' ],
+  positive: [ 'cool', 'cats' ],
+  negative: [] }
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/sentiment/sentiment.gif" alt="sentiment.gif" /></p>
+
+<p>Thanks to <a href="https://twitter.com/thisandagain">Andrew Sliwinski</a> for this crazy module!</p>
+]]></content>
+  </entry>
+  
+</feed>

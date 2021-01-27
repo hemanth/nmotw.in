@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lint | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/lint/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[evalmd]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/evalmd/"/>
+    <updated>2016-12-29T03:44:52-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/evalmd</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/evalmd">evalmd</a></h1>
+
+<blockquote><p>🎣 Evaluates JavaScript code blocks from markdown files.</p></blockquote>
+
+<p><code>evalmd</code> parses your markdown files, extract the JavaScript code blocks from them and evaluate it, in the eval bombs it reports and there are ease flags to turn off evaluation for specific code blocks.</p>
+
+<p>The <code>javascript</code> or <code>js</code> code blocks works fine with it.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g evalmd</code></p>
+
+<p><strong>Sample usage CLI:</strong></p>
+
+<p>```sh</p>
+
+<p>$ evalmd</p>
+
+<p>evalmd - Evaluate the javascript in markdown files</p>
+
+<p>Options:
+  -i, --include    Includes prevented blocks  [default: false]
+  -P, --prevent    Prevent code from being evaluated  [default: false]
+  -b, --block      Change the scope to block level  [default: false]
+  -o, --output     Output js  [choices: false, true, "preserve", "concat", "preserveAlter", "concatAlter"] [default: false]
+  -n, --nonstop    Runs all files regardless if error  [default: false]
+  -s, --silent     Silence <code>evalmd</code> logging  [default: false]
+  -u, --uniform    Does not use absolute urls when error logging  [default: false]
+  -D, --debug      Debug Output  [default: false]
+  -h, --help       Show help  [boolean]
+  --path           Prefix local module with path  [default: "./"]
+  --package        Th path of a package.json  [default: "./package.json"]
+  --version        Show version number  [boolean]
+  -d, --delimeter  [default: false]</p>
+
+<p>Examples:
+  evalmd &lt;file(s)>        Evaluate file(s)
+  evalmd &lt;file(s)> -n     Evaluate file(s) uninterrupted
+  evalmd &lt;file(s)> -b     Evaluate block(s)
+  evalmd &lt;file(s)> -bn    Evaluate block(s) uninterrupted
+  evalmd &lt;file(s)> -Po    Outputs js file(s)
+  evalmd &lt;file(s)> -Pio   Outputs js file(s) with all block(s) (for linting)
+  evalmd &lt;file(s)> -Pob   Outputs block(s)
+  evalmd &lt;file(s)> -Piob  Outputs all blocks(s) (for linting)
+```</p>
+
+<p><strong>Sample usage from code:</strong></p>
+
+<p><code>js
+var evalmd = require('evalmd');
+assert.equal(typeof evalmd, 'function'); // true
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/evalmd/evalmd.gif" alt="evalmd" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[nsp]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/nsp/"/>
+    <updated>2015-01-22T05:33:18-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/nsp</id>
+    <content type="html"><![CDATA[<h1><a href="http://npm.im/nsp/">nsp</a> aka: <a href="http://nodesecurity.io">Node Security Project</a></h1>
+
+<blockquote><p>Check if your Node.js projects are using packages with known and public vulnerable dependencies, using NSP DB.</p></blockquote>
+
+<p><strong>Install it:</strong> <code>npm install -g nsp</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```sh
+nmotw.in> nsp</p>
+
+<p>Usage: [command] --arg=value --arg2</p>
+
+<p>Help:
+  help              Show help menu
+  [cmd] help        Show command help menu</p>
+
+<p>Options:
+  version           shows the current version of nsp
+  shrinkwrap        alias to audit-shrinkwrap
+  audit-shrinkwrap  audits your <code>npm shrinkwrap</code> against NSP db
+  package           alias to audit-package
+  audit-package     audits your package.json against NSP db
+```</p>
+
+<p>```sh
+nmotw.in> cat package.json
+{
+  "name": "test",
+  "version": "0.0.1",
+  "author": "Node Security Project",
+  "dependencies": {</p>
+
+<pre><code>"node-print": "0.0.4",
+"request": "^2.40.0",
+"qs": "^0.5"
+</code></pre>
+
+<p>  }
+}</p>
+
+<p>nmotw.in> nsp package
+Name  Installed  Patched  Vulnerable Dependency
+qs      0.5.6     >= 1.x  test@0.0.1 > qs@0.5.6
+```</p>
+
+<p>The same can be used for auditing <a href="https://docs.npmjs.com/cli/shrinkwrap">shrinkwrap</a>.</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nsp/nsp.gif" alt="nsp" /></p>
+
+<p>Thanks to the <a href="https://twitter.com/nodesecurity">nodesecurity</a> for making security easy!</p>
+]]></content>
+  </entry>
+  
+</feed>

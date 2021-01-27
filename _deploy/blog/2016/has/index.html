@@ -1,0 +1,225 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>has - Hemanth.HM</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="has - Hemanth.HM">
+    <meta name="twitter:url" content="http://h3manth.com/nmotw/blog/2016/has/">
+    <meta name="twitter:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="has - Hemanth.HM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://h3manth.com/nmotw/blog/2016/has/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="has Object.prototype.hasOwnProperty.call shortcut. This module is one of those live examle where a tiny module can make a lot of impact in the node &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/nmotw/atom.xml" rel="alternate" title="Hemanth.HM" type="application/atom+xml">
+    <link rel="canonical" href="http://h3manth.com/nmotw/blog/2016/has/">
+    <link href="/nmotw/favicon.png" rel="shortcut icon">
+    <link href="/nmotw/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/nmotw/">Hemanth.HM</a></h1>
+<span class="tagline">A Computer Polyglot, CLI + WEB ♥'r.</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Has</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-11-10T22:14:31-08:00" pubdate data-updated="true">Nov 10<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/has">has</a></h1>
+
+<blockquote><p>Object.prototype.hasOwnProperty.call shortcut.</p></blockquote>
+
+<p>This module is one of those live examle where a tiny module can make a lot of impact in the node community.</p>
+
+<p>All that this module does is helps in making a shorting function name to <code>Object.prototype.hasOwnProperty.call</code> as <code>has</code>, the code in the module is as below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">bind</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;function-bind&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">bind</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">Function</span><span class="p">.</span><span class="nx">call</span><span class="p">,</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The impact it has made with <code>110</code> dependencies:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="mi">151</span><span class="p">,</span><span class="mi">565</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">day</span>
+</span><span class='line'><span class="mi">823</span><span class="p">,</span><span class="mi">500</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">week</span>
+</span><span class='line'><span class="mi">3</span><span class="p">,</span><span class="mi">552</span><span class="p">,</span><span class="mi">078</span> <span class="nx">downloads</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">month</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p><strong>Get it:</strong> <code>npm install --save has</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">has</span><span class="p">({},</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// false;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">has</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="s1">&#39;hasOwnProperty&#39;</span><span class="p">);</span> <span class="c1">// true;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/nmotw/images/has/has.gif" alt="" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=has by @gnumanth&url=http://nmotw.in/blog/2016/has/" title="Share has on Twitter">
+    <img src="/nmotw/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/blog/2016/has/" title="Share has on Facebook">
+    <img src="/nmotw/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/blog/2016/has/" title="Share has on Google Plus">
+    <img src="/nmotw/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2021
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/nmotw/javascripts/slash.js"></script>
+<script src="/nmotw/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gnulinux';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://h3manth.com/nmotw/blog/2016/has/';
+        var disqus_url = 'http://h3manth.com/nmotw/blog/2016/has/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

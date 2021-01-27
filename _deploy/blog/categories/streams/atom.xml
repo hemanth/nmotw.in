@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: streams | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/streams/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[stream-generators]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/stream-generators/"/>
+    <updated>2015-06-04T13:27:12-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/stream-generators</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/stream-generators">stream-generators</a></p>
+
+<blockquote><p>Pipe ES6 Generators through Node.js streams.</p></blockquote>
+
+<p>This is a cheeky module authored by <a href="https://twitter.com/mimetnet">@mimetent</a> which takes in a ES6 generator function and returns a readable stream!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save stream-geerators</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var streamify = require('stream-generators'),</p>
+
+<pre><code>os = require('os')
+gen = function*() {
+    yield 'Hello ';
+    yield 'ES6 ';
+    yield 'Stream gen';
+    yield os.EOL;
+};
+</code></pre>
+
+<p>;</p>
+
+<p>streamify(gen).pipe(process.stdout);
+```</p>
+
+<p>This would output: <code>Hello ES6 Stream gen</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/stream-generators/stream-generators.gif" alt="stream-generators" /></p>
+]]></content>
+  </entry>
+  
+</feed>

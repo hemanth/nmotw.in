@@ -1,0 +1,233 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>trymodule - Hemanth.HM</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="trymodule - Hemanth.HM">
+    <meta name="twitter:url" content="http://h3manth.com/nmotw/blog/2016/trymodule/">
+    <meta name="twitter:description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="trymodule - Hemanth.HM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://h3manth.com/nmotw/blog/2016/trymodule/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="trymodule It's never been easier to try nodejs modules! Quickly install any node module you want and start a REPL with the installed module in the &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/nmotw/atom.xml" rel="alternate" title="Hemanth.HM" type="application/atom+xml">
+    <link rel="canonical" href="http://h3manth.com/nmotw/blog/2016/trymodule/">
+    <link href="/nmotw/favicon.png" rel="shortcut icon">
+    <link href="/nmotw/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/nmotw/">Hemanth.HM</a></h1>
+<span class="tagline">A Computer Polyglot, CLI + WEB ♥'r.</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Trymodule</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-31T06:11:49-07:00" pubdate data-updated="true">Mar 31<span>st</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="">trymodule</a></h1>
+
+<blockquote><p>It's never been easier to try nodejs modules!</p></blockquote>
+
+<p>Quickly install any node module you want and start a <code>REPL</code> with the installed module in the scope with <code>trymodule</code>!</p>
+
+<p>Basically, it check if the module you are trying exists in the <code>~/.trymodule/node_module</code> if require it and start a <code>REPL</code> or
+else installs it using <code>npmi</code> module and starts the <code>REPL</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install -g trymodule</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>nmotw.in&gt; trymodule xkcd-imgs
+</span><span class='line'>Gonna start a REPL with packages installed and loaded <span class="k">for </span>you
+</span><span class='line'>Couldn<span class="s1">&#39;t find &#39;</span>xkcd-imgs<span class="s1">&#39; locally, gonna download it now</span>
+</span><span class='line'><span class="s1">xkcd-imgs@1.0.1 ../../Users/hhegadehallimadh/.trymodule/node_modules/xkcd-imgs</span>
+</span><span class='line'><span class="s1">└── request@2.69.0 (aws-sign2@0.6.0, forever-agent@0.6.1, tunnel-agent@0.4.2, oauth-sign@0.8.1, caseless@0.11.0, is-typedarray@1.0.0, stringstream@0.0.5, isstream@0.1.2, json-stringify-safe@5.0.1, extend@3.0.0, tough-cookie@2.2.2, node-uuid@1.4.7, qs@6.0.2, mime-types@2.1.10, form-data@1.0.0-rc4, combined-stream@1.0.5, hawk@3.1.3, aws4@1.3.2, http-signature@1.1.1, bl@1.0.3, har-validator@2.0.6)</span>
+</span><span class='line'><span class="s1">Package &#39;</span>xkcd-imgs<span class="s1">&#39; was loaded and assigned to &#39;</span>xkcd_imgs<span class="err">&#39;</span> in the current scope
+</span><span class='line'>REPL started...
+</span><span class='line'>&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&gt;</span> <span class="nx">xkcd_imgs</span>
+</span><span class='line'><span class="p">{</span> <span class="nx">img</span><span class="o">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">xkcd_imgs</span><span class="p">.</span><span class="nx">img</span><span class="p">(</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">);</span>
+</span><span class='line'><span class="kc">undefined</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="p">{</span> <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://imgs.xkcd.com/comics/instagram.png&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;I\&#39;m gonna call the cops and get Chad arrested for theft, then move all my stuff to the house across the street. Hopefully the owners there are more responsible.&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/nmotw/images/trymodule/trymodule.gif" alt="trymodule" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=trymodule by @gnumanth&url=http://nmotw.in/blog/2016/trymodule/" title="Share trymodule on Twitter">
+    <img src="/nmotw/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/blog/2016/trymodule/" title="Share trymodule on Facebook">
+    <img src="/nmotw/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/blog/2016/trymodule/" title="Share trymodule on Google Plus">
+    <img src="/nmotw/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2021
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/nmotw/javascripts/slash.js"></script>
+<script src="/nmotw/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gnulinux';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://h3manth.com/nmotw/blog/2016/trymodule/';
+        var disqus_url = 'http://h3manth.com/nmotw/blog/2016/trymodule/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: DOM | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/dom/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[image-promise]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/image-promise/"/>
+    <updated>2019-03-08T01:30:54-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/image-promise</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/image-promise">image-promise</a></h1>
+
+<blockquote><p>Promisfied image loading!</p></blockquote>
+
+<p>Load one or more images, return a promise that resolves if the image loads or rejects in case of an error.</p>
+
+<p><strong>Get it:</strong> <code>npm install image-pormise</code></p>
+
+<p><strong>Sample code:</strong></p>
+
+<p>```js
+var images = ['cat.jpg', 'dog.jpg'];
+// var images = $('img'); // it can also be a jQuery object
+// var images = document.querySelectorAll('img'); // or a NodeList</p>
+
+<p>loadImage(images)
+.then(function (allImgs) {</p>
+
+<pre><code>console.log(allImgs.length, 'images loaded!', allImgs);
+</code></pre>
+
+<p>})
+.catch(function (err) {</p>
+
+<pre><code>console.error('One or more images have failed to load :(');
+console.error(err.errored);
+console.info('But these loaded fine:');
+console.info(err.loaded);
+</code></pre>
+
+<p>});
+```</p>
+
+<p>```
+const images = [
+  "https://unsplash.it/800/600?random&amp;0",
+  "https://unsplash.it/800/600?random&amp;1",
+  "https://unsplash.it/800/600?random&amp;2",
+  "https://unsplash.it/800/600?random&amp;3"
+];</p>
+
+<p>(async () => {</p>
+
+<pre><code>try {
+    const imgs = await ImageLoader(images);
+} catch(err) {
+    console.error(err.errored);
+}
+</code></pre>
+
+<p>})();</p>
+
+<p>```</p>
+
+<p>```
+// for CORS enabled imgs
+const image = 'http://catpics.com/cat.jpg';</p>
+
+<p>loadImage(image, { crossorigin: 'anonymous' })
+.then(function (img) {</p>
+
+<pre><code>ctx.drawImage(img, 0, 0, 10, 10);
+
+// now you can do this
+canvas.toDataURL('image/png')
+</code></pre>
+
+<p>})
+.catch(function () {</p>
+
+<pre><code>console.error('Image failed to load :(');
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/image-promise/image-promise.gif" alt="image-promise" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[scroll-into-view-if-needed]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/scroll-into-view-if-needed/"/>
+    <updated>2019-03-02T09:55:04-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/scroll-into-view-if-needed</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/scroll-into-view-if-needed">scroll-init-view-if-needed</a></h1>
+
+<blockquote><p>Element.scrollIntoView ponyfills for things like "if-needed" and "smooth".</p></blockquote>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.png" alt="scroll-into-view-if-needed" /></p>
+
+<p>This is a ponyfill for <code>Element.scrollIntoViewIfNeeded</code>. Since then the CSS working group have decided to implement its features in <code>Element.scrollIntoView</code> as the option <code>scrollMode: "if-needed"</code>. Thus this library got rewritten to implement that spec instead of the soon to be deprecated one.</p>
+
+<p>Don't miss the <a href="https://scroll-into-view-if-needed.netlify.com">Demo</a>.</p>
+
+<p><strong>Get it:</strong> <code>npm install scroll-into-view-if-needed</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+// es6 import
+import scrollIntoView from 'scroll-into-view-if-needed';</p>
+
+<p>const node = document.getElementById('hero');</p>
+
+<p>scrollIntoView(node, {
+  scrollMode: 'if-needed',
+  block: 'nearest',
+  inline: 'nearest',
+})</p>
+
+<p>scrollIntoView(node, { block: 'center', inline: 'center' });
+// scrollMode is "always" by default</p>
+
+<p>// smooth scroll if the browser supports it and if the element isn't visible
+scrollIntoView(node, { behavior: 'smooth', scrollMode: 'if-needed' });
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/scroll-into-view-if-needed/scroll-into-view-if-needed.gif" alt="scroll-into-view-if-needed" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[abort-controller]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/abort-controller/"/>
+    <updated>2019-02-22T21:40:52-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/abort-controller</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/abort-controller">abort-controller</a></h1>
+
+<blockquote><p>An implementation of WHATWG AbortController interface.</p></blockquote>
+
+<p>The AbortController interface allows us to abort one or more DOM requests as per the need.</p>
+
+<p>From the <a href="https://dom.spec.whatwg.org/#interface-abortcontroller">sepc</a>:</p>
+
+<p>The <code>AbortController()</code> constructor, when invoked, must run these steps:</p>
+
+<ul>
+<li><p>Let signal be a <code>new AbortSignal</code> object.</p></li>
+<li><p>Let controller be a <code>new AbortController</code> object whose signal is signal.</p></li>
+<li><p>Return controller.</p></li>
+</ul>
+
+
+<p>The <code>signal</code> attribute’s getter, when invoked, must return the context object’s signal.</p>
+
+<p>The <code>abort()</code> method, when invoked, must signal abort on the context object’s signal.</p>
+
+<p><strong>Get it:</strong> <code>npm install abort-controller</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>```js
+import AbortController from "abort-controller";
+// or
+const AbortController = require("abort-controller");</p>
+
+<p>// or UMD version defines a global variable:
+const AbortController = window.AbortControllerShim;
+```</p>
+
+<p>```js
+import AbortController from "abort-controller";</p>
+
+<p>const controller = new AbortController();
+const signal = controller.signal;</p>
+
+<p>signal.addEventListener("abort", () => {</p>
+
+<pre><code>console.log("aborted!");
+</code></pre>
+
+<p>})</p>
+
+<p>controller.abort();
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/abort-controller/abort-controller.gif" alt="abort-controller" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[intl-tel-input]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/intl-tel-input/"/>
+    <updated>2018-12-22T22:07:47-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/intl-tel-input</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/intl-tel-input">intl-tel-input</a></h1>
+
+<blockquote><p>International Telephone Input</p></blockquote>
+
+<p>Eentering and validating international telephone numbers made easy with <code>intl-tel-input</code>.</p>
+
+<p>It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder and provides formatting/validation methods!</p>
+
+<p><strong>Get it:</strong> <code>npm i intl-tel-input</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p><code>html
+&lt;input type="tel" id="phone"&gt;
+</code></p>
+
+<p><code>js
+require("node_modules/intl-tel-input/src/css/intlTelInput.css");
+const intlTelInput = require("intl-tel-input");
+const input = document.querySelector("#phone");
+intlTelInput(input);
+</code></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/intl-tel-input/intl-tel-input.gif" alt="intl-tel-input" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[query-state]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/query-state/"/>
+    <updated>2018-11-22T02:39:44-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/query-state</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/query-state">query-state</a></h1>
+
+<blockquote><p>Application state in query string.</p></blockquote>
+
+<p><code>query-state</code> is a cheeky module that uses <code>history</code> API and <code>encodeURIComponent</code> magic to maintain the application state in the query string.</p>
+
+<p><strong>Get it:</strong> <code>npm install query-state</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const queryState = require('query-state');</p>
+
+<p>// create a new query state instance
+const qs = queryState();</p>
+
+<p>// get current application state from the hash string:
+const appState = qs.get();</p>
+
+<p>// you can also monitor for changes in the query string:
+qs.onChange(function(appState) {
+  // prints new application state on each hash update
+  console.log('app state changed!', appState);
+});</p>
+
+<p>// If you want to set a new value in the app state:
+qs.set('answer', 42);</p>
+
+<p>// Now the query string will have <code>answer=42</code> part in it.
+console.log(window.location.hash.indexOf('answer=42')) // prints value > 0.</p>
+
+<p>// You can also set multiple values at once:
+qs.set({
+  name: 'Haddaway',
+  song: 'What is love?'
+});</p>
+
+<p>// NOTE: The call above merges new properties. It appends two new properties to
+// the current query string</p>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/query-state/query-state.gif" alt="query-state" /></p>
+]]></content>
+  </entry>
+  
+</feed>

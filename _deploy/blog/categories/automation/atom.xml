@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: automation | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/automation/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nickjs]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/nickjs/"/>
+    <updated>2017-08-31T21:45:18-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/nickjs</id>
+    <content type="html"><![CDATA[<p><a href="https://www.npmjs.com/package/nickjs">nickjs</a></p>
+
+<blockquote><p>Headless browser automation library</p></blockquote>
+
+<p><code>nickjs</code> Modern, simple &amp; powerful browser automation library.</p>
+
+<ul>
+<li><p>Works on all dynamic sites.</p></li>
+<li><p>async-await ready.</p></li>
+<li><p>Multi-driver support.</p></li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install nickjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const Nick = require("nickjs")
+const nick = new Nick()</p>
+
+<p>;(async () => {</p>
+
+<pre><code>const tab = await nick.newTab()
+await tab.open("news.ycombinator.com")
+await tab.untilVisible("#hnmain") // Make sure we have loaded the page
+await tab.inject("../injectables/jquery-3.0.0.min.js") // We're going to use jQuery to scrape
+const hackerNewsLinks = await tab.evaluate((arg, callback) =&gt; {
+    // Here we're in the page context. It's like being in your browser's inspector tool
+    const data = []
+    $(".athing").each((index, element) =&gt; {
+        data.push({
+            title: $(element).find(".storylink").text(),
+            url: $(element).find(".storylink").attr("href")
+        })
+    })
+    callback(null, data)
+})
+console.log(JSON.stringify(hackerNewsLinks, null, 2))
+</code></pre>
+
+<p>})()
+.then(() => {</p>
+
+<pre><code>console.log("Job done!")
+nick.exit()
+</code></pre>
+
+<p>})
+.catch((err) => {</p>
+
+<pre><code>console.log(`Something went wrong: ${err}`)
+nick.exit(1)
+</code></pre>
+
+<p>})
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/nickjs/nickjs.gif" alt="nickjs.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: math | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/math/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[simple-statistics]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/simple-statistics/"/>
+    <updated>2017-02-02T21:02:48-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/simple-statistics</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/simple-statistics">simple-statistics</a></h1>
+
+<blockquote><p>Descriptive, regression, and inference statistics.</p></blockquote>
+
+<p><code>simple-statistics</code> module is a neat pack of most commonly used functional for statistical analysis.</p>
+
+<p>It contains about <code>62</code> helper methods bundled with it :</p>
+
+<p><code>js
+[ 'linearRegression',
+  'linearRegressionLine',
+  'standardDeviation',
+  'rSquared',
+  'mode',
+  'modeSorted',
+  'min',
+  'max',
+  'minSorted',
+  'maxSorted',
+  'sum',
+  'sumSimple',
+  'product',
+  'quantile',
+  'quantileSorted',
+  'interquartileRange',
+  'iqr',
+  'mad',
+  'medianAbsoluteDeviation',
+  'chunk',
+  'shuffle',
+  'shuffleInPlace',
+  'sample',
+  'ckmeans',
+  'uniqueCountSorted',
+  'sumNthPowerDeviations',
+  'equalIntervalBreaks',
+  'sampleCovariance',
+  'sampleCorrelation',
+  'sampleVariance',
+  'sampleStandardDeviation',
+  'sampleSkewness',
+  'permutationsHeap',
+  'combinations',
+  'combinationsReplacement',
+  'geometricMean',
+  'harmonicMean',
+  'average',
+  'mean',
+  'median',
+  'medianSorted',
+  'rms',
+  'rootMeanSquare',
+  'variance',
+  'tTest',
+  'tTestTwoSample',
+  'bayesian',
+  'perceptron',
+  'epsilon',
+  'factorial',
+  'bernoulliDistribution',
+  'binomialDistribution',
+  'poissonDistribution',
+  'chiSquaredGoodnessOfFit',
+  'zScore',
+  'cumulativeStdNormalProbability',
+  'standardNormalTable',
+  'erf',
+  'errorFunction',
+  'inverseErrorFunction',
+  'probit',
+  'mixin',
+  'bisect' ]
+</code></p>
+
+<p><strong>Get it:</strong> <code>npm install --save simple-statistics</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const ss = require('simple-statistics');</p>
+
+<p>ss.mad([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// ^ 3; median absolute deviation.</p>
+
+<p>ss.combinations([1, 2, 3], 2);</p>
+
+<p>/*</p>
+
+<p>[</p>
+
+<pre><code>[1, 2],
+[1, 3],
+[2, 3]
+</code></pre>
+
+<p>]
+*/
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/simple-statistics/simple-statistics.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[is-subset]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/is-subset/"/>
+    <updated>2017-01-27T00:51:59-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/is-subset</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/is-subset">is-subset</a></h1>
+
+<blockquote><p>Check if an object is contained within another one.</p></blockquote>
+
+<p><code>is-subset</code> is a tiny little module that is so very useful! All it does is accepts <code>superSet</code> and <code>maybeSubset</code> objects and check if the <code>maybeSubset</code> is a subset of the <code>superSet</code>.</p>
+
+<p><strong>Get it:</strong> <code>npm install --save is-subset</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js</p>
+
+<p>const isSubset = require('is-subset');</p>
+
+<p>// True;
+isSubset(
+  {a: 1, b: {c: 3, d: 4}, e: 5},
+  {a: 1, b: {c: 3}}
+);</p>
+
+<p>//False;
+isSubset(
+  {a: 1},
+  {a: 1, b: 2}
+);
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/is-subset/is-subset.gif" alt="is-subset" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[mathjs]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/mathjs/"/>
+    <updated>2016-04-07T06:52:08-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/mathjs</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/mathjs">mathjs</a></h1>
+
+<blockquote><p>Extensive math library with expression parser, big numbers, complex numbers, units, and matrices.</p></blockquote>
+
+<p><code>mathjs</code> provides you with 200+ util function to do you math!</p>
+
+<p><strong>Get it:</strong> <code>npm install --save mathjs</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+// functions and constants
+math.round(math.e, 3);            // 2.718
+math.atan2(3, -3) / math.pi;      // 0.75
+math.log(10000, 10);              // 4
+math.sqrt(-4);                    // 2i
+math.pow([[-1, 2], [3, 1]], 2);</p>
+
+<pre><code> // [[7, 0], [0, 7]]
+</code></pre>
+
+<p>// expressions
+math.eval('1.2 * (2 + 4.5)');     // 7.8
+math.eval('5.08 cm to inch');     // 2 inch
+math.eval('sin(45 deg) ^ 2');     // 0.5
+math.eval('9 / 3 + 2i');          // 3 + 2i
+math.eval('det([-1, 2; 3, 1])');  // -7</p>
+
+<p>// chaining
+math.chain(3)</p>
+
+<pre><code>.add(4)
+.multiply(2)
+.done(); // 14
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW</strong></p>
+
+<p><img src="/images/mathjs/mathjs.gif" alt="mathjs" /></p>
+]]></content>
+  </entry>
+  
+</feed>

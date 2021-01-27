@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: web | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/web/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pwaify]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/pwaify/"/>
+    <updated>2016-06-09T05:33:41-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/pwaify</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/pwaify">pwaify</a></h1>
+
+<blockquote><p>PWA to desktop app!</p></blockquote>
+
+<p><code>pwaify</code> bring <a href="https://developers.google.com/web/progressive-web-apps/">progressive</a> <a href="https://github.com/hemanth/generator-pwa">Webapp</a> to your desktops across platforms!</p>
+
+<p>Makes use of <a href="http://electron.atom.io/">Electron</a> extracts the <code>manifest-json</code> from the given URL and smartly creates an electron window and loads the required.</p>
+
+<p><strong>Get it:</strong> <code>npm install --global pwaify</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> pwaify --help</p>
+
+<p>  Electron PWA (Progressive Web App) Generator</p>
+
+<p>  Usage</p>
+
+<pre><code>$ pwaify &lt;input&gt;
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>--platforms Platforms to build the app.
+--icon App Icon.
+</code></pre>
+
+<p>  Examples</p>
+
+<pre><code>$ pwaify https://jsfeatures.in --platforms=darwin
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/pwaify/PWAify.gif" alt="PWAify" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[malarkey]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/malarkey/"/>
+    <updated>2014-12-18T04:37:40-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/malarkey</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/malarkey">malarkey</a></h1>
+
+<blockquote><p>Simulate a typewriter/ticker effect on a DOM element.</p></blockquote>
+
+<p>Even though <code>malarkey</code> means 'meaningless talk; nonsense', this is a sweet module that helps us to simulate typewriter effect on DOM elements.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save malarkey</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript
+var elem = document.querySelectorAll('.malarkey')[0];
+var opts = {
+  typeSpeed: 50,
+  deleteSpeed: 50,
+  pauseDelay: 2000,
+  loop: true,
+  postfix: ''
+};</p>
+
+<p>malarkey(elem, opts)
+.type('Say hello').pause().delete()
+.type('Wave goodbye').pause().delete();
+```</p>
+
+<p><strong>API from 1000 feet:</strong></p>
+
+<ul>
+<li><p>malarkey.type</p></li>
+<li><p>malarkey.clear</p></li>
+<li><p>malarkey.pause</p></li>
+<li><p>malarkey.delete</p></li>
+</ul>
+
+
+<p>Read more about them in the <a href="https://github.com/yuanqing/malarkey#api">docs</a></p>
+
+<p><strong>DEMO:</strong></p>
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/gnumanth/efu58rbk/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/malarkey/malarkey.gif" alt="malarkey" /></p>
+
+<p>P.S: All Web realted modules would need help from <a href="http://browserify.org/">browserify</a> or related tools to run on the web.</p>
+]]></content>
+  </entry>
+  
+</feed>

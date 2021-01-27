@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: es-next | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/es-next/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[esbox]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2016/esbox/"/>
+    <updated>2016-06-23T06:46:09-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2016/esbox</id>
+    <content type="html"><![CDATA[<h1><a href="">📦 esbox</a></h1>
+
+<blockquote><p>Zero-config REPL for experimenting with next-generation JavaScript.</p></blockquote>
+
+<p><code>esbox</code> is ES2016 in a box!</p>
+
+<p><strong>Get it:</strong> <code>npm install -g esbox</code></p>
+
+<ul>
+<li><p>It automatically compiles and re-runs your script every time you save.</p></li>
+<li><p>JSBin-like setup for your local editor and terminal – with full access to Node APIs and modules.</p></li>
+<li><p>ECMAScript features that Babel supports (stage-0 and above).</p></li>
+<li><p>For a number of popular libraries, you can just import them without the need to install them first (Bascially all the dependecies of <code>esbox</code>).</p></li>
+</ul>
+
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```sh
+nmotw.in> esbox</p>
+
+<pre><code>📦  ES2016 in a box   
+   git.io/esbox      
+</code></pre>
+
+<p>  Usage</p>
+
+<pre><code>&gt; esbox FILENAME
+</code></pre>
+
+<p>  Options</p>
+
+<pre><code>--cwd=DIRECTORY   run in a different directory
+--no-watch        only run your script once
+--no-clear        disable clearing the display before each run
+--version         show esbox version
+--poll            poll file system when watching files
+</code></pre>
+
+<p>```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/esbox/esbox.gif" alt="esbox" /></p>
+]]></content>
+  </entry>
+  
+</feed>

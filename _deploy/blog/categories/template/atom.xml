@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: template | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/template/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[common-tags]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/common-tags/"/>
+    <updated>2017-02-10T06:24:05-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/common-tags</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/common-tags">common-tags</a></h1>
+
+<blockquote><p>Common utility template tags for ES2015</p></blockquote>
+
+<p>🔖 A set of well-tested, commonly used template literal tag functions for use in ES2015+.</p>
+
+<p>🌟 Plus some extra goodies for easily making your own tags.</p>
+
+<p>Provides the below almost self explanatory functions:</p>
+
+<ul>
+<li>TemplateTag</li>
+<li>codeBlock</li>
+<li>commaLists</li>
+<li>commaListsAnd</li>
+<li>commaListsOr</li>
+<li>html</li>
+<li>inlineArrayTransformer</li>
+<li>inlineLists</li>
+<li>oneLine</li>
+<li>oneLineCommaLists</li>
+<li>oneLineCommaListsAnd</li>
+<li>oneLineCommaListsOr</li>
+<li>oneLineInlineLists</li>
+<li>oneLineTrim</li>
+<li>removeNonPrintingValuesTransformer</li>
+<li>replaceResultTransformer</li>
+<li>replaceSubstitutionTransformer</li>
+<li>safeHtml</li>
+<li>source</li>
+<li>splitStringTransformer</li>
+<li>stripIndent</li>
+<li>stripIndentTransformer</li>
+<li>stripIndents</li>
+<li>trimResultTransformer</li>
+</ul>
+
+
+<p><strong>GET IT:</strong> <code>npm install --save common-tags</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import {oneLine} from 'common-tags'</p>
+
+<p>oneLine<code>
+  foo
+  bar
+  baz
+</code>)
+// "foo bar baz"
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/common-tags/common-tags.gif" alt="common-tags" /></p>
+]]></content>
+  </entry>
+  
+</feed>

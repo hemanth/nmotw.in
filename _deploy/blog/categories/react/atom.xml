@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: react | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/react/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[react-window]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/react-window/"/>
+    <updated>2019-03-16T02:44:26-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/react-window</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/react-window">react-window</a></h1>
+
+<blockquote><p>React components for efficiently rendering large lists and tabular data.</p></blockquote>
+
+<p>From the horse's mouth, what is <code>react-window</code>?</p>
+
+<blockquote><p>react-window is a complete rewrite of react-virtualized. I didn't try to solve as many problems or support as many use cases. Instead I focused on making the package smaller1 and faster. I also put a lot of thought into making the API (and documentation) as beginner-friendly as possible (with the caveat that windowing is still kind of an advanced use case).</p></blockquote>
+
+<p>The compoents react-window provides:</p>
+
+<ul>
+<li>FixedSizeList</li>
+<li>VariableSizeList</li>
+<li>FixedSizeGrid</li>
+<li>VariableSizeGrid</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install react-window</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { FixedSizeList as List } from 'react-window';</p>
+
+<p>const Column = ({ index, style }) => (
+  <div style={style}>عمود {index}</div>
+);</p>
+
+<p>const Example = () => (
+  &lt;List</p>
+
+<pre><code>direction="rtl"
+height={75}
+itemCount={1000}
+itemSize={100}
+layout="horizontal"
+width={300}
+</code></pre>
+
+<blockquote><pre><code>{Column}
+</code></pre>
+
+<p>  </List>
+);
+```</p></blockquote>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/react-window/react-window.gif" alt="react-window" /></p>
+
+<p>P.S: Don't miss to checkout the <a href="https://react-window.now.sh/">demos</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[the-platform]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/the-platform/"/>
+    <updated>2018-10-28T03:03:43-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/the-platform</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/the-platform">the-platform</a></h1>
+
+<blockquote><p>Browser API's turned into React Hooks and Suspense-friendly components.</p></blockquote>
+
+<p><code>the-platform</code> is a uber fun module that has React Hooks and Suspense friendly componets, it provides the below:</p>
+
+<p><strong>Hooks:</strong></p>
+
+<p>```</p>
+
+<pre><code>useDeviceMotion()
+useDeviceOrientation()
+useGeoPosition()
+useNetworkStatus()
+useMedia()
+useScript()
+useStylesheet()
+useWindowScrollPosition()
+useWindowSize()
+</code></pre>
+
+<p>```
+<strong>Components:</strong></p>
+
+<p>```</p>
+
+<pre><code>&lt;Img&gt;
+&lt;Script&gt;
+&lt;Video&gt;
+&lt;Audio&gt;
+&lt;Preload&gt;
+&lt;Stylesheet&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>P.S: Looks like it's a pun on <code>#useThePlatform</code> none the less it's an intresting module.</p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+import { useGeoPosition } from 'the-platform';</p>
+
+<p>const Example = () => {
+  const {</p>
+
+<pre><code>coords: { latitude, longitude },
+</code></pre>
+
+<p>  } = useGeoPosition();</p>
+
+<p>  // ...
+};
+```</p>
+
+<p>```js
+import React from 'react';
+import { Img } from 'the-platform';</p>
+
+<p>function App() {
+  return (</p>
+
+<pre><code>&lt;div&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;React.Suspense maxDuration={300} fallback={'loading...'}&gt;
+    &lt;Img src="https://source.unsplash.com/random/4000x2000" /&gt;
+  &lt;/React.Suspense&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  );
+}</p>
+
+<p>export default App;
+```</p>
+
+<p><strong>GIT FTW!</strong></p>
+
+<p><img src="/images/the-platform/the-platform.gif" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

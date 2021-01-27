@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: AI | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/ai/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[what-dog]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2018/what-dog/"/>
+    <updated>2018-05-25T03:43:51-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2018/what-dog</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/what-dog">what-dog</a></h1>
+
+<blockquote><p>What 🐶 is this?</p></blockquote>
+
+<p>Get the breed of a dog from an image using Microsoft's what-dog.</p>
+
+<p><img src="what-dog.demo.png" alt="" /></p>
+
+<p><strong>Get it:</strong> <code>npm install --save what-dog</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const whatDog = require('what-dog');</p>
+
+<p>((async () => {</p>
+
+<pre><code>console.log(await whatDog('http://imgur.com/B7a15F5.jpg'))
+</code></pre>
+
+<p>})());</p>
+
+<p>/<em>
+{
+  "isDog": true,
+  "breed": "Norfolk Terrier",
+  "about": "Spirited, small but sturdy, feisty yet sweet personality"
+}
+</em>/
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/what-dog/what-dog.gif" alt="what-dog.gif" /></p>
+]]></content>
+  </entry>
+  
+</feed>

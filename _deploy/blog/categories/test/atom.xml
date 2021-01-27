@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: test, | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[propagate]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2014/propagate/"/>
+    <updated>2014-10-23T05:38:23-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2014/propagate</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.org/package/propagate">propagate</a></h1>
+
+<blockquote><p>Propagate events from one event emitter into another.</p></blockquote>
+
+<p>An other sweet and simple module, that helps to propagate events!</p>
+
+<p><strong>Get it:</strong> <code>npm install propagate</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```javascript
+var EventEmitter = require('events').EventEmitter;
+var propagate = require('propagate');</p>
+
+<p>var evn1 = new EventEmitter();
+var evn2 = new EventEmitter();</p>
+
+<p>propagate(evn1,evn2);</p>
+
+<p>evn2.on('event',function(msg) {</p>
+
+<pre><code>console.log('Got a propagated event', msg);
+</code></pre>
+
+<p>});</p>
+
+<p>evn1.emit('event', 'Yo!')
+// Got a propagated event Yo!
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/propagate/propagate.gif" alt="propagate" /></p>
+
+<p>Thanks to <a href="http://metaduck.com/">Pedro Teixeira</a> for <a href="https://www.npmjs.org/package/propagate">propagate</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

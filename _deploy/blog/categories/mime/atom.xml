@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mime | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/mime/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[compressible]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2017/compressible/"/>
+    <updated>2017-01-05T06:32:05-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2017/compressible</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/compressible">compressible</a></h1>
+
+<blockquote><p>Compressible <code>Content-Type/mime</code> checking</p></blockquote>
+
+<p>Sweet and simple module that Checks if the given <code>Content-Type</code> is compressible.</p>
+
+<p>The type argument is expected to be a value <code>MIME</code> type or <code>Content-Type</code> string, though no validation is performed.</p>
+
+<p>The <code>MIME</code> is looked up in the <code>mime-db</code> and supports:</p>
+
+<ul>
+<li>text/*</li>
+<li><em>/</em>+json</li>
+<li><em>/</em>+text</li>
+<li><em>/</em>+xml</li>
+</ul>
+
+
+<p><strong>Get it:</strong> <code>npm install --save compressible</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const compressible = require('compressible');</p>
+
+<p>compressible('image/png'); // false</p>
+
+<p>compressible('image/pn'); // undefined</p>
+
+<p>compressible('text/html'); // true
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/compressible/compressible.gif" alt="compressible" /></p>
+]]></content>
+  </entry>
+  
+</feed>

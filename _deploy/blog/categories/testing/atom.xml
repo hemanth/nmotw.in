@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: testing | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[responselike]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2019/responselike/"/>
+    <updated>2019-07-28T01:42:19-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2019/responselike</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/responselike">responselike</a></h1>
+
+<blockquote><p>response-like object for mocking HTTP response stream.</p></blockquote>
+
+<p><code>responselike</code> returns a streamable response object similar to a HTTP response stream. Useful for formatting cached responses so they can be consumed by code expecting a real response.</p>
+
+<p><strong>Get it:</strong> <code>npm install responselike</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+const Response = require('responselike');</p>
+
+<p>const response = new Response(200, { foo: 'bar' }, Buffer.from('Hi!'), 'https://example.com');</p>
+
+<p>response.statusCode;
+// 200
+response.headers;
+// { foo: 'bar' }
+response.body;
+// <Buffer 48 69 21>
+response.url;
+// 'https://example.com'</p>
+
+<p>response.pipe(process.stdout);
+// Hi!
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/responselike/responselike.gif" alt="responselike" /></p>
+]]></content>
+  </entry>
+  
+</feed>

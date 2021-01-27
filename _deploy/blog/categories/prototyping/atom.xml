@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: prototyping | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/prototyping/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[json-server]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/json-server/"/>
+    <updated>2015-05-14T05:53:06-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/json-server</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/json-server">json-server</a></h1>
+
+<blockquote><p>REST API with zero coding in less than 30 seconds.</p></blockquote>
+
+<p>This module by <a href="https://github.com/typicode">typicode</a> helps front-end developers who need a quick back-end for prototyping and mocking!</p>
+
+<p><strong>Get it:</strong></p>
+
+<p>Either as a CLI app: <code>npm install -g json-server</code></p>
+
+<p>or as a dep for your script: <code>npm install --save json-server</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Assume you have a <code>json.db</code> like:</p>
+
+<p>```js
+{
+  "posts": [</p>
+
+<pre><code>{ "id": 1, "title": "json-server", "author": "typicode" }
+</code></pre>
+
+<p>  ],
+  "comments": [</p>
+
+<pre><code>{ "id": 1, "body": "some comment", "postId": 1 }
+</code></pre>
+
+<p>  ]
+}
+```</p>
+
+<p>If you are installed module globally, then do a :</p>
+
+<p>```sh
+$ json-server json.db</p>
+
+<h1>or</h1>
+
+<p>$ json-server http://example.com/file.json
+```</p>
+
+<p>if not, include it in your script</p>
+
+<p>```js
+var jsonServer = require('json-server');</p>
+
+<p>var server = jsonServer.create(); // Returns an Express server
+var router = jsonServer.router('db.json'); // Returns an Express router</p>
+
+<p>server.use(jsonServer.defaults); // logger, static and cors middlewares
+server.use(router); // Mount router on '/'</p>
+
+<p>server.listen(3000);
+```</p>
+
+<p>After which the server must be up and running at: <code>http://localhost:3000</code></p>
+
+<p><strong>Avaliable routes:</strong></p>
+
+<p>```
+GET    /posts
+GET    /posts/1
+GET    /posts/1/comments
+GET    /posts?title=json-server&amp;author=typicode
+POST   /posts
+PUT    /posts/1
+PATCH  /posts/1
+DELETE /posts/1</p>
+
+<h1>SLICE</h1>
+
+<p>GET /posts?<em>start=20&amp;</em>end=30
+GET /posts/1/comments?<em>start=20&amp;</em>end=30</p>
+
+<h1>SORT</h1>
+
+<p>GET /posts?<em>sort=views&amp;</em>order=DESC
+GET /posts/1/comments?<em>sort=votes&amp;</em>order=ASC</p>
+
+<h1>Query</h1>
+
+<p>GET /posts?q=internet</p>
+
+<h1>Get the entire DB!</h1>
+
+<p>GET /db
+```</p>
+
+<p>GET on <code>/</code> would look like:</p>
+
+<p><img src="/images/json-server/json-server.png" alt="json-server-screenshot" /></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/json-server/json-server.gif" alt="json-server" /></p>
+]]></content>
+  </entry>
+  
+</feed>

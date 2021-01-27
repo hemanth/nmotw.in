@@ -1,0 +1,311 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <title>fixpack - Hemanth.HM</title>
+    <meta name="author" content="Hemanth.HM"> 
+
+    <meta name="description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">   
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="Node module of the week.">
+    <meta name="twitter:site" content="@nmotw">
+    <meta name="twitter:creator" content="@nmotw">
+    <meta name="twitter:title" content="fixpack - Hemanth.HM">
+    <meta name="twitter:url" content="http://h3manth.com/nmotw/blog/2016/fixpack/">
+    <meta name="twitter:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;">
+
+    <!-- open graph -->
+    <meta property="og:title" content="fixpack - Hemanth.HM" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://h3manth.com/nmotw/blog/2016/fixpack/" />
+    <meta property="og:site_name" content="Node module of the week." />
+    <meta property="og:description" content="fixpack A package.json file scrubber for the truly insane. GET IT: npm install -g fixpack It will re-write your package.json file as follows: name &hellip;" />
+
+    
+
+    <!-- rest -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/nmotw/atom.xml" rel="alternate" title="Hemanth.HM" type="application/atom+xml">
+    <link rel="canonical" href="http://h3manth.com/nmotw/blog/2016/fixpack/">
+    <link href="/nmotw/favicon.png" rel="shortcut icon">
+    <link href="/nmotw/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/nmotw/">Hemanth.HM</a></h1>
+<span class="tagline">A Computer Polyglot, CLI + WEB ♥'r.</span>
+<!-- <nav id="main-nav"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</nav> -->
+<!-- <nav id="mobile-nav"> -->
+<!-- 	<div class="alignleft menu"> -->
+<!-- 		<a class="button">Menu</a> -->
+<!-- 		<div class="container"><ul>
+	<li><a href="/nmotw/about">About</a></li>
+	<li><a href="/nmotw/archives">Archives</a></li>
+	<li><a href="/nmotw/contact">Contact</a></li>
+	<li><a href="/nmotw/github/subscribe">subscribe</a></li>
+</ul>
+</div> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<header>
+		<h2 class="title">Fixpack</h2>
+		<div class="meta date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-03-17T04:08:38-07:00" pubdate data-updated="true">Mar 17<span>th</span>, 2016</time></div>
+	</header>
+	<div class="entry-content"><h1><a href="https://www.npmjs.com/package/fixpack">fixpack</a></h1>
+
+<blockquote><p>A <code>package.json</code> file scrubber for the truly insane.</p></blockquote>
+
+<p><strong>GET IT:</strong> <code>npm install -g fixpack</code></p>
+
+<p>It will re-write your package.json file as follows:</p>
+
+<ul>
+<li>name first</li>
+<li>description second</li>
+<li>version third</li>
+<li>author fourth</li>
+<li>all other keys in alphabetical order</li>
+<li>dependencies and devDependencies sorted alphabetically</li>
+<li>newline at the end of the file</li>
+</ul>
+
+
+<p>It will warn you if any of these are missing:</p>
+
+<ul>
+<li>description</li>
+<li>author</li>
+<li>repository</li>
+<li>keywords</li>
+<li>main</li>
+<li>bugs</li>
+<li>homepage</li>
+<li>license</li>
+</ul>
+
+
+<p>It can also read a config from <code>.fixpackrc</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{
+</span><span class='line'>    // will put these first in this order if present
+</span><span class='line'>    sortToTop: [
+</span><span class='line'>        'name',
+</span><span class='line'>        'description',
+</span><span class='line'>        'version',
+</span><span class='line'>        'author'
+</span><span class='line'>    ],
+</span><span class='line'>    // will error if these not present
+</span><span class='line'>    required: [
+</span><span class='line'>        'name',
+</span><span class='line'>        'version'
+</span><span class='line'>    ],
+</span><span class='line'>    // will warn if these not present
+</span><span class='line'>    warn: [
+</span><span class='line'>        'description',
+</span><span class='line'>        'author',
+</span><span class='line'>        'repository',
+</span><span class='line'>        'keywords',
+</span><span class='line'>        'main',
+</span><span class='line'>        'bugs',
+</span><span class='line'>        'homepage',
+</span><span class='line'>        'license'
+</span><span class='line'>    ],
+</span><span class='line'>    // if `private: true` in package.json will use the next two lists instead
+</span><span class='line'>    requiredOnPrivate: [],
+</span><span class='line'>    warnOnPrivate: ['name', 'version', 'description', 'main'],
+</span><span class='line'>    // sub items to sort by default
+</span><span class='line'>    sortedSubItems: [
+</span><span class='line'>        'dependencies',
+</span><span class='line'>        'devDependencies',
+</span><span class='line'>        'jshintConfig',
+</span><span class='line'>        'scripts',
+</span><span class='line'>        'keywords'
+</span><span class='line'>    ],
+</span><span class='line'>    // if you set quiet to true it won't do output anything to the console
+</span><span class='line'>    quiet: false,
+</span><span class='line'>    // files to scrub
+</span><span class='line'>    files: ['package.json'],
+</span><span class='line'>    // Will set all deps to '*'
+</span><span class='line'>    // this may be useful because then you can
+</span><span class='line'>    // run npm update --save && npm update --save-dev
+</span><span class='line'>    // to install latest stable releases of everything.
+</span><span class='line'>    wipe: false
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/nmotw/images/fixpack/fixpack.gif" alt="fixpack" /></p>
+</div>
+
+</article>
+<a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+
+	
+	<div class="share">
+	  <ul>
+	  <li>
+  <a href="https://twitter.com/intent/tweet?text=fixpack by @gnumanth&url=http://nmotw.in/blog/2016/fixpack/" title="Share fixpack on Twitter">
+    <img src="/nmotw/images/social/twitter.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://www.facebook.com/sharer.php?u=http://nmotw.in/blog/2016/fixpack/" title="Share fixpack on Facebook">
+    <img src="/nmotw/images/social/facebook.png" />
+  </a>
+</li>
+
+	  <li>
+  <a href="https://plus.google.com/share?url=http://nmotw.in/blog/2016/fixpack/" title="Share fixpack on Google Plus">
+    <img src="/nmotw/images/social/google.png" />
+  </a>
+</li>
+
+	  </ul>
+	</div>
+
+
+
+
+<section id="comment">
+      <h1 class="title">Comments</h1>
+     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner"><br>
+<br>
+<br>
+<br>
+&copy; 2021
+
+   <a href="http://h3manth.com">Hemanth.HM</a>
+   <br>
+   <a href="https://github.com/hemanth/nmotw.in/issues">Suggest a module</a>
+   <br>
+   <a href="http://nmotw.in/subscribe/">Subscribe</a>
+
+</footer>
+	<script src="/nmotw/javascripts/slash.js"></script>
+<script src="/nmotw/javascripts/hyphenator.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'gnulinux';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://h3manth.com/nmotw/blog/2016/fixpack/';
+        var disqus_url = 'http://h3manth.com/nmotw/blog/2016/fixpack/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7949129-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+</body>
+<script>
+  $(document).ready(function() {
+  // Make images center
+  $('p:has(img)').css('text-align', 'center');
+  });
+</script>
+</html>

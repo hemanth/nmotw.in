@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: isomorphic | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/isomorphic/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[logdown]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/logdown/"/>
+    <updated>2015-04-16T05:37:03-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/logdown</id>
+    <content type="html"><![CDATA[<p><a href="http://npm.im/logdown">logdown</a></p>
+
+<blockquote><p>Debug utility with markdown support that runs on browser and server.</p></blockquote>
+
+<p>This module lets you to have markdown syntax in your debug logs! It had <code>['log', 'info', 'warn', 'error']</code> as it's logging levels.</p>
+
+<p>One can also prefix the log message, it has support for various terminals <code>/^screen|^xterm|^vt100|color|ansi|cygwin|linux/</code> and also runs
+in the browser env.</p>
+
+<p><strong>Install it:</strong> <code>npm install --save logdown</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var Logdown = require('logdown');
+var debug = new Logdown({ prefix: 'meow' });</p>
+
+<p>debug.log('lorem <em>ipsum</em>');
+debug.info('I can haz <em>info</em>');
+debug.warn('shall I <code>highlight</code> your code?');
+```</p>
+
+<p><strong>GIF FTW:</strong></p>
+
+<p><img src="/images/logdown/logdown.gif" alt="logdown" /></p>
+
+<p>Thanks to <a href="http://caiogondim.com">Caio Gondim</a> for logdown! (:</p>
+]]></content>
+  </entry>
+  
+</feed>

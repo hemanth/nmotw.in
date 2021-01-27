@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: detect | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/detect/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[enable]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/enable/"/>
+    <updated>2015-05-28T09:05:04-07:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/enable</id>
+    <content type="html"><![CDATA[<h1><a href="enable">https://www.npmjs.com/package/enable</a></h1>
+
+<blockquote><p>ES6 and ES7 feature detection.</p></blockquote>
+
+<p>A simple util that would help you to check if the a required ES6 or ES7 is enabled, both in the browser and in CLI.</p>
+
+<p><strong>Get it</strong>: <code>npm install --save enable</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>```js
+var enable = require('enable');</p>
+
+<p>if (enable.<feature>) {
+  console.log(<feature> is supported);
+}</p>
+
+<p>/<em> Example:
+if (enable.generator) {
+  console.log('supports generator: <code>function* a() {}</code>');
+}
+</em>/
+```</p>
+
+<p>_</p>
+]]></content>
+  </entry>
+  
+</feed>

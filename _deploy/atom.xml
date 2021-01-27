@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[NMOTW]]></title>
-  <link href="http://nmotw.in/atom.xml" rel="self"/>
-  <link href="http://nmotw.in/"/>
-  <updated>2019-09-26T15:11:59+05:30</updated>
-  <id>http://nmotw.in/</id>
+  <title><![CDATA[Hemanth.HM]]></title>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[zero]]></title>
-    <link href="http://nmotw.in/zero/"/>
-    <updated>2019-09-26T16:45:10+05:30</updated>
-    <id>http://nmotw.in/zero</id>
+    <link href="/blog/2019/zero/"/>
+    <updated>2019-09-26T04:15:10-07:00</updated>
+    <id>/blog/2019/zero</id>
     <content type="html"><![CDATA[<h1><a href="https://zeroserver.io/">zero</a></h1>
 
 <blockquote><p>Zero configuration web framework.</p></blockquote>
@@ -49,15 +49,15 @@ Auto configuration, File-system Based Routing and Auto Dependency Resolution are
 
 <p><strong>GIF FTW</strong></p>
 
-<p><img src="http://nmotw.in/images/zero/zero.gif" alt="zero" /></p>
+<p><img src="//images/zero/zero.gif" alt="zero" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[vfile]]></title>
-    <link href="http://nmotw.in/vfile/"/>
-    <updated>2019-09-21T17:04:56+05:30</updated>
-    <id>http://nmotw.in/vfile</id>
+    <link href="/blog/2019/vfile/"/>
+    <updated>2019-09-21T04:34:56-07:00</updated>
+    <id>/blog/2019/vfile</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/vfile">vfile</a></h1>
 
 <blockquote><p>Virtual file format for text processing.</p></blockquote>
@@ -116,15 +116,15 @@ Each processors that parse, transform, and compile text, and need a virtual repr
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/vfile/vfile.gif" alt="vfile.gif" /></p>
+<p><img src="//images/vfile/vfile.gif" alt="vfile.gif" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[uxm]]></title>
-    <link href="http://nmotw.in/uxm/"/>
-    <updated>2019-09-14T13:04:28+05:30</updated>
-    <id>http://nmotw.in/uxm</id>
+    <link href="/blog/2019/uxm/"/>
+    <updated>2019-09-14T00:34:28-07:00</updated>
+    <id>/blog/2019/uxm</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/uxm">uxm</a></h1>
 
 <blockquote><p>User Experience Metric</p></blockquote>
@@ -205,15 +205,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/uxm/uxm.gif" alt="umx" /></p>
+<p><img src="//images/uxm/uxm.gif" alt="umx" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[lolex]]></title>
-    <link href="http://nmotw.in/lolex/"/>
-    <updated>2019-09-05T16:14:51+05:30</updated>
-    <id>http://nmotw.in/lolex</id>
+    <link href="/blog/2019/lolex/"/>
+    <updated>2019-09-05T03:44:51-07:00</updated>
+    <id>/blog/2019/lolex</id>
     <content type="html"><![CDATA[<h1><a href="https://nmp.im/lolex">lolex</a></h1>
 
 <blockquote><p>Fake "timers"</p></blockquote>
@@ -267,15 +267,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/lolex/lolex.gif" alt="lolex" /></p>
+<p><img src="//images/lolex/lolex.gif" alt="lolex" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[text-diff]]></title>
-    <link href="http://nmotw.in/text-diff/"/>
-    <updated>2019-08-30T18:58:57+05:30</updated>
-    <id>http://nmotw.in/text-diff</id>
+    <link href="/blog/2019/text-diff/"/>
+    <updated>2019-08-30T06:28:57-07:00</updated>
+    <id>/blog/2019/text-diff</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/text-diff">text-diff</a></h1>
 
 <blockquote><p>HTML formatted text diff!</p></blockquote>
@@ -301,15 +301,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/text-diff/text-diff.gif" alt="text-diff" /></p>
+<p><img src="//images/text-diff/text-diff.gif" alt="text-diff" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[npkill]]></title>
-    <link href="http://nmotw.in/npkill/"/>
-    <updated>2019-08-23T17:25:10+05:30</updated>
-    <id>http://nmotw.in/npkill</id>
+    <link href="/blog/2019/npkill/"/>
+    <updated>2019-08-23T04:55:10-07:00</updated>
+    <id>/blog/2019/npkill</id>
     <content type="html"><![CDATA[<h1><a href="https://npkill.js.org/">npkill</a></h1>
 
 <blockquote><p>Easily find and remove old and heavy node_modules folders</p></blockquote>
@@ -365,15 +365,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/npkill/npkill.gif" alt="npkill" /></p>
+<p><img src="//images/npkill/npkill.gif" alt="npkill" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[console-badge]]></title>
-    <link href="http://nmotw.in/console-badge/"/>
-    <updated>2019-08-18T15:03:48+05:30</updated>
-    <id>http://nmotw.in/console-badge</id>
+    <link href="/blog/2019/console-badge/"/>
+    <updated>2019-08-18T02:33:48-07:00</updated>
+    <id>/blog/2019/console-badge</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/console-badge">console-badge</a></h1>
 
 <blockquote><p>🎨 Create simple badges in the browser console</p></blockquote>
@@ -423,15 +423,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/console-badge/console-badge.gif" alt="console-badge" /></p>
+<p><img src="//images/console-badge/console-badge.gif" alt="console-badge" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[human-interval]]></title>
-    <link href="http://nmotw.in/human-interval/"/>
-    <updated>2019-08-08T15:21:19+05:30</updated>
-    <id>http://nmotw.in/human-interval</id>
+    <link href="/blog/2019/human-interval/"/>
+    <updated>2019-08-08T02:51:19-07:00</updated>
+    <id>/blog/2019/human-interval</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/human-interval">human-interval</a></h1>
 
 <blockquote><p>Human readable interval parser.</p></blockquote>
@@ -470,15 +470,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/human-interval/human-interval.gif" alt="human-interval" /></p>
+<p><img src="//images/human-interval/human-interval.gif" alt="human-interval" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[jay]]></title>
-    <link href="http://nmotw.in/jay/"/>
-    <updated>2019-08-01T16:16:11+05:30</updated>
-    <id>http://nmotw.in/jay</id>
+    <link href="/blog/2019/jay/"/>
+    <updated>2019-08-01T03:46:11-07:00</updated>
+    <id>/blog/2019/jay</id>
     <content type="html"><![CDATA[<h1><a href="http://npm.im/jay-repl">jay</a></h1>
 
 <blockquote><p>Supercharged JavaScript REPL 😎</p></blockquote>
@@ -525,15 +525,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/jay/jay.gif" alt="jay" /></p>
+<p><img src="//images/jay/jay.gif" alt="jay" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[responselike]]></title>
-    <link href="http://nmotw.in/responselike/"/>
-    <updated>2019-07-28T14:12:19+05:30</updated>
-    <id>http://nmotw.in/responselike</id>
+    <link href="/blog/2019/responselike/"/>
+    <updated>2019-07-28T01:42:19-07:00</updated>
+    <id>/blog/2019/responselike</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/responselike">responselike</a></h1>
 
 <blockquote><p>response-like object for mocking HTTP response stream.</p></blockquote>
@@ -579,15 +579,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/responselike/responselike.gif" alt="responselike" /></p>
+<p><img src="//images/responselike/responselike.gif" alt="responselike" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[get-port]]></title>
-    <link href="http://nmotw.in/get-port/"/>
-    <updated>2019-07-19T15:31:34+05:30</updated>
-    <id>http://nmotw.in/get-port</id>
+    <link href="/blog/2019/get-port/"/>
+    <updated>2019-07-19T03:01:34-07:00</updated>
+    <id>/blog/2019/get-port</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/get-port">get-port</a></h1>
 
 <blockquote><p>Get an available TCP port</p></blockquote>
@@ -661,15 +661,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/get-port/get-port.gif" alt="get-port" /></p>
+<p><img src="//images/get-port/get-port.gif" alt="get-port" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[hjson]]></title>
-    <link href="http://nmotw.in/hjson/"/>
-    <updated>2019-07-13T21:22:19+05:30</updated>
-    <id>http://nmotw.in/hjson</id>
+    <link href="/blog/2019/hjson/"/>
+    <updated>2019-07-13T08:52:19-07:00</updated>
+    <id>/blog/2019/hjson</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/hsjon">hjson</a></h1>
 
 <blockquote><p>A user interface for JSON.</p></blockquote>
@@ -785,15 +785,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/hjson/hjson.gif" alt="" /></p>
+<p><img src="//images/hjson/hjson.gif" alt="" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[fetch-retry]]></title>
-    <link href="http://nmotw.in/fetch-retry/"/>
-    <updated>2019-07-06T14:23:46+05:30</updated>
-    <id>http://nmotw.in/fetch-retry</id>
+    <link href="/blog/2019/fetch-retry/"/>
+    <updated>2019-07-06T01:53:46-07:00</updated>
+    <id>/blog/2019/fetch-retry</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/fetch-retry">fetch-retry</a></h1>
 
 <blockquote><p>Adds retry functionality to the Fetch API.</p></blockquote>
@@ -902,15 +902,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/fetch-retry/fetch-retry.gif" alt="fetch-retry" /></p>
+<p><img src="//images/fetch-retry/fetch-retry.gif" alt="fetch-retry" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[toposort]]></title>
-    <link href="http://nmotw.in/toposort/"/>
-    <updated>2019-06-29T17:54:08+05:30</updated>
-    <id>http://nmotw.in/toposort</id>
+    <link href="/blog/2019/toposort/"/>
+    <updated>2019-06-29T05:24:08-07:00</updated>
+    <id>/blog/2019/toposort</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/toposort">toposort</a></h1>
 
 <blockquote><p>Sort directed acyclic graphs</p></blockquote>
@@ -1007,15 +1007,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/toposort/toposort.gif" alt="topsort" /></p>
+<p><img src="//images/toposort/toposort.gif" alt="topsort" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[emoji-flags]]></title>
-    <link href="http://nmotw.in/emoji-flags/"/>
-    <updated>2019-06-23T09:52:10+05:30</updated>
-    <id>http://nmotw.in/emoji-flags</id>
+    <link href="/blog/2019/emoji-flags/"/>
+    <updated>2019-06-22T21:22:10-07:00</updated>
+    <id>/blog/2019/emoji-flags</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/emoji-flags">emoji-flags</a></h1>
 
 <blockquote><p>emoji flag symbol for a given country code.</p></blockquote>
@@ -1074,15 +1074,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/emoji-flags/emoji-flags.gif" alt="emoji-flags" /></p>
+<p><img src="//images/emoji-flags/emoji-flags.gif" alt="emoji-flags" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[wait-on]]></title>
-    <link href="http://nmotw.in/wait-on/"/>
-    <updated>2019-06-14T10:11:12+05:30</updated>
-    <id>http://nmotw.in/wait-on</id>
+    <link href="/blog/2019/wait-on/"/>
+    <updated>2019-06-13T21:41:12-07:00</updated>
+    <id>/blog/2019/wait-on</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/wait-on">wait-on</a></h1>
 
 <blockquote><p>wait for files, ports, sockets, http(s) resources.</p></blockquote>
@@ -1153,15 +1153,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/wait-on/wait-on.gif" alt="wait-on" /></p>
+<p><img src="//images/wait-on/wait-on.gif" alt="wait-on" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[zxcvbn]]></title>
-    <link href="http://nmotw.in/zxcvbn/"/>
-    <updated>2019-06-10T10:27:44+05:30</updated>
-    <id>http://nmotw.in/zxcvbn</id>
+    <link href="/blog/2019/zxcvbn/"/>
+    <updated>2019-06-09T21:57:44-07:00</updated>
+    <id>/blog/2019/zxcvbn</id>
     <content type="html"><![CDATA[<h1><a href="">zxcvbn</a></h1>
 
 <blockquote><p>Password strength estimator!</p></blockquote>
@@ -1311,15 +1311,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/zxcvbn/zxcvbn.gif" alt="zxcvbn" /></p>
+<p><img src="//images/zxcvbn/zxcvbn.gif" alt="zxcvbn" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[store]]></title>
-    <link href="http://nmotw.in/store/"/>
-    <updated>2019-06-02T17:01:14+05:30</updated>
-    <id>http://nmotw.in/store</id>
+    <link href="/blog/2019/store/"/>
+    <updated>2019-06-02T04:31:14-07:00</updated>
+    <id>/blog/2019/store</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/store">store</a></h1>
 
 <blockquote><p>Cross-browser storage for all use cases!</p></blockquote>
@@ -1368,15 +1368,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/store/store.gif" alt="store" /></p>
+<p><img src="//images/store/store.gif" alt="store" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[tornis]]></title>
-    <link href="http://nmotw.in/tornis/"/>
-    <updated>2019-05-25T21:08:12+05:30</updated>
-    <id>http://nmotw.in/tornis</id>
+    <link href="/blog/2019/tornis/"/>
+    <updated>2019-05-25T08:38:12-07:00</updated>
+    <id>/blog/2019/tornis</id>
     <content type="html"><![CDATA[<h1><a href="https://npm.im/tornis">tornis</a></h1>
 
 <blockquote><p>Store for your viewport.</p></blockquote>
@@ -1532,15 +1532,15 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/tornis/tornis.gif" alt="tornis" /></p>
+<p><img src="//images/tornis/tornis.gif" alt="tornis" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[dinoql]]></title>
-    <link href="http://nmotw.in/dinoql/"/>
-    <updated>2019-05-18T12:27:30+05:30</updated>
-    <id>http://nmotw.in/dinoql</id>
+    <link href="/blog/2019/dinoql/"/>
+    <updated>2019-05-17T23:57:30-07:00</updated>
+    <id>/blog/2019/dinoql</id>
     <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/dinoql">dinoql</a></h1>
 
 <blockquote><p>Query JS objects in GraphQL style!</p></blockquote>
@@ -1596,7 +1596,7 @@ that affect user experience. Graceful support of latest browser APIs like Perfor
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://nmotw.in/images/dinoql/dinoql.gif" alt="dinoql-demo" /></p>
+<p><img src="//images/dinoql/dinoql.gif" alt="dinoql-demo" /></p>
 ]]></content>
   </entry>
   

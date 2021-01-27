@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rules | Hemanth.HM]]></title>
+  <link href="http://h3manth.com/nmotw/blog/categories/rules/atom.xml" rel="self"/>
+  <link href="http://h3manth.com/nmotw/"/>
+  <updated>2021-01-27T05:05:49-08:00</updated>
+  <id>http://h3manth.com/nmotw/</id>
+  <author>
+    <name><![CDATA[Hemanth.HM]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[node-rules]]></title>
+    <link href="http://h3manth.com/nmotw/blog/2015/node-rules/"/>
+    <updated>2015-01-29T17:53:00-08:00</updated>
+    <id>http://h3manth.com/nmotw/blog/2015/node-rules</id>
+    <content type="html"><![CDATA[<h1><a href="https://www.npmjs.com/package/node-rules">node-rules</a></h1>
+
+<blockquote><p>Business Rules Engine for JavaScript.</p></blockquote>
+
+<p><code>node-rules</code> is a module of it's own kind, it's a light weight forward chaining Rule Engine!</p>
+
+<p><strong>Install it:</strong> <code>npm install --save node-rules</code></p>
+
+<p><strong>Usage:</strong></p>
+
+<p>It's a three step process, to get the engine running:</p>
+
+<ul>
+<li><p>Defining a Rule.</p></li>
+<li><p>Defining a Fact.</p></li>
+<li><p>Initialize the rules engine and execute the rule.</p></li>
+</ul>
+
+
+<p><strong>Create a rule:</strong></p>
+
+<p>```js
+/<em> Sample Rule to block a transaction if its below 500 </em>/
+var rule = {</p>
+
+<pre><code>"condition": function(R) {
+    R.when(this.transactionTotal &lt; 500);
+},
+"consequence": function(R) {
+    this.result = false;
+    this.reason = "The transaction was blocked as it was less than 500";
+    R.stop();
+}
+</code></pre>
+
+<p>};
+```</p>
+
+<p><strong>Create a fact:</strong></p>
+
+<p>```js
+/<em> Fact with less than 500 as transaction, and this should be blocked </em>/
+var fact = {</p>
+
+<pre><code>"name": "user4",
+"application": "MOB2",
+"transactionTotal": 400,
+"cardType": "Credit Card"
+</code></pre>
+
+<p>};
+```</p>
+
+<p><strong>Initialize the rules engine:</strong></p>
+
+<p><code>js
+/* Creating Rule Engine instance and registering rule */
+var R = new RuleEngine();
+R.register(rule);
+</code></p>
+
+<p><strong>Execute the rule:</strong></p>
+
+<p>```js
+R.execute(fact, function(data) {</p>
+
+<pre><code>if (data.result) {
+    console.log("Valid transaction");
+} else {
+    console.log("Blocked Reason:" + data.reason);
+}
+</code></pre>
+
+<p>});
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/node-rules/node-rules.gif" alt="" /></p>
+
+<p>Thanks to <a href="https://twitter.com/mithunsatheesh">Mithun Satheesh</a> for this adventurous module.</p>
+]]></content>
+  </entry>
+  
+</feed>
