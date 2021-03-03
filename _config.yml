@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://h3manth.com/nmotw
-title: Hemanth.HM
-subtitle: A Computer Polyglot, CLI + WEB ♥'r.
+title: NMOTW
+subtitle: Archives from Node Module Of The Week
 author: Hemanth.HM
 simple_search: http://google.com/search
 description:
@@ -46,14 +46,14 @@ titlecase: true # Converts page and post titles to titlecase
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides:
-  [
-    custom/asides/popular_posts.html,
-    asides/recent_posts.html,
-    asides/github.html,
-    custom/asides/legacy.html,
-    custom/asides/twitter.html,
-    asides/googleplus.html,
-  ]
+    [
+        custom/asides/popular_posts.html,
+        asides/recent_posts.html,
+        asides/github.html,
+        custom/asides/legacy.html,
+        custom/asides/twitter.html,
+        asides/googleplus.html,
+    ]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
