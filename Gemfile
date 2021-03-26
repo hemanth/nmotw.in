@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 group :development do
   gem 'rake', '~> 10.1.0'
-  gem 'jekyll', '~> 0.12'
+  gem 'jekyll', '~> 1.2', '>= 1.2.0'
   gem 'rdiscount', '~> 1.6.8'
   gem 'pygments.rb', '~> 0.3.4'
   gem 'RedCloth', '~> 4.3.0' # This change was made via Snyk to fix a vulnerability
