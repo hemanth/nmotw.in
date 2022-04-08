@@ -2,9 +2,9 @@ source "http://rubygems.org"
 
 group :development do
   gem 'rake', '~> 10.1.0'
-  gem 'jekyll', '~> 0.12'
+  gem 'jekyll', '~> 3.0', '>= 3.0.0'
   gem 'rdiscount', '~> 1.6.8'
-  gem 'pygments.rb', '~> 0.3.4'
+  gem 'pygments.rb', '~> 1.0.0'
   gem 'RedCloth', '~> 4.3.0' # This change was made via Snyk to fix a vulnerability
   gem 'haml', '~> 4.0.5'
   gem 'compass', '~> 0.12.2'
