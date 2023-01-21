@@ -16,4 +16,4 @@ group :development do
   gem 'octopress-popular-posts'
 end
 
-gem 'sinatra', '~> 1.4.2'
+gem 'sinatra', '~> 2.0.0'
